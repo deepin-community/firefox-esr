@@ -2,9 +2,9 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-blocklist-window =
+blocklist-window2 =
     .title = Estolistat
-    .style = width: 50em
+    .style = min-width: 50em
 
 blocklist-description = Valitse lista, jota { -brand-short-name } käyttää verkkoseurainten estämiseen. Listat tarjoaa <a data-l10n-name="disconnect-link" title="Disconnect">Disconnect</a>.
 blocklist-close-key =
@@ -12,14 +12,6 @@ blocklist-close-key =
 
 blocklist-treehead-list =
     .label = Lista
-
-blocklist-button-cancel =
-    .label = Peruuta
-    .accesskey = P
-
-blocklist-button-ok =
-    .label = Tallenna muutokset
-    .accesskey = T
 
 blocklist-dialog =
     .buttonlabelaccept = Tallenna muutokset

@@ -2,17 +2,6 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-bookmark-overlay-name =
-    .value = Ad:
-    .accesskey = A
-
-bookmark-overlay-location =
-    .value = Konum:
-    .accesskey = K
-
-bookmark-overlay-folder =
-    .value = Klasör:
-
 bookmark-overlay-name-2 =
     .value = Ad
     .accesskey = A
@@ -35,13 +24,15 @@ bookmark-overlay-folders-expander =
     .tooltiptextdown = { bookmark-overlay-folders-expander.tooltiptext }
     .tooltiptextup = Gizler
 
+bookmark-overlay-folders-expander2 =
+    .tooltiptext = Tüm yer imi klasörlerini göster
+
+bookmark-overlay-folders-expander-hide =
+    .tooltiptext = Gizler
+
 bookmark-overlay-new-folder-button =
     .label = Yeni klasör
     .accesskey = n
-
-bookmark-overlay-tags =
-    .value = Etiketler:
-    .accesskey = E
 
 bookmark-overlay-tags-2 =
     .value = Etiketler
@@ -55,9 +46,11 @@ bookmark-overlay-tags-expander =
     .tooltiptextdown = { bookmark-overlay-tags-expander.tooltiptext }
     .tooltiptextup = Gizler
 
-bookmark-overlay-keyword =
-    .value = Anahtar kelime:
-    .accesskey = h
+bookmark-overlay-tags-expander2 =
+    .tooltiptext = Tüm etiketleri göster
+
+bookmark-overlay-tags-expander-hide =
+    .tooltiptext = Gizler
 
 bookmark-overlay-keyword-2 =
     .value = Anahtar kelime

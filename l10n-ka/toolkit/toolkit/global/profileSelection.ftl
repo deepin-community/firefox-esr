@@ -23,6 +23,8 @@ profile-selection-delete-button =
     .label = პროფილის წაშლა…
     .accesskey = წ
 
+profile-selection-conflict-message = პროფილები, რომლებსაც სხვა { -brand-product-name } იყენებდა, შეცვლილია. გთხოვთ, ხელახლა გაუშვათ { -brand-short-name } ახალი ცვლილებების შეტანამდე.
+
 ## Messages used in the profile manager
 
 profile-manager-description = { -brand-short-name } მონაცემებს თქვენი პარამეტრების, მახასიათებლებისა და სხვა ელემენტების შესახებ თქვენს პროფილში ინახავს.

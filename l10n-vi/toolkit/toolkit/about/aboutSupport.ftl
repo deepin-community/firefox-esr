@@ -9,11 +9,6 @@ crashes-id = ID báo cáo
 crashes-send-date = Đã gửi
 crashes-all-reports = Tất cả các báo cáo lỗi
 crashes-no-config = Ứng dụng này chưa được thiết lập để hiển thị các báo cáo lỗi.
-extensions-title = Tiện ích mở rộng
-extensions-name = Tên
-extensions-enabled = Đã bật
-extensions-version = Phiên bản
-extensions-id = ID
 support-addons-title = Tiện ích
 support-addons-name = Tên
 support-addons-type = Kiểu
@@ -43,8 +38,8 @@ app-basics-update-channel = Kênh cập nhật
 # as in "Folder for updates". "Update" is a noun, not a verb.
 app-basics-update-dir =
     { PLATFORM() ->
-        [linux] Cập nhật thư mục
-       *[other] Cập nhật thư mục
+        [linux] Thư mục chứa bản cập nhật
+       *[other] Thư mục chứa bản cập nhật
     }
 app-basics-update-history = Lịch sử cập nhật
 app-basics-show-update-history = Hiển thị lịch sử cập nhật
@@ -67,7 +62,7 @@ app-basics-memory-use = Sử dụng bộ nhớ
 app-basics-performance = Hiệu suất
 app-basics-service-workers = Các Service Worker đã đăng ký
 app-basics-third-party = Module của bên thứ ba
-app-basics-profiles = Tiểu sử
+app-basics-profiles = Hồ sơ
 app-basics-launcher-process-status = Quá trình khởi chạy
 app-basics-multi-process-support = Các cửa sổ đa tiến trình
 app-basics-fission-support = Fission Windows
@@ -77,6 +72,12 @@ app-basics-location-service-key-google = Khóa dịch vụ định vị Google
 app-basics-safebrowsing-key-google = Khóa Google Safebrowsing
 app-basics-key-mozilla = Khóa dịch vụ định vị Mozilla
 app-basics-safe-mode = Chế độ an toàn
+app-basics-memory-size = Dung lượng bộ nhớ (RAM)
+app-basics-disk-available = Không gian đĩa có sẵn
+# Variables:
+#   $value (number) - Amount of data being stored
+#   $unit (string) - The unit of data being stored (e.g. MB)
+app-basics-data-size = { $value } { $unit }
 show-dir-label =
     { PLATFORM() ->
         [macos] Hiển thị trong Finder
@@ -106,11 +107,21 @@ graphics-gpu2-title = GPU #2
 graphics-decision-log-title = Nhật ký quyết định
 graphics-crash-guards-title = Vô hiệu hóa tính năng bảo vệ sự cố
 graphics-workarounds-title = Cách giải quyết
+graphics-device-pixel-ratios = Tỉ lệ Pixel của cửa sổ thiết bị
 # Windowing system in use on Linux (e.g. X11, Wayland).
 graphics-window-protocol = Giao thức cửa sổ
 # Desktop environment in use on Linux (e.g. GNOME, KDE, XFCE, etc).
 graphics-desktop-environment = Môi trường máy tính để bàn
 place-database-title = Cơ sở dữ liệu địa điểm
+place-database-stats = Thống kê
+place-database-stats-show = Hiển thị thống kê
+place-database-stats-hide = Ẩn thống kê
+place-database-stats-entity = Thực thể
+place-database-stats-count = Tổng số
+place-database-stats-size-kib = Kích thước (KiB)
+place-database-stats-size-perc = Kích thước (%)
+place-database-stats-efficiency-perc = Hiệu quả (%)
+place-database-stats-sequentiality-perc = Tuần tự (%)
 place-database-integrity = Tính toàn vẹn
 place-database-verify-integrity = Xác nhận tính toàn vẹn
 a11y-title = Trợ năng
@@ -130,8 +141,6 @@ sandbox-sys-call-tid = TID
 sandbox-sys-call-proc-type = Kiểu quy trình
 sandbox-sys-call-number = Syscall
 sandbox-sys-call-args = Tham số
-safe-mode-title = Thử dùng chế độ an toàn
-restart-in-safe-mode-label = Khởi động lại và vô hiệu hóa các tiện ích…
 troubleshoot-mode-title = Chẩn đoán sự cố
 restart-in-troubleshoot-mode-label = Chế độ xử lý sự cố…
 clear-startup-cache-title = Hãy thử xóa bộ nhớ đệm khởi động
@@ -159,8 +168,18 @@ media-device-channels = Kênh
 media-device-rate = Tỉ lệ
 media-device-latency = Độ trễ
 media-capabilities-title = Khả năng truyền thông
+media-codec-support-info = Thông tin hỗ trợ Codec
 # List all the entries of the database.
 media-capabilities-enumerate = Liệt kê cơ sở dữ liệu
+
+## Codec support table
+
+media-codec-support-sw-decoding = Giải mã phần mềm
+media-codec-support-hw-decoding = Giải mã phần cứng
+media-codec-support-codec-name = Tên codec
+media-codec-support-supported = Được hỗ trợ
+media-codec-support-unsupported = Không hỗ trợ
+media-codec-support-error = Không có thông tin Codec được hỗ trợ. Hãy thử lại sau khi phát tập tin phương tiện.
 
 ##
 
@@ -189,36 +208,6 @@ remote-debugging-url = URL
 
 ##
 
-support-third-party-modules-title = Module của bên thứ ba
-support-third-party-modules-module = Tập tin module
-support-third-party-modules-version = Phiên bản tập tin
-support-third-party-modules-vendor = Thông tin nhà cung cấp
-support-third-party-modules-occurrence = Tần suất xảy ra
-support-third-party-modules-process = Loại tiến trình & ID
-support-third-party-modules-thread = Luồng
-support-third-party-modules-base = Địa chỉ Imagebase
-support-third-party-modules-uptime = Thời gian hoạt động của tiến trình (mili giây)
-support-third-party-modules-duration = Thời lượng tải (mili giây)
-support-third-party-modules-status = Trạng thái
-support-third-party-modules-status-loaded = Đã tải
-support-third-party-modules-status-blocked = Đã chặn
-support-third-party-modules-status-redirected = Đã chuyển hướng
-support-third-party-modules-empty = Không có module của bên thứ ba được tải.
-support-third-party-modules-no-value = (Không có giá trị)
-support-third-party-modules-button-open =
-    .title = Mở vị trí tập tin…
-support-third-party-modules-expand =
-    .title = Hiển thị thông tin chi tiết
-support-third-party-modules-collapse =
-    .title = Thu gọn thông tin chi tiết
-support-third-party-modules-unsigned-icon =
-    .title = Module này chưa được ký
-support-third-party-modules-folder-icon =
-    .title = Mở vị trí tập tin…
-support-third-party-modules-down-icon =
-    .title = Hiển thị thông tin chi tiết
-support-third-party-modules-up-icon =
-    .title = Thu gọn thông tin chi tiết
 # Variables
 # $days (Integer) - Number of days of crashes to log
 report-crash-for-days = Báo cáo lỗi trong { $days } ngày gần đây
@@ -285,10 +274,8 @@ webgl2-renderer = Trình kết xuất trình điều khiển WebGL 2
 webgl2-version = Phiên bản trình điều khiển WebGL 2
 webgl2-driver-extensions = Tiện ích mở rộng trình điều khiển WebGL 2
 webgl2-extensions = Tiện ích mở rộng WebGL 2
-blocklisted-bug = Danh sách chặn do các vấn đề đã biết
-# Variables
-# $bugNumber (string) - String of bug number from Bugzilla
-bug-link = lỗi { $bugNumber }
+webgpu-default-adapter = Adapter WebGPU mặc định
+webgpu-fallback-adapter = Adapter WebGPU dự phòng
 # Variables
 #   $bugNumber (string) - Bug number on Bugzilla
 support-blocklisted-bug = Bị chặn trong danh sách do các sự cố đã biết: <a data-l10n-name="bug-link">mã lỗi { $bugNumber }</a>
@@ -296,8 +283,6 @@ support-blocklisted-bug = Bị chặn trong danh sách do các sự cố đã bi
 # $failureCode (string) - String that can be searched in the source tree.
 unknown-failure = Danh sách chặn; mã lỗi { $failureCode }
 d3d11layers-crash-guard = Bộ soạn nhạc D3D11
-d3d11video-crash-guard = Bộ giải mã video D3D11
-d3d9video-crash-guard = Bộ giải mã video D3D9
 glcontext-crash-guard = OpenGL
 wmfvpxvideo-crash-guard = Bộ giải mã video WMF VPX
 reset-on-next-restart = Đặt lại vào lần khởi động lại tiếp theo
@@ -320,6 +305,7 @@ can-sandbox-media = Media Plugin Sandboxing
 content-sandbox-level = Cấp độ quy trình nội dung hộp cát
 effective-content-sandbox-level = Cấp độ hiệu quả nội dung hộp cát
 content-win32k-lockdown-state = Trạng thái Win32k Lockdown cho tiến trình nội dung
+support-sandbox-gpu-level = Mức độ tiến trình GPU hộp cát
 sandbox-proc-type-content = nội dung
 sandbox-proc-type-file = nội dung tập tin
 sandbox-proc-type-media-plugin = phần bổ trợ phương tiện
@@ -337,14 +323,6 @@ launcher-process-status-unknown = Tình trạng không xác định
 # $remoteWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
 multi-process-windows = { $remoteWindows }/{ $totalWindows }
-multi-process-status-0 = Đã bật bởi người dùng
-multi-process-status-1 = Đã bật theo mặc định
-multi-process-status-2 = Đã tắt
-multi-process-status-4 = Vô hiệu hóa bởi các công cụ trợ năng
-multi-process-status-6 = Vô hiệu hóa bởi nhập văn bản không được hỗ trợ
-multi-process-status-7 = Vô hiệu hóa bởi các tiện ích
-multi-process-status-8 = Bắt buộc vô hiệu hóa
-multi-process-status-unknown = Tình trạng không xác định
 # Variables
 # $fissionWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
@@ -353,7 +331,7 @@ fission-status-experiment-control = Đã tắt bởi thử nghiệm
 fission-status-experiment-treatment = Đã bật bởi thử nghiệm
 fission-status-disabled-by-e10s-env = Đã tắt bởi môi trường
 fission-status-enabled-by-env = Đã bật bởi môi trường
-fission-status-disabled-by-safe-mode = Đã tắt bởi chế độ an toàn
+fission-status-disabled-by-env = Đã tắt bởi môi trường
 fission-status-enabled-by-default = Đã bật theo mặc định
 fission-status-disabled-by-default = Đã tắt theo mặc định
 fission-status-enabled-by-user-pref = Đã bật bởi người dùng
@@ -362,12 +340,12 @@ fission-status-disabled-by-e10s-other = E10s bị vô hiệu hóa
 fission-status-enabled-by-rollout = Được kích hoạt bằng cách phát hành theo từng giai đoạn
 async-pan-zoom = Pan/Zoom không đồng bộ
 apz-none = không có
-wheel-enabled = con lăn đã bật
-touch-enabled = cảm ứng đã bật
-drag-enabled = thanh cuộn kéo đã bật
-keyboard-enabled = bàn phím đã bật
-autoscroll-enabled = tự động cuộn đã bật
-zooming-enabled = pinch-zoom mượt được kích hoạt
+wheel-enabled = con lăn được bật
+touch-enabled = cảm ứng được bật
+drag-enabled = thanh cuộn kéo được bật
+keyboard-enabled = bàn phím được bật
+autoscroll-enabled = tự động cuộn được bật
+zooming-enabled = pinch-zoom mượt được bật
 
 ## Variables
 ## $preferenceKey (string) - String ID of preference

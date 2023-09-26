@@ -11,6 +11,12 @@ reload-tab =
 select-all-tabs =
     .label = Vel alle faner
     .accesskey = f
+tab-context-play-tab =
+    .label = Spel fane
+    .accesskey = S
+tab-context-play-tabs =
+    .label = Spel av faner
+    .accesskey = S
 duplicate-tab =
     .label = Dupliser fane
     .accesskey = D
@@ -48,12 +54,9 @@ unpin-selected-tabs =
 bookmark-selected-tabs =
     .label = Bokmerk faner…
     .accesskey = B
-bookmark-tab =
-    .label = Bokmerk fane
+tab-context-bookmark-tab =
+    .label = Bokmerk fane…
     .accesskey = B
-reopen-in-container =
-    .label = Opne på nytt i behaldar
-    .accesskey = e
 tab-context-open-in-new-container-tab =
     .label = Opne i ny innhaldsfane
     .accesskey = O
@@ -69,30 +72,9 @@ move-to-new-window =
 tab-context-close-multiple-tabs =
     .label = Lat att fleire faner
     .accesskey = f
-tab-context-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Angre attlating av fane
-           *[other] Angre attlating av faner
-        }
-    .accesskey = A
-close-tab =
-    .label = Lat att fane
-    .accesskey = n
-close-tabs =
-    .label = Lat att faner
-    .accesskey = t
-move-tabs =
-    .label = Flytt faner
-    .accesskey = t
-move-tab =
-    .label = Flytt fane
-    .accesskey = t
 tab-context-share-url =
     .label = Del
     .accesskey = D
-tab-context-share-more =
-    .label = Meir…
 
 ## Variables:
 ##  $tabCount (Number): the number of tabs that are affected by the action.
@@ -104,13 +86,6 @@ tab-context-reopen-closed-tabs =
            *[other] Opne attlatne faner
         }
     .accesskey = a
-tab-context-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Lat att fane
-           *[other] Lat att faner
-        }
-    .accesskey = L
 tab-context-close-n-tabs =
     .label =
         { $tabCount ->
@@ -125,3 +100,11 @@ tab-context-move-tabs =
            *[other] Flytt faner
         }
     .accesskey = F
+
+tab-context-send-tabs-to-device =
+    .label =
+        { $tabCount ->
+            [one] Send fane til ei eining
+           *[other] Send { $tabCount } faner til ei eining
+        }
+    .accesskey = n

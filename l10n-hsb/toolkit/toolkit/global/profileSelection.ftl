@@ -23,6 +23,8 @@ profile-selection-delete-button =
     .label = Profil zhašeć…
     .accesskey = h
 
+profile-selection-conflict-message = Druha kopija { -brand-product-name } je změny na wašich profilach přewjedła. Dyrbiće { -brand-short-name } znowa startować, prjedy hač dalše změny přewjedźeće.
+
 ## Messages used in the profile manager
 
 profile-manager-description = { -brand-short-name } składuje informacije wo wašich nastajenjach, preferencach a druhich wužiwarskich zapiskach we wašim wužiwarskim profilu.

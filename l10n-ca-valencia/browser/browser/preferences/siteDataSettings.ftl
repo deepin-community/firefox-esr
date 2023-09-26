@@ -30,14 +30,6 @@ site-data-remove-selected =
     .label = Elimina la selecció
     .accesskey = l
 
-site-data-button-cancel =
-    .label = Cancel·la
-    .accesskey = C
-
-site-data-button-save =
-    .label = Guarda els canvis
-    .accesskey = a
-
 site-data-settings-dialog =
     .buttonlabelaccept = Guarda els canvis
     .buttonaccesskeyaccept = a
@@ -67,5 +59,8 @@ site-data-removing-dialog =
 site-data-removing-header = S'estan eliminant les galetes i dades dels llocs
 
 site-data-removing-desc = Si elimineu les galetes i les dades dels llocs, és possible que es tanque la sessió dels llocs web. Segur que voleu fer estos canvis?
+# Variables:
+#   $baseDomain (String) - The single domain for which data is being removed
+site-data-removing-single-desc = L'eliminació de les galetes i les dades del lloc vos podria tancar la sessió en alguns llocs web. Segur que voleu eliminar les galetes i les dades del lloc <strong>{ $baseDomain }</strong>?
 
 site-data-removing-table = S'eliminaran les galetes i les dades dels següents llocs web

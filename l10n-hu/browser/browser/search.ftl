@@ -19,3 +19,20 @@ opensearch-error-download-desc = A { -brand-short-name } nem tudta letölteni a 
 
 ##
 
+searchbar-submit =
+    .tooltiptext = Keresés indítása
+
+# This string is displayed in the search box when the input field is empty
+searchbar-input =
+    .placeholder = Keresés
+
+searchbar-icon =
+    .tooltiptext = Keresés
+
+## Infobar shown when search engine is removed and replaced.
+## Variables
+## $oldEngine (String) - the search engine to be removed.
+## $newEngine (String) - the search engine to replace the removed search engine.
+
+removed-search-engine-message = <strong>Az alapértelmezett keresőszolgáltatás megváltozott.</strong> A(z) { $oldEngine } már nem érhető el alapértelmezett keresőszolgáltatásként a { -brand-short-name }ban. Most már a(z) { $newEngine } az alapértelmezett keresőszolgáltatás. Hogy másik keresőszolgáltatást válasszon, ugorjon a beállításokhoz. <label data-l10n-name="remove-search-engine-article">További tudnivalók</label>
+remove-search-engine-button = OK

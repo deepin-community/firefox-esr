@@ -15,6 +15,9 @@ printui-sheets-count =
     }
 
 printui-page-range-all = Denak
+printui-page-range-current = Unekoa
+printui-page-range-odd = Bakoitia
+printui-page-range-even = Bikoitia
 printui-page-range-custom = Pertsonalizatua
 printui-page-range-label = Orriak
 printui-page-range-picker =
@@ -58,11 +61,18 @@ printui-options = Aukerak
 printui-headers-footers-checkbox = Inprimatu goiburu eta oinak
 printui-backgrounds-checkbox = Inprimatu atzeko planoa
 
-printui-selection-checkbox = Inprimatu hautapena soilik
-
 ## The "Format" section, select a version of the website to print. Radio
 ## options to select between the original page, selected text only, or a version
 ## where the page is processed with "Reader View".
+
+# The section title.
+printui-source-label = Formatua
+# Option for printing the original page.
+printui-source-radio = Jatorrizkoa
+# Option for printing just the content a user selected prior to printing.
+printui-selection-radio = Hautapena
+# Option for "simplifying" the page by printing the Reader View version.
+printui-simplify-page-radio = Sinplifikatua
 
 ##
 

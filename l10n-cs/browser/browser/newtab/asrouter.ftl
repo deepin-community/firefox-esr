@@ -7,7 +7,6 @@
 
 cfr-doorhanger-extension-heading = Doporučené rozšíření
 cfr-doorhanger-feature-heading = Doporučená funkce
-cfr-doorhanger-pintab-heading = Vyzkoušejte připnout panel
 
 ##
 
@@ -19,8 +18,6 @@ cfr-doorhanger-extension-cancel-button = Teď ne
 
 cfr-doorhanger-extension-ok-button = Přidat
     .accesskey = a
-cfr-doorhanger-pintab-ok-button = Připnout tento panel
-    .accesskey = P
 
 cfr-doorhanger-extension-manage-settings-button = Nastavení doporučování
     .accesskey = d
@@ -70,18 +67,6 @@ cfr-doorhanger-extension-total-users =
        *[other] { $total } uživatelů
     }
 
-cfr-doorhanger-pintab-description = Nechte si nejpoužívanější stránky po ruce v panelu, který neztratíte ani při restartu počítače.
-
-## These messages are steps on how to use the feature and are shown together.
-
-cfr-doorhanger-pintab-step1 = Pokud chcete panel připnout, klikněte na něj <b>pravým tlačítkem</b>.
-cfr-doorhanger-pintab-step2 = V nabídce vyberte <b>Připnout panel</b>.
-cfr-doorhanger-pintab-step3 = Pokud je na stránce něco nového, uvidíte u ní na liště panelů modrý puntík.
-
-cfr-doorhanger-pintab-animation-pause = Pozastavit
-cfr-doorhanger-pintab-animation-resume = Pokračovat
-
-
 ## Firefox Accounts Message
 
 cfr-doorhanger-bookmark-fxa-header = Mějte své záložky všude s sebou.
@@ -107,222 +92,33 @@ cfr-whatsnew-button =
     .label = Co je nového
     .tooltiptext = Co je nového
 
-cfr-whatsnew-panel-header = Co je nového
-
 cfr-whatsnew-release-notes-link-text = Přečtěte si poznámky k vydání
 
-cfr-whatsnew-fx70-title = { -brand-short-name } tvrdě bojuje za vaše soukromí
-cfr-whatsnew-fx70-body = Nejnovější aktualizace vylepšuje funkci ochrany proti sledování a usnadňuje vytváření bezpečných hesel pro každý server.
-
-cfr-whatsnew-tracking-protect-title = Chraňte se před sledovacími prvky
-cfr-whatsnew-tracking-protect-body = { -brand-short-name } blokuje mnoho prvků sociálních sítí a třetích stran, které jsou známé sledováním vašeho chování na internetu.
-cfr-whatsnew-tracking-protect-link-text = Zobrazit podrobnosti
-
-# This string is displayed before a large numeral that indicates the total
-# number of tracking elements blocked. Don’t add $blockedCount to your
-# localization, because it would result in the number showing twice.
-cfr-whatsnew-tracking-blocked-title = Blokování sledovacích prvků
-cfr-whatsnew-tracking-blocked-subtitle = Od { DATETIME($earliestDate, month: "long", year: "numeric") }
-cfr-whatsnew-tracking-blocked-link-text = Zobrazit podrobnosti
-
-cfr-whatsnew-lockwise-backup-title = Zálohujte svá hesla
-cfr-whatsnew-lockwise-backup-body = Používejte generovaná a bezpečná hesla, ke kterým máte přístup všude, kde se přihlásíte.
-cfr-whatsnew-lockwise-backup-link-text = Zapnout zálohování
-
-cfr-whatsnew-lockwise-take-title = Vezměte si svá hesla všude s sebou
-cfr-whatsnew-lockwise-take-body = S mobilní aplikací { -lockwise-brand-short-name } získáte bezpečný přístup k vašim zálohovaným přihlašovacím údajům kdekoliv budete potřebovat.
-cfr-whatsnew-lockwise-take-link-text = Stáhnout aplikaci
-
-## Search Bar
-
-cfr-whatsnew-searchbar-title = Použijte adresní řádek - pište méně, najdete více
-cfr-whatsnew-searchbar-body-topsites = Po klepnutí do adresního řádku uvidíte odkazy na své top stránky.
-
-## Search bar
-
-cfr-whatsnew-searchbar-icon-alt-text = Ikona lupy
-
-## Picture-in-Picture
-
-cfr-whatsnew-pip-header = Sledujte videa během brouzdání
-cfr-whatsnew-pip-body = V režimu obraz v obraze se video přehrává v samostatném plovoucím okně, takže ho můžete sledovat i při práci v jiných panelech.
-cfr-whatsnew-pip-cta = Zjistit více
-
-## Permission Prompt
-
-cfr-whatsnew-permission-prompt-header = Méně otravných vyskakovacích oken
-cfr-whatsnew-permission-prompt-body = { -brand-shorter-name } brání stránkám v dotazech na posílání vyskakovacích upozornění.
-cfr-whatsnew-permission-prompt-cta = Zjistit více
-
-## Fingerprinter Counter
-
-# This string is displayed before a large numeral that indicates the total
-# number of tracking elements blocked. Don’t add $fingerprinterCount to your
-# localization, because it would result in the number showing twice.
-cfr-whatsnew-fingerprinter-counter-header = Zablokováno vytvoření otisku prohlížeče
-cfr-whatsnew-fingerprinter-counter-body = { -brand-shorter-name } blokuje mnoho způsobů vytváření otisku prohlížeče, které tajně sbírají informace o vašem zařízení, aby si vytvořily profil pro sledování vašich dalších aktivit.
-
-# Message variation when fingerprinters count is less than 10
-cfr-whatsnew-fingerprinter-counter-header-alt = Blokování otisku prohlížeče
-cfr-whatsnew-fingerprinter-counter-body-alt = { -brand-shorter-name } blokuje vytváření otisku prohlížeče, které tajně sbírá informace o vašem zařízení pro vytvoření vašeho reklamního profilu
-
-## Bookmark Sync
-
-cfr-doorhanger-sync-bookmarks-header = Sdílejte tuto záložku i do svého telefonu
-cfr-doorhanger-sync-bookmarks-body =
-    Mějte své záložky, hesla, historii prohlížení a další vždy po ruce. Přihlaste se { -brand-product-name.gender ->
-        [masculine] ve { -brand-product-name(case: "loc") }
-        [feminine] v { -brand-product-name(case: "loc") }
-        [neuter] v { -brand-product-name(case: "loc") }
-       *[other] v aplikaci { -brand-product-name }
-    }.
-cfr-doorhanger-sync-bookmarks-ok-button = Zapnout { -sync-brand-short-name(case: "gen") }
-    .accesskey = Z
-
-## Login Sync
-
-cfr-doorhanger-sync-logins-header = Už žádná zapomenutá hesla
-cfr-doorhanger-sync-logins-body = Ukládejte a synchronizujte hesla bezpečně napříč svými zařízeními.
-cfr-doorhanger-sync-logins-ok-button = Zapnout { -sync-brand-short-name(case: "gen") }
-    .accesskey = t
-
-## Send Tab
-
-cfr-doorhanger-send-tab-header = Přečtěte si tento článek i na cestách
-cfr-doorhanger-send-tab-recipe-header = Vezměte si tento recept rovnou do kuchyně
-cfr-doorhanger-send-tab-body =
-    Posílání panelů funguje pro snadné sdílení odkazů do vašeho telefonu nebo kamkoliv, kde jste přihlášeni { -brand-product-name.gender ->
-        [masculine] ve { -brand-product-name(case: "loc") }
-        [feminine] v { -brand-product-name(case: "loc") }
-        [neuter] v { -brand-product-name(case: "loc") }
-       *[other] v aplikaci { -brand-product-name }
-    }.
-cfr-doorhanger-send-tab-ok-button = Vyzkoušet posílání panelů
-    .accesskey = V
-
-## Firefox Send
-
-cfr-doorhanger-firefox-send-header = Sdílejte bezpečně toto PDF
-cfr-doorhanger-firefox-send-body = Sdílejte své dokumenty bez toho, aby vám někdo koukal přes rameno. Ochráníme je pomocí end-to-end šifrování a odkazů s omezenou platností.
-cfr-doorhanger-firefox-send-ok-button = Vyzkoušet { -send-brand-name(case: "acc") }
-    .accesskey = V
-
-## Social Tracking Protection
-
-cfr-doorhanger-socialtracking-ok-button = Podrobnosti
-    .accesskey = P
-cfr-doorhanger-socialtracking-close-button = Zavřít
-    .accesskey = Z
-cfr-doorhanger-socialtracking-dont-show-again = Příště už nezobrazovat
-    .accesskey = n
-cfr-doorhanger-socialtracking-heading =
-    { -brand-short-name.gender ->
-        [masculine] { -brand-short-name } zabránil
-        [feminine] { -brand-short-name } zabránila
-        [neuter] { -brand-short-name } zabránilo
-       *[other] Aplikace { -brand-short-name } zabránila
-    } vašemu sledování sociální sítí
-cfr-doorhanger-socialtracking-description = Na vašem soukromí záleží. { -brand-short-name } blokuje běžné sledovací prvky sociálních sítí a tím omezuje množství dat, které o vás mohou na internetu sbírat.
-cfr-doorhanger-fingerprinters-heading =
-    { -brand-short-name.gender ->
-        [masculine] { -brand-short-name } zabránil
-        [feminine] { -brand-short-name } zabránila
-        [neuter] { -brand-short-name } zabránilo
-       *[other] Aplikace { -brand-short-name } zabránila
-    } vytvoření otisku vašeho prohlížeče
-cfr-doorhanger-fingerprinters-description = Na vašem soukromí záleží. { -brand-short-name } blokuje vytváření otisku vašeho prohlížeče, který může být využit k vaší identifikaci nebo vašemu sledování.
-cfr-doorhanger-cryptominers-heading =
-    { -brand-short-name.gender ->
-        [masculine] { -brand-short-name } zablokoval
-        [feminine] { -brand-short-name } zablokovala
-        [neuter] { -brand-short-name } zablokovalo
-       *[other] Aplikace { -brand-short-name } zablokovala
-    } těžbu kryptoměn
-cfr-doorhanger-cryptominers-description = Na vašem soukromí záleží. { -brand-short-name } blokuje těžbu kryptoměn, která spotřebovává výkon vašeho počítače k těžbě digitálních mincí.
-
 ## Enhanced Tracking Protection Milestones
-
-# Variables:
-#   $blockedCount (Number) - The total count of blocked trackers. This number will always be greater than 1.
-#   $date (String) - The date we began recording the count of blocked trackers
-cfr-doorhanger-milestone-heading =
-    Od { $date } { -brand-short-name.gender ->
-        [masculine] { -brand-short-name } zablokoval
-        [feminine] { -brand-short-name } zablokovala
-        [neuter] { -brand-short-name } zablokovalo
-       *[other] aplikace { -brand-short-name } zablokovala
-    } { $blockedCount ->
-        [one] jeden sledovací prvek
-        [few] více než <b>{ $blockedCount }</b> sledovací prvky
-       *[other] více než <b>{ $blockedCount }</b> sledovacích prvků
-    }.
 
 # Variables:
 #   $blockedCount (Number) - The total count of blocked trackers. This number will always be greater than 1.
 #   $date (Datetime) - The date we began recording the count of blocked trackers
 cfr-doorhanger-milestone-heading2 =
     { -brand-short-name.gender ->
-        [masculine] { -brand-short-name(case: "gen") }
-        [feminine] { -brand-short-name(case: "gen") }
-        [neuter] { -brand-short-name(case: "gen") }
-       *[other] Aplikace { -brand-short-name }
-    } od { DATETIME($date, month: "long", year: "numeric") } { -brand-short-name.gender ->
-        [masculine] zablokoval
-        [feminine] zablokovala
-        [neuter] zablokovalo
-       *[other] zablokovala
+        [masculine] { -brand-short-name } od { DATETIME($date, month: "long", year: "numeric") }
+        [feminine] { -brand-short-name } od { DATETIME($date, month: "long", year: "numeric") }
+        [neuter] { -brand-short-name } od { DATETIME($date, month: "long", year: "numeric") }
+       *[other] Aplikace { -brand-short-name } od { DATETIME($date, month: "long", year: "numeric") }
+    } { -brand-short-name.gender ->
+        [masculine] zablokoval více než
+        [feminine] zablokovala více než
+        [neuter] zablokovalo více než
+       *[other] zablokovala více než
     } { $blockedCount ->
-        [one] jeden sledovací prvek
-        [few] <b>{ $blockedCount }</b> sledovací prvky
-       *[other] <b>{ $blockedCount }</b> sledovacích prvků
-    }.
+        [one] jeden sledovací prvek.
+        [few] <b>{ $blockedCount }</b> sledovací prvky.
+       *[other] <b>{ $blockedCount }</b> sledovacích prvků.
+    }
 cfr-doorhanger-milestone-ok-button = Zobrazit vše
     .accesskey = v
-
-## What’s New Panel Content for Firefox 76
-
-
-## Lockwise message
-
-cfr-whatsnew-lockwise-header = Snadná tvorba bezpečných hesel
-cfr-whatsnew-lockwise-body = Není jednoduché vymýšlet vždy nové bezpečné heslo pro každý účet. Místo vymýšlení nového hesla, klepněte do pole pro heslo a použijte bezpečné heslo vygenerované { -brand-shorter-name(case: "ins") }.
-cfr-whatsnew-lockwise-icon-alt = Ikona { -lockwise-brand-short-name(case: "gen") }
-
-## Vulnerable Passwords message
-
-cfr-whatsnew-passwords-header = Nechte se upozornit na zranitelná hesla
-cfr-whatsnew-passwords-body = Hackeři vědí, že lidé často používají stejná hesla. Pokud používáte stejné heslo na více serverech a na některém dojde k úniku dat, { -lockwise-brand-short-name } vás upozorní a doporučí změnu hesla na všech serverech s tímto heslem.
-cfr-whatsnew-passwords-icon-alt = Ikona zranitelného hesla
-
-## Picture-in-Picture fullscreen message
-
-cfr-whatsnew-pip-fullscreen-header = Otevřete si obraz v obraze na celou obrazovku
-cfr-whatsnew-pip-fullscreen-body = Při otevření videa v plovoucím okně ho můžete poklepáním zvětšit na celou obrazovku.
-cfr-whatsnew-pip-fullscreen-icon-alt = Ikona obrazu v obraze
-
-## Protections Dashboard message
-
-cfr-whatsnew-protections-header = Ochrana soukromí na dosah ruky
-cfr-whatsnew-protections-body = Přehled ochrany soukromí obsahuje souhrnné informace o únicích dat a správě vašich hesel. Snad také zjistíte, následky kolika úniků dat už jste vyřešili, nebo jestli mohly být vaše přihlašovací údaje součástí nějakého nového úniku dat.
-cfr-whatsnew-protections-cta-link = Zobrazit přehled ochrany soukromí
-cfr-whatsnew-protections-icon-alt = Ikona štítu
-
-## Better PDF message
-
-cfr-whatsnew-better-pdf-header = Vylepšené prohlížení PDF
-cfr-whatsnew-better-pdf-body =
-    Soubory PDF se nyní otevírají přímo { -brand-short-name.gender ->
-        [masculine] ve { -brand-short-name(case: "loc") }
-        [feminine] v { -brand-short-name(case: "loc") }
-        [neuter] v { -brand-short-name(case: "loc") }
-       *[other] v aplikaci { -brand-short-name }
-    }, takže je máte hned po ruce.
-
 cfr-doorhanger-milestone-close-button = Zavřít
     .accesskey = Z
-
-## What’s New Panel Content for Firefox 76
-## Protections Dashboard message
 
 ## DOH Message
 
@@ -335,39 +131,13 @@ cfr-doorhanger-doh-secondary-button = Zakázat
 
 ## Fission Experiment Message
 
-cfr-doorhanger-fission-body-approved = Vaše soukromí je důležité. { -brand-short-name } nyní navzájem izoluje jednotlivé weby, což hackerům ztěžuje krádež hesel, čísel platebních karet nebo jiných citlivých informací.
-cfr-doorhanger-fission-header = Izolace webů
-cfr-doorhanger-fission-primary-button = OK, rozumím
-    .accesskey = O
-cfr-doorhanger-fission-secondary-button = Zjistit více
-    .accesskey = Z
-
-## What's new: Cookies message
-
-## What's new: Media controls message
-
-## What's new: Search shortcuts
-
-## What's new: Cookies protection
-
-## What's new: Better bookmarking
-
-## What's new: Cross-site cookie tracking
-
 ## Full Video Support CFR message
 
 cfr-doorhanger-video-support-body =
-    V této verzi { -brand-short-name.gender ->
-        [masculine] { -brand-short-name(case: "gen") }
-        [feminine] { -brand-short-name(case: "gen") }
-        [neuter] { -brand-short-name(case: "gen") }
-       *[other] aplikace { -brand-short-name }
-    } se videa na tomto serveru nemusí přehrávat správně. Pro plnou podporu videí { -brand-short-name.gender ->
-        [masculine] svůj { -brand-short-name(case: "acc") }
-        [feminine] svou { -brand-short-name(case: "acc") }
-        [neuter] své { -brand-short-name(case: "acc") }
-       *[other] aplikaci { -brand-short-name }
-    } aktualizujte.
+    { -brand-short-name.case-status ->
+        [with-cases] V této verzi { -brand-short-name(case: "gen") } se videa na tomto serveru nemusí přehrávat správně. Pro plnou podporu videí svůj { -brand-short-name(case: "acc") } aktualizujte.
+       *[no-cases] V této verzi aplikace { -brand-short-name } se videa na tomto serveru nemusí přehrávat správně. Pro plnou podporu videí aplikaci { -brand-short-name } aktualizujte.
+    }
 cfr-doorhanger-video-support-header =
     Pro přehrání videa aktualizujte { -brand-short-name.gender ->
         [masculine] svůj { -brand-short-name(case: "acc") }
@@ -377,3 +147,179 @@ cfr-doorhanger-video-support-header =
     }.
 cfr-doorhanger-video-support-primary-button = Aktualizovat
     .accesskey = A
+
+## Spotlight modal shared strings
+
+## VPN promotion dialog for public Wi-Fi users
+##
+## If a user is detected to be on a public Wi-Fi network, they are given a
+## bit of info about how to improve their privacy and then offered a button
+## to the Mozilla VPN page and a link to dismiss the dialog.
+
+# This header text can be explicitly wrapped.
+spotlight-public-wifi-vpn-header = Zdá se, že používáte veřejnou Wi-Fi síť
+spotlight-public-wifi-vpn-body = Pokud chcete skrýt svou polohu a aktivity během prohlížení internetu, zvažte využití služby virtuální privátní sítě. Poskytne vám ochranu během prohlížení internetu na veřejných místech, v kavárně nebo na letišti.
+spotlight-public-wifi-vpn-primary-button = Ochraňte své soukromí s { -mozilla-vpn-brand-name(case: "ins") }
+    .accesskey = s
+spotlight-public-wifi-vpn-link = Teď ne
+    .accesskey = n
+
+## Total Cookie Protection Rollout
+
+## Emotive Continuous Onboarding
+
+spotlight-better-internet-header = Lepší internet začíná u vás
+spotlight-better-internet-body =
+    { -brand-short-name.case-status ->
+        [with-cases] Používáním { -brand-short-name(case: "gen") } vyjadřujete svou podporu otevřenému webu, který je přístupný a lepší pro všechny.
+       *[no-cases] Používáním aplikace { -brand-short-name } vyjadřujete svou podporu otevřenému webu, který je přístupný a lepší pro všechny.
+    }
+spotlight-peace-mind-header = Všechno, co potřebujete
+spotlight-peace-mind-body = Každý měsíc zablokuje { -brand-short-name } pro každého uživatele v průměru přes 3000 sledovacích prvků. A to proto, aby vám nic nesnižovalo kvalitu internetu, tím méně sledovací prvky porušující vaše soukromí.
+spotlight-pin-primary-button =
+    { PLATFORM() ->
+        [macos] Připnout do docku
+       *[other] Připnout na lištu
+    }
+spotlight-pin-secondary-button = Teď ne
+
+## MR2022 Background Update Windows native toast notification strings.
+##
+## These strings will be displayed by the Windows operating system in
+## a native toast, like:
+##
+## <b>multi-line title</b>
+## multi-line text
+## <img>
+## [ primary button ] [ secondary button ]
+##
+## The button labels are fitted into narrow fixed-width buttons by
+## Windows and therefore must be as narrow as possible.
+
+mr2022-background-update-toast-title =
+    { -brand-short-name.gender ->
+        [masculine] Nový { -brand-short-name }. Více soukromí, méně sledovacích prvků. Bez kompromisů.
+        [feminine] Nová { -brand-short-name }. Více soukromí, méně sledovacích prvků. Bez kompromisů.
+        [neuter] Nové { -brand-short-name }. Více soukromí, méně sledovacích prvků. Bez kompromisů.
+       *[other] Nová aplikace { -brand-short-name }. Více soukromí, méně sledovacích prvků. Bez kompromisů.
+    }
+mr2022-background-update-toast-text =
+    { -brand-short-name.gender ->
+        [masculine] Vyzkoušejte nyní nejnovější { -brand-short-name(case: "acc") }, který byl vylepšen o naši dosud nejsilnější ochranu proti sledování.
+        [feminine] Vyzkoušejte nyní nejnovější { -brand-short-name(case: "acc") }, která byla vylepšena o naši dosud nejsilnější ochranu proti sledování.
+        [neuter] Vyzkoušejte nyní nejnovější { -brand-short-name(case: "acc") }, které bylo vylepšeno o naši dosud nejsilnější ochranu proti sledování.
+       *[other] Vyzkoušejte nyní nejnovější aplikaci { -brand-short-name }, která byla vylepšena o naši dosud nejsilnější ochranu proti sledování.
+    }
+
+# This button label will be fitted into a narrow fixed-width button by
+# Windows. Try to not exceed the width of the English text (compare it
+# using a variable font like Arial): the button can only fit 1-2
+# additional characters, exceeding characters will be truncated.
+mr2022-background-update-toast-primary-button-label =
+    { -brand-shorter-name.case-status ->
+        [with-cases] Spustit { -brand-shorter-name(case: "acc") }
+       *[no-cases] Spustit aplikaci { -brand-shorter-name }
+    }
+
+# This button label will be fitted into a narrow fixed-width button by
+# Windows. Try to not exceed the width of the English text (compare it using a
+# variable font like Arial): the button can only fit 1-2 additional characters,
+# exceeding characters will be truncated.
+mr2022-background-update-toast-secondary-button-label = Upozornit mě později
+
+## Firefox View CFR
+
+firefoxview-cfr-primarybutton = Vyzkoušejte ho
+    .accesskey = t
+firefoxview-cfr-secondarybutton = Teď ne
+    .accesskey = n
+firefoxview-cfr-header-v2 = Rychle pokračujte tam, kde jste skončili
+firefoxview-cfr-body-v2 = Získejte zpět nedávno zavřené panely a plynule přecházejte mezi zařízeními pomocí { -firefoxview-brand-name(case: "gen") }.
+
+## Firefox View Spotlight
+
+firefoxview-spotlight-promo-title = Přivítejte { -firefoxview-brand-name(case: "acc") }
+
+# “Poof” refers to the expression to convey when something or someone suddenly disappears, or in this case, reappears. For example, “Poof, it’s gone.”
+firefoxview-spotlight-promo-subtitle = Chcete zrovna ten panel otevřený v telefonu? Vezměte si ho. Potřebujete znovu tu stránku, co jste před chvílí navštívili? Hups, díky { -firefoxview-brand-name(case: "dat", capitalization: "lower") } ji máte zpátky.
+firefoxview-spotlight-promo-primarybutton = Jak to funguje
+firefoxview-spotlight-promo-secondarybutton = Přeskočit
+
+## Colorways expiry reminder CFR
+
+colorways-cfr-primarybutton = Zvolit baletu barev
+    .accesskey = Z
+
+# "shades" refers to the different color options available to users in colorways.
+colorways-cfr-body =
+    { -brand-short-name.case-status ->
+        [with-cases] Vybarvěte svůj { -brand-short-name(case: "acc") } exkluzivními odstíny inspirovanými hlasy, které změnily kulturu.
+       *[no-cases] Vybarvěte svůj prohlížeč { -brand-short-name } exkluzivními odstíny inspirovanými hlasy, které změnily kulturu.
+    }
+colorways-cfr-header-28days = Paleta barev Nezávislé hlasy je dostupná pouze do 16. ledna.
+colorways-cfr-header-14days = Paleta barev Nezávislé hlasy vyprší během dvou týdnů
+colorways-cfr-header-7days = Paleta barev Nezávislé hlasy vyprší tento týden
+colorways-cfr-header-today = Paleta barev Nezávislé hlasy vyprší dnes
+
+## Cookie Banner Handling CFR
+
+cfr-cbh-header =
+    { -brand-short-name.case-status ->
+        [with-cases] Povolit ve { -brand-short-name(case: "dat") } blokování cookie lišt?
+       *[no-cases] Povolit v aplikaci { -brand-short-name } blokování cookie lišt?
+    }
+cfr-cbh-body = { -brand-short-name } může automaticky blokovat řadu cookie lišt.
+cfr-cbh-confirm-button = Odmítat cookie lišty
+    .accesskey = c
+cfr-cbh-dismiss-button = Teď ne
+    .accesskey = n
+
+## These strings are used in the Fox doodle Pin/set default spotlights
+
+july-jam-headline = Všechno, co potřebujete
+july-jam-body = Každý měsíc { -brand-short-name } zablokuje v průměru více než 3 000 sledovacích prvků na uživatele, takže máte bezpečný a rychlý přístup ke kvalitnímu internetu.
+july-jam-set-default-primary =
+    { -brand-short-name.case-status ->
+        [with-cases] Otevírat mé odkazy pomocí { -brand-short-name(case: "gen") }
+       *[no-cases] Otevírat mé odkazy pomocí aplikace { -brand-short-name }
+    }
+fox-doodle-pin-headline = Vítejte zpět
+
+# “indie” is short for the term “independent”.
+# In this instance, free from outside influence or control.
+fox-doodle-pin-body = Zde je rychlé připomenutí, že si svůj oblíbený nezávislý prohlížeč můžete jediným klepnutím ponechat.
+fox-doodle-pin-primary =
+    { -brand-short-name.case-status ->
+        [with-cases] Otevírat mé odkazy pomocí { -brand-short-name(case: "gen") }
+       *[no-cases] Otevírat mé odkazy pomocí aplikace { -brand-short-name }
+    }
+fox-doodle-pin-secondary = Teď ne
+
+## These strings are used in the Set Firefox as Default PDF Handler for Existing Users experiment
+
+set-default-pdf-handler-headline =
+    { -brand-short-name.case-status ->
+        [with-cases] <strong>Vaše PDF dokumenty se nyní otevírají ve { -brand-short-name(case: "loc") }.</strong> Upravujte nebo podepisujte formuláře přímo v prohlížeči. Pro změnu vyhledejte v nastavení položku „PDF“.
+       *[no-cases] <strong>Vaše PDF dokumenty se nyní otevírají v aplikaci { -brand-short-name }.</strong> Upravujte nebo podepisujte formuláře přímo v prohlížeči. Pro změnu vyhledejte v nastavení položku „PDF“.
+    }
+set-default-pdf-handler-primary = Rozumím
+
+## FxA sync CFR
+
+fxa-sync-cfr-header = Plánujete v blízké budoucnosti nové zařízení?
+fxa-sync-cfr-body =
+    { -brand-product-name.case-status ->
+        [with-cases] Ujistěte se, že máte své záložky, hesla a panely vždy při sobě, když otevřete novou instalaci { -brand-product-name(case: "gen") }.
+       *[no-cases] Ujistěte se, že máte své záložky, hesla a panely vždy při sobě, když otevřete novou instalaci prohlížeče { -brand-product-name }.
+    }
+fxa-sync-cfr-primary = Zjistit více
+    .accesskey = Z
+fxa-sync-cfr-secondary = Upozornit mě později
+    .accesskey = U
+
+## Device Migration FxA Spotlight
+
+device-migration-fxa-spotlight-header = Používáte starší zařízení?
+device-migration-fxa-spotlight-body = Zálohujte svá data, abyste neztratili důležité informace, jako jsou záložky a hesla – zejména pokud přejdete na nové zařízení.
+device-migration-fxa-spotlight-primary-button = Jak zálohovat moje data
+device-migration-fxa-spotlight-link = Upozornit mě později

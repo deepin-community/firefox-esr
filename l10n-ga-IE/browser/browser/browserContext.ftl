@@ -11,17 +11,6 @@ navbar-tooltip-instruction =
 
 ## Back
 
-main-context-menu-back =
-    .tooltiptext = Leathanach amháin siar
-    .aria-label = Siar
-    .accesskey = s
-
-navbar-tooltip-back =
-    .value = { main-context-menu-back.tooltiptext }
-
-toolbar-button-back =
-    .label = { main-context-menu-back.aria-label }
-
 # Variables
 #   $shortcut (String) - A keyboard shortcut for the Go Back command.
 main-context-menu-back-2 =
@@ -41,17 +30,6 @@ toolbar-button-back-2 =
     .label = { main-context-menu-back-2.aria-label }
 
 ## Forward
-
-main-context-menu-forward =
-    .tooltiptext = Leathanach amháin ar aghaidh
-    .aria-label = Ar Aghaidh
-    .accesskey = A
-
-navbar-tooltip-forward =
-    .value = { main-context-menu-forward.tooltiptext }
-
-toolbar-button-forward =
-    .label = { main-context-menu-forward.aria-label }
 
 # Variables
 #   $shortcut (String) - A keyboard shortcut for the Go Forward command.
@@ -112,34 +90,7 @@ main-context-menu-page-save =
     .label = Sábháil an Leathanach Mar…
     .accesskey = R
 
-toolbar-button-page-save =
-    .label = { main-context-menu-page-save.label }
-
 ## Simple menu items
-
-main-context-menu-bookmark-add =
-    .aria-label = Cruthaigh Leabharmharc don Leathanach Seo
-    .accesskey = m
-    .tooltiptext = Cruthaigh Leabharmharc don Leathanach Seo
-
-# Variables
-#   $shortcut (String) - A keyboard shortcut for the add bookmark command.
-main-context-menu-bookmark-add-with-shortcut =
-    .aria-label = Cruthaigh Leabharmharc don Leathanach Seo
-    .accesskey = m
-    .tooltiptext = Cruthaigh leabharmharc don leathanach seo ({ $shortcut })
-
-main-context-menu-bookmark-change =
-    .aria-label = Cuir an Leabharmharc Seo in Eagar
-    .accesskey = m
-    .tooltiptext = Cuir an leabharmharc seo in eagar
-
-# Variables
-#   $shortcut (String) - A keyboard shortcut for the edit bookmark command.
-main-context-menu-bookmark-change-with-shortcut =
-    .aria-label = Cuir an Leabharmharc Seo in Eagar
-    .accesskey = m
-    .tooltiptext = Cuir an leabharmharc seo in eagar ({ $shortcut })
 
 main-context-menu-open-link =
     .label = Oscail an Nasc
@@ -161,10 +112,6 @@ main-context-menu-open-link-new-private-window =
     .label = Oscail an Nasc i bhFuinneog Nua Phríobháideach
     .accesskey = P
 
-main-context-menu-bookmark-this-link =
-    .label = Cruthaigh Leabharmharc don Nasc Seo
-    .accesskey = L
-
 main-context-menu-save-link =
     .label = Sábháil an Nasc Mar…
     .accesskey = N
@@ -185,10 +132,6 @@ main-context-menu-save-link-to-pocket =
 main-context-menu-copy-email =
     .label = Cóipeáil an Seoladh Ríomhphoist
     .accesskey = e
-
-main-context-menu-copy-link =
-    .label = Cóipeáil Suíomh an Naisc
-    .accesskey = p
 
 ## Media (video/audio) controls
 ##
@@ -213,32 +156,6 @@ main-context-menu-media-mute =
 main-context-menu-media-unmute =
     .label = Le Fuaim
     .accesskey = m
-
-main-context-menu-media-play-speed =
-    .label = Luas Seinnte
-    .accesskey = L
-
-main-context-menu-media-play-speed-slow =
-    .label = Mall (0.5×)
-    .accesskey = M
-
-main-context-menu-media-play-speed-normal =
-    .label = Gnáthluas
-    .accesskey = n
-
-main-context-menu-media-play-speed-fast =
-    .label = Tapa (1.25×)
-    .accesskey = T
-
-main-context-menu-media-play-speed-faster =
-    .label = Níos Tapúla (1.5×)
-    .accesskey = a
-
-# "Ludicrous" is a reference to the movie "Space Balls" and is meant
-# to say that this speed is very fast.
-main-context-menu-media-play-speed-fastest =
-    .label = Luas Áiféiseach (2×)
-    .accesskey = L
 
 main-context-menu-media-loop =
     .label = Lúb
@@ -265,39 +182,13 @@ main-context-menu-media-video-leave-fullscreen =
     .label = Scoir ón Lánscáileán
     .accesskey = n
 
-# This is used when right-clicking on a video in the
-# content area when the Picture-in-Picture feature is enabled.
-main-context-menu-media-pip =
-    .label = Pictiúr i bPictiúr
-    .accesskey = P
-
 main-context-menu-image-reload =
     .label = Athlódáil an Íomhá
     .accesskey = A
 
-main-context-menu-image-view =
-    .label = Taispeáin an Íomhá Amháin
-    .accesskey = T
-
-main-context-menu-video-view =
-    .label = Féach ar Fhíseán
-    .accesskey = F
-
 main-context-menu-image-copy =
     .label = Cóipeáil an Íomhá
     .accesskey = p
-
-main-context-menu-image-copy-location =
-    .label = Cóipeáil Suíomh na hÍomhá
-    .accesskey = ó
-
-main-context-menu-video-copy-location =
-    .label = Cóipeáil Suíomh an Fhíseáin
-    .accesskey = ó
-
-main-context-menu-audio-copy-location =
-    .label = Cóipeáil Suíomh na Fuaime
-    .accesskey = ó
 
 main-context-menu-image-save-as =
     .label = Sábháil an Íomhá Mar…
@@ -306,10 +197,6 @@ main-context-menu-image-save-as =
 main-context-menu-image-email =
     .label = Seol an Íomhá trí Ríomhphost…
     .accesskey = m
-
-main-context-menu-image-set-as-background =
-    .label = Socraigh Mar Chúlra na Deisce…
-    .accesskey = S
 
 main-context-menu-image-info =
     .label = Taispeáin Eolas Faoin Íomhá
@@ -327,10 +214,6 @@ main-context-menu-audio-save-as =
     .label = Sábháil an Fhuaim Mar…
     .accesskey = b
 
-main-context-menu-video-image-save-as =
-    .label = Sábháil Grianghraf Mar…
-    .accesskey = S
-
 main-context-menu-video-email =
     .label = Seol an Físeán trí Ríomhphost…
     .accesskey = a
@@ -339,28 +222,12 @@ main-context-menu-audio-email =
     .label = Seol an Fhuaim trí Ríomhphost…
     .accesskey = a
 
-main-context-menu-plugin-play =
-    .label = Cuir an forlíontán seo i ngníomh
-    .accesskey = C
-
-main-context-menu-plugin-hide =
-    .label = Folaigh an forlíontán seo
-    .accesskey = h
-
 main-context-menu-save-to-pocket =
     .label = Sábháil an Leathanach i { -pocket-brand-name }
     .accesskey = k
 
 main-context-menu-send-to-device =
     .label = Seol an Leathanach chuig Gléas
-    .accesskey = G
-
-main-context-menu-view-background-image =
-    .label = Taispeáin Íomhá sa Chúlra
-    .accesskey = C
-
-main-context-menu-generate-new-password =
-    .label = Úsáid Focal Faire Ginte…
     .accesskey = G
 
 ## The access keys for "Use Saved Login" and "Use Saved Password"
@@ -398,10 +265,6 @@ main-context-menu-frame-reload =
     .label = Athlódáil an Fráma
     .accesskey = r
 
-main-context-menu-frame-bookmark =
-    .label = Cruthaigh Leabharmharc don Fhráma Seo
-    .accesskey = m
-
 main-context-menu-frame-save-as =
     .label = Sábháil an Fráma Mar…
     .accesskey = F
@@ -426,10 +289,6 @@ main-context-menu-view-page-source =
     .label = Taispeáin Foinse an Leathanaigh
     .accesskey = F
 
-main-context-menu-view-page-info =
-    .label = Taispeáin Sonraí an Leathanaigh
-    .accesskey = i
-
 main-context-menu-bidi-switch-text =
     .label = Athraigh Treo an Téacs
     .accesskey = T
@@ -438,13 +297,10 @@ main-context-menu-bidi-switch-page =
     .label = Athraigh Treo an Leathanaigh
     .accesskey = L
 
-main-context-menu-inspect-element =
-    .label = Scrúdaigh Eilimint
-    .accesskey = S
-
 main-context-menu-inspect-a11y-properties =
     .label = Scrúdaigh Airíonna Inrochtaineachta
 
 main-context-menu-eme-learn-more =
     .label = Tuilleadh eolais faoi DRM...
     .accesskey = D
+

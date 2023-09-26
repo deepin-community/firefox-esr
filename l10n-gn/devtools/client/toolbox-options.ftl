@@ -41,6 +41,15 @@ options-collapse-attrs-label = Tekome’ẽ DOM ñemboyke
 options-collapse-attrs-tooltip =
     .title = Tekome’ẽ ipukúva moambuekuaávape ñemboyke
 
+# The label for the checkbox option to enable the "drag to update" feature
+options-inspector-draggable-properties-label = Eikutu ha embosyryry rehaijey hag̃ua tuichakue térã michĩngue
+options-inspector-draggable-properties-tooltip =
+    .title = Eikutu ha embosyryry rehaijey hag̃ua tuichakue térã michĩngue moambuekuaáva renondépe
+
+# The label for the checkbox option to enable simplified highlighting on page elements
+# within the inspector for users who enabled prefers-reduced-motion = reduce
+options-inspector-simplified-highlighters-label = Eipuru jehechaukaha’i prefers-reduced-motion ndive
+
 ## "Default Color Unit" options for the Inspector
 
 options-default-color-unit-label = Sa’y joja imarãva
@@ -48,6 +57,7 @@ options-default-color-unit-authored = Apoháraramo
 options-default-color-unit-hex = Mba’evai
 options-default-color-unit-hsl = HSL(A)
 options-default-color-unit-rgb = RGB(A)
+options-default-color-unit-hwb = HWB
 options-default-color-unit-name = Sa’ykuéra réra
 
 ## Style Editor section
@@ -64,11 +74,6 @@ options-stylesheet-autocompletion-tooltip =
 
 # The heading
 options-screenshot-label = Mba’erechaha japyhypyre reko
-
-# Label for the checkbox that toggles screenshot to clipboard feature
-options-screenshot-clipboard-label = Mba’erechaha japyhypyre kuatiajokohápe
-options-screenshot-clipboard-tooltip =
-    .title = Eñongatu mba’erechaha japyhypyre kuatiajokohaitépe
 
 # Label for the checkbox that toggles screenshot to clipboard feature
 options-screenshot-clipboard-only-label = Mba’erechaha japyhypyre kuatiajokohápe
@@ -123,6 +128,14 @@ options-enable-remote-label = Ñemopotĩ okayguáva myandy
 options-enable-remote-tooltip2 =
     .title = Emyandývo ko poravorã omoneĩta ndéve emopotĩvo ko kundahára reko oka guive
 
+# The label for checkbox that enables F12 as a shortcut to open DevTools
+options-enable-f12-label = Eipuru F12 embojuruja térã embogue hag̃ua DevTools
+
+# The label for checkbox that toggles custom formatters for objects
+options-enable-custom-formatters-label = Emyandy mopotĩeteha mba’eteéva
+options-enable-custom-formatters-tooltip =
+    .title = Emyandývo poravorã omoneĩ umi tenda ombohapévo mopotĩeteha mba’eteéva DOM peg̃uarãva
+
 # The label for checkbox that toggles the service workers testing over HTTP on or off.
 options-enable-service-workers-http-label = Mba’epytyvõrã mba’apohára moheñói HTTP rupi (tembipuru ryru ijurujáramo)
 options-enable-service-workers-http-tooltip =
@@ -135,9 +148,3 @@ options-source-maps-tooltip =
 
 # The message shown for settings that trigger page reload
 options-context-triggers-page-refresh = * Tembiapo ag̃agua añónte, emyenyhẽjey kuatiarogue
-
-# The label for the checkbox that toggles the display of the platform data in the
-# Profiler i.e. devtools.profiler.ui.show-platform-data a boolean preference in about:config
-options-show-platform-data-label = Mba’ekuaarã jehechauka Gecko rehegua
-options-show-platform-data-tooltip =
-    .title = Remyandývo poravopyrã marandu ñehesa’ỹijoha JavaScript omoingéta ta’ãnga’i Gecko platafórmape

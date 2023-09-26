@@ -2,23 +2,15 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-blocklist-window =
+blocklist-window2 =
     .title = ‌‍ನಿಬಂಧಿಸಿದ ಪಟ್ಟಿಗಳು
-    .style = width: 55em
+    .style = min-width: 55em
 
 blocklist-close-key =
     .key = w
 
 blocklist-treehead-list =
     .label = ಪಟ್ಟಿ
-
-blocklist-button-cancel =
-    .label = ರದ್ದುಗೊಳಿಸು
-    .accesskey = C
-
-blocklist-button-ok =
-    .label = ಬದಲಾವಣೆಗಳನ್ನು ಉಳಿಸು
-    .accesskey = S
 
 
 # This template constructs the name of the block list in the block lists dialog.

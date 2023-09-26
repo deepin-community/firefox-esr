@@ -20,17 +20,6 @@ toolbar-context-menu-bookmark-selected-tabs =
 toolbar-context-menu-select-all-tabs =
     .label = Wšě rajtarki wubrać
     .accesskey = u
-toolbar-context-menu-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Začinjeny rajtark wočinić
-            [one] Začinjeny rajtark wočinić
-            [two] Začinjenej rajtarkaj wočinić
-            [few] Začinjene rajtarki wočinić
-           *[other] Začinjene rajtarki wočinić
-        }
-    .accesskey = Z
-
 toolbar-context-menu-reopen-closed-tabs =
     .label =
         { $tabCount ->
@@ -56,18 +45,18 @@ toolbar-context-menu-report-extension =
     .label = Rozšěrjenje zdźělić
     .accesskey = o
 
-# Can appear on the same context menu as menubarCmd ("Menu Bar") and
-# personalbarCmd ("Bookmarks Toolbar"), so they should have different
-# access keys.
+# Can appear on the same context menu as toolbar-context-menu-menu-bar-cmd
+# ("Menu Bar") and personalbarCmd ("Bookmarks Toolbar"), so they should
+# have different access keys.
 toolbar-context-menu-pin-to-overflow-menu =
     .label = K přeběžkowemu menijej připjeć
     .accesskey = P
-toolbar-context-menu-auto-hide-downloads-button =
-    .label = W symbolowej lajsće awtomatisce schować
-    .accesskey = s
 toolbar-context-menu-auto-hide-downloads-button-2 =
     .label = Tłóčatko schować, hdyž prózdne
     .accesskey = T
+toolbar-context-menu-always-open-downloads-panel =
+    .label = Wokno pokazać, hdyž so sćehnjenje započina
+    .accesskey = o
 toolbar-context-menu-remove-from-toolbar =
     .label = Ze symboloweje lajsty wotstronić
     .accesskey = Z
@@ -77,6 +66,11 @@ toolbar-context-menu-view-customize-toolbar =
 toolbar-context-menu-view-customize-toolbar-2 =
     .label = Symbolowu lajstu přiměrić…
     .accesskey = S
+# This is only ever shown when toolbar-context-menu-pin-to-overflow-menu
+# is hidden, so they can share access keys.
+toolbar-context-menu-pin-to-toolbar =
+    .label = K symbolowej lajsće připjeć
+    .accesskey = b
 
 toolbar-context-menu-bookmarks-toolbar-always-show-2 =
     .label = Přeco pokazać
@@ -91,3 +85,7 @@ toolbar-context-menu-bookmarks-toolbar-on-new-tab-2 =
 toolbar-context-menu-bookmarks-show-other-bookmarks =
     .label = Druhe zapołožki pokazać
     .accesskey = D
+
+toolbar-context-menu-menu-bar-cmd =
+    .toolbarname = Menijowa lajsta
+    .accesskey = M

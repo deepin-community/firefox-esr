@@ -16,6 +16,8 @@ policy-AllowedDomainsForApps = Defini dominios con permission de acceder a Googl
 
 policy-AppAutoUpdate = Activar o disactivar le actualisation automatic del application.
 
+policy-AppUpdatePin = Impedi a { -brand-short-name } de esser actualisate ultra un certe version
+
 policy-AppUpdateURL = Definir un URL de actualisation personalisate pro le application.
 
 policy-Authentication = Configurar authentication integrate pro sitos web que lo supporta.
@@ -39,6 +41,9 @@ policy-CaptivePortal = Activar o disactivar supporto pro portal captive.
 policy-CertificatesDescription = Adde certificatos o usa certificatos integrate.
 
 policy-Cookies = Permitter o refusar al sitos web de deponer cookies.
+
+# Containers in this context is referring to container tabs in Firefox.
+policy-Containers = Predefinir criterios re le contentores.
 
 policy-DisabledCiphers = Disactivar cryptographias.
 
@@ -65,13 +70,11 @@ policy-DisableForgetButton = Impedir accesso al button Oblidar.
 
 policy-DisableFormHistory = Non rememorar le chronologia de recercas e formularios.
 
-policy-DisableMasterPasswordCreation = Si ver, non pote esser create un contrasigno maestro.
-
 policy-DisablePrimaryPasswordCreation = Si ver, non pote esser create un contrasigno primari.
 
 policy-DisablePasswordReveal = Non permitter de monstrar le contrasignos in le credentiales salvate.
 
-policy-DisablePocket = Disactivar le function pro salvar paginas web in Pocket.
+policy-DisablePocket2 = Disactivar le function pro salvar paginas web in { -pocket-brand-name }.
 
 policy-DisablePrivateBrowsing = Disactivar le Navigation private.
 
@@ -89,7 +92,9 @@ policy-DisableSystemAddonUpdate = Impedir al navigator de installar e actualisar
 
 policy-DisableTelemetry = Disactivar le telemetria.
 
-policy-DisplayBookmarksToolbar = Monstrar le barra de marcapaginas per configuration predefinite.
+policy-DisableThirdPartyModuleBlocking = Impedir al usator de blocar modulos de tertie partes que es inserite in le processo de { -brand-short-name }.
+
+policy-DisplayBookmarksToolbar = Monstrar le barra de marcapaginas per predefinition.
 
 policy-DisplayMenuBar = Monstrar le Barra del menu de ordinario.
 
@@ -105,6 +110,8 @@ policy-EnableTrackingProtection = Activar o disactivar le blocage de contento e 
 # “lock” means that the user won’t be able to change this setting
 policy-EncryptedMediaExtensions = Activar o disactivar le extensiones de medios cryptate e optionalmente blocar los.
 
+policy-ExemptDomainFileTypePairsFromFileTypeDownloadWarnings = Disactivar le avisos basate super le file extension pro specific typos de file sur dominios.
+
 # A “locked” extension can’t be disabled or removed by the user. This policy
 # takes 3 keys (“Install”, ”Uninstall”, ”Locked”), you can either keep them in
 # English or translate them as verbs.
@@ -114,9 +121,9 @@ policy-ExtensionSettings = Gerer tote le aspectos del installation de extensione
 
 policy-ExtensionUpdate = Activar o disactivar le actualisation automatic de extensiones.
 
-policy-FirefoxHome = Configura Firefox Home.
+policy-FirefoxHome2 = Configurar { -firefox-home-brand-name }.
 
-policy-FlashPlugin = Permitter o refusar le uso del plug-in Flash.
+policy-GoToIntranetSiteForSingleWordEntryInAddressBar = Fortiar le navigation directe del sito intranet in vice de cercar quando on scribe singule entratas de parolas in le barra de adresses.
 
 policy-Handlers = Configurar gestores de application predefinite.
 
@@ -141,8 +148,6 @@ policy-LocalFileLinks = Permitter a sitos web specific de ligar a files local.
 
 policy-ManagedBookmarks = Configura un lista de marcapaginas, gerite per un administrator, que non pote esser cambiate per le usator.
 
-policy-MasterPassword = Require o impedi usar un contrasigno maestro.
-
 policy-ManualAppUpdateOnly = Solo consentir actualisationes manual e non allertar le usator re actualisationes.
 
 policy-PrimaryPassword = Requirer o impedir usar un contrasigno primari.
@@ -151,17 +156,19 @@ policy-NetworkPrediction = Activar o disactivar prediction del rete (prelectura 
 
 policy-NewTabPage = Activar o disactivar le pagina Nove scheda.
 
-policy-NoDefaultBookmarks = Disactivar le creation del marcapaginas predefinite impacchettate con { -brand-short-name } e le Marcapaginas intelligente (Plus Visitate, Tags recente). Nota: iste criterio es efficace solo si usate ante le prime uso del profilo.
+policy-NoDefaultBookmarks = Disactivar le creation del marcapaginas predefinite de { -brand-short-name } e del Marcapaginas intelligente (le plus visitate, etiquettas recente). Nota: iste directiva functiona solmente si es usate ante le prime uso del profilo.
 
 policy-OfferToSaveLogins = Fortiar que le parametro permitte a { -brand-short-name } de offerer de memorisar credentiales. Le valores "true" e "false" es acceptate.
 
 policy-OfferToSaveLoginsDefault = Indica le valor predefinite pro permitter a { -brand-short-name } de offerer de memorisar credentiales. Le valores "true" e "false" es acceptate.
 
-policy-OverrideFirstRunPage = Supplantar le pagina del lanceamento initial.
+policy-OverrideFirstRunPage = Supplantar le pagina de prime uso. Vacua le valor de iste directiva si tu vole disactivar le pagina de prime uso.
 
 policy-OverridePostUpdatePage = Supplantar le pagina de “Novas” post-actualisation. Defini iste criterio a blanc si tu desira disactivar le pagina de post-actualisation.
 
 policy-PasswordManagerEnabled = Activar salvamento de contrasignos al gestor de contrasignos.
+
+policy-PasswordManagerExceptions = Impedir a { -brand-short-name } de salvar le contrasigno pro sitos specific.
 
 # PDF.js and PDF should not be translated
 policy-PDFjs = Disactivar o configurar PDF.js, le visor de PDF integrate in { -brand-short-name }.
@@ -188,8 +195,8 @@ policy-SearchEngines = Configurar le parametros del motores de recerca. Iste cri
 
 policy-SearchSuggestEnabled = Activar o disactivar suggestiones de recerca.
 
-# For more information, see https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSS/PKCS11/Module_Installation
-policy-SecurityDevices = Installar modulos PKCS #11.
+# For more information, see https://wikipedia.org/wiki/PKCS_11
+policy-SecurityDevices2 = Adder o deler modulos PKCS #11.
 
 policy-ShowHomeButton = Monstrar le button casa sur le barra de utensiles.
 
@@ -197,9 +204,13 @@ policy-SSLVersionMax = Stabilir le version SSL maxime.
 
 policy-SSLVersionMin = Stabilir le version SSL minime.
 
+policy-StartDownloadsInTempDirectory = Fortiar le discargamento in un plica local temporari, plus tosto que in le directorio ordinari.
+
 policy-SupportMenu = Adder un selection de supporto personalisate al menu de adjuta.
 
 policy-UserMessaging = Non monstrar al usator certe messages.
+
+policy-UseSystemPrintDialog = Imprimer usante le fenestra de impression del systema…
 
 # “format” refers to the format used for the value of this policy.
 policy-WebsiteFilter = Blocar le accesso a sitos web. Vider documentation pro plus detalios sur le formato.

@@ -12,11 +12,6 @@ crashes-id = Ідэнтыфікатар справаздачы
 crashes-send-date = Пададзена
 crashes-all-reports = Усе справаздачы пра крахі
 crashes-no-config = Гэта праграма не наладжана паказваць справаздачы пра крахі.
-extensions-title = Пашырэнні
-extensions-name = Назва
-extensions-enabled = Задзейнічана
-extensions-version = Версія
-extensions-id = ID
 support-addons-title = Дадаткі
 support-addons-name = Назва
 support-addons-type = Тып
@@ -80,6 +75,12 @@ app-basics-location-service-key-google = Ключ Службы вызначэн�
 app-basics-safebrowsing-key-google = Ключ бяспечнага аглядання ад Google
 app-basics-key-mozilla = Ключ Службы вызначэння месцазнаходжання ад Mozilla
 app-basics-safe-mode = Абаронены рэжым
+app-basics-memory-size = Памер памяці (RAM)
+app-basics-disk-available = Даступнае месца на дыску
+# Variables:
+#   $value (number) - Amount of data being stored
+#   $unit (string) - The unit of data being stored (e.g. MB)
+app-basics-data-size = { $value } { $unit }
 show-dir-label =
     { PLATFORM() ->
         [macos] Паказаць у шукальніку
@@ -109,11 +110,21 @@ graphics-gpu2-title = GPU #2
 graphics-decision-log-title = Журнал рашэнняў
 graphics-crash-guards-title = Адключаныя магчымасці абаронцы ад падзенняў
 graphics-workarounds-title = Абыходныя шляхі
+graphics-device-pixel-ratios = Піксельныя суадносіны вокнаў
 # Windowing system in use on Linux (e.g. X11, Wayland).
 graphics-window-protocol = Аконны пратакол
 # Desktop environment in use on Linux (e.g. GNOME, KDE, XFCE, etc).
 graphics-desktop-environment = Працоўнае асяроддзе
 place-database-title = База звестак месцаў
+place-database-stats = Статыстыка
+place-database-stats-show = Паказаць статыстыку
+place-database-stats-hide = Схаваць статыстыку
+place-database-stats-entity = Аб'ект
+place-database-stats-count = Колькасць
+place-database-stats-size-kib = Памер (КіБ)
+place-database-stats-size-perc = Памер (%)
+place-database-stats-efficiency-perc = Эфектыўнасць (%)
+place-database-stats-sequentiality-perc = Паслядоўнасць (%)
 place-database-integrity = Цэльнасць
 place-database-verify-integrity = Праверыць цэльнасць
 a11y-title = Даступнасць
@@ -133,8 +144,6 @@ sandbox-sys-call-tid = TID
 sandbox-sys-call-proc-type = Тып працэсу
 sandbox-sys-call-number = Сістэмны выклік
 sandbox-sys-call-args = Аргументы
-safe-mode-title = Паспрабаваць абаронены рэжым
-restart-in-safe-mode-label = Перазапусціць з адключанымі дадаткамі…
 troubleshoot-mode-title = Дыягнаставаць праблемы
 restart-in-troubleshoot-mode-label = Рэжым вырашэння праблем…
 clear-startup-cache-title = Паспрабаваць ачысціць кэш запуску
@@ -162,8 +171,18 @@ media-device-channels = Каналы
 media-device-rate = Частата
 media-device-latency = Затрымка
 media-capabilities-title = Медыя-магчымасці
+media-codec-support-info = Інфармацыя аб падтрымцы кодэкаў
 # List all the entries of the database.
 media-capabilities-enumerate = Пералічыць базу дадзеных
+
+## Codec support table
+
+media-codec-support-sw-decoding = Праграмнае дэкадаванне
+media-codec-support-hw-decoding = Апаратнае дэкадаванне
+media-codec-support-codec-name = Назва кодэка
+media-codec-support-supported = Падтрымліваецца
+media-codec-support-unsupported = Не падтрымліваецца
+media-codec-support-error = Інфармацыя аб падтрымцы кодэкаў недаступная. Паўтарыце спробу пасля прайгравання мультымедыйнага файла.
 
 ##
 
@@ -186,42 +205,12 @@ intl-regional-prefs = Рэгіянальныя налады
 ##
 ## See also https://firefox-source-docs.mozilla.org/remote/
 
-remote-debugging-title = Адлеглая адладка (пратакол Chromium)
+remote-debugging-title = Аддаленая адладка (пратакол Chromium)
 remote-debugging-accepting-connections = Прыём злучэнняў
 remote-debugging-url = URL
 
 ##
 
-support-third-party-modules-title = Модулі іншых вытворцаў
-support-third-party-modules-module = Файл модуля
-support-third-party-modules-version = Версія файла
-support-third-party-modules-vendor = Інфармацыя пра вытворцу
-support-third-party-modules-occurrence = Копіі
-support-third-party-modules-process = Тып і ідэнтыфікатар працэсу
-support-third-party-modules-thread = Паток
-support-third-party-modules-base = Адрас базавай загрузкі выявы
-support-third-party-modules-uptime = Час працы працэсу (мс)
-support-third-party-modules-duration = Працягласць загрузкі (мс)
-support-third-party-modules-status = Стан
-support-third-party-modules-status-loaded = Загружаны
-support-third-party-modules-status-blocked = Заблакаваны
-support-third-party-modules-status-redirected = Перанакіраваны
-support-third-party-modules-empty = Модулі іншых вытворцаў не загружаны.
-support-third-party-modules-no-value = (Няма значэння)
-support-third-party-modules-button-open =
-    .title = Адкрыць месцазнаходжанне файла…
-support-third-party-modules-expand =
-    .title = Паказаць падрабязную інфармацыю
-support-third-party-modules-collapse =
-    .title = Згарнуць падрабязную інфармацыю
-support-third-party-modules-unsigned-icon =
-    .title = Гэты модуль не падпісаны
-support-third-party-modules-folder-icon =
-    .title = Адкрыць месцазнаходжанне файла…
-support-third-party-modules-down-icon =
-    .title = Паказаць падрабязную інфармацыю
-support-third-party-modules-up-icon =
-    .title = Згарнуць падрабязную інфармацыю
 # Variables
 # $days (Integer) - Number of days of crashes to log
 report-crash-for-days =
@@ -313,10 +302,8 @@ webgl2-renderer = WebGL 2 - Адлюстравальнік драйвера
 webgl2-version = WebGL 2 - Версія драйвера
 webgl2-driver-extensions = WebGL 2 - Пашырэнні драйвера
 webgl2-extensions = WebGL 2 - Пашырэнні
-blocklisted-bug = У спісе блакавання з-за вядомых праблем
-# Variables
-# $bugNumber (string) - String of bug number from Bugzilla
-bug-link = праблема { $bugNumber }
+webgpu-default-adapter = Стандартны адаптар WebGPU
+webgpu-fallback-adapter = Рэзервовы адаптар WebGPU
 # Variables
 #   $bugNumber (string) - Bug number on Bugzilla
 support-blocklisted-bug = Заблакавана з-за вядомых праблем: <a data-l10n-name="bug-link">апісанне { $bugNumber }</a>
@@ -324,8 +311,6 @@ support-blocklisted-bug = Заблакавана з-за вядомых праб
 # $failureCode (string) - String that can be searched in the source tree.
 unknown-failure = У спісе блакавання; код памылкі { $failureCode }
 d3d11layers-crash-guard = Кампазітар D3D11
-d3d11video-crash-guard = Відэадэкодэр D3D11
-d3d9video-crash-guard = Відэадэкодэр D3D9
 glcontext-crash-guard = OpenGL
 wmfvpxvideo-crash-guard = Відэадэкодэр WMF VPX
 reset-on-next-restart = Скінуць пры наступным перазапуску
@@ -348,6 +333,7 @@ can-sandbox-media = Пясочніца медыя-плагінаў
 content-sandbox-level = Узровень пясочніцы змястоўных працэсаў
 effective-content-sandbox-level = Дзейны ўзровень ізаляцыі працэсу апрацоўкі змесціва
 content-win32k-lockdown-state = Стан блакавання Win32k для працэсу змесціва
+support-sandbox-gpu-level = Узровень пясочніцы працэсу GPU
 sandbox-proc-type-content = змесціва
 sandbox-proc-type-file = змесціва файла
 sandbox-proc-type-media-plugin = медыяплагін
@@ -365,14 +351,6 @@ launcher-process-status-unknown = Невядомы статус
 # $remoteWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
 multi-process-windows = { $remoteWindows }/{ $totalWindows }
-multi-process-status-0 = Уключаны карыстальнікам
-multi-process-status-1 = Прадвызначана - уключаны
-multi-process-status-2 = Выключаны
-multi-process-status-4 = Выключана прыладамі даступнасці
-multi-process-status-6 = Выключана непадтрыманым тэкставым уводам
-multi-process-status-7 = Адключана дадатакамі
-multi-process-status-8 = Прымусова адключаны
-multi-process-status-unknown = Невядомы статус
 # Variables
 # $fissionWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
@@ -381,8 +359,8 @@ fission-status-experiment-control = Адключана эксперымента�
 fission-status-experiment-treatment = Уключана эксперыментам
 fission-status-disabled-by-e10s-env = Адключана асяроддзем
 fission-status-enabled-by-env = Уключана асяроддзем
-fission-status-disabled-by-safe-mode = Адключана ў бяспечным рэжыме
-fission-status-enabled-by-default = Тыпова уключана
+fission-status-disabled-by-env = Адключаны асяроддзем
+fission-status-enabled-by-default = Тыпова ўключана
 fission-status-disabled-by-default = Тыпова адключана
 fission-status-enabled-by-user-pref = Уключаны карыстальнікам
 fission-status-disabled-by-user-pref = Адключана карыстальнікам
@@ -392,7 +370,7 @@ async-pan-zoom = Асінхроннае павелічэнне/маштаб
 apz-none = няма
 wheel-enabled = увод колца ўключаны
 touch-enabled = пальцавы увод ўключаны
-drag-enabled = захоп стужкі прагорткі ўключаны
+drag-enabled = захоп стужкі пракруткі ўключаны
 keyboard-enabled = клавіятура ўключана
 autoscroll-enabled = аўтапракрутка ўключана
 zooming-enabled = уключана плаўнае маштабаванне шчыпком

@@ -11,12 +11,23 @@ reload-tab =
 select-all-tabs =
     .label = Piliin Lahat ng Tab
     .accesskey = S
+tab-context-play-tab =
+    .label = I-play ang Tab
+    .accesskey = l
+tab-context-play-tabs =
+    .label = I-play ang mga Tab
+    .accesskey = y
 duplicate-tab =
     .label = Doblehin ang Tab
     .accesskey = D
 duplicate-tabs =
     .label = Mga Tabs na Kasingtulad
     .accesskey = D
+# The following string is displayed on a menuitem that will close the tabs from the start of the tabstrip to the currently targeted tab (excluding the currently targeted and any other selected tabs).
+# In left-to-right languages this should use "Left" and in right-to-left languages this should use "Right".
+close-tabs-to-the-start =
+    .label = Isara ang mga Tab sa Kaliwa
+    .accesskey = I
 # The following string is displayed on a menuitem that will close the tabs from the end of the tabstrip to the currently targeted tab (excluding the currently targeted and any other selected tabs).
 # In left-to-right languages this should use "Right" and in right-to-left languages this should use "Left".
 close-tabs-to-the-end =
@@ -43,12 +54,6 @@ unpin-selected-tabs =
 bookmark-selected-tabs =
     .label = i-Bookmark ang mga Tab…
     .accesskey = B
-bookmark-tab =
-    .label = i-Bookmark ang Tab
-    .accesskey = B
-reopen-in-container =
-    .label = Muling buksan sa Lalagyan
-    .accesskey = e
 tab-context-open-in-new-container-tab =
     .label = Buksan sa Panibagong Container Tab
     .accesskey = B
@@ -64,26 +69,6 @@ move-to-new-window =
 tab-context-close-multiple-tabs =
     .label = Magsara ng Mga Tab
     .accesskey = M
-tab-context-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Buksang Muli ang Isinarang Tab
-            [one] Buksang Muli ang Isinarang Tab
-           *[other] Buksang Muli ang mga Isinarang Tab
-        }
-    .accesskey = U
-close-tab =
-    .label = Isara ang Tab
-    .accesskey = c
-close-tabs =
-    .label = Isara ang mga Tab
-    .accesskey = S
-move-tabs =
-    .label = Ilipat ang mga Tab
-    .accesskey = v
-move-tab =
-    .label = Ilipat ang Tab
-    .accesskey = v
 tab-context-share-url =
     .label = Ibahagi
     .accesskey = b
@@ -99,14 +84,14 @@ tab-context-reopen-closed-tabs =
            *[other] Muling Buksan ang mga Naisarang Tab
         }
     .accesskey = M
-tab-context-close-tabs =
+tab-context-close-n-tabs =
     .label =
         { $tabCount ->
             [1] Isara ang Tab
             [one] Isara ang Tab
-           *[other] Isara ang mga Tab
+           *[other] Isara ang { $tabCount } mga Tab
         }
-    .accesskey = C
+    .accesskey = I
 tab-context-move-tabs =
     .label =
         { $tabCount ->
@@ -115,3 +100,11 @@ tab-context-move-tabs =
            *[other] Ilipat ang mga Tab
         }
     .accesskey = v
+
+tab-context-send-tabs-to-device =
+    .label =
+        { $tabCount ->
+            [one] Ipadala ang Tab sa Device
+           *[other] Magpadala ng { $tabCount } Tab sa Device
+        }
+    .accesskey = n

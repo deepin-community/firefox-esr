@@ -31,8 +31,8 @@ text-action-copy-shortcut =
     .key = C
 
 text-action-paste =
-    .label = टाँस्नुहोस्
-    .accesskey = P
+    .label = पेस्ट गर्नुहोस्
+    .accesskey = प
 
 text-action-paste-shortcut =
     .key = V
@@ -48,3 +48,5 @@ text-action-select-all =
 text-action-select-all-shortcut =
     .key = A
 
+text-action-search-text-box-clear =
+    .title = खाली गर्नुहोस्

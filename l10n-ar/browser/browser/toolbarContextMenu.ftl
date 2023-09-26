@@ -2,6 +2,9 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
+toolbar-context-menu-new-tab =
+    .label = لسان جديد
+    .accesskey = س
 toolbar-context-menu-reload-selected-tab =
     .label = أعِد تحميل اللسان المنتقى
     .accesskey = د
@@ -17,19 +20,6 @@ toolbar-context-menu-bookmark-selected-tabs =
 toolbar-context-menu-select-all-tabs =
     .label = اختر كل الألسنة
     .accesskey = خ
-toolbar-context-menu-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] أعِد فتح اللسان
-            [zero] أعِد فتح الألسنة
-            [one] أعِد فتح اللسان
-            [two] أعِد فتح اللسانين
-            [few] أعِد فتح الألسنة
-            [many] أعِد فتح الألسنة
-           *[other] أعِد فتح الألسنة
-        }
-    .accesskey = ع
-
 toolbar-context-menu-reopen-closed-tabs =
     .label =
         { $tabCount ->
@@ -57,15 +47,12 @@ toolbar-context-menu-report-extension =
     .label = أبلِغ عن الامتداد
     .accesskey = ت
 
-# Can appear on the same context menu as menubarCmd ("Menu Bar") and
-# personalbarCmd ("Bookmarks Toolbar"), so they should have different
-# access keys.
+# Can appear on the same context menu as toolbar-context-menu-menu-bar-cmd
+# ("Menu Bar") and personalbarCmd ("Bookmarks Toolbar"), so they should
+# have different access keys.
 toolbar-context-menu-pin-to-overflow-menu =
     .label = ثبّت في قائمة الزيادة
     .accesskey = ث
-toolbar-context-menu-auto-hide-downloads-button =
-    .label = أخفِ تلقائيا في شريط الأدوات
-    .accesskey = خ
 toolbar-context-menu-auto-hide-downloads-button-2 =
     .label = أخفِ الزر إن لم تكن هناك تنزيلات
     .accesskey = خ
@@ -92,3 +79,7 @@ toolbar-context-menu-bookmarks-toolbar-on-new-tab-2 =
 toolbar-context-menu-bookmarks-show-other-bookmarks =
     .label = أظهِر العلامات الأخرى
     .accesskey = ه
+
+toolbar-context-menu-menu-bar-cmd =
+    .toolbarname = شريط القوائم
+    .accesskey = ق

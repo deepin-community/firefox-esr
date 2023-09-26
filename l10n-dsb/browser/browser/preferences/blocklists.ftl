@@ -2,9 +2,9 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-blocklist-window =
+blocklist-window2 =
     .title = Blokěrowańske lisćiny
-    .style = width: 55em
+    .style = min-width: 55em
 
 blocklist-description = Wubjeŕśo lisćinu { -brand-short-name }, aby pśeslědowaki online blokěrował. Lisćiny se wót <a data-l10n-name="disconnect-link" title="Disconnect">Disconnect</a> k dispoziciji stajaju.
 blocklist-close-key =
@@ -12,14 +12,6 @@ blocklist-close-key =
 
 blocklist-treehead-list =
     .label = Lisćina
-
-blocklist-button-cancel =
-    .label = Pśetergnuś
-    .accesskey = P
-
-blocklist-button-ok =
-    .label = Změny składowaś
-    .accesskey = s
 
 blocklist-dialog =
     .buttonlabelaccept = Změny składowaś

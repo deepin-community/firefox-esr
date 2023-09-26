@@ -5,9 +5,9 @@
 
 ## Strings used for device manager
 
-devmgr =
+devmgr-window =
     .title = Bainisteoir na nGléasanna
-    .style = width: 74em; height: 35em;
+    .style = min-width: 74em; min-height: 35em;
 
 devmgr-devlist =
     .label = Modúil agus Gléasanna Slándála
@@ -107,8 +107,6 @@ devinfo-label =
 
 devinfo-serialnum =
     .label = Sraithuimhir
-
-fips-nonempty-password-required = Is riachtanas é den mhód FIPS Príomhfhocal Faire a bheith socraithe agat do gach aon ghléas slándála. Socraigh an Príomhfhocal Faire roimh iarracht a dhéanamh an mód FIPS a chumasú.
 
 unable-to-toggle-fips = Ní féidir mód FIPS an ghléis slándála a athrú.  Moltar duit an feidhmchlár seo a atosú.
 load-pk11-module-file-picker-title = Roghnaigh tiománaí gléis PKCS#11 le lódáil

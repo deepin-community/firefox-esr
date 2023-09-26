@@ -41,15 +41,6 @@ menu-quit =
 menu-quit-mac =
     .label = { -brand-shorter-name } से बाहर जाएँ
 
-# This menu-quit-button string is only used on Linux.
-menu-quit-button =
-    .label = { menu-quit.label }
-
-# This menu-quit-button-win string is only used on Windows.
-menu-quit-button-win =
-    .label = { menu-quit.label }
-    .tooltip = { -brand-shorter-name } से निकास
-
 menu-about =
     .label = { -brand-shorter-name } का परिचय
     .accesskey = A
@@ -79,9 +70,6 @@ menu-file-open-location =
 menu-file-open-file =
     .label = फाइल खोलें...
     .accesskey = O
-menu-file-close =
-    .label = बंद करें
-    .accesskey = C
 menu-file-close-window =
     .label = विंडो बंद करें
     .accesskey = d
@@ -94,9 +82,6 @@ menu-file-email-link =
 menu-file-print-setup =
     .label = पृष्ठ व्यवस्थित…
     .accesskey = u
-menu-file-print-preview =
-    .label = छपाई पूर्वावलोकन
-    .accesskey = v
 menu-file-print =
     .label = छापें...
     .accesskey = P
@@ -112,9 +97,6 @@ menu-file-go-offline =
 menu-edit =
     .label = संपादन
     .accesskey = E
-menu-edit-find-on =
-    .label = इस पृष्ठ में ढूँढ़ें…
-    .accesskey = F
 menu-edit-find-again =
     .label = फिर ढ़ूँढ़ें
     .accesskey = g
@@ -130,9 +112,6 @@ menu-view =
 menu-view-toolbars-menu =
     .label = औज़ारपट्टी
     .accesskey = T
-menu-view-customize-toolbar =
-    .label = मनपसंद बनाएँ…
-    .accesskey = C
 menu-view-sidebar =
     .label = बाज़ू पट्टी
     .accesskey = e
@@ -166,9 +145,6 @@ menu-view-page-style-no-style =
 menu-view-page-basic-style =
     .label = मौलिक पृष्ठ शैली
     .accesskey = B
-menu-view-charset =
-    .label = पाठ एनकोडिंग
-    .accesskey = क
 
 ## These should match what Safari and other Apple applications
 ## use on macOS.
@@ -182,6 +158,17 @@ menu-view-exit-full-screen =
 menu-view-full-screen =
     .label = पूर्ण स्क्रीन
     .accesskey = F
+
+## These menu items may use the same accesskey.
+
+# This should match reader-view-enter-button in browser.ftl
+menu-view-enter-readerview =
+    .label = रीडर दृश्य दर्ज करे
+    .accesskey = आर
+# This should match reader-view-close-button in browser.ftl
+menu-view-close-readerview =
+    .label = रीडर दृश्य बंद करे|
+    .accesskey = आर
 
 ##
 
@@ -217,12 +204,8 @@ menu-history-undo-window-menu =
 menu-bookmarks-menu =
     .label = बुकमार्क
     .accesskey = B
-menu-bookmarks-show-all =
-    .label = सभी बुकमार्कों को दिखाएँ
-menu-bookmark-this-page =
-    .label = यह पृष्ठ बुकमार्कित करें
-menu-bookmark-edit =
-    .label = यह बुकमार्क संपादित करें
+menu-bookmarks-manage =
+    .label = बुकमार्क प्रबंधित करें
 menu-bookmarks-all-tabs =
     .label = सभी टैब बुकमार्कित करें…
 menu-bookmarks-toolbar =
@@ -240,39 +223,26 @@ menu-tools =
 menu-tools-downloads =
     .label = डाउनलोड
     .accesskey = D
-menu-tools-addons =
-    .label = ऐड-ऑन्स
+menu-tools-addons-and-themes =
+    .label = ऐड-ऑन और थीम
     .accesskey = A
-menu-tools-fxa-sign-in =
-    .label = { -brand-product-name }… के लिए साइन इन करें
-    .accesskey = g
-menu-tools-turn-on-sync =
-    .label = { -sync-brand-short-name } चालू करें...
-    .accesskey = n
 menu-tools-sync-now =
     .label = अब तुल्यकालित करें
     .accesskey = S
 menu-tools-fxa-re-auth =
     .label = { -brand-product-name } से पुनः जोड़ें
     .accesskey = ज
-menu-tools-web-developer =
-    .label = वेब डेवलेपर
-    .accesskey = W
 menu-tools-page-source =
     .label = पृष्ठ स्रोत
     .accesskey = o
 menu-tools-page-info =
     .label = पृष्ठ सूचना
     .accesskey = I
-menu-preferences =
-    .label =
-        { PLATFORM() ->
-            [windows] विकल्प
-           *[other] वरीयता
-        }
+menu-settings =
+    .label = सेटिंग
     .accesskey =
         { PLATFORM() ->
-            [windows] O
+            [windows] S
            *[other] n
         }
 menu-tools-layout-debugger =
@@ -292,15 +262,6 @@ menu-window-bring-all-to-front =
 # NOTE: For Engineers, any additions or changes to Help menu strings should
 # also be reflected in the related strings in appmenu.ftl. Those strings, by
 # convention, will have the same ID as these, but prefixed with "app".
-# Example: appmenu-help-product
-#
-# These strings are duplicated to allow for different casing depending on
-# where the strings appear.
-
-
-# NOTE: For Engineers, any additions or changes to Help menu strings should
-# also be reflected in the related strings in appmenu.ftl. Those strings, by
-# convention, will have the same ID as these, but prefixed with "app".
 # Example: appmenu-get-help
 #
 # These strings are duplicated to allow for different casing depending on
@@ -309,32 +270,8 @@ menu-window-bring-all-to-front =
 menu-help =
     .label = सहायता
     .accesskey = H
-menu-help-product =
-    .label = { -brand-shorter-name } मदद
-    .accesskey = H
-menu-help-show-tour =
-    .label = { -brand-shorter-name } दौरा
-    .accesskey = o
-menu-help-import-from-another-browser =
-    .label = दूसरे ब्राउज़र से आयात करें…
-    .accesskey = I
-menu-help-keyboard-shortcuts =
-    .label = कीबोर्ड शॉर्टकट‌‌
-    .accesskey = K
-menu-help-troubleshooting-info =
-    .label = विघ्ननिवारण सूचना
-    .accesskey = T
 menu-help-report-site-issue =
     .label = साइट समस्या की रिपोर्ट करें…
-menu-help-feedback-page =
-    .label = प्रतिक्रिया जमा करें...
-    .accesskey = S
-menu-help-safe-mode-without-addons =
-    .label = निष्क्रिय सहयुक्तियों के साथ फिर ‌आरंभ करें…
-    .accesskey = R
-menu-help-safe-mode-with-addons =
-    .label = सक्षम सहयुक्तियों के साथ फिर आरंभ करें
-    .accesskey = R
 # Label of the Help menu item. Either this or
 # menu-help-notdeceptive is shown.
 menu-help-report-deceptive-site =

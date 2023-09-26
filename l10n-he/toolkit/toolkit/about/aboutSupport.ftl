@@ -12,11 +12,6 @@ crashes-id = מזהה דיווח
 crashes-send-date = נשלח
 crashes-all-reports = כל דיווחי הקריסה
 crashes-no-config = יישום זה לא הוגדר להציג דיווחי קריסה.
-extensions-title = הרחבות
-extensions-name = שם
-extensions-enabled = מאופשר
-extensions-version = גרסה
-extensions-id = מזהה
 support-addons-title = תוספות
 support-addons-name = שם
 support-addons-type = סוג
@@ -73,6 +68,12 @@ app-basics-location-service-key-google = מפתח עבור שירותי המיק
 app-basics-safebrowsing-key-google = Google Safebrowsing Key
 app-basics-key-mozilla = מפתח עבור שירותי המיקום של Mozilla
 app-basics-safe-mode = מצב בטוח
+app-basics-memory-size = גודל זיכרון (RAM)
+app-basics-disk-available = שטח דיסק זמין
+# Variables:
+#   $value (number) - Amount of data being stored
+#   $unit (string) - The unit of data being stored (e.g. MB)
+app-basics-data-size = { $value } { $unit }
 show-dir-label =
     { PLATFORM() ->
         [macos] הצגה ב־Finder
@@ -107,6 +108,14 @@ graphics-window-protocol = פרוטוקול חלון
 # Desktop environment in use on Linux (e.g. GNOME, KDE, XFCE, etc).
 graphics-desktop-environment = סביבת שולחן עבודה
 place-database-title = מסד נתוני מיקום
+place-database-stats = נתונים סטטיסטיים
+place-database-stats-show = הצגת נתונים סטטיסטיים
+place-database-stats-hide = הסתרת נתונים סטטיסטיים
+place-database-stats-count = כמות
+place-database-stats-size-kib = גודל (KiB)
+place-database-stats-size-perc = גודל (%)
+place-database-stats-efficiency-perc = יעילות (%)
+place-database-stats-sequentiality-perc = רצף (%)
 place-database-integrity = תקינות
 place-database-verify-integrity = וידוא תקינות
 a11y-title = נגישות
@@ -124,8 +133,6 @@ sandbox-sys-call-tid = TID
 sandbox-sys-call-proc-type = סוג תהליך
 sandbox-sys-call-number = קריאת מערכת
 sandbox-sys-call-args = ארגומנטים
-safe-mode-title = לנסות במצב בטוח
-restart-in-safe-mode-label = הפעלה מחדש עם תוספות מנוטרלות…
 troubleshoot-mode-title = אבחון בעיות
 restart-in-troubleshoot-mode-label = מצב לפתרון בעיות…
 clear-startup-cache-title = לנסות לנקות את מטמון ההפעלה
@@ -151,6 +158,16 @@ media-device-format = תצורה
 media-device-channels = ערוצים
 media-device-rate = קצב
 media-device-latency = עיכוב
+media-codec-support-info = מידע על תמיכה במקודדים
+
+## Codec support table
+
+media-codec-support-sw-decoding = קידוד תוכנה
+media-codec-support-hw-decoding = קידוד חומרה
+media-codec-support-codec-name = שם קודק
+media-codec-support-supported = נתמך
+media-codec-support-unsupported = לא נתמך
+media-codec-support-error = מידע תמיכה במקודדים אינו זמין. יש לנסות שוב לאחר הפעלת קובץ מדיה.
 
 ##
 
@@ -255,18 +272,12 @@ webgl1-extensions = הרחבות עבור WebGL 1
 webgl2-version = גרסת מנהל התקן עבור WebGL 2
 webgl2-driver-extensions = הרחבות מנהל התקן עבור WebGL 2
 webgl2-extensions = הרחבות עבור WebGL 2
-blocklisted-bug = הוכנס לרשימה שחורה עקב בעיות ידועות
-# Variables
-# $bugNumber (string) - String of bug number from Bugzilla
-bug-link = באג { $bugNumber }
 # Variables
 #   $bugNumber (string) - Bug number on Bugzilla
 support-blocklisted-bug = נחסם עקב בעיות ידועות: <a data-l10n-name="bug-link">תקלה { $bugNumber }</a>
 # Variables
 # $failureCode (string) - String that can be searched in the source tree.
 unknown-failure = הוכנס לרשימה השחורה, קוד כישלון { $failureCode }
-d3d11video-crash-guard = מפענח הווידאו D3D11
-d3d9video-crash-guard = מפענח הווידאו D3D9
 glcontext-crash-guard = OpenGL
 wmfvpxvideo-crash-guard = מפענח הווידאו WMF VPX
 reset-on-next-restart = איפוס בהפעלה מחדש הבאה
@@ -299,14 +310,6 @@ launcher-process-status-unknown = מצב לא ידוע
 # $remoteWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
 multi-process-windows = { $remoteWindows }/{ $totalWindows }
-multi-process-status-0 = מופעל על־ידי המשתמש
-multi-process-status-1 = מופעל כברירת מחדל
-multi-process-status-2 = מנוטרל
-multi-process-status-4 = נוטרל עקב כלי נגישות
-multi-process-status-6 = נוטרל עקב קלט טקסט לא נתמך
-multi-process-status-7 = נוטרל על־ידי תוספות
-multi-process-status-8 = מושבת בכוח
-multi-process-status-unknown = מצב לא ידוע
 # Variables
 # $fissionWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
@@ -315,7 +318,7 @@ fission-status-experiment-control = מושבת על־ידי ניסוי
 fission-status-experiment-treatment = מופעל על־ידי ניסוי
 fission-status-disabled-by-e10s-env = מושבת על־ידי הסביבה
 fission-status-enabled-by-env = מופעל על־ידי הסביבה
-fission-status-disabled-by-safe-mode = מושבת על־ידי מצב בטוח
+fission-status-disabled-by-env = מושבת על־ידי הסביבה
 fission-status-enabled-by-default = מופעל כברירת מחדל
 fission-status-disabled-by-default = מושבת כברירת מחדל
 fission-status-enabled-by-user-pref = מופעל על־ידי המשתמש
@@ -343,7 +346,7 @@ policies-error = שגיאה
 
 support-printing-title = הדפסה
 support-printing-troubleshoot = פתרון בעיות
-support-printing-clear-settings-button = ניקוי הגדרות ההדפסה השמורות
+support-printing-clear-settings-button = ניקוי הגדרות הדפסה שמורות
 support-printing-modified-settings = הגדרות הדפסה ששונו
 support-printing-prefs-name = שם
 support-printing-prefs-value = ערך

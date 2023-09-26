@@ -7,7 +7,6 @@
 
 cfr-doorhanger-extension-heading = შემოთავაზებული გაფართოება
 cfr-doorhanger-feature-heading = შემოთავაზებული შესაძლებლობა
-cfr-doorhanger-pintab-heading = სცადეთ: ჩანართის მიმაგრება
 
 ##
 
@@ -19,8 +18,6 @@ cfr-doorhanger-extension-cancel-button = ახლა არა
 
 cfr-doorhanger-extension-ok-button = დამატება ახლავე
     .accesskey = ხ
-cfr-doorhanger-pintab-ok-button = ამ ჩანართის მიმაგრება
-    .accesskey = გ
 
 cfr-doorhanger-extension-manage-settings-button = შემოთავაზებების პარამეტრების მართვა
     .accesskey = შ
@@ -68,18 +65,6 @@ cfr-doorhanger-extension-total-users =
        *[other] { $total } მომხმარებელი
     }
 
-cfr-doorhanger-pintab-description = მიიღეთ მარტივი წვდომა თქვენს ხშირად მონახულებულ საიტებთან. დატოვეთ საიტები ჩანართში გახსნილი (ხელახლა გაშვების დროსაც).
-
-## These messages are steps on how to use the feature and are shown together.
-
-cfr-doorhanger-pintab-step1 = <b>მარჯვენა-წკაპი</b> მისამაგრებელ ჩანართზე.
-cfr-doorhanger-pintab-step2 = აირჩიეთ <b>ჩანართის მიმაგრება</b> მენიუდან.
-cfr-doorhanger-pintab-step3 = თუ საიტზე რამე განახლდება, ლურჯი წერტილი გამოჩნდება მიმაგრებულ ჩანართზე.
-
-cfr-doorhanger-pintab-animation-pause = შეჩერება
-cfr-doorhanger-pintab-animation-resume = გაგრძელება
-
-
 ## Firefox Accounts Message
 
 cfr-doorhanger-bookmark-fxa-header = დაასინქრონეთ სანიშნები ყველგან.
@@ -105,133 +90,9 @@ cfr-whatsnew-button =
     .label = რა სიახლეებია
     .tooltiptext = რა სიახლეებია
 
-cfr-whatsnew-panel-header = რა სიახლეებია
-
 cfr-whatsnew-release-notes-link-text = იხილეთ გამოშვების შენიშვნები
 
-cfr-whatsnew-fx70-title = { -brand-short-name } ახლა უფრო მტკიცედ იბრძვის თქვენი პირადი მონაცემების დასაცავად
-cfr-whatsnew-fx70-body =
-    ბოლო განახლების შედეგად, გაძლიერებულია თვალთვალისგან დაცვის შესაძლებლობა
-    და მეტად გამარტივებულია ძლიერი პაროლების გამოყენება, თითოეული საიტისთვის.
-
-cfr-whatsnew-tracking-protect-title = თავი დაიცავით მეთვალყურეებისგან
-cfr-whatsnew-tracking-protect-body =
-    { -brand-short-name } ზღუდავს ცნობილი სოციალური ქსელებისა და საიტთაშორისი
-    მეთვალყურეების უმეტესობას, რომლებიც თან დაგყვებათ ინტერნეტში.
-cfr-whatsnew-tracking-protect-link-text = იხილეთ თქვენი ანგარიში
-
-# This string is displayed before a large numeral that indicates the total
-# number of tracking elements blocked. Don’t add $blockedCount to your
-# localization, because it would result in the number showing twice.
-cfr-whatsnew-tracking-blocked-title =
-    { $blockedCount ->
-        [one] მეთვალყურე შეიზღუდა
-       *[other] მეთვალყურე შეიზღუდა
-    }
-cfr-whatsnew-tracking-blocked-subtitle = თარიღიდან { DATETIME($earliestDate, month: "long", year: "numeric") }
-cfr-whatsnew-tracking-blocked-link-text = ანგარიშის ნახვა
-
-cfr-whatsnew-lockwise-backup-title = დაამარქაფეთ პაროლები
-cfr-whatsnew-lockwise-backup-body = ახლა კი შექმენით პაროლები, რომლებთან წვდომაც ნებისმიერი ადგილიდან შეგეძლებათ, ანგარიშის საშუალებით.
-cfr-whatsnew-lockwise-backup-link-text = მარქაფის ჩართვა
-
-cfr-whatsnew-lockwise-take-title = თან წაიყოლეთ თქვენი პაროლები
-cfr-whatsnew-lockwise-take-body =
-    { -lockwise-brand-short-name }-აპლიკაცია მობილურისთვის, საშუალებას მოგცემთ
-    უსაფრთხოდ დაამარქაფოთ პაროლები, ნებისმიერ ადგილიდან.
-cfr-whatsnew-lockwise-take-link-text = გადმოწერა
-
-## Search Bar
-
-cfr-whatsnew-searchbar-title = აკრიფეთ ნაკლები, მოიძიეთ მეტი მისამართების ველიდან
-cfr-whatsnew-searchbar-body-topsites = ახლა, უბრალოდ გადადით მისამართების ველში და გამოჩნდება თქვენი რჩეული საიტების ბმულები.
-
-## Search bar
-
-cfr-whatsnew-searchbar-icon-alt-text = გამადიდებელი შუშის ხატულა
-
-## Picture-in-Picture
-
-cfr-whatsnew-pip-header = უყურეთ ვიდეოებს გვერდების თვალიერებისას
-cfr-whatsnew-pip-body = ეკრანი-ეკრანში გამოიტანს ვიდეოს ფანჯრის ზემოთ, ასე რომ შეგეძლებათ განაგრძოთ სხვა ჩანართებზე გადასვლა.
-cfr-whatsnew-pip-cta = ვრცლად
-
-## Permission Prompt
-
-cfr-whatsnew-permission-prompt-header = ნაკლები გამაღიზიანებელი ამომხტომი ფანჯარა
-cfr-whatsnew-permission-prompt-body = { -brand-shorter-name } ახლა უკვე უზღუდავს საიტებს, ამომხტომი შეტყობინებების ჩვენების მოთხოვნას.
-cfr-whatsnew-permission-prompt-cta = ვრცლად
-
-## Fingerprinter Counter
-
-# This string is displayed before a large numeral that indicates the total
-# number of tracking elements blocked. Don’t add $fingerprinterCount to your
-# localization, because it would result in the number showing twice.
-cfr-whatsnew-fingerprinter-counter-header =
-    { $fingerprinterCount ->
-        [one] ამომცნობი შეიზღუდა
-       *[other] ამომცნობი შეიზღუდა
-    }
-cfr-whatsnew-fingerprinter-counter-body = { -brand-shorter-name } ზღუდავს მომხმარებლის ამომცნობ საშუალებებს, რომლებიც ჩუმად აგროვებს ინფორმაციას თქვენს მოწყობილობასა და მოქმედებებზე, დახასიათების შესადგენად სარეკლამოებისთვის.
-
-# Message variation when fingerprinters count is less than 10
-cfr-whatsnew-fingerprinter-counter-header-alt = მომხმარებლის ამომცნობები
-cfr-whatsnew-fingerprinter-counter-body-alt = { -brand-shorter-name } გთავაზობთ მომხმარებლის ამომცნობი საშუალებების შეზღუდვას, რომლებიც ჩუმად აგროვებს ინფორმაციას თქვენს მოწყობილობასა და მოქმედებებზე, დახასიათების შესადგენად სარეკლამოებისთვის.
-
-## Bookmark Sync
-
-cfr-doorhanger-sync-bookmarks-header = მიიღეთ ეს სანიშნი თქვენს ტელეფონზე
-cfr-doorhanger-sync-bookmarks-body = თან წაიყოლეთ თქვენი სანიშნები, პაროლები, ისტორია და ა. შ. ყველგან, სადაც გიყენიათ { -brand-product-name }.
-cfr-doorhanger-sync-bookmarks-ok-button = ჩართეთ { -sync-brand-short-name }
-    .accesskey = ჩ
-
-## Login Sync
-
-cfr-doorhanger-sync-logins-header = აღარასდროს დაკარგავთ პაროლებს
-cfr-doorhanger-sync-logins-body = შეინახეთ და დაასინქრონეთ უსაფრთხოდ თქვენი პაროლები ყველა თქვენს მოწყობილობაზე.
-cfr-doorhanger-sync-logins-ok-button = ჩართეთ { -sync-brand-short-name }
-    .accesskey = თ
-
-## Send Tab
-
-cfr-doorhanger-send-tab-header = წაიკითხეთ გზაში
-cfr-doorhanger-send-tab-recipe-header = წაიღეთ ეს მომზადების წესი სამზარეულოში
-cfr-doorhanger-send-tab-body = Send Tab საშუალებას გაძლევთ მარტივად გააზიაროთ ეს ბმული თქვენს ტელეფონზე ან ნებისმიერ მოწყობილობაზე, სადაც გიყენიათ { -brand-product-name }.
-cfr-doorhanger-send-tab-ok-button = გამოცადეთ Send Tab
-    .accesskey = ც
-
-## Firefox Send
-
-cfr-doorhanger-firefox-send-header = გააზიარეთ ეს PDF უსაფრთხოდ
-cfr-doorhanger-firefox-send-body = დაიცავით თქვენი მნიშვნელოვანი მასალები ცნობისმოყვარეებისგან, გამჭოლი დაშიფვრითა და ბმულით, რომელიც თავისით გაქრება საქმის დასრულებისას.
-cfr-doorhanger-firefox-send-ok-button = გამოცადეთ { -send-brand-name }
-    .accesskey = ც
-
-## Social Tracking Protection
-
-cfr-doorhanger-socialtracking-ok-button = დაცვის შესახებ
-    .accesskey = ც
-cfr-doorhanger-socialtracking-close-button = დახურვა
-    .accesskey = ხ
-cfr-doorhanger-socialtracking-dont-show-again = მომავალში, აღარ გამოჩნდეს ასეთი შეტყობინება
-    .accesskey = ღ
-cfr-doorhanger-socialtracking-heading = { -brand-short-name } უზღუდავს სოციალურ ქსელს თქვენს თვალთვალს
-cfr-doorhanger-socialtracking-description = თქვენი პირადულობა მნიშვნელოვანია. { -brand-short-name } ახლა უკვე ზღუდავს ცნობილი სოციალური ქსელების მეთვალყურე საშუალებებს, უსაზღვრავს მათ ინტერნეტში თქვენ შესახებ შესაგროვებელი მონაცემების ოდენობას.
-cfr-doorhanger-fingerprinters-heading = { -brand-short-name } ზღუდავს მომხმარებლის ამომცნობს ამ საიტზე
-cfr-doorhanger-fingerprinters-description = თქვენი პირადულობა მნიშვნელოვანია. { -brand-short-name } ახლა უკვე ზღუდავს მომხმარებლის ამომცნობ საშუალებებს, რომელთაც შეუძლია თქვენი სხვებისგან გამორჩევა თვალის სადევნებლად, თქვენზე შეგროვებული მონაცემებით.
-cfr-doorhanger-cryptominers-heading = { -brand-short-name } ზღუდავს კრიპტოვალუტის გამომმუშავებელს ამ საიტზე
-cfr-doorhanger-cryptominers-description = თქვენი პირადულობა მნიშვნელოვანია. { -brand-short-name } ახლა უკვე ზღუდავს კრიპტოვალუტის გამომმუშავებელ საშუალებებს, რომლებიც იყენებს თქვენი სისტემის გამოთვლის სიმძლავრეს ციფრული ფულის მოსაპოვებლად.
-
 ## Enhanced Tracking Protection Milestones
-
-# Variables:
-#   $blockedCount (Number) - The total count of blocked trackers. This number will always be greater than 1.
-#   $date (String) - The date we began recording the count of blocked trackers
-cfr-doorhanger-milestone-heading =
-    { $blockedCount ->
-        [one] { -brand-short-name } ზღუდავს <b>{ $blockedCount }</b>-ზე მეტ მეთვალყურეს თარიღიდან { $date }!
-       *[other] { -brand-short-name } ზღუდავს <b>{ $blockedCount }</b>-ზე მეტ მეთვალყურეს თარიღიდან { $date }!
-    }
 
 # Variables:
 #   $blockedCount (Number) - The total count of blocked trackers. This number will always be greater than 1.
@@ -243,45 +104,8 @@ cfr-doorhanger-milestone-heading2 =
     }
 cfr-doorhanger-milestone-ok-button = ყველას ნახვა
     .accesskey = ნ
-
-## What’s New Panel Content for Firefox 76
-
-
-## Lockwise message
-
-cfr-whatsnew-lockwise-header = მარტივად შექმენით უსაფრთხო პაროლები
-cfr-whatsnew-lockwise-body = რთულია მოიფიქროთ განსხვავებული, დაცული პაროლი თითოეული ანგარიშისთვის. პაროლის შექმნისას, შესაბამისი ველის არჩევით შეძლებთ მიიღოთ უსაფრთხო პაროლი, რომელსაც თავად შეგიდგენთ { -brand-shorter-name }.
-cfr-whatsnew-lockwise-icon-alt = { -lockwise-brand-short-name } ხატულა
-
-## Vulnerable Passwords message
-
-cfr-whatsnew-passwords-header = მიიღეთ ცნობები დაუცველ პაროლებზე
-cfr-whatsnew-passwords-body = ჰაკერებმა იციან, რომ ადამიანები იყენებენ ერთსა და იმავე პაროლებს. თუ თქვენ იყენებთ ერთ პაროლს რამდენიმე საიტზე და ერთ-ერთი მათგანი მაინც გახდება მონაცემების მიტაცების მსხვერპლი, { -lockwise-brand-short-name } გაცნობებთ რომ საჭირო იქნება ყველა ამ საიტზე პაროლის შეცვლა.
-cfr-whatsnew-passwords-icon-alt = დაუცველი პაროლის ხატულა
-
-## Picture-in-Picture fullscreen message
-
-cfr-whatsnew-pip-fullscreen-header = გაშალეთ ეკრანი-ეკრანში სრულ ეკრანზე
-cfr-whatsnew-pip-fullscreen-body = როცა ვიდეო ამოხტება ცალკე ფანჯარაში, მასზე ორჯერ დაწკაპებით შეძლებთ მთელ ეკრანზე გაშალოთ.
-cfr-whatsnew-pip-fullscreen-icon-alt = ეკრანი-ეკრანში ხატულა
-
-## Protections Dashboard message
-
-cfr-whatsnew-protections-header = დაცვისთვის თვალის შევლება
-cfr-whatsnew-protections-body = დაცვის მაჩვენებლების გვერდი შეიცავს შემაჯამებელ ცნობებს ანგარიშების მიტაცებებსა და პაროლების მართვაზე. შეგიძლიათ თვალი ადევნოთ, რამდენი გაქვთ გამოსწორებული და იხილოთ, თქვენი რომელიმე პაროლი გამჟღავნებულ მონაცემებში ხომ არ აღმოჩენილა.
-cfr-whatsnew-protections-cta-link = დაცვის მაჩვენებლების ნახვა
-cfr-whatsnew-protections-icon-alt = ფარის ნიშანი
-
-## Better PDF message
-
-cfr-whatsnew-better-pdf-header = PDF-თან მოხერხებული მუშაობა
-cfr-whatsnew-better-pdf-body = PDF-დოკუმენტებს ახლა უკვე პირდაპირ გახსნის { -brand-short-name }, საჭირო მასალები კიდევ უფრო ახლოს გექნებათ.
-
 cfr-doorhanger-milestone-close-button = დახურვა
     .accesskey = ხ
-
-## What’s New Panel Content for Firefox 76
-## Protections Dashboard message
 
 ## DOH Message
 
@@ -294,28 +118,141 @@ cfr-doorhanger-doh-secondary-button = გამორთვა
 
 ## Fission Experiment Message
 
-cfr-doorhanger-fission-body-approved = თქვენი პირადულობა გადამწყვეტია. { -brand-short-name } ახლა უკვე მიჯნავს, განაცალკევებს ვებსაიტებს ერთმანეთისგან, რაც ჰაკერებს ურთულებს პაროლების, საკრედიტო ბარათის ნომრებისა და სხვა მნიშვნელოვანი ინფორმაციის მოპარვის საშუალებას.
-cfr-doorhanger-fission-header = საიტის გამოჯვნა
-cfr-doorhanger-fission-primary-button = კარგი, გასაგებია
-    .accesskey = კ
-cfr-doorhanger-fission-secondary-button = ვრცლად
-    .accesskey = ც
-
-## What's new: Cookies message
-
-## What's new: Media controls message
-
-## What's new: Search shortcuts
-
-## What's new: Cookies protection
-
-## What's new: Better bookmarking
-
-## What's new: Cross-site cookie tracking
-
 ## Full Video Support CFR message
 
 cfr-doorhanger-video-support-body = ვიდეოებს ამ საიტზე, სათანადოდ ვერ უშვებს ამ ვერსიის { -brand-short-name }. ვიდეოების სრული მხარდაჭერისთვის, განაახლეთ { -brand-short-name } ახლავე.
 cfr-doorhanger-video-support-header = განაახლეთ { -brand-short-name } ვიდეოს გასაშვებად
 cfr-doorhanger-video-support-primary-button = განახლება ახლავე
     .accesskey = გ
+
+## Spotlight modal shared strings
+
+## VPN promotion dialog for public Wi-Fi users
+##
+## If a user is detected to be on a public Wi-Fi network, they are given a
+## bit of info about how to improve their privacy and then offered a button
+## to the Mozilla VPN page and a link to dismiss the dialog.
+
+# This header text can be explicitly wrapped.
+spotlight-public-wifi-vpn-header = როგორც ჩანს, საჯარო WiFi-ს იყენებთ
+spotlight-public-wifi-vpn-body = ადგილმდებარეობისა და ინტერნეტში მოქმედებების დასაფარად, გამოგადგებათ წარმოსახვითი კერძო ქსელი. მისი მეშვეობით, უსაფრთხოდ შეძლებთ გვერდების მონახულებას ღია ადგილებში, მათ შორის აეროპორტებსა და კაფეებში.
+spotlight-public-wifi-vpn-primary-button = დაიცავით პირადულობა { -mozilla-vpn-brand-name }-ით
+    .accesskey = ც
+spotlight-public-wifi-vpn-link = ახლა არა
+    .accesskey = ა
+
+## Total Cookie Protection Rollout
+
+## Emotive Continuous Onboarding
+
+spotlight-better-internet-header = უკეთესი ინტერნეტი თქვენით იწყება
+spotlight-better-internet-body = როცა იყენებთ { -brand-short-name }-ს, ამით მხარს უჭერთ გახნილ და ხელმისაწვდომ საყოველთაო ინტერნეტს.
+spotlight-peace-mind-header = ჩვენ გიცავთ
+spotlight-peace-mind-body = ყოველთვე, { -brand-short-name } ზღუდავს საშუალოდ 3,000-ზე მეტ მეთვალყურეს, თითოეული მომხმარებლისთვის. ვერაფერი, მით უმეტეს მომაბეზრებელი თვალყურის მდევნებლები ვერ ჩადგებიან თქვენსა და ჯანსაღ ინტერნეტს შორის.
+spotlight-pin-primary-button =
+    { PLATFORM() ->
+        [macos] დარჩეს Dock-ზე
+       *[other] სამუშაო ზოლზე მიმაგრება
+    }
+spotlight-pin-secondary-button = ახლა არა
+
+## MR2022 Background Update Windows native toast notification strings.
+##
+## These strings will be displayed by the Windows operating system in
+## a native toast, like:
+##
+## <b>multi-line title</b>
+## multi-line text
+## <img>
+## [ primary button ] [ secondary button ]
+##
+## The button labels are fitted into narrow fixed-width buttons by
+## Windows and therefore must be as narrow as possible.
+
+mr2022-background-update-toast-title = ახალი { -brand-short-name }. მეტად პირადი. ნაკლები მეთვალყურეები. არანაირი დათმობა.
+mr2022-background-update-toast-text = მოსინჯეთ უახლესი { -brand-short-name } დაუყოვნებლივ, თვალთვალისგან არნახულად მძლავრი დაცვით აღჭურვილი.
+
+# This button label will be fitted into a narrow fixed-width button by
+# Windows. Try to not exceed the width of the English text (compare it
+# using a variable font like Arial): the button can only fit 1-2
+# additional characters, exceeding characters will be truncated.
+mr2022-background-update-toast-primary-button-label = გახსენით { -brand-shorter-name } ახლავე
+
+# This button label will be fitted into a narrow fixed-width button by
+# Windows. Try to not exceed the width of the English text (compare it using a
+# variable font like Arial): the button can only fit 1-2 additional characters,
+# exceeding characters will be truncated.
+mr2022-background-update-toast-secondary-button-label = მოგვიანებით შეხსენება
+
+## Firefox View CFR
+
+firefoxview-cfr-primarybutton = მოსინჯვა
+    .accesskey = ჯ
+firefoxview-cfr-secondarybutton = ახლა არა
+    .accesskey = ა
+firefoxview-cfr-header-v2 = სწრაფადვე განაგრძეთ იქიდან, სადაც გაჩერდით
+firefoxview-cfr-body-v2 = დაიბრუნეთ ახლახან დახურული ჩანართები და ამასთანავე, შეუფერხებლად გადაერთეთ მოწყობილობებს შორის { -firefoxview-brand-name(case: "ins") }.
+
+## Firefox View Spotlight
+
+firefoxview-spotlight-promo-title = გაიცანით { -firefoxview-brand-name }
+
+# “Poof” refers to the expression to convey when something or someone suddenly disappears, or in this case, reappears. For example, “Poof, it’s gone.”
+firefoxview-spotlight-promo-subtitle = გსურთ ამ ჩანართის ტელეფონზე ხილვა? წაიყოლეთ თან. დაგჭირდათ ადრე მონახულებული გვერდი? ბუფ და უცებ გაჩნდება { -firefoxview-brand-name(case: "ins") }.
+firefoxview-spotlight-promo-primarybutton = ნახეთ, როგორ მუშაობს
+firefoxview-spotlight-promo-secondarybutton = გამოტოვება
+
+## Colorways expiry reminder CFR
+
+colorways-cfr-primarybutton = აირჩიეთ შეფერილობა
+    .accesskey = ფ
+
+# "shades" refers to the different color options available to users in colorways.
+colorways-cfr-body = გააფერადეთ { -brand-short-name } გამორჩეული შეფერილობებით, შთაგონებული ხალხის ხმებით, რომელთაც შეცვალეს ღირებულებები.
+colorways-cfr-header-28days = დამოუკიდებელი ხმების შეფერილობათა ბოლო ვადაა 16 იანვარი
+colorways-cfr-header-14days = დამოუკიდებელი ხმების შეფერილობებს ვადა გასდის ორ კვირაში
+colorways-cfr-header-7days = დამოუკიდებელი ხმების შეფერილობებს ვადა გასდის ამ კვირაში
+colorways-cfr-header-today = დამოუკიდებელი ხმების შეფერილობებს ვადა გასდის დღეს
+
+## Cookie Banner Handling CFR
+
+cfr-cbh-header = გსურთ, { -brand-short-name } უარყოფდეს ფუნთუშების ნებართვებს?
+cfr-cbh-body = { -brand-short-name } თავადვე უარყოფს ფუნთუშის მოთხოვნების უმეტესობას.
+cfr-cbh-confirm-button = ფუნთუშის მოთხოვნების უარყოფა
+    .accesskey = უ
+cfr-cbh-dismiss-button = ახლა არა
+    .accesskey = ა
+
+## These strings are used in the Fox doodle Pin/set default spotlights
+
+july-jam-headline = ჩვენ გიცავთ
+july-jam-body = ყოველთვიურად, { -brand-short-name } ზღუდავს საშუალოდ 3000+ მეთვალყურეს თითოეულ მომხმარებელზე, შედეგად იღებთ უსაფრთხო, სწრაფ წვდომას ჯანსაღ ინტერნეტსივრცესთან.
+july-jam-set-default-primary = ბმულებს გახსნის { -brand-short-name }
+fox-doodle-pin-headline = კეთილი იყოს თქვენი დაბრუნება
+
+# “indie” is short for the term “independent”.
+# In this instance, free from outside influence or control.
+fox-doodle-pin-body = აქვე მოკლე შეხსენება, რომ თქვენი საყვარელი დამოუკიდებელი ბრაუზერი შეგიძლიათ იქონიოთ თითის ერთ გაწვდენაზე.
+fox-doodle-pin-primary = ბმულების გასახსნელად გამოიყენებოდეს { -brand-short-name }
+fox-doodle-pin-secondary = ახლა არა
+
+## These strings are used in the Set Firefox as Default PDF Handler for Existing Users experiment
+
+set-default-pdf-handler-headline = <strong>თქვენს PDF-ებს ახლა უკვე გახნის { -brand-short-name }.</strong> ჩაასწორეთ ან დაამატეთ ხელმოწერა პირდაპირ ბრაუზერიდან. შესაცვლელად მონახეთ „PDF“ პარამეტრებში.
+set-default-pdf-handler-primary = გასაგებია
+
+## FxA sync CFR
+
+fxa-sync-cfr-header = ახალ მოწყობილობაზე გადადიხართ?
+fxa-sync-cfr-body = თან წაიყოლეთ თქვენი უახლესი სანიშნები, პაროლები და ჩანართები ახალი { -brand-product-name }-ბრაუზერის გახსნისთანავე.
+fxa-sync-cfr-primary = ვრცლად
+    .accesskey = ც
+fxa-sync-cfr-secondary = მოგვიანებით შეხსენება
+    .accesskey = ო
+
+## Device Migration FxA Spotlight
+
+device-migration-fxa-spotlight-header = ძველ მოწყობილობას იყენებთ?
+device-migration-fxa-spotlight-body = გადაინახეთ მონაცემები, რომ არ დაგეკარგოთ მნიშვნელოვანი ინფორმაცია, მათ შორის სანიშნები და პაროლები — მით უფრო, თუ ახალ მოწყობილობაზე აპირებთ გადასვლას.
+device-migration-fxa-spotlight-primary-button = როგორაა შესაძლებელი დამარქაფება
+device-migration-fxa-spotlight-link = მოგვიანებით შეხსენება

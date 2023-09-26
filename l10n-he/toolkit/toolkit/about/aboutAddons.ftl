@@ -2,19 +2,22 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-addons-window =
-    .title = מנהל התוספות
-
 addons-page-title = מנהל התוספות
 
 search-header =
     .placeholder = חיפוש ב־addons.mozilla.org
     .searchbuttonlabel = חיפוש
 
-search-header-shortcut =
-    .key = f
+## Variables
+##   $domain - Domain name where add-ons are available (e.g. addons.mozilla.org)
 
 list-empty-get-extensions-message = קבלת הרחבות וערכות נושא ב־<a data-l10n-name="get-extensions">{ $domain }</a>
+
+list-empty-get-dictionaries-message = קבלת מילונים ב־<a data-l10n-name="get-extensions">{ $domain }</a>
+
+list-empty-get-language-packs-message = קבלת ערכות שפה ב־<a data-l10n-name="get-extensions">{ $domain }</a>
+
+##
 
 list-empty-installed =
     .value = לא הותקנה אף תוספת מסוג זה
@@ -35,18 +38,6 @@ help-button = תמיכה בתוספות
 sidebar-help-button-title =
     .title = תמיכה בתוספות
 
-preferences =
-    { PLATFORM() ->
-        [windows] אפשרויות של { -brand-short-name }
-       *[other] העדפות של { -brand-short-name }
-    }
-sidebar-preferences-button-title =
-    .title =
-        { PLATFORM() ->
-            [windows] אפשרויות של { -brand-short-name }
-           *[other] העדפות של { -brand-short-name }
-        }
-
 addons-settings-button = הגדרות של { -brand-short-name }
 sidebar-settings-button-title =
     .title = הגדרות של { -brand-short-name }
@@ -57,48 +48,14 @@ show-unsigned-extensions-button =
 show-all-extensions-button =
     .label = הצגת כל ההרחבות
 
-cmd-show-details =
-    .label = הצגת מידע נוסף
-    .accesskey = ה
-
-cmd-find-updates =
-    .label = בדיקת עדכונים
-    .accesskey = מ
-
-cmd-preferences =
-    .label =
-        { PLATFORM() ->
-            [windows] אפשרויות
-           *[other] העדפות
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] א
-           *[other] ה
-        }
-
-cmd-enable-theme =
-    .label = לבש ערכת נושא
-    .accesskey = ל
-
-cmd-disable-theme =
-    .label = הפסק ללבוש ערכת נושא
-    .accesskey = ה
-
-cmd-install-addon =
-    .label = התקנה
-    .accesskey = ה
-
-cmd-contribute =
-    .label = תרומה
-    .accesskey = ת
-    .tooltiptext = מתן תרומה לפיתוח תוספת זו
-
 detail-version =
     .label = גרסה
 
 detail-last-updated =
     .label = עודכן לאחרונה
+
+addon-detail-description-expand = להציג יותר
+addon-detail-description-collapse = להציג פחות
 
 detail-contributions-description = המפתחים של תוספת זו מבקשים את עזרתך בהמשך הפיתוח שלה על־ידי מתן תרומה צנועה.
 
@@ -227,6 +184,13 @@ addon-category-available-updates-title =
 addon-category-recent-updates = עדכונים אחרונים
 addon-category-recent-updates-title =
     .title = עדכונים אחרונים
+addon-category-sitepermission = הרשאות אתר
+addon-category-sitepermission-title =
+    .title = הרשאות אתר
+# String displayed in about:addons in the Site Permissions section
+# Variables:
+#  $host (string) - DNS host name for which the webextension enables permissions
+addon-sitepermission-host = הרשאות אתר עבור { $host }
 
 ## These are global warnings
 
@@ -238,6 +202,8 @@ extensions-warning-update-security = בדיקת האבטחה של התוספות
 extensions-warning-update-security-button = הפעלה
     .title = הפעלת בדיקות אבטחה לעדכוני תוספות
 
+extensions-warning-imported-addons = נא להשלים את התקנת ההרחבות שיובאו אל { -brand-short-name }.
+extensions-warning-imported-addons-button = התקנת הרחבות
 
 ## Strings connected to add-on updates
 
@@ -313,6 +279,8 @@ shortcuts-duplicate-warning-message = { $shortcut } משמש כקיצור דרך
 #   $addon (string) - Name of the add-on
 shortcuts-exists = כבר בשימוש על־ידי { $addon }
 
+# Variables:
+#   $numberToShow (number) - Number of other elements available to show
 shortcuts-card-expand-button =
     { $numberToShow ->
         [one] הצגת אחד נוסף
@@ -350,6 +318,7 @@ install-theme-button = התקנת ערכת נושא
 # the detailed add-on view is opened, from where the add-on can be managed.
 manage-addon-button = ניהול
 find-more-addons = חיפוש תוספות נוספות
+find-more-themes = חיפוש ערכות נושא נוספות
 
 # This is a label for the button to open the "more options" menu, it is only
 # used for screen readers.
@@ -377,7 +346,10 @@ details-addon-button = פרטים
 release-notes-addon-button = הערות שחרור
 permissions-addon-button = הרשאות
 
-ask-to-activate-button = בקשת אישור להפעלה
+theme-disabled-heading2 = ערכות נושא שמורות
+
+sitepermission-enabled-heading = מופעל
+sitepermission-disabled-heading = מושבת
 
 always-activate-button = הפעלה תמיד
 never-activate-button = לא להפעיל לעולם
@@ -426,6 +398,11 @@ addon-detail-updates-radio-off = כבוי
 addon-detail-update-check-label = בדיקה אחר עדכונים
 install-update-button = עדכון
 
+# aria-label associated to the updates row to help screen readers to announce the group
+# of input controls being entered.
+addon-detail-group-label-updates =
+    .aria-label = { addon-detail-updates-label }
+
 # This is the tooltip text for the private browsing badge in about:addons. The
 # badge is the private browsing icon included next to the extension's name.
 addon-badge-private-browsing-allowed2 =
@@ -435,13 +412,31 @@ addon-detail-private-browsing-help = אם אפשרות זו מופעלת, להר
 addon-detail-private-browsing-allow = לאפשר
 addon-detail-private-browsing-disallow = לא לאפשר
 
+# aria-label associated to the private browsing row to help screen readers to announce the group
+# of input controls being entered.
+addon-detail-group-label-private-browsing =
+    .aria-label = { detail-private-browsing-label }
+
+## "sites with restrictions" (internally called "quarantined") are special domains
+## where add-ons are normally blocked for security reasons.
+
+# Used as a description for the option to allow or block an add-on on quarantined domains.
+addon-detail-quarantined-domains-label = הפעלה באתרים עם הגבלות
+# Used as help text part of the quarantined domains UI controls row.
+addon-detail-quarantined-domains-help = אם אפשרות זו מופעלת, להרחבה תהיה גישה לאתרים המוגבלים על־ידי { -vendor-short-name }. יש לאפשר רק אם הרחבה זו מהימנה.
+# Used as label and tooltip text on the radio inputs associated to the quarantined domains UI controls.
+addon-detail-quarantined-domains-allow = לאפשר
+addon-detail-quarantined-domains-disallow = לא לאפשר
+# aria-label associated to the quarantined domains exempt row to help screen readers to announce the group.
+addon-detail-group-label-quarantined-domains =
+    .aria-label = { addon-detail-quarantined-domains-label }
+
 ## This is the tooltip text for the recommended badges for an extension in about:addons. The
 ## badge is a small icon displayed next to an extension when it is recommended on AMO.
 
 addon-badge-recommended2 =
     .title = ‏{ -brand-product-name } ממליץ רק על הרחבות שעומדות בתקנים שלנו לאבטחה וביצועים
     .aria-label = { addon-badge-recommended2.title }
-
 # We hard code "Mozilla" in the string below because the extensions are built
 # by Mozilla and we don't want forks to display "by Fork".
 addon-badge-line3 =
@@ -460,13 +455,16 @@ release-notes-loading = בטעינה…
 release-notes-error = מצטערים, אירעה שגיאה במהלך טעינת הערות השחרור.
 
 addon-permissions-empty = לתוספת זו לא נדרשות הרשאות
-
 addon-permissions-required = הרשאות נדרשות לתכונות ליבה:
 addon-permissions-optional = הרשאות רשות לתכונות נוספות:
 addon-permissions-learnmore = מידע נוסף על הרשאות
 
 recommended-extensions-heading = הרחבות מומלצות
 recommended-themes-heading = ערכות נושא מומלצות
+
+# Variables:
+#   $hostname (string) - Host where the permissions are granted
+addon-sitepermissions-required = מעניק ל־<span data-l10n-name="hostname">{ $hostname }</span> את היכולות הבאות:
 
 # A recommendation for the Firefox Color theme shown at the bottom of the theme
 # list view. The "Firefox Color" name itself should not be translated.
@@ -480,6 +478,7 @@ plugin-heading = ניהול התוספים החיצוניים שלך
 dictionary-heading = ניהול המילונים שלך
 locale-heading = ניהול השפות שלך
 updates-heading = ניהול העדכונים שלך
+sitepermission-heading = ניהול ההרשאות שלך לאתרים
 discover-heading = התאמה אישית של ה־{ -brand-short-name } שלך
 shortcuts-heading = ניהול קיצורי דרך להרחבות
 
@@ -489,3 +488,31 @@ addons-heading-search-input =
 
 addon-page-options-button =
     .title = כלים עבור כל התוספות
+
+## Detail notifications
+## Variables:
+##   $name (String): name of the add-on.
+
+
+## Detail notifications
+## Variables:
+##   $name (string) - Name of the add-on.
+
+# Variables:
+#   $version (string) - Application version.
+details-notification-incompatible = { $name } אינו תואם ל־{ -brand-short-name } { $version }.
+details-notification-incompatible-link = מידע נוסף
+
+details-notification-unsigned-and-disabled = לא ניתן לאמת את { $name } לשימוש ב־{ -brand-short-name } ולכן תוספת זו נוטרלה.
+details-notification-unsigned-and-disabled-link = מידע נוסף
+
+details-notification-unsigned = לא ניתן לאמת את { $name } לשימוש ב־{ -brand-short-name }. נא להיזהר.
+details-notification-unsigned-link = מידע נוסף
+
+details-notification-blocked = התוספת { $name } נחסמה עקב בעיות אבטחה או יציבות.
+details-notification-blocked-link = מידע נוסף
+
+details-notification-softblocked = התוספת { $name } נודעת בגרימת בעיות אבטחה או יציבות.
+details-notification-softblocked-link = מידע נוסף
+
+details-notification-gmp-pending = התוספת { $name } תותקן בהקדם.

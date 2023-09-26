@@ -4,18 +4,15 @@
 
 blocklist-window =
     .title = ブロックリスト
-    .style = width: 50em
+    .style = width: 55em
+blocklist-window2 =
+    .title = ブロックリスト
+    .style = min-width: 55em
 blocklist-description = オンライントラッカーのブロックに使用するリストを選択してください。リストは <a data-l10n-name="disconnect-link" title="Disconnect">Disconnect</a> から提供されます。
 blocklist-close-key =
     .key = w
 blocklist-treehead-list =
     .label = リスト
-blocklist-button-cancel =
-    .label = キャンセル
-    .accesskey = C
-blocklist-button-ok =
-    .label = 変更を保存
-    .accesskey = S
 blocklist-dialog =
     .buttonlabelaccept = 変更を保存
     .buttonaccesskeyaccept = S

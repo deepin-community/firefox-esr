@@ -2,23 +2,15 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-blocklist-window =
+blocklist-window2 =
     .title = தடை பட்டியல்
-    .style = width: 55em
+    .style = min-width: 55em
 
 blocklist-close-key =
     .key = w
 
 blocklist-treehead-list =
     .label = பட்டியல்
-
-blocklist-button-cancel =
-    .label = இரத்து
-    .accesskey = C
-
-blocklist-button-ok =
-    .label = மாற்றங்களைச் சேமிக்கவும்
-    .accesskey = S
 
 blocklist-dialog =
     .buttonlabelaccept = மாற்றங்களைச் சேமிக்கவும்

@@ -16,6 +16,8 @@ policy-AllowedDomainsForApps = Sbadu tiɣula yettusirgen i unekcum ɣer Google W
 
 policy-AppAutoUpdate = Rmed neɣ gdel alqem awurman n yisnasen.
 
+policy-AppUpdatePin = Sewḥel { -brand-short-name } akken ur yettwaleqqam ara nnig n lqem i yettwafernen
+
 policy-AppUpdateURL = Sbadu URL n uleqqem udmawan i usnas.
 
 policy-Authentication = Swel asesteb usliɣ i yesmal web i ten-yessefraken.
@@ -65,13 +67,11 @@ policy-DisableForgetButton = Sewḥel anekcum ɣer tqeffalt n usfaḍ n isefka.
 
 policy-DisableFormHistory = Ur ḥerrez ara azray n unadi d tferkit.
 
-policy-DisableMasterPasswordCreation = Ma irmed, awal uffir agejdan ur yezmir ara ad yettwarnu.
-
 policy-DisablePrimaryPasswordCreation = Ma ayagi d tidet, awal uffir agejdan ur yezmir ara ad yettwarnu.
 
 policy-DisablePasswordReveal = Ur ttaǧǧa ara awalen uffiren ad d-banen deg yinekcam yettwaskelsen.
 
-policy-DisablePocket = Sens tamahilt n usekles n isebtar web di Pocket.
+policy-DisablePocket2 = Sens tamahilt n usekles n isebtar web di { -pocket-brand-name }.
 
 policy-DisablePrivateBrowsing = Sens tunigin tusligt.
 
@@ -105,6 +105,8 @@ policy-EnableTrackingProtection = Rmed neɣ sens asewḥel n ugbur u sekker-it m
 # “lock” means that the user won’t be able to change this setting
 policy-EncryptedMediaExtensions = Rmed neɣ sens isiɣzaf n wallalen n teywalt yettwawgelhen rnu sekkeṛ-it ma tebɣiḍ.
 
+policy-ExemptDomainFileTypePairsFromFileTypeDownloadWarnings = Sens ilɣa almend n usiɣzef n yifuyla i wanawen n ufaylu yettwafernen deg kra n tɣula.
+
 # A “locked” extension can’t be disabled or removed by the user. This policy
 # takes 3 keys (“Install”, ”Uninstall”, ”Locked”), you can either keep them in
 # English or translate them as verbs.
@@ -114,9 +116,9 @@ policy-ExtensionSettings = Sefrek meṛṛa timeẓra n usbeddi n yisiɣzaf.
 
 policy-ExtensionUpdate = Emed neɣ sens alqem awurman n iseɣzaf.
 
-policy-FirefoxHome = Swel asebter agejdan n Firefox.
+policy-FirefoxHome2 = Sbadu { -firefox-home-brand-name }.
 
-policy-FlashPlugin = Sireg neɣ gdel asemres n uzegrir Flash.
+policy-GoToIntranetSiteForSingleWordEntryInAddressBar = Ḥettem srid tunigin deg usmel intranet deg wadeg n unadi n usekcem n wawal asuf ma tettaruḍ deg ufeggag n tansiwin.
 
 policy-Handlers = Swel imsefrak n usnas s wuem amezwer.
 
@@ -141,8 +143,6 @@ policy-LocalFileLinks = Sireg ismal usdiden i useqdec n yiseɣqan ɣer yifuyla i
 
 policy-ManagedBookmarks = Swel tabdart n tecraḍ n yisebtar yettusefraken sɣur anedbal ur nezmir ara ad ttusneflen sɣur aseqdac.
 
-policy-MasterPassword = Creḍ neɣ sewḥel aseqdec n wawal uffir agejdan.
-
 policy-ManualAppUpdateOnly = Mudd kan tisirag i yileqman s ufus, ur ttalɣu ara aseqdac ɣef yileqman.
 
 policy-PrimaryPassword = Suter neɣ agi aseqdec n wawal uffir agejdan.
@@ -162,6 +162,8 @@ policy-OverrideFirstRunPage = Beddel asebter amezwaru n uskar. Sbadu tasertit d 
 policy-OverridePostUpdatePage = Beddel asebter "Acu-t amaynut" seld aleqqem. sbadu tasertit d tilemt ma tebɣiḍ ad tsenseḍ  asebter n uleqqem.
 
 policy-PasswordManagerEnabled = Rmed asekles n wawalen uffiren deg umsefrak n wawalen uffiren.
+
+policy-PasswordManagerExceptions = Sewḥel { -brand-short-name } akken ur yesseklas ara awalen uffiren i kra n yismal
 
 # PDF.js and PDF should not be translated
 policy-PDFjs = Sens neɣ swel PDF.js, ameskan PDF usliɣ deg { -brand-short-name }.
@@ -188,8 +190,8 @@ policy-SearchEngines = Swel iƔewwaren n umsedday n unadi. Tasertit-agi tella ka
 
 policy-SearchSuggestEnabled = Ad yermed neɣ ad yessens isumar n unadi.
 
-# For more information, see https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSS/PKCS11/Module_Installation
-policy-SecurityDevices = Sebded izegrar n PKCS #11.
+# For more information, see https://wikipedia.org/wiki/PKCS_11
+policy-SecurityDevices2 = Rnu neɣ kkes izegrar PKCS #11.
 
 policy-ShowHomeButton = Sken taqeffalt n usebtar agejdan deg ufeggag n yifecka.
 
@@ -197,9 +199,13 @@ policy-SSLVersionMax = Sbadu lqem afellay n SSL.
 
 policy-SSLVersionMin = Sbadu lqem adday n SSL.
 
+policy-StartDownloadsInTempDirectory = Ḥettem beddu n yisadaren deg wadig adigan askudan deg wadeg n ukaram n usader amezwer.
+
 policy-SupportMenu = Ad yernu anekcum udmawan ɣer wumuɣ n tallelt i uɛiwen.
 
 policy-UserMessaging = Ur d-skan ara kra n yiznan i useqdac.
+
+policy-UseSystemPrintDialog = Siggez s useqdec n udiwenni Anagraw n usiggez.
 
 # “format” refers to the format used for the value of this policy.
 policy-WebsiteFilter = Sewḥel anekcum Ɣer ismal web. Wali tasemlit i wugar n telqayt Ɣef umasal.

@@ -2,12 +2,12 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-connection-window =
+connection-window2 =
     .title = जोडणी सेटिंग्स्
     .style =
         { PLATFORM() ->
-            [macos] width: 44em
-           *[other] width: 49em
+            [macos] min-width: 44em
+           *[other] min-width: 49em
         }
 
 connection-close-key =
@@ -39,11 +39,6 @@ connection-proxy-http-port = पोर्ट
 connection-proxy-ssl-port = पोर्ट
     .accesskey = o
 
-connection-proxy-ftp = FTP प्रॉक्सी
-    .accesskey = F
-connection-proxy-ftp-port = पोर्ट
-    .accesskey = r
-
 connection-proxy-socks = SOCKS होस्ट
     .accesskey = C
 connection-proxy-socks-port = पोर्ट
@@ -73,16 +68,14 @@ connection-proxy-autologin =
     .accesskey = i
     .tooltip = प्रॉक्सीजकरिता श्रेय अगोदर साठवले असल्यास, हे पर्याय आपली ओळख पटवते. ओळख पटवणे अपयशी ठरल्यास आपणास विचारले जाईल.
 
+connection-proxy-autologin-checkbox =
+    .label = पासवर्ड साठवले असल्यास ओळख पटविण्याकरिता विचारू नका
+    .accesskey = i
+    .tooltiptext = प्रॉक्सीजकरिता श्रेय अगोदर साठवले असल्यास, हे पर्याय आपली ओळख पटवते. ओळख पटवणे अपयशी ठरल्यास आपणास विचारले जाईल.
+
 connection-proxy-socks-remote-dns =
     .label = SOCKS v5 वापरताना DNS ची प्रॉक्सी करा
     .accesskey = d
-
-connection-dns-over-https =
-    .label = HTTPS वरील DNS सक्षम करा
-    .accesskey = H
-
-connection-dns-over-https-url-resolver = प्रदाता वापरा
-    .accesskey = P
 
 connection-dns-over-https-url-custom =
     .label = पसंतीचे

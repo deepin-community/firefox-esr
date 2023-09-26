@@ -6,9 +6,6 @@ password-quality-meter = Sa ni’iāj si huā hue’ê da’nga’ huìi
 
 ## Change Password dialog
 
-change-password-window =
-    .title = Nadunā Da’nga’ Huì A’nïn’ïn
-
 # Variables:
 # $tokenName (String) - Security device of the change password dialog
 change-password-token = Sa dugumîn sò': { $tokenName }
@@ -16,23 +13,16 @@ change-password-old = Da’nga’ huì nikājt akuan’ nïn:
 change-password-new = Da'nga' huì nakàa:
 change-password-reenter = Da'nga' huìi (gachrun ñû):
 
-## Reset Password dialog
-
-reset-password-window =
-    .title = Nagi'iaj da'nga' huì ñaa
-    .style = width: 40em
-
 ## Reset Primary Password dialog
 
 reset-password-button-label =
     .label = Nagi'iaj ñû
-reset-password-text = Si nachrūn ñûnt da'nga' huì a'nïn' nikājt, nī narè' daran' nej da'nga' huì nū sà' riña si korreôt ni roña web, si nuguàn' formulârio, si sertifikadôt nī nej da'nga' huì hua 'iát. Anïn hia ruhuât nachrūnt da'nga' huì a'nïn' nikāj raj?
 
 ## Downloading cert dialog
 
-download-cert-window =
+download-cert-window2 =
     .title = si naduninj ma sertifikado
-    .style = width: 46em
+    .style = min-width: 46em
 download-cert-message = Gachin ni'io' da' gida'aj si nuguan' 'ngò Dukuâ sun 'iaj sertifikando (CA).
 download-cert-trust-ssl =
     .label = Ga'nin' da' ni CA nani'ìn da'ngà' daj hua sitio web.
@@ -64,7 +54,5 @@ set-password-reminder = Sa ña'āanj: Si sā gini'ñunt si da'ngà' huì si sert
 
 ## Protected Auth dialog
 
-protected-auth-window =
-    .title = Ni'ia dàj hua Token huā rán rayi'î
-protected-auth-msg = Gi'iaj 'ngō sunūj un nī nadigânt man'ânt riña token. Chrēj nīkoj da' nadiganj sò' daj hua man'an si tokênt.
-protected-auth-token = Token:
+## Protected authentication alert
+

@@ -20,14 +20,6 @@ toolbar-context-menu-bookmark-selected-tabs =
 toolbar-context-menu-select-all-tabs =
     .label = Wale Aw Tabs
     .accesskey = S
-toolbar-context-menu-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Undae Sneck Tab
-           *[other] Undae Sneck Tabs
-        }
-    .accesskey = U
-
 toolbar-context-menu-reopen-closed-tabs =
     .label =
         { $tabCount ->
@@ -56,9 +48,6 @@ toolbar-context-menu-report-extension =
 toolbar-context-menu-pin-to-overflow-menu =
     .label = Peen tae Owerteem Menu
     .accesskey = P
-toolbar-context-menu-auto-hide-downloads-button =
-    .label = Auto-Hide in Toolbaur
-    .accesskey = A
 toolbar-context-menu-auto-hide-downloads-button-2 =
     .label = Hide Button When Tuim
     .accesskey = H
@@ -85,3 +74,7 @@ toolbar-context-menu-bookmarks-toolbar-on-new-tab-2 =
 toolbar-context-menu-bookmarks-show-other-bookmarks =
     .label = Kythe Ither Buikmerks
     .accesskey = h
+
+toolbar-context-menu-menu-bar-cmd =
+    .toolbarname = Menu Baur
+    .accesskey = M

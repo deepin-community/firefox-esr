@@ -9,11 +9,6 @@ crashes-id = ID rozprawy
 crashes-send-date = Wotpósłany
 crashes-all-reports = Wšě rozprawy wo spadach
 crashes-no-config = Nałoženje njeje so konfigurowało, zo by rozprawy wo spadach zwobrazniło.
-extensions-title = Rozšěrjenja
-extensions-name = Mjeno
-extensions-enabled = Zmóžnjeny
-extensions-version = Wersija
-extensions-id = ID
 support-addons-title = Přidatki
 support-addons-name = Mjeno
 support-addons-type = Typ
@@ -77,6 +72,12 @@ app-basics-location-service-key-google = Kluč stejnišćoweje słužby Google
 app-basics-safebrowsing-key-google = Kluč Safebrowsing Google
 app-basics-key-mozilla = Kluč stejnišćoweje słužby Mozilla
 app-basics-safe-mode = Wěsty modus
+app-basics-memory-size = Wulkosć składa (RAM)
+app-basics-disk-available = K dispoziciji stejacy tačelowy składowak
+# Variables:
+#   $value (number) - Amount of data being stored
+#   $unit (string) - The unit of data being stored (e.g. MB)
+app-basics-data-size = { $value } { $unit }
 show-dir-label =
     { PLATFORM() ->
         [macos] W Finder pokazać
@@ -106,11 +107,21 @@ graphics-gpu2-title = GPU #2
 graphics-decision-log-title = Rozsudowy protokol
 graphics-crash-guards-title = Funkcije, kotrež su so wot spadoweho stražnika znjemóžnili
 graphics-workarounds-title = Nuzowe rozrisanja
+graphics-device-pixel-ratios = Gratowe pikselowe poměry (device pixel ratios) wokna
 # Windowing system in use on Linux (e.g. X11, Wayland).
 graphics-window-protocol = Woknowy protokol
 # Desktop environment in use on Linux (e.g. GNOME, KDE, XFCE, etc).
 graphics-desktop-environment = Desktopowa wokolina
 place-database-title = Datowa banka historije a zapołožkow
+place-database-stats = Statistika
+place-database-stats-show = Statistiku pokazać
+place-database-stats-hide = Statistiku schować
+place-database-stats-entity = Entita
+place-database-stats-count = Ličba
+place-database-stats-size-kib = Wulkosć (KiB)
+place-database-stats-size-perc = Wulkosć (%)
+place-database-stats-efficiency-perc = Eficienca (%)
+place-database-stats-sequentiality-perc = Sekwencialnosć (%)
 place-database-integrity = Integrita
 place-database-verify-integrity = Integritu přepruwować
 a11y-title = Bjezbarjernosć
@@ -130,8 +141,6 @@ sandbox-sys-call-tid = TID
 sandbox-sys-call-proc-type = Procesowy typ
 sandbox-sys-call-number = Syscall
 sandbox-sys-call-args = Argumenty
-safe-mode-title = Wěsty modus spytać
-restart-in-safe-mode-label = Ze znjemóžnjenymi přidatkami startować…
 troubleshoot-mode-title = Problemy diagnosticěrować
 restart-in-troubleshoot-mode-label = Modus za rozrisowanje problemow…
 clear-startup-cache-title = Spytajće startowy pufrowak wuprózdnić
@@ -159,8 +168,18 @@ media-device-channels = Kanale
 media-device-rate = Rata
 media-device-latency = Latenca
 media-capabilities-title = Medijowe móžnosće
+media-codec-support-info = Informacije wo podpěrje codecow
 # List all the entries of the database.
 media-capabilities-enumerate = Datowu banku naličić
+
+## Codec support table
+
+media-codec-support-sw-decoding = Softwarowe dekodowanje
+media-codec-support-hw-decoding = Hardwarowe dekodowanje
+media-codec-support-codec-name = Mjeno Codec
+media-codec-support-supported = Podpěrany
+media-codec-support-unsupported = Njepodpěrany
+media-codec-support-error = Informacije wo podpěranych kodekach k dispoziciji njesteja. Spytajće hišće raz, po tym zo sće medijowu dataju wothrał.
 
 ##
 
@@ -189,36 +208,6 @@ remote-debugging-url = URL
 
 ##
 
-support-third-party-modules-title = Module třećich poskićowarjow
-support-third-party-modules-module = Modulowa dataja
-support-third-party-modules-version = Datajowa wersija
-support-third-party-modules-vendor = Informacije zhotowjerja
-support-third-party-modules-occurrence = Wustupowanja
-support-third-party-modules-process = Procesowy typ a ID
-support-third-party-modules-thread = Nitka
-support-third-party-modules-base = Adresa Imagebase
-support-third-party-modules-uptime = Procesowy dźěłowy čas (ms)
-support-third-party-modules-duration = Začitanske traće (ms)
-support-third-party-modules-status = Status
-support-third-party-modules-status-loaded = Začitany
-support-third-party-modules-status-blocked = Zablokowany
-support-third-party-modules-status-redirected = Dalesposrědkowany
-support-third-party-modules-empty = Module třećich poskićowarjow njejsu so začitali.
-support-third-party-modules-no-value = (Žana hódnota)
-support-third-party-modules-button-open =
-    .title = Datajowe městno wočinić…
-support-third-party-modules-expand =
-    .title = Nadrobne informacije pokazać
-support-third-party-modules-collapse =
-    .title = Nadrobne informacije schować
-support-third-party-modules-unsigned-icon =
-    .title = Tutón modul njeje signowany
-support-third-party-modules-folder-icon =
-    .title = Datajowe městno wočinić…
-support-third-party-modules-down-icon =
-    .title = Nadrobne informacije pokazać
-support-third-party-modules-up-icon =
-    .title = Nadrobne informacije schować
 # Variables
 # $days (Integer) - Number of days of crashes to log
 report-crash-for-days =
@@ -315,10 +304,8 @@ webgl2-renderer = WebGL 2 - rysowak ćěrjaka
 webgl2-version = WebGL 2 - wersija ćěrjaka
 webgl2-driver-extensions = WebGL 2 - rozšěrjenja ćěrjaka
 webgl2-extensions = WebGL 2 - rozšěrjenja
-blocklisted-bug = W blokowanskej lisćinje znatych problemow dla
-# Variables
-# $bugNumber (string) - String of bug number from Bugzilla
-bug-link = programowy zmylk { $bugNumber }
+webgpu-default-adapter = Standardny adapter WebGPU
+webgpu-fallback-adapter = Adapter fallback WebGPU
 # Variables
 #   $bugNumber (string) - Bug number on Bugzilla
 support-blocklisted-bug = W blokowanskej lisćinje znatych problemow dla: <a data-l10n-name="bug-link">programowy zmylk { $bugNumber }</a>
@@ -326,8 +313,6 @@ support-blocklisted-bug = W blokowanskej lisćinje znatych problemow dla: <a dat
 # $failureCode (string) - String that can be searched in the source tree.
 unknown-failure = W blokowanskej lisćinje; zmylkowy kod { $failureCode }
 d3d11layers-crash-guard = D3D11 Compositor
-d3d11video-crash-guard = D3D11 Video Decoder
-d3d9video-crash-guard = D3D9 Video Decoder
 glcontext-crash-guard = OpenGL
 wmfvpxvideo-crash-guard = Widejodekoder WMF VPX
 reset-on-next-restart = Při přichodnym nowym starće wróćo stajić
@@ -350,6 +335,7 @@ can-sandbox-media = Testowanje medijowych tykačow w pěskowym kašćiku
 content-sandbox-level = Runina wobsahowych procesow w pěskowym kašćiku
 effective-content-sandbox-level = Aktualna runina wobsahowych procesow w pěskowym kašćiku
 content-win32k-lockdown-state = Status Win32 Lockdown za wobsahowy proces
+support-sandbox-gpu-level = Runina GPU-procesow w pěskowym kašćiku
 sandbox-proc-type-content = wobsah
 sandbox-proc-type-file = datajowy wobsah
 sandbox-proc-type-media-plugin = medijowy tykač
@@ -367,14 +353,6 @@ launcher-process-status-unknown = Njeznaty status
 # $remoteWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
 multi-process-windows = { $remoteWindows }/{ $totalWindows }
-multi-process-status-0 = Wot wužiwarja zmóžnjeny
-multi-process-status-1 = Po standardźe zmóžnjeny
-multi-process-status-2 = Znjemóžnjeny
-multi-process-status-4 = Přez nastroje bjezbarjernosće znjemóžnjeny
-multi-process-status-6 = Přez njepodpěrane tekstowe zapodaće znjemóžnjeny
-multi-process-status-7 = Přez přidatki znjemóžnjeny
-multi-process-status-8 = Namócnje znjemóžnjeny
-multi-process-status-unknown = Njeznaty status
 # Variables
 # $fissionWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
@@ -383,7 +361,7 @@ fission-status-experiment-control = Přez eksperiment znjemóžnjeny
 fission-status-experiment-treatment = Přez eksperiment zmóžnjeny
 fission-status-disabled-by-e10s-env = Přez wokolinu znjemóžnjeny
 fission-status-enabled-by-env = Přez wokolinu zmóžnjeny
-fission-status-disabled-by-safe-mode = Přez wěsty modus znjemóžnjeny
+fission-status-disabled-by-env = Přez wokolinu znjemóžnjeny
 fission-status-enabled-by-default = Po standardźe zmóžnjeny
 fission-status-disabled-by-default = Po standardźe znjemóžnjeny
 fission-status-enabled-by-user-pref = Wot wužiwarja zmóžnjeny

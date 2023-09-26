@@ -3,22 +3,7 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 
-### UI strings for the simplified onboarding modal / about:welcome
-### Various strings use a non-breaking space to avoid a single dangling /
-### widowed word, so test on various window sizes if you also want this.
-
-
-## These button action text can be split onto multiple lines, so use explicit
-## newlines in translations to control where the line break appears (e.g., to
-## avoid breaking quoted text).
-
-onboarding-button-label-learn-more = เรียนรู้เพิ่มเติม
-onboarding-button-label-get-started = เริ่มต้นใช้งาน
-
-## Welcome modal dialog strings
-
-
-### UI strings for the simplified onboarding / multistage about:welcome
+### UI strings for the MR1 onboarding / multistage about:welcome
 ### Various strings use a non-breaking space to avoid a single dangling /
 ### widowed word, so test on various window sizes if you also want this.
 
@@ -26,149 +11,9 @@ onboarding-button-label-get-started = เริ่มต้นใช้งาน
 ## Welcome page strings
 
 onboarding-welcome-header = ยินดีต้อนรับสู่ { -brand-short-name }
-onboarding-welcome-body = คุณมีเบราว์เซอร์แล้ว<br/>ชมคุณสมบัติอื่นที่เหลือของ { -brand-product-name }
-onboarding-welcome-learn-more = เรียนรู้เพิ่มเติมเกี่ยวกับประโยชน์
-onboarding-welcome-modal-get-body = คุณมีเบราว์เซอร์แล้ว<br/>มาทำให้ { -brand-product-name } ใช้งานได้อย่างเต็มประสิทธิภาพกัน
-onboarding-welcome-modal-supercharge-body = เพิ่มความคุ้มครองความเป็นส่วนตัวของคุณให้มากขึ้น
-onboarding-welcome-modal-privacy-body = คุณมีเบราว์เซอร์ มาเพิ่มการปกป้องความเป็นส่วนตัวกัน
-onboarding-welcome-modal-family-learn-more = เรียนรู้เกี่ยวกับผลิตภัณฑ์ในตระกูล { -brand-product-name }
-onboarding-welcome-form-header = เริ่มที่นี่
-
-onboarding-join-form-body = ป้อนที่อยู่อีเมลของคุณเพื่อเริ่มต้นใช้งาน
-onboarding-join-form-email =
-    .placeholder = ป้อนอีเมล
-onboarding-join-form-email-error = จำเป็นต้องกรอกอีเมลที่ถูกต้อง
-onboarding-join-form-legal = การดำเนินการต่อถือว่าคุณยอมรับ<a data-l10n-name="terms">เงื่อนไขการใช้บริการ</a>และ<a data-l10n-name="privacy">ข้อกำหนดความเป็นส่วนตัว</a>
-onboarding-join-form-continue = ดำเนินการต่อ
-
-# This message is followed by a link using onboarding-join-form-signin ("Sign In") as text.
-onboarding-join-form-signin-label = มีบัญชีอยู่แล้วใช่หรือไม่
-# Text for link to submit the sign in form
-onboarding-join-form-signin = ลงชื่อเข้า
-
 onboarding-start-browsing-button-label = เริ่มการเรียกดู
-onboarding-cards-dismiss =
-    .title = ยกเลิก
-    .aria-label = ยกเลิก
-
-## Welcome full page string
-
-onboarding-fullpage-welcome-subheader = มาเริ่มสำรวจทุกอย่างที่คุณทำได้กัน
-onboarding-fullpage-form-email =
-    .placeholder = ที่อยู่อีเมลของคุณ…
-
-## Firefox Sync modal dialog strings.
-
-onboarding-sync-welcome-header = นำ { -brand-product-name } ไปกับคุณ
-onboarding-sync-welcome-content = รับที่คั่นหน้า ประวัติ รหัสผ่าน และการตั้งค่าอื่น ๆ ของคุณในอุปกรณ์ทั้งหมดของคุณ
-onboarding-sync-welcome-learn-more-link = เรียนรู้เพิ่มเติมเกี่ยวกับบัญชี Firefox
-
-onboarding-sync-form-input =
-    .placeholder = อีเมล
-
-onboarding-sync-form-continue-button = ดำเนินการต่อ
-onboarding-sync-form-skip-login-button = ข้ามขั้นตอนนี้
-
-## This is part of the line "Enter your email to continue to Firefox Sync"
-
-onboarding-sync-form-header = ป้อนอีเมลของคุณ
-onboarding-sync-form-sub-header = เพื่อดำเนินการต่อไปยัง { -sync-brand-name }
-
-
-## These are individual benefit messages shown with an image, title and
-## description.
-
-onboarding-benefit-products-text = ทำสิ่งต่าง ๆ ให้สำเร็จด้วยเครื่องมือมากมายที่เคารพความเป็นส่วนตัวของคุณบนอุปกรณ์ทุกเครื่องของคุณ
-
-# "Personal Data Promise" is a concept that should be translated consistently
-# across the product. It refers to a concept shown elsewhere to the user: "The
-# Firefox Personal Data Promise is the way we honor your data in everything we
-# make and do. We take less data. We keep it safe. And we make sure that we are
-# transparent about how we use it."
-onboarding-benefit-privacy-text = ทุกสิ่งที่เราทำเคารพต่อคำมั่นสัญญาด้านข้อมูลส่วนบุคคลของเรา: เก็บให้น้อย รักษาให้ปลอดภัย ไม่มีความลับ
-
-onboarding-benefit-sync-title = { -sync-brand-short-name }
-onboarding-benefit-sync-text = นำที่คั่นหน้า รหัสผ่าน ประวัติ และอื่น ๆ ทุกที่ที่คุณใช้ { -brand-product-name }
-
-onboarding-benefit-monitor-title = { -monitor-brand-short-name }
-onboarding-benefit-monitor-text = รับการแจ้งเตือนเมื่อข้อมูลส่วนบุคคลของคุณอยู่ในการรั่วไหลข้อมูลที่รู้จัก
-
-onboarding-benefit-lockwise-title = { -lockwise-brand-short-name }
-onboarding-benefit-lockwise-text = จัดการรหัสผ่านของคุณให้ปลอดภัยและพกพาได้
-
-
-## These strings belong to the individual onboarding messages.
-
-
-## Each message has a title and a description of what the browser feature is.
-## Each message also has an associated button for the user to try the feature.
-## The string for the button is found above, in the UI strings section
-
-onboarding-tracking-protection-title2 = การป้องกันจากการติดตาม
-onboarding-tracking-protection-text2 = { -brand-short-name } ช่วยหยุดเว็บไซต์ไม่ให้ติดตามคุณออนไลน์ ทำให้โฆษณาติดตามคุณไปทั่วทั้งเว็บได้ยากขึ้น
-onboarding-tracking-protection-button2 = วิธีการทำงาน
-
-onboarding-data-sync-title = นำการตั้งค่าของคุณไปกับคุณ
-# "Sync" is short for synchronize.
-onboarding-data-sync-text2 = ซิงค์ที่คั่นหน้า, รหัสผ่าน, และอื่น ๆ ทุกที่ที่คุณใช้ { -brand-product-name }
-onboarding-data-sync-button2 = ลงชื่อเข้า { -sync-brand-short-name }
-
-onboarding-firefox-monitor-title = รับการแจ้งเตือนเกี่ยวกับการละเมิดข้อมูล
-onboarding-firefox-monitor-text2 = { -monitor-brand-name } จะเฝ้าดูว่าอีเมลของคุณปรากฏในการละเมิดข้อมูลหรือไม่และจะแจ้งเตือนคุณหากปรากฏในการละเมิดใหม่
-onboarding-firefox-monitor-button = สมัครรับการแจ้งเตือน
-
-onboarding-browse-privately-title = เรียกดูอย่างเป็นส่วนตัว
-onboarding-browse-privately-text = การท่องเส้นแบบส่วนตัวจะล้างประวัติการค้นหาและประวัติการเข้าชมของคุณเพื่อปกปิดเป็นความลับไม่ให้ใครก็ตามที่ใช้คอมพิวเตอร์ของคุณมาเห็น
-onboarding-browse-privately-button = เปิดหน้าต่างส่วนตัว
-
-onboarding-firefox-send-title = ทำให้ไฟล์ที่แบ่งปันของคุณเป็นส่วนตัว
-onboarding-firefox-send-text2 = อัปโหลดไฟล์ของคุณไปที่ { -send-brand-name } เพื่อแบ่งปันไฟล์ด้วยการเข้ารหัสแบบครบวงจรและลิงก์ที่หมดอายุโดยอัตโนมัติ
-onboarding-firefox-send-button = ลอง { -send-brand-name }
-
-onboarding-mobile-phone-title = รับ { -brand-product-name } ในโทรศัพท์ของคุณ
-onboarding-mobile-phone-text = ดาวน์โหลด { -brand-product-name } สำหรับ iOS หรือ Android และซิงค์ข้อมูลของคุณผ่านอุปกรณ์ต่าง ๆ
-# "Mobile" is short for mobile/cellular phone, "Browser" is short for web
-# browser.
-onboarding-mobile-phone-button = ดาวน์โหลดเบราว์เซอร์สำหรับมือถือ
-
-onboarding-send-tabs-title = ส่งแท็บให้ตัวคุณเองทันที
-# "Send Tabs" refers to "Send Tab to Device" feature that appears when opening a
-# tab's context menu.
-onboarding-send-tabs-text2 = แบ่งปันหน้าระหว่างอุปกรณ์ของคุณทันทีโดยไม่ต้องคัดลอกลิงก์หรือออกจากเบราว์เซอร์
-onboarding-send-tabs-button = เริ่มใช้ Send Tabs
-
-onboarding-pocket-anywhere-title = อ่านและฟังได้ทุกที่
-onboarding-pocket-anywhere-text2 = บันทึกเนื้อหาโปรดของคุณแบบออฟไลน์ด้วยแอป { -pocket-brand-name } และอ่าน ฟัง และดูเมื่อใดก็ตามที่คุณสะดวก
-onboarding-pocket-anywhere-button = ลอง { -pocket-brand-name }
-
-onboarding-lockwise-strong-passwords-title = สร้างและจัดเก็บรหัสผ่านที่คาดเดายาก
-onboarding-lockwise-strong-passwords-text = { -lockwise-brand-name } ช่วยสร้างรหัสผ่านที่คาดเดาได้ยากในทันทีและบันทึกรหัสผ่านทั้งหมดในที่เดียว
-onboarding-lockwise-strong-passwords-button = จัดการการเข้าสู่ระบบของคุณ
-
-onboarding-facebook-container-title = ตั้งค่าขอบเขตให้กับ Facebook
-onboarding-facebook-container-text2 = { -facebook-container-brand-name } แยกโปรไฟล์ของคุณออกจากสิ่งอื่น ทำให้ Facebook ติดตามคุณทั่วทั้งเว็บได้ยาก
-onboarding-facebook-container-button = เพิ่มส่วนขยาย
-
-onboarding-import-browser-settings-title = นำเข้าที่คั่นหน้า, รหัสผ่าน, และอื่น ๆ
-onboarding-import-browser-settings-text = ลองใช้กันเลย นำไซต์และการตั้งค่า Chrome ของคุณไปกับคุณได้อย่างง่ายดาย
-onboarding-import-browser-settings-button = นำเข้าข้อมูล Chrome
-
-onboarding-personal-data-promise-title = ออกแบบมาให้เป็นส่วนตัว
-onboarding-personal-data-promise-text = { -brand-product-name } ปฏิบัติต่อข้อมูลของคุณด้วยความเคารพโดยใช้ให้น้อย ปกป้อง และมีความชัดเจนเกี่ยวกับวิธีที่เราใช้
-onboarding-personal-data-promise-button = อ่านคำสัญญาของเรา
-
-## Message strings belonging to the Return to AMO flow
-
-return-to-amo-sub-header = เยี่ยม คุณได้รับ { -brand-short-name } แล้ว
-
-# <icon></icon> will be replaced with the icon belonging to the extension
-#
-# Variables:
-#   $addon-name (String) - Name of the add-on
-return-to-amo-addon-header = ตอนนี้ให้คุณโหลด <icon></icon><b>{ $addon-name }</b> ได้เลย
-return-to-amo-extension-button = เพิ่มส่วนขยาย
-return-to-amo-get-started-button = เริ่มต้นใช้งานกับ { -brand-short-name }
 onboarding-not-now-button-label = ไม่ใช่ตอนนี้
+mr1-onboarding-get-started-primary-button-label = เริ่มต้น
 
 ## Custom Return To AMO onboarding strings
 
@@ -179,138 +24,23 @@ return-to-amo-subtitle = เยี่ยม คุณได้ติดตั้
 #   $addon-name (String) - Name of the add-on
 return-to-amo-addon-title = ตอนนี้มาติดตั้ง <img data-l10n-name="icon"/> <b>{ $addon-name }</b> กันเลย
 return-to-amo-add-extension-label = เพิ่มส่วนขยาย
+return-to-amo-add-theme-label = เพิ่มชุดรูปแบบ
 
-## Multistage 3-screen onboarding flow strings (about:welcome pages)
+##  Variables: $addon-name (String) - Name of the add-on to be installed
 
-# The <span data-l10n-name="zap"></span> in this string allows a "zap" underline style to be
-# automatically added to the text inside it. { -brand-short-name } should stay inside the span.
-onboarding-multistage-welcome-header = ยินดีต้อนรับสู่ <span data-l10n-name="zap">{ -brand-short-name }</span>
-onboarding-multistage-welcome-subtitle = เบราว์เซอร์ที่รวดเร็ว ปลอดภัย และเป็นส่วนตัวที่ได้รับการสนับสนุนโดยองค์กรไม่แสวงหาผลกำไร
-onboarding-multistage-welcome-primary-button-label = เริ่มตั้งค่า
-onboarding-multistage-welcome-secondary-button-label = ลงชื่อเข้า
-onboarding-multistage-welcome-secondary-button-text = มีบัญชีแล้วใช่หรือไม่
+mr1-return-to-amo-subtitle = พบกับ { -brand-short-name }
+mr1-return-to-amo-addon-title = คุณได้เบราว์เซอร์ที่รวดเร็วและเป็นส่วนตัวมาอยู่ในปลายนิ้วมือของคุณแล้ว ตอนนี้คุณสามารถเพิ่ม <b>{ $addon-name }</b> และทำสิ่งต่าง ๆ ได้มากขึ้นด้วย { -brand-short-name }
+mr1-return-to-amo-add-extension-label = เพิ่ม { $addon-name }
 
-# The <span data-l10n-name="zap"></span> in this string allows a "zap" underline style to be
-# automatically added to the text inside it. "default" should stay inside the span.
-onboarding-multistage-set-default-header = ทำให้ { -brand-short-name } เป็น<span data-l10n-name="zap">ค่าเริ่มต้น</span>ของคุณ
-onboarding-multistage-set-default-subtitle = รวดเร็ว ปลอดภัย และเป็นส่วนตัวในทุกครั้งที่คุณเรียกดู
-onboarding-multistage-set-default-primary-button-label = ทำให้เป็นค่าเริ่มต้น
-onboarding-multistage-set-default-secondary-button-label = ไม่ใช่ตอนนี้
-
-# The <span data-l10n-name="zap"></span> in this string allows a "zap" underline style to be
-# automatically added to the text inside it. { -brand-short-name } should stay inside the span.
-onboarding-multistage-pin-default-header = เริ่มใช้งานโดยการทำให้ <span data-l10n-name="zap">{ -brand-short-name }</span> เป็นเบราว์เซอร์หลักเพียงคลิกเดียว
-onboarding-multistage-pin-default-subtitle = ให้คุณใช้เว็บได้อย่างรวดเร็ว ปลอดภัย และเป็นส่วนตัวในทุกครั้ง
-# The "settings" here refers to "Windows 10 Settings App" and not the browser's
-onboarding-multistage-pin-default-waiting-subtitle = เลือก { -brand-short-name } ภายใต้ เว็บเบราว์เซอร์ เมื่อการตั้งค่าของคุณเปิด
-# The "settings" here refers to "Windows 10 Settings App" and not the browser's
-onboarding-multistage-pin-default-help-text = การดำเนินการนี้จะปักหมุด { -brand-short-name } ที่แถบงานและเปิดการตั้งค่า
-onboarding-multistage-pin-default-primary-button-label = ทำให้ { -brand-short-name } เป็นเบราว์เซอร์หลักของฉัน
-
-# The <span data-l10n-name="zap"></span> in this string allows a "zap" underline style to be
-# automatically added to the text inside it. "more" should stay inside the span.
-onboarding-multistage-import-header = นำเข้ารหัสผ่าน <br/>ที่คั่นหน้า และ<span data-l10n-name="zap">อื่น ๆ</span>
-onboarding-multistage-import-subtitle = มาจากเบราว์เซอร์อื่นหรือไม่? คุณสามารถนำทุกอย่างมาสู่ { -brand-short-name } ได้ง่าย ๆ
-onboarding-multistage-import-primary-button-label = เริ่มการนำเข้า
-onboarding-multistage-import-secondary-button-label = ไม่ใช่ตอนนี้
-
-# Info displayed in the footer of import settings screen during onboarding flow.
-# This supports welcome screen showing top sites imported from the user's default browser.
-onboarding-import-sites-disclaimer = ไซต์ที่แสดงที่นี่ถูกพบบนอุปกรณ์นี้ { -brand-short-name } จะไม่บันทึกหรือซิงค์ข้อมูลจากเบราว์เซอร์อื่นเว้นแต่คุณจะเลือกนำเข้า
+## Multistage onboarding strings (about:welcome pages)
 
 # Aria-label to make the "steps" of multistage onboarding visible to screen readers.
 # Variables:
 #   $current (Int) - Number of the current page
 #   $total (Int) - Total number of pages
-onboarding-welcome-steps-indicator =
-    .aria-label = เริ่มต้นใช้งาน: หน้าจอ { $current } จาก { $total }
 
-# The <span data-l10n-name="zap"></span> in this string allows a "zap" underline style to be
-# automatically added to the text inside it. "look" should stay inside the span.
-onboarding-multistage-theme-header = เลือก<span data-l10n-name="zap">รูปลักษณ์</span>
-onboarding-multistage-theme-subtitle = ปรับแต่ง { -brand-short-name } ด้วยชุดตกแต่ง
-onboarding-multistage-theme-primary-button-label2 = เสร็จสิ้น
-onboarding-multistage-theme-secondary-button-label = ไม่ใช่ตอนนี้
-
-# Automatic theme uses operating system color settings
-onboarding-multistage-theme-label-automatic = อัตโนมัติ
-
-onboarding-multistage-theme-label-light = สว่าง
-onboarding-multistage-theme-label-dark = มืด
-# "Firefox Alpenglow" here is the name of the theme, and should be kept in English.
-onboarding-multistage-theme-label-alpenglow = Firefox Alpenglow
-
-## Please make sure to split the content of the title attribute into lines whose
-## width corresponds to about 40 Latin characters, to ensure that the tooltip
-## doesn't become too long. Line breaks will be preserved when displaying the
-## tooltip.
-
-# Tooltip displayed on hover of automatic theme
-onboarding-multistage-theme-tooltip-automatic-2 =
-    .title =
-        สืบทอดรูปลักษณ์ของระบบปฏิบัติการของคุณ
-        สำหรับปุ่ม เมนู และหน้าต่าง
-
-# Input description for automatic theme
-onboarding-multistage-theme-description-automatic-2 =
-    .aria-description =
-        สืบทอดรูปลักษณ์ของระบบปฏิบัติการของคุณ
-        สำหรับปุ่ม เมนู และหน้าต่าง
-
-# Tooltip displayed on hover of light theme
-onboarding-multistage-theme-tooltip-light-2 =
-    .title =
-        ใช้ลักษณะที่ปรากฏแบบสีอ่อนสำหรับปุ่ม
-        เมนู และหน้าต่าง
-
-# Input description for light theme
-onboarding-multistage-theme-description-light =
-    .aria-description =
-        ใช้ลักษณะที่ปรากฏแบบสีอ่อนสำหรับปุ่ม
-        เมนู และหน้าต่าง
-
-# Tooltip displayed on hover of dark theme
-onboarding-multistage-theme-tooltip-dark-2 =
-    .title =
-        ใช้ลักษณะที่ปรากฏแบบสีเข้มสำหรับปุ่ม
-        เมนู และหน้าต่าง
-
-# Input description for dark theme
-onboarding-multistage-theme-description-dark =
-    .aria-description =
-        ใช้ลักษณะที่ปรากฏแบบสีเข้มสำหรับปุ่ม
-        เมนู และหน้าต่าง
-
-# Tooltip displayed on hover of Alpenglow theme
-onboarding-multistage-theme-tooltip-alpenglow-2 =
-    .title =
-        ใช้ลักษณะที่ปรากฏแบบสีสันสำหรับปุ่ม
-        เมนู และหน้าต่าง
-
-# Input description for Alpenglow theme
-onboarding-multistage-theme-description-alpenglow =
-    .aria-description =
-        ใช้ลักษณะที่ปรากฏแบบสีสันสำหรับปุ่ม
-        เมนู และหน้าต่าง
-
-## Multistage MR1 onboarding strings (MR1 about:welcome pages)
-
-# "Hero Text" displayed on left side of welcome screen.
-# The "Fire" in "Fire starts here" plays on the "Fire" in "Firefox".
-# It also signals the passion users bring to Firefox, how they use
-# Firefox to pursue those passions, as well as the boldness in their
-# choice to use Firefox over a larger competitor browser.
-# An alternative title for localization is: "It starts here".
-# This text can be formatted to span multiple lines as needed.
-mr1-welcome-screen-hero-text =
-    ทุกอย่างเริ่มจาก
-    ที่นี่
-
-# Caption for background image in about:welcome. "Soraya Osorio" is the name
-# of the person and shouldn't be translated.
-# In case your language needs to adapt the nouns to a gender, Soraya is a female name (she/her).
-# You can see the picture in about:welcome in Nightly 90.
-mr1-onboarding-welcome-image-caption = Soraya Osorio — นักออกแบบเฟอร์นิเจอร์ แฟน Firefox
+onboarding-welcome-steps-indicator-label =
+    .aria-label = ความคืบหน้า: ขั้นตอนที่ { $current } จาก { $total }
 
 # This button will open system settings to turn on prefers-reduced-motion
 mr1-onboarding-reduce-motion-button-label = ปิดภาพเคลื่อนไหว
@@ -319,68 +49,34 @@ mr1-onboarding-reduce-motion-button-label = ปิดภาพเคลื่อ
 ## match the OS' application context menu item action where Windows uses "pin"
 ## and "taskbar" while macOS "keep" and "Dock" (proper noun).
 
-# Title used on welcome page when Firefox is not pinned
-mr1-onboarding-pin-header =
-    { PLATFORM() ->
-        [macos] เก็บ { -brand-short-name } ไว้ใน Dock ของคุณเพื่อให้เข้าถึงได้อย่างง่ายดาย
-       *[other] ปักหมุด { -brand-short-name } เข้ากับแถบงานของคุณเพื่อให้เข้าถึงได้อย่างง่ายดาย
-    }
-# Primary button string used on welcome page when Firefox is not pinned.
-mr1-onboarding-pin-primary-button-label =
-    { PLATFORM() ->
-        [macos] เก็บไว้ใน Dock
-       *[other] ปักหมุดเข้ากับแถบงาน
-    }
-
 ## Multistage MR1 onboarding strings (about:welcome pages)
 
-# This string will be used on welcome page primary button label
-# when Firefox is both pinned and default
-mr1-onboarding-get-started-primary-button-label = เริ่มต้น
-
-mr1-onboarding-welcome-header = ยินดีต้อนรับสู่ { -brand-short-name }
-mr1-onboarding-set-default-pin-primary-button-label = ทำให้ { -brand-short-name } เป็นเบราว์เซอร์หลักของฉัน
-    .title = ตั้ง { -brand-short-name } เป็นเบราว์เซอร์หลักและปักหมุดเข้ากับแถบงาน
-
-# This string will be used on welcome page primary button label
-# when Firefox is not default but already pinned
-mr1-onboarding-set-default-only-primary-button-label = ทำให้ { -brand-short-name } เป็นเบราว์เซอร์เริ่มต้นของฉัน
-mr1-onboarding-set-default-secondary-button-label = ไม่ใช่ตอนนี้
+# String for the Firefox Accounts button
 mr1-onboarding-sign-in-button-label = ลงชื่อเข้า
 
 ## Title, subtitle and primary button string used on set default onboarding screen
 ## when Firefox is not default browser
 
-mr1-onboarding-default-header = ทำให้ { -brand-short-name } เป็นค่าเริ่มต้นของคุณ
-mr1-onboarding-default-subtitle = พบกับความเร็ว ความปลอดภัย และความเป็นส่วนตัวแบบอัตโนมัติ
-mr1-onboarding-default-primary-button-label = ทำให้เป็นเบราว์เซอร์เริ่มต้น
-
 ## Multistage MR1 onboarding strings (about:welcome pages)
-
-mr1-onboarding-import-header = นำทุกอย่างติดตัวไปด้วย
-mr1-onboarding-import-subtitle = นำเข้ารหัสผ่าน <br/>ที่คั่นหน้า และอื่น ๆ ของคุณ
 
 # The primary import button label will depend on whether we can detect which browser was used to download Firefox.
 # Variables:
 #   $previous (Str) - Previous browser name, such as Edge, Chrome
 mr1-onboarding-import-primary-button-label-attribution = นำเข้าจาก { $previous }
 
-# This string will be used in cases where we can't detect the previous browser name.
-mr1-onboarding-import-primary-button-label-no-attribution = นำเข้าจากเบราว์เซอร์ก่อนหน้า
-mr1-onboarding-import-secondary-button-label = ไม่ใช่ตอนนี้
-
 mr1-onboarding-theme-header = ทำให้เป็นของคุณเอง
-mr1-onboarding-theme-subtitle = ปรับแต่ง { -brand-short-name } ด้วยชุดตกแต่ง
-mr1-onboarding-theme-primary-button-label = บันทึกชุดตกแต่ง
+mr1-onboarding-theme-subtitle = ปรับแต่ง { -brand-short-name } ด้วยชุดรูปแบบ
 mr1-onboarding-theme-secondary-button-label = ไม่ใช่ตอนนี้
 
 # System theme uses operating system color settings
-mr1-onboarding-theme-label-system = ชุดตกแต่งระบบ
+mr1-onboarding-theme-label-system = ชุดรูปแบบของระบบ
 
 mr1-onboarding-theme-label-light = สว่าง
 mr1-onboarding-theme-label-dark = มืด
 # "Alpenglow" here is the name of the theme, and should be kept in English.
 mr1-onboarding-theme-label-alpenglow = Alpenglow
+
+onboarding-theme-primary-button-label = เสร็จสิ้น
 
 ## Please make sure to split the content of the title attribute into lines whose
 ## width corresponds to about 40 Latin characters, to ensure that the tooltip
@@ -390,47 +86,295 @@ mr1-onboarding-theme-label-alpenglow = Alpenglow
 # Tooltip displayed on hover of system theme
 mr1-onboarding-theme-tooltip-system =
     .title =
-        ใช้ชุดตกแต่งสำหรับปุ่ม เมนู และหน้าต่าง
+        ใช้ธีมสำหรับปุ่ม เมนู และหน้าต่าง
         ตามระบบปฏิบัติการ
 
 # Input description for system theme
 mr1-onboarding-theme-description-system =
     .aria-description =
-        ใช้ชุดตกแต่งสำหรับปุ่ม เมนู และหน้าต่าง
+        ใช้ธีมสำหรับปุ่ม เมนู และหน้าต่าง
         ตามระบบปฏิบัติการ
 
 # Tooltip displayed on hover of light theme
 mr1-onboarding-theme-tooltip-light =
     .title =
-        ใช้ชุดตกแต่งแบบสว่างสำหรับปุ่ม
+        ใช้ธีมแบบสว่างสำหรับปุ่ม
         เมนู และหน้าต่าง
 
 # Input description for light theme
 mr1-onboarding-theme-description-light =
     .aria-description =
-        ใช้ชุดตกแต่งแบบสว่างสำหรับปุ่ม
+        ใช้ธีมแบบสว่างสำหรับปุ่ม
         เมนู และหน้าต่าง
 
 # Tooltip displayed on hover of dark theme
 mr1-onboarding-theme-tooltip-dark =
     .title =
-        ใช้ชุดตกแต่งแบบมืดสำหรับปุ่ม
+        ใช้ธีมแบบมืดสำหรับปุ่ม
         เมนู และหน้าต่าง
 
 # Input description for dark theme
 mr1-onboarding-theme-description-dark =
     .aria-description =
-        ใช้ชุดตกแต่งแบบมืดสำหรับปุ่ม
+        ใช้ธีมแบบมืดสำหรับปุ่ม
         เมนู และหน้าต่าง
 
 # Tooltip displayed on hover of Alpenglow theme
 mr1-onboarding-theme-tooltip-alpenglow =
     .title =
-        ใช้ชุดตกแต่งแบบไดนามิกที่มีสีสันสำหรับปุ่ม
+        ใช้ธีมแบบไดนามิกที่มีสีสันสำหรับปุ่ม
         เมนู และหน้าต่าง
 
 # Input description for Alpenglow theme
 mr1-onboarding-theme-description-alpenglow =
     .aria-description =
-        ใช้ชุดตกแต่งแบบไดนามิกที่มีสีสันสำหรับปุ่ม
+        ใช้ธีมแบบไดนามิกที่มีสีสันสำหรับปุ่ม
         เมนู และหน้าต่าง
+
+# Selector description for default themes
+mr2-onboarding-default-theme-label = สำรวจชุดรูปแบบเริ่มต้น
+
+## Strings for Thank You page
+
+mr2-onboarding-thank-you-header = ขอบคุณที่เลือกเรา
+mr2-onboarding-thank-you-text = { -brand-short-name } เป็นเบราว์เซอร์อิสระที่สนับสนุนโดยองค์กรไม่แสวงหาผลกำไร เรากำลังร่วมกันทำให้เว็บปลอดภัยขึ้น แข็งแกร่งขึ้น และเป็นส่วนตัวมากขึ้น
+mr2-onboarding-start-browsing-button-label = เริ่มการเรียกดู
+
+## Multistage live language reloading onboarding strings (about:welcome pages)
+##
+## The following language names are generated by the browser's Intl.DisplayNames API.
+##
+## Variables:
+##   $negotiatedLanguage (String) - The name of the langpack's language, e.g. "Español (ES)"
+
+
+## Multistage live language reloading onboarding strings (about:welcome pages)
+##
+## The following language names are generated by the browser's Intl.DisplayNames API.
+##
+## Variables:
+##   $negotiatedLanguage (String) - The name of the langpack's language, e.g. "Español (ES)"
+##   $systemLanguage (String) - The name of the system language, e.g "Español (ES)"
+##   $appLanguage (String) - The name of the language shipping in the browser build, e.g. "English (EN)"
+
+onboarding-live-language-header = เลือกภาษาของคุณ
+
+mr2022-onboarding-live-language-text = ให้ { -brand-short-name } พูดภาษาของคุณ
+
+mr2022-language-mismatch-subtitle = { -brand-short-name } ถูกแปลเป็นภาษาต่าง ๆ กว่า 90 ภาษาโดยชุมชนของเรา ดูเหมือนว่าระบบของคุณกำลังใช้ { $systemLanguage } และ { -brand-short-name } กำลังใช้ { $appLanguage }
+
+onboarding-live-language-button-label-downloading = กำลังดาวน์โหลดชุดภาษาสำหรับ { $negotiatedLanguage }…
+onboarding-live-language-waiting-button = กำลังขอข้อมูลเกี่ยวกับภาษาที่มีให้ใช้…
+onboarding-live-language-installing = กำลังติดตั้งชุดภาษาสำหรับ { $negotiatedLanguage }…
+
+mr2022-onboarding-live-language-switch-to = เปลี่ยนเป็น { $negotiatedLanguage }
+mr2022-onboarding-live-language-continue-in = ใช้ { $appLanguage } ต่อไป
+
+onboarding-live-language-secondary-cancel-download = ยกเลิก
+onboarding-live-language-skip-button-label = ข้าม
+
+## Firefox 100 Thank You screens
+
+# "Hero Text" displayed on left side of welcome screen. This text can be
+# formatted to span multiple lines as needed. The <span data-l10n-name="zap">
+# </span> in this string allows a "zap" underline style to be automatically
+# added to the text inside it. "Yous" should stay inside the zap span, but
+# "Thank" can be put inside instead if there's no "you" in the translation.
+# The English text would normally be "100 Thank-Yous" i.e., plural noun, but for
+# aesthetics of splitting it across multiple lines, the hyphen is omitted.
+fx100-thank-you-hero-text =
+    <span data-l10n-name="zap">ขอบคุณ</span>
+    ครั้งที่
+    100
+fx100-thank-you-subtitle = นี่คือรุ่นที่ 100 ของเรา! ขอบคุณที่ช่วยเราสร้างอินเทอร์เน็ตที่ดีและแข็งแกร่งขึ้น
+fx100-thank-you-pin-primary-button-label =
+    { PLATFORM() ->
+        [macos] เก็บ { -brand-short-name } ไว้ใน Dock
+       *[other] ปักหมุด { -brand-short-name } เข้ากับแถบงาน
+    }
+
+fx100-upgrade-thanks-header = 100 คำขอบคุณ
+# Message shown with a start-browsing button. Emphasis <em> should be for "you"
+# but "Thank" can be used instead if there's no "you" in the translation.
+fx100-upgrade-thank-you-body = นี่คือ { -brand-short-name } รุ่นที่ 100 ของเรา <em>ขอบคุณ</em>ที่ช่วยเราสร้างอินเทอร์เน็ตที่ดีและแข็งแกร่งขึ้น
+# Message shown with either a pin-to-taskbar or set-default button.
+fx100-upgrade-thanks-keep-body = นี่คือรุ่นที่ 100 ของเรา! ขอบคุณที่ร่วมเป็นส่วนหนึ่งของชุมชนของเรา สร้างอินเทอร์เน็ตที่ดีและแข็งแกร่งขึ้น ร่วมเดินทางกับเราไปอีก 100 รุ่นด้วยการนำ { -brand-short-name } มาไว้ใกล้คุณแค่เพียงคลิกเดียว
+
+mr2022-onboarding-secondary-skip-button-label = ข้ามขั้นตอนนี้
+
+## MR2022 New User Easy Setup screen strings
+
+# Primary button string used on new user onboarding first screen showing multiple actions such as Set Default, Import from previous browser.
+mr2022-onboarding-easy-setup-primary-button-label = บันทึกและดำเนินการต่อ
+# Set Default action checkbox label used on new user onboarding first screen
+mr2022-onboarding-easy-setup-set-default-checkbox-label = ตั้ง { -brand-short-name } เป็นเบราว์เซอร์เริ่มต้น
+# Import action checkbox label used on new user onboarding first screen
+mr2022-onboarding-easy-setup-import-checkbox-label = นำเข้าจากเบราว์เซอร์ก่อนหน้า
+
+## MR2022 New User Pin Firefox screen strings
+
+# Title used on about:welcome for new users when Firefox is not pinned.
+# In this context, open up is synonymous with "Discover".
+# The metaphor is that when they open their Firefox browser, it helps them discover an amazing internet.
+# If this translation does not make sense in your language, feel free to use the word "discover."
+mr2022-onboarding-welcome-pin-header = เปิดโลกสู่อินเทอร์เน็ตที่น่าทึ่ง
+# Subtitle is used on onboarding page for new users page when Firefox is not pinned
+mr2022-onboarding-welcome-pin-subtitle = เปิดใช้งาน { -brand-short-name } ได้จากทุกที่แค่เพียงคลิกเดียว ทุกครั้งที่คุณทำ คุณเลือกเว็บที่เปิดกว้างและเป็นอิสระยิ่งขึ้น
+# Primary button string used on welcome page for when Firefox is not pinned.
+mr2022-onboarding-pin-primary-button-label =
+    { PLATFORM() ->
+        [macos] เก็บ { -brand-short-name } ลงใน Dock
+       *[other] ปักหมุด { -brand-short-name } เข้ากับแถบงาน
+    }
+# Subtitle will be used when user already has Firefox pinned, but
+# has not set it as their default browser.
+# When translating "zip", please feel free to pick a verb that signifies movement and/or exploration
+# and makes sense in the context of navigating the web.
+mr2022-onboarding-set-default-only-subtitle = เปลี่ยนมาใช้เบราว์เซอร์ที่สนับสนุนโดยองค์กรไม่แสวงหาผลกำไร เราจะปกป้องความเป็นส่วนตัวของคุณในขณะที่คุณท่องเว็บ
+
+## MR2022 Existing User Pin Firefox Screen Strings
+
+# Title used on multistage onboarding page for existing users when Firefox is not pinned
+mr2022-onboarding-existing-pin-header = ขอบคุณที่หลงรัก { -brand-product-name }
+# Subtitle is used on onboarding page for existing users when Firefox is not pinned
+mr2022-onboarding-existing-pin-subtitle = เข้าสู่โลกอินเทอร์เน็ตอันแข็งแกร่งได้จากทุกที่แค่เพียงคลิกเดียว ในรุ่นล่าสุดของเรามีสิ่งใหม่ ๆ หลายอย่างที่เราคิดว่าคุณจะต้องชอบแน่
+# Subtitle will be used on the welcome screen for existing users
+# when they already have Firefox pinned but not set as default
+mr2022-onboarding-existing-set-default-only-subtitle = ใช้เบราว์เซอร์ที่ปกป้องความเป็นส่วนตัวของคุณในขณะที่คุณท่องเว็บ รุ่นล่าสุดของเรามีสิ่งต่าง ๆ หลายอย่างที่คุณจะต้องชอบแน่
+mr2022-onboarding-existing-pin-checkbox-label = เพิ่มการเรียกดูแบบส่วนตัวของ { -brand-short-name } ด้วย
+
+## MR2022 New User Set Default screen strings
+
+# This string is the title used when the user already has pinned the browser, but has not set default.
+mr2022-onboarding-set-default-title = ทำให้ { -brand-short-name } เป็นเบราว์เซอร์เริ่มต้นของคุณ
+mr2022-onboarding-set-default-primary-button-label = ตั้ง { -brand-short-name } เป็นเบราว์เซอร์เริ่มต้น
+# When translating "zip", please feel free to pick a verb that signifies movement and/or exploration
+# and makes sense in the context of navigating the web.
+mr2022-onboarding-set-default-subtitle = ใช้เบราว์เซอร์ที่สนับสนุนโดยองค์กรไม่แสวงหาผลกำไร เราจะปกป้องความเป็นส่วนตัวของคุณในขณะที่คุณท่องเว็บ
+
+## MR2022 Get Started screen strings.
+## These strings will be used on the welcome page
+## when Firefox is already set to default and pinned.
+
+# When translating "zip", please feel free to pick a verb that signifies movement and/or exploration
+# and makes sense in the context of navigating the web.
+mr2022-onboarding-get-started-primary-subtitle = รุ่นล่าสุดของเราถูกสร้างขึ้นจากสิ่งต่าง ๆ รอบตัวคุณ ซึ่งจะทำให้คุณท่องเว็บได้ง่ายกว่าเดิม รุ่นล่าสุดนี้มาพร้อมกับคุณลักษณะต่าง ๆ ที่เราคิดว่าคุณจะต้องชอบแน่
+mr2022-onboarding-get-started-primary-button-label = ตั้งค่าในไม่กี่วินาที
+
+## MR2022 Import Settings screen strings
+
+mr2022-onboarding-import-header = ตั้งค่าต่าง ๆ ได้อย่างรวดเร็วทันใจ
+mr2022-onboarding-import-subtitle = ตั้งค่า { -brand-short-name } ในแบบที่คุณต้องการ เพิ่มที่คั่นหน้า รหัสผ่าน และอื่น ๆ จากเบราว์เซอร์ตัวเดิมของคุณ
+mr2022-onboarding-import-primary-button-label-no-attribution = นำเข้าจากเบราว์เซอร์ก่อนหน้า
+
+## If your language uses grammatical genders, in the description for the
+## colorway feel free to switch from "You are a X. You…" (e.g. "You are a
+## Playmaker. You create…") to "X: you…" ("Playmaker: You create…"). This might
+## help creating a more inclusive translation.
+
+mr2022-onboarding-colorway-title = เลือกสีที่โดนใจคุณ
+mr2022-onboarding-colorway-subtitle = เสียงที่เป็นอิสระสามารถเปลี่ยนวัฒนธรรมได้
+mr2022-onboarding-colorway-primary-button-label-continue = ตั้งค่าและดำเนินการต่อ
+mr2022-onboarding-existing-colorway-checkbox-label = ทำให้ { -firefox-home-brand-name } เป็นหน้าแรกที่เต็มไปด้วยสีสันของคุณ
+
+mr2022-onboarding-colorway-label-default = ค่าเริ่มต้น
+mr2022-onboarding-colorway-tooltip-default2 =
+    .title = สี { -brand-short-name } ปัจจุบัน
+mr2022-onboarding-colorway-description-default = <b>ใช้สี { -brand-short-name } ปัจจุบันของฉัน</b>
+
+mr2022-onboarding-colorway-label-playmaker = เพลย์เมคเกอร์
+mr2022-onboarding-colorway-tooltip-playmaker2 =
+    .title = เพลย์เมคเกอร์ (แดง)
+mr2022-onboarding-colorway-description-playmaker = <b>คุณคือเพลย์เมคเกอร์</b> คุณสร้างโอกาสในการชนะและช่วยทุกคนรอบตัวคุณยกระดับความสามารถในการเล่นเกมของพวกเขา
+
+mr2022-onboarding-colorway-label-expressionist = นักแสดงออก
+mr2022-onboarding-colorway-tooltip-expressionist2 =
+    .title = นักแสดงออก (เหลือง)
+mr2022-onboarding-colorway-description-expressionist = <b>คุณคือนักแสดงออก</b> คุณมองโลกแตกต่างออกไปและการสร้างสรรค์ของคุณก็กระตุ้นอารมณ์ของผู้อื่น
+
+mr2022-onboarding-colorway-label-visionary = ผู้มีวิสัยทัศน์
+mr2022-onboarding-colorway-tooltip-visionary2 =
+    .title = ผู้มีวิสัยทัศน์ (เขียว)
+mr2022-onboarding-colorway-description-visionary = <b>คุณคือผู้มีวิสัยทัศน์</b> คุณตั้งคำถามกับสภาพที่เป็นอยู่และกระตุ้นให้ผู้อื่นจินตนาการถึงอนาคตที่ดีกว่า
+
+mr2022-onboarding-colorway-label-activist = นักกิจกรรม
+mr2022-onboarding-colorway-tooltip-activist2 =
+    .title = นักกิจกรรม (น้ำเงิน)
+mr2022-onboarding-colorway-description-activist = <b>คุณคือนักกิจกรรม</b> คุณทำให้โลกนี้เป็นสถานที่ที่ดียิ่งขึ้นและชักนำให้ผู้อื่นเชื่อคุณ
+
+mr2022-onboarding-colorway-label-dreamer = คนช่างฝัน
+mr2022-onboarding-colorway-tooltip-dreamer2 =
+    .title = คนช่างฝัน (ม่วง)
+mr2022-onboarding-colorway-description-dreamer = <b>คุณคือคนช่างฝัน</b> คุณเชื่อว่าโชคเข้าข้างผู้กล้าเสมอและเป็นแรงบันดาลใจให้ผู้อื่นกล้า
+
+mr2022-onboarding-colorway-label-innovator = นักนวัตกรรม
+mr2022-onboarding-colorway-tooltip-innovator2 =
+    .title = นักนวัตกรรม (ส้ม)
+mr2022-onboarding-colorway-description-innovator = <b>คุณคือนักนวัตกรรม</b> คุณมองเห็นโอกาสทุกที่และสร้างอิทธิพลต่อชีวิตของทุกคนรอบตัวคุณ
+
+## MR2022 Multistage Mobile Download screen strings
+
+mr2022-onboarding-mobile-download-title = สับเปลี่ยนไปมาระหว่างแล็ปท็อปกับโทรศัพท์
+mr2022-onboarding-mobile-download-subtitle = นำแท็บจากอุปกรณ์เครื่องหนึ่งไปเปิดต่อจากที่ค้างไว้ในอีกเครื่องหนึ่ง รวมทั้งซิงค์ที่คั่นหน้าและรหัสผ่านของคุณได้จากทุกที่ที่คุณใช้ { -brand-product-name }
+mr2022-onboarding-mobile-download-cta-text = สแกนคิวอาร์โค้ดเพื่อดาวน์โหลด { -brand-product-name } สำหรับมือถือ หรือ<a data-l10n-name="download-label">ส่งลิงก์ดาวน์โหลดให้ตัวคุณเอง</a>
+mr2022-onboarding-no-mobile-download-cta-text = สแกนคิวอาร์โค้ดเพื่อดาวน์โหลด { -brand-product-name } สำหรับมือถือ
+
+## MR2022 Upgrade Dialog screens
+## Pin private window screen shown only for users who don't have Firefox private pinned
+
+mr2022-upgrade-onboarding-pin-private-window-header = อิสระในการเรียกดูแบบส่วนตัวในคลิกเดียว
+mr2022-upgrade-onboarding-pin-private-window-subtitle = ไม่เก็บคุกกี้หรือประวัติที่บันทึกไว้จากเดสก์ท็อปของคุณ ให้คุณเรียกดูโดยไม่มีใครแอบมอง
+mr2022-upgrade-onboarding-pin-private-window-primary-button-label =
+    { PLATFORM() ->
+        [macos] เก็บการเรียกดูแบบส่วนตัวของ { -brand-short-name } ลงใน Dock
+       *[other] ปักหมุดการเรียกดูแบบส่วนตัวของ { -brand-short-name } เข้ากับแถบงาน
+    }
+
+## MR2022 Privacy Segmentation screen strings
+
+mr2022-onboarding-privacy-segmentation-title = เราเคารพความเป็นส่วนตัวของคุณเสมอ
+mr2022-onboarding-privacy-segmentation-subtitle = ไม่ว่าจะเป็นคำแนะนำที่ชาญฉลาดหรือการค้นหาที่ชาญฉลาดยิ่งขึ้น เรากำลังทำงานอย่างต่อเนื่องเพื่อสร้าง { -brand-product-name } ที่ดีและเป็นส่วนตัวมากขึ้น
+mr2022-onboarding-privacy-segmentation-text-cta = คุณต้องการเห็นอะไรเมื่อเรานำเสนอคุณลักษณะใหม่ที่ใช้ข้อมูลของคุณเพื่อทำให้การท่องเว็บของคุณดีขึ้น?
+mr2022-onboarding-privacy-segmentation-button-primary-label = ใช้คำแนะนำจาก { -brand-product-name }
+mr2022-onboarding-privacy-segmentation-button-secondary-label = แสดงข้อมูลโดยละเอียด
+
+## MR2022 Multistage Gratitude screen strings
+
+mr2022-onboarding-gratitude-title = คุณกำลังช่วยเราสร้างเว็บที่ดีขึ้น
+mr2022-onboarding-gratitude-subtitle = ขอบคุณที่ใช้ { -brand-short-name } ซึ่งสนับสนุนโดย Mozilla Foundation ด้วยการสนับสนุนของคุณ เรากำลังทำงานเพื่อให้อินเทอร์เน็ตเปิดกว้าง เข้าถึงได้ และดียิ่งขึ้นสำหรับทุกคน
+mr2022-onboarding-gratitude-primary-button-label = ดูว่ามีอะไรใหม่
+mr2022-onboarding-gratitude-secondary-button-label = เริ่มเรียกดู
+
+## Onboarding spotlight for infrequent users
+
+onboarding-infrequent-import-title = ทำตัวตามสบาย
+onboarding-infrequent-import-subtitle = ไม่ว่าคุณจะต้องการใช้งานไปตลอดหรือแค่แวะมาลองใช้เพียงนิดหน่อยก็ตาม โปรดทราบว่าคุณสามารถนำเข้าที่คั่นหน้า รหัสผ่าน และอื่นๆ ของคุณได้
+onboarding-infrequent-import-primary-button = นำเข้าไปยัง { -brand-short-name }
+
+## MR2022 Illustration alt tags
+## Descriptive tags for illustrations used by screen readers and other assistive tech
+
+mr2022-onboarding-pin-image-alt =
+    .aria-label = คนกำลังทำงานบนแล็ปท็อปล้อมรอบด้วยดาวและดอกไม้
+mr2022-onboarding-default-image-alt =
+    .aria-label = คนกำลังกอดโลโก้ { -brand-product-name }
+mr2022-onboarding-import-image-alt =
+    .aria-label = คนกำลังขี่สเก็ตบอร์ดพร้อมกล่องไอคอนซอฟต์แวร์
+mr2022-onboarding-mobile-download-image-alt =
+    .aria-label = กบกำลังกระโดดข้ามใบบัวไปมาพร้อมคิวอาร์โค้ดสำหรับดาวน์โหลด { -brand-product-name } สำหรับมือถืออยู่ตรงกลาง
+mr2022-onboarding-pin-private-image-alt =
+    .aria-label = ไม้กายสิทธิ์กำลังทำให้โลโก้การเรียกดูแบบส่วนตัวของ { -brand-product-name } ปรากฏออกมานอกหมวก
+mr2022-onboarding-privacy-segmentation-image-alt =
+    .aria-label = มือผิวอ่อนและผิวคล้ำไฮไฟฟ์กัน
+mr2022-onboarding-gratitude-image-alt =
+    .aria-label = ภาพวิวดวงอาทิตย์ตกที่หน้าต่างพร้อมสุนัขจิ้งจอกและพืชในบ้านบนขอบหน้าต่าง
+mr2022-onboarding-colorways-image-alt =
+    .aria-label = สเปรย์มือวาดภาพคอลลาจที่เต็มไปด้วยสีสันซึ่งประกอบด้วยดวงตาสีเขียว รองเท้าสีส้ม ลูกบาสเกตบอลสีแดง หูฟังสีม่วง หัวใจสีน้ำเงิน และมงกุฎสีเหลือง
+
+## Device migration onboarding
+
+onboarding-device-migration-image-alt =
+    .aria-label = สุนัขจิ้งจอกบนหน้าจอคอมพิวเตอร์แล็ปท็อปโบกมือ แล็ปท็อปมีเมาส์เสียบอยู่
+onboarding-device-migration-title = ยินดีต้อนรับกลับมา!
+onboarding-device-migration-subtitle = ลงชื่อเข้าใช้ { -fxaccount-brand-name(capitalization: "sentence") } ของคุณเพื่อนำที่คั่นหน้า รหัสผ่าน และประวัติติดตัวไปด้วยบนอุปกรณ์เครื่องใหม่ของคุณ
+onboarding-device-migration-primary-button-label = ลงชื่อเข้า

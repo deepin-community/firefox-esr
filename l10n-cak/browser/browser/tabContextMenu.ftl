@@ -11,6 +11,12 @@ reload-tab =
 select-all-tabs =
     .label = Kecha' Ronojel Ruwi'
     .accesskey = h
+tab-context-play-tab =
+    .label = Titzij ri ruwi'
+    .accesskey = t
+tab-context-play-tabs =
+    .label = Ketzij Ruwi'
+    .accesskey = j
 duplicate-tab =
     .label = Tikamulüx Ruwi'
     .accesskey = T
@@ -48,12 +54,9 @@ unpin-selected-tabs =
 bookmark-selected-tabs =
     .label = Tiya' ketal ri taq Yaketal…
     .accesskey = k
-bookmark-tab =
-    .label = Tiyaketalïx Ruwi'
-    .accesskey = T
-reopen-in-container =
-    .label = Tijaq chik pa K'wayöl
-    .accesskey = c
+tab-context-bookmark-tab =
+    .label = Tiyaketalïx Ruwi'…
+    .accesskey = y
 tab-context-open-in-new-container-tab =
     .label = Tijaq pa K'ak'a' Ruwi' Ajk'wayöl
     .accesskey = K
@@ -69,31 +72,9 @@ move-to-new-window =
 tab-context-close-multiple-tabs =
     .label = Ketz'apïx K'ïy Taq Ruwi'
     .accesskey = y
-tab-context-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Titzolïx Nitz'apïx Ruwi'
-            [one] Titzolïx Nitz'apïx Ruwi'
-           *[other] Titzolïx Yetz'apïx Ruwi'
-        }
-    .accesskey = T
-close-tab =
-    .label = Titz'apïx ruwi’
-    .accesskey = T
-close-tabs =
-    .label = Ketz'apïx Ruwi'
-    .accesskey = K
-move-tabs =
-    .label = Kesilöx taq Ruwi'
-    .accesskey = x
-move-tab =
-    .label = Tisilöx Ruwi'
-    .accesskey = x
 tab-context-share-url =
     .label = Tikomonïx
     .accesskey = k
-tab-context-share-more =
-    .label = Ch'aqa'…
 
 ## Variables:
 ##  $tabCount (Number): the number of tabs that are affected by the action.
@@ -106,12 +87,12 @@ tab-context-reopen-closed-tabs =
            *[other] Kejaq Chik Tz'apin taq Ruwi'
         }
     .accesskey = a
-tab-context-close-tabs =
+tab-context-close-n-tabs =
     .label =
         { $tabCount ->
             [1] Titz'apïx Ruwi'
-            [one] Titz'apïx Ruwi'
-           *[other] Ketz'apïx Ruwi'
+            [one] Titz'apïx { $tabCount } Ruwi'
+           *[other] Ketz'apïx { $tabCount } Ruwi'
         }
     .accesskey = t
 tab-context-move-tabs =
@@ -122,3 +103,11 @@ tab-context-move-tabs =
            *[other] Kesilöx Ruwi'
         }
     .accesskey = s
+
+tab-context-send-tabs-to-device =
+    .label =
+        { $tabCount ->
+            [one] Titaq Ruwi' pan Okisab'äl
+           *[other] Ketaq { $tabCount } taq Ruwi' pan Okisab'äl
+        }
+    .accesskey = t

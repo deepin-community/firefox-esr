@@ -2,18 +2,29 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
+tab-context-new-tab =
+    .label = Ivinell nevez
+    .accesskey = w
 reload-tab =
     .label = Adkargañ an ivinell
     .accesskey = A
 select-all-tabs =
     .label = Diuzañ an holl ivinelloù
     .accesskey = D
+tab-context-play-tab =
+    .label = Lenn an ivinell
+    .accesskey = L
+tab-context-play-tabs =
+    .label = Lenn an ivinelloù
+    .accesskey = L
 duplicate-tab =
     .label = Eilañ an ivinell
     .accesskey = E
 duplicate-tabs =
     .label = Eilañ an ivinelloù
     .accesskey = E
+# The following string is displayed on a menuitem that will close the tabs from the end of the tabstrip to the currently targeted tab (excluding the currently targeted and any other selected tabs).
+# In left-to-right languages this should use "Right" and in right-to-left languages this should use "Left".
 close-tabs-to-the-end =
     .label = Serriñ an ivinelloù war an tu dehou
     .accesskey = i
@@ -38,12 +49,6 @@ unpin-selected-tabs =
 bookmark-selected-tabs =
     .label = Ouzhpennañ an ivinelloù er sinedoù…
     .accesskey = i
-bookmark-tab =
-    .label = Ouzhpennañ an ivinell er sinedoù
-    .accesskey = s
-reopen-in-container =
-    .label = Addigeriñ en endalc'had
-    .accesskey = e
 move-to-start =
     .label = Dilec'hiañ etrezek ar penn-kentañ
     .accesskey = p
@@ -57,44 +62,9 @@ tab-context-close-multiple-tabs =
     .label = Serriñ meur a ivinell
     .accesskey = S
 
-tab-context-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Dizober serriñ ivinelloù
-            [one] Dizober serriñ ivinelloù
-            [two] Dizober serriñ ivinelloù
-            [few] Dizober serriñ ivinelloù
-            [many] Dizober serriñ ivinelloù
-           *[other] Dizober serriñ ivinelloù
-        }
-    .accesskey = D
-close-tab =
-    .label = Serriñ an ivinell
-    .accesskey = e
-close-tabs =
-    .label = Serriñ an ivinelloù
-    .accesskey = i
-move-tabs =
-    .label = Dilec'hiañ an ivinelloù
-    .accesskey = o
-move-tab =
-    .label = Dilec'hiañ an ivinell
-    .accesskey = l
-
 ## Variables:
 ##  $tabCount (Number): the number of tabs that are affected by the action.
 
-tab-context-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Serriñ an ivinell
-            [one] Serriñ an ivinelloù
-            [two] Serriñ an ivinelloù
-            [few] Serriñ an ivinelloù
-            [many] Serriñ an ivinelloù
-           *[other] Serriñ an ivinelloù
-        }
-    .accesskey = S
 tab-context-move-tabs =
     .label =
         { $tabCount ->
@@ -106,3 +76,13 @@ tab-context-move-tabs =
            *[other] Dilec'hiañ an ivinelloù
         }
     .accesskey = D
+tab-context-send-tabs-to-device =
+    .label =
+        { $tabCount ->
+            [one] Kas an ivinell d'an trevnad
+            [two] Kas { $tabCount } ivinell d'an trevnad
+            [few] Kas { $tabCount } ivinell d'an trevnad
+            [many] Kas { $tabCount } a ivinelloù d'an trevnad
+           *[other] Kas { $tabCount } ivinell d'an trevnad
+        }
+    .accesskey = n

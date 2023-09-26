@@ -5,6 +5,12 @@
 reload-tab =
     .label = கீற்றை மீளேற்று
     .accesskey = R
+tab-context-play-tab =
+    .label = கீற்றை இயக்கு
+    .accesskey = l
+tab-context-play-tabs =
+    .label = கீற்றுகளை இயக்கு
+    .accesskey = y
 duplicate-tab =
     .label = நகல் கீற்று
     .accesskey = D
@@ -29,16 +35,9 @@ unpin-selected-tabs =
 bookmark-selected-tabs =
     .label = கீற்றுகளை புத்தகக்குறியிடு…
     .accesskey = k
-reopen-in-container =
-    .label = மீண்டும் கலனில் திற
-    .accesskey = e
 move-to-new-window =
     .label = புதிய சாளரத்திற்கு நகற்று
     .accesskey = W
-
-close-tab =
-    .label = கீற்றை மூடு
-    .accesskey = C
 
 ## Variables:
 ##  $tabCount (Number): the number of tabs that are affected by the action.

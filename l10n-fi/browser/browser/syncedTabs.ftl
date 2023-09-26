@@ -7,25 +7,42 @@ synced-tabs-sidebar-noclients-subtitle = Haluatko nähdä muiden laitteiden väl
 synced-tabs-sidebar-intro = Näytä lista välilehdistä muilta laitteiltasi.
 synced-tabs-sidebar-unverified = Tilisi tarvitsee vahvistaa.
 synced-tabs-sidebar-notabs = Ei avoimia välilehtiä
-synced-tabs-sidebar-openprefs = Avaa { -sync-brand-short-name }-asetukset
 synced-tabs-sidebar-open-settings = Avaa synkronointiasetukset
 synced-tabs-sidebar-tabsnotsyncing = Ota välilehtien synkronointi käyttöön, jotta voit katsella listaa muiden laitteidesi välilehdistä.
 synced-tabs-sidebar-connect-another-device = Yhdistä toinen laite
 synced-tabs-sidebar-search =
     .placeholder = Etsi synkronoiduista välilehdistä
+
+## Displayed in the Synced Tabs sidebar's context menu when right-clicking tabs
+## and/or devices in the list. The "Open" strings below should be translated
+## consistently with the equivalent strings for the bookmarks manager's context
+## menu. That menu is activated by right-clicking a bookmark in the Library
+## window. The bookmarks manager context's strings are located in places.ftl.
+
 synced-tabs-context-open =
     .label = Avaa
     .accesskey = A
-synced-tabs-context-open-in-new-tab =
+synced-tabs-context-open-in-tab =
     .label = Avaa uuteen välilehteen
     .accesskey = v
-synced-tabs-context-open-in-new-window =
-    .label = Avaa uuteen ikkunaan
+synced-tabs-context-open-in-container-tab =
+    .label = Avaa uuteen eristettyyn välilehteen
     .accesskey = i
-synced-tabs-context-open-in-new-private-window =
+synced-tabs-context-open-in-window =
+    .label = Avaa uuteen ikkunaan
+    .accesskey = N
+synced-tabs-context-open-in-private-window =
     .label = Avaa uuteen yksityiseen ikkunaan
     .accesskey = y
-synced-tabs-context-bookmark-single-tab =
+
+##
+
+# Displayed in the Synced Tabs sidebar's context menu when right-clicking tabs
+# and/or devices in the list. This string is for a menuitem equivalent to one in
+# the tab context menu (activated by right-clicking a tab in the tabstrip). That
+# string is located in tabContextMenu.ftl. So, this string should be translated
+# consistently with the "Bookmark Tab…" string there.
+synced-tabs-context-bookmark =
     .label = Lisää välilehti kirjanmerkkeihin…
     .accesskey = L
 synced-tabs-context-copy =
@@ -40,7 +57,5 @@ synced-tabs-context-manage-devices =
 synced-tabs-context-sync-now =
     .label = Synkronoi
     .accesskey = S
-fxa-sign-in = Kirjaudu sisään { -sync-brand-short-name }-palveluun
-turn-on-sync = Ota { -sync-brand-short-name } käyttöön
 synced-tabs-fxa-sign-in = Kirjaudu synkronoidaksesi
 synced-tabs-turn-on-sync = Ota synkronointi käyttöön

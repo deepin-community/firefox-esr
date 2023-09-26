@@ -30,6 +30,15 @@ import-from-nothing =
 import-from-safari =
     .label = Safari
     .accesskey = S
+import-from-opera =
+    .label = Opera
+    .accesskey = O
+import-from-vivaldi =
+    .label = Vivaldi
+    .accesskey = V
+import-from-brave =
+    .label = Brave
+    .accesskey = r
 import-from-canary =
     .label = Chrome Canary
     .accesskey = n
@@ -51,6 +60,9 @@ import-from-firefox =
 import-from-360se =
     .label = 360 Secure Browser
     .accesskey = 3
+import-from-opera-gx =
+    .label = Opera GX
+    .accesskey = G
 
 no-migration-sources = Impossible de trobar un logicial que contenga de marcapaginas, un istoric o de senhals.
 
@@ -61,8 +73,8 @@ import-items-description = Seleccionatz los elements d'importar :
 
 import-permissions-page-title = Mercés de donar las autorizacions a { -brand-short-name }
 
-# Do not translate "Bookmarks.plist"; the file name is the same everywhere.
-import-permissions-description = macOS requerís qu’autorizetz explicitament { -brand-short-name } a accedir als marcapaginas de Sagari. Clicatz sus « Contunhar » e causissètz lo fichièr « Bookmarks.plist » dins la panèl de dobertura de fichièr qu’apareisserà.
+# Do not translate "Safari" (the name of the browser on Apple devices)
+import-safari-permissions-string = macOS vos demanda d’autorizar explicitament { -brand-short-name } a accedir a las donadas de Safari. Clicatz « Contunhar » e seleccionatz lo dossièr « Safari » dins la bóstia de dialòg del Finder qu’apareis, puèi clicatz « Dobrir ».
 
 import-migrating-page-title = Importacion…
 
@@ -78,23 +90,9 @@ import-done-description = Los elements seguents son estats importats amb succès
 
 import-close-source-browser = Abans de contunhar, asseguratz-vos que lo navegador seleccionat siá tampat
 
-# Displays which browser the bookmarks are being imported from
-#
-# Variables:
-#   $source (String): The browser the user has chosen to import bookmarks from.
-imported-bookmarks-source = A partir de { $source }
-
 source-name-ie = Internet Explorer
 source-name-edge = Microsoft Edge
-source-name-edge-beta = Microsoft Edge Beta
-source-name-safari = Safari
-source-name-canary = Google Chrome Canary
 source-name-chrome = Google Chrome
-source-name-chrome-beta = Google Chrome Beta
-source-name-chrome-dev = Google Chrome Dev
-source-name-chromium = Chromium
-source-name-firefox = Mozilla Firefox
-source-name-360se = 360 Secure Browser
 
 imported-safari-reading-list = Lista de lectura (de Safari)
 imported-edge-reading-list = Lista de lectura (de Edge)
@@ -169,3 +167,8 @@ browser-data-session-checkbox =
     .label = Fenèstras e onglets
 browser-data-session-label =
     .value = Fenèstras e onglets
+
+browser-data-payment-methods-checkbox =
+    .label = Metòdes de pagament
+browser-data-payment-methods-label =
+    .value = Metòdes de pagament

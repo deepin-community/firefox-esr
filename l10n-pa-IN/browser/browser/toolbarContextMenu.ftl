@@ -20,15 +20,6 @@ toolbar-context-menu-bookmark-selected-tabs =
 toolbar-context-menu-select-all-tabs =
     .label = ਸਾਰੀਆਂ ਟੈਬਾਂ ਚੁਣੋ
     .accesskey = S
-toolbar-context-menu-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] ਬੰਦ ਕੀਤੀ ਟੈਬ ਵਾਪਸ ਲਵੋ
-            [one] ਬੰਦ ਕੀਤੀ ਟੈਬ ਵਾਪਸ ਲਵੋ
-           *[other] ਬੰਦ ਕੀਤੀਆਂ ਟੈਬਾਂ ਵਾਪਸ ਲਵੋ
-        }
-    .accesskey = U
-
 toolbar-context-menu-reopen-closed-tabs =
     .label =
         { $tabCount ->
@@ -51,18 +42,18 @@ toolbar-context-menu-report-extension =
     .label = ਇਕਸਟੈਨਸ਼ਨ ਬਾਰੇ ਰਿਪੋਰਟ ਕਰੋ
     .accesskey = o
 
-# Can appear on the same context menu as menubarCmd ("Menu Bar") and
-# personalbarCmd ("Bookmarks Toolbar"), so they should have different
-# access keys.
+# Can appear on the same context menu as toolbar-context-menu-menu-bar-cmd
+# ("Menu Bar") and personalbarCmd ("Bookmarks Toolbar"), so they should
+# have different access keys.
 toolbar-context-menu-pin-to-overflow-menu =
     .label = ਓਵਰਫਲੋ ਮੇਨੂ 'ਚ ਟੰਗੋ
     .accesskey = P
-toolbar-context-menu-auto-hide-downloads-button =
-    .label = ਟੂਲ-ਪੱਟੀ ਨੂੰ ਆਪੇ-ਲੁਕਾਵੋ
-    .accesskey = A
 toolbar-context-menu-auto-hide-downloads-button-2 =
     .label = ਜਦੋਂ ਖਾਲੀ ਹੋਵੇ ਤਾਂ ਬਟਨ ਓਹਲੇ ਕਰੋ
     .accesskey = H
+toolbar-context-menu-always-open-downloads-panel =
+    .label = ਜਦੋਂ ਡਾਊਨਲੋਡ ਸ਼ੁਰੂ ਹੋਵੇ ਤਾਂ ਪੈਨਲ ਦਿਖਾਓ
+    .accesskey = S
 toolbar-context-menu-remove-from-toolbar =
     .label = ਟੂਲਬਾਰ 'ਚੋਂ ਹਟਾਓ
     .accesskey = R
@@ -72,6 +63,11 @@ toolbar-context-menu-view-customize-toolbar =
 toolbar-context-menu-view-customize-toolbar-2 =
     .label = …ਟੂਲਬਾਰ ਨੂੰ ਕਸਟਮਾਈਜ਼ ਕਰੋ
     .accesskey = C
+# This is only ever shown when toolbar-context-menu-pin-to-overflow-menu
+# is hidden, so they can share access keys.
+toolbar-context-menu-pin-to-toolbar =
+    .label = ਟੂਲਬਾਰ ਵਿੱਚ ਟੰਗੋ
+    .accesskey = P
 
 toolbar-context-menu-bookmarks-toolbar-always-show-2 =
     .label = ਹਮੇਸ਼ਾਂ ਵੇਖਾਓ
@@ -86,3 +82,7 @@ toolbar-context-menu-bookmarks-toolbar-on-new-tab-2 =
 toolbar-context-menu-bookmarks-show-other-bookmarks =
     .label = ਸਭ ਬੁੱਕਮਾਰਕਾਂ ਨੂੰ ਵੇਖੋ
     .accesskey = h
+
+toolbar-context-menu-menu-bar-cmd =
+    .toolbarname = ਮੇਨੂ ਬਾਰੇ
+    .accesskey = M

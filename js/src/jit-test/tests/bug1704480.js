@@ -1,9 +1,9 @@
-// |jit-test|  --enable-top-level-await; --more-compartments
+// |jit-test|  --more-compartments
 m = parseModule(`
     await 0 ? b : c
 `);
-m.declarationInstantiation();
-m.evaluation()
+moduleLink(m);
+moduleEvaluate(m)
 d = newGlobal();
 d.e = this;
 d.eval(`

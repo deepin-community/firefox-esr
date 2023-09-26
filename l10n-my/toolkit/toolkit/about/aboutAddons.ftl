@@ -2,13 +2,13 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-addons-window =
-    .title = Add-ons Manager
-
 addons-page-title = Add-ons Manager
 
-search-header-shortcut =
-    .key = f
+## Variables
+##   $domain - Domain name where add-ons are available (e.g. addons.mozilla.org)
+
+##
+
 
 list-empty-installed =
     .value = သင့်ဆီတွင်ဤအမျိုးအစားအတ်အွန်ထည့်သွင်းထားခြင်းမရှိပါ။
@@ -30,43 +30,6 @@ show-unsigned-extensions-button =
 
 show-all-extensions-button =
     .label = နောက်တွဲ ပရိုဂရမ်အားလုံးကို ပြပါ
-
-cmd-show-details =
-    .label = အချက်အလက်များထပ်ပြပါ။
-    .accesskey = S
-
-cmd-find-updates =
-    .label = အဆင့်မြှင့်တင်မှူများကိုရှာပါ။
-    .accesskey = F
-
-cmd-preferences =
-    .label =
-        { PLATFORM() ->
-            [windows] ရွေးစရာများ
-           *[other] ဦးစားပေး အချက်များ
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] O
-           *[other] P
-        }
-
-cmd-enable-theme =
-    .label = ဒီဇိုင်းပုံစံအားပြောင်းမည်။
-    .accesskey = W
-
-cmd-disable-theme =
-    .label = အထူးအပြင်အဆင်တပ်ဆင်ထားခြင်းအားရပ်မည်
-    .accesskey = W
-
-cmd-install-addon =
-    .label = တပ်ဆင်ပါ
-    .accesskey = I
-
-cmd-contribute =
-    .label = ပူးပေါင်း ပါ၀င် ဆောင်ရွက်ခြင်း
-    .accesskey = ပ
-    .tooltiptext = ယခု အက်အွန်ထုတ်လုပ်မှုတွင် ကူညီပါ၀င်ဆောင်ရွက်ခြင်း
 
 detail-version =
     .label = မူအဆင့်
@@ -171,7 +134,6 @@ extensions-warning-update-security = အတ်အွန် အဆင့်မြ
 extensions-warning-update-security-button = လုပ်ဆောင်နိုင်စေမည်။
     .title = အက်အွန် အပ်ဒိပ် လုံခြုံရေး စစ်ဆေးခြင်းကို ဖွင့်ထားမယ်
 
-
 ## Strings connected to add-on updates
 
 addon-updates-check-for-updates = အဆင့်မြှင့်တင်ရန်လိုအပ်နေလားစစ်ကြည့်မည်။
@@ -224,8 +186,12 @@ addon-open-about-debugging = အတ်အွန်များကို အမ�
 ## Pending uninstall message bar
 
 
+## "sites with restrictions" (internally called "quarantined") are special domains
+## where add-ons are normally blocked for security reasons.
+
 ## This is the tooltip text for the recommended badges for an extension in about:addons. The
 ## badge is a small icon displayed next to an extension when it is recommended on AMO.
+
 
 ##
 
@@ -233,3 +199,29 @@ addon-open-about-debugging = အတ်အွန်များကို အမ�
 
 addon-page-options-button =
     .title = အတ်အွန်အားလုံးအတွက် အသုံးချပစ္စည်းများ
+
+## Detail notifications
+## Variables:
+##   $name (String): name of the add-on.
+
+## Detail notifications
+## Variables:
+##   $name (string) - Name of the add-on.
+
+# Variables:
+#   $version (String): application version.
+details-notification-incompatible = { $name } is incompatible with { -brand-short-name } { $version }.
+
+details-notification-unsigned-and-disabled = { -brand-short-name } တွင် အသုံးပြုရန်အတွက် { $name } ကို အတည်မပြုနိုင်ပါ။ ထို့ကြောင့် ၄င်းကို ပိတ်ထားသည်။
+details-notification-unsigned-and-disabled-link = အချက်အလက် ပိုမိုကြည့်ရန်
+
+details-notification-unsigned = { -brand-short-name } တွင် အသုံးပြုရန်အတွက် { $name } ကို အတည်မပြုနိုင်ပါ။ သတိထားပြီး ဆက်လက်ဆောင်ရွက်ပါ။
+details-notification-unsigned-link = အချက်အလက် ပိုမိုကြည့်ရန်
+
+details-notification-blocked = { $name } has been disabled due to security or stability issues.
+details-notification-blocked-link = နောက်ထပ်အချက်အလက်များ
+
+details-notification-softblocked = { $name } is known to cause security or stability issues.
+details-notification-softblocked-link = နောက်ထပ်အချက်အလက်များ
+
+details-notification-gmp-pending = { $name } ကို အချိန်တိုအတွင်း ထည့်သွင်းတပ်ဆင်ပါမည်။

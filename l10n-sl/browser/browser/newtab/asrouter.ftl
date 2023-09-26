@@ -7,7 +7,6 @@
 
 cfr-doorhanger-extension-heading = Priporočena razširitev
 cfr-doorhanger-feature-heading = Priporočena možnost
-cfr-doorhanger-pintab-heading = Poskusite možnost: Pripni zavihek
 
 ##
 
@@ -19,8 +18,6 @@ cfr-doorhanger-extension-cancel-button = Ne zdaj
 
 cfr-doorhanger-extension-ok-button = Dodaj zdaj
     .accesskey = D
-cfr-doorhanger-pintab-ok-button = Pripni ta zavihek
-    .accesskey = P
 
 cfr-doorhanger-extension-manage-settings-button = Upravljaj nastavitve priporočil
     .accesskey = U
@@ -72,18 +69,6 @@ cfr-doorhanger-extension-total-users =
        *[other] { $total } uporabnikov
     }
 
-cfr-doorhanger-pintab-description = Ohranite si preprost dostop do strani, ki jih najpogosteje uporabljate. Obdržite jih odprte v zavihkih (tudi po ponovnem zagonu).
-
-## These messages are steps on how to use the feature and are shown together.
-
-cfr-doorhanger-pintab-step1 = <b>Desno-kliknite</b> zavihek, ki ga želite pripeti.
-cfr-doorhanger-pintab-step2 = V meniju izberite <b>Pripni zavihek</b>.
-cfr-doorhanger-pintab-step3 = Ko se spletna stran posodobi, vas pripet zavihek na to opozori z modro piko.
-
-cfr-doorhanger-pintab-animation-pause = Premor
-cfr-doorhanger-pintab-animation-resume = Nadaljuj
-
-
 ## Firefox Accounts Message
 
 cfr-doorhanger-bookmark-fxa-header = Sinhronizirajte zaznamke povsod.
@@ -109,139 +94,9 @@ cfr-whatsnew-button =
     .label = Novosti
     .tooltiptext = Novosti
 
-cfr-whatsnew-panel-header = Novosti
-
 cfr-whatsnew-release-notes-link-text = Preberite opombe ob izdaji
 
-cfr-whatsnew-fx70-title = { -brand-short-name } se zdaj še močneje bori za vašo zasebnost
-cfr-whatsnew-fx70-body =
-    Najnovejša posodobitev izboljšuje možnost zaščite pred sledenjem in omogoča
-    lažje ustvarjanje varnih gesel za vse strani, kot kdajkoli prej.
-
-cfr-whatsnew-tracking-protect-title = Zaščitite se pred sledilci
-cfr-whatsnew-tracking-protect-body =
-    { -brand-short-name } zavrača številne sledilce družbenih omrežij in spletne sledilce, 
-    ki sledijo vaši spletni dejavnosti.
-cfr-whatsnew-tracking-protect-link-text = Oglejte si svoje poročilo
-
-# This string is displayed before a large numeral that indicates the total
-# number of tracking elements blocked. Don’t add $blockedCount to your
-# localization, because it would result in the number showing twice.
-cfr-whatsnew-tracking-blocked-title =
-    { $blockedCount ->
-        [one] Zavrnjen sledilec
-        [two] Zavrnjena sledilca
-        [few] Zavrnjeni sledilci
-       *[other] Zavrnjenih sledilcev
-    }
-cfr-whatsnew-tracking-blocked-subtitle = Od { DATETIME($earliestDate, month: "long", year: "numeric") }
-cfr-whatsnew-tracking-blocked-link-text = Prikaži poročilo
-
-cfr-whatsnew-lockwise-backup-title = Varnostno kopirajte gesla
-cfr-whatsnew-lockwise-backup-body = Ustvarite varna gesla, do katerih lahko dostopate kjerkoli se prijavite.
-cfr-whatsnew-lockwise-backup-link-text = Vklopite varnostne kopije
-
-cfr-whatsnew-lockwise-take-title = Vzemite gesla s seboj
-cfr-whatsnew-lockwise-take-body =
-    Mobilna aplikacija { -lockwise-brand-short-name } vam omogoča varen dostop do 
-    varnostno kopiranih gesel kjerkoli.
-cfr-whatsnew-lockwise-take-link-text = Prenesite aplikacijo
-
-## Search Bar
-
-cfr-whatsnew-searchbar-title = Pišite manj, najdite več z naslovno vrstico
-cfr-whatsnew-searchbar-body-topsites = Izberite naslovno vrstico in polje se bo razširilo s povezavami do vaših najljubših strani.
-
-## Search bar
-
-cfr-whatsnew-searchbar-icon-alt-text = Ikona povečevalnega stekla
-
-## Picture-in-Picture
-
-cfr-whatsnew-pip-header = Glejte videoposnetke med brskanjem
-cfr-whatsnew-pip-body = Slika v sliki pokaže video v plavajočem oknu, da si ga lahko ogledate, medtem ko brskate v drugih zavihkih.
-cfr-whatsnew-pip-cta = Več o tem
-
-## Permission Prompt
-
-cfr-whatsnew-permission-prompt-header = Manj nadležnih pojavnih oken na strani
-cfr-whatsnew-permission-prompt-body = { -brand-shorter-name } sedaj stranem preprečuje samodejne zahteve za pošiljanje pojavnih sporočil.
-cfr-whatsnew-permission-prompt-cta = Več o tem
-
-## Fingerprinter Counter
-
-# This string is displayed before a large numeral that indicates the total
-# number of tracking elements blocked. Don’t add $fingerprinterCount to your
-# localization, because it would result in the number showing twice.
-cfr-whatsnew-fingerprinter-counter-header =
-    { $fingerprinterCount ->
-        [one] Sledilec prstnih odtisov zavrnjen
-        [two] Sledilca prstnih odtisov zavrnjena
-        [few] Sledilci prstnih odtisov zavrnjeni
-       *[other] Sledilcev prstnih odtisov zavrnjenih
-    }
-cfr-whatsnew-fingerprinter-counter-body = { -brand-shorter-name } zavrača številne sledilce prstnih odtisov, ki skrivaj zbirajo podatke o vaši napravi in dejanjih ter ustvarjajo vaš oglaševalski profil.
-
-# Message variation when fingerprinters count is less than 10
-cfr-whatsnew-fingerprinter-counter-header-alt = Sledilci prstnih odtisov
-cfr-whatsnew-fingerprinter-counter-body-alt = { -brand-shorter-name } lahko zavrača sledilce prstnih odtisov, ki skrivaj zbirajo podatke o vaši napravi in dejanjih ter ustvarjajo vaš oglaševalski profil.
-
-## Bookmark Sync
-
-cfr-doorhanger-sync-bookmarks-header = Pošljite si ta zaznamek na telefon
-cfr-doorhanger-sync-bookmarks-body = Vzemite svoje zaznamke, gesla, zgodovino in drugo s seboj, kjerkoli ste prijavljeni v { -brand-product-name }.
-cfr-doorhanger-sync-bookmarks-ok-button = Vklopi { -sync-brand-short-name }
-    .accesskey = V
-
-## Login Sync
-
-cfr-doorhanger-sync-logins-header = Nikoli več ne izgubite gesla
-cfr-doorhanger-sync-logins-body = Varno hranite in sinhronizirajte gesla na vse svoje naprave.
-cfr-doorhanger-sync-logins-ok-button = Vklopi { -sync-brand-short-name }
-    .accesskey = V
-
-## Send Tab
-
-cfr-doorhanger-send-tab-header = Preberite to na poti
-cfr-doorhanger-send-tab-recipe-header = Vzemite ta recept v kuhinjo
-cfr-doorhanger-send-tab-body = Send Tab vam omogoča enostavno deljenje te povezave na telefon ali kjerkoli ste prijavljeni v { -brand-product-name }.
-cfr-doorhanger-send-tab-ok-button = Preskusite Send Tab
-    .accesskey = P
-
-## Firefox Send
-
-cfr-doorhanger-firefox-send-header = Varno delite ta PDF
-cfr-doorhanger-firefox-send-body = Ohranite svoje zaupne dokumente varne pred radovednimi očmi s šifriranjem od konca do konca in povezavo, ki izgine, ko končate.
-cfr-doorhanger-firefox-send-ok-button = Preizkusite { -send-brand-name }
-    .accesskey = P
-
-## Social Tracking Protection
-
-cfr-doorhanger-socialtracking-ok-button = Oglejte si zaščite
-    .accesskey = g
-cfr-doorhanger-socialtracking-close-button = Zapri
-    .accesskey = Z
-cfr-doorhanger-socialtracking-dont-show-again = Ne prikazuj več takšnih sporočil
-    .accesskey = N
-cfr-doorhanger-socialtracking-heading = { -brand-short-name } je preprečil družbenemu omrežju, da bi vam tukaj sledilo
-cfr-doorhanger-socialtracking-description = Vaša zasebnost je pomembna. { -brand-short-name } zdaj zavrača običajne sledilce družbenih omrežij in omejuje, koliko podatkov lahko zberejo o tem, kar počnete na spletu.
-cfr-doorhanger-fingerprinters-heading = { -brand-short-name } je na tej strani zavrnil sledilca prstnega odtisa brskalnika
-cfr-doorhanger-fingerprinters-description = Vaša zasebnost je pomembna. { -brand-short-name } sedaj zavrača sledilce prstnih odtisov, ki zbirajo edinstvene podatke o vaši napravi za vašo prepoznavo in sledenje.
-cfr-doorhanger-cryptominers-heading = { -brand-short-name } je na tej strani zavrnil kriptorudarja
-cfr-doorhanger-cryptominers-description = Vaša zasebnost je pomembna. { -brand-short-name } sedaj zavrača kriptorudarje, ki izkoriščajo zmogljivost vašega računalnika za rudarjenje digitalnega denarja.
-
 ## Enhanced Tracking Protection Milestones
-
-# Variables:
-#   $blockedCount (Number) - The total count of blocked trackers. This number will always be greater than 1.
-#   $date (String) - The date we began recording the count of blocked trackers
-cfr-doorhanger-milestone-heading =
-    { $blockedCount ->
-        [one] { -brand-short-name } je od { $date } zavrnil več kot <b>{ $blockedCount }</b> sledilca!
-        [two] { -brand-short-name } je od { $date } zavrnil več kot <b>{ $blockedCount }</b> sledilca!
-        [few] { -brand-short-name } je od { $date } zavrnil več kot <b>{ $blockedCount }</b> sledilce!
-       *[other] { -brand-short-name } je od { $date } zavrnil več kot <b>{ $blockedCount }</b> sledilcev!
-    }
 
 # Variables:
 #   $blockedCount (Number) - The total count of blocked trackers. This number will always be greater than 1.
@@ -255,45 +110,8 @@ cfr-doorhanger-milestone-heading2 =
     }
 cfr-doorhanger-milestone-ok-button = Prikaži vse
     .accesskey = P
-
-## What’s New Panel Content for Firefox 76
-
-
-## Lockwise message
-
-cfr-whatsnew-lockwise-header = Enostavno ustvarite varna gesla
-cfr-whatsnew-lockwise-body = Težko si je za vsak račun izmisliti edinstveno in varno geslo. Ob nastavljanju gesla lahko izberete polje za geslo, da { -brand-shorter-name } sestavi varno geslo za vas.
-cfr-whatsnew-lockwise-icon-alt = Ikona { -lockwise-brand-short-name }
-
-## Vulnerable Passwords message
-
-cfr-whatsnew-passwords-header = Prejemajte opozorila o ranljivih geslih
-cfr-whatsnew-passwords-body = Hekerji vedo, da ljudje vedno znova uporabljajo ista gesla. Če ste uporabili isto geslo na več straneh in je na eni od teh strani prišlo do kraje podatkov, vas bo { -lockwise-brand-short-name } opozoril, da spremenite geslo na teh straneh.
-cfr-whatsnew-passwords-icon-alt = Ikona ranljivega gesla
-
-## Picture-in-Picture fullscreen message
-
-cfr-whatsnew-pip-fullscreen-header = Popeljite sliko v sliki v celozaslonski način
-cfr-whatsnew-pip-fullscreen-body = Ko predvajate video v plavajočem oknu, lahko zdaj dvokliknete to okno za ogled v celozaslonskem načinu.
-cfr-whatsnew-pip-fullscreen-icon-alt = Ikona slike v sliki
-
-## Protections Dashboard message
-
-cfr-whatsnew-protections-header = Zaščite na dosegu roke
-cfr-whatsnew-protections-body = Nadzorna plošča zaščit vključuje poročila povzetkov o krajah podatkov in upravljanju gesel. Zdaj lahko spremljate, koliko kraj ste razrešili in preverite, ali je bilo katero od shranjenih gesel morda izpostavljeno kraji podatkov.
-cfr-whatsnew-protections-cta-link = Prikaži nadzorno ploščo zaščit
-cfr-whatsnew-protections-icon-alt = Ikona ščita
-
-## Better PDF message
-
-cfr-whatsnew-better-pdf-header = Boljša izkušnja z dokumenti PDF
-cfr-whatsnew-better-pdf-body = Dokumenti PDF se zdaj odpirajo neposredno v { -brand-short-name(sklon: "mestnik") }, s čimer je vaše delo enostavnejše.
-
 cfr-doorhanger-milestone-close-button = Zapri
     .accesskey = Z
-
-## What’s New Panel Content for Firefox 76
-## Protections Dashboard message
 
 ## DOH Message
 
@@ -306,28 +124,141 @@ cfr-doorhanger-doh-secondary-button = Onemogoči
 
 ## Fission Experiment Message
 
-cfr-doorhanger-fission-body-approved = Vaša zasebnost je pomembna. { -brand-short-name } zdaj medsebojno izolira spletna mesta ali jih izvaja v peskovnikih, kar napadalcem otežuje krajo gesel, številk kreditnih kartic in ostalih občutljivih podatkov.
-cfr-doorhanger-fission-header = Izolacija mesta
-cfr-doorhanger-fission-primary-button = V redu, razumem
-    .accesskey = V
-cfr-doorhanger-fission-secondary-button = Več o tem
-    .accesskey = e
-
-## What's new: Cookies message
-
-## What's new: Media controls message
-
-## What's new: Search shortcuts
-
-## What's new: Cookies protection
-
-## What's new: Better bookmarking
-
-## What's new: Cross-site cookie tracking
-
 ## Full Video Support CFR message
 
 cfr-doorhanger-video-support-body = Videoposnetki na tem spletnem mestu se v tej različici { -brand-short-name(sklon: "rodilnik") } morda ne bodo predvajali pravilno. Za popolno podporo videoposnetkom posodobite { -brand-short-name(sklon: "tozilnik") } zdaj.
 cfr-doorhanger-video-support-header = Posodobite { -brand-short-name(sklon: "tozilnik") } za predvajanje videa
 cfr-doorhanger-video-support-primary-button = Posodobi zdaj
     .accesskey = P
+
+## Spotlight modal shared strings
+
+## VPN promotion dialog for public Wi-Fi users
+##
+## If a user is detected to be on a public Wi-Fi network, they are given a
+## bit of info about how to improve their privacy and then offered a button
+## to the Mozilla VPN page and a link to dismiss the dialog.
+
+# This header text can be explicitly wrapped.
+spotlight-public-wifi-vpn-header = Videti je, da uporabljate javni Wi-Fi
+spotlight-public-wifi-vpn-body = Če želite skriti svojo lokacijo in dejavnost brskanja, razmislite o navideznem zasebnem omrežju (VPN). Pomagalo vas bo ščititi med brskanjem na javnih mestih, kot so letališča in kavarne.
+spotlight-public-wifi-vpn-primary-button = Ohranite zasebnost z { -mozilla-vpn-brand-name }
+    .accesskey = z
+spotlight-public-wifi-vpn-link = Ne zdaj
+    .accesskey = N
+
+## Total Cookie Protection Rollout
+
+## Emotive Continuous Onboarding
+
+spotlight-better-internet-header = Boljši internet se začenja z vami
+spotlight-better-internet-body = Z uporabo { -brand-short-name(sklon: "rodilnik") } daste svoj glas odprtemu in dostopnemu internetu, ki bo boljši za vsakogar.
+spotlight-peace-mind-header = Stojimo vam ob strani
+spotlight-peace-mind-body = { -brand-short-name } vsak mesec v povprečju zavrne več kot 3000 sledilcev na uporabnika. Ker vam nič, še posebej pa ne sledilci in podobne nadloge, ne sme stati na poti do dobrega interneta.
+spotlight-pin-primary-button =
+    { PLATFORM() ->
+        [macos] Obdrži v Docku
+       *[other] Pripni v opravilno vrstico
+    }
+spotlight-pin-secondary-button = Ne zdaj
+
+## MR2022 Background Update Windows native toast notification strings.
+##
+## These strings will be displayed by the Windows operating system in
+## a native toast, like:
+##
+## <b>multi-line title</b>
+## multi-line text
+## <img>
+## [ primary button ] [ secondary button ]
+##
+## The button labels are fitted into narrow fixed-width buttons by
+## Windows and therefore must be as narrow as possible.
+
+mr2022-background-update-toast-title = Novi { -brand-short-name }. Več zasebnosti. Manj sledenja. Brez kompromisov.
+mr2022-background-update-toast-text = Preizkusite najnovejši { -brand-short-name }, nadgrajen z našo najmočnejšo zaščito pred sledenjem doslej.
+
+# This button label will be fitted into a narrow fixed-width button by
+# Windows. Try to not exceed the width of the English text (compare it
+# using a variable font like Arial): the button can only fit 1-2
+# additional characters, exceeding characters will be truncated.
+mr2022-background-update-toast-primary-button-label = Odpri { -brand-shorter-name } zdaj
+
+# This button label will be fitted into a narrow fixed-width button by
+# Windows. Try to not exceed the width of the English text (compare it using a
+# variable font like Arial): the button can only fit 1-2 additional characters,
+# exceeding characters will be truncated.
+mr2022-background-update-toast-secondary-button-label = Opomni me kasneje
+
+## Firefox View CFR
+
+firefoxview-cfr-primarybutton = Preizkusite ga
+    .accesskey = P
+firefoxview-cfr-secondarybutton = Ne zdaj
+    .accesskey = N
+firefoxview-cfr-header-v2 = Preprosto nadaljujte, kjer ste končali
+firefoxview-cfr-body-v2 = Obnovite nedavno zaprte zavihke in nemoteno preskakujte med napravami s { -firefoxview-brand-name }.
+
+## Firefox View Spotlight
+
+firefoxview-spotlight-promo-title = Spoznajte { -firefoxview-brand-name }
+
+# “Poof” refers to the expression to convey when something or someone suddenly disappears, or in this case, reappears. For example, “Poof, it’s gone.”
+firefoxview-spotlight-promo-subtitle = Želite zavihek, ki ga imate odprtega na telefonu? Na dosegu roke. Potrebujete zavihek, ki ste ga pravkar zaprli? Čaka vas v { -firefoxview-brand-name }.
+firefoxview-spotlight-promo-primarybutton = Oglejte si, kako deluje
+firefoxview-spotlight-promo-secondarybutton = Preskoči
+
+## Colorways expiry reminder CFR
+
+colorways-cfr-primarybutton = Izberi barvno kombinacijo
+    .accesskey = I
+
+# "shades" refers to the different color options available to users in colorways.
+colorways-cfr-body = Obarvajte svoj brskalnik v ekskluzivne { -brand-short-name }ove odtenke, navdihnjene z glasovi, ki so spreminjali kulturo.
+colorways-cfr-header-28days = Barvne kombinacije Neodvisni glasovi potečejo 16. januarja
+colorways-cfr-header-14days = Barvne kombinacije Neodvisni glasovi potečejo čez dva tedna
+colorways-cfr-header-7days = Barvne kombinacije Neodvisni glasovi potečejo ta teden
+colorways-cfr-header-today = Barvne kombinacije Neodvisni glasovi potečejo danes
+
+## Cookie Banner Handling CFR
+
+cfr-cbh-header = Dovolite { -brand-short-name(sklon: "dajalnik") }, da zavrača pasice s piškotki?
+cfr-cbh-body = { -brand-short-name } lahko samodejno zavrne številne zahteve za shranjevanje piškotkov.
+cfr-cbh-confirm-button = Zavračaj pasice s piškotki
+    .accesskey = Z
+cfr-cbh-dismiss-button = Ne zdaj
+    .accesskey = N
+
+## These strings are used in the Fox doodle Pin/set default spotlights
+
+july-jam-headline = Stojimo vam ob strani
+july-jam-body = { -brand-short-name } vsak mesec v povprečju zavrne več kot 3000 sledilcev na uporabnika, s tem pa vam nudi varen in hiter dostop do najboljših mest na internetu.
+july-jam-set-default-primary = Odpiraj povezave v { -brand-short-name(sklon: "mestnik") }
+fox-doodle-pin-headline = Dobrodošli nazaj
+
+# “indie” is short for the term “independent”.
+# In this instance, free from outside influence or control.
+fox-doodle-pin-body = Samo opomnik, da si lahko priljubljeni neodvisni brskalnik pripnete na doseg miške z enim klikom.
+fox-doodle-pin-primary = Odpiraj povezave v { -brand-short-name(sklon: "mestnik") }
+fox-doodle-pin-secondary = Ne zdaj
+
+## These strings are used in the Set Firefox as Default PDF Handler for Existing Users experiment
+
+set-default-pdf-handler-headline = <strong>Datoteke PDF zdaj za vas odpira { -brand-short-name }.</strong> Sedaj lahko urejate in podpisujete obrazce neposredno v brskalniku. Če želite to spremeniti, v nastavitvah poiščite “PDF”.
+set-default-pdf-handler-primary = Razumem
+
+## FxA sync CFR
+
+fxa-sync-cfr-header = Se vam obeta nov računalnik?
+fxa-sync-cfr-body = Naj vam bodo najnovejši zaznamki, gesla in zavihki pri roki vsakič, ko se preselite v nov brskalnik { -brand-product-name }.
+fxa-sync-cfr-primary = Več o tem
+    .accesskey = V
+fxa-sync-cfr-secondary = Opomni me pozneje
+    .accesskey = p
+
+## Device Migration FxA Spotlight
+
+device-migration-fxa-spotlight-header = Uporabljate starejšo napravo?
+device-migration-fxa-spotlight-body = Varnostno kopirajte svoje podatke in poskrbite, da jih ne boste izgubili – še posebej, če boste zamenjali računalnik.
+device-migration-fxa-spotlight-primary-button = Kako varnostno kopirati podatke
+device-migration-fxa-spotlight-link = Opomni me pozneje

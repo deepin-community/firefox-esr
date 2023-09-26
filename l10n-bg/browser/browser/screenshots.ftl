@@ -2,10 +2,6 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-screenshots-context-menu = Снимка на екрана
-
-screenshots-my-shots-button = Моите снимки
-
 screenshots-instructions = За да изберете участък влачете или щракнете с мишката в страницата. Натиснете ESC за отказ.
 screenshots-cancel-button = Отказ
 screenshots-save-visible-button = Запазване на видимата област
@@ -37,8 +33,6 @@ screenshots-login-error-details = Снимката не може да бъде �
 screenshots-unshootable-page-error-title = Снимка на тази страница не може да бъде направена.
 screenshots-unshootable-page-error-details = Това не е обикновена уебстраница и за това снимка не може да ѝ бъде направена.
 
-screenshots-self-screenshot-error-title = Не може да правите снимки на страницата на { -screenshots-brand-name }!
-
 screenshots-empty-selection-error-title = Избраната област е твърде малка
 
 screenshots-private-window-error-title = { -screenshots-brand-name } е изключен в поверителен режим
@@ -46,3 +40,4 @@ screenshots-private-window-error-details = Съжаляваме за неудо�
 
 screenshots-generic-error-title = Леле! Нещо се обърка с { -screenshots-brand-name }.
 screenshots-generic-error-details = Не сме сигурни какво точно се случи. Може да опитате отново, както и да снимате друга страница.
+

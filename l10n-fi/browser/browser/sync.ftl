@@ -2,19 +2,10 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-fxa-toolbar-sync-syncing =
-    .label = Synkronoidaan…
-fxa-toolbar-sync-syncing-tabs =
-    .label = Synkronoidaan välilehtiä…
-
-sync-disconnect-dialog-title = Katkaistaanko yhteys { -sync-brand-short-name }-palveluun?
-
 fxa-toolbar-sync-syncing2 = Synkronoidaan…
 
 sync-disconnect-dialog-title2 = Katkaistaanko yhteys?
 sync-disconnect-dialog-body = { -brand-product-name } ei enää synkronoi tietoja tilille, mutta mitään tämän laitteen selaustietoja ei poisteta.
-fxa-disconnect-dialog-title = Irrotetaanko { -brand-product-name }?
-fxa-disconnect-dialog-body = { -brand-product-name } irrotetaan tilistäsi, mutta mitään tämän laitteen selaustietoja ei poisteta.
 sync-disconnect-dialog-button = Katkaise yhteys
 
 fxa-signout-dialog2-title = Kirjaudutaanko ulos { -fxaccount-brand-name(case: "ablative") }?
@@ -30,6 +21,21 @@ fxa-menu-turn-on-sync-default = Ota synkronointi käyttöön
 
 fxa-menu-connect-another-device =
     .label = Yhdistä toiseen laitteeseen…
+# Variables:
+#   $tabCount (Number): The number of tabs sent to the device.
+fxa-menu-send-tab-to-device =
+    .label =
+        { $tabCount ->
+            [one] Lähetä välilehti laitteeseen
+           *[other] Lähetä { $tabCount } välilehteä laitteeseen
+        }
+
+# This is shown dynamically within "Send tab to device" in fxa menu.
+fxa-menu-send-tab-to-device-syncnotready =
+    .label = Synkronoidaan laitteita…
+
+# This is shown within "Send tab to device" in fxa menu if account is not configured.
+fxa-menu-send-tab-to-device-description = Lähetä välilehti välittömästi mille tahansa laitteelle, johon olet kirjautuneena.
 
 fxa-menu-sign-out =
     .label = Kirjaudu ulos…

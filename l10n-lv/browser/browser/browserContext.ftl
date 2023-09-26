@@ -11,17 +11,6 @@ navbar-tooltip-instruction =
 
 ## Back
 
-main-context-menu-back =
-    .tooltiptext = Paiet vienu lapu atpakaļ
-    .aria-label = Atpakaļ
-    .accesskey = A
-
-navbar-tooltip-back =
-    .value = { main-context-menu-back.tooltiptext }
-
-toolbar-button-back =
-    .label = { main-context-menu-back.aria-label }
-
 # Variables
 #   $shortcut (String) - A keyboard shortcut for the Go Back command.
 main-context-menu-back-2 =
@@ -41,17 +30,6 @@ toolbar-button-back-2 =
     .label = { main-context-menu-back-2.aria-label }
 
 ## Forward
-
-main-context-menu-forward =
-    .tooltiptext = Paiet vienu lapu uz priekšu
-    .aria-label = Uz priekšu
-    .accesskey = P
-
-navbar-tooltip-forward =
-    .value = { main-context-menu-forward.tooltiptext }
-
-toolbar-button-forward =
-    .label = { main-context-menu-forward.aria-label }
 
 # Variables
 #   $shortcut (String) - A keyboard shortcut for the Go Forward command.
@@ -112,34 +90,7 @@ main-context-menu-page-save =
     .label = Saglabāt lapu kā…
     .accesskey = P
 
-toolbar-button-page-save =
-    .label = { main-context-menu-page-save.label }
-
 ## Simple menu items
-
-main-context-menu-bookmark-add =
-    .aria-label = Saglabāt šo lapu grāmatzīmēs
-    .accesskey = m
-    .tooltiptext = Saglabāt šo lapu grāmatzīmēs
-
-# Variables
-#   $shortcut (String) - A keyboard shortcut for the add bookmark command.
-main-context-menu-bookmark-add-with-shortcut =
-    .aria-label = Saglabāt šo lapu grāmatzīmēs
-    .accesskey = m
-    .tooltiptext = Saglabāt šo lapu grāmatzīmēs ({ $shortcut })
-
-main-context-menu-bookmark-change =
-    .aria-label = Rediģēt šo grāmatzīmi
-    .accesskey = m
-    .tooltiptext = Rediģēt šo grāmatzīmi
-
-# Variables
-#   $shortcut (String) - A keyboard shortcut for the edit bookmark command.
-main-context-menu-bookmark-change-with-shortcut =
-    .aria-label = Rediģēt šo grāmatzīmi
-    .accesskey = m
-    .tooltiptext = Rediģēt šo grāmatzīmi ({ $shortcut })
 
 main-context-menu-open-link =
     .label = Atvērt saiti
@@ -161,10 +112,6 @@ main-context-menu-open-link-new-private-window =
     .label = Atvērt saiti jaunā privātajā logā
     .accesskey = p
 
-main-context-menu-bookmark-this-link =
-    .label = Saglabāt šo saiti grāmatzīmēs
-    .accesskey = S
-
 main-context-menu-save-link =
     .label = Saglabāt saiti kā…
     .accesskey = k
@@ -181,10 +128,6 @@ main-context-menu-save-link =
 main-context-menu-copy-email =
     .label = Kopēt epasta adresi
     .accesskey = e
-
-main-context-menu-copy-link =
-    .label = Kopēt saiti
-    .accesskey = a
 
 ## Media (video/audio) controls
 ##
@@ -209,32 +152,6 @@ main-context-menu-media-mute =
 main-context-menu-media-unmute =
     .label = Atjaunot
     .accesskey = a
-
-main-context-menu-media-play-speed =
-    .label = Atskaņošanas ātrums
-    .accesskey = d
-
-main-context-menu-media-play-speed-slow =
-    .label = Lēni (0.5 ×)
-    .accesskey = L
-
-main-context-menu-media-play-speed-normal =
-    .label = Normāls
-    .accesskey = N
-
-main-context-menu-media-play-speed-fast =
-    .label = Ātri (1.25×)
-    .accesskey = T
-
-main-context-menu-media-play-speed-faster =
-    .label = Ātrāk (1.5×)
-    .accesskey = t
-
-# "Ludicrous" is a reference to the movie "Space Balls" and is meant
-# to say that this speed is very fast.
-main-context-menu-media-play-speed-fastest =
-    .label = Super ātri (2×)
-    .accesskey = S
 
 main-context-menu-media-loop =
     .label = Ciklot
@@ -265,29 +182,9 @@ main-context-menu-image-reload =
     .label = Pārlādēt attēlu
     .accesskey = r
 
-main-context-menu-image-view =
-    .label = Skatīt attēlu
-    .accesskey = t
-
-main-context-menu-video-view =
-    .label = Skatīt video
-    .accesskey = i
-
 main-context-menu-image-copy =
     .label = Kopēt attēlu
     .accesskey = p
-
-main-context-menu-image-copy-location =
-    .label = Kopēt attēla adresi
-    .accesskey = o
-
-main-context-menu-video-copy-location =
-    .label = Kopēt video adresi
-    .accesskey = o
-
-main-context-menu-audio-copy-location =
-    .label = Kopēt audio adresi
-    .accesskey = o
 
 main-context-menu-image-save-as =
     .label = Saglabāt attēlu kā…
@@ -296,10 +193,6 @@ main-context-menu-image-save-as =
 main-context-menu-image-email =
     .label = Nosūtīt attēlu…
     .accesskey = a
-
-main-context-menu-image-set-as-background =
-    .label = Uzlikt kā darbvirsmas fonu…
-    .accesskey = U
 
 main-context-menu-image-info =
     .label = Skatīt attēla informāciju
@@ -317,10 +210,6 @@ main-context-menu-audio-save-as =
     .label = Saglabāt audio kā…
     .accesskey = g
 
-main-context-menu-video-image-save-as =
-    .label = Saglabāt momentuzņēmumu kā…
-    .accesskey = S
-
 main-context-menu-video-email =
     .label = Nosūtīt video…
     .accesskey = v
@@ -329,21 +218,9 @@ main-context-menu-audio-email =
     .label = Nosūtīt audio…
     .accesskey = a
 
-main-context-menu-plugin-play =
-    .label = Aktivēt šo spraudni
-    .accesskey = a
-
-main-context-menu-plugin-hide =
-    .label = Paslēpt šo spraudni
-    .accesskey = p
-
 main-context-menu-send-to-device =
     .label = Sūtīt lapu uz ierīci
     .accesskey = I
-
-main-context-menu-view-background-image =
-    .label = Skatīt fona attēlu
-    .accesskey = f
 
 ## The access keys for "Use Saved Login" and "Use Saved Password"
 ## should be the same if possible; the two context menu items
@@ -380,10 +257,6 @@ main-context-menu-frame-reload =
     .label = Pārlādēt ietvaru
     .accesskey = r
 
-main-context-menu-frame-bookmark =
-    .label = Pievienot šo ietvaru grāmatzīmēm
-    .accesskey = m
-
 main-context-menu-frame-save-as =
     .label = Saglabāt ietvaru kā…
     .accesskey = t
@@ -408,10 +281,6 @@ main-context-menu-view-page-source =
     .label = Skatīt lapas pirmkodu
     .accesskey = S
 
-main-context-menu-view-page-info =
-    .label = Skatīt informāciju par lapu
-    .accesskey = i
-
 main-context-menu-bidi-switch-text =
     .label = Nomainīt teksta virzienu
     .accesskey = m
@@ -420,13 +289,10 @@ main-context-menu-bidi-switch-page =
     .label = Nomainīt lapas virzienu
     .accesskey = p
 
-main-context-menu-inspect-element =
-    .label = Izmeklēt
-    .accesskey = I
-
 main-context-menu-inspect-a11y-properties =
     .label = Izmeklēt pieejamības iestatījumus
 
 main-context-menu-eme-learn-more =
     .label = Uzziniet vairāk par DRM…
     .accesskey = D
+

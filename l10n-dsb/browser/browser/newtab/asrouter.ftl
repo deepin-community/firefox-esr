@@ -7,7 +7,6 @@
 
 cfr-doorhanger-extension-heading = Dopórucone rozšyrjenje
 cfr-doorhanger-feature-heading = Dopórucona funkcija
-cfr-doorhanger-pintab-heading = Wopytajśo to: Rejtarik pśipěś
 
 ##
 
@@ -19,8 +18,6 @@ cfr-doorhanger-extension-cancel-button = Nic něnto
 
 cfr-doorhanger-extension-ok-button = Něnto pśidaś
     .accesskey = d
-cfr-doorhanger-pintab-ok-button = Toś ten rejtarik pśipěś
-    .accesskey = T
 
 cfr-doorhanger-extension-manage-settings-button = Dopóruceńske nastajenja zastojaś
     .accesskey = D
@@ -72,18 +69,6 @@ cfr-doorhanger-extension-total-users =
        *[other] { $total } wužywarjow
     }
 
-cfr-doorhanger-pintab-description = Mějśo lažki pśistup k swójim nejcesćej wužywane sedła. Źaržćo sedła w rejtariku wócynjone (samo gaž znowego startujośo)
-
-## These messages are steps on how to use the feature and are shown together.
-
-cfr-doorhanger-pintab-step1 = <b>Klikniśo z pšaweju tastu</b> na rejtarik, kótaryž cośo pśipěś.
-cfr-doorhanger-pintab-step2 = Wubjeŕśo <b>Rejtarik pśipěś</b> z menija.
-cfr-doorhanger-pintab-step3 = Jolic sedło ma aktualizaciju, buźośo módry dypk na swójom pśipětem rejtariku wiźeś.
-
-cfr-doorhanger-pintab-animation-pause = Pawza
-cfr-doorhanger-pintab-animation-resume = Pókšacowaś
-
-
 ## Firefox Accounts Message
 
 cfr-doorhanger-bookmark-fxa-header = Synchronizěrujśo swóje cytańske znamjenja wšuźi.
@@ -109,135 +94,9 @@ cfr-whatsnew-button =
     .label = Nowe funkcije a změny
     .tooltiptext = Nowe funkcije a změny
 
-cfr-whatsnew-panel-header = Nowe funkcije a změny
-
 cfr-whatsnew-release-notes-link-text = Wersijowe informacije cytaś
 
-cfr-whatsnew-fx70-title = { -brand-short-name } šěščej za wašu priwatnosć wójujo
-cfr-whatsnew-fx70-body = Nejnowša aktualizacija funkciju slědowański šćit pólěpšujo a wólažcujo wěcej nježli gdy do togo, wěste gronidła za kužde sedło napóraś.
-
-cfr-whatsnew-tracking-protect-title = Šćitajśo se pśed pśeslědowakami
-cfr-whatsnew-tracking-protect-body =
-    { -brand-short-name } wjele cestych pśeslědowakow socialnych a drugich sedłow, kótarež
-    slěduju, což online gótujośo.
-cfr-whatsnew-tracking-protect-link-text = Wašu rozpšawu pokazaś
-
-# This string is displayed before a large numeral that indicates the total
-# number of tracking elements blocked. Don’t add $blockedCount to your
-# localization, because it would result in the number showing twice.
-cfr-whatsnew-tracking-blocked-title =
-    { $blockedCount ->
-        [one] Pśeslědowak jo se zablokěrował
-        [two] Pśeslědowaka stej se zablokěrowałej
-        [few] Pśeslědowaki su se zablokěrowali
-       *[other] Přeslědowaki su se zablokěrowali
-    }
-cfr-whatsnew-tracking-blocked-subtitle = Wót { DATETIME($earliestDate, month: "long", year: "numeric") }
-cfr-whatsnew-tracking-blocked-link-text = Rozpšawu pokazaś
-
-cfr-whatsnew-lockwise-backup-title = Zawěsććo swóje gronidła
-cfr-whatsnew-lockwise-backup-body = Napórajśo něnto wěste gronidła, ku kótarymž maśo wšuźi pśistup, źož se pśizjawijośo.
-cfr-whatsnew-lockwise-backup-link-text = Zawěsćenja zmóžniś
-
-cfr-whatsnew-lockwise-take-title = Wzejśo swóje gronidła sobu
-cfr-whatsnew-lockwise-take-body = Mobilne nałoženje { -lockwise-brand-short-name } wam wěsty pśistup k wašym zawěsćonym gronidłam wót wšuźi zmóžnja,
-cfr-whatsnew-lockwise-take-link-text = Wobstarajśo se nałoženje
-
-## Search Bar
-
-cfr-whatsnew-searchbar-title = Pišćo mjenjej a namakajśo wěcej z adresowym pólom
-cfr-whatsnew-searchbar-body-topsites = Wubjeŕśo něnto jadnorje adresowe pólo a  kašćik z wótkazami na waše nejlubše sedła se wócynijo.
-
-## Search bar
-
-cfr-whatsnew-searchbar-icon-alt-text = Lupowy symbol
-
-## Picture-in-Picture
-
-cfr-whatsnew-pip-header = Woglědajśo se wideo, mjaztym až pśeglědujośo
-cfr-whatsnew-pip-body = Funkcija Wobraz-we-wobrazu wideo w znošujucem se woknje pokazujo, aby se wy jo mógał woglědaś, gaž w drugich rejtarikach źěłaśo.
-cfr-whatsnew-pip-cta = Dalšne informacije
-
-## Permission Prompt
-
-cfr-whatsnew-permission-prompt-header = Mjenjej gramnych wuskokujuych woknow
-cfr-whatsnew-permission-prompt-body = { -brand-shorter-name } něnto websedłam zawoborujo, awtomatiski se pšašaś, lěc směju wuskokujuce powěsći pósłaś.
-cfr-whatsnew-permission-prompt-cta = Dalšne informacije
-
-## Fingerprinter Counter
-
-# This string is displayed before a large numeral that indicates the total
-# number of tracking elements blocked. Don’t add $fingerprinterCount to your
-# localization, because it would result in the number showing twice.
-cfr-whatsnew-fingerprinter-counter-header =
-    { $fingerprinterCount ->
-        [one] Palcowy wótśišć zablokěrowany
-        [two] Palcowej wótśišća zablokěrowanej
-        [few] Palcowe wótśišće zablokěrowane
-       *[other] Palcowe wótśišće zablokěrowane
-    }
-cfr-whatsnew-fingerprinter-counter-body = { -brand-shorter-name } wjele palcowych śišćow blokěrujo, kótarež informacije wó wašom rěźe a akcijach gromaźe, aby wabjeński profil wó was napórali.
-
-# Message variation when fingerprinters count is less than 10
-cfr-whatsnew-fingerprinter-counter-header-alt = Palcowe wótśišće
-cfr-whatsnew-fingerprinter-counter-body-alt = { -brand-shorter-name } móžo wjele palcowych śišćow blokěrowaś, kótarež informacije wó wašom rěźe a akcijach gromaźe, aby wabjeński profil wó was napórali.
-
-## Bookmark Sync
-
-cfr-doorhanger-sync-bookmarks-header = Spórajśo toś to cytańske znamje na swój telefon
-cfr-doorhanger-sync-bookmarks-body = Wzejśo swóje cytańske znamjenja, gronidła, historiju a wěcej wšuźi sobu, źož sćo se pśizjawił pla { -brand-product-name }.
-cfr-doorhanger-sync-bookmarks-ok-button = { -sync-brand-short-name } zmóžniś
-    .accesskey = m
-
-## Login Sync
-
-cfr-doorhanger-sync-logins-header = Njezgubujśo nigda wěcej gronidło
-cfr-doorhanger-sync-logins-body = Składujśo a synchronizěrujśo swóje gronidł ze wšymi swójimi rědami.
-cfr-doorhanger-sync-logins-ok-button = { -sync-brand-short-name } zmóžniś
-    .accesskey = z
-
-## Send Tab
-
-cfr-doorhanger-send-tab-header = Cytajśo to pó droze
-cfr-doorhanger-send-tab-recipe-header = Spórajśo toś ten recept do kuchnje
-cfr-doorhanger-send-tab-body = Send Tab wam zmóžnja, toś ten wótkaz lažko ze swójim telefonom źěliś abo wšuźi, źož sćo se pśizjawił pla { -brand-product-name }.
-cfr-doorhanger-send-tab-ok-button = Send Tab wopytaś
-    .accesskey = T
-
-## Firefox Send
-
-cfr-doorhanger-firefox-send-header = Źělśo toś ten PDF wěsće
-cfr-doorhanger-firefox-send-body = Šćitajśo swóje sensibelne dokumenty pśed narskimi póglědnjenjami z koděrowanim kóńc do kóńca a z wótkazom, kótaryž se zgubijo, gaž sćo gótowy.
-cfr-doorhanger-firefox-send-ok-button = { -send-brand-name } wopytaś
-    .accesskey = o
-
-## Social Tracking Protection
-
-cfr-doorhanger-socialtracking-ok-button = Šćit pokazaś
-    .accesskey = p
-cfr-doorhanger-socialtracking-close-button = Zacyniś
-    .accesskey = Z
-cfr-doorhanger-socialtracking-dont-show-again = Powěsći ako toś tu wěcej njepokazaś
-    .accesskey = P
-cfr-doorhanger-socialtracking-heading = { -brand-short-name } socialnej seśi zawoborał, wam how slědowaś
-cfr-doorhanger-socialtracking-description = Waša priwatnosć jo wažna. { -brand-short-name } něnto zwucone pśeslědowaki socialnych medijow blokěrujo, wobgranicujo tšochu datow, kótarež mógu wó tom zběraś, což wy online gótujośo.
-cfr-doorhanger-fingerprinters-heading = { -brand-short-name } jo zablokěrował palcowe wótśišće na toś tom boku
-cfr-doorhanger-fingerprinters-description = Waša priwatnosć jo wažna. { -brand-short-name } něnto palcowe wótśišće blokěrujo, kótarež jasnje idenficěrujobne informacije wó wašom rěźe gromaźe, aby wam slědowali.
-cfr-doorhanger-cryptominers-heading = { -brand-short-name } jo zablokěrował kryptokopak na toś tom boku
-cfr-doorhanger-cryptominers-description = Waša priwatnosć jo wažna. { -brand-short-name } něnto kryptokopaki blokěrujo, kótarež liceńske wugbaśe wašogo systema wužywaju, aby digitalne pjenjeze wudobywali.
-
 ## Enhanced Tracking Protection Milestones
-
-# Variables:
-#   $blockedCount (Number) - The total count of blocked trackers. This number will always be greater than 1.
-#   $date (String) - The date we began recording the count of blocked trackers
-cfr-doorhanger-milestone-heading =
-    { $blockedCount ->
-        [one] { -brand-short-name } jo zablokěrował wušej <b>{ $blockedCount }</b> pśeslědowaka wót { $date }!
-        [two] { -brand-short-name } jo zablokěrował wušej <b>{ $blockedCount }</b> pśeslědowakowu wót { $date }!
-        [few] { -brand-short-name } jo zablokěrował wušej <b>{ $blockedCount }</b> pśeslědowakow wót { $date }!
-       *[other] { -brand-short-name } jo zablokěrował wušej <b>{ $blockedCount }</b> pśeslědowakow wót { $date }!
-    }
 
 # Variables:
 #   $blockedCount (Number) - The total count of blocked trackers. This number will always be greater than 1.
@@ -251,45 +110,8 @@ cfr-doorhanger-milestone-heading2 =
     }
 cfr-doorhanger-milestone-ok-button = Wšykne pokazaś
     .accesskey = k
-
-## What’s New Panel Content for Firefox 76
-
-
-## Lockwise message
-
-cfr-whatsnew-lockwise-header = Wěste gronidła lažko napóraś
-cfr-whatsnew-lockwise-body = Jo śěžko na to mysliś, jadnorazowe, wěste gronidła za kužde konto wužywaś. Gaž gronidło napórajośo, wubjeŕśo gronidkowe pólo, aby wěste, napórane gronidło z { -brand-shorter-name } wužywał.
-cfr-whatsnew-lockwise-icon-alt = Symbol { -lockwise-brand-short-name }
-
-## Vulnerable Passwords message
-
-cfr-whatsnew-passwords-header = Dostańśo warnowanja wó zranliwych gronidłach
-cfr-whatsnew-passwords-body = Hackery wěźe, až luźe te samske gronidła wužywaju. Jolic sćo wužył to samske gronidło na někotarych sedłach, a jadno z tych sedłow jo było w datowej źěrje, buźośo warnowanje w { -lockwise-brand-short-name } wiźeś, až maśo swójo gronidło na tych sedłach změniś.
-cfr-whatsnew-passwords-icon-alt = Symbol kluca zranliwego gronidła
-
-## Picture-in-Picture fullscreen message
-
-cfr-whatsnew-pip-fullscreen-header = Połnu wobrazowku wobraz-we-wobrazu wužywaś
-cfr-whatsnew-pip-fullscreen-body = Gaž wideo do znošujucego se wokna tkajośo, móžośo dwójcy na to wokno kliknuś, aby se jo w połnej wobrazowce woglědał.
-cfr-whatsnew-pip-fullscreen-icon-alt = Symbol wobraz-we-wobrazu
-
-## Protections Dashboard message
-
-cfr-whatsnew-protections-header = Šćity na jadno póglědnjenje
-cfr-whatsnew-protections-body = Pśeglěd šćitow zespominujuce rozpšawy wó datowych źěrach a zastojanju gronidłow. Móžośo něnto slědowaś, wjele źěrow sćo rozwězał a wiźeś, lěc jadno abo wěcej gronidłow jo było datowej źěrje wustajone.
-cfr-whatsnew-protections-cta-link = Pśeglěd šćitow pokazaś
-cfr-whatsnew-protections-icon-alt = Šćitowy symbol
-
-## Better PDF message
-
-cfr-whatsnew-better-pdf-header = Lěpše PDF-dožywjenje
-cfr-whatsnew-better-pdf-body = PDF-dokumenty se něnto direktnje w { -brand-short-name } wócynjaju, bźeztogo aby musył źěłowy wótběg pśetergnuś.
-
 cfr-doorhanger-milestone-close-button = Zacyniś
     .accesskey = Z
-
-## What’s New Panel Content for Firefox 76
-## Protections Dashboard message
 
 ## DOH Message
 
@@ -302,28 +124,141 @@ cfr-doorhanger-doh-secondary-button = Znjemóžniś
 
 ## Fission Experiment Message
 
-cfr-doorhanger-fission-body-approved = Waša priwatnosć jo wažna. { -brand-short-name } něnto websedła jadno wót drugego izolěrujo, což hackeram póśězujo, gronidła, numery kreditowych kórtow a druge sensibelne informacije kšadnuś.
-cfr-doorhanger-fission-header = Sedłowa izolacija
-cfr-doorhanger-fission-primary-button = W pórěźe, som zrozměł
-    .accesskey = z
-cfr-doorhanger-fission-secondary-button = Dalšne informacije
-    .accesskey = D
-
-## What's new: Cookies message
-
-## What's new: Media controls message
-
-## What's new: Search shortcuts
-
-## What's new: Cookies protection
-
-## What's new: Better bookmarking
-
-## What's new: Cross-site cookie tracking
-
 ## Full Video Support CFR message
 
 cfr-doorhanger-video-support-body = Wideo na toś tom sedle se snaź w toś tej wersiji { -brand-short-name } pšawje njewótgrawaju. Aktualizěrujśo něnto { -brand-short-name } za połnu wideopódpěru.
 cfr-doorhanger-video-support-header = { -brand-short-name } aktualizěrowaś, aby wy wideo wótgrał
 cfr-doorhanger-video-support-primary-button = Něnto aktualizěrowaś
     .accesskey = N
+
+## Spotlight modal shared strings
+
+## VPN promotion dialog for public Wi-Fi users
+##
+## If a user is detected to be on a public Wi-Fi network, they are given a
+## bit of info about how to improve their privacy and then offered a button
+## to the Mozilla VPN page and a link to dismiss the dialog.
+
+# This header text can be explicitly wrapped.
+spotlight-public-wifi-vpn-header = Zda se, až zjawny WLAN wužywaśo
+spotlight-public-wifi-vpn-body = Aby swóje stojnišćo a pśeglědowańsku aktiwitu schował a, rozwažćo wirtuelnu priwatnu seś (VPN). Buźo wam pomagaś, was šćitaś, gaž na zjawnych městnach ako na pśikład na lětanišćach a w kafejownjach pśeglědujośo.
+spotlight-public-wifi-vpn-primary-button = Šćitajśo swóju priwatnosć z { -mozilla-vpn-brand-name }
+    .accesskey = t
+spotlight-public-wifi-vpn-link = Nic něnto
+    .accesskey = N
+
+## Total Cookie Protection Rollout
+
+## Emotive Continuous Onboarding
+
+spotlight-better-internet-header = Lěpšy internet z wami startujo
+spotlight-better-internet-body = Gaž { -brand-short-name } wužywaśo, głosujośo za wótwórjony a pśistupny internet, kótaryž jo lěpšy za wše.
+spotlight-peace-mind-header = Smy was zapśimjeli
+spotlight-peace-mind-body = Kuždy mjasec { -brand-short-name } pśerěznje pśez 3.000 pśeslědowakow na wužywarja blokěrujo. Dokulaž nic, pśedewšym wobuze priwatnosći ako pśeslědowaki, njeměło mjazy wami a dobrym internetom byś.
+spotlight-pin-primary-button =
+    { PLATFORM() ->
+        [macos] Na doku wobchowaś
+       *[other] K nadawkowej rědce pśipěś
+    }
+spotlight-pin-secondary-button = Nic něnto
+
+## MR2022 Background Update Windows native toast notification strings.
+##
+## These strings will be displayed by the Windows operating system in
+## a native toast, like:
+##
+## <b>multi-line title</b>
+## multi-line text
+## <img>
+## [ primary button ] [ secondary button ]
+##
+## The button labels are fitted into narrow fixed-width buttons by
+## Windows and therefore must be as narrow as possible.
+
+mr2022-background-update-toast-title = Nowy { -brand-short-name }. Priwatnjejšy. Mjenjej pśeslědowakow. Žedne kompromisy.
+mr2022-background-update-toast-text = Wopytajśo něnto nejnowšy { -brand-short-name }, něnto z našym doychměst nejmócnjejšym šćitom pśeśiwo slědowanjeju.
+
+# This button label will be fitted into a narrow fixed-width button by
+# Windows. Try to not exceed the width of the English text (compare it
+# using a variable font like Arial): the button can only fit 1-2
+# additional characters, exceeding characters will be truncated.
+mr2022-background-update-toast-primary-button-label = { -brand-shorter-name } něnto wócyniś
+
+# This button label will be fitted into a narrow fixed-width button by
+# Windows. Try to not exceed the width of the English text (compare it using a
+# variable font like Arial): the button can only fit 1-2 additional characters,
+# exceeding characters will be truncated.
+mr2022-background-update-toast-secondary-button-label = Pózdźej dopomnjeś
+
+## Firefox View CFR
+
+firefoxview-cfr-primarybutton = Wopytajśo jen
+    .accesskey = o
+firefoxview-cfr-secondarybutton = Nic něnto
+    .accesskey = N
+firefoxview-cfr-header-v2 = Cyńśo tam malsnje dalej, źož sćo pśestał
+firefoxview-cfr-body-v2 = Wobstarajśo se zacynjone rejtariki slědk a pśejźćo mjazy rědami z { -firefoxview-brand-name }.
+
+## Firefox View Spotlight
+
+firefoxview-spotlight-promo-title = Witajśo k { -firefoxview-brand-name }
+
+# “Poof” refers to the expression to convey when something or someone suddenly disappears, or in this case, reappears. For example, “Poof, it’s gone.”
+firefoxview-spotlight-promo-subtitle = Cośo ten wócynjony rejtark na swójom telefonje měś? Wobstarajśo se jen. Trjebaśo sedło, ku kótaremuž sćo rowno woglědał? Simsalabim, jo z { -firefoxview-brand-name } slědk.
+firefoxview-spotlight-promo-primarybutton = Glědajśo, kak to funkcioněrujo
+firefoxview-spotlight-promo-secondarybutton = Pśeskócyś
+
+## Colorways expiry reminder CFR
+
+colorways-cfr-primarybutton = Barwowu kombinaciju wubraś
+    .accesskey = B
+
+# "shades" refers to the different color options available to users in colorways.
+colorways-cfr-body = Zabarwiśo swój wobglědowak z ekskluziwnymi barwowymi wósnjami { -brand-short-name }, kótarež su wót głosow inspirěrowane, kótarež su změnili kulturu.
+colorways-cfr-header-28days = Barwowe kombinacije „Njewótwisne głose“  16. januara spadnu
+colorways-cfr-header-14days = Barwowe kombinacije „Njewótwisne głose“  za dwa tyźenja spadnu
+colorways-cfr-header-7days = Barwowe kombinacije „Njewótwisne głose“  w toś tom tyźenju spadnu
+colorways-cfr-header-today = Barwowe kombinacije „Njewótwisne głose“ źinsa spadnu
+
+## Cookie Banner Handling CFR
+
+cfr-cbh-header = { -brand-short-name } dowóliś cookiejowe chórgoji wótpokazaś?
+cfr-cbh-body = { -brand-short-name } móžo awtomatiski wjele napšašowanjow cookiejowych chórgojow wótpokazaś.
+cfr-cbh-confirm-button = Cookiejowe chórgoji reducěrowaś
+    .accesskey = C
+cfr-cbh-dismiss-button = Nic něnto
+    .accesskey = N
+
+## These strings are used in the Fox doodle Pin/set default spotlights
+
+july-jam-headline = Smy was zapśimjeli
+july-jam-body = Kuždy mjasec { -brand-short-name } w pśerězku wěcej ako 3000 pśeslědowakow na wužywarja blokěrujo a dawa wam wěsty, malsny pśistup k dobremu internetoju.
+july-jam-set-default-primary = Móje wótkaze z { -brand-short-name } wócyniś
+fox-doodle-pin-headline = Witajśo slědk
+
+# “indie” is short for the term “independent”.
+# In this instance, free from outside influence or control.
+fox-doodle-pin-body = How jo krotke dopomnjeśe, až móžośo swój nejlubšy njewótwisny wobglědowak jano kliknjenje pśec měś.
+fox-doodle-pin-primary = Móje wótkaze z { -brand-short-name } wócyniś
+fox-doodle-pin-secondary = Nic něnto
+
+## These strings are used in the Set Firefox as Default PDF Handler for Existing Users experiment
+
+set-default-pdf-handler-headline = <strong>Waše PDF se něnto w { -brand-short-name } wócynjaju.</strong> Wobźěłajśo abo signěrujćśoformulary direktnje w swójom wobglědowaku. Aby to změnił, pytajśo za „PDF“ w swójich nastajenjach.
+set-default-pdf-handler-primary = Som zrozměł
+
+## FxA sync CFR
+
+fxa-sync-cfr-header = Nowy rěd we wašom pśichoźe?
+fxa-sync-cfr-body = Zawěsććo, až maśo swóje nejnowše cytańske znamjenja, gronidła a rejtariki kuždy raz ze sobu, gaž nowy wobglědowak { -brand-product-name } wócynjaśo.
+fxa-sync-cfr-primary = Dalšne informacije
+    .accesskey = D
+fxa-sync-cfr-secondary = Pózdźej dopomnjeś
+    .accesskey = o
+
+## Device Migration FxA Spotlight
+
+device-migration-fxa-spotlight-header = Staršy rěd wužywaś?
+device-migration-fxa-spotlight-body = Zawěsććo swóje daty, až njeby wy wažne informacije ako cytańske znamjenja a groidła zgubił — pśedewšym, jolic k nowemu rědoju pśejźośo.
+device-migration-fxa-spotlight-primary-button = Kak mógu swóje daty zawěsćiś
+device-migration-fxa-spotlight-link = Pózdźej dopomnjeś

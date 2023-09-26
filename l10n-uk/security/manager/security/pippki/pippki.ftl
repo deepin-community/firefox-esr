@@ -6,9 +6,6 @@ password-quality-meter = Рівень якості пароля
 
 ## Change Password dialog
 
-change-password-window =
-    .title = Зміна головного пароля
-
 change-device-password-window =
     .title = Змінити пароль
 
@@ -18,12 +15,6 @@ change-password-token = Пристрій захисту: { $tokenName }
 change-password-old = Поточний пароль:
 change-password-new = Новий пароль:
 change-password-reenter = Новий пароль (ще раз):
-
-## Reset Password dialog
-
-reset-password-window =
-    .title = Скидання головного пароля
-    .style = width: 40em
 
 pippki-failed-pw-change = Не вдається змінити пароль.
 pippki-incorrect-pw = Ви ввели неправильний поточний головний пароль. Спробуйте ще раз.
@@ -37,23 +28,21 @@ pippki-pw-change2empty-in-fips-mode = Зараз ви в режимі FIPS. Дл
 
 ## Reset Primary Password dialog
 
-reset-primary-password-window =
+reset-primary-password-window2 =
     .title = Скинути головний пароль
-    .style = width: 40em
+    .style = min-width: 40em
 reset-password-button-label =
     .label = Скинути
-reset-password-text = Якщо ви скинете свій головний пароль, всі збережені паролі для інтернету і електронної пошти, дані форм, особисті сертифікати і закриті ключі будуть втрачені. Ви дійсно хочете скинути свій головний пароль?
-
-reset-primary-password-text = Якщо ви скинете свій головний пароль, всі збережені паролі для мережі та електронної пошти, особисті сертифікати та приватні ключі буде втрачено. Ви справді хочете скинути свій головний пароль?
+reset-primary-password-text = Якщо ви скинете свій головний пароль, усі збережені паролі для мережі та електронної пошти, особисті сертифікати та приватні ключі буде втрачено. Ви справді хочете скинути свій головний пароль?
 
 pippki-reset-password-confirmation-title = Скинути головний пароль
 pippki-reset-password-confirmation-message = Ваш головний пароль скинуто.
 
 ## Downloading cert dialog
 
-download-cert-window =
+download-cert-window2 =
     .title = Завантаження сертифіката
-    .style = width: 46em
+    .style = min-width: 46em
 download-cert-message = Вас просять довіряти новому центру сертифікації (CA).
 download-cert-trust-ssl =
     .label = Довіряти при ідентифікації вебсайтів.
@@ -85,7 +74,8 @@ set-password-reminder = Увага: якщо ви забудете ваш пар
 
 ## Protected Auth dialog
 
-protected-auth-window =
-    .title = Захищена автентифікація з використанням токена
-protected-auth-msg = Виконайте автентифікацію з використанням токена. Метод автентифікації залежить від типу вашого токена.
-protected-auth-token = Жетон:
+## Protected authentication alert
+
+# Variables:
+# $tokenName (String) - The name of the token to authenticate to (for example, "OS Client Cert Token (Modern)")
+protected-auth-alert = Будь ласка, автентифікуйте токен “{ $tokenName }”. Як це зробити, залежить від токена (наприклад, використання засобу зчитування відбитка пальця або введення коду на клавіатурі).

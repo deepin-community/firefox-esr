@@ -2,17 +2,6 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-bookmark-overlay-name =
-    .value = Nama:
-    .accesskey = N
-
-bookmark-overlay-location =
-    .value = Lokasi:
-    .accesskey = L
-
-bookmark-overlay-folder =
-    .value = Folder:
-
 bookmark-overlay-name-2 =
     .value = Nama
     .accesskey = N
@@ -35,13 +24,15 @@ bookmark-overlay-folders-expander =
     .tooltiptextdown = { bookmark-overlay-folders-expander.tooltiptext }
     .tooltiptextup = Sembunyikan
 
+bookmark-overlay-folders-expander2 =
+    .tooltiptext = Tampilkan semua folder markah
+
+bookmark-overlay-folders-expander-hide =
+    .tooltiptext = Sembunyikan
+
 bookmark-overlay-new-folder-button =
     .label = Folder baru
     .accesskey = b
-
-bookmark-overlay-tags =
-    .value = Tag:
-    .accesskey = T
 
 bookmark-overlay-tags-2 =
     .value = Tag
@@ -55,9 +46,11 @@ bookmark-overlay-tags-expander =
     .tooltiptextdown = { bookmark-overlay-tags-expander.tooltiptext }
     .tooltiptextup = Sembunyikan
 
-bookmark-overlay-keyword =
-    .value = Kata Kunci:
-    .accesskey = K
+bookmark-overlay-tags-expander2 =
+    .tooltiptext = Tampilkan semua Tag
+
+bookmark-overlay-tags-expander-hide =
+    .tooltiptext = Sembunyikan
 
 bookmark-overlay-keyword-2 =
     .value = Kata Kunci

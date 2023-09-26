@@ -7,16 +7,12 @@ page-subtitle =
     This page contains technical information that might be useful when you’re
     trying to solve a problem. If you are looking for answers to common questions
     about { -brand-short-name }, check out our <a data-l10n-name="support-link">support website</a>.
+
 crashes-title = Crash Reports
 crashes-id = Report ID
 crashes-send-date = Submitted
 crashes-all-reports = All Crash Reports
 crashes-no-config = This application has not been configured to display crash reports.
-extensions-title = Extensions
-extensions-name = Name
-extensions-enabled = Enabled
-extensions-version = Version
-extensions-id = ID
 support-addons-title = Add-ons
 support-addons-name = Name
 support-addons-type = Type
@@ -80,6 +76,14 @@ app-basics-location-service-key-google = Google Location Service Key
 app-basics-safebrowsing-key-google = Google Safebrowsing Key
 app-basics-key-mozilla = Mozilla Location Service Key
 app-basics-safe-mode = Safe Mode
+app-basics-memory-size = Memory Size (RAM)
+app-basics-disk-available = Disk Space Available
+
+# Variables:
+#   $value (number) - Amount of data being stored
+#   $unit (string) - The unit of data being stored (e.g. MB)
+app-basics-data-size = { $value } { $unit }
+
 show-dir-label =
     { PLATFORM() ->
         [macos] Show in Finder
@@ -109,11 +113,21 @@ graphics-gpu2-title = GPU #2
 graphics-decision-log-title = Decision Log
 graphics-crash-guards-title = Crash Guard Disabled Features
 graphics-workarounds-title = Workarounds
+graphics-device-pixel-ratios = Window Device Pixel Ratios
 # Windowing system in use on Linux (e.g. X11, Wayland).
 graphics-window-protocol = Window Protocol
 # Desktop environment in use on Linux (e.g. GNOME, KDE, XFCE, etc).
 graphics-desktop-environment = Desktop Environment
 place-database-title = Places Database
+place-database-stats = Statistics
+place-database-stats-show = Show Statistics
+place-database-stats-hide = Hide Statistics
+place-database-stats-entity = Entity
+place-database-stats-count = Count
+place-database-stats-size-kib = Size (KiB)
+place-database-stats-size-perc = Size (%)
+place-database-stats-efficiency-perc = Efficiency (%)
+place-database-stats-sequentiality-perc = Sequentiality (%)
 place-database-integrity = Integrity
 place-database-verify-integrity = Verify Integrity
 a11y-title = Accessibility
@@ -133,8 +147,6 @@ sandbox-sys-call-tid = TID
 sandbox-sys-call-proc-type = Process Type
 sandbox-sys-call-number = Syscall
 sandbox-sys-call-args = Arguments
-safe-mode-title = Try Safe Mode
-restart-in-safe-mode-label = Restart with Add-ons Disabled…
 troubleshoot-mode-title = Diagnose issues
 restart-in-troubleshoot-mode-label = Troubleshoot Mode…
 clear-startup-cache-title = Try clearing the startup cache
@@ -162,8 +174,11 @@ media-device-channels = Channels
 media-device-rate = Rate
 media-device-latency = Latency
 media-capabilities-title = Media Capabilities
+media-codec-support-info = Codec Support Information
 # List all the entries of the database.
 media-capabilities-enumerate = Enumerate database
+
+## Codec support table
 
 ##
 
@@ -192,36 +207,6 @@ remote-debugging-url = URL
 
 ##
 
-support-third-party-modules-title = Third-Party Modules
-support-third-party-modules-module = Module File
-support-third-party-modules-version = File Version
-support-third-party-modules-vendor = Vendor Info
-support-third-party-modules-occurrence = Occurrence
-support-third-party-modules-process = Process Type & ID
-support-third-party-modules-thread = Thread
-support-third-party-modules-base = Imagebase Address
-support-third-party-modules-uptime = Process Uptime (ms)
-support-third-party-modules-duration = Loading Duration (ms)
-support-third-party-modules-status = Status
-support-third-party-modules-status-loaded = Loaded
-support-third-party-modules-status-blocked = Blocked
-support-third-party-modules-status-redirected = Redirected
-support-third-party-modules-empty = No third-party modules were loaded.
-support-third-party-modules-no-value = (No value)
-support-third-party-modules-button-open =
-    .title = Open file location…
-support-third-party-modules-expand =
-    .title = Show detailed information
-support-third-party-modules-collapse =
-    .title = Collapse detailed information
-support-third-party-modules-unsigned-icon =
-    .title = This module is not signed
-support-third-party-modules-folder-icon =
-    .title = Open file location…
-support-third-party-modules-down-icon =
-    .title = Show detailed information
-support-third-party-modules-up-icon =
-    .title = Collapse detailed information
 # Variables
 # $days (Integer) - Number of days of crashes to log
 report-crash-for-days =
@@ -229,6 +214,7 @@ report-crash-for-days =
         [one] Crash Reports for the Last { $days } Day
        *[other] Crash Reports for the Last { $days } Days
     }
+
 # Variables
 # $minutes (integer) - Number of minutes since crash
 crashes-time-minutes =
@@ -236,6 +222,7 @@ crashes-time-minutes =
         [one] { $minutes } minute ago
        *[other] { $minutes } minutes ago
     }
+
 # Variables
 # $hours (integer) - Number of hours since crash
 crashes-time-hours =
@@ -243,6 +230,7 @@ crashes-time-hours =
         [one] { $hours } hour ago
        *[other] { $hours } hours ago
     }
+
 # Variables
 # $days (integer) - Number of days since crash
 crashes-time-days =
@@ -250,6 +238,7 @@ crashes-time-days =
         [one] { $days } day ago
        *[other] { $days } days ago
     }
+
 # Variables
 # $reports (integer) - Number of pending reports
 pending-reports =
@@ -257,6 +246,7 @@ pending-reports =
         [one] All Crash Reports (including { $reports } pending crash in the given time range)
        *[other] All Crash Reports (including { $reports } pending crashes in the given time range)
     }
+
 raw-data-copied = Raw data copied to clipboard
 text-copied = Text copied to clipboard
 
@@ -269,9 +259,11 @@ blocked-mismatched-version = Blocked for your graphics driver version mismatch b
 # Variables
 # $driverVersion - The graphics driver version string
 try-newer-driver = Blocked for your graphics driver version. Try updating your graphics driver to version { $driverVersion } or newer.
+
 # "ClearType" is a proper noun and should not be translated. Feel free to leave English strings if
 # there are no good translations, these are only used in about:support
 clear-type-parameters = ClearType Parameters
+
 compositing = Compositing
 hardware-h264 = Hardware H264 Decoding
 main-thread-no-omtc = main thread, no OMTC
@@ -286,6 +278,7 @@ virtual-monitor-disp = Virtual Monitor Display
 
 found = Found
 missing = Missing
+
 gpu-process-pid = GPUProcessPid
 gpu-process = GPUProcess
 gpu-description = Description
@@ -308,21 +301,21 @@ webgl2-renderer = WebGL 2 Driver Renderer
 webgl2-version = WebGL 2 Driver Version
 webgl2-driver-extensions = WebGL 2 Driver Extensions
 webgl2-extensions = WebGL 2 Extensions
-blocklisted-bug = Blocklisted due to known issues
-# Variables
-# $bugNumber (string) - String of bug number from Bugzilla
-bug-link = bug { $bugNumber }
+webgpu-default-adapter = WebGPU Default Adapter
+webgpu-fallback-adapter = WebGPU Fallback Adapter
+
 # Variables
 #   $bugNumber (string) - Bug number on Bugzilla
 support-blocklisted-bug = Blocklisted due to known issues: <a data-l10n-name="bug-link">bug { $bugNumber }</a>
+
 # Variables
 # $failureCode (string) - String that can be searched in the source tree.
 unknown-failure = Blocklisted; failure code { $failureCode }
+
 d3d11layers-crash-guard = D3D11 Compositor
-d3d11video-crash-guard = D3D11 Video Decoder
-d3d9video-crash-guard = D3D9 Video Decoder
 glcontext-crash-guard = OpenGL
 wmfvpxvideo-crash-guard = WMF VPX Video Decoder
+
 reset-on-next-restart = Reset on Next Restart
 gpu-process-kill-button = Terminate GPU Process
 gpu-device-reset = Device Reset
@@ -332,8 +325,10 @@ content-uses-tiling = Uses Tiling (Content)
 off-main-thread-paint-enabled = Off Main Thread Painting Enabled
 off-main-thread-paint-worker-count = Off Main Thread Painting Worker Count
 target-frame-rate = Target Frame Rate
+
 min-lib-versions = Expected minimum version
 loaded-lib-versions = Version in use
+
 has-seccomp-bpf = Seccomp-BPF (System Call Filtering)
 has-seccomp-tsync = Seccomp Thread Synchronization
 has-user-namespaces = User Namespaces
@@ -343,31 +338,27 @@ can-sandbox-media = Media Plugin Sandboxing
 content-sandbox-level = Content Process Sandbox Level
 effective-content-sandbox-level = Effective Content Process Sandbox Level
 content-win32k-lockdown-state = Win32k Lockdown State for Content Process
+support-sandbox-gpu-level = GPU Process Sandbox Level
 sandbox-proc-type-content = content
 sandbox-proc-type-file = file content
 sandbox-proc-type-media-plugin = media plugin
 sandbox-proc-type-data-decoder = data decoder
+
 startup-cache-title = Startup Cache
 startup-cache-disk-cache-path = Disk Cache Path
 startup-cache-ignore-disk-cache = Ignore Disk Cache
 startup-cache-found-disk-cache-on-init = Found Disk Cache on Init
 startup-cache-wrote-to-disk-cache = Wrote to Disk Cache
+
 launcher-process-status-0 = Enabled
 launcher-process-status-1 = Disabled due to failure
 launcher-process-status-2 = Disabled forcibly
 launcher-process-status-unknown = Unknown status
+
 # Variables
 # $remoteWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
 multi-process-windows = { $remoteWindows }/{ $totalWindows }
-multi-process-status-0 = Enabled by user
-multi-process-status-1 = Enabled by default
-multi-process-status-2 = Disabled
-multi-process-status-4 = Disabled by accessibility tools
-multi-process-status-6 = Disabled by unsupported text input
-multi-process-status-7 = Disabled by add-ons
-multi-process-status-8 = Disabled forcibly
-multi-process-status-unknown = Unknown status
 # Variables
 # $fissionWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
@@ -376,13 +367,14 @@ fission-status-experiment-control = Disabled by experiment
 fission-status-experiment-treatment = Enabled by experiment
 fission-status-disabled-by-e10s-env = Disabled by environment
 fission-status-enabled-by-env = Enabled by environment
-fission-status-disabled-by-safe-mode = Disabled by safe mode
+fission-status-disabled-by-env = Disabled by environment
 fission-status-enabled-by-default = Enabled by default
 fission-status-disabled-by-default = Disabled by default
 fission-status-enabled-by-user-pref = Enabled by user
 fission-status-disabled-by-user-pref = Disabled by user
 fission-status-disabled-by-e10s-other = E10s disabled
 fission-status-enabled-by-rollout = Enabled by phased rollout
+
 async-pan-zoom = Asynchronous Pan/Zoom
 apz-none = none
 wheel-enabled = wheel input enabled
@@ -419,6 +411,7 @@ support-remote-experiments-title = Remote Experiments
 support-remote-experiments-name = Name
 support-remote-experiments-branch = Experiment Branch
 support-remote-experiments-see-about-studies = See <a data-l10n-name="support-about-studies-link">about:studies</a> for more information, including how to disable individual experiments or to disable { -brand-short-name } from running this type of experiment in the future.
+
 support-remote-features-title = Remote Features
 support-remote-features-name = Name
 support-remote-features-status = Status

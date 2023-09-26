@@ -4,24 +4,21 @@
 
 page-title = Technické informace
 page-subtitle =
-    Tato stránka obsahuje technické informace, které mohou být užitečné, pokud se snažíte
-    vyřešit nějaký složitější problém s aplikací. Odpovědi na často kladené otázky ohledně
-    { -brand-short-name.gender ->
-        [masculine] { -brand-short-name(case: "gen") }
-        [feminine] { -brand-short-name(case: "gen") }
-        [neuter] { -brand-short-name(case: "gen") }
-       *[other] aplikace { -brand-short-name }
-    } naleznete na <a data-l10n-name="support-link">webových stránkách podpory</a>.
+    { -brand-short-name.case-status ->
+        [with-cases]
+            Tato stránka obsahuje technické informace, které mohou být užitečné, pokud se snažíte
+            vyřešit nějaký složitější problém s aplikací. Odpovědi na často kladené otázky ohledně
+            { -brand-short-name(case: "gen") } naleznete na <a data-l10n-name="support-link">webových stránkách podpory</a>.
+       *[no-cases]
+            Tato stránka obsahuje technické informace, které mohou být užitečné, pokud se snažíte
+            vyřešit nějaký složitější problém s aplikací. Odpovědi na často kladené otázky ohledně
+            aplikace { -brand-short-name } naleznete na <a data-l10n-name="support-link">webových stránkách podpory</a>.
+    }
 crashes-title = Hlášení pádů
 crashes-id = ID hlášení
 crashes-send-date = Odeslaná
 crashes-all-reports = Všechna hlášení o pádech
 crashes-no-config = Tato aplikace nebyla pro zobrazení hlášení o pádech nastavena.
-extensions-title = Rozšíření
-extensions-name = Název
-extensions-enabled = Povoleno
-extensions-version = Verze
-extensions-id = ID
 support-addons-title = Doplňky
 support-addons-name = Název
 support-addons-type = Typ
@@ -35,11 +32,9 @@ security-software-antivirus = Antivir
 security-software-antispyware = Antispyware
 security-software-firewall = Firewall
 features-title =
-    Funkce { -brand-short-name.gender ->
-        [masculine] { -brand-short-name(case: "gen") }
-        [feminine] { -brand-short-name(case: "gen") }
-        [neuter] { -brand-short-name(case: "gen") }
-       *[other] aplikace { -brand-short-name }
+    { -brand-short-name.case-status ->
+        [with-cases] Funkce { -brand-short-name(case: "gen") }
+       *[no-cases] Funkce aplikace { -brand-short-name }
     }
 features-name = Název
 features-version = Verze
@@ -83,6 +78,12 @@ app-basics-location-service-key-google = Klíč služby Google Location Service
 app-basics-safebrowsing-key-google = Klíč služby Google Safebrowsing
 app-basics-key-mozilla = Klíč Mozilla Location Service
 app-basics-safe-mode = Nouzový režim
+app-basics-memory-size = Velikost paměti (RAM)
+app-basics-disk-available = Dostupné místo na disku
+# Variables:
+#   $value (number) - Amount of data being stored
+#   $unit (string) - The unit of data being stored (e.g. MB)
+app-basics-data-size = { $value } { $unit }
 show-dir-label =
     { PLATFORM() ->
         [macos] Zobrazit ve Finderu
@@ -99,12 +100,10 @@ modified-prefs-name = Název
 modified-prefs-value = Hodnota
 user-js-title = Předvolby user.js
 user-js-description =
-    Složka s profilem obsahuje <a data-l10n-name="user-js-link">soubor user.js</a>, který obsahuje předvolby, které nebyly vytvořeny { -brand-short-name.gender ->
-        [masculine] { -brand-short-name(case: "ins") }
-        [feminine] { -brand-short-name(case: "ins") }
-        [neuter] { -brand-short-name(case: "ins") }
-       *[other] aplikací { -brand-short-name }
-    }.
+    { -brand-short-name.case-status ->
+        [with-cases] Složka s profilem obsahuje <a data-l10n-name="user-js-link">soubor user.js</a>, který obsahuje předvolby, které nebyly vytvořeny { -brand-short-name(case: "ins") }.
+       *[no-cases] Složka s profilem obsahuje <a data-l10n-name="user-js-link">soubor user.js</a>, který obsahuje předvolby, které nebyly vytvořeny aplikací { -brand-short-name }.
+    }
 locked-key-prefs-title = Důležité uzamčené předvolby
 locked-prefs-name = Název
 locked-prefs-value = Hodnota
@@ -117,11 +116,21 @@ graphics-gpu2-title = GPU #2
 graphics-decision-log-title = Protokol rozhodování
 graphics-crash-guards-title = Zakázat funkce Crash Guard
 graphics-workarounds-title = Možná řešení
+graphics-device-pixel-ratios = Poměr pixelů zařízení okna
 # Windowing system in use on Linux (e.g. X11, Wayland).
 graphics-window-protocol = Protokol zobrazování oken
 # Desktop environment in use on Linux (e.g. GNOME, KDE, XFCE, etc).
 graphics-desktop-environment = Desktopové prostředí
 place-database-title = Databáze Places
+place-database-stats = Statistiky
+place-database-stats-show = Zobrazit statistiku
+place-database-stats-hide = Skrýt statistiku
+place-database-stats-entity = Entita
+place-database-stats-count = Počet
+place-database-stats-size-kib = Velikost (KiB)
+place-database-stats-size-perc = Velikost (%)
+place-database-stats-efficiency-perc = Efektivita (%)
+place-database-stats-sequentiality-perc = Sekvence (%)
 place-database-integrity = Integrita
 place-database-verify-integrity = Zkontrolovat integritu
 a11y-title = Přístupnost
@@ -141,19 +150,15 @@ sandbox-sys-call-tid = TID
 sandbox-sys-call-proc-type = Typ procesu
 sandbox-sys-call-number = Systémové volání
 sandbox-sys-call-args = Argumenty
-safe-mode-title = Vyzkoušet nouzový režim
-restart-in-safe-mode-label = Restartovat se zakázanými doplňky…
 troubleshoot-mode-title = Diagnostika problémů
 restart-in-troubleshoot-mode-label = Režim řešení potíží…
 clear-startup-cache-title = Zkuste vymazat mezipaměť spouštění
 clear-startup-cache-label = Vymazat mezipaměť spouštění…
 startup-cache-dialog-title2 =
-    Chcete restartovat { -brand-shorter-name.gender ->
-        [masculine] { -brand-short-name(case: "acc") }
-        [feminine] { -brand-short-name(case: "acc") }
-        [neuter] { -brand-short-name(case: "acc") }
-       *[other] aplikaci { -brand-short-name }
-    } a vymazat mezipaměť spouštění?
+    { -brand-shorter-name.case-status ->
+        [with-cases] Chcete restartovat { -brand-short-name(case: "acc") } a vymazat mezipaměť spouštění?
+       *[no-cases] Chcete restartovat aplikaci { -brand-short-name } a vymazat mezipaměť spouštění?
+    }
 startup-cache-dialog-body2 = Vaše nastavení i nainstalována rozšíření nebudou nijak ovlivněna.
 restart-button-label = Restartovat
 
@@ -176,8 +181,18 @@ media-device-channels = Kanály
 media-device-rate = Vzorkování
 media-device-latency = Prodleva
 media-capabilities-title = Podpora médií
+media-codec-support-info = Informace o podpoře kodeků
 # List all the entries of the database.
 media-capabilities-enumerate = Vypsat databázi
+
+## Codec support table
+
+media-codec-support-sw-decoding = Softwarové dekódování
+media-codec-support-hw-decoding = Hardwarové dekódování
+media-codec-support-codec-name = Název kodeku
+media-codec-support-supported = Podporované
+media-codec-support-unsupported = Nepodporováné
+media-codec-support-error = Informace o podpoře kodeků není k dispozici. Zkuste to znovu po přehrání mediálního souboru.
 
 ##
 
@@ -206,36 +221,6 @@ remote-debugging-url = URL
 
 ##
 
-support-third-party-modules-title = Moduly třetích stran
-support-third-party-modules-module = Soubor modulu
-support-third-party-modules-version = Verze souboru
-support-third-party-modules-vendor = Informace poskytovatele
-support-third-party-modules-occurrence = Výskyt
-support-third-party-modules-process = Typ a ID procesu
-support-third-party-modules-thread = Vlákno
-support-third-party-modules-base = Adresa Imagebase
-support-third-party-modules-uptime = Doba běhu procesu (ms)
-support-third-party-modules-duration = Doba načítání (ms)
-support-third-party-modules-status = Stav
-support-third-party-modules-status-loaded = Načteno
-support-third-party-modules-status-blocked = Zablokováno
-support-third-party-modules-status-redirected = Přesměrováno
-support-third-party-modules-empty = Nebyly načteny žádné moduly třetích stran.
-support-third-party-modules-no-value = (žádná hodnota)
-support-third-party-modules-button-open =
-    .title = Otevřít umístění souboru…
-support-third-party-modules-expand =
-    .title = Zobrazit podrobnosti
-support-third-party-modules-collapse =
-    .title = Skrýt podrobnosti
-support-third-party-modules-unsigned-icon =
-    .title = Tento modul není podepsán
-support-third-party-modules-folder-icon =
-    .title = Otevřít umístění souboru…
-support-third-party-modules-down-icon =
-    .title = Zobrazit podrobnosti
-support-third-party-modules-up-icon =
-    .title = Skrýt podrobnosti
 # Variables
 # $days (Integer) - Number of days of crashes to log
 report-crash-for-days =
@@ -327,10 +312,8 @@ webgl2-renderer = Zobrazování WebGL2
 webgl2-version = Verze ovladače WebGL 2
 webgl2-driver-extensions = Rozšíření ovladače WebGL 2
 webgl2-extensions = Rozšíření WebGL 2
-blocklisted-bug = Zablokováno kvůli známé chybě
-# Variables
-# $bugNumber (string) - String of bug number from Bugzilla
-bug-link = bug { $bugNumber }
+webgpu-default-adapter = Výchozí adaptér WebGPU
+webgpu-fallback-adapter = Záložní adaptér WebGPU
 # Variables
 #   $bugNumber (string) - Bug number on Bugzilla
 support-blocklisted-bug = Zablokováno kvůli známým problémům: <a data-l10n-name="bug-link">bug { $bugNumber }</a>
@@ -338,8 +321,6 @@ support-blocklisted-bug = Zablokováno kvůli známým problémům: <a data-l10n
 # $failureCode (string) - String that can be searched in the source tree.
 unknown-failure = Zablokováno; chybový kód { $failureCode }
 d3d11layers-crash-guard = D3D11 Compositor
-d3d11video-crash-guard = D3D11 Video dekodér
-d3d9video-crash-guard = D3D9 Video dekodér
 glcontext-crash-guard = OpenGL
 wmfvpxvideo-crash-guard = WMF VPX Video dekodér
 reset-on-next-restart = Obnovit po při příštím restartu
@@ -362,6 +343,7 @@ can-sandbox-media = Sandbox zásuvných modulů médií
 content-sandbox-level = Úroveň sandboxu procesů pro obsah
 effective-content-sandbox-level = Účinná úroveň sandboxu procesů pro obsah
 content-win32k-lockdown-state = Stav uzamčení Win32k procesů pro obsah
+support-sandbox-gpu-level = Úroveň sandboxu procesů GPU
 sandbox-proc-type-content = obsah
 sandbox-proc-type-file = obsah souboru
 sandbox-proc-type-media-plugin = zásuvný modul médií
@@ -379,14 +361,6 @@ launcher-process-status-unknown = Neznámý stav
 # $remoteWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
 multi-process-windows = { $remoteWindows }/{ $totalWindows }
-multi-process-status-0 = Povoleno uživatelem
-multi-process-status-1 = Povoleno ve výchozím nastavení
-multi-process-status-2 = Zakázáno
-multi-process-status-4 = Zakázáno nástroji pro přístupnost
-multi-process-status-6 = Zakázáno pro nepodporovaný textový vstup
-multi-process-status-7 = Zakázáno doplňky
-multi-process-status-8 = Násilně zakázáno
-multi-process-status-unknown = Neznámý stav
 # Variables
 # $fissionWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
@@ -395,7 +369,7 @@ fission-status-experiment-control = Zakázáno experimentem
 fission-status-experiment-treatment = Povoleno experimentem
 fission-status-disabled-by-e10s-env = Zakázáno prostředím
 fission-status-enabled-by-env = Povoleno prostředím
-fission-status-disabled-by-safe-mode = Zakázáno v nouzovém režimu
+fission-status-disabled-by-env = Zakázáno prostředím
 fission-status-enabled-by-default = Povoleno ve výchozím nastavení
 fission-status-disabled-by-default = Zakázáno ve výchozím nastavení
 fission-status-enabled-by-user-pref = Povoleno uživatelem

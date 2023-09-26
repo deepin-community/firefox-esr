@@ -33,7 +33,7 @@ search-focus-shortcut =
 #   - web search
 #   - find in page
 find-shortcut =
-    .key = f
+    .key = F
 
 search-find-again-shortcut =
     .key = g
@@ -109,6 +109,9 @@ nav-stop-shortcut =
 history-show-all-shortcut =
     .key = H
 
+history-show-all-shortcut-mac =
+    .key = Y
+
 history-sidebar-shortcut =
     .key = h
 
@@ -131,23 +134,25 @@ picture-in-picture-toggle-shortcut-alt =
     .key = { "}" }
 
 bookmark-this-page-shortcut =
-    .key = d
+    .key = D
 
 # Verify what shortcut for that operation
 # are recommended by the Human Interface Guidelines
 # of each platform for your locale.
-bookmark-show-all-shortcut =
-    .key =
-        { PLATFORM() ->
-            [linux] o
-           *[other] b
-        }
+bookmark-show-library-shortcut =
+    .key = O
 
 # Verify what shortcut for that operation
 # are recommended by the Human Interface Guidelines
 # of each platform for your locale.
 bookmark-show-sidebar-shortcut =
-    .key = b
+    .key = B
+
+# Verify what shortcut for that operation
+# are recommended by the Human Interface Guidelines
+# of each platform for your locale.
+bookmark-show-toolbar-shortcut =
+    .key = B
 
 ## All `-alt*` messages are alternative acceleration keys for zoom.
 ## If shift key is needed with your locale popular keyboard for them,
@@ -156,10 +161,10 @@ bookmark-show-sidebar-shortcut =
 full-zoom-reduce-shortcut =
     .key = -
 
-# If in keyboard layouts popular for your locale you need to use the shift key
-# to access the original shortcuts, the following shortcuts can be used.
-# Otherwise their values should remain empty.
-full-zoom-reduce-shortcut-alt =
+full-zoom-reduce-shortcut-alt-a =
+    .key = _
+
+full-zoom-reduce-shortcut-alt-b =
     .key = { "" }
 
 full-zoom-enlarge-shortcut =

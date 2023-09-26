@@ -9,8 +9,6 @@
 
 process-type-web = Webový obsah
 
-process-type-browser = Hlavný
-
 # process used to run privileged about pages,
 # such as about:home
 process-type-privilegedabout = Privilegované about stránky
@@ -24,13 +22,13 @@ process-type-extension = Rozšírenie
 # process used to open file:// URLs
 process-type-file = Miestny súbor
 
-# process used to isolate webpages that requested special
-# permission to allocate large amounts of memory
-process-type-weblargeallocation = Veľká alokácia pamäte
-
 # process used to isolate a webpage from other web pages
 # to improve security
 process-type-webisolated = Izolovaný webový obsah
+
+# process used to isolate a ServiceWorker to improve
+# performance
+process-type-webserviceworker = Izolovaný Service Worker
 
 # process preallocated; may change to other types
 process-type-prealloc = Vopred alokované
@@ -51,6 +49,9 @@ process-type-socket = Socket
 
 # process used to decode media
 process-type-rdd = RDD
+
+# process used to run some IPC actor in their own sandbox
+process-type-utility = IPC actor v sandboxe
 
 ##
 ## Other

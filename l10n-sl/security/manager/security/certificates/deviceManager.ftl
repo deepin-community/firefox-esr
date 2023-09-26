@@ -5,9 +5,9 @@
 
 ## Strings used for device manager
 
-devmgr =
+devmgr-window =
     .title = Upravitelj naprav
-    .style = width: 67em; height: 32em;
+    .style = min-width: 67em; min-height: 32em;
 
 devmgr-devlist =
     .label = Varnostni moduli in naprave
@@ -115,8 +115,6 @@ devinfo-label =
 
 devinfo-serialnum =
     .label = Serijska številka
-
-fips-nonempty-password-required = Način FIPS zahteva, da imate nastavljeno glavno geslo za vsako varnostno napravo. Prosim, nastavite geslo, preden omogočite način FIPS.
 
 fips-nonempty-primary-password-required = Način FIPS zahteva, da imate nastavljeno glavno geslo za vsako varnostno napravo. Prosim, nastavite geslo, preden omogočite način FIPS.
 unable-to-toggle-fips = Sprememba načina FIPS za varnostno napravo ni mogoče. Priporočamo vam, da zaključite in ponovno začenete program.

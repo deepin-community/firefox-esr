@@ -3,7 +3,7 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 certmgr-title =
-    .title = Sertifikat-handterar
+    .title = Sertifikat-handsamar
 
 certmgr-tab-mine =
     .label = Dine sertifikat
@@ -23,49 +23,12 @@ certmgr-tab-ca =
 certmgr-mine = Du har sertifikat frå desse organisasjonene som identifiserer deg
 certmgr-remembered = Desse sertifikata vert brukte til å identifisere deg til nettstadar
 certmgr-people = Du har lagra sertifikat som identifiserer desse personane
-certmgr-servers = Du har lagra sertifikat som identifiserer desse serverane
 certmgr-server = Desse oppføringane identifiserer unntak frå serversertifikat
 certmgr-ca = Du har lagra sertifikat som identifiserer desse sertifikatstyremaktene
 
-certmgr-detail-general-tab-title =
-    .label = Generelt
-    .accesskey = G
-
-certmgr-detail-pretty-print-tab-title =
-    .label = Detaljar
-    .accesskey = D
-
-certmgr-pending-label =
-    .value = Stadfestar sertifikatet…
-
-certmgr-subject-label = Skrive ut til
-
-certmgr-issuer-label = Skrive ut av
-
-certmgr-period-of-validity = Gjeld i perioden
-
-certmgr-fingerprints = Fingeravtrykk
-
-certmgr-cert-detail =
-    .title = Sertifikatdetaljar
-    .buttonlabelaccept = Lat att
-    .buttonaccesskeyaccept = L
-
-certmgr-cert-detail-commonname = Vanleg namn (CN)
-
-certmgr-cert-detail-org = Organisasjon (O)
-
-certmgr-cert-detail-orgunit = Organisasjonseining (OU)
-
-certmgr-cert-detail-serial-number = Serienummer
-
-certmgr-cert-detail-sha-256-fingerprint = SHA-256 fingeravtrykk
-
-certmgr-cert-detail-sha-1-fingerprint = SHA1 fingeravtrykk
-
-certmgr-edit-ca-cert =
+certmgr-edit-ca-cert2 =
     .title = Rediger tiltru for CA-sertifikatet
-    .style = width: 48em;
+    .style = min-width: 48em;
 
 certmgr-edit-cert-edit-trust = Rediger tiltru:
 
@@ -75,9 +38,9 @@ certmgr-edit-cert-trust-ssl =
 certmgr-edit-cert-trust-email =
     .label = Dette sertifikatet kan identifisera e-postbrukarar.
 
-certmgr-delete-cert =
+certmgr-delete-cert2 =
     .title = Slett sertifikat
-    .style = width: 48em; height: 24em;
+    .style = min-width: 48em; min-height: 24em;
 
 certmgr-cert-host =
     .label = Vert
@@ -88,18 +51,11 @@ certmgr-cert-name =
 certmgr-cert-server =
     .label = Tenar
 
-certmgr-override-lifetime =
-    .label = Levetid
-
 certmgr-token-name =
     .label = Tryggingseining
 
-certmgr-begins-on = Startar den
-
 certmgr-begins-label =
     .label = Startar den
-
-certmgr-expires-on = Går ut
 
 certmgr-expires-label =
     .label = Går ut
@@ -109,6 +65,9 @@ certmgr-email =
 
 certmgr-serial =
     .label = Serienummer
+
+certmgr-fingerprint-sha-256 =
+    .label = SHA-256-fingeravtrykk
 
 certmgr-view =
     .label = Vis…
@@ -141,18 +100,6 @@ certmgr-backup-all =
 certmgr-restore =
     .label = Importer…
     .accesskey = m
-
-certmgr-details =
-    .value = Sertifikatfelt
-    .accesskey = r
-
-certmgr-fields =
-    .value = Feltverdi
-    .accesskey = F
-
-certmgr-hierarchy =
-    .value = Sertifikathierarki
-    .accesskey = k
 
 certmgr-add-exception =
     .label = Legg til unntak…
@@ -216,12 +163,6 @@ delete-user-cert-confirm = Er du sikker på at du vil sletta desse sertifikata?
 delete-user-cert-impact = Dersom du slettar eitt av dine eigne sertifikat, kan du ikkje lenger bruka det for å identifisere deg sjølv.
 
 
-delete-ssl-cert-title =
-    .title = Slett unntak i nettstadsertifikat
-delete-ssl-cert-confirm = Er du sikker på at du vil sletta sertifikata for desse nettstadene?
-delete-ssl-cert-impact = Dersom du slettar eit nettstad-sertifikat vil du verta spurd om å godta sertifikatet neste gong du vitjar nettstaden.
-
-
 delete-ssl-override-title =
     .title = Slett unntak i nettstadsertifikat
 delete-ssl-override-confirm = Er du sikker på at du vil slette dette nettstadunntaket?
@@ -244,47 +185,6 @@ delete-email-cert-impact = Dersom du slettar ein person sitt e-postsertifikat vi
 #   $serialNumber : the serial number of the cert in AA:BB:CC hex format.
 cert-with-serial =
     .value = Sertifikat med serienummer: { $serialNumber }
-
-## Cert Viewer
-
-# Title used for the Certificate Viewer.
-#
-# Variables:
-#   $certificate : a string representative of the certificate being viewed.
-cert-viewer-title =
-    .title = Sertifikatvisar: “{ $certName }”
-
-not-present =
-    .value = <Ikkje ein del av sertifikatet>
-
-# Cert verification
-cert-verified = Sertifikatet har vorte stadfesta for følgjande brukarar:
-
-# Add usage
-verify-ssl-client =
-    .value = SSL klientsertifikat
-
-verify-ssl-server =
-    .value = SSL tenarsertifikat
-
-verify-ssl-ca =
-    .value = SSL sertifikatutskrivar
-
-verify-email-signer =
-    .value = Signatursertifikat for e-post
-
-verify-email-recip =
-    .value = Mottakarsertifikat for e-post
-
-# Cert verification
-cert-not-verified-cert-revoked = Klarte ikkje å stadfesta sertifikatet fordi det har vorte oppheva.
-cert-not-verified-cert-expired = Klarte ikkje å stadfesta sertifikatet fordi det har gått ut.
-cert-not-verified-cert-not-trusted = Klarte ikkje å stadfesta sertifikatet fordi det er ikkje tiltrudd.
-cert-not-verified-issuer-not-trusted = Klarte ikkje å stadfesta sertifikatet fordi utskrivaren ikkje er tiltrudd.
-cert-not-verified-issuer-unknown = Klarte ikkje å stadfesta sertifikatet fordi utskrivaren er ukjend.
-cert-not-verified-ca-invalid = Klarte ikkje å kontrollera sertifikatet fordi CA-sertifikatet er ugyldig.
-cert-not-verified_algorithm-disabled = Klarte ikkje å kontrollera sertifikatet fordi det vart signert av ein signaturalgoritme som er avslått fordi signaturalgoritmen ikkje er trygg.
-cert-not-verified-unknown = Klarte ikkje å kontrollera sertifikatet av ukjend årsak.
 
 # Used to indicate that the user chose not to send a client authentication certificate to a server that requested one in a TLS handshake.
 send-no-client-certificate = Ikkje send klientsertifikat

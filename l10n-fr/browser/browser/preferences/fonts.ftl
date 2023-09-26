@@ -98,7 +98,7 @@ fonts-monospace = Largeur fixe
 fonts-monospace-size = Taille
     .accesskey = e
 
-fonts-minsize = Taille minimale de la police
+fonts-minsize = Taille minimale des polices
     .accesskey = m
 
 fonts-minsize-none =
@@ -107,50 +107,6 @@ fonts-minsize-none =
 fonts-allow-own =
     .label = Autoriser les pages web à utiliser leurs propres polices au lieu de celles choisies ci-dessus
     .accesskey = h
-
-## Text Encodings
-##
-## Translate the encoding names as adjectives for an encoding, not as the name
-## of the language.
-
-fonts-languages-fallback-header = Encodage du texte pour le contenu obsolète
-fonts-languages-fallback-desc = Cet encodage de texte est utilisé pour le contenu obsolète qui ne déclare pas correctement son encodage.
-
-fonts-languages-fallback-label = Encodage de texte de dernier recours
-    .accesskey = c
-
-fonts-languages-fallback-name-auto =
-    .label = Valeur par défaut pour la langue courante
-fonts-languages-fallback-name-arabic =
-    .label = Arabe
-fonts-languages-fallback-name-baltic =
-    .label = Balte
-fonts-languages-fallback-name-ceiso =
-    .label = Europe centrale (ISO)
-fonts-languages-fallback-name-cewindows =
-    .label = Europe centrale (Microsoft)
-fonts-languages-fallback-name-simplified =
-    .label = Chinois simplifié
-fonts-languages-fallback-name-traditional =
-    .label = Chinois traditionnel
-fonts-languages-fallback-name-cyrillic =
-    .label = Cyrillique
-fonts-languages-fallback-name-greek =
-    .label = Grec
-fonts-languages-fallback-name-hebrew =
-    .label = Hébreu
-fonts-languages-fallback-name-japanese =
-    .label = Japonais
-fonts-languages-fallback-name-korean =
-    .label = Coréen
-fonts-languages-fallback-name-thai =
-    .label = Thaï
-fonts-languages-fallback-name-turkish =
-    .label = Turc
-fonts-languages-fallback-name-vietnamese =
-    .label = Vietnamien
-fonts-languages-fallback-name-other =
-    .label = Autre (y compris Europe occidentale)
 
 # Variables:
 #   $name {string, "Arial"} - Name of the default font

@@ -41,15 +41,6 @@ menu-quit =
 menu-quit-mac =
     .label = Gahui' { -brand-shorter-name }
 
-# This menu-quit-button string is only used on Linux.
-menu-quit-button =
-    .label = { menu-quit.label }
-
-# This menu-quit-button-win string is only used on Windows.
-menu-quit-button-win =
-    .label = { menu-quit.label }
-    .tooltip = Gahuit { -brand-shorter-name }
-
 menu-about =
     .label = rayi'î { -brand-shorter-name }
     .accesskey = r
@@ -79,9 +70,6 @@ menu-file-open-location =
 menu-file-open-file =
     .label = Na'nïn' chrûn ñanj...
     .accesskey = O
-menu-file-close =
-    .label = Narán
-    .accesskey = C
 menu-file-close-window =
     .label = Nàrrun' Window
     .accesskey = d
@@ -94,9 +82,6 @@ menu-file-email-link =
 menu-file-print-setup =
     .label = Naduna daj gà riña Pâjina
     .accesskey = u
-menu-file-print-preview =
-    .label = Dàj ga man si narit ñadu'ua
-    .accesskey = v
 menu-file-print =
     .label = Nari' ña du'ua
     .accesskey = P
@@ -112,9 +97,6 @@ menu-file-go-offline =
 menu-edit =
     .label = Nagi'iô'
     .accesskey = E
-menu-edit-find-on =
-    .label = Narì' Riña Pajinà nan…
-    .accesskey = F
 menu-edit-find-again =
     .label = Nana'uì' Ñûn
     .accesskey = g
@@ -130,9 +112,6 @@ menu-view =
 menu-view-toolbars-menu =
     .label = Riña ma sa raj sun'
     .accesskey = T
-menu-view-customize-toolbar =
-    .label = Nagi'iô' daj huin ruhuô'...
-    .accesskey = C
 menu-view-sidebar =
     .label = Dukuán nū yi'ní ma
     .accesskey = e
@@ -163,9 +142,6 @@ menu-view-page-style-no-style =
 menu-view-page-basic-style =
     .label = Si estilo pagina na
     .accesskey = b
-menu-view-charset =
-    .label = Si kodifikasiôn texto:
-    .accesskey = c
 
 ## These should match what Safari and other Apple applications
 ## use on macOS.
@@ -179,6 +155,17 @@ menu-view-exit-full-screen =
 menu-view-full-screen =
     .label = Nagi'iaj gachrò' riña aga' sikà' ràa
     .accesskey = F
+
+## These menu items may use the same accesskey.
+
+# This should match reader-view-enter-button in browser.ftl
+menu-view-enter-readerview =
+    .label = Gatu' riña ahio'
+    .accesskey = R
+# This should match reader-view-close-button in browser.ftl
+menu-view-close-readerview =
+    .label = Nàrun' sa ahio'
+    .accesskey = R
 
 ##
 
@@ -214,12 +201,6 @@ menu-history-undo-window-menu =
 menu-bookmarks-menu =
     .label = Sa raj sun nichrò' doj
     .accesskey = B
-menu-bookmarks-show-all =
-    .label = Ni'io' sa raj sun nichro' doj
-menu-bookmark-this-page =
-    .label = Sa raj sun nichrà' doj pagina na
-menu-bookmark-edit =
-    .label = Nagi'io' sa arajsun nichrò' doj
 menu-bookmarks-all-tabs =
     .label = Nuto' a'ngo rakïj ñanj...
 menu-bookmarks-toolbar =
@@ -237,41 +218,18 @@ menu-tools =
 menu-tools-downloads =
     .label = Nadunïnj
     .accesskey = D
-menu-tools-addons =
-    .label = Sa ga'ue nùtat doj
-    .accesskey = A
-menu-tools-fxa-sign-in =
-    .label = Nutà' si yuguît riña { -brand-product-name }...
-    .accesskey = g
-menu-tools-turn-on-sync =
-    .label = Nachrun { -sync-brand-short-name }...
-    .accesskey = n
 menu-tools-sync-now =
     .label = Gi'iaj sun nugua'ān ma
     .accesskey = S
 menu-tools-fxa-re-auth =
     .label = Natu ñû riña { -brand-product-name }...
     .accesskey = R
-menu-tools-web-developer =
-    .label = Desarroyador web
-    .accesskey = W
 menu-tools-page-source =
     .label = Si kodigo pagina
     .accesskey = o
 menu-tools-page-info =
     .label = Rayi'ì pagina na
     .accesskey = I
-menu-preferences =
-    .label =
-        { PLATFORM() ->
-            [windows] Sa huā gi'iát
-           *[other] Sa arajsunt doj
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] O
-           *[other] n
-        }
 menu-tools-layout-debugger =
     .label = Sa nagi'iaj hue'è diseño
     .accesskey = L
@@ -289,15 +247,6 @@ menu-window-bring-all-to-front =
 # NOTE: For Engineers, any additions or changes to Help menu strings should
 # also be reflected in the related strings in appmenu.ftl. Those strings, by
 # convention, will have the same ID as these, but prefixed with "app".
-# Example: appmenu-help-product
-#
-# These strings are duplicated to allow for different casing depending on
-# where the strings appear.
-
-
-# NOTE: For Engineers, any additions or changes to Help menu strings should
-# also be reflected in the related strings in appmenu.ftl. Those strings, by
-# convention, will have the same ID as these, but prefixed with "app".
 # Example: appmenu-get-help
 #
 # These strings are duplicated to allow for different casing depending on
@@ -306,29 +255,8 @@ menu-window-bring-all-to-front =
 menu-help =
     .label = Sa ruguñu'unj un
     .accesskey = H
-menu-help-product =
-    .label = Sa ruguñu'unj un { -brand-shorter-name }
-    .accesskey = S
-menu-help-show-tour =
-    .label = gache nu' riña { -brand-shorter-name }
-    .accesskey = o
-menu-help-keyboard-shortcuts =
-    .label = Sa hìo doj gà' da' si garasun' teklâdo
-    .accesskey = K
-menu-help-troubleshooting-info =
-    .label = Nuguan' garasun' dàj nagi'iô' sa hua a'nan'an
-    .accesskey = N
 menu-help-report-site-issue =
     .label = Natà' si huā sa huā a'na' riña sitiô…
-menu-help-feedback-page =
-    .label = Ga'nïnj 'ngo si nuguàn't
-    .accesskey = S
-menu-help-safe-mode-without-addons =
-    .label = Nayi'ì ñû' ngà nej sa ga'ue nutò' giyichin'
-    .accesskey = N
-menu-help-safe-mode-with-addons =
-    .label = Nayi'ì ñû' ngà nej sa ga'ue nutò' hua yugui
-    .accesskey = N
 # Label of the Help menu item. Either this or
 # safeb.palm.notdeceptive.label from
 # phishing-afterload-warning-message.dtd is shown.

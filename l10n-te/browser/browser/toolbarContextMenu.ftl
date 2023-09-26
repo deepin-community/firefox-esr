@@ -39,3 +39,6 @@ toolbar-context-menu-bookmarks-toolbar-on-new-tab-2 =
     .label = కొత్త ట్యాబులో మాత్రమే చూపించు
     .accesskey = O
 
+toolbar-context-menu-menu-bar-cmd =
+    .toolbarname = మెనూ పట్టీ
+    .accesskey = M

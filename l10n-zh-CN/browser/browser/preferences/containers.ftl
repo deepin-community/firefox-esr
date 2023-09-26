@@ -2,20 +2,14 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-containers-window-new =
+containers-window-new2 =
     .title = 添加新身份
-    .style = width: 45em
+    .style = min-width: 45em
 # Variables
 #   $name (String) - Name of the container
-containers-window-update =
-    .title = { $name } 身份首选项
-    .style = width: 45em
-
-# Variables
-#   $name (String) - Name of the container
-containers-window-update-settings =
+containers-window-update-settings2 =
     .title = { $name } 身份设置
-    .style = width: 45em
+    .style = min-width: 45em
 
 containers-window-close =
     .key = w
@@ -45,10 +39,6 @@ containers-icon-label = 图标
 containers-color-label = 颜色
     .accesskey = o
     .style = { -containers-labels-style }
-
-containers-button-done =
-    .label = 完成
-    .accesskey = D
 
 containers-dialog =
     .buttonlabelaccept = 完成

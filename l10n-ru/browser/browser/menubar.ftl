@@ -38,16 +38,11 @@ menu-quit =
             [windows] х
            *[other] ы
         }
+
 # This menu-quit-mac string is only used on macOS.
 menu-quit-mac =
     .label = Завершить { -brand-shorter-name }
-# This menu-quit-button string is only used on Linux.
-menu-quit-button =
-    .label = { menu-quit.label }
-# This menu-quit-button-win string is only used on Windows.
-menu-quit-button-win =
-    .label = { menu-quit.label }
-    .tooltip = Выход из { -brand-shorter-name }
+
 menu-about =
     .label = О { -brand-shorter-name }
     .accesskey = О
@@ -77,9 +72,17 @@ menu-file-open-location =
 menu-file-open-file =
     .label = Открыть файл…
     .accesskey = к
-menu-file-close =
-    .label = Закрыть
-    .accesskey = З
+# Variables:
+#  $tabCount (Number): the number of tabs that are affected by the action.
+menu-file-close-tab =
+    .label =
+        { $tabCount ->
+            [1] Закрыть вкладку
+            [one] Закрыть { $tabCount } вкладку
+            [few] Закрыть { $tabCount } вкладки
+           *[many] Закрыть { $tabCount } вкладок
+        }
+    .accesskey = ы
 menu-file-close-window =
     .label = Закрыть окно
     .accesskey = а
@@ -95,9 +98,6 @@ menu-file-share-url =
 menu-file-print-setup =
     .label = Параметры страницы…
     .accesskey = м
-menu-file-print-preview =
-    .label = Предварительный просмотр
-    .accesskey = д
 menu-file-print =
     .label = Печать…
     .accesskey = ч
@@ -113,15 +113,12 @@ menu-file-go-offline =
 menu-edit =
     .label = Правка
     .accesskey = П
-menu-edit-find-on =
-    .label = Найти на этой странице…
-    .accesskey = Н
 menu-edit-find-in-page =
     .label = Найти на странице…
     .accesskey = а
 menu-edit-find-again =
-    .label = Найти ещё раз
-    .accesskey = й
+    .label = Найти следующее
+    .accesskey = с
 menu-edit-bidi-switch-text-direction =
     .label = Переключить направление текста на странице
     .accesskey = т
@@ -134,9 +131,6 @@ menu-view =
 menu-view-toolbars-menu =
     .label = Панели инструментов
     .accesskey = П
-menu-view-customize-toolbar =
-    .label = Настройка…
-    .accesskey = о
 menu-view-customize-toolbar2 =
     .label = Настройка панели инструментов…
     .accesskey = а
@@ -173,9 +167,6 @@ menu-view-page-style-no-style =
 menu-view-page-basic-style =
     .label = Основной стиль страницы
     .accesskey = О
-menu-view-charset =
-    .label = Кодировка текста
-    .accesskey = о
 menu-view-repair-text-encoding =
     .label = Исправить кодировку текста
     .accesskey = п
@@ -192,6 +183,17 @@ menu-view-exit-full-screen =
 menu-view-full-screen =
     .label = Полный экран
     .accesskey = э
+
+## These menu items may use the same accesskey.
+
+# This should match reader-view-enter-button in browser.ftl
+menu-view-enter-readerview =
+    .label = Перейти в режим чтения
+    .accesskey = ч
+# This should match reader-view-close-button in browser.ftl
+menu-view-close-readerview =
+    .label = Закрыть режим чтения
+    .accesskey = ч
 
 ##
 
@@ -221,24 +223,21 @@ menu-history-undo-menu =
     .label = Недавно закрытые вкладки
 menu-history-undo-window-menu =
     .label = Недавно закрытые окна
-menu-history-reopen-all-tabs = Снова открыть все вкладки
-menu-history-reopen-all-windows = Снова открыть все окна
 
 ## Bookmarks Menu
 
 menu-bookmarks-menu =
     .label = Закладки
     .accesskey = З
-menu-bookmarks-show-all =
-    .label = Показать все закладки
-menu-bookmark-this-page =
-    .label = Добавить страницу
 menu-bookmarks-manage =
     .label = Управление закладками
-menu-bookmark-current-tab =
-    .label = Добавить текущую вкладку в закладки
-menu-bookmark-edit =
-    .label = Редактировать эту закладку
+menu-bookmark-tab =
+    .label = Добавить текущую вкладку в закладки…
+menu-edit-bookmark =
+    .label = Изменить эту закладку…
+# "Search" is a verb, as in "Search in bookmarks"
+menu-bookmarks-search =
+    .label = Искать в закладках
 menu-bookmarks-all-tabs =
     .label = Добавить все вкладки…
 menu-bookmarks-toolbar =
@@ -256,15 +255,6 @@ menu-tools =
 menu-tools-downloads =
     .label = Загрузки
     .accesskey = З
-menu-tools-addons =
-    .label = Дополнения
-    .accesskey = Д
-menu-tools-fxa-sign-in =
-    .label = Войти в { -brand-product-name }…
-    .accesskey = й
-menu-tools-turn-on-sync =
-    .label = Включить { -sync-brand-short-name(case: "accusative") }…
-    .accesskey = ю
 menu-tools-addons-and-themes =
     .label = Дополнения и темы
     .accesskey = п
@@ -280,9 +270,6 @@ menu-tools-sync-now =
 menu-tools-fxa-re-auth =
     .label = Переприсоединиться к { -brand-product-name }…
     .accesskey = п
-menu-tools-web-developer =
-    .label = Веб-разработка
-    .accesskey = б
 menu-tools-browser-tools =
     .label = Инструменты браузера
     .accesskey = н
@@ -293,19 +280,8 @@ menu-tools-page-source =
     .label = Исходный код страницы
     .accesskey = х
 menu-tools-page-info =
-    .label = Информация о странице
-    .accesskey = ф
-menu-preferences =
-    .label =
-        { PLATFORM() ->
-            [windows] Настройки
-           *[other] Настройки
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] а
-           *[other] а
-        }
+    .label = Сведения о странице
+    .accesskey = в
 menu-settings =
     .label = Настройки
     .accesskey =
@@ -338,49 +314,31 @@ menu-window-bring-all-to-front =
 menu-help =
     .label = Справка
     .accesskey = С
-menu-help-product =
-    .label = Справка { -brand-shorter-name }
-    .accesskey = к
-menu-help-show-tour =
-    .label = Знакомство с { -brand-shorter-name }
-    .accesskey = м
-menu-help-import-from-another-browser =
-    .label = Импорт из другого браузера…
-    .accesskey = п
-menu-help-keyboard-shortcuts =
-    .label = Сочетания клавиш
-    .accesskey = ч
-menu-help-troubleshooting-info =
-    .label = Информация для решения проблем
-    .accesskey = а
 menu-get-help =
     .label = Получить помощь
     .accesskey = ч
 menu-help-more-troubleshooting-info =
     .label = Информация для решения проблем
-    .accesskey = а
+    .accesskey = И
 menu-help-report-site-issue =
     .label = Сообщить о проблеме с сайтом…
-menu-help-feedback-page =
-    .label = Отправить отзыв…
-    .accesskey = т
-menu-help-safe-mode-without-addons =
-    .label = Перезапустить без дополнений…
-    .accesskey = е
-menu-help-safe-mode-with-addons =
-    .label = Перезапустить с дополнениями
-    .accesskey = е
+menu-help-share-ideas =
+    .label = Поделиться идеями или оставить отзыв
+    .accesskey = д
 menu-help-enter-troubleshoot-mode2 =
     .label = Безопасный режим…
-    .accesskey = й
+    .accesskey = Б
 menu-help-exit-troubleshoot-mode =
     .label = Отключить безопасный режим
-    .accesskey = ю
+    .accesskey = Б
+menu-help-switch-device =
+    .label = Переход на новое устройство
+    .accesskey = х
 # Label of the Help menu item. Either this or
 # menu-help-notdeceptive is shown.
 menu-help-report-deceptive-site =
     .label = Сообщить о поддельном сайте…
-    .accesskey = б
+    .accesskey = п
 menu-help-not-deceptive =
     .label = Это не поддельный сайт…
-    .accesskey = е
+    .accesskey = п

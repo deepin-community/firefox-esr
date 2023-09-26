@@ -23,6 +23,8 @@ profile-selection-delete-button =
     .label = 删除配置文件…
     .accesskey = D
 
+profile-selection-conflict-message = 有另一份 { -brand-product-name } 对配置文件作了更改。您必须重启 { -brand-short-name } 才能再作变更。
+
 ## Messages used in the profile manager
 
 profile-manager-description = { -brand-short-name } 将您的设置、首选项、书签以及邮件保存在您的个人配置文件中。

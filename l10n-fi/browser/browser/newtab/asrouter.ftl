@@ -7,7 +7,6 @@
 
 cfr-doorhanger-extension-heading = Suositeltu laajennus
 cfr-doorhanger-feature-heading = Suositeltu ominaisuus
-cfr-doorhanger-pintab-heading = Kokeile tätä: Kiinnitä välilehti
 
 ##
 
@@ -19,8 +18,6 @@ cfr-doorhanger-extension-cancel-button = Ei nyt
 
 cfr-doorhanger-extension-ok-button = Lisää nyt
     .accesskey = L
-cfr-doorhanger-pintab-ok-button = Kiinnitä tämä välilehti
-    .accesskey = ä
 
 cfr-doorhanger-extension-manage-settings-button = Hallitse suositteluasetuksia
     .accesskey = H
@@ -68,18 +65,6 @@ cfr-doorhanger-extension-total-users =
        *[other] { $total } käyttäjää
     }
 
-cfr-doorhanger-pintab-description = Nopea pääsy suosikkisivustoillesi. Pidä sivustot avoinna välilehdissä jopa uudelleenkäynnistysten välillä.
-
-## These messages are steps on how to use the feature and are shown together.
-
-cfr-doorhanger-pintab-step1 = <b>Napsauta hiiren oikealla</b> välilehteä, jonka haluat kiinnittää.
-cfr-doorhanger-pintab-step2 = Valitse <b>Kiinnitä välilehti</b> valikosta.
-cfr-doorhanger-pintab-step3 = Jos sivustolla on tapahtunut päivitys, näet sinisen pisteen kiinnitetyssä välilehdessä.
-
-cfr-doorhanger-pintab-animation-pause = Tauko
-cfr-doorhanger-pintab-animation-resume = Jatka
-
-
 ## Firefox Accounts Message
 
 cfr-doorhanger-bookmark-fxa-header = Synkronoi kirjanmerkkisi kaikkialla.
@@ -105,132 +90,9 @@ cfr-whatsnew-button =
     .label = Mitä uutta
     .tooltiptext = Mitä uutta
 
-cfr-whatsnew-panel-header = Mitä uutta
-
 cfr-whatsnew-release-notes-link-text = Lue julkaisutiedote
 
-cfr-whatsnew-fx70-title = { -brand-short-name } taistelee nyt entistä lujemmin yksityisyytesi puolesta
-cfr-whatsnew-fx70-body =
-    Viimeisin päivitys parantaa seurannan suojausta ja tekee entistä
-    helpommaksi luoda turvallisen salasanan jokaiselle sivustolle.
-
-cfr-whatsnew-tracking-protect-title = Suojaa itsesi seuraimilta
-cfr-whatsnew-tracking-protect-body =
-    { -brand-short-name } estää monet yleisimmistä sosiaalisen median ja sivustorajat
-    ylittävistä seuraimista, jotka seuraavat tekemisiäsi verkossa.
-cfr-whatsnew-tracking-protect-link-text = Näytä raportti
-
-# This string is displayed before a large numeral that indicates the total
-# number of tracking elements blocked. Don’t add $blockedCount to your
-# localization, because it would result in the number showing twice.
-cfr-whatsnew-tracking-blocked-title =
-    { $blockedCount ->
-        [one] Seurain estetty
-       *[other] Seuraimia estetty
-    }
-cfr-whatsnew-tracking-blocked-subtitle = { DATETIME($earliestDate, month: "long", year: "numeric") } lähtien
-cfr-whatsnew-tracking-blocked-link-text = Näytä raportti
-
-cfr-whatsnew-lockwise-backup-title = Varmuuskopioi salasanasi
-cfr-whatsnew-lockwise-backup-body = Luo turvallisia salasanoja ja käytä niitä mistä hyvänsä kirjaudut sisään.
-cfr-whatsnew-lockwise-backup-link-text = Ota varmuuskopiot käyttöön
-
-cfr-whatsnew-lockwise-take-title = Ota salasanat mukaasi
-cfr-whatsnew-lockwise-take-body =
-    { -lockwise-brand-short-name }-mobiilisovellus mahdollistaa salasanojesi
-    käytön turvallisesti mistä tahansa.
-cfr-whatsnew-lockwise-take-link-text = Hanki sovellus
-
-## Search Bar
-
-cfr-whatsnew-searchbar-title = Kirjoita vähemmän, löydä enemmän osoitepalkilla
-cfr-whatsnew-searchbar-body-topsites = Nyt vain valitse osoitepalkki, niin se näyttää linkkejä ykkössivustoihin.
-
-## Search bar
-
-cfr-whatsnew-searchbar-icon-alt-text = Suurennuslasin kuvake
-
-## Picture-in-Picture
-
-cfr-whatsnew-pip-header = Katso videoita samalla kun selaat
-cfr-whatsnew-pip-body = Kuva kuvassa -toiminto irrottaa videon erilliseen ikkunaan, jotta sitä voi katsoa samalla, kun tekee jotain muuta muissa välilehdissä.
-cfr-whatsnew-pip-cta = Lue lisää
-
-## Permission Prompt
-
-cfr-whatsnew-permission-prompt-header = Vähemmän ärsyttäviä ponnahdusviestejä
-cfr-whatsnew-permission-prompt-body = { -brand-shorter-name } estää nyt sivustoja kysymästä automaattisesti lupaa lähettää ponnahdusviestejä.
-cfr-whatsnew-permission-prompt-cta = Lue lisää
-
-## Fingerprinter Counter
-
-# This string is displayed before a large numeral that indicates the total
-# number of tracking elements blocked. Don’t add $fingerprinterCount to your
-# localization, because it would result in the number showing twice.
-cfr-whatsnew-fingerprinter-counter-header =
-    { $fingerprinterCount ->
-        [one] Yksilöijä estetty
-       *[other] Yksilöijiä estetty
-    }
-cfr-whatsnew-fingerprinter-counter-body = { -brand-shorter-name } estää monia yksilöijiä, jotka keräävät salaa tietoja laitteestasi ja toiminnastasi profiloidakseen sinua mainostustarkoituksiin.
-
-# Message variation when fingerprinters count is less than 10
-cfr-whatsnew-fingerprinter-counter-header-alt = Yksilöijät
-cfr-whatsnew-fingerprinter-counter-body-alt = { -brand-shorter-name } voi estää yksilöijiä, jotka keräävät salaa tietoja laitteestasi ja toiminnastasi profiloidakseen sinua mainostustarkoituksiin.
-
-## Bookmark Sync
-
-cfr-doorhanger-sync-bookmarks-header = Saa tämä kirjanmerkki puhelimeesi
-cfr-doorhanger-sync-bookmarks-body = Ota kirjanmerkit, salasanat, historia ja muuta mukaasi minne menetkin, kun kirjaudut { -brand-product-name }-selaimeen.
-cfr-doorhanger-sync-bookmarks-ok-button = Ota { -sync-brand-short-name } käyttöön
-    .accesskey = O
-
-## Login Sync
-
-cfr-doorhanger-sync-logins-header = Lopeta salasanojen unohtaminen
-cfr-doorhanger-sync-logins-body = Talleta ja synkronoi salasanasi turvallisesti kaikkien laitteidesi välillä.
-cfr-doorhanger-sync-logins-ok-button = Ota { -sync-brand-short-name } käyttöön
-    .accesskey = O
-
-## Send Tab
-
-cfr-doorhanger-send-tab-header = Lue tämä ollessasi liikkeellä
-cfr-doorhanger-send-tab-recipe-header = Vie tämä resepti keittiöön
-cfr-doorhanger-send-tab-body = Lähettämällä välilehden voit jakaa linkin helposti puhelimeesi tai minne tahansa, missä olet kirjautuneena { -brand-product-name }iin.
-cfr-doorhanger-send-tab-ok-button = Kokeile välilehden lähettämistä
-    .accesskey = K
-
-## Firefox Send
-
-cfr-doorhanger-firefox-send-header = Jaa tämä PDF turvallisesti
-cfr-doorhanger-firefox-send-body = Pidä arkaluonteiset asiakirjasi turvassa uteliailta silmiltä käyttämällä läpisalausta ja automaattisesti vanhenevaa linkkiä.
-cfr-doorhanger-firefox-send-ok-button = Kokeile { -send-brand-name }iä
-    .accesskey = K
-
-## Social Tracking Protection
-
-cfr-doorhanger-socialtracking-ok-button = Näytä suojaukset
-    .accesskey = N
-cfr-doorhanger-socialtracking-close-button = Sulje
-    .accesskey = S
-cfr-doorhanger-socialtracking-dont-show-again = Älä näytä tämän kaltaisia viestejä jatkossa
-    .accesskey = Ä
-cfr-doorhanger-socialtracking-heading = { -brand-short-name } pysäytti sosiaalisen verkon seuraamasta sinua täällä
-cfr-doorhanger-socialtracking-description = Yksityisyytesi on tärkeää. { -brand-short-name } estää nyt yleiset sosiaalisen median seuraimet, ja siten rajoittaa mahdollisuuksia kerätä tietoja verkossa tekemistäsi asioista.
-cfr-doorhanger-fingerprinters-heading = { -brand-short-name } esti yksilöijän tällä sivulla
-cfr-doorhanger-fingerprinters-description = Yksityisyytesi on tärkeää. { -brand-short-name } estää nyt yksilöijät, jotka keräävät yksilöitävissä olevia uniikkeja tietoja laitteestasi seurataksesi sinua.
-cfr-doorhanger-cryptominers-heading = { -brand-short-name } esti kryptolouhijan tällä sivulla
-cfr-doorhanger-cryptominers-description = Yksityisyytesi on tärkeää. { -brand-short-name } estää nyt kryptolouhijat, jotka käyttävät tietokoneen tehoa digitaalisen valuutan louhimiseen.
-
 ## Enhanced Tracking Protection Milestones
-
-# Variables:
-#   $blockedCount (Number) - The total count of blocked trackers. This number will always be greater than 1.
-#   $date (String) - The date we began recording the count of blocked trackers
-cfr-doorhanger-milestone-heading =
-    { $blockedCount ->
-       *[other] { -brand-short-name } on estänyt yli <b>{ $blockedCount }</b> seurainta { $date } lähtien!
-    }
 
 # Variables:
 #   $blockedCount (Number) - The total count of blocked trackers. This number will always be greater than 1.
@@ -241,45 +103,8 @@ cfr-doorhanger-milestone-heading2 =
     }
 cfr-doorhanger-milestone-ok-button = Näytä kaikki
     .accesskey = N
-
-## What’s New Panel Content for Firefox 76
-
-
-## Lockwise message
-
-cfr-whatsnew-lockwise-header = Luo turvallisia salasanoja helposti
-cfr-whatsnew-lockwise-body = Yksilöllisen ja turvallisen salasanan miettiminen jokaiselle eri tilille on haastavaa. Kun luot salasanaa, valitse salasanakenttä käyttääksesi { -brand-shorter-name }in luomaa turvallista salasanaa.
-cfr-whatsnew-lockwise-icon-alt = { -lockwise-brand-short-name }-kuvake
-
-## Vulnerable Passwords message
-
-cfr-whatsnew-passwords-header = Vastaanota hälytyksiä vaarantuneista salasanoista
-cfr-whatsnew-passwords-body = Pahantahtoiset hakkerit tietävät, että ihmiset käyttävät samoja salasanoja eri palveluissa. Jos käytit samaa salasanaa useilla sivustoilla, ja jokin näistä sivustoista joutuu tietomurron kohteeksi, { -lockwise-brand-short-name } näyttää sinulle hälytyksen ja pyytää vaihtamaan salasanasi kyseisellä sivustolla.
-cfr-whatsnew-passwords-icon-alt = Vaarantuneen salasanan avainkuvake
-
-## Picture-in-Picture fullscreen message
-
-cfr-whatsnew-pip-fullscreen-header = Vie kuva kuvassa -näkymä koko näytölle
-cfr-whatsnew-pip-fullscreen-body = Kun ponnahdutat videon kelluvaan ikkunaan, voit nyt kaksoisnapsauttaa kyseistä ikkunaa siirtyäksesi koko näytön tilaan.
-cfr-whatsnew-pip-fullscreen-icon-alt = Kuva kuvassa -kuvake
-
-## Protections Dashboard message
-
-cfr-whatsnew-protections-header = Suojausten yhteenveto
-cfr-whatsnew-protections-body = Suojausten yhteenveto sisältää yhteenvetoraportit tietovuodoista ja salasanojen hallinnasta. Voit nyt katsoa, kuinka monta tietovuotoa olet selvittänyt ja onko tallentamiasi salasanoja vuotanut tietovuodossa.
-cfr-whatsnew-protections-cta-link = Näytä suojausten yhteenveto
-cfr-whatsnew-protections-icon-alt = Kilpikuvake
-
-## Better PDF message
-
-cfr-whatsnew-better-pdf-header = Parempi PDF-kokemus
-cfr-whatsnew-better-pdf-body = PDF-tiedostot avautuvat nyt suoraan { -brand-short-name(case: "inessive") }, mikä saattaa helpottaa työskentelyäsi.
-
 cfr-doorhanger-milestone-close-button = Sulje
     .accesskey = S
-
-## What’s New Panel Content for Firefox 76
-## Protections Dashboard message
 
 ## DOH Message
 
@@ -292,28 +117,141 @@ cfr-doorhanger-doh-secondary-button = Poista käytöstä
 
 ## Fission Experiment Message
 
-cfr-doorhanger-fission-body-approved = Yksityisyydelläsi on merkitystä. { -brand-short-name } eristää, tai asettaa ”hiekkalaatikkoon”, sivustot toisistaan. Eristämisen myötä salasanojen, luottokorttitietojen ja muun arkaluonteisen tiedon varastaminen on aiempaa vaikeampaa.
-cfr-doorhanger-fission-header = Sivustojen eristäminen
-cfr-doorhanger-fission-primary-button = Selvä
-    .accesskey = S
-cfr-doorhanger-fission-secondary-button = Lue lisää
-    .accesskey = L
-
-## What's new: Cookies message
-
-## What's new: Media controls message
-
-## What's new: Search shortcuts
-
-## What's new: Cookies protection
-
-## What's new: Better bookmarking
-
-## What's new: Cross-site cookie tracking
-
 ## Full Video Support CFR message
 
 cfr-doorhanger-video-support-body = Videot tällä sivustolla eivät välttämättä toimi kunnolla tällä { -brand-short-name }in versiolla. Päivitä { -brand-short-name } nyt saadaksesi täyden videotuen.
 cfr-doorhanger-video-support-header = Päivitä { -brand-short-name } toistaaksesi videon
 cfr-doorhanger-video-support-primary-button = Päivitä nyt
     .accesskey = P
+
+## Spotlight modal shared strings
+
+## VPN promotion dialog for public Wi-Fi users
+##
+## If a user is detected to be on a public Wi-Fi network, they are given a
+## bit of info about how to improve their privacy and then offered a button
+## to the Mozilla VPN page and a link to dismiss the dialog.
+
+# This header text can be explicitly wrapped.
+spotlight-public-wifi-vpn-header = Vaikuttaa siltä, että käytät julkista Wi-Fi-yhteyttä
+spotlight-public-wifi-vpn-body = Harkitse VPN-erillisverkon käyttöä piilottaaksesi sijaintisi ja selailutoimintasi. Erillisverkko suojaa yhteytesi julkisissa tiloissa kuten lentokentillä ja kahviloissa.
+spotlight-public-wifi-vpn-primary-button = Pysy yksityisenä { -mozilla-vpn-brand-name }:n avulla
+    .accesskey = S
+spotlight-public-wifi-vpn-link = Ei nyt
+    .accesskey = E
+
+## Total Cookie Protection Rollout
+
+## Emotive Continuous Onboarding
+
+spotlight-better-internet-header = Parempi internet alkaa sinusta
+spotlight-better-internet-body = Kun käytät { -brand-short-name }ia, äänestät avoimen ja saavutettavan internetin puolesta, joka on parempi kaikille.
+spotlight-peace-mind-header = Pidämme huolen sinusta
+spotlight-peace-mind-body = Joka kuukausi { -brand-short-name } estää keskimäärin yli 3 000 seurainta käyttäjää kohden. Koska minkään, etenkään yksityisyyteen liittyvien haittojen, kuten seurainten, ei pitäisi olla sinun ja hyvän internetin välissä.
+spotlight-pin-primary-button =
+    { PLATFORM() ->
+        [macos] Pidä Dockissa
+       *[other] Kiinnitä tehtäväpalkkiin
+    }
+spotlight-pin-secondary-button = Ei nyt
+
+## MR2022 Background Update Windows native toast notification strings.
+##
+## These strings will be displayed by the Windows operating system in
+## a native toast, like:
+##
+## <b>multi-line title</b>
+## multi-line text
+## <img>
+## [ primary button ] [ secondary button ]
+##
+## The button labels are fitted into narrow fixed-width buttons by
+## Windows and therefore must be as narrow as possible.
+
+mr2022-background-update-toast-title = Uusi { -brand-short-name }. Entistä yksityisempi. Vähemmän seuraimia. Ei kompromisseja.
+mr2022-background-update-toast-text = Kokeile uusinta { -brand-short-name }ia nyt. Päivitetty tähän mennessä vahvimmalla seurantasuojauksella.
+
+# This button label will be fitted into a narrow fixed-width button by
+# Windows. Try to not exceed the width of the English text (compare it
+# using a variable font like Arial): the button can only fit 1-2
+# additional characters, exceeding characters will be truncated.
+mr2022-background-update-toast-primary-button-label = Avaa { -brand-shorter-name } nyt
+
+# This button label will be fitted into a narrow fixed-width button by
+# Windows. Try to not exceed the width of the English text (compare it using a
+# variable font like Arial): the button can only fit 1-2 additional characters,
+# exceeding characters will be truncated.
+mr2022-background-update-toast-secondary-button-label = Muistuta minua myöhemmin
+
+## Firefox View CFR
+
+firefoxview-cfr-primarybutton = Kokeile
+    .accesskey = o
+firefoxview-cfr-secondarybutton = Ei nyt
+    .accesskey = n
+firefoxview-cfr-header-v2 = Jatka siitä mihin jäit
+firefoxview-cfr-body-v2 = Hanki äskettäin suljetut välilehdet takaisin ja siirry saumattomasti laitteiden välillä { -firefoxview-brand-name }llä.
+
+## Firefox View Spotlight
+
+firefoxview-spotlight-promo-title = Tervehdi { -firefoxview-brand-name }ä
+
+# “Poof” refers to the expression to convey when something or someone suddenly disappears, or in this case, reappears. For example, “Poof, it’s gone.”
+firefoxview-spotlight-promo-subtitle = Haluatko avoimen välilehden puhelimeltasi? Nappaa se. Tarvitsetko sivuston, jolla juuri vierailit? Hokkuspokkus, se on palannut { -firefoxview-brand-name }llä.
+firefoxview-spotlight-promo-primarybutton = Katso miten se toimii
+firefoxview-spotlight-promo-secondarybutton = Ohita
+
+## Colorways expiry reminder CFR
+
+colorways-cfr-primarybutton = Valitse väriteema
+    .accesskey = ä
+
+# "shades" refers to the different color options available to users in colorways.
+colorways-cfr-body = Väritä selaimesi { -brand-short-name }in erityisillä sävyillä, jotka ovat saaneet vaikutteita kulttuuria muuttaneista äänistä.
+colorways-cfr-header-28days = Itsenäiset äänet -väriteemat vanhenevat 16. tammikuuta
+colorways-cfr-header-14days = Itsenäiset äänet -väriteemat vanhenevat kahden viikon kuluttua
+colorways-cfr-header-7days = Itsenäiset äänet -väriteemat vanhenevat tällä viikolla
+colorways-cfr-header-today = Itsenäiset äänet -väriteemat vanhenevat tänään
+
+## Cookie Banner Handling CFR
+
+cfr-cbh-header = Sallitko { -brand-short-name }in vastata evästekyselyihin kielteisesti?
+cfr-cbh-body = { -brand-short-name } voi automattisesti vastata moniin evästekyselyihin kielteisesti.
+cfr-cbh-confirm-button = Vastaa evästepyyntöihin kieltävästi
+    .accesskey = V
+cfr-cbh-dismiss-button = Ei nyt
+    .accesskey = N
+
+## These strings are used in the Fox doodle Pin/set default spotlights
+
+july-jam-headline = Pidämme sinusta huolen
+july-jam-body = Joka kuukausi { -brand-short-name } estää keskimäärin 3 000+ seurainta käyttäjää kohden, jonka ansiosta sinulla on turvallinen ja nopea pääsy hyvään internetiin.
+july-jam-set-default-primary = Avaa linkit { -brand-short-name }illa
+fox-doodle-pin-headline = Tervetuloa takaisin
+
+# “indie” is short for the term “independent”.
+# In this instance, free from outside influence or control.
+fox-doodle-pin-body = Tässä on pieni muistutus siitä, että voit pitää suosikkiselaimesi vain yhden napsautuksen päässä.
+fox-doodle-pin-primary = Avaa linkit { -brand-short-name }illa
+fox-doodle-pin-secondary = Ei nyt
+
+## These strings are used in the Set Firefox as Default PDF Handler for Existing Users experiment
+
+set-default-pdf-handler-headline = <strong>PDF-tiedostot avataan nyt { -brand-short-name }issa.</strong> Muokkaa tai allekirjoita lomakkeita suoraan selaimessa. Muuttaksesi toimintaa, etsi asetuksista “PDF”.
+set-default-pdf-handler-primary = Selvä
+
+## FxA sync CFR
+
+fxa-sync-cfr-header = Uusi laite tulevaisuudessa?
+fxa-sync-cfr-body = Varmista, että uusimmat kirjanmerkkisi, salasanasi ja välilehdet tulevat mukanasi aina, kun avaat uuden { -brand-product-name }-selaimen.
+fxa-sync-cfr-primary = Lue lisää
+    .accesskey = L
+fxa-sync-cfr-secondary = Muistuta myöhemmin
+    .accesskey = y
+
+## Device Migration FxA Spotlight
+
+device-migration-fxa-spotlight-header = Käytätkö vanhempaa laitetta?
+device-migration-fxa-spotlight-body = Varmuuskopioi tietosi varmistaaksesi, ettet menetä tärkeitä tietoja, kuten kirjanmerkkejä ja salasanoja – varsinkin jos vaihdat uuteen laitteeseen.
+device-migration-fxa-spotlight-primary-button = Kuinka varmuuskopioida omat tiedot
+device-migration-fxa-spotlight-link = Muistuta myöhemmin

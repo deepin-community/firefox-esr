@@ -66,9 +66,7 @@ options-stylesheet-autocompletion-tooltip =
 options-screenshot-label = Снимка на екрана
 
 # Label for the checkbox that toggles screenshot to clipboard feature
-options-screenshot-clipboard-label = Запазване в системния буфер
-options-screenshot-clipboard-tooltip =
-    .title = Запазва снимката на екрана директно в системния буфер
+options-screenshot-clipboard-only-label = Екранна снимка само в системен буфер
 
 # Label for the checkbox that toggles the camera shutter audio for screenshot tool
 options-screenshot-audio-label = Звук от затвора на фотоапарат
@@ -128,9 +126,3 @@ options-source-maps-tooltip =
 
 # The message shown for settings that trigger page reload
 options-context-triggers-page-refresh = * Само за текущата сесия, презарежда страницата
-
-# The label for the checkbox that toggles the display of the platform data in the
-# Profiler i.e. devtools.profiler.ui.show-platform-data a boolean preference in about:config
-options-show-platform-data-label = Показване на данните от платформата Gecko
-options-show-platform-data-tooltip =
-    .title = Ако е отметнато докладите на профилаторът на JavaScript ще включват символи от платформата Gecko

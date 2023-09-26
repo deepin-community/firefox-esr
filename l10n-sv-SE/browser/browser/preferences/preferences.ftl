@@ -9,28 +9,6 @@ do-not-track-option-default-content-blocking-known =
 do-not-track-option-always =
     .label = Alltid
 
-pref-page-title =
-    { PLATFORM() ->
-        [windows] Inställningar
-       *[other] Inställningar
-    }
-
-# This is used to determine the width of the search field in about:preferences,
-# in order to make the entire placeholder string visible
-#
-# Please keep the placeholder string short to avoid truncation.
-#
-# Notice: The value of the `.style` attribute is a CSS string, and the `width`
-# is the name of the CSS property. It is intended only to adjust the element's width.
-# Do not translate.
-search-input-box =
-    .style = width: 15.4em
-    .placeholder =
-        { PLATFORM() ->
-            [windows] Sök i inställningar
-           *[other] Sök i inställningar
-        }
-
 settings-page-title = Inställningar
 
 # This is used to determine the width of the search field in about:preferences,
@@ -54,7 +32,7 @@ pane-general-title = Allmänt
 category-general =
     .tooltiptext = { pane-general-title }
 
-pane-home-title = Hem
+pane-home-title = Startsida
 category-home =
     .tooltiptext = { pane-home-title }
 
@@ -65,10 +43,6 @@ category-search =
 pane-privacy-title = Sekretess & säkerhet
 category-privacy =
     .tooltiptext = { pane-privacy-title }
-
-pane-sync-title2 = { -sync-brand-short-name }
-category-sync2 =
-    .tooltiptext = { pane-sync-title2 }
 
 pane-sync-title3 = Synkronisering
 category-sync3 =
@@ -86,7 +60,7 @@ pane-experimental-reset =
     .accesskey = t
 
 help-button-label = Support { -brand-short-name }
-addons-button-label = Utökningar & Teman
+addons-button-label = Tillägg & teman
 
 focus-search =
     .key = f
@@ -113,37 +87,36 @@ restart-later = Starta om senare
 ## Variables:
 ##   $name (String): name of the extension
 
-# This string is shown to notify the user that their home page
-# is being controlled by an extension.
-extension-controlled-homepage-override = Ett tillägg, <img data-l10n-name="icon"/> { $name }, styr din startsida.
 
-# This string is shown to notify the user that their new tab page
-# is being controlled by an extension.
-extension-controlled-new-tab-url = Ett tillägg, <img data-l10n-name="icon"/> { $name }, styr din sida för ny flik.
+## Extension Control Notifications
+##
+## These strings are used to inform the user
+## about changes made by extensions to browser settings.
+##
+## <img data-l10n-name="icon"/> is going to be replaced by the extension icon.
+##
+## Variables:
+##   $name (string) - Name of the extension
 
 # This string is shown to notify the user that the password manager setting
 # is being controlled by an extension
-extension-controlled-password-saving = Ett tillägg, <img data-l10n-name="icon"/> { $name }, styr denna inställning.
+extension-controlling-password-saving = <img data-l10n-name="icon"/> <strong>{ $name }</strong> styr den här inställningen.
 
 # This string is shown to notify the user that their notifications permission
 # is being controlled by an extension.
-extension-controlled-web-notifications = Ett tillägg, <img data-l10n-name="icon"/> { $name }, kontrollerar den här inställningen.
-
-# This string is shown to notify the user that the default search engine
-# is being controlled by an extension.
-extension-controlled-default-search = Ett tillägg, <img data-l10n-name="icon"/> { $name }, har ändrat din standardsökmotor.
+extension-controlling-web-notifications = <img data-l10n-name="icon"/> <strong>{ $name }</strong> styr den här inställningen.
 
 # This string is shown to notify the user that Container Tabs
 # are being enabled by an extension.
-extension-controlled-privacy-containers = Ett tillägg, <img data-l10n-name="icon"/> { $name }, kräver innehållsflikar.
+extension-controlling-privacy-containers = <img data-l10n-name="icon"/> <strong>{ $name }</strong> kräver innehållsflikar.
 
 # This string is shown to notify the user that their content blocking "All Detected Trackers"
 # preferences are being controlled by an extension.
-extension-controlled-websites-content-blocking-all-trackers = Ett tillägg, <img data-l10n-name="icon"/> { $name }, styr denna inställning.
+extension-controlling-websites-content-blocking-all-trackers = <img data-l10n-name="icon"/> <strong>{ $name }</strong> styr den här inställningen.
 
 # This string is shown to notify the user that their proxy configuration preferences
 # are being controlled by an extension.
-extension-controlled-proxy-config = Ett tillägg, <img data-l10n-name="icon"/> { $name }, styr hur { -brand-short-name } ansluter till internet.
+extension-controlling-proxy-config = <img data-l10n-name ="icon"/> <strong>{ $name }</strong> styr hur { -brand-short-name } ansluter till internet.
 
 # This string is shown after the user disables an extension to notify the user
 # how to enable an extension that they disabled.
@@ -157,13 +130,6 @@ extension-controlled-enable = För att aktivera tillägget gå till <img data-l1
 search-results-header = Sökresultat
 
 # `<span data-l10n-name="query"></span>` will be replaced by the search term.
-search-results-empty-message =
-    { PLATFORM() ->
-        [windows] Förlåt! Det finns inga resultat i Inställningar för “<span data-l10n-name="query"></span>”.
-       *[other] Förlåt! Det finns inga resultat i Inställningar för “<span data-l10n-name="query"></span>”.
-    }
-
-# `<span data-l10n-name="query"></span>` will be replaced by the search term.
 search-results-empty-message2 = Förlåt! Det finns inga resultat i Inställningar för "<span data-l10n-name="query"></span>"
 
 search-results-help-link = Behöver du hjälp? Besök <a data-l10n-name="url">{ -brand-short-name } support</a>
@@ -171,14 +137,6 @@ search-results-help-link = Behöver du hjälp? Besök <a data-l10n-name="url">{ 
 ## General Section
 
 startup-header = Vid start
-
-# { -brand-short-name } will be 'Firefox Developer Edition',
-# since this setting is only exposed in Firefox Developer Edition
-separate-profile-mode =
-    .label = Tillåt { -brand-short-name } och Firefox att köra samtidigt
-use-firefox-sync = Tips: Detta använder separata profiler. Använd { -sync-brand-short-name } för att dela data mellan dem.
-get-started-not-logged-in = Logga in till { -sync-brand-short-name }…
-get-started-configured = Öppna inställningar för { -sync-brand-short-name }
 
 always-check-default =
     .label = Kontrollera alltid om { -brand-short-name } är din standardwebbläsare
@@ -191,15 +149,21 @@ set-as-my-default-browser =
     .label = Ange som standard…
     .accesskey = s
 
-startup-restore-previous-session =
-    .label = Återställ föregående session
-    .accesskey = s
+startup-restore-windows-and-tabs =
+    .label = Öppna föregående fönster och flikar
+    .accesskey = f
 
 startup-restore-warn-on-quit =
     .label = Varna när du avslutar webbläsaren
 
 disable-extension =
     .label = Inaktivera tillägg
+
+preferences-data-migration-header = Importera webbläsardata
+preferences-data-migration-description = Importera bokmärken, lösenord, historik och autofylldata till { -brand-short-name }.
+preferences-data-migration-button =
+    .label = Importera data
+    .accesskey = m
 
 tabs-group-header = Flikar
 
@@ -211,17 +175,22 @@ open-new-link-as-tabs =
     .label = Öppna länkar i flikar istället för nya fönster
     .accesskey = f
 
-warn-on-close-multiple-tabs =
-    .label = Varna när jag stänger flera flikar
-    .accesskey = f
+confirm-on-close-multiple-tabs =
+    .label = Bekräfta innan du stänger flera flikar
+    .accesskey = k
+
+# This string is used for the confirm before quitting preference.
+# Variables:
+#   $quitKey (string) - the quit keyboard shortcut, and formatted
+#                       in the same manner as it would appear,
+#                       for example, in the File menu.
+confirm-on-quit-with-key =
+    .label = Bekräfta innan du avslutar med { $quitKey }
+    .accesskey = a
 
 warn-on-open-many-tabs =
     .label = Varna när du öppnar flera flikar kan göra { -brand-short-name } långsam
     .accesskey = n
-
-switch-links-to-new-tabs =
-    .label = När du öppnar en länk i en ny flik, växla till den direkt
-    .accesskey = v
 
 switch-to-new-tabs =
     .label = När du öppnar en länk, bild eller media i en ny flik, byt till den omedelbart
@@ -235,13 +204,17 @@ browser-containers-enabled =
     .label = Aktivera innehållsflikar
     .accesskey = k
 
-browser-containers-learn-more = Lär dig mer
+browser-containers-learn-more = Läs mer
 
 browser-containers-settings =
     .label = Inställningar…
     .accesskey = s
 
 containers-disable-alert-title = Stäng alla innehållsflikar?
+
+## Variables:
+##   $tabCount (number) - Number of tabs
+
 containers-disable-alert-desc =
     { $tabCount ->
         [one] Om du inaktiverar innehållsflikar nu, { $tabCount } innehållsflik kommer att stängas. Är du säker på att du vill inaktivera innehållsflikar?
@@ -253,12 +226,15 @@ containers-disable-alert-ok-button =
         [one] Stäng { $tabCount } innehållsflik
        *[other] Stäng { $tabCount } innehållsflikar
     }
+
+##
+
 containers-disable-alert-cancel-button = Behåll aktiverad
 
 containers-remove-alert-title = Ta bort denna behållare?
 
 # Variables:
-#   $count (Number) - Number of tabs that will be closed.
+#   $count (number) - Number of tabs that will be closed.
 containers-remove-alert-msg =
     { $count ->
         [one] Om du tar bort denna behållaren nu, kommer { $count } innehållsflik att stängas. Är du säker på att du vill ta bort denna behållare?
@@ -268,12 +244,51 @@ containers-remove-alert-msg =
 containers-remove-ok-button = Ta bort denna behållare
 containers-remove-cancel-button = Ta inte bort denna behållare
 
-
 ## General Section - Language & Appearance
 
 language-and-appearance-header = Språk och utseende
 
-fonts-and-colors-header = Teckensnitt och färger
+preferences-web-appearance-header = Webbplatsens utseende
+
+preferences-web-appearance-description = Vissa webbplatser anpassar sitt färgschema baserat på dina inställningar. Välj vilket färgschema du vill använda för dessa webbplatser.
+
+preferences-web-appearance-choice-auto = Automatisk
+preferences-web-appearance-choice-light = Ljust
+preferences-web-appearance-choice-dark = Mörkt
+
+preferences-web-appearance-choice-tooltip-auto =
+    .title = Ändra automatiskt webbplatsbakgrunder och innehåll baserat på dina systeminställningar och { -brand-short-name }-tema.
+preferences-web-appearance-choice-tooltip-light =
+    .title = Använd ett ljust utseende för webbplatsbakgrunder och innehåll.
+preferences-web-appearance-choice-tooltip-dark =
+    .title = Använd ett mörkt utseende för webbplatsbakgrunder och innehåll.
+
+preferences-web-appearance-choice-input-auto =
+    .aria-description = { preferences-web-appearance-choice-tooltip-auto.title }
+
+preferences-web-appearance-choice-input-light =
+    .aria-description = { preferences-web-appearance-choice-tooltip-light.title }
+
+preferences-web-appearance-choice-input-dark =
+    .aria-description = { preferences-web-appearance-choice-tooltip-dark.title }
+
+# This can appear when using windows HCM or "Override colors: always" without
+# system colors.
+preferences-web-appearance-override-warning = Dina färgval åsidosätter webbplatsens utseende. <a data-l10n-name="colors-link">Hantera färger</a>
+
+# This message contains one link. It can be moved within the sentence as needed
+# to adapt to your language, but should not be changed.
+preferences-web-appearance-footer = Hantera { -brand-short-name } teman i <a data-l10n-name="themes-link">Tillägg och teman</a>
+
+preferences-colors-header = Färger
+
+preferences-colors-description = Åsidosätt { -brand-short-name }s standardfärger för text, webbplatsbakgrunder och länkar.
+
+preferences-colors-manage-button =
+    .label = Hantera färger…
+    .accesskey = H
+
+preferences-fonts-header = Teckensnitt
 
 default-font = Standardteckensnitt
     .accesskey = t
@@ -284,16 +299,14 @@ advanced-fonts =
     .label = Avancerat…
     .accesskey = A
 
-colors-settings =
-    .label = Färger…
-    .accesskey = F
-
 # Zoom is a noun, and the message is used as header for a group of options
 preferences-zoom-header = Zoom
 
 preferences-default-zoom = Standardzoom
     .accesskey = z
 
+# Variables:
+#   $percentage (number) - Zoom percentage value
 preferences-default-zoom-value =
     .label = { $percentage }%
 
@@ -345,8 +358,7 @@ files-and-applications-title = Filer och program
 
 download-header = Filhämtningar
 
-download-save-to =
-    .label = Spara filer till
+download-save-where = Spara filer till
     .accesskey = a
 
 download-choose-folder =
@@ -412,24 +424,19 @@ applications-manage-app =
     .label = Programdetaljer…
 applications-always-ask =
     .label = Fråga alltid
-applications-type-pdf = Portable Document Format (PDF)
 
 # Variables:
-#   $type (String) - the MIME type (e.g application/binary)
-applications-type-pdf-with-type = { applications-type-pdf } ({ $type })
-
-# Variables:
-#   $type-description (String) - Description of the type (e.g "Portable Document Format")
-#   $type (String) - the MIME type (e.g application/binary)
+#   $type-description (string) - Description of the type (e.g "Portable Document Format")
+#   $type (string) - The MIME type (e.g application/binary)
 applications-type-description-with-type = { $type-description } ({ $type })
 
 # Variables:
-#   $extension (String) - file extension (e.g .TXT)
-#   $type (String) - the MIME type (e.g application/binary)
+#   $extension (string) - File extension (e.g .TXT)
+#   $type (string) - The MIME type (e.g application/binary)
 applications-file-ending-with-type = { applications-file-ending } ({ $type })
 
 # Variables:
-#   $plugin-name (String) - Name of a plugin (e.g Adobe Flash)
+#   $plugin-name (string) - Name of a plugin (e.g Adobe Flash)
 applications-use-plugin-in =
     .label = Använd { $plugin-name } (i { -brand-short-name })
 applications-open-inapp =
@@ -465,6 +472,16 @@ applications-use-os-default-label =
 
 ##
 
+applications-handle-new-file-types-description = Vad ska { -brand-short-name } göra med andra filer?
+
+applications-save-for-new-types =
+    .label = Spara filer
+    .accesskey = S
+
+applications-ask-before-handling =
+    .label = Fråga om du vill öppna eller spara filer
+    .accesskey = F
+
 drm-content-header = Digital Rights Management (DRM) innehåll
 
 play-drm-content =
@@ -477,6 +494,8 @@ update-application-title = Uppdateringar för { -brand-short-name }
 
 update-application-description = Håll { -brand-short-name } uppdaterad för bästa prestanda, stabilitet och säkerhet.
 
+# Variables:
+# $version (string) - Firefox version
 update-application-version = Version { $version } <a data-l10n-name="learn-more">Vad är nytt</a>
 
 update-history =
@@ -507,21 +526,14 @@ update-application-use-service =
     .label = Använd en bakgrundstjänst för att installera uppdateringar
     .accesskey = b
 
-update-setting-write-failure-title = Det gick inte att spara uppdateringsinställningar
-
-# Variables:
-#   $path (String) - Path to the configuration file
-# The newlines between the main text and the line containing the path is
-# intentional so the path is easier to identify.
-update-setting-write-failure-message =
-    { -brand-short-name } stötte på ett fel och lagrade inte den här ändringen. Observera att ange denna uppdateringsinställning kräver tillstånd att skriva till filen nedan. Du eller en systemadministratör kan eventuellt lösa felet genom att ge användargruppen fullständig kontroll till den här filen.
-    
-    Kunde inte skriva till fil: { $path }
+update-application-suppress-prompts =
+    .label = Visa färre uppdateringsmeddelanden
+    .accesskey = f
 
 update-setting-write-failure-title2 = Det gick inte att spara uppdateringsinställningar
 
 # Variables:
-#   $path (String) - Path to the configuration file
+#   $path (string) - Path to the configuration file
 # The newlines between the main text and the line containing the path is
 # intentional so the path is easier to identify.
 update-setting-write-failure-message2 =
@@ -561,7 +573,7 @@ performance-limit-content-process-enabled-desc = Ytterligare innehållsprocesser
 performance-limit-content-process-blocked-desc = Ändring av antalet innehållsprocesser är endast möjligt med multiprocess { -brand-short-name }. <a data-l10n-name="learn-more">Lär dig hur du kontrollerar om multiprocess är aktiverat</a>
 
 # Variables:
-#   $num - default value of the `dom.ipc.processCount` pref.
+#   $num (number) - Default value of the `dom.ipc.processCount` pref.
 performance-default-content-process-count =
     .label = { $num } (standard)
 
@@ -576,6 +588,10 @@ browsing-use-autoscroll =
 browsing-use-smooth-scrolling =
     .label = Använd mjuk rullning
     .accesskey = m
+
+browsing-gtk-use-non-overlay-scrollbars =
+    .label = Visa alltid rullningslister
+    .accesskey = u
 
 browsing-use-onscreen-keyboard =
     .label = Visa ett pektangentbord vid behov
@@ -638,10 +654,8 @@ home-restore-defaults =
     .label = Återställ standard
     .accesskey = t
 
-# "Firefox" should be treated as a brand and kept in English,
-# while "Home" and "(Default)" can be localized.
-home-mode-choice-default =
-    .label = Firefox startsida (standard)
+home-mode-choice-default-fx =
+    .label = { -firefox-home-brand-name } (Standard)
 
 home-mode-choice-custom =
     .label = Anpassade webbadresser...
@@ -670,17 +684,11 @@ choose-bookmark =
 
 ## Home Section - Firefox Home Content Customization
 
-home-prefs-content-header = Innehåll Firefox-startskärm
-home-prefs-content-description = Välj vilket innehåll du vill ha på din startskärm i Firefox.
+home-prefs-content-header2 = { -firefox-home-brand-name } Innehåll
+home-prefs-content-description2 = Välj vilket innehåll du vill ha på din startskärm i { -firefox-home-brand-name }.
 
 home-prefs-search-header =
     .label = Webbsök
-home-prefs-topsites-header =
-    .label = Mest besökta
-home-prefs-topsites-description = Sidorna du besöker mest
-
-home-prefs-topsites-by-option-sponsored =
-    .label = Sponsrade toppwebbplatser
 home-prefs-shortcuts-header =
     .label = Genvägar
 home-prefs-shortcuts-description = Webbplatser du sparar eller besöker
@@ -690,20 +698,22 @@ home-prefs-shortcuts-by-option-sponsored =
 ## Variables:
 ##  $provider (String): Name of the corresponding content provider, e.g "Pocket".
 
+
+## Variables:
+##  $provider (string) - Name of the corresponding content provider, e.g "Pocket".
+
 home-prefs-recommended-by-header =
     .label = Rekommenderas av { $provider }
-home-prefs-recommended-by-description-update = Exceptionellt innehåll från hela internet, sammanställt av { $provider }
 home-prefs-recommended-by-description-new = Särskilt innehåll valt av { $provider }, en del av familjen { -brand-product-name }
 
 ##
 
 home-prefs-recommended-by-learn-more = Hur fungerar det
 home-prefs-recommended-by-option-sponsored-stories =
-    .label = Sponsrade nyheter
+    .label = Sponsrade berättelser
+home-prefs-recommended-by-option-recent-saves =
+    .label = Visa nyligen sparade objekt
 
-home-prefs-highlights-header =
-    .label = Höjdpunkter
-home-prefs-highlights-description = Ett urval av sidor du har sparat eller besökt
 home-prefs-highlights-option-visited-pages =
     .label = Besökta sidor
 home-prefs-highlights-options-bookmarks =
@@ -723,10 +733,11 @@ home-prefs-recent-activity-description = Ett urval av senaste webbplatser och in
 # and non-essential but also not entirely trivial and useless.
 home-prefs-snippets-header =
     .label = Kort information
-home-prefs-snippets-description = Uppdateringar från { -vendor-short-name } och { -brand-product-name }
 
 home-prefs-snippets-description-new = Tips och nyheter från { -vendor-short-name } och { -brand-product-name }
 
+# Variables:
+#   $num (number) - Number of rows displayed
 home-prefs-sections-rows-option =
     .label =
         { $num ->
@@ -742,7 +753,7 @@ search-bar-hidden =
 search-bar-shown =
     .label = Lägg till sökfältet i verktygsfältet
 
-search-engine-default-header = Standard sökmotor
+search-engine-default-header = Standardsökmotor
 search-engine-default-desc-2 = Detta är din standardsökmotor i adressfältet och sökfältet. Du kan byta när som helst.
 search-engine-default-private-desc-2 = Välj en annan standardsökmotor endast för privata fönster
 search-separate-default-engine =
@@ -760,6 +771,14 @@ search-show-suggestions-url-bar-option =
     .label = Visa sökförslag i adressfältets resultat
     .accesskey = f
 
+
+# With this option enabled, on the search results page
+# the URL will be replaced by the search terms in the address bar
+# when using the current default search engine.
+search-show-search-term-option =
+    .label = Visa söktermer istället för adressen på sökmotorns standardresultatsida
+
+
 # This string describes what the user will observe when the system
 # prioritizes search suggestions over browsing history in the results
 # that extend down from the address bar. In the original English string,
@@ -771,13 +790,9 @@ search-show-suggestions-above-history-option =
 search-show-suggestions-private-windows =
     .label = Visa sökförslag i privata fönster
 
-suggestions-addressbar-settings-generic = Ändra inställningar för andra förslag i adressfältet
-
 suggestions-addressbar-settings-generic2 = Ändra inställningar för andra förslag i adressfältet
 
 search-suggestions-cant-show = Sökförslag kommer inte att visas i adressfältet eftersom du har konfigurerat { -brand-short-name } att aldrig spara historik.
-
-search-one-click-header = Sökfältets sökmotorer
 
 search-one-click-header2 = Sökgenvägar
 
@@ -789,13 +804,12 @@ search-choose-keyword-column =
     .label = Nyckelord
 
 search-restore-default =
-    .label = Återställ standard sökmotorer
-    .accesskey = D
+    .label = Återställ standardsökmotorer
+    .accesskey = t
 
 search-remove-engine =
     .label = Ta bort
     .accesskey = T
-
 search-add-engine =
     .label = Lägg till
     .accesskey = L
@@ -806,18 +820,11 @@ search-find-more-link = Hitta fler sökmotorer
 # ('Duplicate' is an adjective)
 search-keyword-warning-title = Duplicera nyckelord
 # Variables:
-#   $name (String) - Name of a search engine.
+#   $name (string) - Name of a search engine.
 search-keyword-warning-engine = Du har valt ett nyckelord som redan används av “{ $name }”. Var god välj ett annat.
 search-keyword-warning-bookmark = Du har valt ett nyckelord som redan används av ett bokmärke. Var god välj ett annat.
 
 ## Containers Section
-
-containers-back-button =
-    .aria-label =
-        { PLATFORM() ->
-            [windows] Tillbaka till inställningar
-           *[other] Tillbaka till inställningar
-        }
 
 containers-back-button2 =
     .aria-label = Tillbaka till inställningar
@@ -830,9 +837,6 @@ containers-new-tab-check =
     .label = Välj en behållare för varje ny flik
     .accesskey = V
 
-containers-preferences-button =
-    .label = Inställningar
-
 containers-settings-button =
     .label = Inställningar
 containers-remove-button =
@@ -841,13 +845,11 @@ containers-remove-button =
 ## Firefox Account - Signed out. Note that "Sync" and "Firefox Account" are now
 ## more discrete ("signed in" no longer means "and sync is connected").
 
+
+## Firefox account - Signed out. Note that "Sync" and "Firefox account" are now
+## more discrete ("signed in" no longer means "and sync is connected").
+
 sync-signedout-caption = Ta med dig webben
-sync-signedout-description = Synkronisera dina bokmärken, historik, flikar, lösenord, tillägg och inställningar på alla dina enheter.
-
-sync-signedout-account-signin2 =
-    .label = Logga in på { -sync-brand-short-name }…
-    .accesskey = L
-
 sync-signedout-description2 = Synkronisera dina bokmärken, historik, flikar, lösenord, tillägg och inställningar på alla dina enheter.
 
 sync-signedout-account-signin3 =
@@ -866,6 +868,9 @@ sync-mobile-promo = Hämta Firefox för <img data-l10n-name="android-icon"/> <a 
 
 ## Firefox Account - Signed in
 
+
+## Firefox account - Signed in
+
 sync-profile-picture =
     .tooltiptext = Ändra profilbild
 
@@ -876,8 +881,13 @@ sync-sign-out =
 sync-manage-account = Hantera konto
     .accesskey = o
 
+## Variables
+## $email (string) - Email used for Firefox account
+
 sync-signedin-unverified = { $email } är inte verifierat.
 sync-signedin-login-failure = Logga in för att återansluta { $email }
+
+##
 
 sync-resend-verification =
     .label = Skicka verifiering igen
@@ -897,12 +907,6 @@ prefs-syncing-on = Synkronisering: PÅ
 
 prefs-syncing-off = Synkronisering: AV
 
-prefs-sync-setup =
-    .label = Konfigurera  { -sync-brand-short-name }…
-    .accesskey = K
-
-prefs-sync-offer-setup-label = Synkronisera dina bokmärken, historik, flikar, lösenord, tillägg och inställningar på alla dina enheter.
-
 prefs-sync-turn-on-syncing =
     .label = Aktivera synkronisering…
     .accesskey = A
@@ -914,9 +918,16 @@ prefs-sync-now =
     .accesskeynotsyncing = n
     .labelsyncing = Synkroniserar…
 
+prefs-sync-now-button =
+    .label = Synkronisera nu
+    .accesskey = n
+
+prefs-syncing-button =
+    .label = Synkroniserar…
+
 ## The list of things currently syncing.
 
-sync-currently-syncing-heading = Du synkroniserar för närvarande dessa objekt:
+sync-syncing-across-devices-heading = Du synkroniserar dessa objekt mellan alla dina anslutna enheter:
 
 sync-currently-syncing-bookmarks = Bokmärken
 sync-currently-syncing-history = Historik
@@ -925,12 +936,6 @@ sync-currently-syncing-logins-passwords = Inloggningar och lösenord
 sync-currently-syncing-addresses = Adresser
 sync-currently-syncing-creditcards = Kreditkort
 sync-currently-syncing-addons = Tillägg
-sync-currently-syncing-prefs =
-    { PLATFORM() ->
-        [windows] Inställningar
-       *[other] Inställningar
-    }
-
 sync-currently-syncing-settings = Inställningar
 
 sync-change-options =
@@ -939,13 +944,15 @@ sync-change-options =
 
 ## The "Choose what to sync" dialog.
 
-sync-choose-what-to-sync-dialog =
-    .title = Välj vad som ska synkas
-    .style = width: 36em; min-height: 35em;
+sync-choose-what-to-sync-dialog3 =
+    .title = Välj vad som ska synkroniseras
+    .style = min-width: 36em;
     .buttonlabelaccept = Spara ändringar
     .buttonaccesskeyaccept = S
     .buttonlabelextra2 = Koppla ner…
     .buttonaccesskeyextra2 = K
+
+sync-choose-dialog-subtitle = Ändringar i listan över objekt som ska synkroniseras kommer att återspeglas på alla dina anslutna enheter.
 
 sync-engine-bookmarks =
     .label = Bokmärken
@@ -980,15 +987,6 @@ sync-engine-addons =
     .tooltiptext = Tillägg och teman för Firefox skrivbord
     .accesskey = T
 
-sync-engine-prefs =
-    .label =
-        { PLATFORM() ->
-            [windows] Inställningar
-           *[other] Inställningar
-        }
-    .tooltiptext = Allmänna, sekretess och säkerhetsinställningar du har ändrat
-    .accesskey = n
-
 sync-engine-settings =
     .label = Inställningar
     .tooltiptext = Allmänna, sekretess- och säkerhetsinställningar som du har ändrat
@@ -1011,6 +1009,16 @@ sync-device-name-save =
     .accesskey = S
 
 sync-connect-another-device = Anslut en annan enhet
+
+## These strings are shown in a desktop notification after the
+## user requests we resend a verification email.
+
+sync-verification-sent-title = Verifiering skickad
+# Variables:
+#   $email (String): Email address of user's Firefox account.
+sync-verification-sent-body = En verifieringslänk har skickats till { $email }.
+sync-verification-not-sent-title = Det gick inte att skicka verifiering
+sync-verification-not-sent-body = Vi kan inte skicka ett verifieringsmeddelande just nu, försök igen senare.
 
 ## Privacy Section
 
@@ -1036,6 +1044,9 @@ forms-breach-alerts =
     .label = Visa varningar om lösenord för webbplatser med intrång
     .accesskey = V
 forms-breach-alerts-learn-more-link = Läs mer
+preferences-relay-integration-checkbox =
+    .label = Föreslå { -relay-brand-name } e-postalias för att skydda din e-postadress
+relay-integration-learn-more-link = Läs mer
 
 # Checkbox which controls filling saved logins into fields automatically when they appear, in some cases without user interaction.
 forms-fill-logins-and-passwords =
@@ -1044,9 +1055,6 @@ forms-fill-logins-and-passwords =
 forms-saved-logins =
     .label = Sparade inloggningar…
     .accesskey = l
-forms-master-pw-use =
-    .label = Använd ett huvudlösenord
-    .accesskey = A
 forms-primary-pw-use =
     .label = Använd ett huvudlösenord
     .accesskey = A
@@ -1057,8 +1065,6 @@ forms-primary-pw-learn-more-link = Läs mer
 forms-master-pw-change =
     .label = Byt huvudlösenord…
     .accesskey = B
-
-forms-master-pw-fips-title = Du är för närvarande i FIPS-läge. FIPS kräver ett huvudlösenord.
 forms-primary-pw-change =
     .label = Ändra huvudlösenord…
     .accesskey = h
@@ -1069,22 +1075,12 @@ forms-primary-pw-former-name = { "" }
 
 forms-primary-pw-fips-title = Du är för närvarande i FIPS-läge. FIPS kräver ett huvudlösenord.
 forms-master-pw-fips-desc = Ändring av lösenordet misslyckades
-
 forms-windows-sso =
     .label = Tillåt Windows enkel inloggning för Microsoft-, arbets- och skolkonton.
 forms-windows-sso-learn-more-link = Läs mer
 forms-windows-sso-desc = Hantera konton i dina enhetsinställningar
 
 ## OS Authentication dialog
-
-# This message can be seen by trying to add a Master Password.
-master-password-os-auth-dialog-message-win = Om du vill skapa ett huvudlösenord anger du dina inloggningsuppgifter för Windows. Detta skyddar dina kontons säkerhet.
-
-# This message can be seen by trying to add a Master Password.
-# The macOS strings are preceded by the operating system with "Firefox is trying to "
-# and includes subtitle of "Enter password for the user "xxx" to allow this." These
-# notes are only valid for English. Please test in your locale.
-master-password-os-auth-dialog-message-macosx = skapa ett huvudlösenord
 
 # This message can be seen by trying to add a Primary Password.
 primary-password-os-auth-dialog-message-win = För att skapa ett huvudlösenord anger du dina inloggningsuppgifter för Windows. Detta skyddar dina kontons säkerhet.
@@ -1153,8 +1149,8 @@ sitedata-header = Kakor och webbplatsdata
 sitedata-total-size-calculating = Beräkning av webbplatsdata och cachestorlek…
 
 # Variables:
-#   $value (Number) - Value of the unit (for example: 4.6, 500)
-#   $unit (String) - Name of the unit (for example: "bytes", "KB")
+#   $value (number) - Value of the unit (for example: 4.6, 500)
+#   $unit (string) - Name of the unit (for example: "bytes", "KB")
 sitedata-total-size = Dina lagrade kakor, webbplatsdata och cache använder för tillfället { $value } { $unit } diskutrymme.
 
 sitedata-learn-more = Läs mer
@@ -1180,18 +1176,14 @@ sitedata-block-desc = Typ blockerad
 
 sitedata-option-block-cross-site-trackers =
     .label = Globala spårare
-sitedata-option-block-cross-site-and-social-media-trackers =
-    .label = Globala och sociala medie-spårare
-sitedata-option-block-cross-site-tracking-cookies-including-social-media =
-    .label = Globala spårningskakor — inkluderar kakor på sociala medier
-sitedata-option-block-cross-site-cookies-including-social-media =
-    .label = Globala kakor — inkluderar kakor på sociala medier
-sitedata-option-block-cross-site-and-social-media-trackers-plus-isolate =
-    .label = Globala spårare på webbplatsen och sociala medier och isolera kvarvarande kakor
+sitedata-option-block-cross-site-tracking-cookies =
+    .label = Globala spårningskakor
+sitedata-option-block-cross-site-cookies =
+    .label = Globala spårningskakor och isolera andra globala kakor
 sitedata-option-block-unvisited =
     .label = Kakor från obesökta webbplatser
-sitedata-option-block-all-third-party =
-    .label = Alla tredjepartskakor (kan orsaka fel på webbplatser)
+sitedata-option-block-all-cross-site-cookies =
+    .label = Alla globala kakor (kan orsaka fel på webbplatser)
 sitedata-option-block-all =
     .label = Alla kakor (kommer att orsaka fel på webbplatser)
 
@@ -1203,13 +1195,17 @@ sitedata-settings =
     .label = Hantera data…
     .accesskey = H
 
-sitedata-cookies-permissions =
-    .label = Hantera behörigheter...
-    .accesskey = b
-
 sitedata-cookies-exceptions =
     .label = Hantera undantag…
     .accesskey = u
+
+## Privacy Section - Cookie Banner Handling
+
+cookie-banner-handling-header = Reducering av kakbanners
+cookie-banner-handling-description = { -brand-short-name } försöker automatiskt avvisa kakförfrågningar på kakbanners på webbplatser som stöds.
+cookie-banner-learn-more = Läs mer
+forms-handle-cookie-banners =
+    .label = Reducera kakbanners
 
 ## Privacy Section - Address Bar
 
@@ -1233,12 +1229,16 @@ addressbar-locbar-shortcuts-option =
 addressbar-locbar-topsites-option =
     .label = Mest besökta
     .accesskey = T
-
 addressbar-locbar-engines-option =
     .label = Sökmotorer
     .accesskey = m
+addressbar-locbar-quickactions-option =
+    .label = Snabbåtgärder
+    .accesskey = a
 
 addressbar-suggestions-settings = Ändra inställningar för förslag från sökmotorn
+
+addressbar-quickactions-learn-more = Läs mer
 
 ## Privacy Section - Content Blocking
 
@@ -1269,11 +1269,10 @@ enhanced-tracking-protection-setting-custom =
 content-blocking-etp-standard-desc = Balanserad för skydd och prestanda. Sidor laddas normalt.
 content-blocking-etp-strict-desc = Starkare skydd, men kan leda till att vissa webbplatser eller innehåll inte fungerar.
 content-blocking-etp-custom-desc = Välj vilka spårare och skript som ska blockeras.
-
 content-blocking-etp-blocking-desc = { -brand-short-name } blockerar följande:
 
-content-blocking-private-windows = Spårningsinnehåll i privat fönster
-content-blocking-cross-site-cookies-in-all-windows = Globala kakor i alla fönster (inkluderar spårningskakor)
+content-blocking-private-windows = Spårningsinnehåll i privata fönster
+content-blocking-cross-site-cookies-in-all-windows2 = Globala kakor i alla fönster
 content-blocking-cross-site-tracking-cookies = Globala spårningskakor
 content-blocking-all-cross-site-cookies-private-windows = Globala kakor i privata fönster
 content-blocking-cross-site-tracking-cookies-plus-isolate = Globala spårningskakor och isolera kvarvarande kakor
@@ -1281,12 +1280,19 @@ content-blocking-social-media-trackers = Sociala media-spårare
 content-blocking-all-cookies = Alla kakor
 content-blocking-unvisited-cookies = Kakor från obesökta webbplatser
 content-blocking-all-windows-tracking-content = Spårningsinnehåll i alla fönster
-content-blocking-all-third-party-cookies = Alla kakor från tredje part
+content-blocking-all-cross-site-cookies = Alla globala kakor
 content-blocking-cryptominers = Kryptogrävare
 content-blocking-fingerprinters = Fingeravtrycksspårare
 
+# The tcp-rollout strings are no longer used for the rollout but for tcp-by-default in the standard section
+
+# "Contains" here means "isolates", "limits".
+content-blocking-etp-standard-tcp-rollout-description = Totalt skydd mot kakor isolerar kakor från webbplatsen du är på, så spårare inte kan använda dem för att följa dig mellan webbplatser.
+content-blocking-etp-standard-tcp-rollout-learn-more = Lär dig mer
+
+content-blocking-etp-standard-tcp-title = Inkluderar totalt skydd mot kakor, vår mest kraftfulla integritetsfunktion någonsin
+
 content-blocking-warning-title = Se upp!
-content-blocking-and-isolating-etp-warning-description = Blockering av spårare och isolering av kakor kan påverka funktionaliteten på vissa webbplatser. Ladda om en sida med spårare för att ladda allt innehåll.
 content-blocking-and-isolating-etp-warning-description-2 = Denna inställning kan göra att vissa webbplatser inte visar innehåll eller fungerar korrekt. Om en webbplats verkar trasig kanske du vill inaktivera spårningsskydd för den webbplatsen för att ladda allt innehåll.
 content-blocking-warning-learn-how = Lär dig hur
 
@@ -1297,7 +1303,7 @@ content-blocking-reload-tabs-button =
 
 content-blocking-tracking-content-label =
     .label = Spårningsinnehåll
-    .accesskey = i
+    .accesskey = r
 content-blocking-tracking-protection-option-all-windows =
     .label = I alla fönster
     .accesskey = a
@@ -1332,7 +1338,7 @@ tracking-manage-exceptions =
 
 ## Privacy Section - Permissions
 
-permissions-header = Rättigheter
+permissions-header = Behörigheter
 
 permissions-location = Plats
 permissions-location-settings =
@@ -1351,6 +1357,12 @@ permissions-camera-settings =
 
 permissions-microphone = Mikrofon
 permissions-microphone-settings =
+    .label = Inställningar…
+    .accesskey = t
+
+# Short form for "the act of choosing sound output devices and redirecting audio to the chosen devices".
+permissions-speaker = Högtalarval
+permissions-speaker-settings =
     .label = Inställningar…
     .accesskey = t
 
@@ -1374,10 +1386,6 @@ permissions-block-popups =
     .label = Blockera popup-fönster
     .accesskey = B
 
-permissions-block-popups-exceptions =
-    .label = Undantag…
-    .accesskey = U
-
 # "popup" is a misspelling that is more popular than the correct spelling of
 # "pop-up" so it's included as a search keyword, not displayed in the UI.
 permissions-block-popups-exceptions-button =
@@ -1393,18 +1401,12 @@ permissions-addon-exceptions =
     .label = Undantag…
     .accesskey = U
 
-permissions-a11y-privacy-checkbox =
-    .label = Förhindra åtkomsttjänster från att komma åt din webbläsare
-    .accesskey = t
-
-permissions-a11y-privacy-link = Läs mer
-
 ## Privacy Section - Data Collection
 
 collection-header = Datainsamling och användning för { -brand-short-name }
 
 collection-description = Vi strävar alltid efter att ge dig val och samlar endast in vad vi behöver för tillhandahålla och förbättra { -brand-short-name } för alla. Vi ber alltid om tillåtelse innan vi tar emot personliga uppgifter.
-collection-privacy-notice = Sekretesspolicy
+collection-privacy-notice = Sekretessmeddelande
 
 collection-health-report-telemetry-disabled = Du tillåter inte längre { -vendor-short-name } att fånga in teknisk data och interaktionsdata. All tidigare data kommer att raderas inom 30 dagar.
 collection-health-report-telemetry-disabled-link = Läs mer
@@ -1426,13 +1428,18 @@ addon-recommendations-link = Läs mer
 # or builds with no Telemetry support available.
 collection-health-report-disabled = Datarapportering är inaktiverad för den här byggkonfigurationen
 
-collection-backlogged-crash-reports =
-    .label = Tillåt { -brand-short-name } att skicka eftersläpande kraschrapporter för din räkning
-    .accesskey = c
-collection-backlogged-crash-reports-link = Läs mer
-
 collection-backlogged-crash-reports-with-link = Tillåt { -brand-short-name } att skicka eftersläpande felrapporter för din räkning <a data-l10n-name="crash-reports-link">Läs mer</a>
     .accesskey = f
+
+privacy-segmentation-section-header = Nya funktioner som förbättrar din surfning
+
+privacy-segmentation-section-description = När vi erbjuder funktioner som använder din data för att ge dig en mer personlig upplevelse:
+
+privacy-segmentation-radio-off =
+    .label = Använd rekommendationer från { -brand-product-name }
+
+privacy-segmentation-radio-on =
+    .label = Visa detaljerad information
 
 ## Privacy Section - Security
 ##
@@ -1460,16 +1467,6 @@ security-block-uncommon-software =
 
 certs-header = Certifikat
 
-certs-personal-label = När en server begär ditt personliga certifikat
-
-certs-select-auto-option =
-    .label = Välj ett automatiskt
-    .accesskey = V
-
-certs-select-ask-option =
-    .label = Fråga mig varje gång
-    .accesskey = F
-
 certs-enable-ocsp =
     .label = Fråga OCSP responder-servrar för att bekräfta certifikatens aktuella giltighet
     .accesskey = F
@@ -1481,34 +1478,6 @@ certs-view =
 certs-devices =
     .label = Säkerhetsenheter…
     .accesskey = e
-
-space-alert-learn-more-button =
-    .label = Läs mer
-    .accesskey = L
-
-space-alert-over-5gb-pref-button =
-    .label =
-        { PLATFORM() ->
-            [windows] Öppna inställningar
-           *[other] Öppna inställningar
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] n
-           *[other] n
-        }
-
-space-alert-over-5gb-message =
-    { PLATFORM() ->
-        [windows] { -brand-short-name } håller på att få slut på diskutrymme. Webbplatsens innehåll kanske inte visas korrekt. Du kan rensa lagrad data i Inställningar > Sekretess & säkerhet > Kakor och webbplatsdata.
-       *[other] { -brand-short-name } håller på att få slut på diskutrymme. Webbplatsens innehåll kanske inte visas korrekt. Du kan rensa lagrad data i Inställningar > Sekretess & säkerhet > Kakor och webbplatsdata.
-    }
-
-space-alert-under-5gb-ok-button =
-    .label = Ok, jag förstår
-    .accesskey = k
-
-space-alert-under-5gb-message = { -brand-short-name } håller på att få slut på diskutrymme. Webbplatsens innehåll kanske inte visas korrekt. Besök “Läs mer” för att optimera din diskanvändning för en bättre webbupplevelse.
 
 space-alert-over-5gb-settings-button =
     .label = Öppna inställningar
@@ -1535,13 +1504,78 @@ httpsonly-radio-enabled-pbm =
 httpsonly-radio-disabled =
     .label = Aktivera inte endast HTTPS-läge
 
+## DoH Section
+
+preferences-doh-header = DNS över HTTPS
+
+preferences-doh-description = Domain Name System (DNS) över HTTPS skickar din begäran om ett domännamn via en krypterad anslutning, skapar en säker DNS och gör det svårare för andra att se vilken webbplats du ska komma åt.
+
+# Variables:
+#   $status (string) - The status of the DoH connection
+preferences-doh-status = Status: { $status }
+# Variables:
+#   $name (string) - The name of the DNS over HTTPS resolver. If a custom resolver is used, the name will be the domain of the URL.
+preferences-doh-resolver = Leverantör: { $name }
+# This is displayed instead of $name in preferences-doh-resolver
+# when the DoH URL is not a valid URL
+preferences-doh-bad-url = Ogiltig URL
+preferences-doh-steering-status = Använder lokal leverantör
+
+preferences-doh-status-active = Aktiv
+preferences-doh-status-disabled = Av
+# Variables:
+#   $reason (string) - A string representation of the reason DoH is not active. For example NS_ERROR_UNKNOWN_HOST or TRR_RCODE_FAIL.
+preferences-doh-status-not-active = Inte aktiv ({ $reason })
+
+preferences-doh-group-message = Aktivera säker DNS med:
+
+preferences-doh-expand-section =
+    .tooltiptext = Mer information
+
+preferences-doh-setting-default =
+    .label = Standardskydd
+    .accesskey = S
+preferences-doh-default-desc = { -brand-short-name } bestämmer när säker DNS ska användas för att skydda din integritet.
+preferences-doh-default-detailed-desc-1 = Använd säker DNS i regioner där det är tillgängligt
+preferences-doh-default-detailed-desc-2 = Använd din standard DNS-resolver om det finns ett problem med den säkra DNS-leverantören
+preferences-doh-default-detailed-desc-3 = Använd en lokal leverantör, om möjligt
+preferences-doh-default-detailed-desc-4 = Stäng av när VPN, föräldrakontroll eller företagspolicyer är aktiva
+preferences-doh-default-detailed-desc-5 = Stäng av när ett nätverk säger till { -brand-short-name } att det inte ska använda säker DNS
+
+preferences-doh-setting-enabled =
+    .label = Förstärkt skydd
+    .accesskey = F
+preferences-doh-enabled-desc = Du bestämmer när du ska använda säker DNS och väljer din leverantör.
+preferences-doh-enabled-detailed-desc-1 = Använd den leverantör du väljer
+preferences-doh-enabled-detailed-desc-2 = Använd endast din standard DNS-resolver om det uppstod ett problem med säker DNS
+
+preferences-doh-setting-strict =
+    .label = Maximalt skydd
+    .accesskey = M
+preferences-doh-strict-desc = { -brand-short-name } kommer alltid att använda säker DNS. Du kommer att se en säkerhetsriskvarning innan vi använder ditt system DNS.
+preferences-doh-strict-detailed-desc-1 = Använd endast den leverantör du väljer
+preferences-doh-strict-detailed-desc-2 = Varna alltid om säker DNS inte är tillgänglig
+preferences-doh-strict-detailed-desc-3 = Om säker DNS inte är tillgänglig kommer webbplatser inte att laddas eller fungera korrekt
+
+preferences-doh-setting-off =
+    .label = Av
+    .accesskey = A
+preferences-doh-off-desc = Använd din standard DNS-resolver
+
+preferences-doh-checkbox-warn =
+    .label = Varna om en tredje part aktivt förhindrar säker DNS
+    .accesskey = V
+
+preferences-doh-select-resolver = Välj leverantör:
+
+preferences-doh-exceptions-description = { -brand-short-name } kommer inte att använda säker DNS på dessa webbplatser
+
+preferences-doh-manage-exceptions =
+    .label = Hantera undantag…
+    .accesskey = H
+
 ## The following strings are used in the Download section of settings
 
 desktop-folder-name = Skrivbord
 downloads-folder-name = Filhämtningar
 choose-download-folder-title = Välj mapp för hämtade filer:
-
-# Variables:
-#   $service-name (String) - Name of a cloud storage provider like Dropbox, Google Drive, etc...
-save-files-to-cloud-storage =
-    .label = Spara filer till { $service-name }

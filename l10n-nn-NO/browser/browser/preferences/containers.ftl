@@ -2,20 +2,14 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-containers-window-new =
+containers-window-new2 =
     .title = Legg til ny behaldar
-    .style = width: 45em
+    .style = min-width: 45em
 # Variables
 #   $name (String) - Name of the container
-containers-window-update =
+containers-window-update-settings2 =
     .title = Behaldarinstillingar for { $name }
-    .style = width: 45em
-
-# Variables
-#   $name (String) - Name of the container
-containers-window-update-settings =
-    .title = Behaldarinstillingar for { $name }
-    .style = width: 45em
+    .style = min-width: 45em
 
 containers-window-close =
     .key = w
@@ -45,10 +39,6 @@ containers-icon-label = Ikon
 containers-color-label = Farge
     .accesskey = F
     .style = { -containers-labels-style }
-
-containers-button-done =
-    .label = Ferdig
-    .accesskey = F
 
 containers-dialog =
     .buttonlabelaccept = Ferdig

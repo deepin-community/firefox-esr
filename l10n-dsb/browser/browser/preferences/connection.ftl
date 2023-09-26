@@ -2,12 +2,12 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-connection-window =
+connection-window2 =
     .title = Nastajenja zwiskow
     .style =
         { PLATFORM() ->
-            [macos] width: 44em
-           *[other] width: 49em
+            [macos] min-width: 44em
+           *[other] min-width: 49em
         }
 
 connection-close-key =
@@ -35,10 +35,6 @@ connection-proxy-http = HTTP-proksy
     .accesskey = H
 connection-proxy-http-port = Port
     .accesskey = P
-connection-proxy-http-sharing =
-    .label = Teke toś ten proksy za FTP a HTTPS wužywaś
-    .accesskey = t
-
 connection-proxy-https-sharing =
     .label = Teke toś ten proksy za HTTPS wužywaś
     .accesskey = T
@@ -47,11 +43,6 @@ connection-proxy-https = HTTPS-proksy
     .accesskey = H
 connection-proxy-ssl-port = Port
     .accesskey = o
-
-connection-proxy-ftp = FTP-proksy
-    .accesskey = F
-connection-proxy-ftp-port = Port
-    .accesskey = r
 
 connection-proxy-socks = SOCKS Host
     .accesskey = C
@@ -69,9 +60,6 @@ connection-proxy-noproxy = Žeden proksy za
 
 connection-proxy-noproxy-desc = Pśikład: .mozilla.org, .net.nz, 192.168.1.0/24
 
-# Do not translate localhost, 127.0.0.1 and ::1.
-connection-proxy-noproxy-localhost-desc = Zwiski z localhost, 127.0.0.1 a ::1 nigda pśez proksy njejdu.
-
 # Do not translate "localhost", "127.0.0.1/8" and "::1". (You can translate "and".)
 connection-proxy-noproxy-localhost-desc-2 = Zwiski z localhost, 127.0.0.1/8 a ::1 nigda pśez proksy njejdu.
 
@@ -88,16 +76,14 @@ connection-proxy-autologin =
     .accesskey = i
     .tooltip = Toś to nastajenje awtentificěrujo was w slězynje pla proksyjow, gaž sćo pśizjwjańske daty za nje składował. Dostanjośo informaciju, jolic se awtentificěrowanje njeraźijo.
 
+connection-proxy-autologin-checkbox =
+    .label = Za awtentificěrowanim se njepšašaś, jolic gronidło jo składowane
+    .accesskey = i
+    .tooltiptext = Toś to nastajenje awtentificěrujo was w slězynje pla proksyjow, gaž sćo pśizjwjańske daty za nje składował. Dostanjośo informaciju, jolic se awtentificěrowanje njeraźijo.
+
 connection-proxy-socks-remote-dns =
     .label = Proksy-DNS, gaž se SOCKS v5 wužywa
     .accesskey = d
-
-connection-dns-over-https =
-    .label = DNS pśez HTTPS zmóžniś
-    .accesskey = H
-
-connection-dns-over-https-url-resolver = Póbitowarja wužywaś
-    .accesskey = P
 
 # Variables:
 #   $name (String) - Display name or URL for the DNS over HTTPS provider

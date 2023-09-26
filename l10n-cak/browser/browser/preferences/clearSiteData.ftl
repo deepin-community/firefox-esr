@@ -2,9 +2,9 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-clear-site-data-window =
+clear-site-data-window2 =
     .title = Tijosq'ïx Tzij
-    .style = width: 35em
+    .style = min-width: 35em
 
 clear-site-data-description = Toq yejosq'ïx ri taq kaxlanwey chuqa' rutzij k'amaya'l yakon ruma { -brand-short-name } nitikïr yerutz'apij molojri'ïl pa taq ruxaq ajk'amaya'l chuqa' yeruyüj taq kipan ruxaq ajk'amaya'l toq man atokinäq ta. Toq niyuj rutzij jumejyak man xkerutz'ila' ta taq molojri'ïl.
 
@@ -50,14 +50,6 @@ clear-site-data-cache-empty =
     .accesskey = A
 
 clear-site-data-cache-info = Xtrajo' chi ri ajk'amaya'l taq ruxaq kekisamajib'ej taq wachib'äl chuqa' tzij
-
-clear-site-data-cancel =
-    .label = Tiq'at
-    .accesskey = T
-
-clear-site-data-clear =
-    .label = Tijosq'ïx
-    .accesskey = j
 
 clear-site-data-dialog =
     .buttonlabelaccept = Tijosq'ïx

@@ -20,15 +20,6 @@ toolbar-context-menu-bookmark-selected-tabs =
 toolbar-context-menu-select-all-tabs =
     .label = Hautatu fitxa guztiak
     .accesskey = z
-toolbar-context-menu-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Desegin fitxa ixtea
-            [one] Desegin fitxa ixtea
-           *[other] Desegin fitxak ixtea
-        }
-    .accesskey = D
-
 toolbar-context-menu-reopen-closed-tabs =
     .label =
         { $tabCount ->
@@ -51,18 +42,18 @@ toolbar-context-menu-report-extension =
     .label = Eman hedapenaren berri
     .accesskey = E
 
-# Can appear on the same context menu as menubarCmd ("Menu Bar") and
-# personalbarCmd ("Bookmarks Toolbar"), so they should have different
-# access keys.
+# Can appear on the same context menu as toolbar-context-menu-menu-bar-cmd
+# ("Menu Bar") and personalbarCmd ("Bookmarks Toolbar"), so they should
+# have different access keys.
 toolbar-context-menu-pin-to-overflow-menu =
     .label = Ainguratu gainezkatzearen menuan
     .accesskey = A
-toolbar-context-menu-auto-hide-downloads-button =
-    .label = Ezkutatu automatikoki tresna-barran
-    .accesskey = z
 toolbar-context-menu-auto-hide-downloads-button-2 =
     .label = Ezkutatu botoia hutsik dagoenean
     .accesskey = E
+toolbar-context-menu-always-open-downloads-panel =
+    .label = Erakutsi panela deskarga hastean
+    .accesskey = s
 toolbar-context-menu-remove-from-toolbar =
     .label = Kendu tresna-barratik
     .accesskey = K
@@ -72,6 +63,11 @@ toolbar-context-menu-view-customize-toolbar =
 toolbar-context-menu-view-customize-toolbar-2 =
     .label = Pertsonalizatu tresna-barra…
     .accesskey = P
+# This is only ever shown when toolbar-context-menu-pin-to-overflow-menu
+# is hidden, so they can share access keys.
+toolbar-context-menu-pin-to-toolbar =
+    .label = Ainguratu tresna-barran
+    .accesskey = A
 
 toolbar-context-menu-bookmarks-toolbar-always-show-2 =
     .label = Erakutsi beti
@@ -86,3 +82,7 @@ toolbar-context-menu-bookmarks-toolbar-on-new-tab-2 =
 toolbar-context-menu-bookmarks-show-other-bookmarks =
     .label = Erakutsi beste laster-markak
     .accesskey = b
+
+toolbar-context-menu-menu-bar-cmd =
+    .toolbarname = Menu-barra
+    .accesskey = M

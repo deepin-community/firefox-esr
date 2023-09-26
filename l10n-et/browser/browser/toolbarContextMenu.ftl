@@ -2,6 +2,9 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
+toolbar-context-menu-new-tab =
+    .label = Uus kaart
+    .accesskey = U
 toolbar-context-menu-reload-selected-tab =
     .label = Laadi valitud kaart uuesti
     .accesskey = u
@@ -17,13 +20,14 @@ toolbar-context-menu-bookmark-selected-tabs =
 toolbar-context-menu-select-all-tabs =
     .label = Vali kõik kaardid
     .accesskey = k
-toolbar-context-menu-undo-close-tabs =
+toolbar-context-menu-reopen-closed-tabs =
     .label =
         { $tabCount ->
-            [one] Võta kaardi sulgemine tagasi
-           *[other] Võta kaartide sulgemine tagasi
+            [1] Ava suletud kaart uuesti
+            [one] Ava suletud kaart uuesti
+           *[other] Ava suletud kaardid uuesti
         }
-    .accesskey = V
+    .accesskey = v
 
 toolbar-context-menu-manage-extension =
     .label = Halda laiendust
@@ -39,19 +43,42 @@ toolbar-context-menu-report-extension =
     .label = Raporteeri laiendusest
     .accesskey = R
 
-# Can appear on the same context menu as menubarCmd ("Menu Bar") and
-# personalbarCmd ("Bookmarks Toolbar"), so they should have different
-# access keys.
+# Can appear on the same context menu as toolbar-context-menu-menu-bar-cmd
+# ("Menu Bar") and personalbarCmd ("Bookmarks Toolbar"), so they should
+# have different access keys.
 toolbar-context-menu-pin-to-overflow-menu =
     .label = Liiguta nurgatagusesse menüüsse
     .accesskey = r
-toolbar-context-menu-auto-hide-downloads-button =
-    .label = Peidetakse tööriistaribalt automaatselt
-    .accesskey = r
+toolbar-context-menu-auto-hide-downloads-button-2 =
+    .label = Allalaadimiste puudumisel nupp peidetakse
+    .accesskey = l
+toolbar-context-menu-always-open-downloads-panel =
+    .label = Allalaadimise alates kuvatakse paneeli
+    .accesskey = l
 toolbar-context-menu-remove-from-toolbar =
     .label = Eemalda tööriistaribalt
     .accesskey = E
 toolbar-context-menu-view-customize-toolbar =
     .label = Kohanda...
     .accesskey = o
+toolbar-context-menu-view-customize-toolbar-2 =
+    .label = Kohanda tööriistariba…
+    .accesskey = K
 
+toolbar-context-menu-bookmarks-toolbar-always-show-2 =
+    .label = Kuvatakse alati
+    .accesskey = a
+toolbar-context-menu-bookmarks-toolbar-never-show-2 =
+    .label = Ei kuvata kunagi
+    .accesskey = k
+toolbar-context-menu-bookmarks-toolbar-on-new-tab-2 =
+    .label = Kuvatakse ainult uuel kaardil
+    .accesskey = u
+
+toolbar-context-menu-bookmarks-show-other-bookmarks =
+    .label = Kuvatakse muude järjehoidjate nuppu
+    .accesskey = m
+
+toolbar-context-menu-menu-bar-cmd =
+    .toolbarname = Menüüriba
+    .accesskey = M

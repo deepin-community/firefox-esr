@@ -10,9 +10,6 @@ third-party-intro =
     { -brand-short-name }. ნებისმიერი მოდული, რომელსაც Microsoft ან
     { -vendor-short-name } არ აწერს ხელს, მიჩნეულია გარეშე მოდულად.
 
-third-party-header-module-list = მოდულების სია
-third-party-header-loading-events = იტვირთება ხდომილებები
-
 third-party-message-empty = გარეშე მოდულები არ აღმოჩენილა.
 third-party-message-no-duration = არაა ჩაწერილი
 
@@ -37,10 +34,12 @@ third-party-tag-background = ფონური
     .title =
         ეს მოდული არ აკავებს პროგრამას, ვინაიდან იტვირთება
         ფონურად.
-third-party-unsigned-icon =
+third-party-icon-unsigned =
     .title = ეს მოდული ხელმოუწერელია
-third-party-warning-icon =
-    .title = { -brand-short-name } უეცრად გაითიშა კოდში, ამ მოდულიდან
+    .alt = ეს მოდული ხელმოუწერელია
+third-party-icon-warning =
+    .title = { -brand-short-name } უეცრად გაითიშა ამ მოდულის კოდის შედეგად
+    .alt = { -brand-short-name } უეცრად გაითიშა ამ მოდულის კოდის შედეგად
 
 third-party-status-loaded = ჩატვირთული
 third-party-status-blocked = შეზღუდული
@@ -51,7 +50,28 @@ third-party-button-reload = გადატვირთვა სისტემ
     .title = გადატვირთვა სისტემის ინფორმაციით
 third-party-button-open =
     .title = მდებარეობის გახსნა...
+third-party-button-to-block =
+    .title = მოდულის შეზღუდვა
+    .aria-label = მოდულის შეზღუდვა
+third-party-button-to-unblock =
+    .title = ამჟამად შეზღუდულია. დაწკაპეთ შეზღუდვის მოსახსნელად.
+    .aria-label = ამჟამად შეზღუდულია. დაწკაპეთ შეზღუდვის მოსახსნელად.
+third-party-button-to-unblock-disabled =
+    .title =
+        ამჟამად მონიშნულია შეზღუდულად, თუმცა შეზღუდულთა სია უქმია და არ იყენებს
+        გაშვებული { -brand-short-name }. დაწკაპეთ შეზღუდვის მოსახსნელად.
+    .aria-label =
+        ამჟამად მონიშნულია შეზღუდულად, თუმცა შეზღუდულთა სია უქმია და არ იყენებს
+        გაშვებული { -brand-short-name }. დაწკაპეთ შეზღუდვის მოსახსნელად.
 third-party-button-expand =
-    .title = ვრცელი მონაცემების ჩვენება
+    .title = დაწვრილებით ჩვენება
 third-party-button-collapse =
-    .title = ვრცელი მონაცემები დამალვა
+    .title = შემოკლებულად ჩვენება
+third-party-blocking-requires-restart = გარეშე მოდულის შესაზღუდად { -brand-short-name } ახლიდან უნდა გაეშვას.
+third-party-should-restart-title = გაუშვით ხელახლა { -brand-short-name }
+third-party-restart-now = ხელახლა გაშვება
+third-party-restart-later = მოგვიანებით გაშვება
+
+third-party-blocked-by-builtin =
+    .title = ზღუდავს { -brand-short-name }
+    .alt = ზღუდავს { -brand-short-name }

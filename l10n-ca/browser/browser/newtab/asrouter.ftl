@@ -7,7 +7,6 @@
 
 cfr-doorhanger-extension-heading = Extensió recomanada
 cfr-doorhanger-feature-heading = Funció recomanada
-cfr-doorhanger-pintab-heading = Proveu això: Fixa la pestanya
 
 ##
 
@@ -19,8 +18,6 @@ cfr-doorhanger-extension-cancel-button = Ara no
 
 cfr-doorhanger-extension-ok-button = Afegeix-la ara
     .accesskey = A
-cfr-doorhanger-pintab-ok-button = Fixa aquesta pestanya
-    .accesskey = F
 
 cfr-doorhanger-extension-manage-settings-button = Gestiona els paràmetres de recomanacions
     .accesskey = G
@@ -68,18 +65,6 @@ cfr-doorhanger-extension-total-users =
        *[other] { $total } usuaris
     }
 
-cfr-doorhanger-pintab-description = Accediu fàcilment als llocs més utilitzats. Manteniu els llocs oberts en una pestanya (fins i tot quan reinicieu).
-
-## These messages are steps on how to use the feature and are shown together.
-
-cfr-doorhanger-pintab-step1 = <b>Feu clic amb el botó dret</b> a la pestanya que voleu fixar.
-cfr-doorhanger-pintab-step2 = Trieu <b>Fixa la pestanya</b> al menú.
-cfr-doorhanger-pintab-step3 = Si el contingut del lloc s'actualitza, veureu un punt blau a la pestanya fixa.
-
-cfr-doorhanger-pintab-animation-pause = Pausa
-cfr-doorhanger-pintab-animation-resume = Reprèn
-
-
 ## Firefox Accounts Message
 
 cfr-doorhanger-bookmark-fxa-header = Sincronitzeu les adreces d'interès a tot arreu.
@@ -105,126 +90,9 @@ cfr-whatsnew-button =
     .label = Novetats
     .tooltiptext = Novetats
 
-cfr-whatsnew-panel-header = Novetats
-
 cfr-whatsnew-release-notes-link-text = Llegiu les notes de la versió
 
-cfr-whatsnew-fx70-title = Ara el { -brand-short-name } lluita encara més per la vostra privadesa
-cfr-whatsnew-fx70-body = La darrera actualització millora la funció de protecció contra el seguiment i permet crear contrasenyes segures per a cada lloc molt fàcilment.
-
-cfr-whatsnew-tracking-protect-title = Protegiu-vos dels elements de seguiment
-cfr-whatsnew-tracking-protect-body = El { -brand-short-name } bloca els elements de seguiment de xarxes socials i entre llocs més habituals que recopilen dades sobre allò que feu a Internet.
-cfr-whatsnew-tracking-protect-link-text = Vegeu el vostre informe
-
-# This string is displayed before a large numeral that indicates the total
-# number of tracking elements blocked. Don’t add $blockedCount to your
-# localization, because it would result in the number showing twice.
-cfr-whatsnew-tracking-blocked-title =
-    { $blockedCount ->
-        [one] Element de seguiment blocat
-       *[other] Elements de seguiment blocats
-    }
-cfr-whatsnew-tracking-blocked-subtitle = Des de: { DATETIME($earliestDate, month: "long", year: "numeric") }
-cfr-whatsnew-tracking-blocked-link-text = Vegeu l'informe
-
-cfr-whatsnew-lockwise-backup-title = Feu una còpia de seguretat de les vostres contrasenyes
-cfr-whatsnew-lockwise-backup-body = Ara podeu generar contrasenyes segures i accedir-hi des de tot arreu on inicieu la sessió.
-cfr-whatsnew-lockwise-backup-link-text = Activeu la còpia de seguretat
-
-cfr-whatsnew-lockwise-take-title = Les vostres contrasenyes, a tot arreu
-cfr-whatsnew-lockwise-take-body = L'aplicació mòbil del { -lockwise-brand-short-name } us permet accedir de manera segura a les contrasenyes desades des de qualsevol lloc.
-cfr-whatsnew-lockwise-take-link-text = Baixa l'aplicació
-
-## Search Bar
-
-cfr-whatsnew-searchbar-title = Escriviu menys i trobeu més amb la barra d'adreces
-cfr-whatsnew-searchbar-body-topsites = Ara, podeu seleccionar la barra d'adreces i es desplegarà un quadre amb enllaços als vostres llocs principals.
-
-## Search bar
-
-cfr-whatsnew-searchbar-icon-alt-text = Icona de lupa
-
-## Picture-in-Picture
-
-cfr-whatsnew-pip-header = Mireu vídeos mentre navegueu
-cfr-whatsnew-pip-body = La imatge sobre imatge mostra el vídeo en una finestra flotant perquè pugueu mirar-lo mentre treballeu en altres pestanyes.
-cfr-whatsnew-pip-cta = Més informació
-
-## Permission Prompt
-
-cfr-whatsnew-permission-prompt-header = Menys missatges emergents molestos
-cfr-whatsnew-permission-prompt-body = Ara el { -brand-shorter-name } impedeix que els llocs us demanin automàticament enviar-vos missatges emergents.
-cfr-whatsnew-permission-prompt-cta = Més informació
-
-## Fingerprinter Counter
-
-# This string is displayed before a large numeral that indicates the total
-# number of tracking elements blocked. Don’t add $fingerprinterCount to your
-# localization, because it would result in the number showing twice.
-cfr-whatsnew-fingerprinter-counter-header =
-    { $fingerprinterCount ->
-        [one] Generador d'empremtes digitals blocat
-       *[other] Generadors d'empremtes digitals blocats
-    }
-cfr-whatsnew-fingerprinter-counter-body = El { -brand-shorter-name } bloca molts generadors d'empremtes digitals que secretament recullen informació sobre el vostre dispositiu i les vostres accions per crear un perfil publicitari vostre.
-
-# Message variation when fingerprinters count is less than 10
-cfr-whatsnew-fingerprinter-counter-header-alt = Generadors d'empremtes digitals
-cfr-whatsnew-fingerprinter-counter-body-alt = El { -brand-shorter-name } pot blocar els generadors d'empremtes digitals que secretament recullen informació sobre el vostre dispositiu i les vostres accions per crear un perfil publicitari vostre.
-
-## Bookmark Sync
-
-cfr-doorhanger-sync-bookmarks-header = Accediu a aquesta adreça d'interès des del vostre telèfon
-cfr-doorhanger-sync-bookmarks-body = Accediu a les adreces d'interès, les contrasenyes, l'historial i molt més arreu on tingueu una sessió iniciada en el { -brand-product-name }.
-cfr-doorhanger-sync-bookmarks-ok-button = Activa el { -sync-brand-short-name }
-    .accesskey = A
-
-## Login Sync
-
-cfr-doorhanger-sync-logins-header = No perdeu mai més cap contrasenya
-cfr-doorhanger-sync-logins-body = Emmagatzemeu i sincronitzeu de forma segura les contrasenyes en tots els vostres dispositius.
-cfr-doorhanger-sync-logins-ok-button = Activa el { -sync-brand-short-name }
-    .accesskey = A
-
-## Send Tab
-
-cfr-doorhanger-send-tab-header = Llegiu-ho sobre la marxa
-cfr-doorhanger-send-tab-recipe-header = Emporta't aquesta recepta a la cuina
-cfr-doorhanger-send-tab-body = «Envia la pestanya» us permet compartir fàcilment aquest enllaç amb el vostre telèfon o arreu on tingueu una sessió iniciada en el { -brand-product-name }.
-cfr-doorhanger-send-tab-ok-button = Prova «Envia la pestanya»
-    .accesskey = P
-
-## Firefox Send
-
-cfr-doorhanger-firefox-send-header = Compartiu aquest PDF de forma segura
-cfr-doorhanger-firefox-send-body = Manteniu els vostres documents confidencials lluny de mirades indiscretes amb un xifratge d'extrem a extrem i un enllaç que desapareix quan hàgiu acabat.
-cfr-doorhanger-firefox-send-ok-button = Prova el { -send-brand-name }
-    .accesskey = P
-
-## Social Tracking Protection
-
-cfr-doorhanger-socialtracking-ok-button = Mostra les proteccions
-    .accesskey = M
-cfr-doorhanger-socialtracking-close-button = Tanca
-    .accesskey = T
-cfr-doorhanger-socialtracking-dont-show-again = No em tornis a mostrar cap missatge com aquest
-    .accesskey = N
-cfr-doorhanger-socialtracking-heading = El { -brand-short-name } ha impedit que una xarxa social us faci el seguiment fins aquí
-cfr-doorhanger-socialtracking-description = La vostra privadesa és important. Ara el { -brand-short-name } bloca els elements de seguiment de les xarxes socials més comunes. Això limita la quantitat de dades que poden recopilar sobre allò que feu a Internet.
-cfr-doorhanger-fingerprinters-heading = El { -brand-short-name } ha blocat un generador d'empremtes digitals en aquesta pàgina
-cfr-doorhanger-fingerprinters-description = La vostra privadesa és important. Ara el { -brand-short-name } bloca els generadors d'empremtes digitals, que recopilen informació del vostre dispositiu que us podria identificar per a fer-vos el seguiment.
-cfr-doorhanger-cryptominers-heading = El { -brand-short-name } ha blocat un miner de criptomonedes en aquesta pàgina
-cfr-doorhanger-cryptominers-description = La vostra privadesa és important. Ara el { -brand-short-name } bloca els miners de criptomonedes, que utilitzen la potència de càlcul del vostre ordinador per a la mineria de diners digitals.
-
 ## Enhanced Tracking Protection Milestones
-
-# Variables:
-#   $blockedCount (Number) - The total count of blocked trackers. This number will always be greater than 1.
-#   $date (String) - The date we began recording the count of blocked trackers
-cfr-doorhanger-milestone-heading =
-    { $blockedCount ->
-       *[other] El { -brand-short-name } ha blocat més de <b>{ $blockedCount }</b> elements de seguiment des del { $date }
-    }
 
 # Variables:
 #   $blockedCount (Number) - The total count of blocked trackers. This number will always be greater than 1.
@@ -235,45 +103,8 @@ cfr-doorhanger-milestone-heading2 =
     }
 cfr-doorhanger-milestone-ok-button = Mostra-ho tot
     .accesskey = M
-
-## What’s New Panel Content for Firefox 76
-
-
-## Lockwise message
-
-cfr-whatsnew-lockwise-header = Creeu contrasenyes segures fàcilment
-cfr-whatsnew-lockwise-body = És complicat pensar en contrasenyes úniques i segures per a cada compte. Quan creeu una contrasenya, seleccioneu el camp de contrasenya per utilitzar una contrasenya segura generada pel { -brand-shorter-name }.
-cfr-whatsnew-lockwise-icon-alt = Icona del { -lockwise-brand-short-name }
-
-## Vulnerable Passwords message
-
-cfr-whatsnew-passwords-header = Rebeu alertes sobre contrasenyes vulnerables
-cfr-whatsnew-passwords-body = Els furoners saben que la gent reutilitza les mateixes contrasenyes. Si heu utilitzat la mateixa contrasenya en diversos llocs i un d'aquests llocs ha aparegut en alguna filtració de dades, veureu una alerta en el { -lockwise-brand-short-name } perquè canvieu la contrasenya d'aquests llocs.
-cfr-whatsnew-passwords-icon-alt = Icona de clau de contrasenya vulnerable
-
-## Picture-in-Picture fullscreen message
-
-cfr-whatsnew-pip-fullscreen-header = La imatge sobre imatge, ara a pantalla completa
-cfr-whatsnew-pip-fullscreen-body = Quan obriu un vídeo en una finestra flotant, ara podeu fer doble clic a la finestra per canviar-lo a pantalla completa.
-cfr-whatsnew-pip-fullscreen-icon-alt = Icona d'Imatge sobre imatge
-
-## Protections Dashboard message
-
-cfr-whatsnew-protections-header = Totes les proteccions d'un cop d'ull
-cfr-whatsnew-protections-body = El Tauler de proteccions inclou un resum de les filtracions de dades i gestió de contrasenyes. Ara podeu fer el seguiment de les filtracions que heu resolt i comprovar si alguna de les vostres contrasenyes desades podrien haver estat exposades en una filtració de dades.
-cfr-whatsnew-protections-cta-link = Mostra el tauler de proteccions
-cfr-whatsnew-protections-icon-alt = Icona d'escut
-
-## Better PDF message
-
-cfr-whatsnew-better-pdf-header = Millor experiència amb els PDF
-cfr-whatsnew-better-pdf-body = Ara els documents PDF s'obren directament en el { -brand-short-name }, per tenir-los més a mà.
-
 cfr-doorhanger-milestone-close-button = Tanca
     .accesskey = c
-
-## What’s New Panel Content for Firefox 76
-## Protections Dashboard message
 
 ## DOH Message
 
@@ -286,28 +117,130 @@ cfr-doorhanger-doh-secondary-button = Inhabilita
 
 ## Fission Experiment Message
 
-cfr-doorhanger-fission-body-approved = La vostra privadesa és important. Ara el { -brand-short-name } aïlla els llocs web els uns dels altres, perquè sigui més difícil per als furoners robar contrasenyes, números de targetes de crèdit i altra informació confidencial.
-cfr-doorhanger-fission-header = Aïllament de llocs
-cfr-doorhanger-fission-primary-button = Entesos
-    .accesskey = E
-cfr-doorhanger-fission-secondary-button = Més informació
-    .accesskey = M
-
-## What's new: Cookies message
-
-## What's new: Media controls message
-
-## What's new: Search shortcuts
-
-## What's new: Cookies protection
-
-## What's new: Better bookmarking
-
-## What's new: Cross-site cookie tracking
-
 ## Full Video Support CFR message
 
 cfr-doorhanger-video-support-body = És possible que els vídeos d'aquest lloc no es reprodueixin correctament en aquesta versió del { -brand-short-name }. Per reproduir els vídeos correctament, actualitzeu el { -brand-short-name } ara.
 cfr-doorhanger-video-support-header = Actualitzeu el { -brand-short-name } per reproduir el vídeo
 cfr-doorhanger-video-support-primary-button = Actualitza ara
     .accesskey = A
+
+## Spotlight modal shared strings
+
+## VPN promotion dialog for public Wi-Fi users
+##
+## If a user is detected to be on a public Wi-Fi network, they are given a
+## bit of info about how to improve their privacy and then offered a button
+## to the Mozilla VPN page and a link to dismiss the dialog.
+
+# This header text can be explicitly wrapped.
+spotlight-public-wifi-vpn-header = Sembla que utilitzeu una connexió Wi-Fi pública
+spotlight-public-wifi-vpn-body = Per amagar la vostra ubicació i activitat de navegació, considereu utilitzar una xarxa privada virtual. Us ajudarà a mantenir-vos protegit quan navegueu per llocs públics, com ara aeroports i cafeteries.
+spotlight-public-wifi-vpn-primary-button = Protegiu la vostra privadesa amb el { -mozilla-vpn-brand-name }
+    .accesskey = P
+spotlight-public-wifi-vpn-link = Ara no
+    .accesskey = n
+
+## Total Cookie Protection Rollout
+
+## Emotive Continuous Onboarding
+
+spotlight-better-internet-header = Fer una Internet millor és responsabilitat de tots nosaltres
+spotlight-better-internet-body = Utilitzant el { -brand-short-name } doneu suport a una Internet oberta, accessible i millor per a tothom.
+spotlight-peace-mind-header = Teniu les espatlles ben cobertes
+spotlight-peace-mind-body = Cada mes, el { -brand-short-name } bloca una mitjana de 3000 elements de seguiment per usuari. Creiem que no s'hauria d'interposar res entre l'usuari i el bon contingut d'Internet, i menys els atacs a la privadesa provocats per aquests elements de seguiment.
+spotlight-pin-primary-button =
+    { PLATFORM() ->
+        [macos] Fixa'l al Dock
+       *[other] Fixa'l a la barra de tasques
+    }
+spotlight-pin-secondary-button = Ara no
+
+## MR2022 Background Update Windows native toast notification strings.
+##
+## These strings will be displayed by the Windows operating system in
+## a native toast, like:
+##
+## <b>multi-line title</b>
+## multi-line text
+## <img>
+## [ primary button ] [ secondary button ]
+##
+## The button labels are fitted into narrow fixed-width buttons by
+## Windows and therefore must be as narrow as possible.
+
+mr2022-background-update-toast-title = Nou { -brand-short-name }. Més privat. Menys seguiment. Sense compromisos.
+mr2022-background-update-toast-text = Proveu el nou { -brand-short-name }, actualitzat amb la protecció contra el seguiment més potent fins ara.
+
+# This button label will be fitted into a narrow fixed-width button by
+# Windows. Try to not exceed the width of the English text (compare it
+# using a variable font like Arial): the button can only fit 1-2
+# additional characters, exceeding characters will be truncated.
+mr2022-background-update-toast-primary-button-label = Obre el { -brand-shorter-name } ara
+
+# This button label will be fitted into a narrow fixed-width button by
+# Windows. Try to not exceed the width of the English text (compare it using a
+# variable font like Arial): the button can only fit 1-2 additional characters,
+# exceeding characters will be truncated.
+mr2022-background-update-toast-secondary-button-label = Recorda-m'ho més tard
+
+## Firefox View CFR
+
+firefoxview-cfr-primarybutton = Prova-ho
+    .accesskey = P
+firefoxview-cfr-secondarybutton = Ara no
+    .accesskey = A
+firefoxview-cfr-header-v2 = Continueu des d’on ho deixeu
+firefoxview-cfr-body-v2 = Recupereu les pestanyes tancades recentment i salteu d'un dispositiu a l'altre de forma transparent amb la { -firefoxview-brand-name }.
+
+## Firefox View Spotlight
+
+firefoxview-spotlight-promo-title = Us presentem la { -firefoxview-brand-name }
+
+# “Poof” refers to the expression to convey when something or someone suddenly disappears, or in this case, reappears. For example, “Poof, it’s gone.”
+firefoxview-spotlight-promo-subtitle = Voleu aquella pestanya que teniu oberta en el telèfon? Recupereu-la a l'instant. Necessiteu un lloc que tot just heu visitat ara mateix? Amb el { -firefoxview-brand-name } és dit i fet.
+firefoxview-spotlight-promo-primarybutton = Com funciona?
+firefoxview-spotlight-promo-secondarybutton = Omet
+
+## Colorways expiry reminder CFR
+
+colorways-cfr-primarybutton = Tria la combinació de colors
+    .accesskey = c
+
+# "shades" refers to the different color options available to users in colorways.
+colorways-cfr-body = Acoloriu el navegador amb aquests tons exclusius del { -brand-short-name } inspirats en veus que han canviat la cultura.
+colorways-cfr-header-28days = Les combinacions de colors de Veus independents caduquen el 16 de gener
+colorways-cfr-header-14days = Les combinacions de colors de Veus independents caduquen d'aquí a dues setmanes
+colorways-cfr-header-7days = Les combinacions de colors de Veus independents caduquen aquesta setmana
+colorways-cfr-header-today = Les combinacions de colors de Veus independents caduquen avui
+
+## Cookie Banner Handling CFR
+
+cfr-cbh-header = Voleu que el { -brand-short-name } rebutgi els bàners de galetes?
+cfr-cbh-body = El { -brand-short-name } pot rebutjar automàticament moltes sol·licituds de bàners de galetes.
+cfr-cbh-confirm-button = Rebutja els bàners de galetes
+    .accesskey = R
+cfr-cbh-dismiss-button = Ara no
+    .accesskey = n
+
+## These strings are used in the Fox doodle Pin/set default spotlights
+
+july-jam-headline = Teniu les espatlles ben cobertes
+july-jam-body = Cada mes, el { -brand-short-name } bloca una mitjana de 3.000 elements de seguiment per usuari, per tal d'oferir-vos un accés segur i ràpid al bon contingut d'Internet.
+july-jam-set-default-primary = Obre els enllaços amb el { -brand-short-name }
+fox-doodle-pin-headline = Ben tornat
+
+# “indie” is short for the term “independent”.
+# In this instance, free from outside influence or control.
+fox-doodle-pin-body = Us volem recordar que podeu tenir el vostre navegador independent preferit a un sol clic.
+fox-doodle-pin-primary = Obre els enllaços amb el { -brand-short-name }
+fox-doodle-pin-secondary = Ara no
+
+## These strings are used in the Set Firefox as Default PDF Handler for Existing Users experiment
+
+set-default-pdf-handler-headline = <strong>Ara podeu obrir els fitxers PDF en el { -brand-short-name }.</strong> Editeu o signeu formularis directament en el navegador. Per a canviar, cerqueu «PDF» en els paràmetres.
+set-default-pdf-handler-primary = Entesos
+
+## FxA sync CFR
+
+## Device Migration FxA Spotlight
+

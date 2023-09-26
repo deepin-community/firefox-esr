@@ -8,6 +8,9 @@ certmgr-title =
 certmgr-tab-mine =
     .label = Skilríkin þín
 
+certmgr-tab-remembered =
+    .label = Ákvarðanir vegna auðkenninga
+
 certmgr-tab-people =
     .label = Fólk
 
@@ -18,49 +21,14 @@ certmgr-tab-ca =
     .label = Vottunarstöðvar
 
 certmgr-mine = Skilríki frá stofnunum sem auðkenna þig
+certmgr-remembered = Þessi skilríki eru notuð til að auðkenna þig á vefsvæðum
 certmgr-people = Skilríki sem auðkenna þetta fólk
-certmgr-servers = Skilríki sem auðkenna þessi vefsvæði
+certmgr-server = Þessar færslur auðkenna undantekningar á villum í skilríkjum netþjóna
 certmgr-ca = Skilríki sem auðkenna þessar vottunarstöðvar
 
-certmgr-detail-general-tab-title =
-    .label = Almennt
-    .accesskey = A
-
-certmgr-detail-pretty-print-tab-title =
-    .label = Nánar
-    .accesskey = N
-
-certmgr-pending-label =
-    .value = Er að sannvotta skilríki…
-
-certmgr-subject-label = Gefið út fyrir
-
-certmgr-issuer-label = Gefið út af
-
-certmgr-period-of-validity = Tímabil í gildi
-
-certmgr-fingerprints = Fingraför
-
-certmgr-cert-detail =
-    .title = Nánar um skilríki
-    .buttonlabelaccept = Loka
-    .buttonaccesskeyaccept = L
-
-certmgr-cert-detail-commonname = Almennt nafn (CN)
-
-certmgr-cert-detail-org = Stofnun (O)
-
-certmgr-cert-detail-orgunit = Stofnunareining (OU)
-
-certmgr-cert-detail-serial-number = Raðnúmer
-
-certmgr-cert-detail-sha-256-fingerprint = SHA-256 fingrafar
-
-certmgr-cert-detail-sha-1-fingerprint = SHA1 fingrafar
-
-certmgr-edit-ca-cert =
+certmgr-edit-ca-cert2 =
     .title = Breyta stillingum CA skilríkja trausts
-    .style = width: 48em;
+    .style = min-width: 48em;
 
 certmgr-edit-cert-edit-trust = Breyta traust stillingum:
 
@@ -70,9 +38,12 @@ certmgr-edit-cert-trust-ssl =
 certmgr-edit-cert-trust-email =
     .label = Þetta skilríki getur auðkennt póst notendur.
 
-certmgr-delete-cert =
+certmgr-delete-cert2 =
     .title = Eyða skilríki
-    .style = width: 48em; height: 24em;
+    .style = min-width: 48em; min-height: 24em;
+
+certmgr-cert-host =
+    .label = Hýsilvél
 
 certmgr-cert-name =
     .label = Nafn skilríkis
@@ -80,18 +51,11 @@ certmgr-cert-name =
 certmgr-cert-server =
     .label = Netþjónn
 
-certmgr-override-lifetime =
-    .label = Æviskeið
-
 certmgr-token-name =
     .label = Öryggistæki
 
-certmgr-begins-on = Byrjar þann
-
 certmgr-begins-label =
     .label = Byrjar þann
-
-certmgr-expires-on = Rennur út
 
 certmgr-expires-label =
     .label = Rennur út
@@ -101,6 +65,9 @@ certmgr-email =
 
 certmgr-serial =
     .label = Raðnúmer
+
+certmgr-fingerprint-sha-256 =
+    .label = SHA-256 fingrafar
 
 certmgr-view =
     .label = Skoða…
@@ -134,18 +101,6 @@ certmgr-restore =
     .label = Flytja inn…
     .accesskey = i
 
-certmgr-details =
-    .value = Skilríkjasvæði
-    .accesskey = S
-
-certmgr-fields =
-    .value = Gildi
-    .accesskey = G
-
-certmgr-hierarchy =
-    .value = Stigskipting skilríkja
-    .accesskey = S
-
 certmgr-add-exception =
     .label = Bæta við undantekningu…
     .accesskey = u
@@ -174,7 +129,7 @@ exception-mgr-permanent =
     .label = Geyma þessa undanþágu til frambúðar
     .accesskey = G
 
-pk11-bad-password = Innslegið lykilorð er vitlaust.
+pk11-bad-password = Lykilorðið sem var slegið inn er rangt.
 pkcs12-decode-err = Gat ekki afkóðað skrá.  Annaðhvort er þetta ekki skrá á PKCS #12 sniði, skráin er skemmd, eða innslegið lykilorð er rangt.
 pkcs12-unknown-err-restore = Vegna óþekktra ástæðna var ekki hægt að endurheimta PKCS #12 skrána.
 pkcs12-unknown-err-backup = Vegna óþekktra ástæðna var ekki hægt að búa til PKCS #12 afritunarskrá.
@@ -186,7 +141,7 @@ pkcs12-dup-data = Skilríkið og einkalykillinn er þegar til á öryggistækinu
 
 choose-p12-backup-file-dialog = Skráarnafn til að taka afrit af
 file-browse-pkcs12-spec = PKCS12 skrár
-choose-p12-restore-file-dialog = Skírteinisskrá til að flytja inn
+choose-p12-restore-file-dialog = Skilríkisskrá til að flytja inn
 
 ## Import certificate(s) file dialog
 
@@ -208,11 +163,10 @@ delete-user-cert-confirm = Ertu viss um að þú viljir eyða þessum skilríkju
 delete-user-cert-impact = Ef þú eyðir þínum eigin skilríkjum geturðu ekki lengur notað þau til að auðkenna sjálfan þig.
 
 
-delete-ssl-cert-title =
-    .title = Eyða skilríkja undantekningum netþjóna
-delete-ssl-cert-confirm = Ertu viss um að viljir eyða þessum undantekningum netþjóns?
-delete-ssl-cert-impact = EF þú eyðir undantekningu netþjóns, gerirðu aftur virkar venjulegar öryggisaðgerðir sem athuga netþjóna og gera kröfur um gilt skilríki.
-
+delete-ssl-override-title =
+    .title = Eyða undantekningu skilríkja netþjóns
+delete-ssl-override-confirm = Ertu viss um að viljir eyða þessari undantekningu netþjóns?
+delete-ssl-override-impact = EF þú eyðir undantekningu netþjóns, gerirðu aftur virkar venjulegar öryggisathuganir á netþjónum og gerir kröfur um að þeir noti gild skilríki.
 
 delete-ca-cert-title =
     .title = Eyða eða vantreysta CA skilríkjum
@@ -232,59 +186,30 @@ delete-email-cert-impact = Ef þú eyðir skilríki notanda, muntu ekki lengur g
 cert-with-serial =
     .value = Skilríki með raðnúmer: { $serialNumber }
 
-## Cert Viewer
+# Used to indicate that the user chose not to send a client authentication certificate to a server that requested one in a TLS handshake.
+send-no-client-certificate = Senda ekkert skilríki fyrir biðlara
 
-# Title used for the Certificate Viewer.
-#
-# Variables:
-#   $certificate : a string representative of the certificate being viewed.
-cert-viewer-title =
-    .title = Skilríkjaskoðari: “{ $certName }”
+# Used when no cert is stored for an override
+no-cert-stored-for-override = (Ekki geymt)
 
-not-present =
-    .value = <Ekki hluti af skilríki>
-
-# Cert verification
-cert-verified = Þetta skilríki hefur verið sannreynt fyrir eftirfarandi notkun:
-
-# Add usage
-verify-ssl-client =
-    .value = SSL biðlaraskírteini
-
-verify-ssl-server =
-    .value = SSL netþjónsskírteini
-
-verify-ssl-ca =
-    .value = SSL Vottunarstöð skilríkja
-
-verify-email-signer =
-    .value = Póst skilríki
-
-verify-email-recip =
-    .value = Skilríki póstviðtakanda
-
-# Cert verification
-cert-not-verified-cert-revoked = Get ekki sannreynt þetta skilríki vegna þess að það hefur verið afturkallað.
-cert-not-verified-cert-expired = Get ekki sannreynt þetta skilríki vegna þess að það er útrunnið.
-cert-not-verified-cert-not-trusted = Get ekki sannreynt þetta skilríki vegna þess að því er ekki treystandi.
-cert-not-verified-issuer-not-trusted = Get ekki sannreynt þetta skilríki vegna þess útgefanda er ekki treystandi.
-cert-not-verified-issuer-unknown = Get ekki sannreynt þetta skilríki vegna þess að útgefandi er óþekktur.
-cert-not-verified-ca-invalid = Get ekki sannreynt þetta skilríki vegna þess að CA skilríki er óleyfilegt.
-cert-not-verified_algorithm-disabled = Gat ekki sannreynt þetta skilríki vegna þess að það var undirritað með undirskriftar algrími sem er ekki lengur virkt vegna þess að algrímið er ekki öruggt.
-cert-not-verified-unknown = Get ekki sannreynt þetta skilríki vegna óþekktra ástæðna.
+# When a certificate is unavailable (for example, it has been deleted or the token it exists on has been removed).
+certificate-not-available = (ekki tiltækt)
 
 ## Used to show whether an override is temporary or permanent
+
+permanent-override = Varanlegt
+temporary-override = Tímabundið
 
 ## Add Security Exception dialog
 
 add-exception-branded-warning = Þú ert í þann veginn að fara hunsa hvernig { -brand-short-name } auðkennir þetta vefsvæði.
 add-exception-invalid-header = Þetta vefsvæði reynir að auðkenna sig með röngum upplýsingum.
-add-exception-domain-mismatch-short = Vitlaust vefsvæði
+add-exception-domain-mismatch-short = Rangt vefsvæði
 add-exception-domain-mismatch-long = Skilríkið tilheyrir öðru vefsvæði, sem gæti þýtt að einhver sé að reyna að þykjast vera þetta vefsvæði.
 add-exception-expired-short = Úreltar upplýsingar
 add-exception-expired-long = Skilríkið er ekki gilt. Það gæti verið stolið eða týnt, og einhver gæti notað það til að þykjast vera þetta vefsvæði.
 add-exception-unverified-or-bad-signature-short = Óþekkt auðkenni
-add-exception-unverified-or-bad-signature-long = Skilríki er ekki treyst, þar sem það hefur ekki verið sannreynt af viðurkenndum aðila með öruggri undirskrift.
+add-exception-unverified-or-bad-signature-long = Skilríkinu er ekki treyst, þar sem það hefur ekki verið sannreynt af viðurkenndum aðila með öruggri undirritun.
 add-exception-valid-short = Gilt skilríki
 add-exception-valid-long = Þetta vefsvæði hefur gilt, auðkennt auðkenni.  Það þarf ekki að bæta við undantekningu.
 add-exception-checking-short = Athuga upplýsingar

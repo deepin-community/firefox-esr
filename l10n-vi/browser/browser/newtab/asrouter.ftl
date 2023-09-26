@@ -7,7 +7,6 @@
 
 cfr-doorhanger-extension-heading = Tiện ích được đề xuất
 cfr-doorhanger-feature-heading = Tính năng được đề xuất
-cfr-doorhanger-pintab-heading = Hãy thử cái này: Ghim thẻ
 
 ##
 
@@ -19,8 +18,6 @@ cfr-doorhanger-extension-cancel-button = Không phải bây giờ
 
 cfr-doorhanger-extension-ok-button = Thêm vào ngay
     .accesskey = A
-cfr-doorhanger-pintab-ok-button = Ghim thẻ này
-    .accesskey = P
 
 cfr-doorhanger-extension-manage-settings-button = Quản lý các thiết lập được đề xuất
     .accesskey = M
@@ -66,18 +63,6 @@ cfr-doorhanger-extension-total-users =
        *[other] { $total } người dùng
     }
 
-cfr-doorhanger-pintab-description = Dễ dàng truy cập vào các trang web được sử dụng nhiều nhất của bạn. Giữ các trang web mở trong một thẻ (ngay cả khi bạn khởi động lại).
-
-## These messages are steps on how to use the feature and are shown together.
-
-cfr-doorhanger-pintab-step1 = <b>Nhấp chuột phải</b> trên thẻ bạn muốn ghim.
-cfr-doorhanger-pintab-step2 = Chọn <b>Ghim thẻ</b> từ menu.
-cfr-doorhanger-pintab-step3 = Nếu trang web có bản cập nhật, bạn sẽ thấy một chấm màu xanh trên thẻ được ghim.
-
-cfr-doorhanger-pintab-animation-pause = Tạm dừng
-cfr-doorhanger-pintab-animation-resume = Tiếp tục
-
-
 ## Firefox Accounts Message
 
 cfr-doorhanger-bookmark-fxa-header = Đồng bộ dấu trang của bạn ở mọi nơi.
@@ -103,130 +88,9 @@ cfr-whatsnew-button =
     .label = Có gì mới
     .tooltiptext = Có gì mới
 
-cfr-whatsnew-panel-header = Có gì mới
-
 cfr-whatsnew-release-notes-link-text = Đọc ghi chú phát hành
 
-cfr-whatsnew-fx70-title = { -brand-short-name } bây giờ chiến đấu mạnh mẽ hơn cho quyền riêng tư của bạn
-cfr-whatsnew-fx70-body =
-    Bản cập nhật mới nhất nâng cao tính năng chống theo dõi và làm cho nó
-    dễ dàng hơn bao giờ hết để tạo mật khẩu an toàn cho mọi trang web.
-
-cfr-whatsnew-tracking-protect-title = Bảo vệ bạn khỏi trình theo dõi
-cfr-whatsnew-tracking-protect-body =
-    { -brand-short-name } chặn nhiều trình theo dõi xã hội và trang web phổ biến mà
-    nó theo dõi những gì bạn làm trực tuyến
-cfr-whatsnew-tracking-protect-link-text = Xem báo cáo của bạn
-
-# This string is displayed before a large numeral that indicates the total
-# number of tracking elements blocked. Don’t add $blockedCount to your
-# localization, because it would result in the number showing twice.
-cfr-whatsnew-tracking-blocked-title =
-    { $blockedCount ->
-       *[other] Trình theo dõi đã chặn
-    }
-cfr-whatsnew-tracking-blocked-subtitle = Từ { DATETIME($earliestDate, month: "long", year: "numeric") }
-cfr-whatsnew-tracking-blocked-link-text = Xem báo cáo
-
-cfr-whatsnew-lockwise-backup-title = Sao lưu mật khẩu của bạn
-cfr-whatsnew-lockwise-backup-body = Bây giờ tạo mật khẩu an toàn, bạn có thể truy cập bất cứ nơi nào bạn đăng nhập.
-cfr-whatsnew-lockwise-backup-link-text = Bật sao lưu
-
-cfr-whatsnew-lockwise-take-title = Mang mật khẩu theo bên bạn
-cfr-whatsnew-lockwise-take-body =
-    Ứng dụng di động { -lockwise-brand-short-name } cho phép bạn truy cập an toàn
-    mật khẩu được sao lưu từ bất cứ đâu.
-cfr-whatsnew-lockwise-take-link-text = Tải ứng dụng
-
-## Search Bar
-
-cfr-whatsnew-searchbar-title = Nhập ít hơn, tìm nhiều hơn với thanh địa chỉ
-cfr-whatsnew-searchbar-body-topsites = Bây giờ, chỉ cần chọn thanh địa chỉ và một hộp sẽ mở rộng với các liên kết đến các trang web hàng đầu của bạn.
-
-## Search bar
-
-cfr-whatsnew-searchbar-icon-alt-text = Biểu tượng kính lúp
-
-## Picture-in-Picture
-
-cfr-whatsnew-pip-header = Xem video trong khi bạn duyệt
-cfr-whatsnew-pip-body = Hình trong hình bật video vào một cửa sổ nổi để bạn có thể xem trong khi làm việc trong các thẻ khác.
-cfr-whatsnew-pip-cta = Tìm hiểu thêm
-
-## Permission Prompt
-
-cfr-whatsnew-permission-prompt-header = Ít trang web gây phiền nhiễu hơn
-cfr-whatsnew-permission-prompt-body = { -brand-shorter-name } hiện chặn các trang web tự động yêu cầu gửi cho bạn thông báo bật lên.
-cfr-whatsnew-permission-prompt-cta = Tìm hiểu thêm
-
-## Fingerprinter Counter
-
-# This string is displayed before a large numeral that indicates the total
-# number of tracking elements blocked. Don’t add $fingerprinterCount to your
-# localization, because it would result in the number showing twice.
-cfr-whatsnew-fingerprinter-counter-header =
-    { $fingerprinterCount ->
-       *[other] Dấu vết bị chặn
-    }
-cfr-whatsnew-fingerprinter-counter-body = { -brand-shorter-name } chặn nhiều trang lấy dấu vết để bí mật thu thập thông tin về thiết bị và hành động của bạn để tạo hồ sơ quảng cáo về bạn.
-
-# Message variation when fingerprinters count is less than 10
-cfr-whatsnew-fingerprinter-counter-header-alt = Dấu vết
-cfr-whatsnew-fingerprinter-counter-body-alt = { -brand-shorter-name } có thể chặn những trang lấy dấu vết để bí mật thu thập thông tin về thiết bị và hành động của bạn để tạo hồ sơ quảng cáo về bạn.
-
-## Bookmark Sync
-
-cfr-doorhanger-sync-bookmarks-header = Nhận dấu trang này trên điện thoại của bạn
-cfr-doorhanger-sync-bookmarks-body = Nhận dấu trang, mật khẩu, lịch sử của bạn và nhiều nơi khác mà bạn đã đăng nhập vào { -brand-product-name }.
-cfr-doorhanger-sync-bookmarks-ok-button = Bật { -sync-brand-short-name }
-    .accesskey = T
-
-## Login Sync
-
-cfr-doorhanger-sync-logins-header = Không bao giờ mất mật khẩu lần nữa
-cfr-doorhanger-sync-logins-body = Lưu trữ an toàn và đồng bộ hóa mật khẩu của bạn với tất cả các thiết bị của bạn.
-cfr-doorhanger-sync-logins-ok-button = Bật { -sync-brand-short-name }
-    .accesskey = T
-
-## Send Tab
-
-cfr-doorhanger-send-tab-header = Đọc cái này khi đang di chuyển
-cfr-doorhanger-send-tab-recipe-header = Mang công thức này vào bếp
-cfr-doorhanger-send-tab-body = Gửi thẻ cho phép bạn dễ dàng chia sẻ liên kết này với điện thoại của mình hoặc bất cứ nơi nào bạn đăng nhập vào { -brand-product-name }.
-cfr-doorhanger-send-tab-ok-button = Thử trình gửi thẻ
-    .accesskey = T
-
-## Firefox Send
-
-cfr-doorhanger-firefox-send-header = Chia sẻ PDF này một cách an toàn
-cfr-doorhanger-firefox-send-body = Giữ các tài liệu nhạy cảm của bạn an toàn khỏi những con mắt tò mò với mã hóa đầu cuối và một liên kết sẽ biến mất khi bạn thực hiện xong.
-cfr-doorhanger-firefox-send-ok-button = Thử { -send-brand-name }
-    .accesskey = T
-
-## Social Tracking Protection
-
-cfr-doorhanger-socialtracking-ok-button = Xem mục bảo vệ
-    .accesskey = P
-cfr-doorhanger-socialtracking-close-button = Đóng
-    .accesskey = C
-cfr-doorhanger-socialtracking-dont-show-again = Đừng hiện cho tôi những tin này nữa
-    .accesskey = D
-cfr-doorhanger-socialtracking-heading = { -brand-short-name } đã dừng mạng xã hội mà nó theo dõi bạn tại đây
-cfr-doorhanger-socialtracking-description = Vấn đề riêng tư của bạn. { -brand-short-name } hiện chặn các trình theo dõi phương tiện truyền thông xã hội phổ biến, giới hạn số lượng dữ liệu họ có thể thu thập về những gì bạn làm trực tuyến.
-cfr-doorhanger-fingerprinters-heading = { -brand-short-name } đã chặn một dấu vết trên trang này
-cfr-doorhanger-fingerprinters-description = Vấn đề riêng tư của bạn. { -brand-short-name } hiện chặn các dấu vết, mà nó thu thập các mẫu thông tin nhận dạng duy nhất về thiết bị của bạn để theo dõi bạn.
-cfr-doorhanger-cryptominers-heading = { -brand-short-name } đã chặn một loại tiền điện tử trên trang này
-cfr-doorhanger-cryptominers-description = Vấn đề riêng tư của bạn. { -brand-short-name } hiện chặn các loại tiền điện tử, mà nó sử dụng sức mạnh tính toán của hệ thống của bạn để khai thác tiền kỹ thuật số.
-
 ## Enhanced Tracking Protection Milestones
-
-# Variables:
-#   $blockedCount (Number) - The total count of blocked trackers. This number will always be greater than 1.
-#   $date (String) - The date we began recording the count of blocked trackers
-cfr-doorhanger-milestone-heading =
-    { $blockedCount ->
-       *[other] { -brand-short-name } đã chặn hơn <b>{ $blockedCount }</b> trình theo dõi từ { $date }!
-    }
 
 # Variables:
 #   $blockedCount (Number) - The total count of blocked trackers. This number will always be greater than 1.
@@ -237,45 +101,8 @@ cfr-doorhanger-milestone-heading2 =
     }
 cfr-doorhanger-milestone-ok-button = Xem tất cả
     .accesskey = S
-
-## What’s New Panel Content for Firefox 76
-
-
-## Lockwise message
-
-cfr-whatsnew-lockwise-header = Dễ dàng tạo mật khẩu an toàn
-cfr-whatsnew-lockwise-body = Thật khó để nghĩ về mật khẩu độc đáo, an toàn cho mọi tài khoản. Khi tạo mật khẩu, chọn trường mật khẩu để sử dụng mật khẩu được tạo an toàn từ { -brand-shorter-name }.
-cfr-whatsnew-lockwise-icon-alt = Biểu tượng { -lockwise-brand-short-name }
-
-## Vulnerable Passwords message
-
-cfr-whatsnew-passwords-header = Nhận thông báo về mật khẩu dễ bị tấn công
-cfr-whatsnew-passwords-body = Tin tặc biết mọi người sử dụng lại cùng một mật khẩu. Nếu bạn đã sử dụng cùng một mật khẩu trên nhiều trang web và một trong những trang web đó đã bị rò rỉ dữ liệu, bạn sẽ thấy một cảnh báo trong { -lockwise-brand-short-name } để thay đổi mật khẩu của bạn trên các trang web đó.
-cfr-whatsnew-passwords-icon-alt = Biểu tượng khóa mật khẩu dễ bị tổn thương
-
-## Picture-in-Picture fullscreen message
-
-cfr-whatsnew-pip-fullscreen-header = Làm cho hình trong hình toàn màn hình
-cfr-whatsnew-pip-fullscreen-body = Khi bạn bật video vào một cửa sổ nổi, bây giờ bạn có thể nhấp đúp vào cửa sổ đó để vào chế độ toàn màn hình.
-cfr-whatsnew-pip-fullscreen-icon-alt = Biểu tượng hình trong hình
-
-## Protections Dashboard message
-
-cfr-whatsnew-protections-header = Bảo vệ trong nháy mắt
-cfr-whatsnew-protections-body = Bảng điều khiển bảo vệ bao gồm các báo cáo tóm tắt về rò rỉ dữ liệu và quản lý mật khẩu. Bây giờ bạn có thể theo dõi có bao nhiêu rò rỉ mà bạn đã giải quyết và xem liệu bất kỳ mật khẩu đã lưu nào của bạn có thể bị lộ trong một rò rỉ dữ liệu hay không.
-cfr-whatsnew-protections-cta-link = Xem bảng điều khiển bảo vệ
-cfr-whatsnew-protections-icon-alt = Biểu tượng khiên
-
-## Better PDF message
-
-cfr-whatsnew-better-pdf-header = Trải nghiệm PDF tốt hơn
-cfr-whatsnew-better-pdf-body = Tài liệu PDF hiện mở trực tiếp bằng { -brand-short-name }, giữ cho công việc của bạn trong tầm tay dễ dàng.
-
 cfr-doorhanger-milestone-close-button = Đóng
     .accesskey = C
-
-## What’s New Panel Content for Firefox 76
-## Protections Dashboard message
 
 ## DOH Message
 
@@ -288,28 +115,141 @@ cfr-doorhanger-doh-secondary-button = Vô hiệu hóa
 
 ## Fission Experiment Message
 
-cfr-doorhanger-fission-body-approved = Quyền riêng tư của bạn được đặt lên hàng đầu. { -brand-short-name } hiện cô lập hoặc các trang web với nhau vào sandbox, điều này khiến tin tặc khó lấy cắp mật khẩu, số thẻ tín dụng và các thông tin nhạy cảm khác.
-cfr-doorhanger-fission-header = Cách ly trang web
-cfr-doorhanger-fission-primary-button = OK, đã hiểu
-    .accesskey = O
-cfr-doorhanger-fission-secondary-button = Tìm hiểu thêm
-    .accesskey = T
-
-## What's new: Cookies message
-
-## What's new: Media controls message
-
-## What's new: Search shortcuts
-
-## What's new: Cookies protection
-
-## What's new: Better bookmarking
-
-## What's new: Cross-site cookie tracking
-
 ## Full Video Support CFR message
 
 cfr-doorhanger-video-support-body = Các video trên trang web này có thể phát không đúng trên phiên bản { -brand-short-name } này. Để được hỗ trợ đầy đủ về video, hãy cập nhật { -brand-short-name } ngay bây giờ.
 cfr-doorhanger-video-support-header = Cập nhật { -brand-short-name } để phát video
 cfr-doorhanger-video-support-primary-button = Cập nhật bây giờ
     .accesskey = U
+
+## Spotlight modal shared strings
+
+## VPN promotion dialog for public Wi-Fi users
+##
+## If a user is detected to be on a public Wi-Fi network, they are given a
+## bit of info about how to improve their privacy and then offered a button
+## to the Mozilla VPN page and a link to dismiss the dialog.
+
+# This header text can be explicitly wrapped.
+spotlight-public-wifi-vpn-header = Có vẻ như bạn đang sử dụng Wi-Fi công cộng
+spotlight-public-wifi-vpn-body = Để ẩn vị trí và hoạt động duyệt web của bạn, hãy xem xét đến VPN. Nó sẽ giúp bạn được bảo vệ khi duyệt web ở những nơi công cộng như sân bay và quán cà phê.
+spotlight-public-wifi-vpn-primary-button = Giữ riêng tư với { -mozilla-vpn-brand-name }
+    .accesskey = S
+spotlight-public-wifi-vpn-link = Không phải bây giờ
+    .accesskey = N
+
+## Total Cookie Protection Rollout
+
+## Emotive Continuous Onboarding
+
+spotlight-better-internet-header = Internet tốt hơn bắt đầu với bạn
+spotlight-better-internet-body = Khi bạn sử dụng { -brand-short-name }, bạn đang bỏ phiếu cho một Internet mở và có thể truy cập tốt hơn cho tất cả mọi người.
+spotlight-peace-mind-header = Chúng tôi đã giúp bạn được bảo vệ
+spotlight-peace-mind-body = Hàng tháng, { -brand-short-name } chặn trung bình hơn 3.000 trình theo dõi cho mỗi người dùng. Bởi vì không có gì, đặc biệt là những phiền toái về quyền riêng tư như trình theo dõi, có thể ngăn cản bạn và internet tốt.
+spotlight-pin-primary-button =
+    { PLATFORM() ->
+        [macos] Giữ trên thanh Dock
+       *[other] Ghim vào thanh tác vụ
+    }
+spotlight-pin-secondary-button = Không phải bây giờ
+
+## MR2022 Background Update Windows native toast notification strings.
+##
+## These strings will be displayed by the Windows operating system in
+## a native toast, like:
+##
+## <b>multi-line title</b>
+## multi-line text
+## <img>
+## [ primary button ] [ secondary button ]
+##
+## The button labels are fitted into narrow fixed-width buttons by
+## Windows and therefore must be as narrow as possible.
+
+mr2022-background-update-toast-title = { -brand-short-name } mới. Riêng tư hơn. Ít trình theo dõi hơn. Không có thỏa hiệp.
+mr2022-background-update-toast-text = Hãy thử { -brand-short-name } mới nhất ngay bây giờ, được nâng cấp với trình chống theo dõi mạnh nhất của chúng tôi.
+
+# This button label will be fitted into a narrow fixed-width button by
+# Windows. Try to not exceed the width of the English text (compare it
+# using a variable font like Arial): the button can only fit 1-2
+# additional characters, exceeding characters will be truncated.
+mr2022-background-update-toast-primary-button-label = Mở { -brand-shorter-name } ngay
+
+# This button label will be fitted into a narrow fixed-width button by
+# Windows. Try to not exceed the width of the English text (compare it using a
+# variable font like Arial): the button can only fit 1-2 additional characters,
+# exceeding characters will be truncated.
+mr2022-background-update-toast-secondary-button-label = Nhắc tôi sau
+
+## Firefox View CFR
+
+firefoxview-cfr-primarybutton = Thử ngay
+    .accesskey = T
+firefoxview-cfr-secondarybutton = Để sau
+    .accesskey = N
+firefoxview-cfr-header-v2 = Nhanh chóng bắt đầu từ nơi bạn đã dừng lại
+firefoxview-cfr-body-v2 = Lấy lại các thẻ đã đóng gần đây, cộng với chuyển đổi liền mạch giữa các thiết bị với { -firefoxview-brand-name }.
+
+## Firefox View Spotlight
+
+firefoxview-spotlight-promo-title = Xin chào với { -firefoxview-brand-name }
+
+# “Poof” refers to the expression to convey when something or someone suddenly disappears, or in this case, reappears. For example, “Poof, it’s gone.”
+firefoxview-spotlight-promo-subtitle = Muốn thẻ đang mở nằm trên điện thoại của bạn? Lấy nó. Cần trang web mà bạn vừa truy cập? Nó đã trở lại với { -firefoxview-brand-name }
+firefoxview-spotlight-promo-primarybutton = Xem cách hoạt động
+firefoxview-spotlight-promo-secondarybutton = Bỏ qua
+
+## Colorways expiry reminder CFR
+
+colorways-cfr-primarybutton = Chọn đường màu
+    .accesskey = C
+
+# "shades" refers to the different color options available to users in colorways.
+colorways-cfr-body = Tô màu trình duyệt của bạn với các sắc thái độc quyền của { -brand-short-name } lấy cảm hứng từ những tiếng nói thay đổi văn hóa.
+colorways-cfr-header-28days = Các màu cho giọng nói độc lập sẽ hết hạn vào ngày 16 tháng 1
+colorways-cfr-header-14days = Màu sắc của giọng nói độc lập sẽ hết hạn sau hai tuần nữa
+colorways-cfr-header-7days = Các màu cho giọng nói độc lập sẽ hết hạn trong tuần này
+colorways-cfr-header-today = Các màu giọng nói độc lập sẽ hết hạn vào ngày hôm nay
+
+## Cookie Banner Handling CFR
+
+cfr-cbh-header = Cho phép { -brand-short-name } từ chối biểu ngữ cookie?
+cfr-cbh-body = { -brand-short-name } có thể tự động từ chối nhiều yêu cầu biểu ngữ cookie.
+cfr-cbh-confirm-button = Từ chối biểu ngữ cookie
+    .accesskey = R
+cfr-cbh-dismiss-button = Không phải bây giờ
+    .accesskey = N
+
+## These strings are used in the Fox doodle Pin/set default spotlights
+
+july-jam-headline = Chúng tôi đã giúp bạn được bảo vệ
+july-jam-body = Mỗi tháng, { -brand-short-name } chặn trung bình hơn 3.000 trình theo dõi trên mỗi người dùng, giúp bạn truy cập Internet tốt một cách an toàn, nhanh chóng.
+july-jam-set-default-primary = Mở liên kết của tôi bằng { -brand-short-name }
+fox-doodle-pin-headline = Chào mừng trở lại
+
+# “indie” is short for the term “independent”.
+# In this instance, free from outside influence or control.
+fox-doodle-pin-body = Đây là lời nhắc nhanh rằng bạn có thể giữ trình duyệt độc lập yêu thích của mình chỉ bằng một cú nhấp chuột.
+fox-doodle-pin-primary = Mở liên kết của tôi bằng { -brand-short-name }
+fox-doodle-pin-secondary = Không phải bây giờ
+
+## These strings are used in the Set Firefox as Default PDF Handler for Existing Users experiment
+
+set-default-pdf-handler-headline = <strong>Các tập tin PDF của bạn bây giờ mở trong { -brand-short-name }.</strong> Chỉnh sửa hoặc ký biểu mẫu trực tiếp trong trình duyệt của bạn. Để thay đổi, tìm kiếm “PDF” trong cài đặt.
+set-default-pdf-handler-primary = Đã hiểu
+
+## FxA sync CFR
+
+fxa-sync-cfr-header = Thiết bị mới trong tương lai của bạn?
+fxa-sync-cfr-body = Đảm bảo các dấu trang, mật khẩu và thẻ mới nhất luôn đi cùng bạn bất cứ khi nào bạn mở trình duyệt { -brand-product-name } mới.
+fxa-sync-cfr-primary = Tìm hiểu thêm
+    .accesskey = L
+fxa-sync-cfr-secondary = Nhắc tôi sau
+    .accesskey = R
+
+## Device Migration FxA Spotlight
+
+device-migration-fxa-spotlight-header = Sử dụng thiết bị cũ hơn?
+device-migration-fxa-spotlight-body = Sao lưu dữ liệu của bạn để đảm bảo bạn không bị mất thông tin quan trọng như dấu trang và mật khẩu — đặc biệt nếu bạn chuyển sang một thiết bị mới.
+device-migration-fxa-spotlight-primary-button = Cách sao lưu dữ liệu của tôi
+device-migration-fxa-spotlight-link = Nhắc tôi sau

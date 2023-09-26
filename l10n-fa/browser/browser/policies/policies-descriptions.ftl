@@ -10,6 +10,8 @@
 ## These are short descriptions for individual policies, to be displayed
 ## in the documentation section in about:policies.
 
+policy-AppAutoUpdate = بروزرسانی خودکار برنامه را فعال یا غیرفعال کنید.
+
 policy-AppUpdateURL = آدرس سفارشی به‌روزرسانی برنامه را تنظیم کنید.
 
 policy-Authentication = احراز هویت یکپارچه را برای وب‌سایت‌هایی که از آن پشتیبانی می‌کنند پیکربندی کنید.
@@ -24,7 +26,7 @@ policy-BlockAboutSupport = دسترسی به صفحه about:support را مسد�
 
 policy-CertificatesDescription = گواهینامه‌ها را اضافه کنید یا از گواهینامه‌های داخلی استفاده کنید.
 
-policy-Cookies = اجازه دادن یا اجازه ندادن به وب‌سایت‌ها برای تنظیم کوکی.
+policy-Cookies = اجازه دادن یا اجازه ندادن به وبگاه‌ها برای تنظیم کلوچک.
 
 policy-DefaultDownloadDirectory = پوشه پیش‌فرض برای بارگیری را تنظیم کنید.
 
@@ -45,9 +47,7 @@ policy-DisableForgetButton = دسترسی به دکمه فراموش کردن ر
 
 policy-DisableFormHistory = جستجو وتاریخچه فرم را به خاطر نسپار.
 
-policy-DisableMasterPasswordCreation = اگر درست باشد، گذرواژه اصلی نمی‌تواند ایجاد شود.
-
-policy-DisablePocket = ویژگی ذخیره کردن صفحات وب در Pocket را غیرفعال کن.
+policy-DisablePocket2 = ویژگی ذخیره کردن صفحات وب در { -pocket-brand-name } را غیرفعال کن.
 
 policy-DisablePrivateBrowsing = مرور ناشناس را غیرفعال کن.
 
@@ -55,13 +55,16 @@ policy-DisableProfileImport = دستور ورود داده از مرورگرها
 
 policy-DisableProfileRefresh = کلید راه‌اندازی مجدد { -brand-short-name } را در صفحه about:support غیرفعال کن.
 
-policy-DNSOverHTTPS = پیکربندی DNS بر روی HTTPS.
+policy-DNSOverHTTPS = پیکربندی ساناد روی HTTPS.
 
 policy-DontCheckDefaultBrowser = غیر فعال کردن بررسی مرورگر پیش‌فرض در هنگام راه اندازی
 
 ## Do not translate "SameSite", it's the name of a cookie attribute.
 
+
 ##
+
+policy-Permissions2 = پیکربندی اجازه‌ها برای دوربین، صدابَر، مکان، اعلا‌ها، و پخش خودکار.
 
 policy-Proxy = پیکربندی تنظیمات پروکسی
 

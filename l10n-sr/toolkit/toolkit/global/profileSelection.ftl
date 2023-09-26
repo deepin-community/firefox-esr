@@ -23,6 +23,8 @@ profile-selection-delete-button =
     .label = Уклони профил…
     .accesskey = У
 
+profile-selection-conflict-message = Друга копија { -brand-product-name } је направила измене у профилима. Морате поново покренути { -brand-short-name } пре прављења додатних измена.
+
 ## Messages used in the profile manager
 
 profile-manager-description = { -brand-short-name } чува податке о вашим подешавањима, поставкама и другим стварима у вашем профилу.

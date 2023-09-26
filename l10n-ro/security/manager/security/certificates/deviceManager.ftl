@@ -5,9 +5,9 @@
 
 ## Strings used for device manager
 
-devmgr =
+devmgr-window =
     .title = Manager de dispozitive
-    .style = width: 67em; height: 32em;
+    .style = min-width: 67em; min-height: 32em;
 
 devmgr-devlist =
     .label = Module și dispozitive de securitate
@@ -115,8 +115,6 @@ devinfo-label =
 
 devinfo-serialnum =
     .label = Număr de serie
-
-fips-nonempty-password-required = În modul FIPS trebuie să ai o parolă generală pentru fiecare dispozitiv de securitate. Te rugăm să setezi parola înainte de a încerca activarea modului FIPS.
 
 fips-nonempty-primary-password-required = Modul FIPS impune existența unei parole primare setate pentru fiecare dispozitiv de securitate. Te rugăm să setezi parola înainte de a încerca să activezi modul FIPS.
 unable-to-toggle-fips = Imposibil de schimbat modul FIPS pentru dispozitivul de securitate. Este recomandat să ieși și să repornești această aplicație.

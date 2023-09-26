@@ -9,11 +9,6 @@ crashes-id = ID rozpšawy
 crashes-send-date = Wótpósłany
 crashes-all-reports = Wšykne rozpšawy wowalenjow
 crashes-no-config = Nałoženje njejo se konfigurěrowało, aby rozpšawy wowalenjow zwobrazniło.
-extensions-title = Rozšyrjenja
-extensions-name = Mě
-extensions-enabled = Zmóžnjony
-extensions-version = Wersija
-extensions-id = ID
 support-addons-title = Dodanki
 support-addons-name = Mě
 support-addons-type = Typ
@@ -77,6 +72,12 @@ app-basics-location-service-key-google = Kluc stojnišćoweje słužby Google
 app-basics-safebrowsing-key-google = Kluc Safebrowsing Google
 app-basics-key-mozilla = Kluc słužby póstajenja městna Mozilla
 app-basics-safe-mode = Wěsty modus
+app-basics-memory-size = Wjelikosć składa (RAM)
+app-basics-disk-available = K dispoziciji stojecy platowy składowak
+# Variables:
+#   $value (number) - Amount of data being stored
+#   $unit (string) - The unit of data being stored (e.g. MB)
+app-basics-data-size = { $value } { $unit }
 show-dir-label =
     { PLATFORM() ->
         [macos] W Finder pokazaś
@@ -106,11 +107,21 @@ graphics-gpu2-title = GPU #2
 graphics-decision-log-title = Protokol rozsuźenja
 graphics-crash-guards-title = Funkcije, kótarež su se wót wowaleńskego stražnika znjemóžnili
 graphics-workarounds-title = Nuzowe rozwězanja
+graphics-device-pixel-ratios = Rědowe pikselowe poměry (device pixel ratios) wokna
 # Windowing system in use on Linux (e.g. X11, Wayland).
 graphics-window-protocol = Woknowy protokol
 # Desktop environment in use on Linux (e.g. GNOME, KDE, XFCE, etc).
 graphics-desktop-environment = Desktopowa wokolina
 place-database-title = Datowa banka historije a cytańskich znamjenjow
+place-database-stats = Statistika
+place-database-stats-show = Statistiku pokazaś
+place-database-stats-hide = Statistiku schowaś
+place-database-stats-entity = Entita
+place-database-stats-count = Licba
+place-database-stats-size-kib = Wjelikosć (KiB)
+place-database-stats-size-perc = Wjelikosć (%)
+place-database-stats-efficiency-perc = Eficienca (%)
+place-database-stats-sequentiality-perc = Sekwencialnosć (%)
 place-database-integrity = Integrita
 place-database-verify-integrity = Integritu pśeglědowaś
 a11y-title = Bźezbariernosć
@@ -130,8 +141,6 @@ sandbox-sys-call-tid = TID
 sandbox-sys-call-proc-type = Procesowy typ
 sandbox-sys-call-number = Syscall
 sandbox-sys-call-args = Argumenty
-safe-mode-title = Wěsty modus wopytaś
-restart-in-safe-mode-label = Ze znjemóžnjonymi dodankami znowego startowaś…
 troubleshoot-mode-title = Problemy diagnosticěrowaś
 restart-in-troubleshoot-mode-label = Modus za rozwězowanje problemow…
 clear-startup-cache-title = Wopytajśo startowy pufrowak wuprozniś
@@ -159,8 +168,18 @@ media-device-channels = Kanale
 media-device-rate = Rata
 media-device-latency = Latenca
 media-capabilities-title = Medijowe móžnosći
+media-codec-support-info = Informacije wó pódpěrje codecow
 # List all the entries of the database.
 media-capabilities-enumerate = Datowu banku nalicyś
+
+## Codec support table
+
+media-codec-support-sw-decoding = Softwarowe dekoděrowanje
+media-codec-support-hw-decoding = Hardwarowe dekoděrowanje
+media-codec-support-codec-name = Mě Codec
+media-codec-support-supported = Pódprěty
+media-codec-support-unsupported = Njepódprěty
+media-codec-support-error = Informacije wó pódprětych kodekach njestoje k dispoziciji. Wopytajśo hyšći raz, za tym až sćo wótgrał medijowu dataju.
 
 ##
 
@@ -189,36 +208,6 @@ remote-debugging-url = URL
 
 ##
 
-support-third-party-modules-title = Module tśeśich póbitowarjow
-support-third-party-modules-module = Modulowa dataja
-support-third-party-modules-version = Datajowa wersija
-support-third-party-modules-vendor = Informacije zgótowjarja
-support-third-party-modules-occurrence = Wustupowanja
-support-third-party-modules-process = Procesowy typ a ID
-support-third-party-modules-thread = Nitka
-support-third-party-modules-base = Adresa Imagebase
-support-third-party-modules-uptime = Procesowy źěłowy cas (ms)
-support-third-party-modules-duration = Zacytański cas (ms)
-support-third-party-modules-status = Status
-support-third-party-modules-status-loaded = Zacytany
-support-third-party-modules-status-blocked = Blokěrowany
-support-third-party-modules-status-redirected = Dalej pósrědnjony
-support-third-party-modules-empty = Module tśeśich póbitowarjow njejsu se zacytali.
-support-third-party-modules-no-value = (Žedna gódnota)
-support-third-party-modules-button-open =
-    .title = Datajowe městno wócyniś…
-support-third-party-modules-expand =
-    .title = Nadrobne informacije pokazaś
-support-third-party-modules-collapse =
-    .title = Nadrobne informacije schowaś
-support-third-party-modules-unsigned-icon =
-    .title = Toś ten modul njejo signěrowany
-support-third-party-modules-folder-icon =
-    .title = Datajowe městno wócyniś…
-support-third-party-modules-down-icon =
-    .title = Nadrobne informacije pokazaś
-support-third-party-modules-up-icon =
-    .title = Nadrobne informacije schowaś
 # Variables
 # $days (Integer) - Number of days of crashes to log
 report-crash-for-days =
@@ -315,10 +304,8 @@ webgl2-renderer = WebGL 2 - kreslak gónjaka
 webgl2-version = WebGL 2 - wersija gónjaka
 webgl2-driver-extensions = WebGL 2 - rozšyrjenja gónjaka
 webgl2-extensions = WebGL 2 - rozšyrjenja
-blocklisted-bug = W blokěrowańskej lisćinje znatych problemow dla
-# Variables
-# $bugNumber (string) - String of bug number from Bugzilla
-bug-link = programowa zmólka { $bugNumber }
+webgpu-default-adapter = Standardny adapter WebGPU
+webgpu-fallback-adapter = Adapter fallback WebGPU
 # Variables
 #   $bugNumber (string) - Bug number on Bugzilla
 support-blocklisted-bug = W blokěrowańskej lisćinje znatych problemow dla: <a data-l10n-name="bug-link">programowa zmólka { $bugNumber }</a>
@@ -326,8 +313,6 @@ support-blocklisted-bug = W blokěrowańskej lisćinje znatych problemow dla: <a
 # $failureCode (string) - String that can be searched in the source tree.
 unknown-failure = W blokěrowańskej lisćinje; zmólkowy kod { $failureCode }
 d3d11layers-crash-guard = D3D11 Compositor
-d3d11video-crash-guard = D3D11 Video Decoder
-d3d9video-crash-guard = D3D9 Video Decoder
 glcontext-crash-guard = OpenGL
 wmfvpxvideo-crash-guard = Wideodekoder WMF VPX
 reset-on-next-restart = Pśi pśiducem nowem starśe slědk stajiś
@@ -350,6 +335,7 @@ can-sandbox-media = Testowanje medijowych tykacow w pěskowem kašćiku
 content-sandbox-level = Rownina wopśimjeśowych procesow w pěskowem kašćiku
 effective-content-sandbox-level = Aktualna rownina wopśimjeśowych procesow w pěskowem kašćiku
 content-win32k-lockdown-state = Status Win32 Lockdown za wopśimjeśowy proces
+support-sandbox-gpu-level = Rownina GPU-procesow w pěskowem kašćiku
 sandbox-proc-type-content = wopśimjeśe
 sandbox-proc-type-file = datajowe wopśimjeśe
 sandbox-proc-type-media-plugin = medijowy tykac
@@ -367,14 +353,6 @@ launcher-process-status-unknown = Njeznaty status
 # $remoteWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
 multi-process-windows = { $remoteWindows }/{ $totalWindows }
-multi-process-status-0 = Wót wužywarja zmóžnjony
-multi-process-status-1 = Pó standarźe zmóžnjony
-multi-process-status-2 = Znjemóžnjony
-multi-process-status-4 = Pśez rědy bźezbariernosći znjemóžnjony
-multi-process-status-6 = Pśez njepódpěrane tekstowe zapódaśe znjemóžnjony
-multi-process-status-7 = Pśez dodanki znjemóžnjony
-multi-process-status-8 = Namócnje znjemóžnjony
-multi-process-status-unknown = Njeznaty status
 # Variables
 # $fissionWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
@@ -383,7 +361,7 @@ fission-status-experiment-control = Pśez eksperiment znjemóžnjony
 fission-status-experiment-treatment = Pśez eksperiment zmóžnjony
 fission-status-disabled-by-e10s-env = Pśez wokolinu znjemóžnjony
 fission-status-enabled-by-env = Pśez wokolinu zmóžnjony
-fission-status-disabled-by-safe-mode = Pśez wěsty modus znjemóžnjony
+fission-status-disabled-by-env = Pśez wokolinu znjemóžnjony
 fission-status-enabled-by-default = Pó standarźe zmóžnjony
 fission-status-disabled-by-default = Pó standarźe znjemóžnjony
 fission-status-enabled-by-user-pref = Wót wužywarja zmóžnjony

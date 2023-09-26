@@ -40,8 +40,6 @@ inactive-css-position-property-on-unpositioned-box = <strong>{ $property }</stro
 
 inactive-text-overflow-when-no-overflow = <strong>{ $property }</strong> ไม่มีผลต่อองค์ประกอบนี้เนื่องจากไม่ได้ตั้งค่า <strong>overflow:hidden</strong>
 
-inactive-outline-radius-when-outline-style-auto-or-none = <strong>{ $property }</strong> ไม่มีผลต่อองค์ประกอบนี้เนื่องจาก <strong>outline-style</strong> เป็น <strong>auto</strong> or <strong>none</strong>
-
 inactive-css-not-for-internal-table-elements = <strong>{ $property }</strong> ไม่มีผลกับองค์ประกอบตารางภายใน
 
 inactive-css-not-for-internal-table-elements-except-table-cells = <strong>{ $property }</strong> ไม่มีผลกับองค์ประกอบตารางภายในยกเว้นเซลล์ตาราง
@@ -49,6 +47,10 @@ inactive-css-not-for-internal-table-elements-except-table-cells = <strong>{ $pro
 inactive-css-not-table = <strong>{ $property }</strong> ไม่มีผลกับองค์ประกอบนี้เนื่องจากไม่ใช่ตาราง
 
 inactive-scroll-padding-when-not-scroll-container = <strong>{ $property }</strong> ไม่มีผลกับองค์ประกอบนี้เนื่องจากไม่มีการเลื่อน
+
+inactive-css-border-image = <strong>{ $property }</strong> ไม่มีผลกับองค์ประกอบนี้ เนื่องจากไม่สามารถใช้กับองค์ประกอบตารางภายในที่ตั้งค่า <strong>border-collapse</strong> เป็น <strong>collapse</strong> บนองค์ประกอบตารางแม่ได้
+
+inactive-css-ruby-element = <strong>{ $property }</strong> ไม่มีผลกับองค์ประกอบนี้ เนื่องจากเป็นองค์ประกอบ ruby ขนาดขององค์ประกอบนี้ถูกกำหนดโดยขนาดตัวอักษรของข้อความ ruby
 
 ## In the Rule View when a CSS property cannot be successfully applied we display
 ## an icon. When this icon is hovered this message is displayed to explain how
@@ -58,7 +60,7 @@ inactive-css-not-grid-or-flex-container-fix = ลองเพิ่ม <strong>d
 
 inactive-css-not-grid-or-flex-container-or-multicol-container-fix = ลองเพิ่ม <strong>display:grid</strong>, <strong>display:flex</strong>, หรือ <strong>columns:2</strong> { learn-more }
 
-inactive-css-not-grid-or-flex-item-fix-2 = ลองเพิ่ม <strong>display:grid</strong>, <strong>display:flex</strong>, <strong>display:inline-grid</strong> หรือ <strong>display:inline-flex</strong> { learn-more }
+inactive-css-not-grid-or-flex-item-fix-3 = ลองเพิ่ม <strong>display:grid</strong>, <strong>display:flex</strong>, <strong>display:inline-grid</strong> หรือ <strong>display:inline-flex</strong> ไปยังองค์ประกอบแม่ขององค์ประกอบ { learn-more }
 
 inactive-css-not-grid-item-fix-2 = ลองเพิ่ม <strong>display:grid</strong> หรือ <strong>display:inline-grid</strong> ไปยังข้อมูลหลักขององค์ประกอบ { learn-more }
 
@@ -84,11 +86,13 @@ inactive-css-not-for-internal-table-elements-fix = ลองตั้งค่�
 
 inactive-css-not-for-internal-table-elements-except-table-cells-fix = ลองตั้งค่าคุณสมบัติ <strong>display</strong> เป็นอย่างอื่นนอกจาก <strong>table-column</strong>, <strong>table-row</strong>, <strong>table-column-group</strong>, <strong>table-row-group</strong>, หรือ <strong>table-footer-group</strong> { learn-more }
 
-inactive-outline-radius-when-outline-style-auto-or-none-fix = ลองตั้งค่าคุณสมบัติ <strong>outline-style</strong> เป็นอย่างอื่นนอกจาก <strong>auto</strong> หรือ <strong>none</strong> { learn-more }
-
 inactive-css-not-table-fix = ลองเพิ่ม <strong>display:table</strong> หรือ <strong>display:inline-table</strong> { learn-more }
 
 inactive-scroll-padding-when-not-scroll-container-fix = ลองเพิ่ม <strong>overflow:auto</strong>, <strong>overflow:scroll</strong> หรือ <strong>overflow:hidden</strong> { learn-more }
+
+inactive-css-border-image-fix = บนองค์ประกอบตารางแม่ ให้เอาคุณสมบัติออก หรือเปลี่ยนค่าของ <strong>border-collapse</strong> เป็นค่าอื่น ๆ ที่ไม่ใช่ <strong>collapse</strong> { learn-more }
+
+inactive-css-ruby-element-fix = ลองเปลี่ยน <strong>font-size</strong> ของข้อความ ruby { learn-more }
 
 ## In the Rule View when a CSS property may have compatibility issues with other browsers
 ## we display an icon. When this icon is hovered this message is displayed to explain why

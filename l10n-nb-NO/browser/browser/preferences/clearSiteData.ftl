@@ -2,9 +2,9 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-clear-site-data-window =
+clear-site-data-window2 =
     .title = Tøm data
-    .style = width: 35em
+    .style = min-width: 35em
 
 clear-site-data-description = Om du fjerner alle infokapsler og nettstedsdata som er lagret av { -brand-short-name } vil dette kunne logge deg ut av nettsteder og fjerne frakoblet nettinnhold. Fjerning av hurtiglager (cache-) data vil ikke påvirke innloggingene dine.
 
@@ -50,14 +50,6 @@ clear-site-data-cache-empty =
     .accesskey = s
 
 clear-site-data-cache-info = Krever at nettsider laster bilder og data på nytt
-
-clear-site-data-cancel =
-    .label = Avbryt
-    .accesskey = A
-
-clear-site-data-clear =
-    .label = Fjern
-    .accesskey = F
 
 clear-site-data-dialog =
     .buttonlabelaccept = Tøm

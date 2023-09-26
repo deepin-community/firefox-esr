@@ -8,13 +8,11 @@
 newtab-page-title = لسان جديد
 newtab-settings-button =
     .title = خصص صفحة اللسان الجديد
-
-newtab-personalize-button-label = خصّص
-    .title = خصّص صفحة اللسان الجديد
-    .aria-label = خصّص صفحة اللسان الجديد
 newtab-personalize-icon-label =
     .title = خصّص صفحة اللسان الجديد
     .aria-label = خصّص صفحة اللسان الجديد
+newtab-personalize-dialog-label =
+    .aria-label = خصّص
 
 ## Search box component.
 
@@ -22,8 +20,6 @@ newtab-personalize-icon-label =
 newtab-search-box-search-button =
     .title = ابحث
     .aria-label = ابحث
-
-newtab-search-box-search-the-web-text = ابحث في الوِب
 
 # Variables
 #  $engine (String): the name of the user's default search engine
@@ -40,11 +36,7 @@ newtab-search-box-handoff-input-no-engine =
     .title = ابحث أو أدخِل عنوانا
     .aria-label = ابحث أو أدخِل عنوانا
 
-newtab-search-box-search-the-web-input =
-    .placeholder = ابحث في الوِب
-    .title = ابحث في الوِب
-    .aria-label = ابحث في الوِب
-
+newtab-search-box-text = ابحث في الوِب
 newtab-search-box-input =
     .placeholder = ابحث في الوِب
     .aria-label = ابحث في الوِب
@@ -52,7 +44,6 @@ newtab-search-box-input =
 ## Top Sites - General form dialog.
 
 newtab-topsites-add-search-engine-header = أضِف محرك بحث
-newtab-topsites-add-topsites-header = موقع شائع جديد
 newtab-topsites-add-shortcut-header = اختصار جديد
 newtab-topsites-edit-topsites-header = حرّر الموقع الشائع
 newtab-topsites-edit-shortcut-header = حرّر الاختصار
@@ -202,7 +193,6 @@ newtab-section-expand-section-label =
 ## Section Headers.
 
 newtab-section-header-topsites = المواقع الأكثر زيارة
-newtab-section-header-highlights = أهم الأحداث
 newtab-section-header-recent-activity = أحدث الأنشطة
 # Variables:
 #  $provider (String): Name of the corresponding content provider.
@@ -217,7 +207,6 @@ newtab-empty-section-highlights = ابدأ التصفح وسنعرض أمامك 
 #  $provider (String): Name of the content provider for this section, e.g "Pocket".
 newtab-empty-section-topstories = لا جديد. تحقق لاحقًا للحصول على مزيد من أهم الأخبار من { $provider }. لا يمكنك الانتظار؟ اختر موضوعًا شائعًا للعثور على المزيد من القصص الرائعة من جميع أنحاء الوِب.
 
-
 ## Empty Section (Content Discovery Experience). These show when there are no more stories or when some stories fail to load.
 
 newtab-discovery-empty-section-topstories-header = بِتّ تعلم كل شيء!
@@ -231,10 +220,16 @@ newtab-discovery-empty-section-topstories-timed-out = آخ. أوشكنا على 
 
 # This is shown at the bottom of the trending stories section and precedes a list of links to popular topics.
 newtab-pocket-read-more = المواضيع الشائعة:
+newtab-pocket-new-topics-title = أتريد المزيد من القصص؟ اطلع على هذه المواضيع الشائعة من { -pocket-brand-name }
 newtab-pocket-more-recommendations = مقترحات أخرى
 newtab-pocket-learn-more = اطّلع على المزيد
 newtab-pocket-cta-button = نزِّل { -pocket-brand-name }
 newtab-pocket-cta-text = احفظ القصص التي تحبّها في { -pocket-brand-name }، وزوّد عقلك بمقالات رائعة.
+
+## Pocket Final Card Section.
+## This is for the final card in the Pocket grid.
+
+## Pocket content onboarding experience dialog and modal for new users seeing the Pocket section for the first time, shown as the first item in the Pocket section.
 
 ## Error Fallback Content.
 ## This message and suggested action link are shown in each section of UI that fails to render.
@@ -262,11 +257,4 @@ newtab-custom-pocket-sponsored = قصص مموّلة
 newtab-custom-recent-title = أحدث الأنشطة
 newtab-custom-recent-subtitle = مختارات من المواقع والمحتويات الحديثة
 newtab-custom-close-button = أغلِق
-
-# For the "Snippets" feature traditionally on about:home.
-# Alternative translation options: "Small Note" or something that
-# expresses the idea of "a small message, shortened from something else,
-# and non-essential but also not entirely trivial and useless.
-newtab-custom-snippets-title = المقتطفات
-newtab-custom-snippets-subtitle = فوائد وأخبار من { -vendor-short-name } و{ -brand-product-name }
 newtab-custom-settings = أدِر المزيد من الإعدادات

@@ -2,14 +2,9 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-containers-window-new =
+containers-window-new2 =
     .title = Dodaj novi Container
-    .style = width: 45em
-# Variables
-#   $name (String) - Name of the container
-containers-window-update =
-    .title = Postavke { $name } containera
-    .style = width: 45em
+    .style = min-width: 45em
 
 containers-window-close =
     .key = w
@@ -39,10 +34,6 @@ containers-icon-label = Ikona
 containers-color-label = Boja
     .accesskey = o
     .style = { -containers-labels-style }
-
-containers-button-done =
-    .label = Gotovo
-    .accesskey = G
 
 containers-dialog =
     .buttonlabelaccept = Gotovo

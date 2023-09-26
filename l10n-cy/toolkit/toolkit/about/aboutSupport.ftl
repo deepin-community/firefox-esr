@@ -4,16 +4,11 @@
 
 page-title = Gwybodaeth am Ddatrys Problemau
 page-subtitle = Mae'r dudalen hon yn cynnwys gwybodaeth dechnegol a allai fod yn ddefnyddiol pan fyddwch yn ceisio datrys problem. Os ydych yn chwilio am atebion i gwestiynau cyffredin am { -brand-short-name }, edrychwch ar ein <a data-l10n-name="support-link">gwefan cefnogaeth</a>.
-crashes-title = Ardroddiad Chwalu
+crashes-title = Adroddiadau Chwalu
 crashes-id = Enw'r Adroddiad
 crashes-send-date = Cyflwynwyd
 crashes-all-reports = Pob Adroddiad Chwalu
 crashes-no-config = Mae'r rhaglen wedi ei ffurfweddu i ddangos adroddiadau chwalu.
-extensions-title = Estyniadau
-extensions-name = Enw
-extensions-enabled = Galluogwyd
-extensions-version = Fersiwn
-extensions-id = ID
 support-addons-title = Ychwanegion
 support-addons-name = Enw
 support-addons-type = Math
@@ -33,7 +28,7 @@ features-id = ID
 processes-title = Prosesau Pell
 processes-type = Math
 processes-count = Cyfrif
-app-basics-title = Sylfaeni Rhaglen
+app-basics-title = Sylfaeni'r Rhaglen
 app-basics-name = Enw
 app-basics-version = Fersiwn
 app-basics-build-id = Cyfeirnod Adeiladu
@@ -77,6 +72,12 @@ app-basics-location-service-key-google = Allwedd Google Location Service
 app-basics-safebrowsing-key-google = Allwedd Google Safebrowsing
 app-basics-key-mozilla = Mozilla Location Service Key
 app-basics-safe-mode = Modd Diogel
+app-basics-memory-size = Maint Cof (RAM)
+app-basics-disk-available = Lle ar Ddisg ar Gael
+# Variables:
+#   $value (number) - Amount of data being stored
+#   $unit (string) - The unit of data being stored (e.g. MB)
+app-basics-data-size = { $value } { $unit }
 show-dir-label =
     { PLATFORM() ->
         [macos] Dangos yn Finder
@@ -106,11 +107,21 @@ graphics-gpu2-title = GPU #2
 graphics-decision-log-title = Cofnod Penderfynnu
 graphics-crash-guards-title = Nodweddion Crash Guard wedi ei Analluogi
 graphics-workarounds-title = Dulliau Datrys
+graphics-device-pixel-ratios = Cymarebau Picsel Dyfais Ffenestr
 # Windowing system in use on Linux (e.g. X11, Wayland).
 graphics-window-protocol = Protocol Ffenestr
 # Desktop environment in use on Linux (e.g. GNOME, KDE, XFCE, etc).
 graphics-desktop-environment = Amgylchedd Bwrdd Gwaith
 place-database-title = Cronfa Ddata Mannau
+place-database-stats = Ystadegau
+place-database-stats-show = Dangos Ystadegau
+place-database-stats-hide = Cuddio Ystadegau
+place-database-stats-entity = Endid
+place-database-stats-count = Cyfrif
+place-database-stats-size-kib = Maint (KiB)
+place-database-stats-size-perc = Maint (%)
+place-database-stats-efficiency-perc = Effeithlonrwydd (%)
+place-database-stats-sequentiality-perc = Dilynianedd (%)
 place-database-integrity = Cyfanrwydd
 place-database-verify-integrity = Gwirio Cyfanrwydd
 a11y-title = Hygyrchedd
@@ -130,8 +141,6 @@ sandbox-sys-call-tid = TID
 sandbox-sys-call-proc-type = Math o Brosesu
 sandbox-sys-call-number = Syscall
 sandbox-sys-call-args = Ymresymiadau
-safe-mode-title = Defnyddiwch y Modd Diogel
-restart-in-safe-mode-label = Ailgychwyn gydag Ychwanegion wedi eu Hanalluogi…
 troubleshoot-mode-title = Datrys materion
 restart-in-troubleshoot-mode-label = Y Modd Datrys Problemau…
 clear-startup-cache-title = Ceisiwch glirio'r storfa gychwyn
@@ -159,8 +168,18 @@ media-device-channels = Sianeli
 media-device-rate = Cyfradd
 media-device-latency = Cuddni
 media-capabilities-title = Gallu Cyfryngol
+media-codec-support-info = Gwybodaeth Gymorth Codec
 # List all the entries of the database.
 media-capabilities-enumerate = Cyfrifo'r gronfa ddata
+
+## Codec support table
+
+media-codec-support-sw-decoding = Datgodio Meddalwedd
+media-codec-support-hw-decoding = Datgodio Caledwedd
+media-codec-support-codec-name = Enw Codec
+media-codec-support-supported = Cefnogaeth
+media-codec-support-unsupported = Heb eu Cynnal
+media-codec-support-error = Nid yw manylion cymorth codec ar gael. Ceisiwch eto ar ôl chwarae ffeil cyfryngau.
 
 ##
 
@@ -189,36 +208,6 @@ remote-debugging-url = URL
 
 ##
 
-support-third-party-modules-title = Modiwlau Trydydd Parti
-support-third-party-modules-module = Ffeil Modiwlau
-support-third-party-modules-version = Fersiwn Ffeil
-support-third-party-modules-vendor = Manylion y Gwerthwr
-support-third-party-modules-occurrence = Amlder
-support-third-party-modules-process = Math o Broses ac ID
-support-third-party-modules-thread = Trywydd
-support-third-party-modules-base = Cyfeiriad Imagebase
-support-third-party-modules-uptime = Cyfnod Proses (me)
-support-third-party-modules-duration = Cyfnod Llwytho (me)
-support-third-party-modules-status = Statws
-support-third-party-modules-status-loaded = Wedi llwytho
-support-third-party-modules-status-blocked = Wedi Rhwystro
-support-third-party-modules-status-redirected = Wedi Ailgyfeirio
-support-third-party-modules-empty = Heb lwytho unrhyw fodiwlau trydydd parti.
-support-third-party-modules-no-value = (Dim gwerth)
-support-third-party-modules-button-open =
-    .title = Lleoliad ffeil agored...
-support-third-party-modules-expand =
-    .title = Dangos gwybodaeth fanwl
-support-third-party-modules-collapse =
-    .title = Cau gwybodaeth fanwl
-support-third-party-modules-unsigned-icon =
-    .title = Nid yw'r modiwl hwn wedi'i lofnodi
-support-third-party-modules-folder-icon =
-    .title = Lleoliad ffeil agored...
-support-third-party-modules-down-icon =
-    .title = Dangos gwybodaeth fanwl
-support-third-party-modules-up-icon =
-    .title = Cau gwybodaeth fanwl
 # Variables
 # $days (Integer) - Number of days of crashes to log
 report-crash-for-days =
@@ -325,10 +314,8 @@ webgl2-renderer = Rendrwr Gyrrwr WebGL 2
 webgl2-version = Fersiwn Gyrrwr WebGL 2
 webgl2-driver-extensions = Estyniadau Gyrrwr WebGL 2
 webgl2-extensions = Estyniadau WebGL 2
-blocklisted-bug = Wedi eu rhwystro ar sail gwybodaeth hysbys
-# Variables
-# $bugNumber (string) - String of bug number from Bugzilla
-bug-link = gwall { $bugNumber }
+webgpu-default-adapter = Addasydd Rhagosodedig WebGPU
+webgpu-fallback-adapter = Addasydd wrth Gefn WebGPU
 # Variables
 #   $bugNumber (string) - Bug number on Bugzilla
 support-blocklisted-bug = Ar y Rhestr Rhwystro oherwydd materion hysbys: <a data-l10n-name="bug-link">bug { $bugNumber }</a>
@@ -336,8 +323,6 @@ support-blocklisted-bug = Ar y Rhestr Rhwystro oherwydd materion hysbys: <a data
 # $failureCode (string) - String that can be searched in the source tree.
 unknown-failure = Wedi ei rwystro; gwall cod { $failureCode }
 d3d11layers-crash-guard = Cyfosodwr D3D11
-d3d11video-crash-guard = Dadgodiwr Fideo D3D11
-d3d9video-crash-guard = Dadgodiwr Fideo D3D9
 glcontext-crash-guard = OpenGL
 wmfvpxvideo-crash-guard = Dadgodiwr Fideo WMF VPX
 reset-on-next-restart = Ailosod wrth Ailgychwyn
@@ -360,6 +345,7 @@ can-sandbox-media = Blwch Tywod Ategyn Cyfrwng
 content-sandbox-level = Lefel Blwch Tywod Proses Cynnwys
 effective-content-sandbox-level = Lefel Blwch Tywod Proses Cynnwys Effeithiol
 content-win32k-lockdown-state = Cyflwr Clo Win32k ar gyfer y Broses Cynnwys
+support-sandbox-gpu-level = Lefel Blwch Tywod Proses GPU
 sandbox-proc-type-content = cynnwys
 sandbox-proc-type-file = cynnwys ffeil
 sandbox-proc-type-media-plugin = ategyn cyfrwng
@@ -377,14 +363,6 @@ launcher-process-status-unknown = Statws anhysbys
 # $remoteWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
 multi-process-windows = { $remoteWindows }/{ $totalWindows }
-multi-process-status-0 = Galluogwyd gan y defnyddiwr
-multi-process-status-1 = Galluogwyd drwy ragosodiad
-multi-process-status-2 = Analluogwyd
-multi-process-status-4 = Analluogwyd gan offer hygyrchedd
-multi-process-status-6 = Analluogwyd gan fewnbwn testun heb ei gynnal
-multi-process-status-7 = Analluogwyd gan ychwanegion
-multi-process-status-8 = Analluogi gorfodol
-multi-process-status-unknown = Statws anhysbys
 # Variables
 # $fissionWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
@@ -393,7 +371,7 @@ fission-status-experiment-control = Analluogwyd trwy arbrawf
 fission-status-experiment-treatment = Galluogwyd trwy arbrawf
 fission-status-disabled-by-e10s-env = Analluogwyd gan yr amgylchedd
 fission-status-enabled-by-env = Galluogwyd gan yr amgylchedd
-fission-status-disabled-by-safe-mode = Analluogwyd gan y modd diogel
+fission-status-disabled-by-env = Analluogwyd gan yr amgylchedd
 fission-status-enabled-by-default = Galluogwyd drwy ragosodiad
 fission-status-disabled-by-default = Analluogwyd drwy ragosodiad
 fission-status-enabled-by-user-pref = Galluogwyd gan y defnyddiwr

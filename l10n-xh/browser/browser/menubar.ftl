@@ -39,15 +39,6 @@ menu-quit =
 menu-quit-mac =
     .label = Yeka i-{ -brand-shorter-name }
 
-# This menu-quit-button string is only used on Linux.
-menu-quit-button =
-    .label = { menu-quit.label }
-
-# This menu-quit-button-win string is only used on Windows.
-menu-quit-button-win =
-    .label = { menu-quit.label }
-    .tooltip = Phuma kwi-{ -brand-shorter-name }
-
 menu-about =
     .label = Malunga ne-{ -brand-shorter-name }
     .accesskey = M
@@ -77,9 +68,6 @@ menu-file-open-location =
 menu-file-open-file =
     .label = Vula ifayile…
     .accesskey = V
-menu-file-close =
-    .label = Vala
-    .accesskey = V
 menu-file-close-window =
     .label = Vala iFestile
     .accesskey = s
@@ -92,9 +80,6 @@ menu-file-email-link =
 menu-file-print-setup =
     .label = Ukuseta Kwephepha…
     .accesskey = s
-menu-file-print-preview =
-    .label = Imbonakalo yangaphambi kokuprinta
-    .accesskey = m
 menu-file-print =
     .label = Printa…
     .accesskey = P
@@ -107,9 +92,6 @@ menu-file-go-offline =
 menu-edit =
     .label = Hlela
     .accesskey = H
-menu-edit-find-on =
-    .label = Fumana kweli phepha…
-    .accesskey = F
 menu-edit-find-again =
     .label = Fumana kwakhona
     .accesskey = k
@@ -125,9 +107,6 @@ menu-view =
 menu-view-toolbars-menu =
     .label = Iithulbha
     .accesskey = I
-menu-view-customize-toolbar =
-    .label = Lungiselela…
-    .accesskey = L
 menu-view-sidebar =
     .label = Ibha yasecaleni
     .accesskey = i
@@ -158,9 +137,6 @@ menu-view-page-style-no-style =
 menu-view-page-basic-style =
     .label = Isimbo sephepha esisisiseko
     .accesskey = e
-menu-view-charset =
-    .label = Umbhalo Onekhowudi
-    .accesskey = k
 
 ## These should match what Safari and other Apple applications
 ## use on macOS.
@@ -174,6 +150,17 @@ menu-view-exit-full-screen =
 menu-view-full-screen =
     .label = Isikrini esiZeleyo
     .accesskey = I
+
+## These menu items may use the same accesskey.
+
+# This should match reader-view-enter-button in browser.ftl
+menu-view-enter-readerview =
+    .label = Faka Imo Yokufunda
+    .accesskey = R
+# This should match reader-view-close-button in browser.ftl
+menu-view-close-readerview =
+    .label = Imo Yokufunda Esondeleyo
+    .accesskey = R
 
 ##
 
@@ -207,12 +194,6 @@ menu-history-undo-window-menu =
 menu-bookmarks-menu =
     .label = Iibhukhmakhi
     .accesskey = I
-menu-bookmarks-show-all =
-    .label = Bonisa zonke iibhukhmakhi
-menu-bookmark-this-page =
-    .label = Faka ibhukhmakhi kweli khasi
-menu-bookmark-edit =
-    .label = Hlela Le Bhukhmakhi
 menu-bookmarks-all-tabs =
     .label = Faka ibhukhmakhi kuzo zonke iithebhu…
 menu-bookmarks-toolbar =
@@ -230,32 +211,15 @@ menu-tools =
 menu-tools-downloads =
     .label = Okukhutshelwayo
     .accesskey = O
-menu-tools-addons =
-    .label = zongezelelo
-    .accesskey = z
 menu-tools-sync-now =
     .label = Ngqamanisa ngoku
     .accesskey = N
-menu-tools-web-developer =
-    .label = Umphuhlisi-webhu
-    .accesskey = U
 menu-tools-page-source =
     .label = Umthombo wephepha
     .accesskey = m
 menu-tools-page-info =
     .label = Inkcazelo yephepha
     .accesskey = y
-menu-preferences =
-    .label =
-        { PLATFORM() ->
-            [windows] Ekunokukhethwa kuko
-           *[other] Iipriferensi
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] E
-           *[other] n
-        }
 
 ## Window Menu
 
@@ -270,14 +234,6 @@ menu-window-bring-all-to-front =
 # NOTE: For Engineers, any additions or changes to Help menu strings should
 # also be reflected in the related strings in appmenu.ftl. Those strings, by
 # convention, will have the same ID as these, but prefixed with "app".
-# Example: appmenu-help-product
-#
-# These strings are duplicated to allow for different casing depending on
-# where the strings appear.
-
-# NOTE: For Engineers, any additions or changes to Help menu strings should
-# also be reflected in the related strings in appmenu.ftl. Those strings, by
-# convention, will have the same ID as these, but prefixed with "app".
 # Example: appmenu-get-help
 #
 # These strings are duplicated to allow for different casing depending on
@@ -286,27 +242,6 @@ menu-window-bring-all-to-front =
 menu-help =
     .label = Uncedo
     .accesskey = U
-menu-help-product =
-    .label = I-{ -brand-shorter-name } uncedo
-    .accesskey = u
-menu-help-show-tour =
-    .label = I-{ -brand-shorter-name } Ukhenketho
-    .accesskey = k
-menu-help-keyboard-shortcuts =
-    .label = Izinqumleli zekhibhodi
-    .accesskey = I
-menu-help-troubleshooting-info =
-    .label = Inkcazelo yesisombululi-ngxaki
-    .accesskey = I
-menu-help-feedback-page =
-    .label = Thumela ingxelo…
-    .accesskey = T
-menu-help-safe-mode-without-addons =
-    .label = Qalisa kwakhona izongezelelo ziqhwalelisiwe…
-    .accesskey = Q
-menu-help-safe-mode-with-addons =
-    .label = Qalisa kwakhona izongezelelo ziqhwalelisiwe…
-    .accesskey = Q
 # Label of the Help menu item. Either this or
 # safeb.palm.notdeceptive.label from
 # phishing-afterload-warning-message.dtd is shown.

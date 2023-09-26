@@ -16,6 +16,9 @@ printui-sheets-count =
     }
 
 printui-page-range-all = Усе
+printui-page-range-current = Бягучая
+printui-page-range-odd = Няцотныя
+printui-page-range-even = Цотныя
 printui-page-range-custom = Адмыслова
 printui-page-range-label = Старонкі
 printui-page-range-picker =
@@ -59,8 +62,6 @@ printui-options = Налады
 printui-headers-footers-checkbox = Друкаваць загалоўкі і калантытулы
 printui-backgrounds-checkbox = Друкаваць фон
 
-printui-selection-checkbox = Друкаваць толькі вылучэнне
-
 ## The "Format" section, select a version of the website to print. Radio
 ## options to select between the original page, selected text only, or a version
 ## where the page is processed with "Reader View".
@@ -103,7 +104,7 @@ printui-system-dialog-link = Друк з дапамогай сістэмнага
 
 printui-primary-button = Друкаваць
 printui-primary-button-save = Захаваць
-printui-cancel-button = Адмена
+printui-cancel-button = Скасаваць
 printui-close-button = Закрыць
 
 printui-loading = Рыхтуецца папярэдні прагляд

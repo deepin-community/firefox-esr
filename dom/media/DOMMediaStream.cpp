@@ -8,10 +8,10 @@
 #include "AudioCaptureTrack.h"
 #include "AudioChannelAgent.h"
 #include "AudioStreamTrack.h"
-#include "Layers.h"
 #include "MediaTrackGraph.h"
 #include "MediaTrackGraphImpl.h"
 #include "MediaTrackListener.h"
+#include "Tracing.h"
 #include "VideoStreamTrack.h"
 #include "mozilla/dom/AudioTrack.h"
 #include "mozilla/dom/AudioTrackList.h"
@@ -238,6 +238,7 @@ already_AddRefed<Promise> DOMMediaStream::CountUnderlyingStreams(
     }
 
     void Run() override {
+      TRACE("DOMMediaStream::Counter")
       uint32_t streams =
           mGraph->mTracks.Length() + mGraph->mSuspendedTracks.Length();
       mGraph->DispatchToMainThreadStableState(NS_NewRunnableFunction(
@@ -400,6 +401,9 @@ void DOMMediaStream::RemoveTrackInternal(MediaStreamTrack* aTrack) {
 }
 
 already_AddRefed<nsIPrincipal> DOMMediaStream::GetPrincipal() {
+  if (!GetOwner()) {
+    return nullptr;
+  }
   nsCOMPtr<nsIPrincipal> principal =
       nsGlobalWindowInner::Cast(GetOwner())->GetPrincipal();
   for (const auto& t : mTracks) {

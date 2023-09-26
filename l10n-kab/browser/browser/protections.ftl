@@ -34,7 +34,7 @@ protection-report-page-summary-default = { -brand-short-name } Iḥerrez tabaḍ
 
 protection-report-settings-link = Sefrek iɣewwaṛen-ik n tbaḍnit d tɣellist.
 
-etp-card-title-always = Ammesten mgal aḍfaṛ yettwaseǧhed: Yezga iteddu
+etp-card-title-always = Ammesten yettwasǧehden mgal aḍfaṛ: Yezga iteddu
 etp-card-title-custom-not-blocking = Ammesten mgal aḍfaṛ yettwaseǧhed: Yensa
 etp-card-content-description = { -brand-short-name } yessewḥal s wudem awurman tikebbaniyin ara ak-iḍefren deg web.
 protection-report-etp-card-content-custom-not-blocking = Meṛṛa ammesten yensa akka tura. Fren ineḍfaṛen ara tesweḥleḍ s usefrek n yiɣewwaṛen n ummesten n { -brand-short-name }.
@@ -65,22 +65,20 @@ cryptominer-tab-content = Ikripṭuminaren seqdacen tazmert n usiḍen n unagraw
 protections-close-button2 =
     .aria-label = Mdel
     .title = Mdel
-  
+
 mobile-app-title = Sewḥel ineḍfaren deg ugar n yibenkan
 mobile-app-card-content = Seqdec iminig aziraz s ummesten usliɣ mgal aḍfaṛ n udellel.
 mobile-app-links = Iminig { -brand-product-name }  i <a data-l10n-name="android-mobile-inline-link">Android</a> akked <a data-l10n-name="ios-mobile-inline-link">iOS</a>
 
 lockwise-title = Ur sṛuḥuy ara awalen-ik uffiren
-lockwise-title-logged-in2 = Asefrek n wawal uffir
-lockwise-header-content = { -lockwise-brand-name } iseklas awalen uffiren-ik deg iminig-ik s wudem aɣelsan.
+passwords-title-logged-in = Sefrek awalen-ik·im uffiren
+passwords-header-content = { -brand-product-name } iseklas awalen uffiren-ik deg iminig-ik s wudem aɣelsan.
 lockwise-header-content-logged-in = Sekles rnu mtawi awalen-ik·im uffiren ɣef yibenkan-ik·im i meṛṛa s wudem aɣelsan.
-protection-report-save-passwords-button = Sekles awalen uffiren
-    .title = Sekles awalen uffiren deg { -lockwise-brand-short-name }
-protection-report-manage-passwords-button = Sefrek awalen uffiren
-    .title = Sefrek awalen uffiren deg { -lockwise-brand-short-name }
-lockwise-mobile-app-title = Awi awalen uffiren anda teddiḍ
-lockwise-no-logins-card-content = Seqdec awalen uffiren yettwaskelsen deg  { -brand-short-name } deg yal ibenk.
-lockwise-app-links = { -lockwise-brand-name } i <a data-l10n-name="lockwise-android-inline-link">Android</a> akked <a data-l10n-name="lockwise-ios-inline-link">iOS</a>
+protection-report-passwords-save-passwords-button = Sekles awalen uffiren
+    .title = Sekles awalen uffiren
+protection-report-passwords-manage-passwords-button = Sefrek awalen uffiren
+    .title = Sefrek awalen uffiren
+
 
 # Variables:
 # $count (Number) - Number of passwords exposed in data breaches.
@@ -100,9 +98,6 @@ lockwise-scanned-text-no-breached-logins =
        *[other] Awalen-ik uffiren ttwakelsen s wudem aɣelsan.
     }
 lockwise-how-it-works-link = Amek itteddu
-
-turn-on-sync = Rmed { -sync-brand-short-name }...
-    .title = Ldi ismenyifen n umtawi
 
 monitor-title = Sers allen-ik ɣef trewla n yisefka.
 monitor-link = Amek iteddu

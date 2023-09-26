@@ -5,9 +5,9 @@
 
 ## Strings used for device manager
 
-devmgr =
+devmgr-window =
     .title = Amsefrak n ibenkan
-    .style = width: 67em; height: 32em;
+    .style = min-width: 67em; min-height: 32em;
 
 devmgr-devlist =
     .label = Izegrar d ibenkan n tɣellist
@@ -35,7 +35,7 @@ devmgr-button-load =
     .accesskey = S
 
 devmgr-button-unload =
-    .label = Sers
+    .label = Sefsex asali
     .accesskey = S
 
 devmgr-button-enable-fips =
@@ -115,8 +115,6 @@ devinfo-label =
 
 devinfo-serialnum =
     .label = Uṭṭun n umazrar
-
-fips-nonempty-password-required = Askar FIPS isra d aken ad tesbaduḍ awal uffir agejdan i yal ibenk n tɣellist. Ma ulac aɣilif, sbadu awal uffir agejdan send ad tremdeḍ askar FIPS.
 
 fips-nonempty-primary-password-required = Askar FIPS yesra ad tesbaduḍ awal uffir agejdan i yal ibenk n tɣellist. Ma ulac aɣilif, sbadu awal uffir send ad tremdeḍ askar FIPS.
 unable-to-toggle-fips = Asnifel n uskar FIPS i yibenk n tɣellist d awezɣi. Ihul limmer ad teffɣeḍ, sakin ad talseḍ asenker i usnas-agi.

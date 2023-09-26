@@ -16,8 +16,8 @@ downloads-panel =
 # The style attribute has the width of the Downloads Panel expressed using
 # a CSS unit. The longest labels that should fit are usually those of
 # in-progress and blocked downloads.
-downloads-panel-list =
-    .style = width: 70ch
+downloads-panel-items =
+    .style = width: 35em
 
 downloads-cmd-pause =
     .label = Přestawka
@@ -30,42 +30,65 @@ downloads-cmd-cancel =
 downloads-cmd-cancel-panel =
     .aria-label = Přetorhnyć
 
-# This message is only displayed on Windows and Linux devices
-downloads-cmd-show-menuitem =
-    .label = Wobsahowacy rjadowak wočinić
-    .accesskey = b
+downloads-cmd-show-menuitem-2 =
+    .label =
+        { PLATFORM() ->
+            [macos] W Finder pokazać
+           *[other] W rjadowaku pokazać
+        }
+    .accesskey = d
 
-# This message is only displayed on macOS devices
-downloads-cmd-show-menuitem-mac =
-    .label = W programje Finder pokazać
-    .accesskey = F
+## Displayed in the downloads context menu for files that can be opened.
+## Variables:
+##   $handler (String) - The name of the mime type's default file handler.
+##   Example: "Notepad", "Acrobat Reader DC", "7-Zip File Manager"
 
 downloads-cmd-use-system-default =
     .label = W systemowym wobhladowaku wočinić
     .accesskey = h
+# This version is shown when the download's mime type has a valid file handler.
+downloads-cmd-use-system-default-named =
+    .label = W { $handler } wočinić
+    .accesskey = o
 
+# We can use the same accesskey as downloads-cmd-always-open-similar-files.
+# Both should not be visible in the downloads context menu at the same time.
 downloads-cmd-always-use-system-default =
     .label = Přeco w systemowym wobhladowaku wočinić
     .accesskey = P
+# We can use the same accesskey as downloads-cmd-always-open-similar-files.
+# Both should not be visible in the downloads context menu at the same time.
+# This version is shown when the download's mime type has a valid file handler.
+downloads-cmd-always-use-system-default-named =
+    .label = Přeco w { $handler } wočinić
+    .accesskey = c
 
-downloads-cmd-show-button =
+##
+
+# We can use the same accesskey as downloads-cmd-always-use-system-default.
+# Both should not be visible in the downloads context menu at the same time.
+downloads-cmd-always-open-similar-files =
+    .label = Přeco podobne dataje wočinić
+    .accesskey = P
+
+downloads-cmd-show-button-2 =
     .tooltiptext =
         { PLATFORM() ->
-            [macos] W programje Finder pokazać
-           *[other] Wobsahowacy rjadowak wočinić
+            [macos] W Finder pokazać
+           *[other] W rjadowaku pokazać
         }
 
-downloads-cmd-show-panel =
+downloads-cmd-show-panel-2 =
     .aria-label =
         { PLATFORM() ->
-            [macos] W programje Finder pokazać
-           *[other] Wobsahowacy rjadowak wočinić
+            [macos] W Finder pokazać
+           *[other] W rjadowaku pokazać
         }
-downloads-cmd-show-description =
+downloads-cmd-show-description-2 =
     .value =
         { PLATFORM() ->
-            [macos] W programje Finder pokazać
-           *[other] Wobsahowacy rjadowak wočinić
+            [macos] W Finder pokazać
+           *[other] W rjadowaku pokazać
         }
 
 downloads-cmd-show-downloads =
@@ -89,6 +112,9 @@ downloads-cmd-clear-list =
 downloads-cmd-clear-downloads =
     .label = Sćehnjenja zhašeć
     .accesskey = z
+downloads-cmd-delete-file =
+    .label = Zhašeć
+    .accesskey = Z
 
 # This command is shown in the context menu when downloads are blocked.
 downloads-cmd-unblock =
@@ -138,11 +164,18 @@ downloads-open-file =
 ##   $seconds (number) - Amount of seconds left till the file opens.
 ##   $minutes (number) - Amount of minutes till the file opens.
 
-downloading-file-opens-in-hours-and-minutes = Wočinja so za { $hours }h { $minutes }m…
-downloading-file-opens-in-minutes = Wočinja so za { $minutes }m…
-downloading-file-opens-in-minutes-and-seconds = Wočinja so za { $minutes }m { $seconds }s…
-downloading-file-opens-in-seconds = Wočinja so za { $seconds }s…
-downloading-file-opens-in-some-time = Wočinja so, hdyž dokónčene…
+downloading-file-opens-in-hours-and-minutes-2 =
+    .value = Wočinja so za { $hours }h { $minutes }m…
+downloading-file-opens-in-minutes-2 =
+    .value = Wočinja so za { $minutes }m…
+downloading-file-opens-in-minutes-and-seconds-2 =
+    .value = Wočinja so za { $minutes }m { $seconds }s…
+downloading-file-opens-in-seconds-2 =
+    .value = Wočinja so za { $seconds }s…
+downloading-file-opens-in-some-time-2 =
+    .value = Wočinja so, hdyž dokónčene…
+downloading-file-click-to-open =
+    .value = Wočinić, hdyž dokónčene
 
 ##
 
@@ -168,6 +201,23 @@ downloads-history =
 downloads-details =
     .title = Sćehnjenske podrobnosće
 
+## Displayed when a site attempts to automatically download many files.
+## Variables:
+##   $num (number) - Number of blocked downloads.
+##   $url (string) - The url of the suspicious site, stripped of http, https and www prefix.
+
+downloads-files-not-downloaded =
+    { $num ->
+        [one] { $num } dataja njeje so sćahnyła.
+        [two] { $num } dataji njejstej so sćahnyłoj.
+        [few] { $num } dataje njejsu so sćahnyli.
+       *[other] { $num } datajow njeje so sćahnyło.
+    }
+downloads-blocked-from-url = Wot { $url } zablokowane sćehnjenja.
+downloads-blocked-download-detailed-info = { $url } je spytało, wjacore dataje awtomatisce sćahnyć. Sydło je snano wobškodźene abo pospytuje spamowe dataje na wašim graće składować.
+
+##
+
 downloads-clear-downloads-button =
     .label = Sćehnjenja zhašeć
     .tooltiptext = Zhaša skónčene, přetorhnjene a njeporadźene sćehnjenja
@@ -180,3 +230,29 @@ downloads-list-empty =
 # This string is shown when there are no items in the Downloads Panel.
 downloads-panel-empty =
     .value = Žane sćehnjenja za tute posedźenje.
+
+# This is displayed in an item at the bottom of the Downloads Panel when there
+# are more downloads than can fit in the list in the panel.
+#   $count (number) - number of files being downloaded that are not shown in the
+#                     panel list.
+downloads-more-downloading =
+    { $count ->
+        [one] { $count } dalša dataja so sćahuje
+        [two] { $count } dalšej dataji so sćahujetej
+        [few] { $count } dalša dataje so sćahuja
+       *[other] { $count } dalšich datajow so sćahuje
+    }
+
+## Download errors
+
+downloads-error-alert-title = Sćehnjenski zmylk
+# Variables:
+#   $extension (String): the name of the blocking extension.
+downloads-error-blocked-by = Sćehnjenje njeda so składować, dokelž so přez { $extension } blokuje.
+# Used when the name of the blocking extension is unavailable.
+downloads-error-extension = Sćehnjenje njeda so składować, dokelž so přez rozšěrjenje blokuje.
+# Line breaks in this message are meaningful, and should be maintained.
+downloads-error-generic =
+    Sćehnjenje njeda so składować, dokelž njeznaty zmylk je wustupił.
+    
+    Prošu spytajće hišće raz.

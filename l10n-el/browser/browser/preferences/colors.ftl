@@ -2,13 +2,9 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-colors-window =
+colors-dialog2 =
     .title = Χρώματα
-    .style =
-        { PLATFORM() ->
-            [macos] width: 44em
-           *[other] width: 44em
-        }
+    .style = min-width: 41em;
 
 colors-close-key =
     .key = w
@@ -39,7 +35,7 @@ colors-underline-links =
     .label = Υπογράμμιση συνδέσμων
     .accesskey = Υ
 
-colors-links-header = Χρώμα συνδέσμων
+colors-links-header = Χρώματα συνδέσμων
 
 colors-unvisited-links = Σύνδεσμοι που δεν έχετε επισκεφθεί
     .accesskey = Σ

@@ -15,6 +15,9 @@ printui-sheets-count =
     }
 
 printui-page-range-all = Todo
+printui-page-range-current = Actual
+printui-page-range-odd = Impar
+printui-page-range-even = Par
 printui-page-range-custom = Personalizado
 printui-page-range-label = Páginas
 printui-page-range-picker =
@@ -58,11 +61,18 @@ printui-options = Opciones
 printui-headers-footers-checkbox = Imprimir encabezados y pies de página
 printui-backgrounds-checkbox = Imprimir fondo de pantalla
 
-printui-selection-checkbox = Imprimir solo la selección
-
 ## The "Format" section, select a version of the website to print. Radio
 ## options to select between the original page, selected text only, or a version
 ## where the page is processed with "Reader View".
+
+# The section title.
+printui-source-label = Formato
+# Option for printing the original page.
+printui-source-radio = Original
+# Option for printing just the content a user selected prior to printing.
+printui-selection-radio = Selección
+# Option for "simplifying" the page by printing the Reader View version.
+printui-simplify-page-radio = Simplificado
 
 ##
 

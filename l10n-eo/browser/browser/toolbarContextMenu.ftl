@@ -20,15 +20,6 @@ toolbar-context-menu-bookmark-selected-tabs =
 toolbar-context-menu-select-all-tabs =
     .label = Elekti ĉiujn langetojn
     .accesskey = E
-toolbar-context-menu-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Malfari fermadon de langeto
-            [one] Malfari fermadon de langeto
-           *[other] Malfari fermadon de langetoj
-        }
-    .accesskey = M
-
 toolbar-context-menu-reopen-closed-tabs =
     .label =
         { $tabCount ->
@@ -51,18 +42,18 @@ toolbar-context-menu-report-extension =
     .label = Denunci etendaĵon
     .accesskey = D
 
-# Can appear on the same context menu as menubarCmd ("Menu Bar") and
-# personalbarCmd ("Bookmarks Toolbar"), so they should have different
-# access keys.
+# Can appear on the same context menu as toolbar-context-menu-menu-bar-cmd
+# ("Menu Bar") and personalbarCmd ("Bookmarks Toolbar"), so they should
+# have different access keys.
 toolbar-context-menu-pin-to-overflow-menu =
     .label = Alpingli al ekstra menuo
     .accesskey = p
-toolbar-context-menu-auto-hide-downloads-button =
-    .label = Aŭtomate kaŝi en ilaro
-    .accesskey = A
 toolbar-context-menu-auto-hide-downloads-button-2 =
     .label = Kaŝi butonon se la listo malplenas
     .accesskey = K
+toolbar-context-menu-always-open-downloads-panel =
+    .label = Montri panelon kiam elŝuto komenciĝas
+    .accesskey = M
 toolbar-context-menu-remove-from-toolbar =
     .label = Forigi el ilarstrio
     .accesskey = f
@@ -72,6 +63,11 @@ toolbar-context-menu-view-customize-toolbar =
 toolbar-context-menu-view-customize-toolbar-2 =
     .label = Personecigi ilaron…
     .accesskey = P
+# This is only ever shown when toolbar-context-menu-pin-to-overflow-menu
+# is hidden, so they can share access keys.
+toolbar-context-menu-pin-to-toolbar =
+    .label = Alpingli al la ilara strio
+    .accesskey = A
 
 toolbar-context-menu-bookmarks-toolbar-always-show-2 =
     .label = Ĉiam montri
@@ -86,3 +82,7 @@ toolbar-context-menu-bookmarks-toolbar-on-new-tab-2 =
 toolbar-context-menu-bookmarks-show-other-bookmarks =
     .label = Montri aliajn legosignojn
     .accesskey = l
+
+toolbar-context-menu-menu-bar-cmd =
+    .toolbarname = Strio de menuo
+    .accesskey = m

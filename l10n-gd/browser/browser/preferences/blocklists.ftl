@@ -2,9 +2,9 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-blocklist-window =
+blocklist-window2 =
     .title = Liostaichean bacaidh
-    .style = width: 55em
+    .style = min-width: 55em
 
 blocklist-description = Tagh an liosta a chleachdas { -brand-short-name } airson tracaichean air loidhne a bhacadh. Tha na liostaichean ’gan solar le <a data-l10n-name="disconnect-link" title="Disconnect">Disconnect</a>.
 blocklist-close-key =
@@ -12,14 +12,6 @@ blocklist-close-key =
 
 blocklist-treehead-list =
     .label = Liosta
-
-blocklist-button-cancel =
-    .label = Sguir dheth
-    .accesskey = S
-
-blocklist-button-ok =
-    .label = Sàbhail na h-atharraichean
-    .accesskey = S
 
 blocklist-dialog =
     .buttonlabelaccept = Sàbhail na h-atharraichean

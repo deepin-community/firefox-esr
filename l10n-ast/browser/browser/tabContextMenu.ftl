@@ -48,12 +48,6 @@ unpin-selected-tabs =
 bookmark-selected-tabs =
     .label = Amestar les llingüetes a Marcadores…
     .accesskey = M
-bookmark-tab =
-    .label = Amestar la llingüeta a Marcadores
-    .accesskey = M
-reopen-in-container =
-    .label = Volver abrir nun contenedor
-    .accesskey = r
 tab-context-open-in-new-container-tab =
     .label = Abrir nuna llingüeta de contenedor nueva
     .accesskey = e
@@ -69,31 +63,9 @@ move-to-new-window =
 tab-context-close-multiple-tabs =
     .label = Zarrar delles llingüetes
     .accesskey = d
-tab-context-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Desfacer el zarru de la llingüeta
-            [one] Desfacer el zarru de la llingüeta
-           *[other] Desfacer el zarru de les llingüetes
-        }
-    .accesskey = D
-close-tab =
-    .label = Zarrar la llingüeta
-    .accesskey = Z
-close-tabs =
-    .label = Zarrar les llingüetes
-    .accesskey = g
-move-tabs =
-    .label = Mover les llingüetes
-    .accesskey = v
-move-tab =
-    .label = Mover la llingüeta
-    .accesskey = v
 tab-context-share-url =
     .label = Compartir
     .accesskey = C
-tab-context-share-more =
-    .label = Más…
 
 ## Variables:
 ##  $tabCount (Number): the number of tabs that are affected by the action.
@@ -106,14 +78,6 @@ tab-context-reopen-closed-tabs =
            *[other] Volver abrir les llingüetes zarraes
         }
     .accesskey = a
-tab-context-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Zarrar la llingüeta
-            [one] Zarrar la llingüeta
-           *[other] Zarrar les llingüetes
-        }
-    .accesskey = Z
 tab-context-move-tabs =
     .label =
         { $tabCount ->
@@ -122,3 +86,4 @@ tab-context-move-tabs =
            *[other] Mover les llingüetes
         }
     .accesskey = v
+

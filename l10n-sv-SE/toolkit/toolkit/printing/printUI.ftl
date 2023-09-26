@@ -15,6 +15,9 @@ printui-sheets-count =
     }
 
 printui-page-range-all = Alla
+printui-page-range-current = Aktuell
+printui-page-range-odd = Udda
+printui-page-range-even = Jämna
 printui-page-range-custom = Anpassad
 printui-page-range-label = Sidor
 printui-page-range-picker =
@@ -57,8 +60,6 @@ printui-two-sided-printing-short-edge = Vänd på kortsidan
 printui-options = Alternativ
 printui-headers-footers-checkbox = Skriv ut sidhuvud och sidfot
 printui-backgrounds-checkbox = Skriv ut bakgrunder
-
-printui-selection-checkbox = Skriv endast ut markering
 
 ## The "Format" section, select a version of the website to print. Radio
 ## options to select between the original page, selected text only, or a version

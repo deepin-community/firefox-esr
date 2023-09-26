@@ -5,9 +5,9 @@
 
 ## Strings used for device manager
 
-devmgr =
+devmgr-window =
     .title = Құрылғылар менеджері
-    .style = width: 67em; height: 32em;
+    .style = min-width: 67em; min-height: 32em;
 
 devmgr-devlist =
     .label = Қауіпсіздік модульдері мен құрылғылар
@@ -35,8 +35,8 @@ devmgr-button-load =
     .accesskey = к
 
 devmgr-button-unload =
-    .label = Жүктелуден босату
-    .accesskey = б
+    .label = Жадыдан түсіру
+    .accesskey = с
 
 devmgr-button-enable-fips =
     .label = FIPS қолдану
@@ -115,8 +115,6 @@ devinfo-label =
 
 devinfo-serialnum =
     .label = Сериялық нөмірі
-
-fips-nonempty-password-required = FIPS режимі сізде әр қауіпсіздік құрылғысына мастер-парольді орнатуды керек етеді. FIPS режимін қосі алдында парольдерді орнатыңыз.
 
 fips-nonempty-primary-password-required = FIPS режимі сізде әр қауіпсіздік құрылғысына басты парольді орнатуды керек етеді. FIPS режимін іске қосу алдында парольді орнатыңыз.
 unable-to-toggle-fips = Қауіпсіздік құрылғысы үшін FIPS режимін өзгерту мүмкін емес. Бұл қолданба жұмысын аяқтап, оны қайта қосу ұсынылады.

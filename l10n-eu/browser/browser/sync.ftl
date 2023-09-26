@@ -2,19 +2,10 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-fxa-toolbar-sync-syncing =
-    .label = Sinkronizatzen…
-fxa-toolbar-sync-syncing-tabs =
-    .label = Fitxak sinkronizatzen…
-
-sync-disconnect-dialog-title = Deskonektatu { -sync-brand-short-name }?
-
 fxa-toolbar-sync-syncing2 = Sinkronizatzen…
 
 sync-disconnect-dialog-title2 = Deskonektatu?
 sync-disconnect-dialog-body = { -brand-product-name }(e)k zure kontuarekin sinkronizatzeari utziko dio baina ez du gailu honetako zure nabigatze-daturik ezabatuko.
-fxa-disconnect-dialog-title = Deskonektatu { -brand-product-name }?
-fxa-disconnect-dialog-body = { -brand-product-name } zure kontutik deskonektatuko da baina ez du gailu honetako zure nabigatze-daturik ezabatuko.
 sync-disconnect-dialog-button = Deskonektatu
 
 fxa-signout-dialog2-title = Amaitu { -fxaccount-brand-name(kasua: "ko") } saioa?
@@ -30,6 +21,21 @@ fxa-menu-turn-on-sync-default = Gaitu sinkronizazioa
 
 fxa-menu-connect-another-device =
     .label = Konektatu beste gailu bat…
+# Variables:
+#   $tabCount (Number): The number of tabs sent to the device.
+fxa-menu-send-tab-to-device =
+    .label =
+        { $tabCount ->
+            [one] Bidali fitxa gailura
+           *[other] Bidali { $tabCount } fitxa gailura
+        }
+
+# This is shown dynamically within "Send tab to device" in fxa menu.
+fxa-menu-send-tab-to-device-syncnotready =
+    .label = Gailuak sinkronizatzen…
+
+# This is shown within "Send tab to device" in fxa menu if account is not configured.
+fxa-menu-send-tab-to-device-description = Bidali fitxa bat berehala saioa hasita duzun edozein gailutara.
 
 fxa-menu-sign-out =
     .label = Amaitu saioa…

@@ -2,9 +2,9 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-blocklist-window =
+blocklist-window2 =
     .title = Liste de blocări
-    .style = width: 55em
+    .style = min-width: 55em
 
 blocklist-description = Alege lista pe care o folosește { -brand-short-name } pentru a bloca elementele de urmărire online. Listele sunt furnizate de <a data-l10n-name="disconnect-link" title="Disconnect">Disconnect</a>.
 blocklist-close-key =
@@ -12,14 +12,6 @@ blocklist-close-key =
 
 blocklist-treehead-list =
     .label = Listă
-
-blocklist-button-cancel =
-    .label = Renunță
-    .accesskey = C
-
-blocklist-button-ok =
-    .label = Salvează schimbările
-    .accesskey = S
 
 blocklist-dialog =
     .buttonlabelaccept = Salvează schimbările

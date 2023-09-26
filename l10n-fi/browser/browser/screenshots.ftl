@@ -2,13 +2,12 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-screenshots-context-menu = Ota kuvakaappaus
-
-screenshots-my-shots-button = Omat kaappaukset
-
 screenshot-toolbarbutton =
     .label = Kuvakaappaus
     .tooltiptext = Ota kuvakaappaus
+
+screenshot-shortcut =
+    .key = S
 
 screenshots-instructions = Valitse alue vetämällä tai napsauttamalla sivua. Peruuta painamalla ESC.
 screenshots-cancel-button = Peruuta
@@ -18,6 +17,14 @@ screenshots-download-button = Lataa
 screenshots-download-button-tooltip = Lataa kuvakaappaus
 screenshots-copy-button = Kopioi
 screenshots-copy-button-tooltip = Kopioi kuvakaappaus leikepöydälle
+screenshots-download-button-title =
+    .title = Lataa kuvakaappaus
+screenshots-copy-button-title =
+    .title = Kopioi kuvakaappaus leikepöydälle
+screenshots-cancel-button-title =
+    .title = Peruuta
+screenshots-retry-button-title =
+    .title = Yritä kuvakaappausta uudelleen
 
 screenshots-meta-key =
     { PLATFORM() ->
@@ -41,8 +48,6 @@ screenshots-login-error-details = Emme pystyneet tallentamaan kuvaasi, koska { -
 screenshots-unshootable-page-error-title = Tästä sivusta ei voi ottaa kuvaa.
 screenshots-unshootable-page-error-details = Tämä ei ole tavallinen verkkosivu, joten et voi ottaa kuvaa siitä.
 
-screenshots-self-screenshot-error-title = Et voi ottaa kuvaa { -screenshots-brand-name } -sivusta!
-
 screenshots-empty-selection-error-title = Valinta on liian pieni
 
 screenshots-private-window-error-title = { -screenshots-brand-name } ei ole käytettävisssä yksityisen selauksen tilassa
@@ -50,3 +55,6 @@ screenshots-private-window-error-details = Anteeksi häiriö. Tämä ominaisuus 
 
 screenshots-generic-error-title = Oho! { -screenshots-brand-name } meni päin prinkkalaa.
 screenshots-generic-error-details = Emme oikein tiedä, mitä tapahtui. Haluatko yrittää uudestaan tai ottaa kuvan eri sivusta?
+
+screenshots-too-large-error-title = Kuvakaappaus rajattiin, koska se oli liian suuri
+screenshots-too-large-error-details = Yritä valita alue, jonka pisin sivu on pienempi kuin 32 700 pikseliä tai kokonaispinta-ala 124 900 000 pikseliä.

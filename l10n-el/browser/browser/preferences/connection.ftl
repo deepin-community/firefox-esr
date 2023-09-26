@@ -2,12 +2,12 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-connection-window =
+connection-window2 =
     .title = Ρυθμίσεις σύνδεσης
     .style =
         { PLATFORM() ->
-            [macos] width: 44em
-           *[other] width: 49em
+            [macos] min-width: 44em
+           *[other] min-width: 49em
         }
 
 connection-close-key =
@@ -35,23 +35,14 @@ connection-proxy-http = Διακομιστής μεσολάβησης HTTP
     .accesskey = λ
 connection-proxy-http-port = Θύρα
     .accesskey = Θ
-connection-proxy-http-sharing =
-    .label = Χρήση αυτού του διακομιστή μεσολάβησης για FTP και HTTPS
-    .accesskey = σ
-
 connection-proxy-https-sharing =
-    .label = Να χρησιμοποιείται ο διακομιστής μεσολάβησης και για HTTPS
-    .accesskey = χ
+    .label = Χρήση αυτού του διακομιστή μεσολάβησης και για HTTPS
+    .accesskey = ρ
 
 connection-proxy-https = Διακομιστής μεσολάβησης HTTPS
     .accesskey = H
 connection-proxy-ssl-port = Θύρα
     .accesskey = ύ
-
-connection-proxy-ftp = Διακομιστής μεσολάβησης FTP
-    .accesskey = F
-connection-proxy-ftp-port = Θύρα
-    .accesskey = ρ
 
 connection-proxy-socks = Σύστημα SOCKS
     .accesskey = C
@@ -69,9 +60,6 @@ connection-proxy-noproxy = Χωρίς διακομιστή μεσολάβηση�
 
 connection-proxy-noproxy-desc = Για παράδειγμα: .mozilla.org, .net.nz, 192.168.1.0/24
 
-# Do not translate localhost, 127.0.0.1 and ::1.
-connection-proxy-noproxy-localhost-desc = Οι συνδέσεις στο localhost, το 127.0.0.1 και το ::1 δεν προωθούνται ποτέ μέσω διακομιστή μεσολάβησης.
-
 # Do not translate "localhost", "127.0.0.1/8" and "::1". (You can translate "and".)
 connection-proxy-noproxy-localhost-desc-2 = Οι συνδέσεις στο localhost, 127.0.0.1/8 και ::1, δεν γίνονται ποτέ μέσω διακομιστή μεσολάβησης.
 
@@ -84,26 +72,24 @@ connection-proxy-reload =
     .accesskey = ν
 
 connection-proxy-autologin =
-    .label = Να μην ζητείται ταυτοποίηση αν είναι αποθηκευμένος ο κωδικός πρόσβασης
+    .label = Να μη ζητείται ταυτοποίηση αν είναι αποθηκευμένος ο κωδικός πρόσβασης
     .accesskey = μ
     .tooltip = Αυτή η επιλογή ελέγχει κρυφά την ταυτότητά σας σε διακομιστές μεσολάβησης όταν έχετε αποθηκεύσει τα διαπιστευτήριά τους. Θα ειδοποιηθείτε αν αποτύχει η ταυτοποίηση.
+
+connection-proxy-autologin-checkbox =
+    .label = Να μη ζητείται ταυτοποίηση αν είναι αποθηκευμένος ο κωδικός πρόσβασης
+    .accesskey = μ
+    .tooltiptext = Αυτή η επιλογή ελέγχει κρυφά την ταυτότητά σας σε διακομιστές μεσολάβησης όταν έχετε αποθηκεύσει τα διαπιστευτήριά τους. Θα ειδοποιηθείτε αν αποτύχει η ταυτοποίηση.
 
 connection-proxy-socks-remote-dns =
     .label = Διακομιστής μεσολάβησης DNS κατά τη χρήση SOCKS v5
     .accesskey = D
 
-connection-dns-over-https =
-    .label = Ενεργοποίηση DNS over HTTPS
-    .accesskey = γ
-
-connection-dns-over-https-url-resolver = Χρήση παρόχου
-    .accesskey = Χ
-
 # Variables:
 #   $name (String) - Display name or URL for the DNS over HTTPS provider
 connection-dns-over-https-url-item-default =
     .label = { $name } (Προεπιλογή)
-    .tooltiptext = Χρήση του προεπιλεγμένου URL για επίλυση DNS αντί HTTPS
+    .tooltiptext = Χρήση του προεπιλεγμένου URL για ανάλυση DNS over HTTPS
 
 connection-dns-over-https-url-custom =
     .label = Προσαρμοσμένο

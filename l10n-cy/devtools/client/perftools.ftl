@@ -20,7 +20,8 @@ perftools-heading-features = Nodweddion
 perftools-heading-features-default = Nodweddion (Ymlaen yn rhagosodedig drwy argymhelliad)
 perftools-heading-features-disabled = Nodweddion wedi'u Hanalluogi
 perftools-heading-features-experimental = Arbrofol
-perftools-heading-threads = Trywyddion
+perftools-heading-threads = Edafedd
+perftools-heading-threads-jvm = Trywyddau JVM
 perftools-heading-local-build = Adeiladedd lleol
 
 ##
@@ -52,9 +53,6 @@ perftools-devtools-settings-label = Gosodiadau
 
 ## Various statuses that affect the current state of profiling, not typically displayed.
 
-perftools-status-private-browsing-notice =
-    Mae'r proffiliwr wedi'i analluogi pan fydd Pori Preifat wedi'i alluogi.
-    Caewch yr holl Windows Preifat i ail-alluogi'r proffiliwr
 perftools-status-recording-stopped-by-another-tool = Cafodd y cofnodi ei atal gan offeryn arall.
 perftools-status-restart-required = Rhaid ailgychwyn y porwr i alluogi'r nodwedd hon.
 
@@ -86,8 +84,8 @@ perftools-thread-renderer =
     .title = Pan fydd WebRender wedi'i alluogi, mae'r trywydd sy'n gweithredu OpenGL yn galw
 perftools-thread-render-backend =
     .title = Trywydd WebRender RenderBackend
-perftools-thread-paint-worker =
-    .title = Pan mae off-main-thread wedi'i alluogi, yr edefyn y mae paentio yn digwydd arno
+perftools-thread-timer =
+    .title = Yr amseryddion trin trywydd (setTimeout, setInterval, nsITimer)
 perftools-thread-style-thread =
     .title = Mae cyfrifiant arddull yn cael ei rannu i drywyddion lluosog
 pref-thread-stream-trans =
@@ -98,11 +96,20 @@ perftools-thread-img-decoder =
     .title = Trywyddion datgodio delwedd
 perftools-thread-dns-resolver =
     .title = Mae datrysiad DNS yn digwydd ar y trywydd hwn
-perftools-thread-js-helper =
-    .title = Gwaith cefndir injan JS fel crynhoadau oddi ar y prif drywydd
-
 perftools-thread-task-controller =
     .title = Edafedd pwll edafedd TaskController
+perftools-thread-jvm-gecko =
+    .title = Prif drywydd Gecko JVM
+perftools-thread-jvm-nimbus =
+    .title = Y prif drywydd ar gyfer arbrofion Nimbus SDK
+perftools-thread-jvm-default-dispatcher =
+    .title = Yr anfonwr rhagosodedig ar gyfer llyfrgell coroutines Kotlin
+perftools-thread-jvm-glean =
+    .title = Y prif drywydd ar gyfer telemetreg Glean SDK
+perftools-thread-jvm-arch-disk-io =
+    .title = Anfonwr IO ar gyfer llyfrgell coroutines Kotlin
+perftools-thread-jvm-pool =
+    .title = Trywyddau wedi'u creu mewn cronfa trywyddau dienw
 
 ##
 
@@ -112,13 +119,45 @@ perftools-tools-threads-input-label =
     .title = Mae'r enwau trywyddion hyn yn rhestr sydd wedi'i gwahanu â choma sy'n cael ei ddefnyddio i alluogi proffilio trywydd yn y proffiliwr. Mae angen i'r enw fod yn cyfateb yn unig â'r enw trywydd i'w gynnwys. Mae'n sensitif i ofod gwyn.
 
 ## Onboarding UI labels. These labels are displayed in the new performance panel UI, when
-## both devtools.performance.new-panel-onboarding & devtools.performance.new-panel-enabled
-## preferences are true.
+## devtools.performance.new-panel-onboarding preference is true.
 
 perftools-onboarding-message = <b>Newydd</b>: Mae'r { -profiler-brand-name } bellach wedi'i integreiddio i Offer Datblygwr. <a>Gweld rhagor</a> am yr offeryn newydd pwerus hwn.
 
-# `options-context-advanced-settings` is defined in toolbox-options.ftl
-perftools-onboarding-reenable-old-panel = (Am gyfnod cyfyngedig, gallwch gyrchu'r panel Perfformiad gwreiddiol trwy <a>{ options-context-advanced-settings }</a>
-
 perftools-onboarding-close-button =
     .aria-label = Cau'r neges cyflwyno
+
+## Profiler presets
+
+
+# Presets and their l10n IDs are defined in the file
+# devtools/client/performance-new/popup/background.jsm.js
+# The same labels and descriptions are also defined in appmenu.ftl.
+
+
+# Presets and their l10n IDs are defined in the file
+# devtools/client/performance-new/shared/background.jsm.js
+# The same labels and descriptions are also defined in appmenu.ftl.
+
+perftools-presets-web-developer-label = Datblygwr Gwe
+perftools-presets-web-developer-description = Y rhagosodiad sy'n cael ei argymell ar gyfer y rhan fwyaf o ddadfygio apiau gwe, gyda gorbenion isel.
+
+perftools-presets-firefox-label = { -brand-shorter-name }
+perftools-presets-firefox-description = Y rhagosodiad a argymhellir ar gyfer proffilio { -brand-shorter-name }.
+
+perftools-presets-graphics-label = Graffigau
+perftools-presets-graphics-description = Y rhagosodiad ar gyfer ymchwilio i wallau graffeg yn { -brand-shorter-name }.
+
+perftools-presets-media-label = Cyfrwng
+perftools-presets-media-description2 = Y rhagosodiad ar gyfer ymchwilio i wallau sain a fideo yn { -brand-shorter-name }.
+
+perftools-presets-networking-label = Rhwydweithio
+perftools-presets-networking-description = Y rhagosodiad ar gyfer ymchwilio i wallau graffeg yn { -brand-shorter-name }
+
+# "Power" is used in the sense of energy (electricity used by the computer).
+perftools-presets-power-label = Pŵer
+perftools-presets-power-description = Y rhagosodiad ar gyfer ymchwilio i wallau defnydd pŵer yn { -brand-shorter-name }, gyda gorbenion isel.
+
+perftools-presets-custom-label = Cyfaddas
+
+##
+

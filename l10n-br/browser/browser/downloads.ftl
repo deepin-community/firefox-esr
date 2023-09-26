@@ -16,8 +16,8 @@ downloads-panel =
 # The style attribute has the width of the Downloads Panel expressed using
 # a CSS unit. The longest labels that should fit are usually those of
 # in-progress and blocked downloads.
-downloads-panel-list =
-    .style = width: 70ch
+downloads-panel-items =
+    .style = width: 40em
 
 downloads-cmd-pause =
     .label = Ehan
@@ -30,42 +30,65 @@ downloads-cmd-cancel =
 downloads-cmd-cancel-panel =
     .aria-label = Nullañ
 
-# This message is only displayed on Windows and Linux devices
-downloads-cmd-show-menuitem =
-    .label = Digeriñ an teuliad a endalc'h ar restr
+downloads-cmd-show-menuitem-2 =
+    .label =
+        { PLATFORM() ->
+            [macos] Diskouez e Finder
+           *[other] Diskouez en teuliad
+        }
     .accesskey = D
 
-# This message is only displayed on macOS devices
-downloads-cmd-show-menuitem-mac =
-    .label = Diskouez e-barzh Finder
-    .accesskey = F
+## Displayed in the downloads context menu for files that can be opened.
+## Variables:
+##   $handler (String) - The name of the mime type's default file handler.
+##   Example: "Notepad", "Acrobat Reader DC", "7-Zip File Manager"
 
 downloads-cmd-use-system-default =
     .label = Digeriñ e gwelerez ar sistem
     .accesskey = D
+# This version is shown when the download's mime type has a valid file handler.
+downloads-cmd-use-system-default-named =
+    .label = Digeriñ e { $handler }
+    .accesskey = D
 
+# We can use the same accesskey as downloads-cmd-always-open-similar-files.
+# Both should not be visible in the downloads context menu at the same time.
 downloads-cmd-always-use-system-default =
     .label = Digeriñ bewech e gwelerez ar sistem
     .accesskey = b
+# We can use the same accesskey as downloads-cmd-always-open-similar-files.
+# Both should not be visible in the downloads context menu at the same time.
+# This version is shown when the download's mime type has a valid file handler.
+downloads-cmd-always-use-system-default-named =
+    .label = Atav digeriñ e { $handler }
+    .accesskey = A
 
-downloads-cmd-show-button =
+##
+
+# We can use the same accesskey as downloads-cmd-always-use-system-default.
+# Both should not be visible in the downloads context menu at the same time.
+downloads-cmd-always-open-similar-files =
+    .label = Digeriñ ar restroù heñvel bepred
+    .accesskey = D
+
+downloads-cmd-show-button-2 =
     .tooltiptext =
         { PLATFORM() ->
-            [macos] Diskouez e-barzh Finder
-           *[other] Digeriñ an teuliad a endalc'h ar restr
+            [macos] Diskouez e Finder
+           *[other] Diskouez en teuliad
         }
 
-downloads-cmd-show-panel =
+downloads-cmd-show-panel-2 =
     .aria-label =
         { PLATFORM() ->
-            [macos] Diskouez e-barzh Finder
-           *[other] Digeriñ an teuliad a endalc'h ar restr
+            [macos] Diskouez e Finder
+           *[other] Diskouez en teuliad
         }
-downloads-cmd-show-description =
+downloads-cmd-show-description-2 =
     .value =
         { PLATFORM() ->
-            [macos] Diskouez e-barzh Finder
-           *[other] Digeriñ an teuliad a endalc'h ar restr
+            [macos] Diskouez e Finder
+           *[other] Diskouez en teuliad
         }
 
 downloads-cmd-show-downloads =
@@ -89,6 +112,9 @@ downloads-cmd-clear-list =
 downloads-cmd-clear-downloads =
     .label = Skarzhañ roll ar pellgargadurioù
     .accesskey = p
+downloads-cmd-delete-file =
+    .label = Dilemel
+    .accesskey = D
 
 # This command is shown in the context menu when downloads are blocked.
 downloads-cmd-unblock =
@@ -138,6 +164,19 @@ downloads-open-file =
 ##   $seconds (number) - Amount of seconds left till the file opens.
 ##   $minutes (number) - Amount of minutes till the file opens.
 
+downloading-file-opens-in-hours-and-minutes-2 =
+    .value = Digeriñ a raio a-benn { $hours }e { $minutes }m...
+downloading-file-opens-in-minutes-2 =
+    .value = Digeriñ a raio a-benn { $minutes }m...
+downloading-file-opens-in-minutes-and-seconds-2 =
+    .value = Digeriñ a raio a-benn { $minutes }e { $seconds }m...
+downloading-file-opens-in-seconds-2 =
+    .value = Digeriñ a raio a-benn { $seconds }eil...
+downloading-file-opens-in-some-time-2 =
+    .value = Digeriñ pa va leuniet…
+downloading-file-click-to-open =
+    .value = Digeriñ pa vo echuet
+
 ##
 
 # Displayed when hovering a download which is able to be retried by users,
@@ -162,6 +201,24 @@ downloads-history =
 downloads-details =
     .title = Munudoù ar bellgargardenn
 
+## Displayed when a site attempts to automatically download many files.
+## Variables:
+##   $num (number) - Number of blocked downloads.
+##   $url (string) - The url of the suspicious site, stripped of http, https and www prefix.
+
+downloads-files-not-downloaded =
+    { $num ->
+        [one] N'eo ket bet pellgarget ar restr.
+        [two] { $num } restr n'int ket bet pellgarget.
+        [few] { $num } restr n'int ket bet pellgarget.
+        [many] { $num } a restroù n'int ket bet pellgarget.
+       *[other] { $num } restr n'int ket bet pellgarget.
+    }
+downloads-blocked-from-url = Pellgargadennoù stanket eus { $url }.
+downloads-blocked-download-detailed-info = { $url } he deus klasket pellgargañ meur a restr ent emgefreek. Gallout a rafe bezañ torret al lec'hienn pe o klask lakaat restroù lastez en o trevnad.
+
+##
+
 downloads-clear-downloads-button =
     .label = Skarzhañ roll ar pellgargadurioù
     .tooltiptext = Skarzhet eo bet ar pellgargadurioù peurechu, nullet ha c'hwitet
@@ -174,3 +231,30 @@ downloads-list-empty =
 # This string is shown when there are no items in the Downloads Panel.
 downloads-panel-empty =
     .value = Pellgargadur ebet evit an estez-mañ.
+
+# This is displayed in an item at the bottom of the Downloads Panel when there
+# are more downloads than can fit in the list in the panel.
+#   $count (number) - number of files being downloaded that are not shown in the
+#                     panel list.
+downloads-more-downloading =
+    { $count ->
+        [one] { $count } restr ouzhpenn o pellgargañ
+        [two] { $count } restr ouzhpenn o pellgargañ
+        [few] { $count } restr ouzhpenn o pellgargañ
+        [many] { $count } a restroù ouzhpenn o pellgargañ
+       *[other] { $count } restr ouzhpenn o pellgargañ
+    }
+
+## Download errors
+
+downloads-error-alert-title = Fazi pellgargañ
+# Variables:
+#   $extension (String): the name of the blocking extension.
+downloads-error-blocked-by = Ne c'hall bet bezañ enrollet ar pellgargañ-mañ peogwir emañ stanket gant { $extension }.
+# Used when the name of the blocking extension is unavailable.
+downloads-error-extension = Ne c'hall ket bezañ enrollet ar pellgargañ-mañ peogwir emañ stanket gant un askouezh.
+# Line breaks in this message are meaningful, and should be maintained.
+downloads-error-generic =
+    Ar pellgargadur n'hall ket bezañ enrollet rak degouezhet ez eus bet ur fazi dianav.
+    
+    Klaskit en-dro, mar plij.

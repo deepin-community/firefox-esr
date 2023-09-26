@@ -7,12 +7,6 @@ do-not-track-learn-more = Funda ngakumbi
 do-not-track-option-always =
     .label = Qho
 
-pref-page-title =
-    { PLATFORM() ->
-        [windows] Ekunokukhethwa kuko
-       *[other] Izikhethwa
-    }
-
 pane-general-title = Jikelele
 category-general =
     .tooltiptext = { pane-general-title }
@@ -52,28 +46,24 @@ restart-later = Qalisa ngokutsha Kamva
 ##   $name (String): name of the extension
 
 
+## Extension Control Notifications
+##
+## These strings are used to inform the user
+## about changes made by extensions to browser settings.
+##
+## <img data-l10n-name="icon"/> is going to be replaced by the extension icon.
+##
+## Variables:
+##   $name (string) - Name of the extension
+
+
 ## Preferences UI Search Results
 
 search-results-header = IZiphumo zoKhangelo
 
-# `<span data-l10n-name="query"></span>` will be replaced by the search term.
-search-results-empty-message =
-    { PLATFORM() ->
-        [windows] Uxolo! Azikho iziphumo kuKhetho lwe- “<span data-l10n-name="query"></span>”.
-       *[other] Uxolo! Azikho iziphumo kwiiPrifrensi ze-“<span data-l10n-name="query"></span>”.
-    }
-
 ## General Section
 
 startup-header = Qalisa
-
-# { -brand-short-name } will be 'Firefox Developer Edition',
-# since this setting is only exposed in Firefox Developer Edition
-separate-profile-mode =
-    .label = Vumela i-{ -brand-short-name } kunye ne-Firefox ukuba zisebenze ngaxeshanye
-use-firefox-sync = Ingcebiso: Le isebenzisa iiprofayile eyahlukeneyo. Sebenzisa ungqamaniso ukwabelana ngenkcukacha phakathi kwazo.
-get-started-not-logged-in = Sayina ungene kwi-{ -sync-brand-short-name }…
-get-started-configured = Vula iipriferensi ze-{ -sync-brand-short-name }
 
 always-check-default =
     .label = Khangela qho ukuba i-{ -brand-short-name } iyibhrawuza yakho esisiseko
@@ -88,17 +78,9 @@ ctrl-tab-recently-used-order =
     .label = Imijikelo yeCtrl+Tab kwiithebhu kulungelelwano olusandul' ukusetyenziswa
     .accesskey = T
 
-warn-on-close-multiple-tabs =
-    .label = Ndikulumkise xa ndivala iithebhu ezininzi
-    .accesskey = e
-
 warn-on-open-many-tabs =
     .label = Ndikulumkise xa uvula iithebhu ezininzi ezingacothisa i-{ -brand-short-name }
     .accesskey = c
-
-switch-links-to-new-tabs =
-    .label = Xa uvula ikhonkco kwilinki entsha, tshintshela kuyo ngokukhawuleza
-    .accesskey = a
 
 show-tabs-in-taskbar =
     .label = Bonisa umbono wangaphambili wethebhu kwithaskhbha ye-Windows
@@ -115,6 +97,10 @@ browser-containers-settings =
     .accesskey = s
 
 containers-disable-alert-title = Ufuna ukuvala Zonke iiThebhu zeeKhonteyina?
+
+## Variables:
+##   $tabCount (number) - Number of tabs
+
 containers-disable-alert-desc =
     { $tabCount ->
         [one] Ukuba uyazivala iiThebhu zeKhonteyina ngoku, i-{ $tabCount } ithebhu yekhonteyina iya kuvalwa. Uqinisekile ukuba ufuna ukuzivala iiThebhu zeKhonteyina?
@@ -126,6 +112,9 @@ containers-disable-alert-ok-button =
         [one] Vala iThebu yeKhonteyina i-{ $tabCount }
        *[other] Vala iiThebhu zeKhonteyina ii-{ $tabCount }.
     }
+
+##
+
 containers-disable-alert-cancel-button = Zigcina zivuliwe
 
 containers-remove-alert-title = Ufuna ukuSusa le Khonteyina?
@@ -141,10 +130,7 @@ containers-remove-alert-msg =
 containers-remove-ok-button = Yisuse le Khonteyina
 containers-remove-cancel-button = Musa ukuyisusa le Khonteyina
 
-
 ## General Section - Language & Appearance
-
-fonts-and-colors-header = Iifonti neMibala
 
 default-font = Ifonti esisiseko
     .accesskey = I
@@ -154,10 +140,6 @@ default-font-size = Isayizi
 advanced-fonts =
     .label = Kwangaphambili…
     .accesskey = K
-
-colors-settings =
-    .label = Imibala…
-    .accesskey = I
 
 choose-language-description = Khetha ulwimi oluthandayo lokubonisa amaphepha
 
@@ -185,8 +167,7 @@ check-user-spelling =
 
 download-header = Okukhutshelwayo
 
-download-save-to =
-    .label = Gcina iifayile kwi
+download-save-where = Gcina iifayile kwi
     .accesskey = c
 
 download-choose-folder =
@@ -242,11 +223,6 @@ applications-manage-app =
     .label = IiNkcukacha zeAplikheshini…
 applications-always-ask =
     .label = Soloko ucela
-applications-type-pdf = Ifomathi yoxwebhu oluphathekayo (PDF)
-
-# Variables:
-#   $type (String) - the MIME type (e.g application/binary)
-applications-type-pdf-with-type = { applications-type-pdf } ({ $type })
 
 # Variables:
 #   $type-description (String) - Description of the type (e.g "Portable Document Format")
@@ -390,6 +366,11 @@ choose-bookmark =
 ## Variables:
 ##  $provider (String): Name of the corresponding content provider, e.g "Pocket".
 
+
+## Variables:
+##  $provider (string) - Name of the corresponding content provider, e.g "Pocket".
+
+
 ##
 
 
@@ -401,9 +382,8 @@ search-suggestions-option =
     .label = Nika khangela iingcebiso
     .accesskey = k
 
-search-suggestions-cant-show = Amacebiso okukhangela akayi kuboniswa kwiziphumo zebha yendawo ngenxa yokuba uyile i-{ -brand-short-name } ukuba ingaze iyikhumbule imbali.
 
-search-one-click-header = IiNjini zokuKhangela Ezicofwa Kanye
+search-suggestions-cant-show = Amacebiso okukhangela akayi kuboniswa kwiziphumo zebha yendawo ngenxa yokuba uyile i-{ -brand-short-name } ukuba ingaze iyikhumbule imbali.
 
 search-choose-engine-column =
     .label = Iinjini zokukhangela
@@ -433,14 +413,14 @@ containers-add-button =
     .label = Yongeza iKhonteyina eNtsha
     .accesskey = Y
 
-## Sync Section - Signed out
-
-
 ## Firefox Account - Signed out. Note that "Sync" and "Firefox Account" are now
 ## more discrete ("signed in" no longer means "and sync is connected").
 
+
+## Firefox account - Signed out. Note that "Sync" and "Firefox account" are now
+## more discrete ("signed in" no longer means "and sync is connected").
+
 sync-signedout-caption = Phatha iWebhu Yakho Apho Ukhoyo
-sync-signedout-description = Ngqamanisa iibhukmakhi zakho, iimbali, iithebhu, iiphaswedi, ezongezelelwayo, kunye neepreferensi kuzo zonke izixhobo zakho.
 
 # This message contains two links and two icon images.
 #   `<img data-l10n-name="android-icon"/>` - Android logo icon
@@ -452,16 +432,21 @@ sync-signedout-description = Ngqamanisa iibhukmakhi zakho, iimbali, iithebhu, ii
 # to your language, but should not be changed or translated.
 sync-mobile-promo = Dawnlowuda iFirefox ye<img data-l10n-name="android-icon"/> <a data-l10n-name="android-link">I-Android</a>okanye<img data-l10n-name="ios-icon"/> <a data-l10n-name="ios-link">iOS</a>ukuze ungqamanise nezixhobo zakho zemobhayili.
 
-## Sync Section - Signed in
-
-
 ## Firefox Account - Signed in
+
+
+## Firefox account - Signed in
 
 sync-profile-picture =
     .tooltiptext = Tshintsha umfanekiso weprofayili
 
+## Variables
+## $email (string) - Email used for Firefox account
+
 sync-signedin-unverified = { $email } akuqinisekiswanga.
 sync-signedin-login-failure = Sicela ungene ukuze uphinde uqhagamshele { $email }
+
+##
 
 sync-sign-in =
     .label = Sayina uNgene
@@ -499,10 +484,17 @@ sync-device-name-save =
     .label = Gcina
     .accesskey = i
 
+## These strings are shown in a desktop notification after the
+## user requests we resend a verification email.
+
+sync-verification-sent-title = Isiqinisekiso sithunyelwe
+# Variables:
+#   $email (String): Email address of user's Firefox account.
+sync-verification-sent-body = Ikhonkco lesiqinisekiso lithunyelwe kwi-{ $email }.
+sync-verification-not-sent-title = Ayikwazi ukuThumela uQinisekiso
+sync-verification-not-sent-body = Asikwazi kuthumela imeyili yokuqinisekisa ngeli xesha, sicela uphinde uzame ngelinye ixesha.
+
 ## Privacy Section
-
-
-## Privacy Section - Forms
 
 
 ## Privacy Section - Logins and Passwords
@@ -514,18 +506,14 @@ forms-exceptions =
 forms-saved-logins =
     .label = Ezigciniweyo Logini…
     .accesskey = L
-forms-master-pw-use =
-    .label = Sebenzisa iphaswedi eyimasta
-    .accesskey = S
 forms-master-pw-change =
     .label = Guqula iPhaswedi eyiMasta…
     .accesskey = P
 
-forms-master-pw-fips-title = Kungokunje ukwimo ye-FIPS. I-FIPS ifuna iPhaswedi yeMasta engekho ze.
-
 forms-master-pw-fips-desc = Ukuguqulwa Kwegama Lokugqithisa Akuphumelelanga
 
 ## OS Authentication dialog
+
 
 ## Privacy Section - History
 
@@ -572,6 +560,9 @@ history-clear-on-close-settings =
 
 sitedata-learn-more = Funda okungakumbi
 
+## Privacy Section - Cookie Banner Handling
+
+
 ## Privacy Section - Address Bar
 
 addressbar-locbar-bookmarks-option =
@@ -592,6 +583,10 @@ addressbar-suggestions-settings = Tshintsha iipreferensi zamacebiso enjini yokuk
 
 ##
 
+
+# The tcp-rollout strings are no longer used for the rollout but for tcp-by-default in the standard section
+
+
 ## Privacy Section - Tracking
 
 
@@ -602,10 +597,6 @@ permissions-header = Iimvume
 permissions-block-popups =
     .label = Thintela iifestile ezizivelelayo
     .accesskey = T
-
-permissions-block-popups-exceptions =
-    .label = Izinxaxhi…
-    .accesskey = I
 
 permissions-addon-exceptions =
     .label = Izinxaxhi…
@@ -618,8 +609,6 @@ collection-health-report-link = Funda okungakumbi
 # This message is displayed above disabled data sharing options in developer builds
 # or builds with no Telemetry support available.
 collection-health-report-disabled = Ukuxelwa kwedatha kuyekisiwe ngenxa yolu lwakheko
-
-collection-backlogged-crash-reports-link = Funda okungakumbi
 
 ## Privacy Section - Security
 ##
@@ -644,47 +633,18 @@ security-block-uncommon-software =
 
 certs-header = Izatifikethi
 
-certs-personal-label = Xa iseva icela isatifikethi sakho
-
-certs-select-auto-option =
-    .label = Khetha esinye ngokuzenzekela
-    .accesskey = S
-
-certs-select-ask-option =
-    .label = Iyakubuza ngawo onke amaxesha
-    .accesskey = A
-
 certs-enable-ocsp =
     .label = Buza iiseva zomphenduli ze-OCSP ukuqinisekisa ukugqibelela kwangoku kwezatifikethi
     .accesskey = B
 
-space-alert-learn-more-button =
-    .label = Funda Okungakumbi
-    .accesskey = F
-
-space-alert-over-5gb-pref-button =
-    .label =
-        { PLATFORM() ->
-            [windows] Vula Ukhetho
-           *[other] Vula iiPriferensi
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] V
-           *[other] V
-        }
-
-space-alert-under-5gb-ok-button =
-    .label = Kulungile. Ndiyifumene
-    .accesskey = l
-
-space-alert-under-5gb-message = I-{ -brand-short-name } iphelelwa yindawo kwidiski. Iziqulatho zewebhsayithi zinokungabonisi kakuhle. Tyelela ethi “Funda Okungakumbi” ukuze u-optimayize ukusebenzisa kwakho idiski ukuze ubhrawze kakuhle.
-
 ## Privacy Section - HTTPS-Only
+
+
+## DoH Section
+
 
 ## The following strings are used in the Download section of settings
 
 desktop-folder-name = Idesktophu
 downloads-folder-name = Okukhutshelweyo
 choose-download-folder-title = Khetha iFolda yokuKhutshelwayo:
-

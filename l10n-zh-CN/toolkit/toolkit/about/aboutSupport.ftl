@@ -12,11 +12,6 @@ crashes-id = 报告 ID
 crashes-send-date = 提交日期
 crashes-all-reports = 全部崩溃报告
 crashes-no-config = 此应用程序未被配置为显示崩溃报告。
-extensions-title = 扩展
-extensions-name = 名称
-extensions-enabled = 启用
-extensions-version = 版本
-extensions-id = ID
 support-addons-title = 附加组件
 support-addons-name = 名称
 support-addons-type = 类型
@@ -80,6 +75,12 @@ app-basics-location-service-key-google = Google 位置服务密钥
 app-basics-safebrowsing-key-google = Google 安全浏览密钥
 app-basics-key-mozilla = Mozilla 位置服务密钥
 app-basics-safe-mode = 安全模式
+app-basics-memory-size = 内存大小（RAM）
+app-basics-disk-available = 磁盘可用空间
+# Variables:
+#   $value (number) - Amount of data being stored
+#   $unit (string) - The unit of data being stored (e.g. MB)
+app-basics-data-size = { $value } { $unit }
 show-dir-label =
     { PLATFORM() ->
         [macos] 在 Finder 中显示
@@ -109,11 +110,21 @@ graphics-gpu2-title = GPU #2
 graphics-decision-log-title = 决策日志
 graphics-crash-guards-title = 被崩溃守卫禁用的功能
 graphics-workarounds-title = 变通方法
+graphics-device-pixel-ratios = 窗口设备像素比
 # Windowing system in use on Linux (e.g. X11, Wayland).
 graphics-window-protocol = 窗口协议
 # Desktop environment in use on Linux (e.g. GNOME, KDE, XFCE, etc).
 graphics-desktop-environment = 桌面环境
 place-database-title = Places 数据库
+place-database-stats = 统计信息
+place-database-stats-show = 显示统计信息
+place-database-stats-hide = 隐藏统计信息
+place-database-stats-entity = 实体
+place-database-stats-count = 数量
+place-database-stats-size-kib = 大小 (KiB)
+place-database-stats-size-perc = 大小 (%)
+place-database-stats-efficiency-perc = 效率 (%)
+place-database-stats-sequentiality-perc = 顺序性 (%)
 place-database-integrity = 完整性
 place-database-verify-integrity = 验证完整性
 a11y-title = 无障碍环境
@@ -133,8 +144,6 @@ sandbox-sys-call-tid = TID
 sandbox-sys-call-proc-type = 进程类型
 sandbox-sys-call-number = 系统调用
 sandbox-sys-call-args = 参数
-safe-mode-title = 尝试安全模式
-restart-in-safe-mode-label = 以安全模式重启浏览器…
 troubleshoot-mode-title = 诊断问题
 restart-in-troubleshoot-mode-label = 排障模式…
 clear-startup-cache-title = 尝试清除启动缓存
@@ -162,8 +171,18 @@ media-device-channels = 声道
 media-device-rate = 采样率
 media-device-latency = 延迟
 media-capabilities-title = 媒体能力
+media-codec-support-info = 解码器支持信息
 # List all the entries of the database.
 media-capabilities-enumerate = 枚举数据库
+
+## Codec support table
+
+media-codec-support-sw-decoding = 软件解码
+media-codec-support-hw-decoding = 硬件解码
+media-codec-support-codec-name = 编解码器名称
+media-codec-support-supported = 已支持
+media-codec-support-unsupported = 不支持
+media-codec-support-error = 无法获取编解码器支持信息，请在播放媒体文件后重试。
 
 ##
 
@@ -192,36 +211,6 @@ remote-debugging-url = URL
 
 ##
 
-support-third-party-modules-title = 第三方模块
-support-third-party-modules-module = 模块文件
-support-third-party-modules-version = 文件版本
-support-third-party-modules-vendor = 厂商信息
-support-third-party-modules-occurrence = 加载次数
-support-third-party-modules-process = 进程类型与 ID
-support-third-party-modules-thread = 线程
-support-third-party-modules-base = 映像基址
-support-third-party-modules-uptime = 进程运行时间（毫秒）
-support-third-party-modules-duration = 加载持续时间（毫秒）
-support-third-party-modules-status = 状态
-support-third-party-modules-status-loaded = 已加载
-support-third-party-modules-status-blocked = 已屏蔽
-support-third-party-modules-status-redirected = 已重定向
-support-third-party-modules-empty = 未加载第三方模块。
-support-third-party-modules-no-value = （暂无值）
-support-third-party-modules-button-open =
-    .title = 打开文件位置…
-support-third-party-modules-expand =
-    .title = 显示详细信息
-support-third-party-modules-collapse =
-    .title = 收起详细信息
-support-third-party-modules-unsigned-icon =
-    .title = 此模块未签名
-support-third-party-modules-folder-icon =
-    .title = 打开文件位置…
-support-third-party-modules-down-icon =
-    .title = 显示详细信息
-support-third-party-modules-up-icon =
-    .title = 收起详细信息
 # Variables
 # $days (Integer) - Number of days of crashes to log
 report-crash-for-days = 近 { $days } 天的崩溃报告
@@ -288,10 +277,8 @@ webgl2-renderer = WebGL2 渲染器
 webgl2-version = WebGL 2 驱动程序版本
 webgl2-driver-extensions = WebGL 2 驱动程序扩展
 webgl2-extensions = WebGL 2 扩展
-blocklisted-bug = 因已知问题已被列入黑名单
-# Variables
-# $bugNumber (string) - String of bug number from Bugzilla
-bug-link = bug { $bugNumber }
+webgpu-default-adapter = WebGPU 默认显卡
+webgpu-fallback-adapter = WebGPU 备用显卡
 # Variables
 #   $bugNumber (string) - Bug number on Bugzilla
 support-blocklisted-bug = 由于已知问题，被列入屏蔽列表：<a data-l10n-name="bug-link">bug { $bugNumber }</a>
@@ -299,8 +286,6 @@ support-blocklisted-bug = 由于已知问题，被列入屏蔽列表：<a data-l
 # $failureCode (string) - String that can be searched in the source tree.
 unknown-failure = 已列入黑名单；故障代码 { $failureCode }
 d3d11layers-crash-guard = D3D11 合成器
-d3d11video-crash-guard = D3D11 视频解码器
-d3d9video-crash-guard = D3D9 视频解码器
 glcontext-crash-guard = OpenGL
 wmfvpxvideo-crash-guard = WMF VPX 视频解码器
 reset-on-next-restart = 下次开启时重置
@@ -323,6 +308,7 @@ can-sandbox-media = 媒体插件沙盒化
 content-sandbox-level = 内容进程沙盒级别
 effective-content-sandbox-level = 生效的内容进程沙盒级别
 content-win32k-lockdown-state = 内容进程的 Win32k 锁定状态
+support-sandbox-gpu-level = GPU 进程沙盒级别
 sandbox-proc-type-content = 内容
 sandbox-proc-type-file = 文件内容
 sandbox-proc-type-media-plugin = 媒体插件
@@ -340,14 +326,6 @@ launcher-process-status-unknown = 未知状态
 # $remoteWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
 multi-process-windows = { $remoteWindows }/{ $totalWindows }
-multi-process-status-0 = 由用户启用
-multi-process-status-1 = 默认启用
-multi-process-status-2 = 被禁用
-multi-process-status-4 = 因无障碍环境的工具而禁用
-multi-process-status-6 = 因不支持的文本输入而禁用
-multi-process-status-7 = 因部分附加组件而禁用
-multi-process-status-8 = 被强制禁用
-multi-process-status-unknown = 未知状态
 # Variables
 # $fissionWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
@@ -356,7 +334,7 @@ fission-status-experiment-control = 通过实验禁用
 fission-status-experiment-treatment = 通过实验启用
 fission-status-disabled-by-e10s-env = 被环境禁用
 fission-status-enabled-by-env = 由环境启用
-fission-status-disabled-by-safe-mode = 被安全模式禁用
+fission-status-disabled-by-env = 被环境禁用
 fission-status-enabled-by-default = 默认启用
 fission-status-disabled-by-default = 默认禁用
 fission-status-enabled-by-user-pref = 由用户启用

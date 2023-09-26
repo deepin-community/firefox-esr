@@ -2,17 +2,17 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-addons-window =
-    .title = Chestor de complementos
-
 addons-page-title = Chestor de complementos
 
 search-header =
     .placeholder = Mirar en addons.mozilla.org
     .searchbuttonlabel = Mirar
 
-search-header-shortcut =
-    .key = f
+## Variables
+##   $domain - Domain name where add-ons are available (e.g. addons.mozilla.org)
+
+##
+
 
 list-empty-installed =
     .value = No tiene instalau garra complemento d'ista mena
@@ -30,65 +30,14 @@ list-empty-button =
     .label = Trobe más información d'os complementos
 
 help-button = Asistencia d'os complementos
-
 sidebar-help-button-title =
     .title = Asistencia d'os complementos
-
-preferences =
-    { PLATFORM() ->
-        [windows] Opcions de { -brand-short-name }
-       *[other] Preferencias de { -brand-short-name }
-    }
-
-sidebar-preferences-button-title =
-    .title =
-        { PLATFORM() ->
-            [windows] Opcions de { -brand-short-name }
-           *[other] Preferencias de { -brand-short-name }
-        }
 
 show-unsigned-extensions-button =
     .label = No s'ha puesto verificar bellas extensions
 
 show-all-extensions-button =
     .label = Amostrar todas as extensions
-
-cmd-show-details =
-    .label = Amostrar mas información
-    .accesskey = A
-
-cmd-find-updates =
-    .label = Mirar actualizacions
-    .accesskey = M
-
-cmd-preferences =
-    .label =
-        { PLATFORM() ->
-            [windows] Opcions
-           *[other] Preferencias
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] O
-           *[other] P
-        }
-
-cmd-enable-theme =
-    .label = Emplegar o tema
-    .accesskey = m
-
-cmd-disable-theme =
-    .label = Deixar d'emplegar o tema
-    .accesskey = p
-
-cmd-install-addon =
-    .label = Instalar
-    .accesskey = I
-
-cmd-contribute =
-    .label = Colaborar-ie
-    .accesskey = C
-    .tooltiptext = Colaborar en o desembolique d'iste complemento
 
 detail-version =
     .label = Versión
@@ -214,7 +163,6 @@ extensions-warning-update-security = A comprebación de seguranza d'os complemen
 extensions-warning-update-security-button = Activar
     .title = Activar a comprebación de seguranza d'os complementos
 
-
 ## Strings connected to add-on updates
 
 addon-updates-check-for-updates = Mirar si i hai actualizacions
@@ -267,8 +215,12 @@ addon-open-about-debugging = Depurar complementos
 ## Pending uninstall message bar
 
 
+## "sites with restrictions" (internally called "quarantined") are special domains
+## where add-ons are normally blocked for security reasons.
+
 ## This is the tooltip text for the recommended badges for an extension in about:addons. The
 ## badge is a small icon displayed next to an extension when it is recommended on AMO.
+
 
 ##
 
@@ -279,3 +231,29 @@ addons-heading-search-input =
 
 addon-page-options-button =
     .title = Ainas ta totz os complementos
+
+## Detail notifications
+## Variables:
+##   $name (String): name of the add-on.
+
+## Detail notifications
+## Variables:
+##   $name (string) - Name of the add-on.
+
+# Variables:
+#   $version (String): application version.
+details-notification-incompatible = { $name } ye incompatible con { -brand-short-name } { $version }.
+
+details-notification-unsigned-and-disabled = No s'ha puesto verificar { $name } ta o suyo uso en { -brand-short-name } y s'ha desactivau.
+details-notification-unsigned-and-disabled-link = Mas información
+
+details-notification-unsigned = No s'ha puesto verificar { $name } ta o suyo uso en { -brand-short-name }. Contine con cudiau.
+details-notification-unsigned-link = Mas información
+
+details-notification-blocked = S'ha desactivau { $name } por problemas de seguranza u estabilidat.
+details-notification-blocked-link = Mas información
+
+details-notification-softblocked = Se conoix que { $name } causa de problemas de seguranza u estabilidat.
+details-notification-softblocked-link = Mas información
+
+details-notification-gmp-pending = { $name } S'instalará en breus.

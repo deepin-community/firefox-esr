@@ -16,6 +16,8 @@
 #include "nsTableCellFrame.h"
 
 namespace mozilla {
+class nsDisplayListBuilder;
+class nsDisplayListSet;
 class PresShell;
 }  // namespace mozilla
 
@@ -70,19 +72,19 @@ class nsMathMLmtableFrame final : public nsTableFrame {
 
   // Overloaded nsTableFrame methods
 
-  virtual void SetInitialChildList(ChildListID aListID,
-                                   nsFrameList& aChildList) override;
+  void SetInitialChildList(ChildListID aListID,
+                           nsFrameList&& aChildList) override;
 
-  virtual void AppendFrames(ChildListID aListID,
-                            nsFrameList& aFrameList) override {
-    nsTableFrame::AppendFrames(aListID, aFrameList);
+  void AppendFrames(ChildListID aListID, nsFrameList&& aFrameList) override {
+    nsTableFrame::AppendFrames(aListID, std::move(aFrameList));
     RestyleTable();
   }
 
-  virtual void InsertFrames(ChildListID aListID, nsIFrame* aPrevFrame,
-                            const nsLineList::iterator* aPrevFrameLine,
-                            nsFrameList& aFrameList) override {
-    nsTableFrame::InsertFrames(aListID, aPrevFrame, aPrevFrameLine, aFrameList);
+  void InsertFrames(ChildListID aListID, nsIFrame* aPrevFrame,
+                    const nsLineList::iterator* aPrevFrameLine,
+                    nsFrameList&& aFrameList) override {
+    nsTableFrame::InsertFrames(aListID, aPrevFrame, aPrevFrameLine,
+                               std::move(aFrameList));
     RestyleTable();
   }
 
@@ -169,17 +171,16 @@ class nsMathMLmtrFrame final : public nsTableRowFrame {
   virtual nsresult AttributeChanged(int32_t aNameSpaceID, nsAtom* aAttribute,
                                     int32_t aModType) override;
 
-  virtual void AppendFrames(ChildListID aListID,
-                            nsFrameList& aFrameList) override {
-    nsTableRowFrame::AppendFrames(aListID, aFrameList);
+  void AppendFrames(ChildListID aListID, nsFrameList&& aFrameList) override {
+    nsTableRowFrame::AppendFrames(aListID, std::move(aFrameList));
     RestyleTable();
   }
 
-  virtual void InsertFrames(ChildListID aListID, nsIFrame* aPrevFrame,
-                            const nsLineList::iterator* aPrevFrameLine,
-                            nsFrameList& aFrameList) override {
+  void InsertFrames(ChildListID aListID, nsIFrame* aPrevFrame,
+                    const nsLineList::iterator* aPrevFrameLine,
+                    nsFrameList&& aFrameList) override {
     nsTableRowFrame::InsertFrames(aListID, aPrevFrame, aPrevFrameLine,
-                                  aFrameList);
+                                  std::move(aFrameList));
     RestyleTable();
   }
 
@@ -227,9 +228,9 @@ class nsMathMLmtdFrame final : public nsTableCellFrame {
                                     int32_t aModType) override;
 
   virtual mozilla::StyleVerticalAlignKeyword GetVerticalAlign() const override;
-  virtual nsresult ProcessBorders(nsTableFrame* aFrame,
-                                  nsDisplayListBuilder* aBuilder,
-                                  const nsDisplayListSet& aLists) override;
+  virtual nsresult ProcessBorders(
+      nsTableFrame* aFrame, mozilla::nsDisplayListBuilder* aBuilder,
+      const mozilla::nsDisplayListSet& aLists) override;
 
   virtual bool IsFrameOfType(uint32_t aFlags) const override {
     return nsTableCellFrame::IsFrameOfType(aFlags & ~(nsIFrame::eMathML));

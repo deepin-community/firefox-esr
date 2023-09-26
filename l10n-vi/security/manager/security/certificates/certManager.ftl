@@ -23,49 +23,12 @@ certmgr-tab-ca =
 certmgr-mine = Bạn có các chứng thực từ các tổ chức để nhận biết bạn
 certmgr-remembered = Những chứng nhận này được sử dụng để nhận dạng bạn với các trang web
 certmgr-people = Bạn có các tập tin chứng thực để nhận biết những người này
-certmgr-servers = Bạn có những tập tin chứng thực để nhận biết những máy chủ này
 certmgr-server = Các mục này xác định các ngoại lệ lỗi chứng chỉ máy chủ
 certmgr-ca = Bạn có những tập tin chứng thực để nhận biết các nhà thẩm định chứng thực này
 
-certmgr-detail-general-tab-title =
-    .label = Tổng quát
-    .accesskey = T
-
-certmgr-detail-pretty-print-tab-title =
-    .label = Chi tiết
-    .accesskey = C
-
-certmgr-pending-label =
-    .value = Hiện đang xác minh chứng chỉ…
-
-certmgr-subject-label = Cấp cho
-
-certmgr-issuer-label = Cấp bởi
-
-certmgr-period-of-validity = Thời gian hiệu lực
-
-certmgr-fingerprints = Vân tay
-
-certmgr-cert-detail =
-    .title = Chi tiết chứng chỉ
-    .buttonlabelaccept = Đóng
-    .buttonaccesskeyaccept = C
-
-certmgr-cert-detail-commonname = Tên thông thường (CN)
-
-certmgr-cert-detail-org = Tổ chức (O)
-
-certmgr-cert-detail-orgunit = Đơn vị tổ chức (OU)
-
-certmgr-cert-detail-serial-number = Số sê-ri
-
-certmgr-cert-detail-sha-256-fingerprint = Vân tay SHA-256
-
-certmgr-cert-detail-sha-1-fingerprint = Vân tay SHA1
-
-certmgr-edit-ca-cert =
+certmgr-edit-ca-cert2 =
     .title = Chỉnh thiết lập độ tin cậy chứng chỉ CA
-    .style = width: 48em;
+    .style = min-width: 48em;
 
 certmgr-edit-cert-edit-trust = Chỉnh thiết lập tin cậy:
 
@@ -75,9 +38,9 @@ certmgr-edit-cert-trust-ssl =
 certmgr-edit-cert-trust-email =
     .label = Chứng chỉ này có thể nhận diện người dùng email.
 
-certmgr-delete-cert =
+certmgr-delete-cert2 =
     .title = Xóa chứng nhận
-    .style = width: 48em; height: 24em;
+    .style = min-width: 48em; min-height: 24em;
 
 certmgr-cert-host =
     .label = Máy chủ
@@ -88,18 +51,11 @@ certmgr-cert-name =
 certmgr-cert-server =
     .label = Máy chủ
 
-certmgr-override-lifetime =
-    .label = Chu kì
-
 certmgr-token-name =
     .label = Thiết bị bảo mật
 
-certmgr-begins-on = Bắt đầu
-
 certmgr-begins-label =
     .label = Bắt đầu
-
-certmgr-expires-on = Hết hạn vào
 
 certmgr-expires-label =
     .label = Hết hạn vào
@@ -109,6 +65,9 @@ certmgr-email =
 
 certmgr-serial =
     .label = Số sê-ri
+
+certmgr-fingerprint-sha-256 =
+    .label = Vân tay SHA-256
 
 certmgr-view =
     .label = Xem…
@@ -141,18 +100,6 @@ certmgr-backup-all =
 certmgr-restore =
     .label = Nhập…
     .accesskey = N
-
-certmgr-details =
-    .value = Trường chứng nhận
-    .accesskey = F
-
-certmgr-fields =
-    .value = Giá trị trường
-    .accesskey = V
-
-certmgr-hierarchy =
-    .value = Cấp bậc chứng thực
-    .accesskey = H
 
 certmgr-add-exception =
     .label = Thêm ngoại lệ…
@@ -216,12 +163,6 @@ delete-user-cert-confirm = Bạn có chắc muốn xóa các chứng chỉ này 
 delete-user-cert-impact = Nếu bạn xóa một trong các chứng chỉ của riêng bạn, bạn không thể dùng nó để nhận diện chính mình được nữa.
 
 
-delete-ssl-cert-title =
-    .title = Xóa ngoại lệ chứng chỉ máy chủ
-delete-ssl-cert-confirm = Bạn có chắc bạn muốn xóa các ngoại lệ máy chủ này?
-delete-ssl-cert-impact = Nếu bạn xóa một ngoại lệ máy chủ, bạn khôi phục việc kiểm tra bảo mật thông thường cho máy chủ đó và yêu cầu nó dùng một chứng chỉ hợp lệ.
-
-
 delete-ssl-override-title =
     .title = Xóa ngoại lệ chứng chỉ máy chủ
 delete-ssl-override-confirm = Bạn có chắc bạn muốn xóa ngoại lệ máy chủ này không?
@@ -244,47 +185,6 @@ delete-email-cert-impact = Nếu bạn xóa chứng chỉ email của một ngư
 #   $serialNumber : the serial number of the cert in AA:BB:CC hex format.
 cert-with-serial =
     .value = Chứng chỉ có số sê-ri: { $serialNumber }
-
-## Cert Viewer
-
-# Title used for the Certificate Viewer.
-#
-# Variables:
-#   $certificate : a string representative of the certificate being viewed.
-cert-viewer-title =
-    .title = Trình xem chứng chỉ: “{ $certName }”
-
-not-present =
-    .value = <Không là một phần của chứng chỉ>
-
-# Cert verification
-cert-verified = Chứng chỉ này đã được xác minh cho những mục đích sau:
-
-# Add usage
-verify-ssl-client =
-    .value = Chứng chỉ SSL máy khách
-
-verify-ssl-server =
-    .value = Chứng chỉ SSL máy chủ
-
-verify-ssl-ca =
-    .value = Chứng chỉ thẩm định SSL
-
-verify-email-signer =
-    .value = Chứng chỉ bên kí email
-
-verify-email-recip =
-    .value = Chứng chỉ bên nhận email
-
-# Cert verification
-cert-not-verified-cert-revoked = Không thể xác minh chứng chỉ này vì nó đã bị thu hồi.
-cert-not-verified-cert-expired = Không thể xác minh chứng chỉ này vì nó đã hết hạn.
-cert-not-verified-cert-not-trusted = Không thể xác minh chứng chỉ này vì nó không đáng tin.
-cert-not-verified-issuer-not-trusted = Không thể xác minh chứng chỉ này vì người cấp không đáng tin.
-cert-not-verified-issuer-unknown = Không thể xác minh chứng chỉ này vì không rõ người cấp.
-cert-not-verified-ca-invalid = Không thể xác thực chứng chỉ này vì chứng chỉ CA không hợp lệ.
-cert-not-verified_algorithm-disabled = Không thể xác nhận chứng chỉ này vì được ký bằng một thuật toán bị vô hiệu - do thuật toán này không an toàn.
-cert-not-verified-unknown = Không thể xác minh chứng chỉ này vì không rõ lí do.
 
 # Used to indicate that the user chose not to send a client authentication certificate to a server that requested one in a TLS handshake.
 send-no-client-certificate = Không gửi chứng chỉ máy khách

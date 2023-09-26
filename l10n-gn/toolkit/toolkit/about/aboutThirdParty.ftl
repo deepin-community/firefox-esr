@@ -10,9 +10,6 @@ third-party-intro =
     { -brand-short-name }-pe. Oimeraẽva ta’ãha omboheraguapy’ỹva Microsoft térã
     { -vendor-short-name } oje’e ha’eha ta’ãha mbohapyháva.
 
-third-party-header-module-list = Ta’ãha rysýi
-third-party-header-loading-events = Emyanyhẽ tembiaporã
-
 third-party-message-empty = Ndojejuhúi mbohapyháva ra’ãha.
 third-party-message-no-duration = Oñemboheraguapy’ỹva
 
@@ -37,21 +34,47 @@ third-party-tag-background = Mokõihávape
     .title =
         Koichagua ta’ãha ndojokói pe tembipuru’i henyhẽ rupi
         Mokõihávape.
-third-party-unsigned-icon =
+third-party-icon-unsigned =
     .title = Ko ha’ãha noñemboheraguapýi
-third-party-warning-icon =
+    .alt = Ko ha’ãha noñemboheraguapýi
+third-party-icon-warning =
     .title = { -brand-short-name } ojavy pe ayvu ko ta’ãha pegua
+    .alt = { -brand-short-name } ojavy pe ayvu ko ta’ãha pegua
 
 third-party-status-loaded = Henyhẽva
 third-party-status-blocked = Jokopyre
 third-party-status-redirected = Ñembohapejey
 
 third-party-button-copy-to-clipboard = Embohasa mba’ekuaarã kuatiajokohápe
+third-party-loading-data =
+    .alt = Henyhẽhína apopyvusúpe marandu…
+    .title = Henyhẽhína apopyvusúpe marandu…
 third-party-button-reload = Emyanyhẽjey apopyvusu marandu ndive
     .title = Emyanyhẽjey apopyvusu marandu ndive
 third-party-button-open =
     .title = Embojuruja moñe’ẽasa marandurendápe…
+third-party-button-to-block =
+    .title = Ejoko ko ta’ãha
+    .aria-label = Ejoko ko ta’ãha
+third-party-button-to-unblock =
+    .title = Ko’ág̃a ojejoko. Eikutu embojuruja hag̃ua.
+    .aria-label = Ko’ág̃a ojejoko. Eikutu embojuruja hag̃ua.
+third-party-button-to-unblock-disabled =
+    .title =
+        Ko’ag̃aite ojejokohína, jepémo pe tysýi jejokoha ndaijurujái ko tembiapo
+        { -brand-short-name }-pe g̃uarã. Eikutu embojuruja hag̃ua.
+    .aria-label =
+        Ko’ag̃aite ojejokohína, jepémo pe tysýi jejokoha ndaijurujái ko tembiapo
+        { -brand-short-name }-pe g̃uarã. Eikutu embojuruja hag̃ua.
 third-party-button-expand =
     .title = Ehechaukapaite marandu
 third-party-button-collapse =
     .title = Emomichĩmbaite marandu
+third-party-blocking-requires-restart = Ejoko hag̃ua mbohapyháva ra’ãha, { -brand-short-name } oñepyrũjeyva’erã.
+third-party-should-restart-title = Emoñepyrũjey { -brand-short-name }
+third-party-restart-now = Emoñepyrũjey ko’ág̃a
+third-party-restart-later = Emoñepyrũjey ag̃ave
+
+third-party-blocked-by-builtin =
+    .title = Ojokopyre { -brand-short-name }
+    .alt = Ojokopyre { -brand-short-name }

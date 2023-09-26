@@ -3,7 +3,7 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 text-action-undo =
-    .label = Razveljavi …
+    .label = Razveljavi
     .accesskey = Z
 
 text-action-undo-shortcut =
@@ -34,6 +34,10 @@ text-action-paste =
     .label = Prilepi
     .accesskey = P
 
+text-action-paste-no-formatting =
+    .label = Prilepi brez oblikovanja
+    .accesskey = n
+
 text-action-paste-shortcut =
     .key = V
 
@@ -50,3 +54,26 @@ text-action-select-all-shortcut =
 
 text-action-spell-no-suggestions =
     .label = Ni predlogov črkovanja
+
+text-action-spell-add-to-dictionary =
+    .label = Dodaj v slovar
+    .accesskey = s
+
+text-action-spell-undo-add-to-dictionary =
+    .label = Razveljavi dodajanje v slovar
+    .accesskey = n
+
+text-action-spell-check-toggle =
+    .label = Preverjaj črkovanje
+    .accesskey = r
+
+text-action-spell-add-dictionaries =
+    .label = Dodaj slovarje …
+    .accesskey = a
+
+text-action-spell-dictionaries =
+    .label = Jeziki
+    .accesskey = J
+
+text-action-search-text-box-clear =
+    .title = Počisti

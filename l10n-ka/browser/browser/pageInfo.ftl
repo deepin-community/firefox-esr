@@ -65,6 +65,9 @@ media-dimension =
     .value = ზომები:
 media-long-desc =
     .value = ვრცელი აღწერა:
+media-select-all =
+    .label = ყველას მონიშვნა
+    .accesskey = ყ
 media-save-as =
     .label = შენახვა როგორც…
     .accesskey = რ
@@ -160,7 +163,7 @@ page-info-security-no-owner =
     .value = ვებსაიტი მფლობელის შესახებ ინფორმაციას არ იძლევა.
 media-select-folder = აირჩიეთ საქაღალდე სურათის შესანახად
 media-unknown-not-cached =
-    .value = უცნობია (არაბუფერირებულია)
+    .value = უცნობია (მოუმარაგებელია)
 permissions-use-default =
     .label = ნაგულისხმევის მითითება
 security-no-visits = არა
@@ -239,6 +242,9 @@ media-dimensions =
 # Variables:
 #   $size (number) - The size of the media file in kilobytes
 media-file-size = { $size } კბ
+
+## Variables:
+##   $website (string) — The url of the website pageInfo is getting info for
 
 # This string is used to display the website name next to the
 # "Block Images" checkbox in the media tab

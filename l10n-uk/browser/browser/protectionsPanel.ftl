@@ -63,7 +63,6 @@ protections-panel-not-found-label = Не виявлено
 ##
 
 protections-panel-settings-label = Налаштування захисту
-# This should match the "appmenuitem-protection-dashboard-title" string in browser/appmenu.ftl.
 protections-panel-protectionsdashboard-label = Панель стану захисту
 
 ## In the Site Not Working? view, we suggest turning off protections if
@@ -78,6 +77,7 @@ protections-panel-site-not-working-view-issue-list-forms = Формами
 protections-panel-site-not-working-view-issue-list-payments = Платежами
 protections-panel-site-not-working-view-issue-list-comments = Коментарями
 protections-panel-site-not-working-view-issue-list-videos = Відео
+protections-panel-site-not-working-view-issue-list-fonts = Шрифти
 
 protections-panel-site-not-working-view-send-report = Надіслати звіт
 
@@ -101,13 +101,33 @@ protections-panel-content-blocking-manage-settings =
 protections-panel-content-blocking-breakage-report-view =
     .title = Повідомити про пошкоджений сайт
 protections-panel-content-blocking-breakage-report-view-description = Блокування певних елементів стеження може призвести до проблем з деякими вебсайтами. Звіт про такі проблеми допомагає поліпшувати роботу { -brand-short-name }. При надсиланні цього звіту в Mozilla відправиться URL-адреса з інформацією про налаштування вашого браузера. <label data-l10n-name="learn-more">Докладніше</label>
+protections-panel-content-blocking-breakage-report-view-description2 = Блокування певних елементів стеження може призвести до проблем з деякими вебсайтами. Звіт про такі проблеми допомагає поліпшувати роботу { -brand-short-name }. При надсиланні цього звіту в { -vendor-short-name } відправиться URL-адреса з інформацією про налаштування вашого браузера.
 protections-panel-content-blocking-breakage-report-view-collection-url = URL
 protections-panel-content-blocking-breakage-report-view-collection-url-label =
     .aria-label = URL
-protections-panel-content-blocking-breakage-report-view-collection-comments = Необов’язково: Опишіть проблему
+protections-panel-content-blocking-breakage-report-view-collection-comments = Необов'язково: Опишіть проблему
 protections-panel-content-blocking-breakage-report-view-collection-comments-label =
-    .aria-label = Необов’язково: Опишіть проблему
+    .aria-label = Необов'язково: Опишіть проблему
 protections-panel-content-blocking-breakage-report-view-cancel =
     .label = Скасувати
 protections-panel-content-blocking-breakage-report-view-send-report =
     .label = Надіслати звіт
+
+# Cookie Banner Handling
+
+protections-panel-cookie-banner-handling-header = Зменшення кількості банерів кук
+protections-panel-cookie-banner-handling-enabled = Увімкнено для цього сайту
+protections-panel-cookie-banner-handling-disabled = Вимкнено для цього сайту
+protections-panel-cookie-banner-handling-undetected = Сайт наразі не підтримується
+
+protections-panel-cookie-banner-view-title =
+    .title = Зменшення кількості банерів кук
+# Variables
+#  $host (String): the hostname of the site that is being displayed.
+protections-panel-cookie-banner-view-turn-off-for-site = Вимкнути зменшення кількості банерів кук для { $host }?
+protections-panel-cookie-banner-view-turn-on-for-site = Увімкнути зменшення кількості банерів кук для цього сайту?
+protections-panel-cookie-banner-view-cookie-clear-warning = { -brand-short-name } очистить куки цього сайту та оновить сторінку. Очищення всіх кук може призвести до виходу з облікових записів або спорожнення кошика для покупок.
+protections-panel-cookie-banner-view-turn-on-description = { -brand-short-name } намагається автоматично відхиляти всі запити кук на підтримуваних сайтах.
+protections-panel-cookie-banner-view-cancel = Скасувати
+protections-panel-cookie-banner-view-turn-off = Вимкнути
+protections-panel-cookie-banner-view-turn-on = Увімкнути

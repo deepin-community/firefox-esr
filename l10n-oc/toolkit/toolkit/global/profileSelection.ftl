@@ -23,6 +23,8 @@ profile-selection-delete-button =
     .label = Suprimir lo perfil…
     .accesskey = S
 
+profile-selection-conflict-message = Una autra còpia de { -brand-product-name } a realizat de modificacions als perfils. Deuriatz tornar aviar { -brand-short-name } abans de realizar mai de modificacions.
+
 ## Messages used in the profile manager
 
 profile-manager-description = { -brand-short-name } garda las entresenhas que concernisson vòstres paramètres personals e preferéncias dins vòstre perfil.

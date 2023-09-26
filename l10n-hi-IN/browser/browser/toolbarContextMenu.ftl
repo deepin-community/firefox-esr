@@ -35,15 +35,12 @@ toolbar-context-menu-report-extension =
     .label = एक्सटेंशन के बारे में रिपोर्ट करें
     .accesskey = o
 
-# Can appear on the same context menu as menubarCmd ("Menu Bar") and
-# personalbarCmd ("Bookmarks Toolbar"), so they should have different
-# access keys.
+# Can appear on the same context menu as toolbar-context-menu-menu-bar-cmd
+# ("Menu Bar") and personalbarCmd ("Bookmarks Toolbar"), so they should
+# have different access keys.
 toolbar-context-menu-pin-to-overflow-menu =
     .label = अतिप्रवाह मेनू पर पिन करें
     .accesskey = P
-toolbar-context-menu-auto-hide-downloads-button =
-    .label = उपकरण पट्टी में स्वतः-छिपाएं
-    .accesskey = A
 toolbar-context-menu-remove-from-toolbar =
     .label = औजारपट्टी से मिटाएँ
     .accesskey = R
@@ -51,3 +48,20 @@ toolbar-context-menu-view-customize-toolbar =
     .label = मनपसंद बनाएँ…
     .accesskey = C
 
+toolbar-context-menu-bookmarks-toolbar-always-show-2 =
+    .label = हमेशा दिखाएं
+    .accesskey = A
+toolbar-context-menu-bookmarks-toolbar-never-show-2 =
+    .label = कभी न दिखाएं
+    .accesskey = N
+toolbar-context-menu-bookmarks-toolbar-on-new-tab-2 =
+    .label = केवल नए टैब पर दिखाएं
+    .accesskey = O
+
+toolbar-context-menu-bookmarks-show-other-bookmarks =
+    .label = अन्य बुकमार्क दिखाएं
+    .accesskey = h
+
+toolbar-context-menu-menu-bar-cmd =
+    .toolbarname = मेनू पट्टी
+    .accesskey = M

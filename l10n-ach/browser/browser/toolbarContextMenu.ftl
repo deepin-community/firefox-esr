@@ -28,9 +28,6 @@ toolbar-context-menu-manage-extension =
 toolbar-context-menu-pin-to-overflow-menu =
     .label = Mwon ii Jami ayera ma okane
     .accesskey = M
-toolbar-context-menu-auto-hide-downloads-button =
-    .label = Kan pire kene i Gitic
-    .accesskey = K
 toolbar-context-menu-remove-from-toolbar =
     .label = Kwany ki bot gintic
     .accesskey = K
@@ -38,3 +35,6 @@ toolbar-context-menu-view-customize-toolbar =
     .label = Yiki…
     .accesskey = Y
 
+toolbar-context-menu-menu-bar-cmd =
+    .toolbarname = Lanyut nying gin ayera
+    .accesskey = L

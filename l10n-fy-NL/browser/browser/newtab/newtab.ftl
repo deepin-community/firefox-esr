@@ -8,10 +8,6 @@
 newtab-page-title = Nij ljepblêd
 newtab-settings-button =
     .title = Jo side foar nije ljepblêden oanpasse
-
-newtab-personalize-button-label = Personalisearje
-    .title = Nij ljepblêd personalisearje
-    .aria-label = Nij ljepblêd personalisearje
 newtab-personalize-icon-label =
     .title = Nij ljepblêd personalisearje
     .aria-label = Nij ljepblêd personalisearje
@@ -25,14 +21,12 @@ newtab-search-box-search-button =
     .title = Sykje
     .aria-label = Sykje
 
-newtab-search-box-search-the-web-text = Sykje op it web
-
-# Variables
-#  $engine (String): the name of the user's default search engine
+# Variables:
+#   $engine (string) - The name of the user's default search engine
 newtab-search-box-handoff-text = Mei { $engine } sykje of fier adres yn
 newtab-search-box-handoff-text-no-engine = Fier sykterm of adres yn
-# Variables
-#  $engine (String): the name of the user's default search engine
+# Variables:
+#   $engine (string) - The name of the user's default search engine
 newtab-search-box-handoff-input =
     .placeholder = Mei { $engine } sykje of fier adres yn
     .title = Mei { $engine } sykje of fier adres yn
@@ -42,11 +36,7 @@ newtab-search-box-handoff-input-no-engine =
     .title = Fier sykterm of adres yn
     .aria-label = Fier sykterm of adres yn
 
-newtab-search-box-search-the-web-input =
-    .placeholder = Sykje op it web
-    .title = Sykje op it web
-    .aria-label = Sykje op it web
-
+newtab-search-box-text = Sykje op it web
 newtab-search-box-input =
     .placeholder = Sykje op it web
     .aria-label = Sykje op it web
@@ -54,7 +44,6 @@ newtab-search-box-input =
 ## Top Sites - General form dialog.
 
 newtab-topsites-add-search-engine-header = Sykmasine tafoegje
-newtab-topsites-add-topsites-header = Nije topwebsite
 newtab-topsites-add-shortcut-header = Nije fluchkeppeling
 newtab-topsites-edit-topsites-header = Topwebsite tafoegje
 newtab-topsites-edit-shortcut-header = Fluchkeppeling bewurkje
@@ -103,7 +92,7 @@ newtab-dismiss-button-tooltip =
 
 # This tooltip is for the context menu of Pocket cards or Topsites
 # Variables:
-#  $title (String): The label or hostname of the site. This is for screen readers when the context menu button is focused/active.
+#   $title (string) - The label or hostname of the site. This is for screen readers when the context menu button is focused/active.
 newtab-menu-content-tooltip =
     .title = Menu iepenje
     .aria-label = Kontekstmenu foar { $title } iepenje
@@ -136,7 +125,7 @@ newtab-privacy-modal-paragraph-2 =
     goed trochljochte ynhâld fan selektearre sponsors. Wês gerêst, <strong>jo navigaasjegegevens
     ferlitte nea jo persoanlike eksimplaar fan { -brand-product-name }</strong> – wy krije se net te sjen,
     en ús sponsors ek net.
-newtab-privacy-modal-link = Untdek hoe't privacy wurket op it nije ljepblêd
+newtab-privacy-modal-link = Untdek hoe’t privacy wurket op it nije ljepblêd
 
 ##
 
@@ -176,13 +165,19 @@ newtab-label-download = Download
 
 # This string is used in the story cards to indicate sponsored content
 # Variables:
-#  $sponsorOrSource (String): This is the name of a company or their domain
+#   $sponsorOrSource (string) - The name of a company or their domain
 newtab-label-sponsored = { $sponsorOrSource } · Sponsore
 
 # This string is used at the bottom of story cards to indicate sponsored content
 # Variables:
-#  $sponsor (String): This is the name of a sponsor
+#   $sponsor (string) - The name of a sponsor
 newtab-label-sponsored-by = Sponsore troch { $sponsor }
+
+# This string is used under the image of story cards to indicate source and time to read
+# Variables:
+#   $source (string) - The name of a company or their domain
+#   $timeToRead (number) - The estimated number of minutes to read this story
+newtab-label-source-read-time = { $source } · { $timeToRead } min.
 
 ## Section Menu: These strings are displayed in the section context menu and are
 ## meant as a call to action for the given section.
@@ -208,21 +203,19 @@ newtab-section-expand-section-label =
 ## Section Headers.
 
 newtab-section-header-topsites = Topwebsites
-newtab-section-header-highlights = Hichtepunten
 newtab-section-header-recent-activity = Resinte aktiviteit
 # Variables:
-#  $provider (String): Name of the corresponding content provider.
+#   $provider (string) - Name of the corresponding content provider.
 newtab-section-header-pocket = Oanrekommandearre troch { $provider }
 
 ## Empty Section States: These show when there are no more items in a section. Ex. When there are no more Pocket story recommendations, in the space where there would have been stories, this is shown instead.
 
-newtab-empty-section-highlights = Start mei sneupen en wy toane jo guon moaie artikelen, fideo's en oare siden dy't jo resint besocht hawwe of in blêdwizer fan makke hawwe.
+newtab-empty-section-highlights = Start mei sneupen en wy toane jo guon moaie artikelen, fideo’s en oare siden dy’t jo resint besocht hawwe of in blêdwizer fan makke hawwe.
 
 # Ex. When there are no more Pocket story recommendations, in the space where there would have been stories, this is shown instead.
 # Variables:
-#  $provider (String): Name of the content provider for this section, e.g "Pocket".
+#   $provider (string) - Name of the content provider for this section, e.g "Pocket".
 newtab-empty-section-topstories = Jo binne by. Kom letter werom foar mear ferhalen fan { $provider }. Kin jo net wachtsje? Selektearje in populêr ûnderwerp om mear ferhalen fan it ynternet te finen.
-
 
 ## Empty Section (Content Discovery Experience). These show when there are no more stories or when some stories fail to load.
 
@@ -237,10 +230,24 @@ newtab-discovery-empty-section-topstories-timed-out = Oeps! Wy hiene dizze seksj
 
 # This is shown at the bottom of the trending stories section and precedes a list of links to popular topics.
 newtab-pocket-read-more = Populêre ûnderwerpen:
+newtab-pocket-new-topics-title = Wolle jo noch mear ferhalen? Besjoch dizze populêre ûnderwerpen fan { -pocket-brand-name }
 newtab-pocket-more-recommendations = Mear oanrekommandaasjes
 newtab-pocket-learn-more = Mear ynfo
 newtab-pocket-cta-button = { -pocket-brand-name } brûke
-newtab-pocket-cta-text = Bewarje de ferhalen dy't jo ynteressant fine yn { -pocket-brand-name }, en stimulearje jo tinzen mei boeiende lêsstof.
+newtab-pocket-cta-text = Bewarje de ferhalen dy’t jo ynteressant fine yn { -pocket-brand-name }, en stimulearje jo tinzen mei boeiende lêsstof.
+newtab-pocket-pocket-firefox-family = { -pocket-brand-name } is ûnderdiel fan de { -brand-product-name }-famylje
+
+## Pocket Final Card Section.
+## This is for the final card in the Pocket grid.
+
+# A save to Pocket button that shows over the card thumbnail on hover.
+newtab-pocket-save = Bewarje
+newtab-pocket-saved = Bewarre
+
+## Pocket content onboarding experience dialog and modal for new users seeing the Pocket section for the first time, shown as the first item in the Pocket section.
+
+newtab-pocket-onboarding-discover = Untdek it bêste fan ynternet
+newtab-pocket-onboarding-cta = { -pocket-brand-name } ferkent in breed skala oan publikaasjes om de meast ynformative, ynspirearjende en betroubere ynhâld streekrjocht nei jo { -brand-product-name }-browser te bringen.
 
 ## Error Fallback Content.
 ## This message and suggested action link are shown in each section of UI that fails to render.
@@ -252,6 +259,8 @@ newtab-error-fallback-refresh-link = Fernij de side om it opnij te probearjen.
 
 newtab-custom-shortcuts-title = Fluchkeppelingen
 newtab-custom-shortcuts-subtitle = Bewarre of besochte websites
+# Variables
+#   $num (number) - Number of rows to display
 newtab-custom-row-selector =
     { $num ->
         [one] { $num } rige
@@ -261,14 +270,8 @@ newtab-custom-sponsored-sites = Sponsore fluchkeppelingen
 newtab-custom-pocket-title = Oanrekommandearre troch { -pocket-brand-name }
 newtab-custom-pocket-subtitle = Utsûnderlike ynhâld, gearstald troch { -pocket-brand-name }, ûnderdiel fan de { -brand-product-name }-famylje
 newtab-custom-pocket-sponsored = Sponsore ferhalen
+newtab-custom-pocket-show-recent-saves = Koartlyn bewarre items toane
 newtab-custom-recent-title = Resinte aktiviteit
 newtab-custom-recent-subtitle = In seleksje fan resinte websites en ynhâld
 newtab-custom-close-button = Slute
-
-# For the "Snippets" feature traditionally on about:home.
-# Alternative translation options: "Small Note" or something that
-# expresses the idea of "a small message, shortened from something else,
-# and non-essential but also not entirely trivial and useless.
-newtab-custom-snippets-title = Snippets
-newtab-custom-snippets-subtitle = Tips en nijs fan { -vendor-short-name } en { -brand-product-name }
 newtab-custom-settings = Mear ynstellingen beheare

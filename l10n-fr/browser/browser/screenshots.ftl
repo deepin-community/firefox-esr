@@ -2,13 +2,12 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-screenshots-context-menu = Effectuer une capture d’écran
-
-screenshots-my-shots-button = Mes captures d’écran
-
 screenshot-toolbarbutton =
     .label = Capture d’écran
     .tooltiptext = Prendre une capture d’écran
+
+screenshot-shortcut =
+    .key = S
 
 screenshots-instructions = Sélectionnez une zone de la page par cliquer-glisser ou en cliquant sur l’élément à sélectionner. Appuyez sur Échap pour annuler.
 screenshots-cancel-button = Annuler
@@ -18,6 +17,14 @@ screenshots-download-button = Télécharger
 screenshots-download-button-tooltip = Télécharger la capture d’écran
 screenshots-copy-button = Copier
 screenshots-copy-button-tooltip = Copier la capture d’écran dans le presse-papiers
+screenshots-download-button-title =
+    .title = Télécharger la capture d’écran
+screenshots-copy-button-title =
+    .title = Copier la capture d’écran dans le presse-papiers
+screenshots-cancel-button-title =
+    .title = Annuler
+screenshots-retry-button-title =
+    .title = Réessayer la capture d’écran
 
 screenshots-meta-key =
     { PLATFORM() ->
@@ -41,8 +48,6 @@ screenshots-login-error-details = Nous n’avons pas pu enregistrer votre captur
 screenshots-unshootable-page-error-title = Impossible d’effectuer une capture de cette page.
 screenshots-unshootable-page-error-details = Impossible d’effectuer une capture d’écran, car cette page web n’est pas standard.
 
-screenshots-self-screenshot-error-title = Vous ne pouvez pas effectuer une capture d’écran d’une page { -screenshots-brand-name }.
-
 screenshots-empty-selection-error-title = La zone sélectionnée est trop petite
 
 screenshots-private-window-error-title = { -screenshots-brand-name } est désactivé en mode de navigation privée
@@ -50,3 +55,6 @@ screenshots-private-window-error-details = Désolé pour la gêne occasionnée. 
 
 screenshots-generic-error-title = { -screenshots-brand-name } semble avoir un problème.
 screenshots-generic-error-details = Un problème non identifié est survenu. Vous pouvez réessayer ou effectuer une capture d’écran d’une autre page.
+
+screenshots-too-large-error-title = Votre capture d’écran a été rognée car elle était trop grande
+screenshots-too-large-error-details = Essayez de sélectionner une zone dont le plus grand côté contient moins de 32 700 pixels ou dont la surface n’excède pas 124 900 000 pixels.

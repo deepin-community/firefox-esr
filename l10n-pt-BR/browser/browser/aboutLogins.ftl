@@ -5,20 +5,15 @@
 
 about-logins-page-title = Contas e senhas
 
-# "Google Play" and "App Store" are both branding and should not be translated
-
-login-app-promo-title = Tenha suas senhas em qualquer lugar
-login-app-promo-subtitle = Instale o aplicativo gratuito { -lockwise-brand-name }
-login-app-promo-android =
-    .alt = Instale a partir do Google Play
-login-app-promo-apple =
-    .alt = Baixe no App Store
-login-filter =
+about-logins-login-filter =
     .placeholder = Pesquisar contas
-create-login-button = Criar nova conta
+    .key = F
+
+create-new-login-button =
+    .title = Criar nova conta
+
 fxaccounts-sign-in-text = Tenha suas senhas em outros dispositivos
-fxaccounts-sign-in-button = Entrar no { -sync-brand-short-name }
-fxaccounts-sign-in-sync-button = Entrar no Sync
+fxaccounts-sign-in-sync-button = Entrar na conta para sincronizar
 fxaccounts-avatar-button =
     .title = Gerenciar conta
 
@@ -37,17 +32,25 @@ menu-menuitem-preferences =
        *[other] Preferências
     }
 about-logins-menu-menuitem-help = Ajuda
-menu-menuitem-android-app = { -lockwise-brand-short-name } para Android
-menu-menuitem-iphone-app = { -lockwise-brand-short-name } para iPhone e iPad
 
 ## Login List
 
 login-list =
     .aria-label = Contas que combinar com a consulta
+# Variables
+#   $count (number) - Number of logins
 login-list-count =
     { $count ->
         [one] { $count } conta
        *[other] { $count } contas
+    }
+# Variables
+#   $count (number) - Number of filtered logins
+#   $total (number) - Total number of logins
+login-list-filtered-count =
+    { $total ->
+        [one] { $count } de { $total } conta
+       *[other] { $count } de { $total } contas
     }
 login-list-sort-label-text = Ordenar por:
 login-list-name-option = Nome (A-Z)
@@ -77,17 +80,13 @@ about-logins-list-section-week = Últimos 7 dias
 
 ## Introduction screen
 
-login-intro-heading = Procurando suas contas salvas? Configure o { -sync-brand-short-name }.
 about-logins-login-intro-heading-logged-out2 = Procurando suas contas salvas? Ative a sincronização ou importe.
 about-logins-login-intro-heading-logged-in = Nenhuma conta sincronizada foi encontrada.
 login-intro-description = Se você salvou suas contas no { -brand-product-name } em outro dispositivo, veja como tê-las aqui:
-login-intro-instruction-fxa = Crie ou entre na sua { -fxaccount-brand-name } no dispositivo onde suas contas estão salvas
-login-intro-instruction-fxa-settings = Selecione a opção 'Contas de acesso' nas configurações do { -sync-brand-short-name }
-about-logins-intro-instruction-help = Caso precise de mais ajuda, visite o <a data-l10n-name="help-link">suporte do { -lockwise-brand-short-name }</a>
 login-intro-instructions-fxa = Crie ou entre na sua { -fxaccount-brand-name } no dispositivo onde suas contas estão salvas.
-login-intro-instructions-fxa-settings = Vá em Configurações > Sync > Ativar sincronização… Selecione a opção de contas e senhas.
-login-intro-instructions-fxa-help = Visite o <a data-l10n-name="help-link">suporte do { -lockwise-brand-short-name }</a> para obter mais ajuda.
-about-logins-intro-import = Se suas contas estão salvas em outro navegador, você pode <a data-l10n-name="import-link">importar para o { -lockwise-brand-short-name }</a>
+login-intro-instructions-fxa-settings = Vá em Configurações > Sincronização > Ativar sincronização… Selecione a opção de contas e senhas.
+login-intro-instructions-fxa-passwords-help = Visite o <a data-l10n-name="passwords-help-link">suporte a senhas</a> para obter mais ajuda.
+about-logins-intro-browser-only-import = Se suas contas estão salvas em outro navegador, você pode <a data-l10n-name="import-link">importar no { -brand-product-name }</a>
 about-logins-intro-import2 = Se suas contas foram salvas fora do { -brand-product-name }, você pode <a data-l10n-name="import-browser-link">importar de outro navegador</a> ou <a data-l10n-name="import-file-link">de um arquivo</a>
 
 ## Login
@@ -112,9 +111,17 @@ login-item-copied-password-button-text = Copiado!
 login-item-save-changes-button = Salvar alterações
 login-item-save-new-button = Salvar
 login-item-cancel-button = Cancelar
-login-item-time-changed = Última modificação: { DATETIME($timeChanged, day: "numeric", month: "long", year: "numeric") }
-login-item-time-created = Criado em: { DATETIME($timeCreated, day: "numeric", month: "long", year: "numeric") }
-login-item-time-used = Último uso: { DATETIME($timeUsed, day: "numeric", month: "long", year: "numeric") }
+
+## The date is displayed in a timeline showing the password evolution.
+## A label is displayed under the date to describe the type of change.
+## (e.g. updated, created, etc.)
+
+# Variables
+#   $datetime (date) - Event date
+login-item-timeline-point-date = { DATETIME($datetime, day: "numeric", month: "short", year: "numeric") }
+login-item-timeline-action-created = Criação
+login-item-timeline-action-updated = Atualizada
+login-item-timeline-action-used = Usada
 
 ## OS Authentication dialog
 
@@ -129,20 +136,19 @@ about-logins-edit-login-os-auth-dialog-message-win = Para editar a conta, insira
 # This message can be seen when attempting to edit a login in about:logins
 # On MacOS, only provide the reason that account verification is needed. Do not put a complete sentence here.
 about-logins-edit-login-os-auth-dialog-message-macosx = editar a conta salva
+
 # This message can be seen when attempting to reveal a password in about:logins on Windows.
 about-logins-reveal-password-os-auth-dialog-message-win = Para ver a senha, insira suas credenciais de acesso ao Windows. Isso ajuda a proteger a segurança de suas contas.
 # This message can be seen when attempting to reveal a password in about:logins
 # On MacOS, only provide the reason that account verification is needed. Do not put a complete sentence here.
 about-logins-reveal-password-os-auth-dialog-message-macosx = revelar a senha salva
+
 # This message can be seen when attempting to copy a password in about:logins on Windows.
 about-logins-copy-password-os-auth-dialog-message-win = Para copiar a senha, insira suas credenciais de acesso ao Windows. Isso ajuda a proteger a segurança de suas contas.
 # This message can be seen when attempting to copy a password in about:logins
 # On MacOS, only provide the reason that account verification is needed. Do not put a complete sentence here.
 about-logins-copy-password-os-auth-dialog-message-macosx = copiar a senha salva
 
-## Master Password notification
-
-master-password-notification-message = Digite sua senha principal para ver contas e senhas salvas
 # This message can be seen when attempting to export a password in about:logins on Windows.
 about-logins-export-password-os-auth-dialog-message-win = Para exportar suas contas, insira suas credenciais de acesso ao Windows. Isso ajuda a proteger a segurança de suas contas.
 # This message can be seen when attempting to export a password in about:logins
@@ -156,44 +162,33 @@ master-password-reload-button =
     .label = Entrar
     .accesskey = E
 
-## Password Sync notification
-
-enable-password-sync-notification-message =
-    { PLATFORM() ->
-        [windows] Quer ter suas contas em todo lugar onde usa o { -brand-product-name }? Vá nas opções do { -sync-brand-short-name } e selecione a opção Contas de acesso.
-       *[other] Quer ter suas contas em todo lugar onde usa o { -brand-product-name }? Vá nas preferências do { -sync-brand-short-name } e selecione a opção Contas de acesso.
-    }
-enable-password-sync-preferences-button =
-    .label =
-        { PLATFORM() ->
-            [windows] Visite a opções do { -sync-brand-short-name }
-           *[other] Visite as preferências do { -sync-brand-short-name }
-        }
-    .accesskey = V
-about-logins-enable-password-sync-dont-ask-again-button =
-    .label = Não perguntar novamente
-    .accesskey = N
-
 ## Dialogs
 
 confirmation-dialog-cancel-button = Cancelar
 confirmation-dialog-dismiss-button =
     .title = Cancelar
+
 about-logins-confirm-remove-dialog-title = Remover esta conta?
 confirm-delete-dialog-message = Esta ação não pode ser desfeita.
 about-logins-confirm-remove-dialog-confirm-button = Remover
+
+## Variables
+##   $count (number) - Number of items
+
 about-logins-confirm-remove-all-dialog-confirm-button-label =
     { $count ->
         [1] Remover
         [one] Remover
        *[other] Remover tudo
     }
+
 about-logins-confirm-remove-all-dialog-checkbox-label =
     { $count ->
         [1] Sim, remover esta conta
         [one] Sim, remover esta conta
        *[other] Sim, remover estas contas
     }
+
 about-logins-confirm-remove-all-dialog-title =
     { $count ->
         [one] Remover { $count } conta?
@@ -205,6 +200,7 @@ about-logins-confirm-remove-all-dialog-message =
         [one] Será removida a conta que você salvou no { -brand-short-name } e quaisquer alertas de vazamento que aparecem aqui. Você não pode desfazer esta ação.
        *[other] Serão removidas as contas que você salvou no { -brand-short-name } e quaisquer alertas de vazamento que aparecem aqui. Você não pode desfazer esta ação.
     }
+
 about-logins-confirm-remove-all-sync-dialog-title =
     { $count ->
         [one] Remover { $count } conta de todos os dispositivos?
@@ -216,11 +212,16 @@ about-logins-confirm-remove-all-sync-dialog-message =
         [one] Será removida a conta que você salvou no { -brand-short-name } em todos os dispositivos sincronizados com sua { -fxaccount-brand-name }. Também serão removidos alertas de vazamento que aparecem aqui. Você não pode desfazer esta ação.
        *[other] Serão removidas todos as contas que você salvou no { -brand-short-name } em todos os dispositivos sincronizados com sua { -fxaccount-brand-name }. Também serão removidos alertas de vazamento que aparecem aqui. Você não pode desfazer esta ação.
     }
+
+##
+
 about-logins-confirm-export-dialog-title = Exportar contas e senhas
 about-logins-confirm-export-dialog-message = Suas senhas serão salvas em texto legível (exemplo, Senh@Ruim123), qualquer pessoa que consiga abrir o arquivo exportado poderá ver.
 about-logins-confirm-export-dialog-confirm-button = Exportar…
+
 about-logins-alert-import-title = Importação concluída
 about-logins-alert-import-message = Ver resumo detalhado da importação
+
 confirm-discard-changes-dialog-title = Descartar alterações não salvas?
 confirm-discard-changes-dialog-message = Todas as alterações não salvas serão perdidas.
 confirm-discard-changes-dialog-confirm-button = Descartar
@@ -233,7 +234,6 @@ about-logins-breach-alert-date = Este vazamento ocorreu em { DATETIME($date, day
 # Variables:
 #   $hostname (String) - The hostname of the website associated with the login, e.g. "example.com"
 about-logins-breach-alert-link = Ir para { $hostname }
-about-logins-breach-alert-learn-more-link = Saiba mais
 
 ## Vulnerable Password notification
 
@@ -251,6 +251,7 @@ about-logins-vulnerable-alert-learn-more-link = Saiba mais
 # Variables:
 #   $loginTitle (String) - The title of the website associated with the login.
 about-logins-error-message-duplicate-login-with-link = Já existe um item de { $loginTitle } com este nome de usuário. <a data-l10n-name="duplicate-link">Ir para o item existente?</a>
+
 # This is a generic error message.
 about-logins-error-message-default = Ocorreu um erro ao tentar salvar esta senha.
 
@@ -300,11 +301,13 @@ about-logins-import-dialog-items-added =
         [one] <span>Nova conta adicionada:</span> <span data-l10n-name="count">{ $count }</span>
        *[other] <span>Novas contas adicionadas:</span> <span data-l10n-name="count">{ $count }</span>
     }
+
 about-logins-import-dialog-items-modified =
     { $count ->
         [one] <span>Conta existente atualizada:</span> <span data-l10n-name="count">{ $count }</span>
        *[other] <span>Contas existentes atualizadas:</span> <span data-l10n-name="count">{ $count }</span>
     }
+
 about-logins-import-dialog-items-no-change =
     { $count ->
         [one] <span>Conta duplicada encontrada:</span> <span data-l10n-name="count">{ $count }</span> <span data-l10n-name="meta">(não importada)</span>
@@ -316,6 +319,7 @@ about-logins-import-dialog-items-error =
        *[other] <span>Erros:</span> <span data-l10n-name="count">{ $count }</span> <span data-l10n-name="meta">(não importados)</span>
     }
 about-logins-import-dialog-done = Concluído
+
 about-logins-import-dialog-error-title = Erro de importação
 about-logins-import-dialog-error-conflicting-values-title = Vários valores conflitantes para uma mesma conta
 about-logins-import-dialog-error-conflicting-values-description = Por exemplo, vários nomes de usuário, senhas, endereços, etc. para uma mesma conta.
@@ -329,8 +333,10 @@ about-logins-import-dialog-error-no-logins-imported = Nenhuma conta foi importad
 about-logins-import-dialog-error-learn-more = Saiba mais
 about-logins-import-dialog-error-try-import-again = Tentar importar novamente…
 about-logins-import-dialog-error-cancel = Cancelar
+
 about-logins-import-report-title = Resumo da importação
 about-logins-import-report-description = Contas e senhas importadas para o { -brand-short-name }.
+
 #
 # Variables:
 #  $number (number) - The number of the row

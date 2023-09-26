@@ -2,9 +2,9 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-translation-window =
+translation-window2 =
     .title = Eisgeachdan - Eadar-theangachadh
-    .style = width: 42em
+    .style = min-width: 42em
 
 translation-close-key =
     .key = w
@@ -34,10 +34,6 @@ translation-sites-button-remove =
 translation-sites-button-remove-all =
     .label = Thoir air falbh a h-uile làrach
     .accesskey = e
-
-translation-button-close =
-    .label = Dùin
-    .accesskey = D
 
 translation-dialog =
     .buttonlabelaccept = Dùin

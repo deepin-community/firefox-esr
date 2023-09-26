@@ -41,15 +41,6 @@ menu-quit =
 menu-quit-mac =
     .label = { -brand-shorter-name } səyyahını tərk et
 
-# This menu-quit-button string is only used on Linux.
-menu-quit-button =
-    .label = { menu-quit.label }
-
-# This menu-quit-button-win string is only used on Windows.
-menu-quit-button-win =
-    .label = { menu-quit.label }
-    .tooltip = { -brand-shorter-name } səyyahından çıx
-
 menu-about =
     .label = { -brand-shorter-name } Haqqında
     .accesskey = H
@@ -79,9 +70,6 @@ menu-file-open-location =
 menu-file-open-file =
     .label = Faylı aç…
     .accesskey = A
-menu-file-close =
-    .label = Qapat
-    .accesskey = Q
 menu-file-close-window =
     .label = Pəncərəni Qapat
     .accesskey = r
@@ -94,9 +82,6 @@ menu-file-email-link =
 menu-file-print-setup =
     .label = Səhifə nizamı…
     .accesskey = ı
-menu-file-print-preview =
-    .label = Çapa ön baxış
-    .accesskey = B
 menu-file-print =
     .label = Çap et…
     .accesskey = Ç
@@ -112,9 +97,6 @@ menu-file-go-offline =
 menu-edit =
     .label = Düzəlt
     .accesskey = D
-menu-edit-find-on =
-    .label = Bu Səhifədə Axtar…
-    .accesskey = S
 menu-edit-find-again =
     .label = Yenidən Tap
     .accesskey = Y
@@ -130,9 +112,6 @@ menu-view =
 menu-view-toolbars-menu =
     .label = Alət sətirləri
     .accesskey = A
-menu-view-customize-toolbar =
-    .label = Fərdiləşdir…
-    .accesskey = C
 menu-view-sidebar =
     .label = Kənar sətir
     .accesskey = K
@@ -166,9 +145,6 @@ menu-view-page-style-no-style =
 menu-view-page-basic-style =
     .label = Əsas Səhifə Stili
     .accesskey = t
-menu-view-charset =
-    .label = Mətn Kodlaması
-    .accesskey = K
 
 ## These should match what Safari and other Apple applications
 ## use on macOS.
@@ -182,6 +158,17 @@ menu-view-exit-full-screen =
 menu-view-full-screen =
     .label = Tam ekran
     .accesskey = T
+
+## These menu items may use the same accesskey.
+
+# This should match reader-view-enter-button in browser.ftl
+menu-view-enter-readerview =
+    .label = Oxuma Görüntüsünə daxil ol
+    .accesskey = R
+# This should match reader-view-close-button in browser.ftl
+menu-view-close-readerview =
+    .label = Oxuma Görüntüsünü qapat
+    .accesskey = R
 
 ##
 
@@ -217,12 +204,6 @@ menu-history-undo-window-menu =
 menu-bookmarks-menu =
     .label = Əlfəcinlər
     .accesskey = Ə
-menu-bookmarks-show-all =
-    .label = Bütün əlfəcinləri göstər
-menu-bookmark-this-page =
-    .label = Səhifəni əlfəcinlə
-menu-bookmark-edit =
-    .label = Bu əlfəcini düzəlt
 menu-bookmarks-all-tabs =
     .label = Bütün vərəqləri əlfəcinlə…
 menu-bookmarks-toolbar =
@@ -240,41 +221,18 @@ menu-tools =
 menu-tools-downloads =
     .label = Endirilənlər
     .accesskey = E
-menu-tools-addons =
-    .label = Əlavələr
-    .accesskey = Ə
-menu-tools-fxa-sign-in =
-    .label = { -brand-product-name } giriş…
-    .accesskey = g
-menu-tools-turn-on-sync =
-    .label = { -sync-brand-short-name } aktivləşdir…
-    .accesskey = v
 menu-tools-sync-now =
     .label = İndi Sinxronizə et
     .accesskey = S
 menu-tools-fxa-re-auth =
     .label = { -brand-product-name } ilə yenidən bağlan…
     .accesskey = y
-menu-tools-web-developer =
-    .label = Web Tərtibatçısı
-    .accesskey = W
 menu-tools-page-source =
     .label = Səhifə qaynağı
     .accesskey = a
 menu-tools-page-info =
     .label = Səhifə məlumatları
     .accesskey = S
-menu-preferences =
-    .label =
-        { PLATFORM() ->
-            [windows] Seçimlər
-           *[other] Seçimlər
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] S
-           *[other] i
-        }
 menu-tools-layout-debugger =
     .label = Düzüm Sazlayıcısı
     .accesskey = L
@@ -292,15 +250,6 @@ menu-window-bring-all-to-front =
 # NOTE: For Engineers, any additions or changes to Help menu strings should
 # also be reflected in the related strings in appmenu.ftl. Those strings, by
 # convention, will have the same ID as these, but prefixed with "app".
-# Example: appmenu-help-product
-#
-# These strings are duplicated to allow for different casing depending on
-# where the strings appear.
-
-
-# NOTE: For Engineers, any additions or changes to Help menu strings should
-# also be reflected in the related strings in appmenu.ftl. Those strings, by
-# convention, will have the same ID as these, but prefixed with "app".
 # Example: appmenu-get-help
 #
 # These strings are duplicated to allow for different casing depending on
@@ -309,32 +258,8 @@ menu-window-bring-all-to-front =
 menu-help =
     .label = Kömək
     .accesskey = K
-menu-help-product =
-    .label = { -brand-shorter-name } Kömək
-    .accesskey = K
-menu-help-show-tour =
-    .label = { -brand-shorter-name } Tur
-    .accesskey = T
-menu-help-import-from-another-browser =
-    .label = Başqa səyyahdan idxal et…
-    .accesskey = I
-menu-help-keyboard-shortcuts =
-    .label = Qısa Düymələr
-    .accesskey = Q
-menu-help-troubleshooting-info =
-    .label = Problemlərin aradan qaldırılması üzrə məlumatlar
-    .accesskey = P
 menu-help-report-site-issue =
     .label = Sayt Problemini Bildir…
-menu-help-feedback-page =
-    .label = Əks əlaqə göndər…
-    .accesskey = g
-menu-help-safe-mode-without-addons =
-    .label = Əlavələri deaktiv edərək Yenidən başla…
-    .accesskey = Y
-menu-help-safe-mode-with-addons =
-    .label = Əlavələri aktiv edərək Yenidən başla
-    .accesskey = Y
 # Label of the Help menu item. Either this or
 # menu-help-notdeceptive is shown.
 menu-help-report-deceptive-site =

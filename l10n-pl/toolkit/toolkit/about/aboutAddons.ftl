@@ -2,19 +2,22 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-addons-window =
-    .title = Dodatki
-
 addons-page-title = Dodatki
 
 search-header =
     .placeholder = Szukaj na stronie addons.mozilla.org
     .searchbuttonlabel = Szukaj
 
-search-header-shortcut =
-    .key = f
+## Variables
+##   $domain - Domain name where add-ons are available (e.g. addons.mozilla.org)
 
 list-empty-get-extensions-message = Znajdź rozszerzenia i motywy na stronie <a data-l10n-name="get-extensions">{ $domain }</a>
+
+list-empty-get-dictionaries-message = Znajdź słowniki na stronie <a data-l10n-name="get-extensions">{ $domain }</a>
+
+list-empty-get-language-packs-message = Znajdź pakiety językowe na stronie <a data-l10n-name="get-extensions">{ $domain }</a>
+
+##
 
 list-empty-installed =
     .value = Nie ma zainstalowanych dodatków tego typu
@@ -35,21 +38,9 @@ help-button = Wsparcie dla dodatków
 sidebar-help-button-title =
     .title = Wsparcie dla dodatków
 
-preferences =
-    { PLATFORM() ->
-        [windows] Opcje programu
-       *[other] Preferencje programu
-    }
-sidebar-preferences-button-title =
-    .title =
-        { PLATFORM() ->
-            [windows] Opcje programu
-           *[other] Preferencje programu
-        }
-
-addons-settings-button = Ustawienia programu
+addons-settings-button = Ustawienia { -brand-short-name(case: "gen") }
 sidebar-settings-button-title =
-    .title = Ustawienia programu
+    .title = Ustawienia { -brand-short-name(case: "gen") }
 
 show-unsigned-extensions-button =
     .label = Niektóre rozszerzenia nie mogły zostać zweryfikowane
@@ -57,48 +48,14 @@ show-unsigned-extensions-button =
 show-all-extensions-button =
     .label = Pokaż wszystkie rozszerzenia
 
-cmd-show-details =
-    .label = Wyświetl więcej informacji
-    .accesskey = W
-
-cmd-find-updates =
-    .label = Znajdź aktualizacje
-    .accesskey = n
-
-cmd-preferences =
-    .label =
-        { PLATFORM() ->
-            [windows] Opcje
-           *[other] Preferencje
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] O
-           *[other] P
-        }
-
-cmd-enable-theme =
-    .label = Używaj motywu
-    .accesskey = a
-
-cmd-disable-theme =
-    .label = Przestań używać motywu
-    .accesskey = a
-
-cmd-install-addon =
-    .label = Zainstaluj
-    .accesskey = Z
-
-cmd-contribute =
-    .label = Wspomóż
-    .accesskey = s
-    .tooltiptext = Wspomóż rozwój tego dodatku
-
 detail-version =
     .label = Wersja
 
 detail-last-updated =
     .label = Ostatnia aktualizacja
+
+addon-detail-description-expand = Więcej
+addon-detail-description-collapse = Mniej
 
 detail-contributions-description = Autor tego dodatku prosi o wsparcie niewielką kwotą jego dalszego rozwoju.
 
@@ -230,6 +187,13 @@ addon-category-available-updates-title =
 addon-category-recent-updates = Ostatnie aktualizacje
 addon-category-recent-updates-title =
     .title = Ostatnie aktualizacje
+addon-category-sitepermission = Uprawnienia witryn
+addon-category-sitepermission-title =
+    .title = Uprawnienia witryn
+# String displayed in about:addons in the Site Permissions section
+# Variables:
+#  $host (string): DNS host name for which the webextension enables permissions
+addon-sitepermission-host = Uprawnienia witryny { $host }
 
 ## These are global warnings
 
@@ -240,7 +204,6 @@ extensions-warning-check-compatibility-button = Włącz
 extensions-warning-update-security = Sprawdzanie bezpieczeństwa aktualizacji jest wyłączone. Aktualizacje mogą powodować zagrożenie.
 extensions-warning-update-security-button = Włącz
     .title = Włącz sprawdzanie bezpieczeństwa aktualizacji dodatków
-
 
 ## Strings connected to add-on updates
 
@@ -354,12 +317,13 @@ created-by-author = Autor: <a data-l10n-name="author">{ $author }</a>
 # Variables:
 #   $dailyUsers (number) - The number of daily users.
 user-count = Użytkownicy: { $dailyUsers }
-install-extension-button = Dodaj do programu { -brand-product-name }
+install-extension-button = Dodaj do { -brand-product-name(case: "gen") }
 install-theme-button = Zainstaluj motyw
 # The label of the button that appears after installing an add-on. Upon click,
 # the detailed add-on view is opened, from where the add-on can be managed.
 manage-addon-button = Zarządzaj
 find-more-addons = Znajdź więcej dodatków
+find-more-themes = Znajdź więcej motywów
 
 # This is a label for the button to open the "more options" menu, it is only
 # used for screen readers.
@@ -391,7 +355,7 @@ extension-enabled-heading = Włączone
 extension-disabled-heading = Wyłączone
 
 theme-enabled-heading = Włączone
-theme-disabled-heading = Wyłączone
+theme-disabled-heading2 = Zachowane motywy
 
 plugin-enabled-heading = Włączone
 plugin-disabled-heading = Wyłączone
@@ -402,7 +366,8 @@ dictionary-disabled-heading = Wyłączone
 locale-enabled-heading = Włączone
 locale-disabled-heading = Wyłączone
 
-ask-to-activate-button = Pytaj o aktywację
+sitepermission-enabled-heading = Włączone
+sitepermission-disabled-heading = Wyłączone
 
 always-activate-button = Zawsze aktywuj
 never-activate-button = Nigdy nie aktywuj
@@ -461,13 +426,15 @@ addon-detail-private-browsing-help = Zezwolenie spowoduje, że rozszerzenie będ
 addon-detail-private-browsing-allow = zezwalaj
 addon-detail-private-browsing-disallow = nie zezwalaj
 
+## "sites with restrictions" (internally called "quarantined") are special domains
+## where add-ons are normally blocked for security reasons.
+
 ## This is the tooltip text for the recommended badges for an extension in about:addons. The
 ## badge is a small icon displayed next to an extension when it is recommended on AMO.
 
 addon-badge-recommended2 =
     .title = { -brand-product-name } poleca wyłącznie rozszerzenia spełniające nasze standardy bezpieczeństwa i wydajności
     .aria-label = { addon-badge-recommended2.title }
-
 # We hard code "Mozilla" in the string below because the extensions are built
 # by Mozilla and we don't want forks to display "by Fork".
 addon-badge-line3 =
@@ -486,13 +453,14 @@ release-notes-loading = Wczytywanie…
 release-notes-error = Przepraszamy, podczas pobierania informacji o wydaniu wystąpił błąd.
 
 addon-permissions-empty = To rozszerzenie nie wymaga żadnych uprawnień
-
 addon-permissions-required = Uprawnienia wymagane do działania podstawowych funkcji:
 addon-permissions-optional = Opcjonalne uprawnienia do działania dodatkowych funkcji:
 addon-permissions-learnmore = Więcej informacji o uprawnieniach
 
 recommended-extensions-heading = Polecane rozszerzenia
 recommended-themes-heading = Polecane motywy
+
+addon-sitepermissions-required = Daje witrynie <span data-l10n-name="hostname">{ $hostname }</span> te możliwości:
 
 # A recommendation for the Firefox Color theme shown at the bottom of the theme
 # list view. The "Firefox Color" name itself should not be translated.
@@ -506,6 +474,7 @@ plugin-heading = Zarządzanie wtyczkami
 dictionary-heading = Zarządzanie słownikami
 locale-heading = Zarządzanie pakietami językowymi
 updates-heading = Zarządzanie aktualizacjami
+sitepermission-heading = Zarządzanie uprawnieniami witryn
 discover-heading = Dostosuj przeglądarkę { -brand-short-name }
 shortcuts-heading = Zarządzanie skrótami rozszerzeń
 
@@ -515,3 +484,30 @@ addons-heading-search-input =
 
 addon-page-options-button =
     .title = Narzędzia dla wszystkich dodatków
+
+## Detail notifications
+## Variables:
+##   $name (String): name of the add-on.
+
+## Detail notifications
+## Variables:
+##   $name (string) - Name of the add-on.
+
+# Variables:
+#   $version (String): application version.
+details-notification-incompatible = Dodatek „{ $name }” jest niezgodny z programem { -brand-short-name } { $version }.
+details-notification-incompatible-link = Więcej informacji
+
+details-notification-unsigned-and-disabled = Dodatek „{ $name }” nie mógł zostać zweryfikowany do użytku w programie { -brand-short-name } i został wyłączony.
+details-notification-unsigned-and-disabled-link = Więcej informacji
+
+details-notification-unsigned = Dodatek „{ $name }” nie mógł zostać zweryfikowany do użytku w programie { -brand-short-name }. Ostrożnie.
+details-notification-unsigned-link = Więcej informacji
+
+details-notification-blocked = Dodatek { $name } został wyłączony z powodu problemów z bezpieczeństwem lub stabilnością.
+details-notification-blocked-link = Więcej informacji
+
+details-notification-softblocked = Dodatek „{ $name }” został zgłoszony jako powodujący problemy z bezpieczeństwem lub stabilnością.
+details-notification-softblocked-link = Więcej informacji
+
+details-notification-gmp-pending = Dodatek „{ $name }” zostanie wkrótce zainstalowany.

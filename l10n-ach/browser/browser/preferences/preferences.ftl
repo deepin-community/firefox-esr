@@ -9,28 +9,6 @@ do-not-track-option-default-content-blocking-known =
 do-not-track-option-always =
     .label = Jwijwi
 
-pref-page-title =
-    { PLATFORM() ->
-        [windows] Gin ayera
-       *[other] Ter
-    }
-
-# This is used to determine the width of the search field in about:preferences,
-# in order to make the entire placeholder string visible
-#
-# Please keep the placeholder string short to avoid truncation.
-#
-# Notice: The value of the `.style` attribute is a CSS string, and the `width`
-# is the name of the CSS property. It is intended only to adjust the element's width.
-# Do not translate.
-search-input-box =
-    .style = width: 15.4em
-    .placeholder =
-        { PLATFORM() ->
-            [windows] Nong i me ayera
-           *[other] Nong i ter
-        }
-
 pane-general-title = Lumuku
 category-general =
     .tooltiptext = { pane-general-title }
@@ -46,10 +24,6 @@ category-search =
 pane-privacy-title = Mung ki Ber bedo
 category-privacy =
     .tooltiptext = { pane-privacy-title }
-
-pane-sync-title2 = { -sync-brand-short-name }
-category-sync2 =
-    .tooltiptext = { pane-sync-title2 }
 
 help-button-label = Cwak me { -brand-short-name }
 
@@ -78,33 +52,16 @@ restart-later = Cak odoco lacen
 ## Variables:
 ##   $name (String): name of the extension
 
-# This string is shown to notify the user that their home page
-# is being controlled by an extension.
-extension-controlled-homepage-override = Lamed, <img data-l10n-name="icon"/> { $name }, loyo potbuk me acaki mamegi.
 
-# This string is shown to notify the user that their new tab page
-# is being controlled by an extension.
-extension-controlled-new-tab-url = Lamed, <img data-l10n-name="icon"/> { $name }, loyo potbuk me dirica matidi manyen mamegi.
-
-# This string is shown to notify the user that their notifications permission
-# is being controlled by an extension.
-extension-controlled-web-notifications = Lamed, <img data-l10n-name="icon"/> { $name }, tye ka loono ter man.
-
-# This string is shown to notify the user that the default search engine
-# is being controlled by an extension.
-extension-controlled-default-search = Lamed, <img data-l10n-name="icon"/> { $name }, otero injin yeny mamegi makwongo.
-
-# This string is shown to notify the user that Container Tabs
-# are being enabled by an extension.
-extension-controlled-privacy-containers = Lamed, <img data-l10n-name="icon"/> { $name }, mito dirica matino me mako jami.
-
-# This string is shown to notify the user that their content blocking "All Detected Trackers"
-# preferences are being controlled by an extension.
-extension-controlled-websites-content-blocking-all-trackers = Lamed , <img data-l10n-name="icon"/> { $name }, tye ka loono ter man.
-
-# This string is shown to notify the user that their proxy configuration preferences
-# are being controlled by an extension.
-extension-controlled-proxy-config = Lamed, <img data-l10n-name="icon"/> { $name }, tye ka loono kit ma { -brand-short-name } kube ki intanet.
+## Extension Control Notifications
+##
+## These strings are used to inform the user
+## about changes made by extensions to browser settings.
+##
+## <img data-l10n-name="icon"/> is going to be replaced by the extension icon.
+##
+## Variables:
+##   $name (string) - Name of the extension
 
 # This string is shown after the user disables an extension to notify the user
 # how to enable an extension that they disabled.
@@ -117,26 +74,11 @@ extension-controlled-enable = Me cako lamed meno cit i Med-ikome <img data-l10n-
 
 search-results-header = Adwogi me yeny
 
-# `<span data-l10n-name="query"></span>` will be replaced by the search term.
-search-results-empty-message =
-    { PLATFORM() ->
-        [windows] Timwa kica! Adwogi mo pe i me ayera pi “<span data-l10n-name="query"></span>”.
-       *[other] Timwa kica! Adwogi mo pe i ter pi “<span data-l10n-name="query"></span>”.
-    }
-
 search-results-help-link = Imito kony? Lim <a data-l10n-name="url">Kony pa { -brand-short-name }</a>
 
 ## General Section
 
 startup-header = Caki
-
-# { -brand-short-name } will be 'Firefox Developer Edition',
-# since this setting is only exposed in Firefox Developer Edition
-separate-profile-mode =
-    .label = Ye { -brand-short-name } ki Firefox me tic lawang acel
-use-firefox-sync = Ngec: Man tiyo ki propwail ma patpat. Tii ki { -sync-brand-short-name } me nywako data ikin gi.
-get-started-not-logged-in = Dony iyie me { -sync-brand-short-name }…
-get-started-configured = Yab ter me { -sync-brand-short-name }
 
 always-check-default =
     .label = Jwijwi rot kace { -brand-short-name } tye layeny mamegi makwongo
@@ -148,10 +90,6 @@ is-not-default = { -brand-short-name } pe tye layeny mamegi makwongo
 set-as-my-default-browser =
     .label = Mi obed makwongo…
     .accesskey = m
-
-startup-restore-previous-session =
-    .label = Dwok kare ma okato ni
-    .accesskey = o
 
 startup-restore-warn-on-quit =
     .label = Niangi kace tye kaloro layeny
@@ -169,17 +107,9 @@ open-new-link-as-tabs =
     .label = Yab kakube i dirica matino me kaka i dirica manyen
     .accesskey = w
 
-warn-on-close-multiple-tabs =
-    .label = Niangi kace tye ka loro dirica matino mapol
-    .accesskey = m
-
 warn-on-open-many-tabs =
     .label = Niangi ka ce yabo dirica matino mapol dwoko dwiro pa { -brand-short-name } piny
     .accesskey = p
-
-switch-links-to-new-tabs =
-    .label = Ka iyabo kakube iyie dirica manyen, lokke iye cut
-    .accesskey = a
 
 show-tabs-in-taskbar =
     .label = Nyut nen me dirica matino iye gintic me Dirica
@@ -196,6 +126,10 @@ browser-containers-settings =
     .accesskey = r
 
 containers-disable-alert-title = Lor dirica matino weng me mako jami?
+
+## Variables:
+##   $tabCount (number) - Number of tabs
+
 containers-disable-alert-desc =
     { $tabCount ->
         [one] Ka ijuko Dirica matino me mako jami kombedi, ki biloro dirica matidi { $tabCount } me mako jami. Imoko ada ni imito juko Dirica matino me mako jami?
@@ -207,6 +141,9 @@ containers-disable-alert-ok-button =
         [one] Lor Dirica matida { $tabCount } me mako jami
        *[other] Lor Dirica matino { $tabCount } me mako jami
     }
+
+##
+
 containers-disable-alert-cancel-button = Wek ma kicako
 
 containers-remove-alert-title = Kwany Lamak jami man?
@@ -222,12 +159,9 @@ containers-remove-alert-msg =
 containers-remove-ok-button = Kwany Lamak jami man
 containers-remove-cancel-button = Pe ikwany Lamak jami man
 
-
 ## General Section - Language & Appearance
 
 language-and-appearance-header = Leb ki Neno
-
-fonts-and-colors-header = Dit me coc & rangi
 
 default-font = Dit coc makwongo
     .accesskey = D
@@ -237,10 +171,6 @@ default-font-size = Dit
 advanced-fonts =
     .label = Ma lamal…
     .accesskey = M
-
-colors-settings =
-    .label = Rangi…
-    .accesskey = R
 
 language-header = Leb
 
@@ -279,8 +209,7 @@ files-and-applications-title = Pwail ki Purugram
 
 download-header = Gam
 
-download-save-to =
-    .label = Gwok pwail bot
+download-save-where = Gwok pwail bot
     .accesskey = w
 
 download-choose-folder =
@@ -338,11 +267,6 @@ applications-manage-app =
     .label = Matut ikom purugram…
 applications-always-ask =
     .label = Peny jwijwi
-applications-type-pdf = Kit Coc acoya Ma mako ne yot (PDF)
-
-# Variables:
-#   $type (String) - the MIME type (e.g application/binary)
-applications-type-pdf-with-type = { applications-type-pdf } ({ $type })
 
 # Variables:
 #   $type-description (String) - Description of the type (e.g "Portable Document Format")
@@ -497,11 +421,6 @@ home-restore-defaults =
     .label = Dwok makwongo
     .accesskey = D
 
-# "Firefox" should be treated as a brand and kept in English,
-# while "Home" and "(Default)" can be localized.
-home-mode-choice-default =
-    .label = Acakki me Firefox (Makwongo)
-
 home-mode-choice-blank =
     .label = Potbuk ma nono
 
@@ -526,17 +445,15 @@ choose-bookmark =
 
 ## Home Section - Firefox Home Content Customization
 
-home-prefs-content-header = Jami me Acakki Firefox
-home-prefs-content-description = Yer jami ma imito ii kio me Acakki Firefox.
-
 home-prefs-search-header =
     .label = Yeny me kakube
-home-prefs-topsites-header =
-    .label = Kakube ma gi loyo
-home-prefs-topsites-description = Kakube ma ilimo loyo
 
 ## Variables:
 ##  $provider (String): Name of the corresponding content provider, e.g "Pocket".
+
+
+## Variables:
+##  $provider (string) - Name of the corresponding content provider, e.g "Pocket".
 
 home-prefs-recommended-by-header =
     .label = Lami tam obedo { $provider }
@@ -547,9 +464,6 @@ home-prefs-recommended-by-learn-more = Kit ma tiyo kwede
 home-prefs-recommended-by-option-sponsored-stories =
     .label = Lok ma kicwako
 
-home-prefs-highlights-header =
-    .label = Wiye madito
-home-prefs-highlights-description = Yer me kakube ma igwoko nyo ilimo
 home-prefs-highlights-option-visited-pages =
     .label = Potbuk ma kilimo
 home-prefs-highlights-options-bookmarks =
@@ -565,7 +479,6 @@ home-prefs-highlights-option-saved-to-pocket =
 # and non-essential but also not entirely trivial and useless.
 home-prefs-snippets-header =
     .label = Kwena macek
-home-prefs-snippets-description = Ngec manyen ki bot { -vendor-short-name } ki { -brand-product-name }
 
 ## Search Section
 
@@ -591,6 +504,7 @@ search-show-suggestions-url-bar-option =
     .label = Nyut tam me yeny i adwogi pa lanyut me kanonge
     .accesskey = l
 
+
 # This string describes what the user will observe when the system
 # prioritizes search suggestions over browsing history in the results
 # that extend down from the address bar. In the original English string,
@@ -603,8 +517,6 @@ search-show-suggestions-private-windows =
     .label = Nyut tam amiya me yeny i Dirica me Mung
 
 search-suggestions-cant-show = Pe ki binyuto tam me yeny i adwogi me lanyut me kabedo pien i tero { -brand-short-name } pe me poo ikom gin mukato matwal.
-
-search-one-click-header = Ingin me yeny ma idiyo kicel
 
 search-one-click-desc = Yer injin yeny mukene manyute piny ite lanyut kanonge ki lanyut yeny ka i cako keto nyig lok ma pire tek.
 
@@ -620,7 +532,6 @@ search-restore-default =
 search-remove-engine =
     .label = Kwany
     .accesskey = K
-
 search-add-engine =
     .label = Med
     .accesskey = M
@@ -642,21 +553,17 @@ containers-add-button =
     .label = Med lamak jami manyen
     .accesskey = e
 
-containers-preferences-button =
-    .label = Ter
-
 containers-remove-button =
     .label = Kwany
 
 ## Firefox Account - Signed out. Note that "Sync" and "Firefox Account" are now
 ## more discrete ("signed in" no longer means "and sync is connected").
 
-sync-signedout-caption = Ter Kakube ni kwedi
-sync-signedout-description = Rib alamabuk, gin mukato, dirica matino, mung me donyo, med-ikome ki ter i nyonyo ni weng.
 
-sync-signedout-account-signin2 =
-    .label = Dony iyie me { -sync-brand-short-name }…
-    .accesskey = i
+## Firefox account - Signed out. Note that "Sync" and "Firefox account" are now
+## more discrete ("signed in" no longer means "and sync is connected").
+
+sync-signedout-caption = Ter Kakube ni kwedi
 
 # This message contains two links and two icon images.
 #   `<img data-l10n-name="android-icon"/>` - Android logo icon
@@ -670,6 +577,9 @@ sync-mobile-promo = Gam Firefox pi <img data-l10n-name="android-icon"/> <a data-
 
 ## Firefox Account - Signed in
 
+
+## Firefox account - Signed in
+
 sync-profile-picture =
     .tooltiptext = Lok cal me propwail
 
@@ -680,8 +590,13 @@ sync-sign-out =
 sync-manage-account = Lo akaunt
     .accesskey = o
 
+## Variables
+## $email (string) - Email used for Firefox account
+
 sync-signedin-unverified = { $email } pe ki moko ada ne.
 sync-signedin-login-failure = Tim ber i dony me kube odoco { $email }
+
+##
 
 sync-resend-verification =
     .label = Nwo cwalo moko ada
@@ -697,18 +612,19 @@ sync-sign-in =
 
 ## Sync section - enabling or disabling sync.
 
-prefs-sync-setup =
-    .label = Ter { -sync-brand-short-name }…
-    .accesskey = T
-
 prefs-sync-now =
     .labelnotsyncing = Rib Kombedi
     .accesskeynotsyncing = K
     .labelsyncing = Ribo…
 
-## The list of things currently syncing.
+prefs-sync-now-button =
+    .label = Rib Kombedi
+    .accesskey = K
 
-sync-currently-syncing-heading = Kombedi dong itye ka ribo jami magi:
+prefs-syncing-button =
+    .label = Ribo…
+
+## The list of things currently syncing.
 
 sync-currently-syncing-bookmarks = Alamabuk
 sync-currently-syncing-history = Gin mukato
@@ -749,15 +665,6 @@ sync-engine-addons =
     .tooltiptext = Lamed ki theme pi Firefox desktop
     .accesskey = M
 
-sync-engine-prefs =
-    .label =
-        { PLATFORM() ->
-            [windows] Jami ayera
-           *[other] Ma imaro
-        }
-    .tooltiptext = Ter ma jwi, me mung, ki me ber bedo ma iloko gi
-    .accesskey = m
-
 ## The device name controls.
 
 sync-device-name-header = Nying Nyonyo
@@ -775,6 +682,16 @@ sync-device-name-save =
     .accesskey = o
 
 sync-connect-another-device = Kub nyonyo mukene
+
+## These strings are shown in a desktop notification after the
+## user requests we resend a verification email.
+
+sync-verification-sent-title = Moko ada kicwalo
+# Variables:
+#   $email (String): Email address of user's Firefox account.
+sync-verification-sent-body = Kicwalo kakube me moko ada i { $email }.
+sync-verification-not-sent-title = Pe twero cwalo moko ada
+sync-verification-not-sent-body = Pe wa twero cwalo email me moko ada i cawa man, tim ber item doki lacen.
 
 ## Privacy Section
 
@@ -798,9 +715,6 @@ forms-breach-alerts-learn-more-link = Nong ngec mapol
 forms-saved-logins =
     .label = Donyo iyie ma kigwoko…
     .accesskey = D
-forms-master-pw-use =
-    .label = Tii ki mung me donyo madit
-    .accesskey = T
 forms-primary-pw-learn-more-link = Nong ngec mapol
 # This string uses the former name of the Primary Password feature
 # ("Master Password" in English) so that the preferences can be found
@@ -808,8 +722,6 @@ forms-primary-pw-learn-more-link = Nong ngec mapol
 forms-master-pw-change =
     .label = Lok mung me donyo madit…
     .accesskey = m
-
-forms-master-pw-fips-title = Kombedi itye i kit me FIPS. FIPS mito Ladit me mung me donyo ma peke nono.
 
 forms-master-pw-fips-desc = Loko mung me donyo Pe olare
 
@@ -898,9 +810,8 @@ sitedata-settings =
     .label = Lo Data
     .accesskey = D
 
-sitedata-cookies-permissions =
-    .label = Lor Twero...
-    .accesskey = T
+## Privacy Section - Cookie Banner Handling
+
 
 ## Privacy Section - Address Bar
 
@@ -932,6 +843,8 @@ content-blocking-learn-more = Nong ngec mapol
 
 content-blocking-all-cookies = Angija weng
 content-blocking-unvisited-cookies = Angija ki kakube mape kilimo gi
+
+# The tcp-rollout strings are no longer used for the rollout but for tcp-by-default in the standard section
 
 content-blocking-warning-title = Ngec!
 content-blocking-warning-learn-how = Nong ngec nining
@@ -1001,10 +914,6 @@ permissions-block-popups =
     .label = Geng dirica ma pye-malo
     .accesskey = G
 
-permissions-block-popups-exceptions =
-    .label = Ma kiweko woko…
-    .accesskey = M
-
 permissions-addon-install-warning =
     .label = Niangi ka kakube teme me keto med-ikome
     .accesskey = N
@@ -1012,12 +921,6 @@ permissions-addon-install-warning =
 permissions-addon-exceptions =
     .label = Ma kiweko woko…
     .accesskey = M
-
-permissions-a11y-privacy-checkbox =
-    .label = Geng tic me nong ki i nongo layeny mamegi
-    .accesskey = a
-
-permissions-a11y-privacy-link = Nong ngec mapol
 
 ## Privacy Section - Data Collection
 
@@ -1034,11 +937,6 @@ collection-health-report =
 collection-health-report-link = Nong ngec mapol
 
 addon-recommendations-link = Nong ngec mapol
-
-collection-backlogged-crash-reports =
-    .label = Yee { -brand-short-name } me cwalo ripot me poto ma odure pi in
-    .accesskey = c
-collection-backlogged-crash-reports-link = Nong ngec mapol
 
 ## Privacy Section - Security
 ##
@@ -1066,16 +964,6 @@ security-block-uncommon-software =
 
 certs-header = Waraga
 
-certs-personal-label = Kace lapok tic okwayo pi catibiket mamegi
-
-certs-select-auto-option =
-    .label = Yer acel pire kene
-    .accesskey = S
-
-certs-select-ask-option =
-    .label = Penyi cawa weng
-    .accesskey = A
-
 certs-enable-ocsp =
     .label = Yeny lapok tic ma miyo lagam pa OCSP me moko kare me tic ma kombedi pa waraga
     .accesskey = Y
@@ -1088,45 +976,15 @@ certs-devices =
     .label = Nyonyo me ber bedo…
     .accesskey = N
 
-space-alert-learn-more-button =
-    .label = Nong ngec mapol
-    .accesskey = N
-
-space-alert-over-5gb-pref-button =
-    .label =
-        { PLATFORM() ->
-            [windows] Yab gin ayera
-           *[other] Yab ter
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] Y
-           *[other] Y
-        }
-
-space-alert-over-5gb-message =
-    { PLATFORM() ->
-        [windows] { -brand-short-name } odong ki kabedo me disk manok. Jami me kakube mogo pe bi nyute maber. Itwero jwayo data me kakube ma kigwoko i Ter > Mung ki Ber bedo > Angija ki Data me Kakube.
-       *[other] { -brand-short-name } odong ki kabedo me disk manok. Jami me kakube mogo pe bi nyute maber. Itwero jwayo data me kakube ma kigwoko i Ter > Mung ki Ber bedo > Angija ki Data me Kakube.
-    }
-
-space-alert-under-5gb-ok-button =
-    .label = AYA, Aniang
-    .accesskey = A
-
-space-alert-under-5gb-message = { -brand-short-name } odong ki kabedo me disk manok. Jami me kakube mogo pe bi nyute maber. Lim “Nong ngec mapol” me yubo tic ki disk mamegi ma opore pi yeny maber loyo.
-
 ## Privacy Section - HTTPS-Only
 
 httpsonly-learn-more = Nong ngec mapol
+
+## DoH Section
+
 
 ## The following strings are used in the Download section of settings
 
 desktop-folder-name = Wang kompiuta
 downloads-folder-name = Gam
 choose-download-folder-title = Yer boc me gam:
-
-# Variables:
-#   $service-name (String) - Name of a cloud storage provider like Dropbox, Google Drive, etc...
-save-files-to-cloud-storage =
-    .label = Gwok pwail i { $service-name }

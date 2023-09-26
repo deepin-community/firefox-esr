@@ -2,10 +2,6 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-screenshots-context-menu = ఒక తెరపట్టు తీసుకోండి
-
-screenshots-my-shots-button = నా తెరపట్లు
-
 screenshot-toolbarbutton =
     .label = తెరపట్టు
     .tooltiptext = ఒక తెరపట్టు తీసుకోండి
@@ -16,6 +12,8 @@ screenshots-save-visible-button = కనిపించే దానిని �
 screenshots-save-page-button = పూర్తి పేజీని భద్రపరచు
 screenshots-download-button = దింపుకోండి
 screenshots-copy-button = కాపీచెయ్యి
+screenshots-cancel-button-title =
+    .title = రద్దుచేయి
 
 screenshots-meta-key =
     { PLATFORM() ->
@@ -39,8 +37,6 @@ screenshots-login-error-details = { -screenshots-brand-name } సేవలో �
 screenshots-unshootable-page-error-title = మేము ఈ పేజీని స్క్రీన్షాట్ చేయలేము.
 screenshots-unshootable-page-error-details = ఇది ప్రామాణిక వెబ్ పేజీ కాదు, కాబట్టి దాని తెరపట్టు మీరు తీసుకోలేరు.
 
-screenshots-self-screenshot-error-title = { -screenshots-brand-name } పేజీని తెరపట్టు తీయలేరు!
-
 screenshots-empty-selection-error-title = మీ ఎంపిక చాలా చిన్నదిగా ఉంది
 
 screenshots-private-window-error-title = అంతరంగిక విహరణ రీతిలో { -screenshots-brand-name } అచేతనమవుతాయి
@@ -48,3 +44,4 @@ screenshots-private-window-error-details = అసౌకర్యానికి 
 
 screenshots-generic-error-title = అయ్యో! { -screenshots-brand-name } గల్లంతయ్యింది.
 screenshots-generic-error-details = ఏమి జరిగిందో మాకు ఖచ్చితంగా తెలియలేదు. మళ్లీ ప్రయత్నించాలనుకుంటున్నారా లేదా మరొక పేజీ తెరపట్టు తీసుకోవాలనుకుంటున్నారా?
+

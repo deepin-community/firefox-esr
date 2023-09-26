@@ -23,6 +23,8 @@ profile-selection-delete-button =
     .label = Deler le profilo…
     .accesskey = D
 
+profile-selection-conflict-message = Un altere copia de { -brand-product-name } ha facite cambios al profilos. Tu debe reinitiar { -brand-short-name } ante que facer altere cambios.
+
 ## Messages used in the profile manager
 
 profile-manager-description = { -brand-short-name } immagazina informationes sur tu configurationes, preferentias e altere datos personal in tu profilo de usator.

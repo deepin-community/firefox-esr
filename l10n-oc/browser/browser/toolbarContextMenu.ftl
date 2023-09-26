@@ -20,15 +20,6 @@ toolbar-context-menu-bookmark-selected-tabs =
 toolbar-context-menu-select-all-tabs =
     .label = Seleccionar totes los onglets
     .accesskey = S
-toolbar-context-menu-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Anullar la tampadura d’onglets
-            [one] Anullar la tampadura de l’onglet
-           *[other] Anullar la tampadura dels onglets
-        }
-    .accesskey = A
-
 toolbar-context-menu-reopen-closed-tabs =
     .label =
         { $tabCount ->
@@ -52,18 +43,18 @@ toolbar-context-menu-report-extension =
     .label = Senhalar l’extension
     .accesskey = n
 
-# Can appear on the same context menu as menubarCmd ("Menu Bar") and
-# personalbarCmd ("Bookmarks Toolbar"), so they should have different
-# access keys.
+# Can appear on the same context menu as toolbar-context-menu-menu-bar-cmd
+# ("Menu Bar") and personalbarCmd ("Bookmarks Toolbar"), so they should
+# have different access keys.
 toolbar-context-menu-pin-to-overflow-menu =
     .label = Penjar al menú de desbordament
     .accesskey = P
-toolbar-context-menu-auto-hide-downloads-button =
-    .label = Amagar automaticament dins la barra d’aisinas
-    .accesskey = A
 toolbar-context-menu-auto-hide-downloads-button-2 =
     .label = Rescondre lo boton quand i a pas res
     .accesskey = R
+toolbar-context-menu-always-open-downloads-panel =
+    .label = Afichar lo panèl quand lo telecarga comença
+    .accesskey = A
 toolbar-context-menu-remove-from-toolbar =
     .label = Levar de la barra d'aisinas
     .accesskey = L
@@ -72,6 +63,11 @@ toolbar-context-menu-view-customize-toolbar =
     .accesskey = P
 toolbar-context-menu-view-customize-toolbar-2 =
     .label = Personalizar la barra d'aisinas…
+    .accesskey = P
+# This is only ever shown when toolbar-context-menu-pin-to-overflow-menu
+# is hidden, so they can share access keys.
+toolbar-context-menu-pin-to-toolbar =
+    .label = Penjar a la barra d'aisinas
     .accesskey = P
 
 toolbar-context-menu-bookmarks-toolbar-always-show-2 =
@@ -87,3 +83,7 @@ toolbar-context-menu-bookmarks-toolbar-on-new-tab-2 =
 toolbar-context-menu-bookmarks-show-other-bookmarks =
     .label = Veire los autres marcapaginas
     .accesskey = V
+
+toolbar-context-menu-menu-bar-cmd =
+    .toolbarname = Barra de menú
+    .accesskey = m

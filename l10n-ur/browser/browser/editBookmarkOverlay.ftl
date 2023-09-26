@@ -2,17 +2,6 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-bookmark-overlay-name =
-    .value = نام:
-    .accesskey = ن
-
-bookmark-overlay-location =
-    .value = محل وقوع:
-    .accesskey = م
-
-bookmark-overlay-folder =
-    .value = پوشہ:
-
 bookmark-overlay-name-2 =
     .value = نام
     .accesskey = N
@@ -35,13 +24,15 @@ bookmark-overlay-folders-expander =
     .tooltiptextdown = { bookmark-overlay-folders-expander.tooltiptext }
     .tooltiptextup = چھپائیں
 
+bookmark-overlay-folders-expander2 =
+    .tooltiptext = تمام بک مارک پوشے دکھائیں
+
+bookmark-overlay-folders-expander-hide =
+    .tooltiptext = چھپائیں
+
 bookmark-overlay-new-folder-button =
     .label = نیا پوشہ
     .accesskey = پ
-
-bookmark-overlay-tags =
-    .value = ٹیگ:
-    .accesskey = ٹ
 
 bookmark-overlay-tags-2 =
     .value = ٹیگ
@@ -55,9 +46,11 @@ bookmark-overlay-tags-expander =
     .tooltiptextdown = { bookmark-overlay-tags-expander.tooltiptext }
     .tooltiptextup = چھپائیں
 
-bookmark-overlay-keyword =
-    .value = کلیدی لفظ:
-    .accesskey = ک
+bookmark-overlay-tags-expander2 =
+    .tooltiptext = تمام ٹیگ دکھائیں
+
+bookmark-overlay-tags-expander-hide =
+    .tooltiptext = چھپائیں
 
 bookmark-overlay-keyword-2 =
     .value = کلیدی لفظ

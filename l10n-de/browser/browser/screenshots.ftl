@@ -2,13 +2,12 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-screenshots-context-menu = Bildschirmfoto aufnehmen
-
-screenshots-my-shots-button = Meine Bildschirmfotos
-
 screenshot-toolbarbutton =
     .label = Bildschirmfoto
     .tooltiptext = Bildschirmfoto aufnehmen
+
+screenshot-shortcut =
+    .key = S
 
 screenshots-instructions = Ziehen oder klicken Sie auf der Seite, um einen Bereich auszuwählen. Drücken Sie ESC zum Abbrechen.
 screenshots-cancel-button = Abbrechen
@@ -18,6 +17,14 @@ screenshots-download-button = Herunterladen
 screenshots-download-button-tooltip = Bildschirmfoto herunterladen
 screenshots-copy-button = Kopieren
 screenshots-copy-button-tooltip = Bildschirmfoto in Zwischenablage kopieren
+screenshots-download-button-title =
+    .title = Bildschirmfoto herunterladen
+screenshots-copy-button-title =
+    .title = Bildschirmfoto in Zwischenablage kopieren
+screenshots-cancel-button-title =
+    .title = Abbrechen
+screenshots-retry-button-title =
+    .title = Bildschirmfoto erneut versuchen
 
 screenshots-meta-key =
     { PLATFORM() ->
@@ -41,8 +48,6 @@ screenshots-login-error-details = Ihr Bildschirmfoto konnte nicht gespeichert we
 screenshots-unshootable-page-error-title = Ein Bildschirmfoto dieser Seite ist nicht möglich.
 screenshots-unshootable-page-error-details = Dies ist keine Standard-Webseite, deshalb sind keine Bildschirmfotos von ihr möglich.
 
-screenshots-self-screenshot-error-title = Sie können kein Bildschirmfoto einer { -screenshots-brand-name }-Seite machen!
-
 screenshots-empty-selection-error-title = Ihr Auswahlbereich ist zu klein
 
 screenshots-private-window-error-title = { -screenshots-brand-name } ist im Privaten Modus deaktiviert
@@ -50,3 +55,6 @@ screenshots-private-window-error-details = Wir bitten um Entschuldigung für die
 
 screenshots-generic-error-title = { -screenshots-brand-name } funktioniert nicht richtig.
 screenshots-generic-error-details = Wir wissen auch nicht, was gerade passiert ist. Könnten Sie das Bildschirmfoto erneut oder auf einer anderen Seite aufnehmen?
+
+screenshots-too-large-error-title = Ihr Bildschirmfoto wurde zugeschnitten, weil es zu groß war
+screenshots-too-large-error-details = Versuchen Sie, eine Region auszuwählen, die auf ihrer längsten Seite kleiner als 32.700 Pixel ist oder eine Gesamtfläche von maximal 124.900.000 Pixel hat.

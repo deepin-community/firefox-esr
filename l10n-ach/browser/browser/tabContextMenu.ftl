@@ -8,6 +8,9 @@ reload-tab =
 select-all-tabs =
     .label = Yer dirica matino weng
     .accesskey = Y
+tab-context-play-tab =
+    .label = Tuk dirica matidi
+    .accesskey = u
 duplicate-tab =
     .label = Dirica matidi ma onwoone
     .accesskey = D
@@ -35,9 +38,6 @@ unpin-selected-tabs =
 bookmark-selected-tabs =
     .label = Ket alama buk i dirica matino…
     .accesskey = k
-bookmark-tab =
-    .label = Ket alamabuk i dirica matidi
-    .accesskey = A
 move-to-start =
     .label = Kob i acakki
     .accesskey = A
@@ -48,19 +48,13 @@ move-to-new-window =
     .label = Kob l dirica manyen
     .accesskey = d
 
-close-tab =
-    .label = Lor dirica matidi
-    .accesskey = L
-close-tabs =
-    .label = Lor dirica matino
-    .accesskey = L
-move-tabs =
-    .label = Kob dirica matino
-    .accesskey = k
-move-tab =
-    .label = Kob dirica matidi
-    .accesskey = v
-
 ## Variables:
 ##  $tabCount (Number): the number of tabs that are affected by the action.
 
+tab-context-send-tabs-to-device =
+    .label =
+        { $tabCount ->
+            [one] Cwal dirica matidi ii Nyonyo
+           *[other] Cwal dirica matino { $tabCount } ii Nyonyo
+        }
+    .accesskey = n

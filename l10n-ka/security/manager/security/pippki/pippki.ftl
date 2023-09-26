@@ -6,9 +6,6 @@ password-quality-meter = პაროლის ხარისხმზომი
 
 ## Change Password dialog
 
-change-password-window =
-    .title = მთავარი პაროლის შეცვლა
-
 change-device-password-window =
     .title = პაროლის შეცვლა
 
@@ -18,12 +15,6 @@ change-password-token = უსაფრთხოების მოწყობ�
 change-password-old = მიმდინარე პაროლი:
 change-password-new = ახალი პაროლი:
 change-password-reenter = ახალი პაროლი (კვლავ):
-
-## Reset Password dialog
-
-reset-password-window =
-    .title = მთავარი პაროლის განულება
-    .style = width: 40em
 
 pippki-failed-pw-change = პაროლის შეცვლა, ვერ ხერხდება.
 pippki-incorrect-pw = თქვენ მიერ მითითებული მიმდინარე პაროლი მცდარია. სცადეთ ხელახლა.
@@ -37,13 +28,11 @@ pippki-pw-change2empty-in-fips-mode = თქვენ FIPS-რეჟიმში
 
 ## Reset Primary Password dialog
 
-reset-primary-password-window =
+reset-primary-password-window2 =
     .title = მთავარი პაროლის განულება
-    .style = width: 40em
+    .style = min-width: 40em
 reset-password-button-label =
     .label = განულება
-reset-password-text = მთავარი პაროლის განულებით, დაიკარგება თქვენ მიერ შენახული ყველა ანგარიშისა და ელფოსტის პაროლი, შევსებული ველების მონაცემები, პირადი სერტიფიკატები. ნამდვილად გსურთ გაანულოთ მთავარი პაროლი?
-
 reset-primary-password-text = მთავარი პაროლის განულებით, დაიკარგება თქვენ მიერ შენახული ყველა ანგარიშისა და ელფოსტის პაროლი, შევსებული ველების მონაცემები, პირადი სერტიფიკატები. ნამდვილად გსურთ გაანულოთ მთავარი პაროლი?
 
 pippki-reset-password-confirmation-title = მთავარი პაროლის განულება
@@ -51,9 +40,9 @@ pippki-reset-password-confirmation-message = თქვენი მთავა�
 
 ## Downloading cert dialog
 
-download-cert-window =
+download-cert-window2 =
     .title = სერტიფიკატის გადმოწერა
-    .style = width: 46em
+    .style = min-width: 46em
 download-cert-message = თქვენგან მოითხოვეს სერტიფიკატების ახალი გამცემისთვის (CA) ნდობის გამოცხადება.
 download-cert-trust-ssl =
     .label = ვებსაიტების დამოწმების მინდობა ამ CA-სთვის.
@@ -85,7 +74,8 @@ set-password-reminder = მნიშვნელოვანია: თუ ს�
 
 ## Protected Auth dialog
 
-protected-auth-window =
-    .title = უსაფრთხო შესვლა ანგარიშზე სიტყვა-ნიშნის საშუალებით
-protected-auth-msg = გთხოვთ, დაამოწმოთ ვინაობა სიტყვა-ნიშნის საშუალებით. დამოწმების მეთოდი დამოკიდებულია, სიტყვა-ნიშნის სახესხვაობაზე.
-protected-auth-token = სიტყვა-ნიშანი:
+## Protected authentication alert
+
+# Variables:
+# $tokenName (String) - The name of the token to authenticate to (for example, "OS Client Cert Token (Modern)")
+protected-auth-alert = გთხოვთ, დაადასტუროთ საცნობი „{ $tokenName }“. თუ როგორ, ეს დამოკიდებულია თავად საცნობზე (მაგალითად, თითის ანაბეჭდის წამკითხველის ან კოდის შემტანი კლავიატურის მეშვეობით).

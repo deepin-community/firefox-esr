@@ -23,6 +23,8 @@ profile-selection-delete-button =
     .label = Kkes amaɣnu…
     .accesskey = K
 
+profile-selection-conflict-message = Anɣel-nniḍen n { -brand-product-name } yewwi-d yid-s ibeddilen i yimuqna. Ilaq ad talseḍ asenker n { -brand-short-name } send ad tedduḍ ɣer yibeddilen-nniḍen.
+
 ## Messages used in the profile manager
 
 profile-manager-description = { -brand-short-name } ad iḥrez talɣut n iɣewwaṛen-ik usligen d ismeyifen-ik ɣef umaɣnu-ik.

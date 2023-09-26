@@ -20,14 +20,6 @@ toolbar-context-menu-bookmark-selected-tabs =
 toolbar-context-menu-select-all-tabs =
     .label = Барлық беттерді таңдау
     .accesskey = т
-toolbar-context-menu-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Жабылған бетті қайтару
-           *[other] Жабылған беттерді қайтару
-        }
-    .accesskey = й
-
 toolbar-context-menu-reopen-closed-tabs =
     .label =
         { $tabCount ->
@@ -50,18 +42,18 @@ toolbar-context-menu-report-extension =
     .label = Кеңейтуді хабарлау
     .accesskey = у
 
-# Can appear on the same context menu as menubarCmd ("Menu Bar") and
-# personalbarCmd ("Bookmarks Toolbar"), so they should have different
-# access keys.
+# Can appear on the same context menu as toolbar-context-menu-menu-bar-cmd
+# ("Menu Bar") and personalbarCmd ("Bookmarks Toolbar"), so they should
+# have different access keys.
 toolbar-context-menu-pin-to-overflow-menu =
     .label = Қайта аймалау мәзіріне бекіту
     .accesskey = к
-toolbar-context-menu-auto-hide-downloads-button =
-    .label = Құралдар панелінде автожасыру
-    .accesskey = а
 toolbar-context-menu-auto-hide-downloads-button-2 =
     .label = Бос болған кезде батырманы жасыру
     .accesskey = ы
+toolbar-context-menu-always-open-downloads-panel =
+    .label = Жүктеп алу басталған кезде панельді көрсету
+    .accesskey = с
 toolbar-context-menu-remove-from-toolbar =
     .label = Құралдар панелінен өшіру
     .accesskey = ш
@@ -71,6 +63,11 @@ toolbar-context-menu-view-customize-toolbar =
 toolbar-context-menu-view-customize-toolbar-2 =
     .label = Құралдар панелін баптау…
     .accesskey = п
+# This is only ever shown when toolbar-context-menu-pin-to-overflow-menu
+# is hidden, so they can share access keys.
+toolbar-context-menu-pin-to-toolbar =
+    .label = Құралдар панеліне бекіту
+    .accesskey = б
 
 toolbar-context-menu-bookmarks-toolbar-always-show-2 =
     .label = Әрқашан көрсету
@@ -85,3 +82,7 @@ toolbar-context-menu-bookmarks-toolbar-on-new-tab-2 =
 toolbar-context-menu-bookmarks-show-other-bookmarks =
     .label = Басқа бетбелгілерді көрсету
     .accesskey = с
+
+toolbar-context-menu-menu-bar-cmd =
+    .toolbarname = Мәзір жолағы
+    .accesskey = М

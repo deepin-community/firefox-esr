@@ -7,26 +7,23 @@ synced-tabs-sidebar-noclients-subtitle = ¿Quies ver equí les llingüetes d'otr
 synced-tabs-sidebar-intro = Ve una llista de les llingüetes d'otros preseos de to.
 synced-tabs-sidebar-unverified = Tienes de verificar la cuenta.
 synced-tabs-sidebar-notabs = Nun hai llingüetes abiertes
-synced-tabs-sidebar-openprefs = Abrir les preferencies de { -sync-brand-short-name }
 synced-tabs-sidebar-tabsnotsyncing = Activa la sincronización de llingüetes pa ver una llista de les llingüetes d'otros preseos de to.
 synced-tabs-sidebar-connect-another-device = Conectar otru preséu
 synced-tabs-sidebar-search =
     .placeholder = Buscar llingüetes sincronizaes
+
+## Displayed in the Synced Tabs sidebar's context menu when right-clicking tabs
+## and/or devices in the list. The "Open" strings below should be translated
+## consistently with the equivalent strings for the bookmarks manager's context
+## menu. That menu is activated by right-clicking a bookmark in the Library
+## window. The bookmarks manager context's strings are located in places.ftl.
+
 synced-tabs-context-open =
     .label = Abrir
     .accesskey = A
-synced-tabs-context-open-in-new-tab =
-    .label = Abrir nuna llingüeta nueva
-    .accesskey = v
-synced-tabs-context-open-in-new-window =
-    .label = Abrir nuna ventana nueva
-    .accesskey = N
-synced-tabs-context-open-in-new-private-window =
-    .label = Abrir nuna ventana privada nueva
-    .accesskey = P
-synced-tabs-context-bookmark-single-tab =
-    .label = Amestar esta llingüeta a Marcadores…
-    .accesskey = M
+
+##
+
 synced-tabs-context-copy =
     .label = Copiar
     .accesskey = C
@@ -39,5 +36,3 @@ synced-tabs-context-manage-devices =
 synced-tabs-context-sync-now =
     .label = Sincronizar agora
     .accesskey = S
-fxa-sign-in = Aniciar sesión en { -sync-brand-short-name }
-turn-on-sync = Activar { -sync-brand-short-name }

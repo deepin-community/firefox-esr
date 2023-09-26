@@ -23,49 +23,12 @@ certmgr-tab-ca =
 certmgr-mine = Anda memiliki sertifikat dari organisasi berikut ini yang mengenali Anda
 certmgr-remembered = Sertifikat ini digunakan untuk mengidentifikasi Anda ke situs web.
 certmgr-people = Anda memiliki sertifikat di berkas yang mengenali orang ini
-certmgr-servers = Anda memiliki sertifikat pada berkas yang bisa mengidentifikasi server berikut
 certmgr-server = Entri ini mengidentifikasi pengecualian kesalahan sertifikat server
 certmgr-ca = Anda memiliki sertifikat pada berkas yang mengidentifikasi otoritas sertifikat ini
 
-certmgr-detail-general-tab-title =
-    .label = Umum
-    .accesskey = U
-
-certmgr-detail-pretty-print-tab-title =
-    .label = Detail
-    .accesskey = D
-
-certmgr-pending-label =
-    .value = Sedang memverifikasi sertifikat…
-
-certmgr-subject-label = Diterbitkan untuk
-
-certmgr-issuer-label = Diterbitkan Oleh
-
-certmgr-period-of-validity = Periode Kevalidan
-
-certmgr-fingerprints = Sidik Jari
-
-certmgr-cert-detail =
-    .title = Detail Sertifikat
-    .buttonlabelaccept = Tutup
-    .buttonaccesskeyaccept = T
-
-certmgr-cert-detail-commonname = Common Name (CN)
-
-certmgr-cert-detail-org = Organisasi (O)
-
-certmgr-cert-detail-orgunit = Unit Organisasi (OU)
-
-certmgr-cert-detail-serial-number = Nomor Seri
-
-certmgr-cert-detail-sha-256-fingerprint = Sidik jari SHA-256
-
-certmgr-cert-detail-sha-1-fingerprint = Sidik jari SHA1
-
-certmgr-edit-ca-cert =
+certmgr-edit-ca-cert2 =
     .title = Ubah pengaturan kepercayaan sertifikat CA
-    .style = width: 48em;
+    .style = min-width: 48em;
 
 certmgr-edit-cert-edit-trust = Ubah pengaturan kepercayaan:
 
@@ -75,9 +38,9 @@ certmgr-edit-cert-trust-ssl =
 certmgr-edit-cert-trust-email =
     .label = Sertifikat ini dapat mengidentifikasi pengguna email.
 
-certmgr-delete-cert =
+certmgr-delete-cert2 =
     .title = Hapus Sertifikat
-    .style = width: 48em; height: 24em;
+    .style = min-width: 48em; min-height: 24em;
 
 certmgr-cert-host =
     .label = Host
@@ -88,18 +51,11 @@ certmgr-cert-name =
 certmgr-cert-server =
     .label = Server
 
-certmgr-override-lifetime =
-    .label = Umur
-
 certmgr-token-name =
     .label = Perangkat Keamanan
 
-certmgr-begins-on = Mulai Sejak
-
 certmgr-begins-label =
     .label = Mulai Sejak
-
-certmgr-expires-on = Kedaluwarsa Pada
 
 certmgr-expires-label =
     .label = Kedaluwarsa Pada
@@ -141,18 +97,6 @@ certmgr-backup-all =
 certmgr-restore =
     .label = Impor…
     .accesskey = I
-
-certmgr-details =
-    .value = Field Sertifikat
-    .accesskey = F
-
-certmgr-fields =
-    .value = Nilai Field
-    .accesskey = N
-
-certmgr-hierarchy =
-    .value = Hierarki Sertifikat
-    .accesskey = H
 
 certmgr-add-exception =
     .label = Tambah Pengecualian…
@@ -216,12 +160,6 @@ delete-user-cert-confirm = Yakin untuk menghapus sertifikat berikut?
 delete-user-cert-impact = Jika Anda menghapus salah satu sertifikat Anda, Anda tidak akan dapat menggunakannya lagi untuk memastikan identitas Anda.
 
 
-delete-ssl-cert-title =
-    .title = Hapus Pengecualian untuk Sertifikat Server
-delete-ssl-cert-confirm = Yakin akan menghapus pengecualian ini?
-delete-ssl-cert-impact = Jika server dihapus dari pengecualian, Anda memulihkan pemeriksaan yang biasanya dilakukan untuk server tersebut dan mengharuskan server tersebut untuk menggunakan sertifikat yang valid.
-
-
 delete-ssl-override-title =
     .title = Hapus Pengecualian untuk Sertifikat Server
 delete-ssl-override-confirm = Yakin akan menghapus pengecualian server ini?
@@ -245,52 +183,14 @@ delete-email-cert-impact = Jika Anda menghapus sertifikat email seseorang, Anda 
 cert-with-serial =
     .value = Sertifikat dengan nomor seri: { $serialNumber }
 
-## Cert Viewer
-
-# Title used for the Certificate Viewer.
-#
-# Variables:
-#   $certificate : a string representative of the certificate being viewed.
-cert-viewer-title =
-    .title = Penampil Sertifikat: “{ $certName }”
-
-not-present =
-    .value = <Bukan Bagian dari Sertifikat>
-
-# Cert verification
-cert-verified = Sertifikat ini telah diperiksa untuk penggunaan berikut:
-
-# Add usage
-verify-ssl-client =
-    .value = Sertifikat SSL Klien
-
-verify-ssl-server =
-    .value = Sertifikat SSL Server
-
-verify-ssl-ca =
-    .value = Otoritas Sertifikat SSL
-
-verify-email-signer =
-    .value = Yang Mengesahkan Sertifikat Email
-
-verify-email-recip =
-    .value = Penerima Sertifikat Email
-
-# Cert verification
-cert-not-verified-cert-revoked = Tidak dapat memeriksa sertifikat ini karena telah dicabut.
-cert-not-verified-cert-expired = Tidak dapat memeriksa sertifikat ini karena telah kedaluwarsa.
-cert-not-verified-cert-not-trusted = Tidak dapat memeriksa sertifikat ini karena tidak dipercaya.
-cert-not-verified-issuer-not-trusted = Tidak dapat memeriksa sertifikat ini karena penerbit tidak dipercaya.
-cert-not-verified-issuer-unknown = Tidak dapat memeriksa sertifikat ini karena penerbit tidak dikenali.
-cert-not-verified-ca-invalid = Tidak dapat memeriksa sertifikat karena sertifikat CA tidak sah.
-cert-not-verified_algorithm-disabled = Tidak dapat memeriksa sertifikat ini karena ditandatangani menggunakan algoritma tanda tangan yang dinonaktifkan dengan alasan algoritmanya tidak aman.
-cert-not-verified-unknown = Tidak dapat memeriksa sertifikat ini karena alasan yang tidak diketahui.
-
 # Used to indicate that the user chose not to send a client authentication certificate to a server that requested one in a TLS handshake.
 send-no-client-certificate = Tidak mengirim sertifikat klien
 
 # Used when no cert is stored for an override
 no-cert-stored-for-override = (Tidak Disimpan)
+
+# When a certificate is unavailable (for example, it has been deleted or the token it exists on has been removed).
+certificate-not-available = (Tidak tersedia)
 
 ## Used to show whether an override is temporary or permanent
 

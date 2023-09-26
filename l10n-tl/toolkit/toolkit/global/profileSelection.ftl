@@ -23,6 +23,8 @@ profile-selection-delete-button =
     .label = Burahin ang Profile…
     .accesskey = B
 
+profile-selection-conflict-message = May isa pang kopya ng { -brand-product-name } na nagbago sa profile. Kailangan mo munang i-restart ang { -brand-short-name } bago makapagpatuloy.
+
 ## Messages used in the profile manager
 
 profile-manager-description = Ang { -brand-short-name } ay nag-iimbak ng impormasyon tungkol sa iyong mga setting, kagustuhan, at iba pang user item sa iyong personal profile.

@@ -2,19 +2,10 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-fxa-toolbar-sync-syncing =
-    .label = Po njëkohësohet…
-fxa-toolbar-sync-syncing-tabs =
-    .label = Po njëkohësohen Skeda…
-
-sync-disconnect-dialog-title = Të shkëputet { -sync-brand-short-name }-u?
-
 fxa-toolbar-sync-syncing2 = Po njëkohësohet…
 
 sync-disconnect-dialog-title2 = Të shkëputet?
 sync-disconnect-dialog-body = { -brand-product-name } do të reshtë së njëkohësuari llogarinë tuaj, por në këtë pajisje s’do të fshihet ndonjë e dhënë tuaja e shfletimit.
-fxa-disconnect-dialog-title = Të shkëputet { -brand-product-name }?
-fxa-disconnect-dialog-body = { -brand-product-name } do të shkëputet nga llogaria juaj, por në këtë pajisje s’do të fshihet ndonjë e dhënë tuaja e shfletimit.
 sync-disconnect-dialog-button = Shkëputu
 
 fxa-signout-dialog2-title = Të dilet nga { -fxaccount-brand-name }?
@@ -25,11 +16,26 @@ fxa-signout-dialog2-checkbox = Fshini të dhëna prej kësaj pajisjeje (fjalëka
 fxa-menu-sync-settings =
     .label = Rregullime Njëkohësimesh
 fxa-menu-turn-on-sync =
-    .value = Aktivizo Sync-un
-fxa-menu-turn-on-sync-default = Aktivizo Sync-un
+    .value = Aktivizo njëkohësim
+fxa-menu-turn-on-sync-default = Aktivizo njëkohësim
 
 fxa-menu-connect-another-device =
     .label = Lidhni Tjetër Pajisje…
+# Variables:
+#   $tabCount (Number): The number of tabs sent to the device.
+fxa-menu-send-tab-to-device =
+    .label =
+        { $tabCount ->
+            [one] Dërgoje Skedën te Pajisje
+           *[other] Dërgo { $tabCount } Skedë te Pajisje
+        }
+
+# This is shown dynamically within "Send tab to device" in fxa menu.
+fxa-menu-send-tab-to-device-syncnotready =
+    .label = Po njëkohësohen Pajisje…
+
+# This is shown within "Send tab to device" in fxa menu if account is not configured.
+fxa-menu-send-tab-to-device-description = Dërgoni aty për aty një skedë te cilado pajisje në të cilën keni bërë hyrje.
 
 fxa-menu-sign-out =
     .label = Dilni…

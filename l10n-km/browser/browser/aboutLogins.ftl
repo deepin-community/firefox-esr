@@ -5,19 +5,7 @@
 
 about-logins-page-title = ការចូល និង​ពាក្យ​សម្ងាត់
 
-# "Google Play" and "App Store" are both branding and should not be translated
-
-login-app-promo-title = នាំ​យក​ពាក្យ​សម្ងាត់​របស់​អ្នក​គ្រប់​ទីកន្លែង
-login-app-promo-subtitle = ទាញយក​កម្មវិធី { -lockwise-brand-name } ឥត​គិតថ្លៃ
-login-app-promo-android =
-    .alt = ទាញយក​កម្មវិធី​នៅ​លើ Google Play
-login-app-promo-apple =
-    .alt = ទាញយក​នៅ​លើ App Store
-login-filter =
-    .placeholder = ស្វែងរក​ការចូល
-create-login-button = បង្កើត​ការចូល​ថ្មី
 fxaccounts-sign-in-text = ទាញយក​ពាក្យ​សម្ងាត់​របស់​អ្នក​នៅ​លើ​ឧបករណ៍​ផ្សេងៗ​របស់​អ្នក
-fxaccounts-sign-in-button = ចូល​ទៅ { -sync-brand-short-name }
 fxaccounts-sign-in-sync-button = ចូល ដើម្បី​ធ្វើ​សមកាលកម្ម
 fxaccounts-avatar-button =
     .title = គ្រប់គ្រង​គណនី
@@ -37,8 +25,6 @@ menu-menuitem-preferences =
        *[other] ចំណូលចិត្ត
     }
 about-logins-menu-menuitem-help = ជំនួយ
-menu-menuitem-android-app = { -lockwise-brand-short-name } សម្រាប់ Android
-menu-menuitem-iphone-app = { -lockwise-brand-short-name } សម្រាប់ iPhone និង iPad
 
 ## Login List
 
@@ -51,6 +37,8 @@ login-list-count =
 login-list-sort-label-text = តម្រៀបតាម៖
 login-list-name-option = ឈ្មោះ (A-Z)
 login-list-name-reverse-option = ឈ្មោះ (Z-A)
+login-list-username-option = ឈ្មោះអ្នកប្រើប្រាស់ (A-Z)
+login-list-username-reverse-option = ឈ្មោះអ្នកប្រើប្រាស់ (Z-A)
 about-logins-login-list-alerts-option = ការជូនដំណឹង
 login-list-last-changed-option = បាន​កែប្រែ​ចុងក្រោយ
 login-list-last-used-option = បាន​ប្រើប្រាស់​ចុងក្រោយ
@@ -65,20 +53,22 @@ about-logins-list-item-breach-icon =
     .title = គេហទំព័រ​ដែល​បាន​បំពាន
 about-logins-list-item-vulnerable-password-icon =
     .title = ពាក្យសម្ងាត់ងាយរងគ្រោះ
+about-logins-list-section-breach = គេហទំព័រ​ដែលបំពាន
+about-logins-list-section-vulnerable = ពាក្យសម្ងាត់ងាយរងគ្រោះ
+about-logins-list-section-nothing = មិនមានការជូនដំណឹង
+about-logins-list-section-today = ថ្ងៃនេះ
+about-logins-list-section-yesterday = ម្សិលមិញ
+about-logins-list-section-week = 7 ថ្ងៃចុងក្រោយ
 
 ## Introduction screen
 
-login-intro-heading = កំពុង​រក​មើល​ការចូល​ដែល​បាន​រក្សាទុក​របស់​អ្នក​មែន​ទេ? រៀបចំ { -sync-brand-short-name } ។
 about-logins-login-intro-heading-logged-out2 = កំពុង​រកមើល​ការចូល​ដែល​បាន​រក្សាទុក​របស់​អ្នក​មែន​ទេ? បើក​ការធ្វើ​សមកាលកម្ម ឬ​នាំចូល​។
 about-logins-login-intro-heading-logged-in = រកមិនឃើញការចូលដែល​បាន​ធ្វើសមកាលកម្ម។
 login-intro-description = ប្រសិនបើ​អ្នក​បាន​រក្សាទុក​ការចូល​របស់​អ្នក​ទៅ { -brand-product-name } នៅ​លើ​ឧបករណ៍​ផ្សេង នេះជា​របៀប​​ចូល​​មើល​ការចូល​ទាំងនោះ​នៅ​ត្រង់នេះ៖
-login-intro-instruction-fxa = បង្កើត ឬ​ចូល​ទៅ { -fxaccount-brand-name } របស់​អ្នក​នៅ​លើ​ឧបករណ៍ ត្រង់​កន្លែង​ដែល​បាន​រក្សាទុក​ការចូល​របស់​អ្នក
-login-intro-instruction-fxa-settings = ប្រាកដ​ថា អ្នក​បាន​ជ្រើសរើស​​ប្រអប់​ធីក​ការចូល​នៅ​ក្នុង​ការកំណត់ { -sync-brand-short-name }
-about-logins-intro-instruction-help = ចូល​មើល <a data-l10n-name="help-link"> { -lockwise-brand-short-name } គាំទ្រ </a> សម្រាប់ជំនួយបន្ថែម
 login-intro-instructions-fxa = បង្កើត ឬ​ចូល​ { -fxaccount-brand-name } របស់អ្នក​នៅលើ​ឧបករណ៍​ដែល​ការចូល​របស់​អ្នក​ត្រូវបាន​រក្សាទុក។
 login-intro-instructions-fxa-settings = ចូលទៅ​កាន់ ការកំណត់ > ធ្វើសមកាលកម្ម > បើក​ការធ្វើសមកាលកម្ម... ជ្រើសរើស​ប្រអប់​ការចូល និង​ពាក្យសម្ងាត់។
-login-intro-instructions-fxa-help = ចូលមើល <a data-l10n-name="help-link">{ -lockwise-brand-short-name } Support</a> សម្រាប់​ជំនួយបន្ថែម។
-about-logins-intro-import = ប្រសិនបើការចូលរបស់អ្នកត្រូវបានរក្សាទុកនៅក្នុងកម្មវិធីរុករកតាមអ៊ីនធឺណិតផ្សេងទៀតអ្នកអាច <a data-l10n-name="import-link"> នាំចូលការចូលទាំងនោះទៅក្នុង { -lockwise-brand-short-name }</a>
+login-intro-instructions-fxa-passwords-help = ចូលមើល​<a data-l10n-name="passwords-help-link">ជំនួយ​ពាក្យសម្ងាត់</a>​សម្រាប់​ជំនួយ​បន្ថែម។
+about-logins-intro-browser-only-import = ប្រសិនបើ​ការចូល​របស់​អ្នក​ត្រូវបាន​រក្សាទុក​នៅក្នុង​កម្មវិធី​រុករក​តាម​អ៊ីនធឺណិត​ផ្សេង អ្នក​អាច <a data-l10n-name="import-link">នាំចូល​វា​ក្នុង { -brand-product-name }</a>
 about-logins-intro-import2 = ប្រសិនបើ​ការចូល​របស់​អ្នក​ត្រូវបាន​រក្សាទុក​ក្រៅពៅ { -brand-product-name } អ្នក​អាច <a data-l10n-name="import-browser-link">នាំចូល​ការចូល​ទាំងនោះ​ពី​កម្មវិធី​រុករក​តាម​អ៊ីនធឺណិត​ផ្សេង</a> ឬ <a data-l10n-name="import-file-link">ពី​ឯកសារ</a>
 
 ## Login
@@ -103,9 +93,10 @@ login-item-copied-password-button-text = បាន​ចម្លង!
 login-item-save-changes-button = រក្សាទុក​ការផ្លាស់ប្ដូរ
 login-item-save-new-button = រក្សាទុក
 login-item-cancel-button = បោះបង់
-login-item-time-changed = បាន​កែប្រែ​ចុងក្រោយ៖ { DATETIME($timeChanged, day: "numeric", month: "long", year: "numeric") }
-login-item-time-created = បាន​បង្កើត៖ { DATETIME($timeCreated, day: "numeric", month: "long", year: "numeric") }
-login-item-time-used = បាន​ប្រើប្រាស់​ចុងក្រោយ៖ { DATETIME($timeUsed, day: "numeric", month: "long", year: "numeric") }
+
+## The date is displayed in a timeline showing the password evolution.
+## A label is displayed under the date to describe the type of change.
+## (e.g. updated, created, etc.)
 
 ## OS Authentication dialog
 
@@ -120,20 +111,19 @@ about-logins-edit-login-os-auth-dialog-message-win = ដើម្បីកែស
 # This message can be seen when attempting to edit a login in about:logins
 # On MacOS, only provide the reason that account verification is needed. Do not put a complete sentence here.
 about-logins-edit-login-os-auth-dialog-message-macosx = កែសម្រួលការចូលដែលបានរក្សាទុក
+
 # This message can be seen when attempting to reveal a password in about:logins on Windows.
 about-logins-reveal-password-os-auth-dialog-message-win = ដើម្បីមើល​ពាក្យសម្ងាត់​របស់អ្នក សូម​បញ្ចូល​ព័ត៌មាន​ផ្ទៀងផ្ទាត់​ការចូល​ Windows របស់​អ្នក។ វា​ជួយ​ការពារ​សុវត្ថិភាព​គណនី​របស់​អ្នក។
 # This message can be seen when attempting to reveal a password in about:logins
 # On MacOS, only provide the reason that account verification is needed. Do not put a complete sentence here.
 about-logins-reveal-password-os-auth-dialog-message-macosx = បង្ហាញពាក្យសម្ងាត់ដែលបានរក្សាទុក
+
 # This message can be seen when attempting to copy a password in about:logins on Windows.
 about-logins-copy-password-os-auth-dialog-message-win = ដើម្បី​ចម្លង​ពាក្យ​សម្ងាត់​របស់អ្នក សូម​បញ្ចូល​ព័ត៌មាន​ផ្ទៀងផ្ទាត់​ការចូល Windows ​របស់អ្នក។ វា​ជួយ​ការពារ​សុវត្ថិភាព​គណនី​របស់​អ្នក។
 # This message can be seen when attempting to copy a password in about:logins
 # On MacOS, only provide the reason that account verification is needed. Do not put a complete sentence here.
 about-logins-copy-password-os-auth-dialog-message-macosx = ចម្លងពាក្យសម្ងាត់ដែលបានរក្សាទុក
 
-## Master Password notification
-
-master-password-notification-message = សូម​បញ្ចូល​ពាក្យសម្ងាត់​មេ​របស់​អ្នក ដើម្បី​មើល​ការចូល និង​ពាក្យ​សម្ងាត់​ដែល​បាន​រក្សាទុក
 # This message can be seen when attempting to export a password in about:logins on Windows.
 about-logins-export-password-os-auth-dialog-message-win = ដើម្បីនាំចេញ​ការចូល​របស់អ្នក សូមបញ្ចូល​ព័ត៌មាន​ផ្ទៀងផ្ទាត់​ការចូល Windows របស់ង្នក។ វា​ជួយ​ការពារ​សុវត្ថិភាព​គណនី​របស់​អ្នក។
 # This message can be seen when attempting to export a password in about:logins
@@ -147,42 +137,31 @@ master-password-reload-button =
     .label = ចូល
     .accesskey = ច
 
-## Password Sync notification
-
-enable-password-sync-notification-message =
-    { PLATFORM() ->
-        [windows] ចង់បាន​ការចូល​របស់​អ្នក​នៅ​គ្រប់កន្លែង​ដែល​អ្នក​ប្រើប្រាស់ { -brand-product-name } ដែរ​ឬ​ទេ? ចូល​ទៅ​កាន់​ជម្រើស { -sync-brand-short-name } រួច​ជ្រើសរើស​ប្រអប់​ធីក​ការចូល។
-       *[other] ចង់បាន​ការចូល​របស់​អ្នក​នៅ​គ្រប់កន្លែង​ដែល​អ្នក​ប្រើប្រាស់ { -brand-product-name } ដែរ​ឬ​ទេ? ចូល​ទៅ​កាន់​​ចំណូលចិត្ត { -sync-brand-short-name } រួច​ជ្រើសរើស​ប្រអប់​ធីក​ការចូល។
-    }
-enable-password-sync-preferences-button =
-    .label =
-        { PLATFORM() ->
-            [windows] ចូល​ទៅ​កាន់​ជម្រើស { -sync-brand-short-name }
-           *[other] ចូល​ទៅ​កាន់​ចំណូលចិត្ត { -sync-brand-short-name }
-        }
-    .accesskey = V
-about-logins-enable-password-sync-dont-ask-again-button =
-    .label = កុំ​សួរ​ខ្ញុំ​ម្ដងទៀត
-    .accesskey = ក
-
 ## Dialogs
 
 confirmation-dialog-cancel-button = បោះបង់
 confirmation-dialog-dismiss-button =
     .title = បោះបង់
+
 about-logins-confirm-remove-dialog-title = លុបការចូលនេះចេញ?
 confirm-delete-dialog-message = សកម្មភាព​នេះ​មិន​អាច​ត្រឡប់​វិញ​បាន​ទេ។
 about-logins-confirm-remove-dialog-confirm-button = លុប​ចេញ
+
+## Variables
+##   $count (number) - Number of items
+
 about-logins-confirm-remove-all-dialog-confirm-button-label =
     { $count ->
         [1] លុបចេញ
        *[other] លុបចេញ​ទាំងអស់
     }
+
 about-logins-confirm-remove-all-dialog-checkbox-label =
     { $count ->
         [1] បាទ/ចាស ដកការចូលនេះចេញ
        *[other] បាទ/ចាស ដកការចូលទាំងនេះចេញ
     }
+
 about-logins-confirm-remove-all-dialog-title =
     { $count ->
         [one] ដកការចូល { $count } ចេញ?
@@ -193,6 +172,7 @@ about-logins-confirm-remove-all-dialog-message =
         [1] វា​នឹង​លុប​ការចូល​ដែល​អ្នក​បាន​រក្សាទុក​នៅក្នុង { -brand-short-name } និង​ការជូនដំណឹង​អំពី​បំពាន​ទាំងឡាយ​ដែល​បង្ហាញ​នៅត្រង់នេះ។ អ្នក​នឹង​មិន​អាច​ត្រឡប់​សកម្មភាព​នេះដូចដើមវិញ​បាន​ទេ។
        *[other] វា​នឹង​លុប​ការចូល​ដែល​អ្នក​បាន​រក្សាទុក​នៅក្នុង { -brand-short-name } និង​ការបំពាន​ទាំងឡាយ​ដែល​បង្ហាញ​នៅត្រង់នេះ។ អ្នក​នឹង​មិន​អាច​ត្រឡប់​សកម្មភាព​នេះដូចដើមវិញ​បាន​ទេ។
     }
+
 about-logins-confirm-remove-all-sync-dialog-title =
     { $count ->
        *[other] លុបការចូល { $count } ពី​ឧបករណ៍​ទាំងអស់​ដែរ​ឬ​ទេ?
@@ -202,11 +182,16 @@ about-logins-confirm-remove-all-sync-dialog-message =
         [1] វា​នឹង​លុប​ការចូល​ដែល​អ្នក​បាន​រក្សាទុក​នៅក្នុង { -brand-short-name } លើ​ឧបករណ៍​ទាំងអស់​ដែល​បាន​ធ្វើសមកាលកម្ម​ទៅ { -fxaccount-brand-name } របស់អ្នក។ វា​ក៏​នឹង​លុប​ការជូនដំណឹង​អំពី​ការបំពាន​ដែល​បង្ហាញ​នៅត្រង់​នេះ​ផងដែរ។ អ្នក​នឹងមិន​អាច​ត្រឡប់​សកម្មភាព​នេះ​ដូចដើមវិញ​បាន​ទេ។
        *[other] This will remove all logins you’ve saved to { -brand-short-name } on all devices synced to your { -fxaccount-brand-name }. This will also remove breach alerts that appear here. You won’t be able to undo this action.
     }
+
+##
+
 about-logins-confirm-export-dialog-title = នាំចេញការចូលនិងពាក្យសម្ងាត់
 about-logins-confirm-export-dialog-message = ពាក្យសម្ងាត់​របស់​អ្នក​នឹង​ត្រូវបាន​រក្សាទុក​ជាអត្ថបទ​ដែល​អាច​អាន​បាន (ឧ. BadP@ssw0rd) ដូច្នេះ​នរណា​ដែល​អាច​បើក​ឯកសារ​ដែល​បាន​នាំចេញ​ អាច​មើលពាក្យ​សម្ងាត់​ទាំងនោះបាន។
 about-logins-confirm-export-dialog-confirm-button = នាំចេញ…
+
 about-logins-alert-import-title = ការនាំចូល​បាន​បញ្ចប់
 about-logins-alert-import-message = មើល​សេចក្ដី​សង្ខេប​អំពី​ការនាំចូល​លម្អិត
+
 confirm-discard-changes-dialog-title = បោះបង់​ការផ្លាស់ប្ដូរ​ដែល​មិន​បាន​រក្សាទុក?
 confirm-discard-changes-dialog-message = ការផ្លាស់ប្ដូរ​ដែល​មិន​បាន​រក្សាទុក​ទាំងអស់​នឹង​បាត់។
 confirm-discard-changes-dialog-confirm-button = បោះបង់
@@ -219,7 +204,6 @@ about-logins-breach-alert-date = ការបំពាន​នេះ​បា�
 # Variables:
 #   $hostname (String) - The hostname of the website associated with the login, e.g. "example.com"
 about-logins-breach-alert-link = ទៅកាន់ { $hostname }
-about-logins-breach-alert-learn-more-link = ស្វែងយល់​បន្ថែម
 
 ## Vulnerable Password notification
 
@@ -237,6 +221,7 @@ about-logins-vulnerable-alert-learn-more-link = ស្វែងយល់​ប�
 # Variables:
 #   $loginTitle (String) - The title of the website associated with the login.
 about-logins-error-message-duplicate-login-with-link = ធាតុ​បញ្ចូល​សម្រាប់ { $loginTitle } ដែល​មាន​ឈ្មោះ​អ្នកប្រើប្រាស់​នោះ​មាន​រួចហើយ។ <a data-l10n-name="duplicate-link">ចូលទៅ​កាន់​ធាតុ​បញ្ចូល​ដែល​មាន​ស្រាប់?</a>
+
 # This is a generic error message.
 about-logins-error-message-default = បញ្ហា​មួយបានកើតឡើងខណៈពេលព្យាយាមរក្សាទុកពាក្យសម្ងាត់នេះ។
 
@@ -285,10 +270,12 @@ about-logins-import-dialog-items-added =
     { $count ->
        *[other] <span>ការចូល​ថ្មី​ត្រូវបាន​បញ្ចូល៖</span> <span data-l10n-name="count">{ $count }</span>
     }
+
 about-logins-import-dialog-items-modified =
     { $count ->
        *[other] <span>ការចូល​ដែល​មាន​ស្រាប់​ត្រូវបាន​ធ្វើ​បច្ចុប្បន្នភាព៖</span> <span data-l10n-name="count">{ $count }</span>
     }
+
 about-logins-import-dialog-items-no-change =
     { $count ->
        *[other] <span>បាន​រកឃើញ​ការចូល​ដែល​ស្ទួនគ្នា៖</span> <span data-l10n-name="count">{ $count }</span> <span data-l10n-name="meta">(not imported)</span>
@@ -298,6 +285,7 @@ about-logins-import-dialog-items-error =
        *[other] <span>បញ្ហា៖</span> <span data-l10n-name="count">{ $count }</span> <span data-l10n-name="meta">(not imported)</span>
     }
 about-logins-import-dialog-done = រួចរាល់
+
 about-logins-import-dialog-error-title = ការនាំចូល​មាន​បញ្ហា
 about-logins-import-dialog-error-conflicting-values-title = តម្លៃ​ស្ទួន​ច្រើន​សម្រាប់​ការចូល​មួយ
 about-logins-import-dialog-error-conflicting-values-description = ឧទាហរណ៍៖ អ្នក​ប្រើប្រាស់ ពាក្យសម្ងាត់ URLs។ល។ ច្រើន​សម្រាប់​ការចូលមួយ។
@@ -311,8 +299,10 @@ about-logins-import-dialog-error-no-logins-imported = មិន​មាន​�
 about-logins-import-dialog-error-learn-more = ស្វែងយល់​បន្ថែម
 about-logins-import-dialog-error-try-import-again = សាកល្បង​នាំចូល​ម្ដងទៀត...
 about-logins-import-dialog-error-cancel = បោះបង់
+
 about-logins-import-report-title = នាំចូល​សេចក្ដិ​សង្ខេប
 about-logins-import-report-description = ការចូល និង​ពាក្យសម្ងាត់​ត្រូវបាន​នាំចូល​ទៅ { -brand-short-name }។
+
 #
 # Variables:
 #  $number (number) - The number of the row

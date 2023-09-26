@@ -2,13 +2,12 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-screenshots-context-menu = Fes una captura de pantalla
-
-screenshots-my-shots-button = Les meves captures
-
 screenshot-toolbarbutton =
     .label = Captura de pantalla
     .tooltiptext = Fes una captura de pantalla
+
+screenshot-shortcut =
+    .key = S
 
 screenshots-instructions = Arrossegueu o feu clic a la pàgina per seleccionar una regió. Premeu ESC per cancel·lar.
 screenshots-cancel-button = Cancel·la
@@ -18,6 +17,14 @@ screenshots-download-button = Baixa
 screenshots-download-button-tooltip = Baixa la captura de pantalla
 screenshots-copy-button = Copia
 screenshots-copy-button-tooltip = Copia la captura de pantalla al porta-retalls
+screenshots-download-button-title =
+    .title = Baixa la captura de pantalla
+screenshots-copy-button-title =
+    .title = Copia la captura de pantalla al porta-retalls
+screenshots-cancel-button-title =
+    .title = Cancel·la
+screenshots-retry-button-title =
+    .title = Torna a fer la captura de pantalla
 
 screenshots-meta-key =
     { PLATFORM() ->
@@ -41,8 +48,6 @@ screenshots-login-error-details = No s'ha pogut desar la vostra captura perquè 
 screenshots-unshootable-page-error-title = No es pot fer una captura de pantalla d'aquesta pàgina.
 screenshots-unshootable-page-error-details = No podeu fer una captura de pantalla perquè aquesta no és una pàgina web estàndard.
 
-screenshots-self-screenshot-error-title = No podeu fer una captura de pantalla de la pàgina del { -screenshots-brand-name }!
-
 screenshots-empty-selection-error-title = La selecció és massa petita
 
 screenshots-private-window-error-title = El { -screenshots-brand-name } està desactivat en el mode de navegació privada
@@ -50,3 +55,6 @@ screenshots-private-window-error-details = Perdoneu les molèsties. Estem trebal
 
 screenshots-generic-error-title = El { -screenshots-brand-name } ha tingut un problema.
 screenshots-generic-error-details = S'ha produït un error inesperat. Torneu-ho a provar o captureu una altra pàgina.
+
+screenshots-too-large-error-title = La captura de pantalla s'ha retallat perquè era massa gran
+screenshots-too-large-error-details = Proveu de seleccionar una regió en què el costat més llarg sigui més petit de 32.700 píxels o que tingui una àrea total de 124.900.000 píxels.

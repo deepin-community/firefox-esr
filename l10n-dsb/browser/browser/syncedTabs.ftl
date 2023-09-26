@@ -7,27 +7,44 @@ synced-tabs-sidebar-noclients-subtitle = Cośo how swóje rejtariki z drugich r�
 synced-tabs-sidebar-intro = Woglědajśo se lisćinu rejtarikow ze swójich rědow.
 synced-tabs-sidebar-unverified = Wašo konto musy se wobkšuśiś.
 synced-tabs-sidebar-notabs = Žedne wócynjone rejtariki
-synced-tabs-sidebar-openprefs = Nastajenja { -sync-brand-short-name } wócyniś
 synced-tabs-sidebar-open-settings = Synchronizěrowańske nastajenja wócyniś
 synced-tabs-sidebar-tabsnotsyncing = Synchronizěrowanje rejtarikow zašaltowaś, aby se lisćina rejtarikow z drugich rědow pokazała.
 synced-tabs-sidebar-connect-another-device = Drugi rěd zwězaś
 synced-tabs-sidebar-search =
     .placeholder = Synchronizěrowane rejtariki pytaś
+
+## Displayed in the Synced Tabs sidebar's context menu when right-clicking tabs
+## and/or devices in the list. The "Open" strings below should be translated
+## consistently with the equivalent strings for the bookmarks manager's context
+## menu. That menu is activated by right-clicking a bookmark in the Library
+## window. The bookmarks manager context's strings are located in places.ftl.
+
 synced-tabs-context-open =
     .label = Wócyniś
     .accesskey = W
-synced-tabs-context-open-in-new-tab =
-    .label = W nowem rejtariku wócyniś
-    .accesskey = r
-synced-tabs-context-open-in-new-window =
-    .label = Wótkaz w nowem woknje wócyniś
+synced-tabs-context-open-in-tab =
+    .label = W nowem rejtarku wócyniś
     .accesskey = n
-synced-tabs-context-open-in-new-private-window =
-    .label = Wótkaz w nowem priwatnem woknje wócyniś
+synced-tabs-context-open-in-container-tab =
+    .label = W nowem kontejnerowem rejtariku wócyniś
+    .accesskey = k
+synced-tabs-context-open-in-window =
+    .label = W nowem woknje wócyniś
+    .accesskey = o
+synced-tabs-context-open-in-private-window =
+    .label = W nowem priwatnem woknje wócyniś
     .accesskey = r
-synced-tabs-context-bookmark-single-tab =
-    .label = Toś ten bok ako cytańske znamje składowaś…
-    .accesskey = c
+
+##
+
+# Displayed in the Synced Tabs sidebar's context menu when right-clicking tabs
+# and/or devices in the list. This string is for a menuitem equivalent to one in
+# the tab context menu (activated by right-clicking a tab in the tabstrip). That
+# string is located in tabContextMenu.ftl. So, this string should be translated
+# consistently with the "Bookmark Tab…" string there.
+synced-tabs-context-bookmark =
+    .label = Rejtarik ako cytańske znamje składowaś …
+    .accesskey = R
 synced-tabs-context-copy =
     .label = Kopěrowaś
     .accesskey = K
@@ -40,7 +57,5 @@ synced-tabs-context-manage-devices =
 synced-tabs-context-sync-now =
     .label = Něnto synchronizěrowaś
     .accesskey = N
-fxa-sign-in = Pla { -sync-brand-short-name } pśizjawiś
-turn-on-sync = { -sync-brand-short-name } zmóžniś
 synced-tabs-fxa-sign-in = Pla Sync pśizjawiś
 synced-tabs-turn-on-sync = Sync zmóžniś

@@ -11,14 +11,6 @@ navbar-tooltip-instruction =
 
 ## Back
 
-main-context-menu-back =
-    .tooltiptext = Een pagina terug gaan
-    .aria-label = Terug
-    .accesskey = T
-navbar-tooltip-back =
-    .value = { main-context-menu-back.tooltiptext }
-toolbar-button-back =
-    .label = { main-context-menu-back.aria-label }
 # Variables
 #   $shortcut (String) - A keyboard shortcut for the Go Back command.
 main-context-menu-back-2 =
@@ -36,14 +28,6 @@ toolbar-button-back-2 =
 
 ## Forward
 
-main-context-menu-forward =
-    .tooltiptext = Een pagina vooruit gaan
-    .aria-label = Vooruit
-    .accesskey = V
-navbar-tooltip-forward =
-    .value = { main-context-menu-forward.tooltiptext }
-toolbar-button-forward =
-    .label = { main-context-menu-forward.aria-label }
 # Variables
 #   $shortcut (String) - A keyboard shortcut for the Go Forward command.
 main-context-menu-forward-2 =
@@ -99,43 +83,41 @@ toolbar-button-fxaccount =
 main-context-menu-page-save =
     .label = Pagina opslaan als…
     .accesskey = p
-toolbar-button-page-save =
-    .label = { main-context-menu-page-save.label }
 
 ## Simple menu items
 
-main-context-menu-bookmark-add =
-    .aria-label = Bladwijzer voor deze pagina maken
-    .accesskey = m
-    .tooltiptext = Bladwijzer voor deze pagina maken
+main-context-menu-bookmark-page =
+    .aria-label = Bladwijzer voor pagina maken…
+    .accesskey = w
+    .tooltiptext = Bladwijzer voor pagina maken
 # This menuitem is only visible on macOS
-# Cannot be shown at the same time as main-context-menu-bookmark-edit-mac,
+# Cannot be shown at the same time as main-context-menu-edit-bookmark-mac,
 # so should probably have the same access key if possible.
-main-context-menu-bookmark-add-mac =
-    .label = Bladwijzer van pagina maken
-    .accesskey = m
+main-context-menu-bookmark-page-mac =
+    .label = Bladwijzer voor pagina maken…
+    .accesskey = w
 # This menuitem is only visible on macOS
-# Cannot be shown at the same time as main-context-menu-bookmark-add-mac,
+# Cannot be shown at the same time as main-context-menu-bookmark-page-mac,
 # so should probably have the same access key if possible.
-main-context-menu-bookmark-edit-mac =
-    .label = Bladwijzer bewerken
+main-context-menu-edit-bookmark-mac =
+    .label = Bladwijzer bewerken…
     .accesskey = w
 # Variables
 #   $shortcut (String) - A keyboard shortcut for the add bookmark command.
-main-context-menu-bookmark-add-with-shortcut =
-    .aria-label = Bladwijzer voor deze pagina maken
-    .accesskey = m
-    .tooltiptext = Bladwijzer voor deze pagina maken ({ $shortcut })
-main-context-menu-bookmark-change =
-    .aria-label = Deze bladwijzer bewerken
-    .accesskey = m
-    .tooltiptext = Deze bladwijzer bewerken
+main-context-menu-bookmark-page-with-shortcut =
+    .aria-label = Bladwijzer voor pagina maken…
+    .accesskey = w
+    .tooltiptext = Bladwijzer voor pagina maken ({ $shortcut })
+main-context-menu-edit-bookmark =
+    .aria-label = Bladwijzer bewerken…
+    .accesskey = w
+    .tooltiptext = Bladwijzer bewerken
 # Variables
 #   $shortcut (String) - A keyboard shortcut for the edit bookmark command.
-main-context-menu-bookmark-change-with-shortcut =
-    .aria-label = Deze bladwijzer bewerken
-    .accesskey = m
-    .tooltiptext = Deze bladwijzer bewerken ({ $shortcut })
+main-context-menu-edit-bookmark-with-shortcut =
+    .aria-label = Bladwijzer bewerken…
+    .accesskey = w
+    .tooltiptext = Bladwijzer bewerken ({ $shortcut })
 main-context-menu-open-link =
     .label = Koppeling openen
     .accesskey = o
@@ -151,11 +133,8 @@ main-context-menu-open-link-new-window =
 main-context-menu-open-link-new-private-window =
     .label = Koppeling openen in nieuw privévenster
     .accesskey = r
-main-context-menu-bookmark-this-link =
-    .label = Bladwijzer voor deze koppeling maken
-    .accesskey = m
-main-context-menu-bookmark-link =
-    .label = Bladwijzer maken
+main-context-menu-bookmark-link-2 =
+    .label = Bladwijzer maken…
     .accesskey = B
 main-context-menu-save-link =
     .label = Koppeling opslaan als…
@@ -164,11 +143,6 @@ main-context-menu-save-link-to-pocket =
     .label = Koppeling opslaan naar { -pocket-brand-name }
     .accesskey = o
 
-## The access keys for "Copy Link Location" and "Copy Email Address"
-## should be the same if possible; the two context menu items
-## are mutually exclusive.
-
-
 ## The access keys for "Copy Link" and "Copy Email Address"
 ## should be the same if possible; the two context menu items
 ## are mutually exclusive.
@@ -176,12 +150,17 @@ main-context-menu-save-link-to-pocket =
 main-context-menu-copy-email =
     .label = E-mailadres kopiëren
     .accesskey = m
-main-context-menu-copy-link =
-    .label = Koppelingslocatie kopiëren
-    .accesskey = p
+main-context-menu-copy-phone =
+    .label = Telefoonnummer kopiëren
+    .accesskey = o
 main-context-menu-copy-link-simple =
     .label = Koppeling kopiëren
     .accesskey = K
+# This command copies the link, removing additional
+# query parameters used to track users across sites.
+main-context-menu-strip-on-share-link =
+    .label = Koppeling zonder websitetracking kopiëren
+    .accesskey = i
 
 ## Media (video/audio) controls
 ##
@@ -204,26 +183,6 @@ main-context-menu-media-mute =
 main-context-menu-media-unmute =
     .label = Dempen opheffen
     .accesskey = D
-main-context-menu-media-play-speed =
-    .label = Afspeelsnelheid
-    .accesskey = f
-main-context-menu-media-play-speed-slow =
-    .label = Langzaam (0,5×)
-    .accesskey = L
-main-context-menu-media-play-speed-normal =
-    .label = Normaal
-    .accesskey = N
-main-context-menu-media-play-speed-fast =
-    .label = Snel (1,25×)
-    .accesskey = S
-main-context-menu-media-play-speed-faster =
-    .label = Sneller (1,5×)
-    .accesskey = r
-# "Ludicrous" is a reference to the movie "Space Balls" and is meant
-# to say that this speed is very fast.
-main-context-menu-media-play-speed-fastest =
-    .label = Belachelijk (2×)
-    .accesskey = B
 main-context-menu-media-play-speed-2 =
     .label = Snelheid
     .accesskey = d
@@ -261,23 +220,12 @@ main-context-menu-media-video-leave-fullscreen =
     .accesskey = v
 # This is used when right-clicking on a video in the
 # content area when the Picture-in-Picture feature is enabled.
-main-context-menu-media-pip =
-    .label = Picture-in-Picture
-    .accesskey = u
-# This is used when right-clicking on a video in the
-# content area when the Picture-in-Picture feature is enabled.
 main-context-menu-media-watch-pip =
     .label = Picture-in-picture bekijken
     .accesskey = u
 main-context-menu-image-reload =
     .label = Afbeelding vernieuwen
     .accesskey = r
-main-context-menu-image-view =
-    .label = Afbeelding bekijken
-    .accesskey = f
-main-context-menu-video-view =
-    .label = Video bekijken
-    .accesskey = i
 main-context-menu-image-view-new-tab =
     .label = Afbeelding openen in nieuw tabblad
     .accesskey = A
@@ -287,15 +235,6 @@ main-context-menu-video-view-new-tab =
 main-context-menu-image-copy =
     .label = Afbeelding kopiëren
     .accesskey = k
-main-context-menu-image-copy-location =
-    .label = Afbeeldingslocatie kopiëren
-    .accesskey = o
-main-context-menu-video-copy-location =
-    .label = Videolocatie kopiëren
-    .accesskey = o
-main-context-menu-audio-copy-location =
-    .label = Audiolocatie kopiëren
-    .accesskey = o
 main-context-menu-image-copy-link =
     .label = Afbeeldingskoppeling kopiëren
     .accesskey = o
@@ -311,12 +250,12 @@ main-context-menu-image-save-as =
 main-context-menu-image-email =
     .label = Afbeelding e-mailen…
     .accesskey = a
-main-context-menu-image-set-as-background =
-    .label = Als bureaubladachtergrond instellen…
-    .accesskey = c
 main-context-menu-image-set-image-as-background =
     .label = Afbeelding als bureaubladachtergrond instellen…
     .accesskey = f
+main-context-menu-image-copy-text =
+    .label = Tekst van afbeelding kopiëren
+    .accesskey = k
 main-context-menu-image-info =
     .label = Afbeeldingsinfo bekijken
     .accesskey = i
@@ -329,9 +268,6 @@ main-context-menu-video-save-as =
 main-context-menu-audio-save-as =
     .label = Audio opslaan als…
     .accesskey = n
-main-context-menu-video-image-save-as =
-    .label = Momentopname opslaan als…
-    .accesskey = M
 main-context-menu-video-take-snapshot =
     .label = Momentopname maken…
     .accesskey = M
@@ -341,24 +277,12 @@ main-context-menu-video-email =
 main-context-menu-audio-email =
     .label = Audio e-mailen…
     .accesskey = a
-main-context-menu-plugin-play =
-    .label = Deze plug-in activeren
-    .accesskey = c
-main-context-menu-plugin-hide =
-    .label = Deze plug-in verbergen
-    .accesskey = v
 main-context-menu-save-to-pocket =
     .label = Pagina opslaan naar { -pocket-brand-name }
     .accesskey = k
 main-context-menu-send-to-device =
     .label = Pagina naar apparaat verzenden
     .accesskey = d
-main-context-menu-view-background-image =
-    .label = Achtergrondafbeelding bekijken
-    .accesskey = h
-main-context-menu-generate-new-password =
-    .label = Aangemaakte wachtwoord gebruiken…
-    .accesskey = g
 
 ## The access keys for "Use Saved Login" and "Use Saved Password"
 ## should be the same if possible; the two context menu items
@@ -373,6 +297,9 @@ main-context-menu-use-saved-password =
 
 ##
 
+main-context-menu-use-relay-mask =
+    .label = { -relay-brand-short-name }-e-mailmasker gebruiken
+    .accesskey = m
 main-context-menu-suggest-strong-password =
     .label = Sterk wachtwoord voorstellen…
     .accesskey = S
@@ -400,9 +327,9 @@ main-context-menu-frame-open-window =
 main-context-menu-frame-reload =
     .label = Deelvenster vernieuwen
     .accesskey = n
-main-context-menu-frame-bookmark =
-    .label = Bladwijzer voor dit deelvenster maken
-    .accesskey = m
+main-context-menu-frame-add-bookmark =
+    .label = Bladwijzer voor frame maken…
+    .accesskey = w
 main-context-menu-frame-save-as =
     .label = Deelvenster opslaan als…
     .accesskey = r
@@ -415,9 +342,9 @@ main-context-menu-frame-view-source =
 main-context-menu-frame-view-info =
     .label = Deelvensterinfo bekijken
     .accesskey = i
-main-context-menu-print-selection =
-    .label = Selectie afdrukken
-    .accesskey = d
+main-context-menu-print-selection-2 =
+    .label = Selectie afdrukken…
+    .accesskey = a
 main-context-menu-view-selection-source =
     .label = Bron van selectie bekijken
     .accesskey = B
@@ -430,18 +357,12 @@ main-context-menu-take-frame-screenshot =
 main-context-menu-view-page-source =
     .label = Paginabron bekijken
     .accesskey = b
-main-context-menu-view-page-info =
-    .label = Pagina-info bekijken
-    .accesskey = i
 main-context-menu-bidi-switch-text =
     .label = Tekstrichting omkeren
     .accesskey = t
 main-context-menu-bidi-switch-page =
     .label = Paginarichting omkeren
     .accesskey = a
-main-context-menu-inspect-element =
-    .label = Element inspecteren
-    .accesskey = E
 main-context-menu-inspect =
     .label = Inspecteren
     .accesskey = I
@@ -455,3 +376,6 @@ main-context-menu-eme-learn-more =
 main-context-menu-open-link-in-container-tab =
     .label = Koppeling openen in een nieuw { $containerName }-tabblad
     .accesskey = t
+main-context-menu-reveal-password =
+    .label = Wachtwoord onthullen
+    .accesskey = u

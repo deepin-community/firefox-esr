@@ -8,13 +8,11 @@
 newtab-page-title = Nowo karta
 newtab-settings-button =
     .title = Napasuj strōna nowyj karty
-
-newtab-personalize-button-label = Napasuj
-    .title = Napasuj nowo karta
-    .aria-label = Napasuj nowo karta
 newtab-personalize-icon-label =
     .title = Napasuj nowo karta
     .aria-label = Napasuj nowo karta
+newtab-personalize-dialog-label =
+    .aria-label = Napasuj
 
 ## Search box component.
 
@@ -22,8 +20,6 @@ newtab-personalize-icon-label =
 newtab-search-box-search-button =
     .title = Szukej
     .aria-label = Szukej
-
-newtab-search-box-search-the-web-text = Szukej w internecie
 
 # Variables
 #  $engine (String): the name of the user's default search engine
@@ -40,11 +36,7 @@ newtab-search-box-handoff-input-no-engine =
     .title = Szukej abo wkludź adresa
     .aria-label = Szukej abo wkludź adresa
 
-newtab-search-box-search-the-web-input =
-    .placeholder = Szukej w internecie
-    .title = Szukej w internecie
-    .aria-label = Szukej w internecie
-
+newtab-search-box-text = Szukej w internecie
 newtab-search-box-input =
     .placeholder = Szukej w internecie
     .aria-label = Szukej w internecie
@@ -52,7 +44,6 @@ newtab-search-box-input =
 ## Top Sites - General form dialog.
 
 newtab-topsites-add-search-engine-header = Przidej wyszukowarka
-newtab-topsites-add-topsites-header = Nowo topowo strōna
 newtab-topsites-add-shortcut-header = Nowy skrōt
 newtab-topsites-edit-topsites-header = Edytuj topowo strōna
 newtab-topsites-edit-shortcut-header = Edytuj skrōt
@@ -178,6 +169,12 @@ newtab-label-sponsored = { $sponsorOrSource } · Spōnsorowane
 #  $sponsor (String): This is the name of a sponsor
 newtab-label-sponsored-by = Spōnsorowane ôd: { $sponsor }
 
+# This string is used under the image of story cards to indicate source and time to read
+# Variables:
+#  $source (String): This is the name of a company or their domain
+#  $timeToRead (Number): This is the estimated number of minutes to read this story
+newtab-label-source-read-time = { $source } · { $timeToRead } min
+
 ## Section Menu: These strings are displayed in the section context menu and are
 ## meant as a call to action for the given section.
 
@@ -202,7 +199,6 @@ newtab-section-expand-section-label =
 ## Section Headers.
 
 newtab-section-header-topsites = Topowe strōny
-newtab-section-header-highlights = Szumne
 newtab-section-header-recent-activity = Niydowno aktywność
 # Variables:
 #  $provider (String): Name of the corresponding content provider.
@@ -217,7 +213,6 @@ newtab-empty-section-highlights = Zacznij przeglōndać internet, a my pokożymy
 #  $provider (String): Name of the content provider for this section, e.g "Pocket".
 newtab-empty-section-topstories = To tela. Wejrzij sam niyskorzij za nowymi artiklami ôd { $provider }. Niy umisz sie doczkać? Ôbier popularny tymat, coby znojś inkszo ciekawo zawartość z cołkigo neca.
 
-
 ## Empty Section (Content Discovery Experience). These show when there are no more stories or when some stories fail to load.
 
 newtab-discovery-empty-section-topstories-header = Wszysko przeczytane!
@@ -231,10 +226,17 @@ newtab-discovery-empty-section-topstories-timed-out = Niy podarziło sie blank z
 
 # This is shown at the bottom of the trending stories section and precedes a list of links to popular topics.
 newtab-pocket-read-more = Popularne tymaty:
+newtab-pocket-new-topics-title = Chcesz wiyncyj artykułōw? Wejrzij na te popularne tymaty: { -pocket-brand-name }
 newtab-pocket-more-recommendations = Wiyncyj rekōmyndowanych
 newtab-pocket-learn-more = Przewiydz sie wiyncyj
 newtab-pocket-cta-button = Dostōń ze { -pocket-brand-name(case: "gen") }
 newtab-pocket-cta-text = Spamiyntuj we { -pocket-brand-name(case: "loc") } teksty, co ci pasujōm, coby durch mieć co ciekawego do poczytanio.
+newtab-pocket-pocket-firefox-family = { -pocket-brand-name } je tajlōm familije { -brand-product-name }
+
+## Pocket Final Card Section.
+## This is for the final card in the Pocket grid.
+
+## Pocket content onboarding experience dialog and modal for new users seeing the Pocket section for the first time, shown as the first item in the Pocket section.
 
 ## Error Fallback Content.
 ## This message and suggested action link are shown in each section of UI that fails to render.
@@ -259,11 +261,4 @@ newtab-custom-pocket-sponsored = Spōnsorowane nowiny
 newtab-custom-recent-title = Niydowno aktywność
 newtab-custom-recent-subtitle = Wybōr z niydownych strōn i zawartości
 newtab-custom-close-button = Zawrzij
-
-# For the "Snippets" feature traditionally on about:home.
-# Alternative translation options: "Small Note" or something that
-# expresses the idea of "a small message, shortened from something else,
-# and non-essential but also not entirely trivial and useless.
-newtab-custom-snippets-title = Krōtkie informacyje
-newtab-custom-snippets-subtitle = Dorady i nowiny ze { -vendor-short-name } a aplikacyje { -brand-product-name }
 newtab-custom-settings = Inksze nasztalowania

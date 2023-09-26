@@ -5,9 +5,9 @@
 
 ## Strings used for device manager
 
-devmgr =
+devmgr-window =
     .title = Saugumo priemonių tvarkytuvė
-    .style = width: 67em; height: 32em;
+    .style = min-width: 67em; min-height: 32em;
 
 devmgr-devlist =
     .label = Saugumo moduliai ir priemonės
@@ -115,8 +115,6 @@ devinfo-label =
 
 devinfo-serialnum =
     .label = Numeris
-
-fips-nonempty-password-required = Norint dirbti FIPS veiksenoje, reikia turėti tiek pagrindinių slaptažodžių, kiek turite saugumo priemonių. Prašom sukurti pagrindinius slaptažodžius prieš įjungiant FIPS veikseną.
 
 fips-nonempty-primary-password-required = Norint dirbti FIPS veiksenoje, reikia turėti tiek pagrindinių slaptažodžių, kiek turite saugumo priemonių. Prašom sukurti pagrindinius slaptažodžius prieš įjungiant FIPS veikseną.
 unable-to-toggle-fips = Nepavyko pakeisti su saugumo priemone naudojamos FIPS veiksenos. Patariame užbaigti šios programos darbą, o tada paleisti ją iš naujo.

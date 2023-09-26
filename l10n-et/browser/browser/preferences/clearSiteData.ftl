@@ -2,9 +2,9 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-clear-site-data-window =
+clear-site-data-window2 =
     .title = Andmete kustutamine
-    .style = width: 35em
+    .style = min-width: 35em
 
 clear-site-data-description = Kustutades kõik { -brand-short-name }i poolt salvestatud küpsised ja saitide andmed, võib tulemuseks olla see, et sind logitakse saitidest välja ja võrguta režiimis kasutamiseks mõeldud andmed eemaldatakse. Vahemälus olevate andmete kustutamine ei mõjuta sinu kasutajakontosid.
 
@@ -50,14 +50,6 @@ clear-site-data-cache-empty =
     .accesskey = V
 
 clear-site-data-cache-info = Kustutamisel tuleb veebilehtede pildid ja andmed uuesti laadida
-
-clear-site-data-cancel =
-    .label = Loobu
-    .accesskey = L
-
-clear-site-data-clear =
-    .label = Kustuta
-    .accesskey = u
 
 clear-site-data-dialog =
     .buttonlabelaccept = Kustuta

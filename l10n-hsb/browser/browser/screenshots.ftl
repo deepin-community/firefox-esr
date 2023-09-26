@@ -2,13 +2,12 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-screenshots-context-menu = Foto wobrazowki činić
-
-screenshots-my-shots-button = Moje fota wobrazowki
-
 screenshot-toolbarbutton =
     .label = Foto wobrazowki
     .tooltiptext = Foto wobrazowki činić
+
+screenshot-shortcut =
+    .key = S
 
 screenshots-instructions = Ćehńće abo klikńće na stronu, zo byšće wobwod wubrał. Tłóčće na ESC, zo byšće přetorhnył.
 screenshots-cancel-button = Přetorhnyć
@@ -18,6 +17,14 @@ screenshots-download-button = Sćahnyć
 screenshots-download-button-tooltip = Foto wobrazowki sćahnyć
 screenshots-copy-button = Kopěrować
 screenshots-copy-button-tooltip = Foto wobrazowki do mjezyskłada kopěrować
+screenshots-download-button-title =
+    .title = Foto wobrazowki sćahnyć
+screenshots-copy-button-title =
+    .title = Foto wobrazowki do mjezyskłada kopěrować
+screenshots-cancel-button-title =
+    .title = Přetorhnyć
+screenshots-retry-button-title =
+    .title = Foto wobrazowki znowa spytać
 
 screenshots-meta-key =
     { PLATFORM() ->
@@ -41,8 +48,6 @@ screenshots-login-error-details = Njemóžachmy swoje foto wobrazowki składowa�
 screenshots-unshootable-page-error-title = Foto wobrazowki tuteje strony móžne njeje.
 screenshots-unshootable-page-error-details = To standardna webstrona njeje, tohodla foto wobrazowki wot njeje móžne njeje.
 
-screenshots-self-screenshot-error-title = Njemóžeće wobrazowku strony { -screenshots-brand-name } fotografować!
-
 screenshots-empty-selection-error-title = Waš wuběr je přemały
 
 screenshots-private-window-error-title = Firefox { -screenshots-brand-name } je w priwatnym modusu znjemóžnjeny
@@ -50,3 +55,6 @@ screenshots-private-window-error-details = Wodajće prošu njepřijomnosće. Dź
 
 screenshots-generic-error-title = Hopla! { -screenshots-brand-name } njefunguje.
 screenshots-generic-error-details = Njejsmy sej wěsći, štož je so stało. Chceće hišće raz spytać abo chceće druhu stronu fotografować?
+
+screenshots-too-large-error-title = Waše foto wobrazowki je so přitřihało, dokelž je přewulke było
+screenshots-too-large-error-details = Spytajće, region wubrać, kotryž je mjeńši hač 32.700 pikselow na jeho najdlěšim boku abo 124.900.000 pikselow na jeho cyłkownej płoninje.

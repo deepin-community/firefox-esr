@@ -2,17 +2,16 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-addons-window =
-    .title = పొడిగింతల నిర్వాహకి
-
 addons-page-title = పొడిగింతల నిర్వాహకి
 
 search-header =
     .placeholder = addons.mozilla.orgలో వెతకండి
     .searchbuttonlabel = వెతుకు
 
-search-header-shortcut =
-    .key = f
+## Variables
+##   $domain - Domain name where add-ons are available (e.g. addons.mozilla.org)
+
+##
 
 list-empty-installed =
     .value = మీ వద్ద ఈ రకమైన పొడిగింతలేమీ స్థాపించి లేవు
@@ -29,60 +28,11 @@ list-empty-find-updates =
 list-empty-button =
     .label = పొడిగింతలు గురించి మరింత తెలుసుకొనండి
 
-preferences =
-    { PLATFORM() ->
-        [windows] { -brand-short-name } ఎంపికలు
-       *[other] { -brand-short-name } అభిరుచులు
-    }
-sidebar-preferences-button-title =
-    .title =
-        { PLATFORM() ->
-            [windows] { -brand-short-name } ఎంపికలు
-           *[other] { -brand-short-name } అభిరుచులు
-        }
-
 show-unsigned-extensions-button =
     .label = కొన్ని పొడగింతలను తనిఖీ చేయలేకపోయాం
 
 show-all-extensions-button =
     .label = అన్ని పొడగింతలను చూపించు
-
-cmd-show-details =
-    .label = మరింత సమాచారం చూపించు
-    .accesskey = S
-
-cmd-find-updates =
-    .label = నవీకరణలను కనుగొను
-    .accesskey = F
-
-cmd-preferences =
-    .label =
-        { PLATFORM() ->
-            [windows] ఎంపికలు
-           *[other] అభిరుచులు
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] O
-           *[other] P
-        }
-
-cmd-enable-theme =
-    .label = ఐచ్ఛిక ధీముని దరించు
-    .accesskey = W
-
-cmd-disable-theme =
-    .label = ఎంపిక శైలిని దరించుటను ఆపు
-    .accesskey = W
-
-cmd-install-addon =
-    .label = స్థాపించు
-    .accesskey = I
-
-cmd-contribute =
-    .label = తోడ్పడండి
-    .accesskey = C
-    .tooltiptext = ఈ పొడిగింత అభివృద్దిలో పాల్గొనుము
 
 detail-version =
     .label = వెర్షను
@@ -106,6 +56,9 @@ detail-update-automatic =
 detail-update-manual =
     .label = ఆఫ్ చేయి
     .tooltiptext = తాజాకరణలను స్వయంచాలకంగా స్థాపించవద్దు
+
+# Used as a description for the option to allow or block an add-on in private windows.
+detail-private-browsing-label = అంతరంగిక కిటికీలలో నడుపు
 
 detail-private-browsing-on =
     .label = అనుమతించు
@@ -208,7 +161,6 @@ extensions-warning-update-security = పొడిగింత నవీకరణ
 extensions-warning-update-security-button = చేతనపరచు
     .title = పొడిగింత నవీకరణ రక్షణ పరిశీలనను చేతనముచేయి
 
-
 ## Strings connected to add-on updates
 
 addon-updates-check-for-updates = నవీకరణల కొరకు పరిశీలించు
@@ -294,7 +246,6 @@ extension-enabled-heading = చేతనం
 extension-disabled-heading = అచేతనం
 
 theme-enabled-heading = చేతనం
-theme-disabled-heading = అచేతనం
 
 plugin-enabled-heading = చేతనం
 plugin-disabled-heading = అచేతనం
@@ -331,8 +282,12 @@ addon-detail-update-check-label = తాజాకరణలకై చూడు
 addon-detail-private-browsing-allow = అనుమతించు
 addon-detail-private-browsing-disallow = అనుమతించ వద్దు
 
+## "sites with restrictions" (internally called "quarantined") are special domains
+## where add-ons are normally blocked for security reasons.
+
 ## This is the tooltip text for the recommended badges for an extension in about:addons. The
 ## badge is a small icon displayed next to an extension when it is recommended on AMO.
+
 
 ##
 
@@ -352,3 +307,29 @@ addons-heading-search-input =
 
 addon-page-options-button =
     .title = అన్ని పొడిగింతలు కొరకు సాధనములు
+
+## Detail notifications
+## Variables:
+##   $name (String): name of the add-on.
+
+## Detail notifications
+## Variables:
+##   $name (string) - Name of the add-on.
+
+# Variables:
+#   $version (String): application version.
+details-notification-incompatible = { $name } అనునది { -brand-short-name } { $version } తో సారూప్యంగా లేదు.
+
+details-notification-unsigned-and-disabled = { -brand-short-name }‌లో వాడుకకు { $name }‌ను తనిఖీ చేయలేకున్నాం కనుక అచేతనం చేసాం.
+details-notification-unsigned-and-disabled-link = మరింత సమాచారం
+
+details-notification-unsigned = { -brand-short-name }‌లో వాడుకకు { $name }‌ను తనిఖీ చేయబడలేదు. జాగ్రత్తతో కొనసాగండి.
+details-notification-unsigned-link = మరింత సమాచారం
+
+details-notification-blocked = రక్షణ లేదా స్థిరత్వ సమస్యల కారణంగా { $name } అచేతనపరచబడింది.
+details-notification-blocked-link = మరింత సమాచారం
+
+details-notification-softblocked = { $name } రక్షణ లేదా స్థిరత్వ సమస్యలకు కారణం.
+details-notification-softblocked-link = మరింత సమాచారం
+
+details-notification-gmp-pending = { $name } త్వరలో స్థాపించబడుతుంది.

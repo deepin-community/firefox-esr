@@ -5,17 +5,22 @@
 
 ## App Menu
 
-appmenuitem-customize-mode =
-    .label = Fərdiləşdir…
-
-## Zoom Controls
-
 appmenuitem-new-tab =
     .label = Yeni vərəq
 appmenuitem-new-window =
     .label = Yeni Pəncərə
 appmenuitem-new-private-window =
     .label = Yeni Məxfi Pəncərə
+appmenuitem-history =
+    .label = Tarixçə
+appmenuitem-downloads =
+    .label = Endirmələr
+appmenuitem-print =
+    .label = Çap et…
+appmenuitem-zoom =
+    .value = Yaxınlaşdırma
+appmenuitem-help =
+    .label = Kömək
 
 ## Zoom and Fullscreen Controls
 
@@ -23,14 +28,24 @@ appmenuitem-zoom-enlarge =
     .label = Yaxınlaşdır
 appmenuitem-zoom-reduce =
     .label = Uzaqlaşdır
-
 appmenuitem-fullscreen =
     .label = Tam ekran
 
 ## Firefox Account toolbar button and Sync panel in App menu.
 
-fxa-toolbar-sync-now =
-    .label = İndi Sinxronizə et
+# This is shown beneath the name of a device when that device has no open tabs
+appmenu-remote-tabs-notabs = Açıq vərəq yoxdur
+
+# This is shown when Sync is configured but syncing tabs is disabled.
+appmenu-remote-tabs-tabsnotsyncing = Digər cihazlarınızdakı vərəqlərin siyahısını görmək üçün vərəq sinxronizasiyasını aktivləşdirin.
+
+# This is shown when Sync is configured but this appears to be the only device attached to
+# the account. We also show links to download Firefox for android/ios.
+appmenu-remote-tabs-noclients = Digər cihazlarınızda olan vərəqləri burada görmək istərdiniz?
+
+appmenu-remote-tabs-connectdevice =
+    .label = Başqa Cihazı Qoş
+appmenu-remote-tabs-unverified = Hesabınız təsdiqlənməlidir.
 
 appmenuitem-save-page =
     .label = Fərqli saxla…
@@ -42,6 +57,22 @@ appmenuitem-save-page =
 ## performance profiles. To enable it go to profiler.firefox.com and click
 ## "Enable Profiler Menu Button".
 
+profiler-popup-button-idle =
+    .label = Profayler
+    .tooltiptext = Məhsuldarlıq profilini qeyd et
+
+## Profiler presets
+## They are shown in the popup's select box.
+
+
+# Presets and their l10n IDs are defined in the file
+# devtools/client/performance-new/popup/background.jsm.js
+# Please take care that the same values are also defined in devtools' perftools.ftl.
+
+
+# Presets and their l10n IDs are defined in the file
+# devtools/client/performance-new/shared/background.jsm.js
+# Please take care that the same values are also defined in devtools' perftools.ftl.
 
 ## History panel
 
@@ -62,9 +93,6 @@ appmenu-about =
     .accesskey = H
 appmenu-help-report-site-issue =
     .label = Sayt Problemini Bildir…
-appmenu-help-feedback-page =
-    .label = Əks əlaqə göndər…
-    .accesskey = g
 
 ## appmenu-help-enter-troubleshoot-mode and appmenu-help-exit-troubleshoot-mode
 ## are mutually exclusive, so it's possible to use the same accesskey for both.
@@ -81,7 +109,4 @@ appmenu-help-not-deceptive =
     .accesskey = d
 
 ## More Tools
-
-appmenu-taskmanager =
-    .label = Tapşırıq idarə edicisi
 

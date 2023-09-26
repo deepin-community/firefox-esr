@@ -8,9 +8,6 @@
 newtab-page-title = Nový panel
 newtab-settings-button =
     .title = Přizpůsobení stránky nového panelu
-newtab-personalize-button-label = Přizpůsobit
-    .title = Přizpůsobení nového panelu
-    .aria-label = Přizpůsobení nového panelu
 newtab-personalize-icon-label =
     .title = Přizpůsobení nového panelu
     .aria-label = Přizpůsobení nového panelu
@@ -23,13 +20,13 @@ newtab-personalize-dialog-label =
 newtab-search-box-search-button =
     .title = Vyhledat
     .aria-label = Vyhledat
-newtab-search-box-search-the-web-text = Vyhledat na webu
-# Variables
-#  $engine (String): the name of the user's default search engine
+
+# Variables:
+#   $engine (string) - The name of the user's default search engine
 newtab-search-box-handoff-text = Zadejte webovou adresu nebo dotaz pro vyhledávač { $engine }
 newtab-search-box-handoff-text-no-engine = Zadejte webovou adresu nebo dotaz pro vyhledávač
-# Variables
-#  $engine (String): the name of the user's default search engine
+# Variables:
+#   $engine (string) - The name of the user's default search engine
 newtab-search-box-handoff-input =
     .placeholder = Zadejte webovou adresu nebo dotaz pro vyhledávač { $engine }
     .title = Zadejte webovou adresu nebo dotaz pro vyhledávač { $engine }
@@ -38,10 +35,7 @@ newtab-search-box-handoff-input-no-engine =
     .placeholder = Zadejte webovou adresu nebo dotaz pro vyhledávač
     .title = Zadejte webovou adresu nebo dotaz pro vyhledávač
     .aria-label = Zadejte webovou adresu nebo dotaz pro vyhledávač
-newtab-search-box-search-the-web-input =
-    .placeholder = Vyhledat na webu
-    .title = Vyhledat na webu
-    .aria-label = Vyhledat na webu
+
 newtab-search-box-text = Vyhledat na webu
 newtab-search-box-input =
     .placeholder = Vyhledat na webu
@@ -50,17 +44,18 @@ newtab-search-box-input =
 ## Top Sites - General form dialog.
 
 newtab-topsites-add-search-engine-header = Přidat vyhledávač
-newtab-topsites-add-topsites-header = Nová top stránka
 newtab-topsites-add-shortcut-header = Nová zkratka
 newtab-topsites-edit-topsites-header = Upravit top stránku
 newtab-topsites-edit-shortcut-header = Upravit zkratku
 newtab-topsites-title-label = Název stránky
 newtab-topsites-title-input =
     .placeholder = Zadejte název
+
 newtab-topsites-url-label = URL
 newtab-topsites-url-input =
     .placeholder = Zadejte nebo vložte URL adresu
 newtab-topsites-url-validation = Je vyžadována platná URL
+
 newtab-topsites-image-url-label = URL adresa vlastního obrázku
 newtab-topsites-use-image-link = Použít vlastní obrázek…
 newtab-topsites-image-validation = Obrázek se nepodařilo načíst. Zkuste jinou URL adresu.
@@ -89,13 +84,15 @@ newtab-topsite-sponsored = Sponzorováno
 newtab-menu-section-tooltip =
     .title = Otevře nabídku
     .aria-label = Otevře nabídku
+
 # Tooltip for dismiss button
 newtab-dismiss-button-tooltip =
     .title = Odstranit
     .aria-label = Odstranit
+
 # This tooltip is for the context menu of Pocket cards or Topsites
 # Variables:
-#  $title (String): The label or hostname of the site. This is for screen readers when the context menu button is focused/active.
+#   $title (string) - The label or hostname of the site. This is for screen readers when the context menu button is focused/active.
 newtab-menu-content-tooltip =
     .title = Otevře nabídku
     .aria-label = Otevřít kontextovou nabídku pro { $title }
@@ -167,14 +164,22 @@ newtab-label-removed-bookmark = Záložka odebrána
 newtab-label-recommended = Populární
 newtab-label-saved = Uloženo do { -pocket-brand-name(case: "gen") }
 newtab-label-download = Staženo
+
 # This string is used in the story cards to indicate sponsored content
 # Variables:
-#  $sponsorOrSource (String): This is the name of a company or their domain
+#   $sponsorOrSource (string) - The name of a company or their domain
 newtab-label-sponsored = { $sponsorOrSource } · sponzrováno
+
 # This string is used at the bottom of story cards to indicate sponsored content
 # Variables:
-#  $sponsor (String): This is the name of a sponsor
+#   $sponsor (string) - The name of a sponsor
 newtab-label-sponsored-by = Sponzorováno společností { $sponsor }
+
+# This string is used under the image of story cards to indicate source and time to read
+# Variables:
+#   $source (string) - The name of a company or their domain
+#   $timeToRead (number) - The estimated number of minutes to read this story
+newtab-label-source-read-time = { $source } · { $timeToRead } min.
 
 ## Section Menu: These strings are displayed in the section context menu and are
 ## meant as a call to action for the given section.
@@ -200,18 +205,18 @@ newtab-section-expand-section-label =
 ## Section Headers.
 
 newtab-section-header-topsites = Top stránky
-newtab-section-header-highlights = Vybrané
 newtab-section-header-recent-activity = Nedávná aktivita
 # Variables:
-#  $provider (String): Name of the corresponding content provider.
+#   $provider (string) - Name of the corresponding content provider.
 newtab-section-header-pocket = Doporučení ze služby { $provider }
 
 ## Empty Section States: These show when there are no more items in a section. Ex. When there are no more Pocket story recommendations, in the space where there would have been stories, this is shown instead.
 
 newtab-empty-section-highlights = Začněte prohlížet a my vám zde ukážeme některé skvělé články, videa a další stránky, které jste nedávno viděli nebo uložili do záložek.
+
 # Ex. When there are no more Pocket story recommendations, in the space where there would have been stories, this is shown instead.
 # Variables:
-#  $provider (String): Name of the content provider for this section, e.g "Pocket".
+#   $provider (string) - Name of the content provider for this section, e.g "Pocket".
 newtab-empty-section-topstories = Už jste všechno přečetli. Další články ze služby { $provider } tu najdete zase později. Ale pokud se nemůžete dočkat, vyberte své oblíbené téma a podívejte se na další velké články z celého webu.
 
 ## Empty Section (Content Discovery Experience). These show when there are no more stories or when some stories fail to load.
@@ -226,11 +231,29 @@ newtab-discovery-empty-section-topstories-timed-out = Jejda, při načítání o
 ## Pocket Content Section.
 
 # This is shown at the bottom of the trending stories section and precedes a list of links to popular topics.
-newtab-pocket-read-more = Populární témata:
+newtab-pocket-read-more = Oblíbená témata:
+newtab-pocket-new-topics-title = Chcete další články? Podívejte se na oblíbené témata v { -pocket-brand-name(case: "loc") }.
 newtab-pocket-more-recommendations = Další doporučení
 newtab-pocket-learn-more = Zjistit více
 newtab-pocket-cta-button = Získejte { -pocket-brand-name(case: "acc") }
 newtab-pocket-cta-text = Ukládejte si články do { -pocket-brand-name(case: "gen") } a užívejte si skvělé čtení.
+newtab-pocket-pocket-firefox-family = { -pocket-brand-name } je součástí rodiny { -brand-product-name(case: "gen") }
+
+## Pocket Final Card Section.
+## This is for the final card in the Pocket grid.
+
+# A save to Pocket button that shows over the card thumbnail on hover.
+newtab-pocket-save = Uložit
+newtab-pocket-saved = Uloženo
+
+## Pocket content onboarding experience dialog and modal for new users seeing the Pocket section for the first time, shown as the first item in the Pocket section.
+
+newtab-pocket-onboarding-discover = Objevte to nejlepší na webu
+newtab-pocket-onboarding-cta =
+    { -brand-product-name.case-status ->
+        [with-cases] { -pocket-brand-name } prozkoumává rozmanitou škálu publikací a přináší informativní, inspirativní a důvěryhodný obsah přímo do { -brand-product-name(case: "gen") }.
+       *[no-cases] { -pocket-brand-name } prozkoumává rozmanitou škálu publikací a přináší informativní, inspirativní a důvěryhodný obsah přímo do prohlížeče { -brand-product-name }.
+    }
 
 ## Error Fallback Content.
 ## This message and suggested action link are shown in each section of UI that fails to render.
@@ -242,6 +265,8 @@ newtab-error-fallback-refresh-link = Opětovným načtením stránky to zkuste z
 
 newtab-custom-shortcuts-title = Zkratky
 newtab-custom-shortcuts-subtitle = Uložené nebo navštěvované stránky
+# Variables
+#   $num (number) - Number of rows to display
 newtab-custom-row-selector =
     { $num ->
         [one] { $num } řádek
@@ -250,15 +275,10 @@ newtab-custom-row-selector =
     }
 newtab-custom-sponsored-sites = Sponzorované zkratky
 newtab-custom-pocket-title = Doporučeno službou { -pocket-brand-name }
-newtab-custom-pocket-subtitle = Výjimečný obsah vybraný službou { -pocket-brand-name }, která je součástí { -brand-product-name(case: "gen") }
+newtab-custom-pocket-subtitle = Výjimečný obsah vybraný službou { -pocket-brand-name }, která je součástí rodiny { -brand-product-name(case: "gen") }
 newtab-custom-pocket-sponsored = Sponzorované články
+newtab-custom-pocket-show-recent-saves = Zobrazit nedávno uložené
 newtab-custom-recent-title = Nedávná aktivita
 newtab-custom-recent-subtitle = Výběr z nedávných stránek a obsahu
 newtab-custom-close-button = Zavřít
-# For the "Snippets" feature traditionally on about:home.
-# Alternative translation options: "Small Note" or something that
-# expresses the idea of "a small message, shortened from something else,
-# and non-essential but also not entirely trivial and useless.
-newtab-custom-snippets-title = Útržky
-newtab-custom-snippets-subtitle = Tipy a novinky od { -vendor-short-name(case: "gen") } a aplikace { -brand-product-name }
 newtab-custom-settings = Další nastavení

@@ -2,12 +2,12 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-connection-window =
+connection-window2 =
     .title = Ryšio nuostatos
     .style =
         { PLATFORM() ->
-            [macos] width: 44em
-           *[other] width: 49em
+            [macos] min-width: 44em
+           *[other] min-width: 49em
         }
 
 connection-close-key =
@@ -35,10 +35,6 @@ connection-proxy-http = HTTP įgaliotasis serveris
     .accesskey = g
 connection-proxy-http-port = Prievadas
     .accesskey = P
-connection-proxy-http-sharing =
-    .label = Taip pat naudoti šį serverį jungiantis per FTP ir HTTPS
-    .accesskey = s
-
 connection-proxy-https-sharing =
     .label = Taip pat naudoti šį serverį jungiantis per HTTPS
     .accesskey = s
@@ -47,11 +43,6 @@ connection-proxy-https = HTTPS įgaliotasis serveris
     .accesskey = H
 connection-proxy-ssl-port = Prievadas
     .accesskey = i
-
-connection-proxy-ftp = FTP įgaliotasis serveris
-    .accesskey = F
-connection-proxy-ftp-port = Prievadas
-    .accesskey = e
 
 connection-proxy-socks = SOCKS kompiuteris
     .accesskey = C
@@ -69,9 +60,6 @@ connection-proxy-noproxy = Tiesiogiai jungtis prie
 
 connection-proxy-noproxy-desc = Pavyzdys: .mozilla.org, .lrs.lt, 192.168.1.0/24
 
-# Do not translate localhost, 127.0.0.1 and ::1.
-connection-proxy-noproxy-localhost-desc = Prisijungimai prie localhost, 127.0.0.1, ir ::1 niekada neina per įgaliotąjį serverį.
-
 # Do not translate "localhost", "127.0.0.1/8" and "::1". (You can translate "and".)
 connection-proxy-noproxy-localhost-desc-2 = Prisijungimai prie localhost, 127.0.0.1/8, ir ::1 niekada neina per įgaliotąjį serverį.
 
@@ -88,16 +76,14 @@ connection-proxy-autologin =
     .accesskey = b
     .tooltip = Pažymėjus šią parinktį, bus bandoma automatiškai patvirtinti tapatybę tuose įgaliotuosiuose serveriuose, kurių slaptažodžius naršyklė turi įsiminusi. Jei šis procesas nepavyktų, jūsų bus prašoma įvesti patikslintus duomenis.
 
+connection-proxy-autologin-checkbox =
+    .label = Neprašyti tapatybės patvirtinimo, jeigu slaptažodis įrašytas
+    .accesskey = b
+    .tooltiptext = Pažymėjus šią parinktį, bus bandoma automatiškai patvirtinti tapatybę tuose įgaliotuosiuose serveriuose, kurių slaptažodžius naršyklė turi įsiminusi. Jei šis procesas nepavyktų, jūsų bus prašoma įvesti patikslintus duomenis.
+
 connection-proxy-socks-remote-dns =
     .label = Įgaliotojo serverio DNS, kai naudojamas SOCKS v5
     .accesskey = d
-
-connection-dns-over-https =
-    .label = Įjungti DNS per HTTPS
-    .accesskey = j
-
-connection-dns-over-https-url-resolver = Naudoti teikėją
-    .accesskey = t
 
 # Variables:
 #   $name (String) - Display name or URL for the DNS over HTTPS provider

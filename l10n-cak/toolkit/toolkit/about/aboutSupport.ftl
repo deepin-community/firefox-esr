@@ -10,11 +10,6 @@ crashes-id = Nimaläj rub'i' ri rutzijol
 crashes-send-date = Taqon
 crashes-all-reports = Konojel ri taq rutzijol sachoj
 crashes-no-config = Re samajel re' man nuk'un ta richin yeruk'üt pe taq rutzijol sachoj.
-extensions-title = Taq k'amal
-extensions-name = B'i'aj
-extensions-enabled = Tzijon
-extensions-version = Ruwäch
-extensions-id = ID
 support-addons-title = Taq tz'aqat
 support-addons-name = B'i'aj
 support-addons-type = Ruwäch
@@ -60,12 +55,14 @@ app-basics-enabled-plugins = Tzijon taq nak'ab'äl
 app-basics-build-config = Runuk'ulem Molïk
 app-basics-user-agent = Rub'anel ri winäq
 app-basics-os = OS
+app-basics-os-theme = Ruwachinel Samajel Q'inoj
 # Rosetta is Apple's translation process to run apps containing x86_64
 # instructions on Apple Silicon. This should remain in English.
 app-basics-rosetta = Xtzalq'omïx Rosetta
 app-basics-memory-use = Rokisaxik rupam rujolom
 app-basics-performance = Rub'eyal nisamäj
 app-basics-service-workers = Samajela' pa samaj tz'ib'an kib'i'
+app-basics-third-party = Kiperaj aj rox Winäq
 app-basics-profiles = Taq ruwäch b'i'aj
 app-basics-launcher-process-status = Rub'anik K'aqonel
 app-basics-multi-process-support = Rutzuwach k'ïy tajin
@@ -76,6 +73,12 @@ app-basics-location-service-key-google = Google K'ojlib'äl Ewan Rutzij Samaj
 app-basics-safebrowsing-key-google = Google Safebrowsing Key
 app-basics-key-mozilla = Mozilla k'ojlib'äl ewan rutzij samaj
 app-basics-safe-mode = Ütz rub'anikil
+
+# Variables:
+#   $value (number) - Amount of data being stored
+#   $unit (string) - The unit of data being stored (e.g. MB)
+app-basics-data-size = { $value } { $unit }
+
 show-dir-label =
     { PLATFORM() ->
         [macos] Tik'ut pe pan ilonel
@@ -110,6 +113,13 @@ graphics-window-protocol = Rub'eyal Tzuwäch
 # Desktop environment in use on Linux (e.g. GNOME, KDE, XFCE, etc).
 graphics-desktop-environment = Ruk'ojlib'al Ajkematz'ib'
 place-database-title = Taq kik'ojlem cholxe'el tzij
+place-database-stats = Kimolob'a'
+place-database-stats-show = Kek'ut pe ri taq molob'a'
+place-database-stats-hide = Rewaxik molajilab'äl
+place-database-stats-entity = Moloj
+place-database-stats-count = Ajilab'äl
+place-database-stats-size-kib = Nimilem (KiB)
+place-database-stats-size-perc = Nimilem (%)
 place-database-integrity = Ch'ajch'ojri'ïl
 place-database-verify-integrity = Tinik'öx ch'ajch'ojri'ïl
 a11y-title = Okel
@@ -129,9 +139,6 @@ sandbox-sys-call-tid = TID
 sandbox-sys-call-proc-type = Ruwa tajinïk
 sandbox-sys-call-number = Syscall
 sandbox-sys-call-args = Taq rutzijol
-safe-mode-title = Titojtob'ëx ütz rub'anikil
-restart-in-safe-mode-label = Titikirisäx chik kik'in ri chupül taq tz'aqat…
-
 troubleshoot-mode-title = Kenik'öx taq k'ayewal
 restart-in-troubleshoot-mode-label = Kib'anikil taq K'ayewal…
 clear-startup-cache-title = Titojtob'ëx niyuj ri rujumej ruyakoj tikirib'äl
@@ -162,6 +169,8 @@ media-capabilities-title = Kisamaj K'oxom
 # List all the entries of the database.
 media-capabilities-enumerate = Ticholajïx cholxe'el
 
+## Codec support table
+
 ##
 
 intl-title = Elniminïk & Tzalq'omanri'ïl
@@ -188,37 +197,6 @@ remote-debugging-accepting-connections = Kek'ul taq okem
 remote-debugging-url = URL
 
 ##
-
-support-third-party-modules-title = Kiperaj Aj Rox Winäq
-support-third-party-modules-module = Ruyakb'al Peraj
-support-third-party-modules-version = Ruwäch Yakb'äl
-support-third-party-modules-vendor = Retamab'al B'anonel
-support-third-party-modules-occurrence = Taq ch'ob'oj
-support-third-party-modules-process = Ruwa tajinïk & ID
-support-third-party-modules-thread = Tzijonem
-support-third-party-modules-base = Rochochib'al imagebase
-support-third-party-modules-uptime = Q'ijul Rusamaj Tajinïk (ms)
-support-third-party-modules-duration = Ruramaj Samajinïk (ms)
-support-third-party-modules-status = B'anikil
-support-third-party-modules-status-loaded = Xsamajïx
-support-third-party-modules-status-blocked = Xq'at
-support-third-party-modules-status-redirected = Xtaq chik
-support-third-party-modules-empty = Man xesamajiïx ta kiperaj aj rox winäq
-support-third-party-modules-no-value = (Majun rajil)
-support-third-party-modules-button-open =
-    .title = Tijaq ri ruk'ojlemal yakb'äl…
-support-third-party-modules-expand =
-    .title = Tik'ut pe ri cholajin retamab'al
-support-third-party-modules-collapse =
-    .title = Tik'ol ri cholajin retamab'al
-support-third-party-modules-unsigned-icon =
-    .title = Man juxun ta re peraj
-support-third-party-modules-folder-icon =
-    .title = Tijaq ri ruk'ojlemal yakb'äl…
-support-third-party-modules-down-icon =
-    .title = Tik'ut pe ri cholajin retamab'al
-support-third-party-modules-up-icon =
-    .title = Tik'ol ri cholajin retamab'al
 
 # Variables
 # $days (Integer) - Number of days of crashes to log
@@ -314,11 +292,6 @@ webgl2-renderer = WebGL 2 runuk'uwachinel chajinel
 webgl2-version = WebGL 2 Ruwa chajinel
 webgl2-driver-extensions = WebGL 2 taq ruk'amal chajinel
 webgl2-extensions = WebGL 2 taq ruk'amal
-blocklisted-bug = Ri q'ëq cholb'äl ruma taq k'ayewal etaman kiwäch
-
-# Variables
-# $bugNumber (string) - String of bug number from Bugzilla
-bug-link = sachoj { $bugNumber }
 
 # Variables
 #   $bugNumber (string) - Bug number on Bugzilla
@@ -329,8 +302,6 @@ support-blocklisted-bug = Pa ri rucholajem q'atoj ruma k'ayewal etaman kiwa: <a 
 unknown-failure = Q'ëq cholb'äl: rub'itz'ib' sachoj { $failureCode }
 
 d3d11layers-crash-guard = D3D11 Chojmirisanel
-d3d11video-crash-guard = D3D11 Silowachib'äl ewanel rusik'ixik
-d3d9video-crash-guard = D3D9 Silowachib'äl Ewanel rusik'ixik
 glcontext-crash-guard = OpenGL
 wmfvpxvideo-crash-guard = WMF VPX Silowachib'äl Ewanel Rusik'ixik
 
@@ -375,15 +346,6 @@ launcher-process-status-unknown = Man etaman ta täq rub'anikil
 # $remoteWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
 multi-process-windows = { $remoteWindows }/{ $totalWindows }
-multi-process-status-0 = Tzijon ruma ri winäq
-multi-process-status-1 = Tzijon wi pe
-multi-process-status-2 = Chupun
-multi-process-status-4 = Chupun kuma ri taq samajib'äl richin okel
-multi-process-status-6 = Xchuputäj ruma xatz'ib'aj rucholajem tzij ri man koch'el ta
-multi-process-status-7 = Xchuputäj kuma ri taq tz'aqat
-multi-process-status-8 = Xb'an chi xchup
-multi-process-status-unknown = Man etaman ta rub'anikil
-
 # Variables
 # $fissionWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
@@ -392,7 +354,7 @@ fission-status-experiment-control = Xchup ruma ri tojtob'enel
 fission-status-experiment-treatment = Xtzij ruma ri tojtob'enel
 fission-status-disabled-by-e10s-env = Xchup ruma ri k'ojlib'äl
 fission-status-enabled-by-env = Xtzij ruma ri k'ojlib'äl
-fission-status-disabled-by-safe-mode = Xchup ruma ri jikïl b'anikil
+fission-status-disabled-by-env = Xchup ruma ri k'ojlib'äl
 fission-status-enabled-by-default = Xtzij wi pe
 fission-status-disabled-by-default = Xchup wi pe
 fission-status-enabled-by-user-pref = Xtzij ruma ri okisanel

@@ -23,6 +23,8 @@ profile-selection-delete-button =
     .label = Kustuta profiil...
     .accesskey = K
 
+profile-selection-conflict-message = Teine { -brand-product-name }i instants on teinud profiilidesse muudatusi. Enne uute muudatuste salvestamist pead sa { -brand-short-name }i taaskäivitama.
+
 ## Messages used in the profile manager
 
 profile-manager-description = { -brand-short-name } säilitab sinu kasutajasätteid, eelistusi ja muid andmeid sinu kasutajaprofiilina.

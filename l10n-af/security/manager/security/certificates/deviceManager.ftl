@@ -5,9 +5,9 @@
 
 ## Strings used for device manager
 
-devmgr =
+devmgr-window =
     .title = Toestelbestuurder
-    .style = width: 67em; height: 32em;
+    .style = min-width: 67em; min-height: 32em;
 
 devmgr-devlist =
     .label = Sekuriteitsmodules en -toestelle
@@ -107,8 +107,6 @@ devinfo-label =
 
 devinfo-serialnum =
     .label = Reeksnommer
-
-fips-nonempty-password-required = FIPS-modus vereis dat u 'n meesterwagwoord vir elke sekuriteitstoestel opstel. Stel die wagwoord op voor u probeer om FIPS-modus te aktiveer.
 
 unable-to-toggle-fips = Kon nie die FIPS-modus vir die sekuriteittoestel verander nie. Ons stel voor dat jy hierdie toepassing verlaat en herbegin.
 load-pk11-module-file-picker-title = Kies ’n PKCS#11-toestelaandrywer om te laai

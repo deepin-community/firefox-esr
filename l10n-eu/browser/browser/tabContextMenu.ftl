@@ -11,6 +11,12 @@ reload-tab =
 select-all-tabs =
     .label = Hautatu fitxa guztiak
     .accesskey = z
+tab-context-play-tab =
+    .label = Erreproduzitu fitxa
+    .accesskey = E
+tab-context-play-tabs =
+    .label = Erreproduzitu fitxak
+    .accesskey = r
 duplicate-tab =
     .label = Bikoiztu fitxa
     .accesskey = B
@@ -48,12 +54,9 @@ unpin-selected-tabs =
 bookmark-selected-tabs =
     .label = Egin fitxen laster-marka…
     .accesskey = s
-bookmark-tab =
-    .label = Egin fitxaren laster-marka
-    .accesskey = s
-reopen-in-container =
-    .label = Ireki berriro edukiontzian
-    .accesskey = b
+tab-context-bookmark-tab =
+    .label = Egin fitxaren laster-marka…
+    .accesskey = m
 tab-context-open-in-new-container-tab =
     .label = Ireki edukiontzi-fitxa berrian
     .accesskey = e
@@ -69,31 +72,9 @@ move-to-new-window =
 tab-context-close-multiple-tabs =
     .label = Itxi hainbat fitxa
     .accesskey = h
-tab-context-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Desegin fitxa ixtea
-            [one] Desegin fitxa ixtea
-           *[other] Desegin fitxak ixtea
-        }
-    .accesskey = D
-close-tab =
-    .label = Itxi fitxa
-    .accesskey = I
-close-tabs =
-    .label = Itxi fitxak
-    .accesskey = x
-move-tabs =
-    .label = Mugitu fitxak
-    .accesskey = M
-move-tab =
-    .label = Mugitu fitxa
-    .accesskey = M
 tab-context-share-url =
     .label = Partekatu
     .accesskey = a
-tab-context-share-more =
-    .label = Gehiago…
 
 ## Variables:
 ##  $tabCount (Number): the number of tabs that are affected by the action.
@@ -105,12 +86,11 @@ tab-context-reopen-closed-tabs =
            *[other] Ireki berriro itxitako fitxak
         }
     .accesskey = k
-tab-context-close-tabs =
+tab-context-close-n-tabs =
     .label =
         { $tabCount ->
             [1] Itxi fitxa
-            [one] Itxi fitxa
-           *[other] Itxi fitxak
+           *[other] Itxi { $tabCount } fitxa
         }
     .accesskey = x
 tab-context-move-tabs =
@@ -121,3 +101,11 @@ tab-context-move-tabs =
            *[other] Mugitu fitxak
         }
     .accesskey = M
+
+tab-context-send-tabs-to-device =
+    .label =
+        { $tabCount ->
+            [one] Bidali fitxa gailura
+           *[other] Bidali { $tabCount } fitxa gailura
+        }
+    .accesskey = d

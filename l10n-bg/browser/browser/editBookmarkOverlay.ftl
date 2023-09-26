@@ -2,17 +2,6 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-bookmark-overlay-name =
-    .value = Име:
-    .accesskey = И
-
-bookmark-overlay-location =
-    .value = Местоположение:
-    .accesskey = М
-
-bookmark-overlay-folder =
-    .value = Папка:
-
 bookmark-overlay-name-2 =
     .value = Име
     .accesskey = И
@@ -35,13 +24,15 @@ bookmark-overlay-folders-expander =
     .tooltiptextdown = { bookmark-overlay-folders-expander.tooltiptext }
     .tooltiptextup = Скриване
 
+bookmark-overlay-folders-expander2 =
+    .tooltiptext = Показване на всички папки с отметки
+
+bookmark-overlay-folders-expander-hide =
+    .tooltiptext = Скриване
+
 bookmark-overlay-new-folder-button =
     .label = Нова папка
     .accesskey = Н
-
-bookmark-overlay-tags =
-    .value = Етикети:
-    .accesskey = Е
 
 bookmark-overlay-tags-2 =
     .value = Етикети
@@ -55,9 +46,11 @@ bookmark-overlay-tags-expander =
     .tooltiptextdown = { bookmark-overlay-tags-expander.tooltiptext }
     .tooltiptextup = Скриване
 
-bookmark-overlay-keyword =
-    .value = Ключова дума:
-    .accesskey = К
+bookmark-overlay-tags-expander2 =
+    .tooltiptext = Всички етикети
+
+bookmark-overlay-tags-expander-hide =
+    .tooltiptext = Скриване
 
 bookmark-overlay-keyword-2 =
     .value = Ключова дума

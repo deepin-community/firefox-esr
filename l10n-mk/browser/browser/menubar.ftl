@@ -11,6 +11,8 @@
 
 ## Application Menu (macOS only)
 
+menu-application-preferences =
+    .label = Преференции
 menu-application-services =
     .label = Сервиси
 menu-application-hide-this =
@@ -38,15 +40,6 @@ menu-quit =
 # This menu-quit-mac string is only used on macOS.
 menu-quit-mac =
     .label = Излези од { -brand-shorter-name }
-
-# This menu-quit-button string is only used on Linux.
-menu-quit-button =
-    .label = { menu-quit.label }
-
-# This menu-quit-button-win string is only used on Windows.
-menu-quit-button-win =
-    .label = { menu-quit.label }
-    .tooltip = Излези од { -brand-shorter-name }
 
 menu-about =
     .label = За { -brand-shorter-name }
@@ -77,9 +70,6 @@ menu-file-open-location =
 menu-file-open-file =
     .label = Отвори датотека…
     .accesskey = О
-menu-file-close =
-    .label = Затвори
-    .accesskey = т
 menu-file-close-window =
     .label = Затвори го прозорецот
     .accesskey = п
@@ -92,9 +82,6 @@ menu-file-email-link =
 menu-file-print-setup =
     .label = Поставување на страницата…
     .accesskey = с
-menu-file-print-preview =
-    .label = Преглед за печатење
-    .accesskey = г
 menu-file-print =
     .label = Печати…
     .accesskey = ч
@@ -110,9 +97,6 @@ menu-file-go-offline =
 menu-edit =
     .label = Уредување
     .accesskey = е
-menu-edit-find-on =
-    .label = Пронајди во оваа страница…
-    .accesskey = р
 menu-edit-find-again =
     .label = Пронајди повторно
     .accesskey = а
@@ -128,9 +112,6 @@ menu-view =
 menu-view-toolbars-menu =
     .label = Алатници
     .accesskey = А
-menu-view-customize-toolbar =
-    .label = Прилагоди…
-    .accesskey = р
 menu-view-sidebar =
     .label = Странична лента
     .accesskey = н
@@ -178,6 +159,8 @@ menu-view-full-screen =
     .label = На цел екран
     .accesskey = ц
 
+## These menu items may use the same accesskey.
+
 ##
 
 menu-view-show-all-tabs =
@@ -212,12 +195,6 @@ menu-history-undo-window-menu =
 menu-bookmarks-menu =
     .label = Обележувачи
     .accesskey = б
-menu-bookmarks-show-all =
-    .label = Прикажи ги сите обележувачи
-menu-bookmark-this-page =
-    .label = Обележи ја оваа страница
-menu-bookmark-edit =
-    .label = Уреди го овој обележувач
 menu-bookmarks-all-tabs =
     .label = Обележи ги сите јазичиња…
 menu-bookmarks-toolbar =
@@ -235,32 +212,15 @@ menu-tools =
 menu-tools-downloads =
     .label = Преземања
     .accesskey = р
-menu-tools-addons =
-    .label = Додатоци
-    .accesskey = Д
 menu-tools-sync-now =
     .label = Синхронизирај сега
     .accesskey = С
-menu-tools-web-developer =
-    .label = Web Developer
-    .accesskey = W
 menu-tools-page-source =
     .label = Изворен код
     .accesskey = о
 menu-tools-page-info =
     .label = Информации за страницата
     .accesskey = И
-menu-preferences =
-    .label =
-        { PLATFORM() ->
-            [windows] Опции
-           *[other] Поставки
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] О
-           *[other] ф
-        }
 
 ## Window Menu
 
@@ -283,27 +243,6 @@ menu-window-bring-all-to-front =
 menu-help =
     .label = Помош
     .accesskey = ш
-menu-help-product =
-    .label = Помош за { -brand-shorter-name }
-    .accesskey = H
-menu-help-show-tour =
-    .label = Тура на { -brand-shorter-name }
-    .accesskey = o
-menu-help-keyboard-shortcuts =
-    .label = Кратенки за тастатура
-    .accesskey = K
-menu-help-troubleshooting-info =
-    .label = Информации за проблеми
-    .accesskey = И
-menu-help-feedback-page =
-    .label = Испрати коментар…
-    .accesskey = с
-menu-help-safe-mode-without-addons =
-    .label = Рестартирај со исклучени додатоци…
-    .accesskey = Р
-menu-help-safe-mode-with-addons =
-    .label = Рестрартирај со овозможени додатоци
-    .accesskey = R
 # Label of the Help menu item. Either this or
 # menu-help-notdeceptive is shown.
 menu-help-report-deceptive-site =

@@ -2,12 +2,12 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-connection-window =
+connection-window2 =
     .title = Paramètres de connexion
     .style =
         { PLATFORM() ->
-            [macos] width: 44em
-           *[other] width: 49em
+            [macos] min-width: 44em
+           *[other] min-width: 49em
         }
 
 connection-close-key =
@@ -35,10 +35,6 @@ connection-proxy-http = Servidor mandatari HTTP
     .accesskey = H
 connection-proxy-http-port = Pòrt
     .accesskey = P
-connection-proxy-http-sharing =
-    .label = Utilizar tanben aqueste servidor mandatari pel FTP e HTTPS
-    .accesskey = s
-
 connection-proxy-https-sharing =
     .label = Utilizar tanben aqueste servidor mandatari pel HTTPS
     .accesskey = t
@@ -46,11 +42,6 @@ connection-proxy-https-sharing =
 connection-proxy-https = Servidor mandatari HTTPS
     .accesskey = H
 connection-proxy-ssl-port = Pòrt
-    .accesskey = P
-
-connection-proxy-ftp = Servidor mandatari FTP
-    .accesskey = F
-connection-proxy-ftp-port = Pòrt
     .accesskey = P
 
 connection-proxy-socks = Òste SOCKS
@@ -69,11 +60,8 @@ connection-proxy-noproxy = Cap de servidor mandatari per
 
 connection-proxy-noproxy-desc = Exemple : .mozilla.org, .net.nz, 192.168.1.0/24
 
-# Do not translate localhost, 127.0.0.1 and ::1.
-connection-proxy-noproxy-localhost-desc = Las connexion a localhost, 127.0.0.1 e ::1 passan pas jamai per un servidor mandatari.
-
 # Do not translate "localhost", "127.0.0.1/8" and "::1". (You can translate "and".)
-connection-proxy-noproxy-localhost-desc-2 = Las connecions a localhors, 127.0.0.1/8, e ::1 passan pas jamai pel servidor mandatari.
+connection-proxy-noproxy-localhost-desc-2 = Las connexions a localhost, 127.0.0.1/8, e ::1 passan pas jamai pel servidor mandatari.
 
 connection-proxy-autotype =
     .label = URL de configuracion automatica de servidor mandatari
@@ -88,16 +76,14 @@ connection-proxy-autologin =
     .accesskey = g
     .tooltip = Aquesta opcion vos autentifica automaticament suls servidors proxy que lo senhal n'es enregistrat. Se l'autentificacion fracassa, lo senhal vos serà demandat.
 
+connection-proxy-autologin-checkbox =
+    .label = Me demandar pas de m'autentificar se lo senhal es enregistrat
+    .accesskey = g
+    .tooltiptext = Aquesta opcion vos autentifica automaticament suls servidors proxy que lo senhal n'es enregistrat. Se l'autentificacion fracassa, lo senhal vos serà demandat.
+
 connection-proxy-socks-remote-dns =
     .label = Proxy DNS en utilizant SOCKS v5
     .accesskey = d
-
-connection-dns-over-https =
-    .label = Activar lo DNS via HTTPS
-    .accesskey = v
-
-connection-dns-over-https-url-resolver = Utilizar lo provesidor
-    .accesskey = p
 
 # Variables:
 #   $name (String) - Display name or URL for the DNS over HTTPS provider

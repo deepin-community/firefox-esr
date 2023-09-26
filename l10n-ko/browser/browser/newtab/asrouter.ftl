@@ -7,7 +7,6 @@
 
 cfr-doorhanger-extension-heading = 추천 확장 기능
 cfr-doorhanger-feature-heading = 추천 기능
-cfr-doorhanger-pintab-heading = 사용해보기: 탭 고정
 
 ##
 
@@ -19,8 +18,6 @@ cfr-doorhanger-extension-cancel-button = 나중에
 
 cfr-doorhanger-extension-ok-button = 지금 추가
     .accesskey = A
-cfr-doorhanger-pintab-ok-button = 이 탭 고정
-    .accesskey = P
 
 cfr-doorhanger-extension-manage-settings-button = 추천 설정 관리
     .accesskey = M
@@ -66,18 +63,6 @@ cfr-doorhanger-extension-total-users =
        *[other] { $total } 사용자
     }
 
-cfr-doorhanger-pintab-description = 가장 많이 사용하는 사이트에 쉽게 접근하세요. 사이트를 탭으로 열어 둡니다(다시 시작할 때에도).
-
-## These messages are steps on how to use the feature and are shown together.
-
-cfr-doorhanger-pintab-step1 = 고정하려는 탭에서 <b>마우스 오른쪽 버튼을 클릭</b>하세요.
-cfr-doorhanger-pintab-step2 = 메뉴에서 <b>탭 고정</b>을 선택하세요.
-cfr-doorhanger-pintab-step3 = 사이트에 업데이트가 있으면 고정된 탭에 파란색 점이 표시됩니다.
-
-cfr-doorhanger-pintab-animation-pause = 일시 중지
-cfr-doorhanger-pintab-animation-resume = 계속
-
-
 ## Firefox Accounts Message
 
 cfr-doorhanger-bookmark-fxa-header = 어디서나 북마크 동기화
@@ -103,124 +88,9 @@ cfr-whatsnew-button =
     .label = 새 기능
     .tooltiptext = 새 기능
 
-cfr-whatsnew-panel-header = 새 기능
-
 cfr-whatsnew-release-notes-link-text = 출시 정보 읽기
 
-cfr-whatsnew-fx70-title = { -brand-short-name }는 이제 사용자의 개인 정보 보호를 위해 더 열심히 싸웁니다
-cfr-whatsnew-fx70-body = 최신 업데이트는 추적 방지 기능을 향상시키고 모든 사이트에 대해 안전한 비밀번호를 만드는 것이 그 어느때보다 쉬워졌습니다.
-
-cfr-whatsnew-tracking-protect-title = 추적기로부터 보호
-cfr-whatsnew-tracking-protect-body = { -brand-short-name }는 온라인에서 사용자를 따라다니는 많은 일반적인 소셜 및 교차 사이트 추적기를 차단합니다.
-cfr-whatsnew-tracking-protect-link-text = 보고서 보기
-
-# This string is displayed before a large numeral that indicates the total
-# number of tracking elements blocked. Don’t add $blockedCount to your
-# localization, because it would result in the number showing twice.
-cfr-whatsnew-tracking-blocked-title =
-    { $blockedCount ->
-       *[other] 추적기 차단됨
-    }
-cfr-whatsnew-tracking-blocked-subtitle = { DATETIME($earliestDate, month: "long", year: "numeric") } 이후
-cfr-whatsnew-tracking-blocked-link-text = 보고서 보기
-
-cfr-whatsnew-lockwise-backup-title = 비밀번호 백업
-cfr-whatsnew-lockwise-backup-body = 이제 로그인하는 곳 어디에서나 접근할 수 있는 안전한 비밀번호를 생성하세요.
-cfr-whatsnew-lockwise-backup-link-text = 백업 켜기
-
-cfr-whatsnew-lockwise-take-title = 비밀번호를 가지고 다니세요
-cfr-whatsnew-lockwise-take-body = { -lockwise-brand-short-name } 모바일 앱을 사용하면 어디서든 백업된 비밀번호에 안전하게 접근할 수 있습니다.
-cfr-whatsnew-lockwise-take-link-text = 앱 받기
-
-## Search Bar
-
-cfr-whatsnew-searchbar-title = 주소 표시줄에서 입력은 더 적게하고 더 많이 찾기
-cfr-whatsnew-searchbar-body-topsites = 이제 주소 표시줄을 선택하면, 상자가 확장되어 상위 사이트에 대한 링크가 표시됩니다.
-
-## Search bar
-
-cfr-whatsnew-searchbar-icon-alt-text = 돋보기 아이콘
-
-## Picture-in-Picture
-
-cfr-whatsnew-pip-header = 탐색하는 동안 동영상 시청
-cfr-whatsnew-pip-body = 화면 속 화면은 동영상을 떠 있는 창으로 띄워 다른 탭에서 작업하는 동안 볼 수 있습니다.
-cfr-whatsnew-pip-cta = 더 알아보기
-
-## Permission Prompt
-
-cfr-whatsnew-permission-prompt-header = 성가신 사이트 팝업 감소
-cfr-whatsnew-permission-prompt-body = { -brand-shorter-name }는 이제 사이트에서 자동으로 팝업 메시지를 보내도록 요청하는 것을 차단합니다.
-cfr-whatsnew-permission-prompt-cta = 더 알아보기
-
-## Fingerprinter Counter
-
-# This string is displayed before a large numeral that indicates the total
-# number of tracking elements blocked. Don’t add $fingerprinterCount to your
-# localization, because it would result in the number showing twice.
-cfr-whatsnew-fingerprinter-counter-header =
-    { $fingerprinterCount ->
-       *[other] 디지털 지문 차단됨
-    }
-cfr-whatsnew-fingerprinter-counter-body = { -brand-shorter-name }는 기기와 동작에 대한 정보를 몰래 수집하여 사용자의 광고 프로필을 만드는 많은 디지털 지문을 차단합니다.
-
-# Message variation when fingerprinters count is less than 10
-cfr-whatsnew-fingerprinter-counter-header-alt = 디지털 지문
-cfr-whatsnew-fingerprinter-counter-body-alt = { -brand-shorter-name }는 기기와 동작에 대한 정보를 몰래 수집하여 사용자의 광고 프로필을 만드는 디지털 지문을 차단할 수 있습니다.
-
-## Bookmark Sync
-
-cfr-doorhanger-sync-bookmarks-header = 이 북마크를 휴대폰에서 사용합니다
-cfr-doorhanger-sync-bookmarks-body = { -brand-product-name }에 로그인한 모든 곳에서 북마크, 비밀번호, 방문 기록 등을 가져옵니다.
-cfr-doorhanger-sync-bookmarks-ok-button = { -sync-brand-short-name } 켜기
-    .accesskey = T
-
-## Login Sync
-
-cfr-doorhanger-sync-logins-header = 다시는 비밀번호를 잃어버리지 마세요
-cfr-doorhanger-sync-logins-body = 비밀번호를 모든 기기에 안전하게 저장하고 동기화합니다.
-cfr-doorhanger-sync-logins-ok-button = { -sync-brand-short-name } 켜기
-    .accesskey = T
-
-## Send Tab
-
-cfr-doorhanger-send-tab-header = 이동 중에 이것을 읽어보세요
-cfr-doorhanger-send-tab-recipe-header = 이 요리법을 주방으로 가져가세요
-cfr-doorhanger-send-tab-body = 탭 보내기를 사용하면 이 링크를 휴대폰 또는 { -brand-product-name }에 로그인 한 곳 어디에서나 쉽게 공유할 수 있습니다.
-cfr-doorhanger-send-tab-ok-button = 탭 보내기 사용해보기
-    .accesskey = T
-
-## Firefox Send
-
-cfr-doorhanger-firefox-send-header = 이 PDF를 안전하게 공유하세요
-cfr-doorhanger-firefox-send-body = 종단 간 암호화와 완료시 사라지는 링크를 사용하여 중요한 문서를 안전하게 보관할 수 있습니다.
-cfr-doorhanger-firefox-send-ok-button = { -send-brand-name } 사용해보기
-    .accesskey = T
-
-## Social Tracking Protection
-
-cfr-doorhanger-socialtracking-ok-button = 보호 보기
-    .accesskey = P
-cfr-doorhanger-socialtracking-close-button = 닫기
-    .accesskey = C
-cfr-doorhanger-socialtracking-dont-show-again = 이런 메시지 다시 표시 안 함
-    .accesskey = D
-cfr-doorhanger-socialtracking-heading = { -brand-short-name }가 여기에서 소셜 네트워크가 사용자를 추적하는 것을 중지했습니다
-cfr-doorhanger-socialtracking-description = 개인 정보는 중요합니다. { -brand-short-name }는 이제 일반적인 소셜 미디어 추적기를 차단하여 온라인에서 수행하는 작업에 대해 수집할 수 있는 데이터의 양을 제한합니다.
-cfr-doorhanger-fingerprinters-heading = { -brand-short-name }가 이 페이지에서 핑커프린터를 차단했습니다
-cfr-doorhanger-fingerprinters-description = 개인 정보는 중요합니다. { -brand-short-name }는 이제 기기에 대해 고유하게 식별 가능한 정보 조각을 수집하여 사용자를 추적하는 디지털 지문을 차단합니다.
-cfr-doorhanger-cryptominers-heading = { -brand-short-name }가 이 페이지에서 암호화폐 채굴기를 차단했습니다
-cfr-doorhanger-cryptominers-description = 개인 정보는 중요합니다. { -brand-short-name }는 이제 시스템의 컴퓨팅 능력을 사용하여 디지털 화폐를 채굴하는 암호화폐 채굴기를 차단합니다.
-
 ## Enhanced Tracking Protection Milestones
-
-# Variables:
-#   $blockedCount (Number) - The total count of blocked trackers. This number will always be greater than 1.
-#   $date (String) - The date we began recording the count of blocked trackers
-cfr-doorhanger-milestone-heading =
-    { $blockedCount ->
-       *[other] { -brand-short-name }가 { $date } 이후 <b>{ $blockedCount }</b>개 이상의 추적기를 차단했습니다!
-    }
 
 # Variables:
 #   $blockedCount (Number) - The total count of blocked trackers. This number will always be greater than 1.
@@ -231,45 +101,8 @@ cfr-doorhanger-milestone-heading2 =
     }
 cfr-doorhanger-milestone-ok-button = 모두 보기
     .accesskey = S
-
-## What’s New Panel Content for Firefox 76
-
-
-## Lockwise message
-
-cfr-whatsnew-lockwise-header = 안전한 비밀번호를 쉽게 생성
-cfr-whatsnew-lockwise-body = 모든 계정에 대해 고유하고 안전한 비밀번호를 생각하기는 어렵습니다. 비밀번호를 만들때 { -brand-shorter-name }에서 생성된 안전한 비밀번호를 사용하려면 비밀번호 필드를 선택하세요.
-cfr-whatsnew-lockwise-icon-alt = { -lockwise-brand-short-name } 아이콘
-
-## Vulnerable Passwords message
-
-cfr-whatsnew-passwords-header = 취약한 비밀번호에 대한 알림 받기
-cfr-whatsnew-passwords-body = 해커는 사람들이 동일한 비밀번호를 재사용한다는 것을 알고 있습니다. 여러 사이트에서 동일한 비밀번호를 사용하고, 해당 사이트들 중 하나에서 데이터가 유출된 경우, { -lockwise-brand-short-name }에 해당 사이트들의 비밀번호를 변경하라는 알림이 표시됩니다.
-cfr-whatsnew-passwords-icon-alt = 취약한 비밀번호 키 아이콘
-
-## Picture-in-Picture fullscreen message
-
-cfr-whatsnew-pip-fullscreen-header = 화면 속 화면을 전체 화면에서 보세요
-cfr-whatsnew-pip-fullscreen-body = 동영상을 떠 있는 창에 띄웠을때, 해당 창을 더블 클릭해서 전체 화면으로 전환할 수 있습니다.
-cfr-whatsnew-pip-fullscreen-icon-alt = 화면 속 화면 아이콘
-
-## Protections Dashboard message
-
-cfr-whatsnew-protections-header = 보호 기능을 한 눈에 확인
-cfr-whatsnew-protections-body = 보호 대시보드에는 데이터 유출 및 비밀번호 관리에 대한 요약 보고서가 포함되어 있습니다. 이제 해결된 유출 수를 추적하고 저장된 비밀번호 중 데이터 유출에 노출된 비밀번호가 있는지 확인할 수 있습니다.
-cfr-whatsnew-protections-cta-link = 보호 대시보드 보기
-cfr-whatsnew-protections-icon-alt = 방패 아이콘
-
-## Better PDF message
-
-cfr-whatsnew-better-pdf-header = 더 나은 PDF 경험
-cfr-whatsnew-better-pdf-body = 이제 PDF 문서가 { -brand-short-name }에서 직접 열리므로 워크플로에 쉽게 접근할 수 있습니다.
-
 cfr-doorhanger-milestone-close-button = 닫기
     .accesskey = C
-
-## What’s New Panel Content for Firefox 76
-## Protections Dashboard message
 
 ## DOH Message
 
@@ -282,28 +115,141 @@ cfr-doorhanger-doh-secondary-button = 사용 안 함
 
 ## Fission Experiment Message
 
-cfr-doorhanger-fission-body-approved = 개인 정보는 중요합니다. { -brand-short-name }는 이제 웹 사이트를 서로 격리하거나 샌드 박스를 만들어 해커가 비밀번호, 신용 카드 번호 및 기타 중요한 정보를 훔치기 어렵게 만듭니다.
-cfr-doorhanger-fission-header = 사이트 격리
-cfr-doorhanger-fission-primary-button = 확인
-    .accesskey = O
-cfr-doorhanger-fission-secondary-button = 더 알아보기
-    .accesskey = L
-
-## What's new: Cookies message
-
-## What's new: Media controls message
-
-## What's new: Search shortcuts
-
-## What's new: Cookies protection
-
-## What's new: Better bookmarking
-
-## What's new: Cross-site cookie tracking
-
 ## Full Video Support CFR message
 
 cfr-doorhanger-video-support-body = 이 사이트의 동영상은 이 버전의 { -brand-short-name }에서 제대로 재생되지 않을 수 있습니다. 전체 동영상 지원을 받으려면, 지금 { -brand-short-name }를 업데이트하세요.
 cfr-doorhanger-video-support-header = 동영상을 재생하려면 { -brand-short-name } 업데이트
 cfr-doorhanger-video-support-primary-button = 지금 업데이트
     .accesskey = U
+
+## Spotlight modal shared strings
+
+## VPN promotion dialog for public Wi-Fi users
+##
+## If a user is detected to be on a public Wi-Fi network, they are given a
+## bit of info about how to improve their privacy and then offered a button
+## to the Mozilla VPN page and a link to dismiss the dialog.
+
+# This header text can be explicitly wrapped.
+spotlight-public-wifi-vpn-header = 공용 Wi-Fi를 사용 중인 것 같습니다
+spotlight-public-wifi-vpn-body = 위치 및 탐색 활동을 숨기려면 가상 사설망 (VPN)을 고려하세요. 공항 및 커피숍과 같은 공공 장소에서 탐색할 때 보호를 유지하는 데 도움이 됩니다.
+spotlight-public-wifi-vpn-primary-button = { -mozilla-vpn-brand-name }으로 사생활 보호 유지
+    .accesskey = S
+spotlight-public-wifi-vpn-link = 나중에
+    .accesskey = N
+
+## Total Cookie Protection Rollout
+
+## Emotive Continuous Onboarding
+
+spotlight-better-internet-header = 더 나은 인터넷은 당신과 함께 시작됩니다
+spotlight-better-internet-body = { -brand-short-name }를 사용하면 모두에게 더 나은 개방적이고 접근 가능한 인터넷에 투표하는 것입니다.
+spotlight-peace-mind-header = 저희가 사용자를 보호합니다
+spotlight-peace-mind-body = 매달 { -brand-short-name }는 사용자당 평균 3,000개 이상의 추적기를 차단합니다. 특히 추적기와 같은 개인 정보를 침해하는 요소가 사용자와 좋은 인터넷 사이에 있어서는 안 되기 때문입니다.
+spotlight-pin-primary-button =
+    { PLATFORM() ->
+        [macos] Dock에 넣기
+       *[other] 작업 표시줄에 고정
+    }
+spotlight-pin-secondary-button = 나중에
+
+## MR2022 Background Update Windows native toast notification strings.
+##
+## These strings will be displayed by the Windows operating system in
+## a native toast, like:
+##
+## <b>multi-line title</b>
+## multi-line text
+## <img>
+## [ primary button ] [ secondary button ]
+##
+## The button labels are fitted into narrow fixed-width buttons by
+## Windows and therefore must be as narrow as possible.
+
+mr2022-background-update-toast-title = 새로운 { -brand-short-name }. 사생활을 더 보호합니다. 추적기가 더 적습니다. 타협이 없습니다.
+mr2022-background-update-toast-text = 가장 강력한 추적 방지 보호 기능으로 업그레이드된 최신 { -brand-short-name }를 지금 사용해 보세요.
+
+# This button label will be fitted into a narrow fixed-width button by
+# Windows. Try to not exceed the width of the English text (compare it
+# using a variable font like Arial): the button can only fit 1-2
+# additional characters, exceeding characters will be truncated.
+mr2022-background-update-toast-primary-button-label = 지금 { -brand-shorter-name } 열기
+
+# This button label will be fitted into a narrow fixed-width button by
+# Windows. Try to not exceed the width of the English text (compare it using a
+# variable font like Arial): the button can only fit 1-2 additional characters,
+# exceeding characters will be truncated.
+mr2022-background-update-toast-secondary-button-label = 나중에 알림
+
+## Firefox View CFR
+
+firefoxview-cfr-primarybutton = 사용해 보기
+    .accesskey = T
+firefoxview-cfr-secondarybutton = 나중에
+    .accesskey = N
+firefoxview-cfr-header-v2 = 중단한 부분부터 빠르게 다시 시작하세요
+firefoxview-cfr-body-v2 = { -firefoxview-brand-name }를 사용하여 최근에 닫은 탭을 다시 가져오고, 기기 간에 원활하게 전환하세요.
+
+## Firefox View Spotlight
+
+firefoxview-spotlight-promo-title = { -firefoxview-brand-name }를 만나보세요
+
+# “Poof” refers to the expression to convey when something or someone suddenly disappears, or in this case, reappears. For example, “Poof, it’s gone.”
+firefoxview-spotlight-promo-subtitle = 휴대폰에서 열린 탭을 보고 싶으세요? 가져오세요. 방금 방문했던 사이트가 필요하세요? { -firefoxview-brand-name }로 다시 여세요.
+firefoxview-spotlight-promo-primarybutton = 작동 방식 보기
+firefoxview-spotlight-promo-secondarybutton = 건너뛰기
+
+## Colorways expiry reminder CFR
+
+colorways-cfr-primarybutton = 컬러웨이 선택
+    .accesskey = C
+
+# "shades" refers to the different color options available to users in colorways.
+colorways-cfr-body = 문화를 바꾼 목소리에서 영감을 받은 { -brand-short-name } 독점 색상으로 브라우저를 색칠하세요.
+colorways-cfr-header-28days = 독립적인 목소리 컬러웨이 1월 16일 만료됨
+colorways-cfr-header-14days = 독립적인 목소리 컬러웨이 2주 후 만료됨
+colorways-cfr-header-7days = 독립적인 목소리 컬러웨이 이번 주 만료됨
+colorways-cfr-header-today = 독립적인 목소리 컬러웨이 오늘 만료됨
+
+## Cookie Banner Handling CFR
+
+cfr-cbh-header = { -brand-short-name }가 쿠키 배너를 거부하도록 허용하시겠습니까?
+cfr-cbh-body = { -brand-short-name }가 많은 쿠키 배너 요청을 자동으로 거부할 수 있습니다.
+cfr-cbh-confirm-button = 쿠키 배너 거부
+    .accesskey = R
+cfr-cbh-dismiss-button = 나중에
+    .accesskey = N
+
+## These strings are used in the Fox doodle Pin/set default spotlights
+
+july-jam-headline = 저희가 사용자를 보호합니다
+july-jam-body = 매달 { -brand-short-name }는 사용자당 평균 3,000개 이상의 추적기를 차단하여 좋은 인터넷에 안전하고 빠르게 액세스할 수 있도록 합니다.
+july-jam-set-default-primary = { -brand-short-name }로 내 링크 열기
+fox-doodle-pin-headline = 환영합니다
+
+# “indie” is short for the term “independent”.
+# In this instance, free from outside influence or control.
+fox-doodle-pin-body = 클릭 한 번으로 좋아하는 독립된 브라우저를 계속 사용할 수 있는다는 알림입니다.
+fox-doodle-pin-primary = { -brand-short-name }로 내 링크 열기
+fox-doodle-pin-secondary = 나중에
+
+## These strings are used in the Set Firefox as Default PDF Handler for Existing Users experiment
+
+set-default-pdf-handler-headline = <strong>이제 PDF가 { -brand-short-name }에서 열립니다.</strong> 브라우저에서 직접 양식을 편집하거나 서명하세요. 변경하려면, 설정에서 "PDF"를 검색하세요.
+set-default-pdf-handler-primary = 확인
+
+## FxA sync CFR
+
+fxa-sync-cfr-header = 미래의 새 기기?
+fxa-sync-cfr-body = 새 { -brand-product-name } 브라우저를 열 때마다 최신 북마크, 비밀번호 및 탭이 함께 제공되는지 확인하세요.
+fxa-sync-cfr-primary = 더 알아보기
+    .accesskey = L
+fxa-sync-cfr-secondary = 나중에 알림
+    .accesskey = R
+
+## Device Migration FxA Spotlight
+
+device-migration-fxa-spotlight-header = 오래된 기기를 사용하시나요?
+device-migration-fxa-spotlight-body = 특히 새 기기로 전환하는 경우 북마크 및 비밀번호와 같은 중요한 정보를 잃지 않도록 데이터를 백업하세요.
+device-migration-fxa-spotlight-primary-button = 내 데이터를 백업하는 방법
+device-migration-fxa-spotlight-link = 나중에 알림

@@ -20,14 +20,6 @@ toolbar-context-menu-bookmark-selected-tabs =
 toolbar-context-menu-select-all-tabs =
     .label = ყველა ჩანართის შერჩევა
     .accesskey = შ
-toolbar-context-menu-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] დახურული ჩანართის დაბრუნება
-           *[other] დახურული ჩანართების დაბრუნება
-        }
-    .accesskey = ბ
-
 toolbar-context-menu-reopen-closed-tabs =
     .label =
         { $tabCount ->
@@ -50,18 +42,18 @@ toolbar-context-menu-report-extension =
     .label = გაფართოების გასაჩივრება
     .accesskey = ჩ
 
-# Can appear on the same context menu as menubarCmd ("Menu Bar") and
-# personalbarCmd ("Bookmarks Toolbar"), so they should have different
-# access keys.
+# Can appear on the same context menu as toolbar-context-menu-menu-bar-cmd
+# ("Menu Bar") and personalbarCmd ("Bookmarks Toolbar"), so they should
+# have different access keys.
 toolbar-context-menu-pin-to-overflow-menu =
     .label = ჩამოსაშლელ მენიუში მიმაგრება
     .accesskey = გ
-toolbar-context-menu-auto-hide-downloads-button =
-    .label = ხელსაწყოთა ზოლის თვითდამალვა
-    .accesskey = ვ
 toolbar-context-menu-auto-hide-downloads-button-2 =
-    .label = ღილაკის დამალვა როცა ცარიელია
+    .label = დაიმალოს ღილაკი, როცა ცარიელია
     .accesskey = დ
+toolbar-context-menu-always-open-downloads-panel =
+    .label = გამოჩნდეს ჩამოტვირთვის დაწყებისას
+    .accesskey = ტ
 toolbar-context-menu-remove-from-toolbar =
     .label = ხელსაწყოთა ზოლიდან მოცილება
     .accesskey = ა
@@ -71,6 +63,11 @@ toolbar-context-menu-view-customize-toolbar =
 toolbar-context-menu-view-customize-toolbar-2 =
     .label = ხელსაწყოთა ზოლის მორგება…
     .accesskey = მ
+# This is only ever shown when toolbar-context-menu-pin-to-overflow-menu
+# is hidden, so they can share access keys.
+toolbar-context-menu-pin-to-toolbar =
+    .label = მიმაგრება ხელსაწყოთა ზოლზე
+    .accesskey = გ
 
 toolbar-context-menu-bookmarks-toolbar-always-show-2 =
     .label = ყოველთვის გამოჩნდეს
@@ -85,3 +82,7 @@ toolbar-context-menu-bookmarks-toolbar-on-new-tab-2 =
 toolbar-context-menu-bookmarks-show-other-bookmarks =
     .label = სხვა სანიშნების ჩვენება
     .accesskey = ჩ
+
+toolbar-context-menu-menu-bar-cmd =
+    .toolbarname = მენიუს ზოლი
+    .accesskey = ზ

@@ -5,9 +5,9 @@
 
 ## Strings used for device manager
 
-devmgr =
+devmgr-window =
     .title = ਜੰਤਰ ਮੈਨੇਜਰ
-    .style = width: 67em; height: 32em;
+    .style = min-width: 67em; min-height: 32em;
 
 devmgr-devlist =
     .label = ਸੁਰੱਖਿਆ ਮੋਡੀਊਲ ਅਤੇ ਜੰਤਰ
@@ -115,8 +115,6 @@ devinfo-label =
 
 devinfo-serialnum =
     .label = ਸੀਰੀਅਲ ਨੰਬਰ
-
-fips-nonempty-password-required = FIPS ਮੋਡ ਲਈ ਤੁਹਾਨੂੰ ਹਰ ਸੁਰੱਖਿਆ ਡਿਵਾਈਸ ਲਈ ਮਾਸਟਰ ਪਾਸਵਰਡ ਸੈੱਟ ਕਰਨ ਦੀ ਲੋੜ ਹੈ। FIPS ਮੋਡ ਯੋਗ ਕਰਨ ਤੋ ਪਹਿਲਾਂ ਮਾਸਟਰ ਪਾਸਵਰਡ ਸੈੱਟ ਕਰੋ ਜੀ।
 
 fips-nonempty-primary-password-required = FIPS ਮੋਡ ਲਈ ਤੁਹਾਨੂੰ ਹਰ ਸੁਰੱਖਿਆ ਜੰਤਰ ਲਈ ਇੱਕ ਮੁੱਢਲਾ ਪਾਸਵਰਡ ਸੈੱਟ ਕਰਨ ਦੀ ਲੋੜ ਹੈ। FIPS ਮੋਡ ਯੋਗ ਕਰਨ ਤੋ ਪਹਿਲਾਂ ਮਾਸਟਰ ਪਾਸਵਰਡ ਸੈੱਟ ਕਰੋ ਜੀ।
 unable-to-toggle-fips = ਸੁਰੱਖਿਆ ਜੰਤਰ ਲਈ FIPS ਮੋਡ ਬਦਲਣ ਲਈ ਅਸਮਰੱਥ ਹੈ। ਇਹ ਸਿਫਾਰਸ਼ ਕੀਤਾ ਜਾਂਦਾ ਹੈ ਕਿ ਤੁਸੀਂ ਇਹ ਐਪਲੀਕੇਸ਼ਨ ਬੰਦ ਕਰਕੇ ਮੁੜ-ਚਾਲੂ ਕਰੋ।

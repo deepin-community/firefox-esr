@@ -20,14 +20,6 @@ toolbar-context-menu-bookmark-selected-tabs =
 toolbar-context-menu-select-all-tabs =
     .label = Valitse kaikki välilehdet
     .accesskey = a
-toolbar-context-menu-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Kumoa välilehden sulkeminen
-           *[other] Kumoa välilehtien sulkeminen
-        }
-    .accesskey = u
-
 toolbar-context-menu-reopen-closed-tabs =
     .label =
         { $tabCount ->
@@ -50,18 +42,18 @@ toolbar-context-menu-report-extension =
     .label = Raportoi laajennus
     .accesskey = R
 
-# Can appear on the same context menu as menubarCmd ("Menu Bar") and
-# personalbarCmd ("Bookmarks Toolbar"), so they should have different
-# access keys.
+# Can appear on the same context menu as toolbar-context-menu-menu-bar-cmd
+# ("Menu Bar") and personalbarCmd ("Bookmarks Toolbar"), so they should
+# have different access keys.
 toolbar-context-menu-pin-to-overflow-menu =
     .label = Kiinnitä ylivuotovalikkoon
     .accesskey = y
-toolbar-context-menu-auto-hide-downloads-button =
-    .label = Piilota automaattisesti työkalupalkkiin
-    .accesskey = a
 toolbar-context-menu-auto-hide-downloads-button-2 =
     .label = Piilota painike, kun latauslista on tyhjä
     .accesskey = i
+toolbar-context-menu-always-open-downloads-panel =
+    .label = Näytä paneeli, kun lataus alkaa
+    .accesskey = ä
 toolbar-context-menu-remove-from-toolbar =
     .label = Poista työkalupalkista
     .accesskey = P
@@ -71,6 +63,11 @@ toolbar-context-menu-view-customize-toolbar =
 toolbar-context-menu-view-customize-toolbar-2 =
     .label = Muokkaa työkalupalkkia…
     .accesskey = M
+# This is only ever shown when toolbar-context-menu-pin-to-overflow-menu
+# is hidden, so they can share access keys.
+toolbar-context-menu-pin-to-toolbar =
+    .label = Kiinnitä työkalupalkkiin
+    .accesskey = p
 
 toolbar-context-menu-bookmarks-toolbar-always-show-2 =
     .label = Näytä aina
@@ -85,3 +82,7 @@ toolbar-context-menu-bookmarks-toolbar-on-new-tab-2 =
 toolbar-context-menu-bookmarks-show-other-bookmarks =
     .label = Näytä muut kirjanmerkit
     .accesskey = N
+
+toolbar-context-menu-menu-bar-cmd =
+    .toolbarname = Valikkopalkki
+    .accesskey = V

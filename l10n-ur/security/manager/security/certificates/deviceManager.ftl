@@ -5,9 +5,9 @@
 
 ## Strings used for device manager
 
-devmgr =
+devmgr-window =
     .title = آلہ مینیجر
-    .style = width: 67em; height: 32em;
+    .style = min-width: 67em; min-height: 32em;
 
 devmgr-devlist =
     .label = سلامتی ماڈیول و آلات
@@ -115,8 +115,6 @@ devinfo-label =
 
 devinfo-serialnum =
     .label = سیریل نمبر
-
-fips-nonempty-password-required = ایف آئی پی ایس موڈ کو مطلوب ہے کہ آپ کے پاس ہر سلامتی آلے کے لیے ایک ماسٹر پاس ورڈ سیٹ ہو۔ ایف آئی پی ایس کو اہل بنانے کی کوشش کرنے سے پہلے پاس ورڈ سیٹ کریں۔
 
 unable-to-toggle-fips = سلامتی آلات کے لیئے FIPS موڈ کو تبدیل کرنے میں ناکام رہے۔ یہ تجویز کیا جاتا ہے کہ آپ ایبلیکیشن سے خروج کریں اور ایبلیکیشن دوباره شروع کریں۔
 

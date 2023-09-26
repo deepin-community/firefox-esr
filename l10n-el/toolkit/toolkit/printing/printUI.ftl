@@ -15,6 +15,9 @@ printui-sheets-count =
     }
 
 printui-page-range-all = Όλες
+printui-page-range-current = Τρέχουσα
+printui-page-range-odd = Περιττό
+printui-page-range-even = Άρτιο
 printui-page-range-custom = Προσαρμογή
 printui-page-range-label = Σελίδες
 printui-page-range-picker =
@@ -57,8 +60,6 @@ printui-two-sided-printing-short-edge = Αναστροφή στο κοντό ά�
 printui-options = Επιλογές
 printui-headers-footers-checkbox = Εκτύπωση κεφαλίδων και υποσέλιδων
 printui-backgrounds-checkbox = Εκτύπωση παρασκηνίου
-
-printui-selection-checkbox = Εκτύπωση επιλογής μόνο
 
 ## The "Format" section, select a version of the website to print. Radio
 ## options to select between the original page, selected text only, or a version

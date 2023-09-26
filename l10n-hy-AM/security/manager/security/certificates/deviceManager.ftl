@@ -5,9 +5,9 @@
 
 ## Strings used for device manager
 
-devmgr =
+devmgr-window =
     .title = Սարքերի Կառավարիչ
-    .style = width: 67em; height: 32em;
+    .style = min-width: 67em; min-height: 32em;
 
 devmgr-devlist =
     .label = Անվտանգության Բաղադիրներ և Սարքեր
@@ -115,8 +115,6 @@ devinfo-label =
 
 devinfo-serialnum =
     .label = Հերթ. Համարը
-
-fips-nonempty-password-required = FIPS եղանակը նախանշում է ամեն անվտանգության սարքի համար Հիմնական գաղտնաբառի առկայություն: Խնդրեմ նշեք գաղտնաբառը նախքան FIPS եղանակն օգտագործելը:
 
 unable-to-toggle-fips = Հնարավոր չէ փոխել FIPS եղանակը՝ անվտանգության սարքի համար: Խորհուրդ ենք տալիս դուրս գալ և վերամեկնարկել ծրագիրը:
 load-pk11-module-file-picker-title = Ընտրեք PKCS#11 սարքի սարքավարը՝ բեռնելու համար

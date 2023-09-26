@@ -2,13 +2,12 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-screenshots-context-menu = Snimi ekran
-
-screenshots-my-shots-button = Moje snimke
-
 screenshot-toolbarbutton =
     .label = Snimka ekrana
     .tooltiptext = Snimi ekran
+
+screenshot-shortcut =
+    .key = S
 
 screenshots-instructions = Povuci ili pritisni na stranicu za odabir područja. Pritisni ESC za prekid.
 screenshots-cancel-button = Odustani
@@ -18,6 +17,14 @@ screenshots-download-button = Preuzmi
 screenshots-download-button-tooltip = Preuzmi snimku ekrana
 screenshots-copy-button = Kopiraj
 screenshots-copy-button-tooltip = Kopiraj snimku ekrana u međuspremnik
+screenshots-download-button-title =
+    .title = Preuzmi snimku zaslona
+screenshots-copy-button-title =
+    .title = Kopiraj snimku zaslona u međuspremnik
+screenshots-cancel-button-title =
+    .title = Odustani
+screenshots-retry-button-title =
+    .title = Ponovi snimku zaslona
 
 screenshots-meta-key =
     { PLATFORM() ->
@@ -41,8 +48,6 @@ screenshots-login-error-details = Nismo uspjeli spremiti tvoju snimku, jer posto
 screenshots-unshootable-page-error-title = Ovu stranicu ne možemo snimiti.
 screenshots-unshootable-page-error-details = Ovo nije standardna Web stranica stoga ju ne možete snimiti.
 
-screenshots-self-screenshot-error-title = Ne možete snimiti { -screenshots-brand-name } stranicu!
-
 screenshots-empty-selection-error-title = Tvoj odabir je premalen
 
 screenshots-private-window-error-title = { -screenshots-brand-name } je deaktiviran u modusu privatnog pregledavanja
@@ -50,3 +55,4 @@ screenshots-private-window-error-details = Žao nam je na neugodnosti. Radimo na
 
 screenshots-generic-error-title = Uf! { -screenshots-brand-name } se zbrkao.
 screenshots-generic-error-details = Ne znamo točno što se upravo dogodilo. Možeš li ponovo pokušati ili snimiti jednu drugu stranicu?
+

@@ -12,11 +12,6 @@ crashes-id = Ilmoituksen tunnus
 crashes-send-date = Lähetetty
 crashes-all-reports = Kaikki kaatumisilmoitukset
 crashes-no-config = Tätä ohjelmaa ei ole säädetty näyttämään kaatumisilmoituksia.
-extensions-title = Laajennukset
-extensions-name = Nimi
-extensions-enabled = Käytössä
-extensions-version = Versio
-extensions-id = ID
 support-addons-title = Lisäosat
 support-addons-name = Nimi
 support-addons-type = Tyyppi
@@ -76,6 +71,12 @@ app-basics-location-service-key-google = Google Location Service -avain
 app-basics-safebrowsing-key-google = Google Safebrowsing -avain
 app-basics-key-mozilla = Mozilla Location Service -avain
 app-basics-safe-mode = Vikasietotila
+app-basics-memory-size = Muistin koko (RAM)
+app-basics-disk-available = Levytilaa käytettävissä
+# Variables:
+#   $value (number) - Amount of data being stored
+#   $unit (string) - The unit of data being stored (e.g. MB)
+app-basics-data-size = { $value } { $unit }
 show-dir-label =
     { PLATFORM() ->
         [macos] Avaa Finderissa
@@ -105,11 +106,21 @@ graphics-gpu2-title = GPU #2
 graphics-decision-log-title = Päätösloki
 graphics-crash-guards-title = Kaatumisvahdin käytöstä poistamat ominaisuudet
 graphics-workarounds-title = Hätäratkaisut
+graphics-device-pixel-ratios = Ikkunoiden pikselisuhteet
 # Windowing system in use on Linux (e.g. X11, Wayland).
 graphics-window-protocol = Ikkunointiprotokolla
 # Desktop environment in use on Linux (e.g. GNOME, KDE, XFCE, etc).
 graphics-desktop-environment = Työpöytäympäristö
 place-database-title = Places-tietokanta
+place-database-stats = Tilastot
+place-database-stats-show = Näytä tilastot
+place-database-stats-hide = Piilota tilastot
+place-database-stats-entity = Entiteetti
+place-database-stats-count = Lukumäärä
+place-database-stats-size-kib = Koko (KiB)
+place-database-stats-size-perc = Koko (%)
+place-database-stats-efficiency-perc = Tehokkuus (%)
+place-database-stats-sequentiality-perc = Peräkkäisyys (%)
 place-database-integrity = Virheettömyys
 place-database-verify-integrity = Tarkista virheettömyys
 a11y-title = Saavutettavuus
@@ -129,8 +140,6 @@ sandbox-sys-call-tid = TID
 sandbox-sys-call-proc-type = Prosessin tyyppi
 sandbox-sys-call-number = Järjestelmäkutsu
 sandbox-sys-call-args = Argumentit
-safe-mode-title = Kokeile vikasietotilaa
-restart-in-safe-mode-label = Käynnistä uudelleen ilman lisäosia…
 troubleshoot-mode-title = Selvitä ongelmia
 restart-in-troubleshoot-mode-label = Vianmääritystila…
 clear-startup-cache-title = Kokeile tyhjentää käynnistyksen välimuisti
@@ -158,8 +167,18 @@ media-device-channels = Kanavia
 media-device-rate = Näytteenottotaajuus
 media-device-latency = Viive
 media-capabilities-title = Mediaominaisuudet
+media-codec-support-info = Koodekkitukitiedot
 # List all the entries of the database.
 media-capabilities-enumerate = Listaa tietokannan sisältö
+
+## Codec support table
+
+media-codec-support-sw-decoding = Ohjelmistopohjainen purku
+media-codec-support-hw-decoding = Laitteistopohjainen purku
+media-codec-support-codec-name = Koodekin nimi
+media-codec-support-supported = Tuettu
+media-codec-support-unsupported = Ei tuettu
+media-codec-support-error = Koodekkitukitietoja ei ole saatavilla. Yritä uudelleen mediatiedoston toiston jälkeen.
 
 ##
 
@@ -188,36 +207,6 @@ remote-debugging-url = URL-osoite
 
 ##
 
-support-third-party-modules-title = Kolmannen osapuolen moduulit
-support-third-party-modules-module = Moduulitiedosto
-support-third-party-modules-version = Tiedoston versio
-support-third-party-modules-vendor = Valmistajan tiedot
-support-third-party-modules-occurrence = Esiintymä
-support-third-party-modules-process = Prosessin tyyppi ja tunnus
-support-third-party-modules-thread = Säie
-support-third-party-modules-base = Imagebase-osoite
-support-third-party-modules-uptime = Prosessin käynnissäoloaika (ms)
-support-third-party-modules-duration = Latausaika (ms)
-support-third-party-modules-status = Tila
-support-third-party-modules-status-loaded = Ladattu
-support-third-party-modules-status-blocked = Estetty
-support-third-party-modules-status-redirected = Uudelleenohjattu
-support-third-party-modules-empty = Kolmansien osapuolten moduuleja ei ladattu.
-support-third-party-modules-no-value = (Ei arvoa)
-support-third-party-modules-button-open =
-    .title = Avaa tiedoston sijainti…
-support-third-party-modules-expand =
-    .title = Näytä yksityiskohtaiset tiedot
-support-third-party-modules-collapse =
-    .title = Supista yksityiskohtaiset tiedot
-support-third-party-modules-unsigned-icon =
-    .title = Tätä moduulia ei ole allekirjoitettu
-support-third-party-modules-folder-icon =
-    .title = Avaa tiedoston sijainti…
-support-third-party-modules-down-icon =
-    .title = Näytä yksityiskohtaiset tiedot
-support-third-party-modules-up-icon =
-    .title = Supista yksityiskohtaiset tiedot
 # Variables
 # $days (Integer) - Number of days of crashes to log
 report-crash-for-days =
@@ -304,10 +293,8 @@ webgl2-renderer = WebGL 2 -ajurin mallintaja
 webgl2-version = WebGL 2 -ajurin versio
 webgl2-driver-extensions = WebGL 2 -ajurin laajennukset
 webgl2-extensions = WebGL 2 -laajennukset
-blocklisted-bug = Estolistalla tunnettujen ongelmien takia
-# Variables
-# $bugNumber (string) - String of bug number from Bugzilla
-bug-link = vika { $bugNumber }
+webgpu-default-adapter = WebGPU-oletussovitin
+webgpu-fallback-adapter = WebGPU-varasovitin
 # Variables
 #   $bugNumber (string) - Bug number on Bugzilla
 support-blocklisted-bug = Estolistalla tunnetuista ongelmista johtuen: <a data-l10n-name="bug-link">vika { $bugNumber }</a>
@@ -315,8 +302,6 @@ support-blocklisted-bug = Estolistalla tunnetuista ongelmista johtuen: <a data-l
 # $failureCode (string) - String that can be searched in the source tree.
 unknown-failure = Estolistalla; virhekoodi { $failureCode }
 d3d11layers-crash-guard = D3D11-koostaminen
-d3d11video-crash-guard = D3D11-videopurkaja
-d3d9video-crash-guard = D3D9-videopurkaja
 glcontext-crash-guard = OpenGL
 wmfvpxvideo-crash-guard = WMF VPX -videopurkaja
 reset-on-next-restart = Nollaa seuraavan käynnistyksen yhteydessä
@@ -339,6 +324,7 @@ can-sandbox-media = Medialiitännäisen suorittaminen hiekkalaatikossa
 content-sandbox-level = Sisältöprosessin hiekkalaatikkotaso
 effective-content-sandbox-level = Sisältöprosessin efektiivinen hiekkalaatikkotaso
 content-win32k-lockdown-state = Win32k-lukitustila sisältöprosessille
+support-sandbox-gpu-level = GPU-prosessin hiekkalaatikkotaso
 sandbox-proc-type-content = sisältö
 sandbox-proc-type-file = tiedostojen sisältö
 sandbox-proc-type-media-plugin = medialiitännäinen
@@ -356,14 +342,6 @@ launcher-process-status-unknown = Tuntematon tila
 # $remoteWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
 multi-process-windows = { $remoteWindows }/{ $totalWindows }
-multi-process-status-0 = Käyttäjän käyttöön ottama
-multi-process-status-1 = Käytössä oletuksena
-multi-process-status-2 = Poistettu käytöstä
-multi-process-status-4 = Poistettu käytöstä saavutettavuustoimintojen takia
-multi-process-status-6 = Poistettu käytöstä ei-tuetun tekstisyötteen takia
-multi-process-status-7 = Poistettu käytöstä lisäosien takia
-multi-process-status-8 = Poistettu käytöstä pakottaen
-multi-process-status-unknown = Tuntematon tila
 # Variables
 # $fissionWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
@@ -372,7 +350,7 @@ fission-status-experiment-control = Kokeilun käytöstä poistama
 fission-status-experiment-treatment = Kokeilun käyttöön ottama
 fission-status-disabled-by-e10s-env = Ympäristön käytöstä poistama
 fission-status-enabled-by-env = Ympäristön käyttöön ottama
-fission-status-disabled-by-safe-mode = Vikasietotilan käytöstä poistama
+fission-status-disabled-by-env = Ympäristön käytöstä poistama
 fission-status-enabled-by-default = Käytössä oletuksena
 fission-status-disabled-by-default = Poistettu käytöstä oletuksena
 fission-status-enabled-by-user-pref = Käyttäjän käyttöön ottama

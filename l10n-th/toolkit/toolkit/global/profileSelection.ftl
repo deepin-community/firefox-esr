@@ -23,6 +23,8 @@ profile-selection-delete-button =
     .label = ลบโปรไฟล์…
     .accesskey = ล
 
+profile-selection-conflict-message = สำเนาอื่นของ { -brand-product-name } ได้ทำการเปลี่ยนแปลงกับโปรไฟล์ คุณต้องเริ่มการทำงาน { -brand-short-name } ใหม่ก่อนจึงจะสามารถทำการเปลี่ยนแปลงเพิ่มเติมได้
+
 ## Messages used in the profile manager
 
 profile-manager-description = { -brand-short-name } จัดเก็บข้อมูลเกี่ยวกับการตั้งค่า, ค่ากำหนด และข้อมูลผู้ใช้อื่น ๆ ในโปรไฟล์ผู้ใช้ของคุณ

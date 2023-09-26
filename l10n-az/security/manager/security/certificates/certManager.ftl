@@ -19,48 +19,11 @@ certmgr-tab-ca =
 
 certmgr-mine = Sizi müəyyənləşdirən bu təşkilatlardan təsdiq sənədləriniz var
 certmgr-people = Bu şəxsləri müəyyənləşdirən qeydiyyatlı təsdiq sənədləriniz var
-certmgr-servers = Bu serverləri müəyyənləşdirən qeydiyyatlı təsdiq sənədləriniz var
 certmgr-ca = Bu təsdiq sənədi səlahiyyətlilərini müəyyənləşdirən qeydiyyatlı təsdiq sənədləriniz var
 
-certmgr-detail-general-tab-title =
-    .label = Ümumi
-    .accesskey = Ü
-
-certmgr-detail-pretty-print-tab-title =
-    .label = Təfərrüatlar
-    .accesskey = T
-
-certmgr-pending-label =
-    .value = Hazırda təsdiq sənədi yoxlanır…
-
-certmgr-subject-label = Təsdiqlənən
-
-certmgr-issuer-label = Təslim Edən
-
-certmgr-period-of-validity = Etibarlılıq müddəti
-
-certmgr-fingerprints = Parmak izleri
-
-certmgr-cert-detail =
-    .title = Təsdiq sənədi detalları
-    .buttonlabelaccept = Qapat
-    .buttonaccesskeyaccept = Q
-
-certmgr-cert-detail-commonname = Ümumi ad (CN)
-
-certmgr-cert-detail-org = Qurum (O)
-
-certmgr-cert-detail-orgunit = Korporativ orqan (OU)
-
-certmgr-cert-detail-serial-number = Seriya nömrəsi
-
-certmgr-cert-detail-sha-256-fingerprint = SHA-256 barmaq izi
-
-certmgr-cert-detail-sha-1-fingerprint = SHA1 parmaq izi
-
-certmgr-edit-ca-cert =
+certmgr-edit-ca-cert2 =
     .title = Təsdiq sənədinin etibarlılıq parametrlərini redaktə edin
-    .style = width: 48em;
+    .style = min-width: 48em;
 
 certmgr-edit-cert-edit-trust = Etibarlılıq parametrlərini redaktə edin:
 
@@ -70,9 +33,9 @@ certmgr-edit-cert-trust-ssl =
 certmgr-edit-cert-trust-email =
     .label = Bu təsdiq sənədi poçt istifadəçilərini təyin edə bilər.
 
-certmgr-delete-cert =
+certmgr-delete-cert2 =
     .title = Təsdiq sənədini sil
-    .style = width: 48em; height: 24em;
+    .style = min-width: 48em; min-height: 24em;
 
 certmgr-cert-name =
     .label = Təsdiq sənədinin adı
@@ -80,18 +43,11 @@ certmgr-cert-name =
 certmgr-cert-server =
     .label = Server
 
-certmgr-override-lifetime =
-    .label = Xidmət müddəti
-
 certmgr-token-name =
     .label = Təhlükəsizlik cihazları
 
-certmgr-begins-on = Başlayır
-
 certmgr-begins-label =
     .label = Başlayır
-
-certmgr-expires-on = Bitmə tarixi
 
 certmgr-expires-label =
     .label = Bitmə tarixi
@@ -133,18 +89,6 @@ certmgr-backup-all =
 certmgr-restore =
     .label = İdxal et…
     .accesskey = a
-
-certmgr-details =
-    .value = Sertifikat Sahələri
-    .accesskey = S
-
-certmgr-fields =
-    .value = Sahə Dəyəri
-    .accesskey = y
-
-certmgr-hierarchy =
-    .value = Sertifikat İyerarxiyası
-    .accesskey = H
 
 certmgr-add-exception =
     .label = İstisnalıq ver…
@@ -208,12 +152,6 @@ delete-user-cert-confirm = Bu təsdiq sənədlrərini silmək istədiyinizə əm
 delete-user-cert-impact = Öz təsdiq sənədlərinizdən biriniz silsəniz, öz kimliyiniz təsdiqləyərkən onu istifadə edə bilməzsiniz.
 
 
-delete-ssl-cert-title =
-    .title = Web səhifəsinin təsdiq sənədlərini sil
-delete-ssl-cert-confirm = Bu web səhifəsinin təsdiq sənədini silmək itədiyinizə əminsiniz?
-delete-ssl-cert-impact = Əgər bir web səhifəsinin təsdiq sənədini silsəniz, o səhifəni təkrar açanda sizdən bu təsdiq sənədinin qəbul edib etmədiyinizi soruşacaq.
-
-
 delete-ca-cert-title =
     .title = CA təsdiq sənədini sil və ya etibar etmə
 delete-ca-cert-confirm = Bu CA təsdiq sənədi rəsmisinin təsdiq sənədlərini silmək istəyirsiniz. Quraşdırılmış olaraq gələn təsdiq sənlərinin etibarlılığı silinəcək ki, bu da eyni təsirə malikdir. Silmək və ya etibar etməmək istədiyinizə əminsiniz?
@@ -232,48 +170,8 @@ delete-email-cert-impact = Əgər bir şəxsin poçt təsdiq sənədini silsəni
 cert-with-serial =
     .value = Seriya nömrəli sertifikat: { $serialNumber }
 
-## Cert Viewer
-
-# Title used for the Certificate Viewer.
-#
-# Variables:
-#   $certificate : a string representative of the certificate being viewed.
-cert-viewer-title =
-    .title = Sertifikat Görüntüləyicisi: “{ $certName }”
-
-not-present =
-    .value = <Təsdiq sənədinin hissəsi deyil>
-
-# Cert verification
-cert-verified = Bu təsdiq sənədi bu məqsədlərçün təsdiqləndi:
-
-# Add usage
-verify-ssl-client =
-    .value = SSL Klient Sertifikat
-
-verify-ssl-server =
-    .value = SSL Server Sertifikat
-
-verify-ssl-ca =
-    .value = SSL Sertifikat Rəsmisi
-
-verify-email-signer =
-    .value = E-Poçt İmzalayıcı Sertifikat
-
-verify-email-recip =
-    .value = E-Poçt Alıcı Sertifikatı
-
-# Cert verification
-cert-not-verified-cert-revoked = Bu təsdiq sənədi ləğv edildiyi üçün yoxlana bilmədi.
-cert-not-verified-cert-expired = Müddəti bitdiyi üçün bu təsdiq sənədi yoxlana bilmədi.
-cert-not-verified-cert-not-trusted = Etibar edilməyi üçün bu təsdiq sənədi yoxlana bilmədi.
-cert-not-verified-issuer-not-trusted = Yayımlayana etibar edilmədiyi üçün bu təsdiq sənədi yoxlana bilmədi.
-cert-not-verified-issuer-unknown = Yayımlayan naməlum olmadığı üçün təsdiq yoxlana bilmədi.
-cert-not-verified-ca-invalid = CA təsdiq sənədi etibarsız olduğu üçün bu təsdiq sənədi yoxlana bilmədi.
-cert-not-verified_algorithm-disabled = Təhlükəsiz olmadığı üçün söndürülmüş bir imza alqoritmi ilə imzalandığı üçün, bu sertifikat təsdiqlənmədi.
-cert-not-verified-unknown = Bu təsdiq sənədi naməlum səbəblərə görə yoxlana bilmədi.
-
 ## Used to show whether an override is temporary or permanent
+
 
 ## Add Security Exception dialog
 

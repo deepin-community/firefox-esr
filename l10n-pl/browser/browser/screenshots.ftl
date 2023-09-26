@@ -2,13 +2,12 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-screenshots-context-menu = Wykonaj zrzut ekranu
-
-screenshots-my-shots-button = Moje zrzuty
-
 screenshot-toolbarbutton =
     .label = Zrzut ekranu
     .tooltiptext = Wykonaj zrzut ekranu
+
+screenshot-shortcut =
+    .key = S
 
 screenshots-instructions = Przeciągnij lub kliknij na stronie, aby zaznaczyć obszar. Naciśnij klawisz Esc, aby anulować.
 screenshots-cancel-button = Anuluj
@@ -18,6 +17,14 @@ screenshots-download-button = Pobierz
 screenshots-download-button-tooltip = Pobierz zrzut ekranu
 screenshots-copy-button = Kopiuj
 screenshots-copy-button-tooltip = Skopiuj zrzut ekranu do schowka
+screenshots-download-button-title =
+    .title = Pobierz zrzut ekranu
+screenshots-copy-button-title =
+    .title = Skopiuj zrzut ekranu do schowka
+screenshots-cancel-button-title =
+    .title = Anuluj
+screenshots-retry-button-title =
+    .title = Ponów zrzut ekranu
 
 screenshots-meta-key =
     { PLATFORM() ->
@@ -41,8 +48,6 @@ screenshots-login-error-details = Nie można zapisać zrzutu, ponieważ występu
 screenshots-unshootable-page-error-title = Nie można wykonać zrzutu tej strony.
 screenshots-unshootable-page-error-details = To nie jest standardowa strona internetowa, więc nie można wykonać jej zrzutu.
 
-screenshots-self-screenshot-error-title = Nie można wykonać zrzutu strony { -screenshots-brand-name }.
-
 screenshots-empty-selection-error-title = Zaznaczenie jest za małe
 
 screenshots-private-window-error-title = { -screenshots-brand-name } jest wyłączony w trybie prywatnym
@@ -50,3 +55,6 @@ screenshots-private-window-error-details = Przepraszamy za utrudnienia. Pracujem
 
 screenshots-generic-error-title = { -screenshots-brand-name } wymknął się spod kontroli.
 screenshots-generic-error-details = Nie bardzo wiemy, co się wydarzyło. Chcesz spróbować ponownie lub wykonać zrzut innej strony?
+
+screenshots-too-large-error-title = Zrzut ekranu został przycięty, ponieważ był za duży
+screenshots-too-large-error-details = Spróbuj zaznaczyć obszar, który ma mniej niż 32 700 pikseli na najdłuższym boku lub mniej niż 124 900 000 pikseli łącznej powierzchni.

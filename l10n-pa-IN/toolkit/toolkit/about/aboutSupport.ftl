@@ -13,11 +13,6 @@ crashes-id = ਰਿਪੋਰਟ ID
 crashes-send-date = ਭੇਜੀਆਂ
 crashes-all-reports = ਸਭ ਕਰੈਸ਼ ਰਿਪੋਰਟ
 crashes-no-config = ਇਹ ਐਪਲੀਕੇਸ਼ਨ ਕਰੈਸ਼ ਰਿਪੋਰਟਾਂ ਵਿਖਾਉਣ ਲਈ ਹਾਲੇ ਸੰਰਚਿਤ ਨਹੀਂ ਹੈ।
-extensions-title = ਇਕਸਟੈਨਸ਼ਨ
-extensions-name = ਨਾਂ
-extensions-enabled = ਚਾਲੂ ਹੈ
-extensions-version = ਵਰਜ਼ਨ
-extensions-id = ID
 support-addons-title = ਐਡ-ਆਨ
 support-addons-name = ਨਾਂ
 support-addons-type = ਕਿਸਮ
@@ -63,12 +58,14 @@ app-basics-enabled-plugins = ਚਾਲੂ ਪਲੱਗਇਨ
 app-basics-build-config = ਬਿਲਡ ਸੰਰਚਨਾ
 app-basics-user-agent = ਯੂਜ਼ਰ ਏਜੰਟ
 app-basics-os = OS
+app-basics-os-theme = ਓ.ਸਿ. ਥੀਮ
 # Rosetta is Apple's translation process to run apps containing x86_64
 # instructions on Apple Silicon. This should remain in English.
 app-basics-rosetta = Rosetta ਉਲੱਥਾ
 app-basics-memory-use = ਮੈਮੋਰੀ ਵਰਤੋਂ
 app-basics-performance = ਕਾਰਗੁਜ਼ਾਰੀ
 app-basics-service-workers = ਰਜਿਸਟਰ ਕੀਤੇ Service Workers
+app-basics-third-party = ਤੀਜੀ ਧਿਰ ਦੇ ਮੋਡੀਊਲ
 app-basics-profiles = ਪਰੋਫਾਈਲ
 app-basics-launcher-process-status = ਲਾਂਚਰ ਪਰੋਸੈਸ
 app-basics-multi-process-support = ਬਹੁ-ਕਾਰਜ ਵਿੰਡੋਜ਼
@@ -79,6 +76,14 @@ app-basics-location-service-key-google = ਗੂਗਲ ਟਿਕਾਣਾ ਸੇ�
 app-basics-safebrowsing-key-google = ਗੂਗਲ ਸੇਫ਼-ਬਰਾਊਜਿੰਗ ਕੁੰਜੀ
 app-basics-key-mozilla = Mozilla Location Service Key
 app-basics-safe-mode = ਸੁਰੱਖਿਅਤ ਮੋਡ
+app-basics-memory-size = ਮੈਮੋਰੀ ਆਕਾਰ (RAM)
+app-basics-disk-available = ਮੌਜੂਦ ਡਿਸਕ ਥਾਂ
+
+# Variables:
+#   $value (number) - Amount of data being stored
+#   $unit (string) - The unit of data being stored (e.g. MB)
+app-basics-data-size = { $value } { $unit }
+
 show-dir-label =
     { PLATFORM() ->
         [macos] Finder ਵਿੱਚ ਵੇਖਾਓ
@@ -108,11 +113,21 @@ graphics-gpu2-title = GPU #2
 graphics-decision-log-title = ਫ਼ੈਸਲਾ ਲਾਗ
 graphics-crash-guards-title = ਕਰੈਸ਼ ਗਾਰਡ ਆਯੋਗ ਫੀਚਰ
 graphics-workarounds-title = ਜੁਗਾੜ
+graphics-device-pixel-ratios = ਵਿੰਡੋ ਡਿਵਾਈਸ ਪਿਕਸਲ ਅਨੁਪਾਤ
 # Windowing system in use on Linux (e.g. X11, Wayland).
 graphics-window-protocol = ਵਿੰਡੋ ਪਰੋਟੋਕਾਲ
 # Desktop environment in use on Linux (e.g. GNOME, KDE, XFCE, etc).
 graphics-desktop-environment = ਡੈਸਕਟਾਪ ਇੰਵਾਇਰਨਮੈਂਟ
 place-database-title = ਥਾਵਾਂ ਦਾ ਡਾਟਾਬੇਸ
+place-database-stats = ਅੰਕੜੇ
+place-database-stats-show = ਅੰਕੜੇ ਵੇਖੋ
+place-database-stats-hide = ਅੰਕੜੇ ਓਹਲੇ
+place-database-stats-entity = ਐਨਟੇਟੀ
+place-database-stats-count = ਗਿਣਤੀ
+place-database-stats-size-kib = ਆਕਾਰ (KiB)
+place-database-stats-size-perc = ਆਕਾਰ (%)
+place-database-stats-efficiency-perc = ਕਾਰਗੁਜ਼ਾਰੀ (%)
+place-database-stats-sequentiality-perc = ਲੜੀ (%)
 place-database-integrity = ਇਕਸਾਰਤਾ
 place-database-verify-integrity = ਇਕਸਾਰਤਾ ਨੂੰ ਤਸਦੀਕ ਕਰੋ
 a11y-title = ਅਸੈਸਬਿਲਟੀ
@@ -132,9 +147,6 @@ sandbox-sys-call-tid = TID
 sandbox-sys-call-proc-type = Process Type
 sandbox-sys-call-number = Syscall
 sandbox-sys-call-args = Arguments
-safe-mode-title = ਸੁਰੱਖਿਅਤ ਮੋਡ ਵਰਤ ਕੇ ਦੇਖੋ
-restart-in-safe-mode-label = …ਐਡ-ਆਨ ਬੰਦ ਕਰਕੇ ਮੁੜ-ਚਾਲੂ ਕਰੋ
-
 troubleshoot-mode-title = ਮਸਲਿਆਂ ਦੀ ਪੜਤਾਲ ਕਰੋ
 restart-in-troubleshoot-mode-label = ਸਮੱਸਿਆ ਨਿਪਟਾਰਾ ਢੰਗ…
 clear-startup-cache-title = ਸ਼ੁਰੂਆਤੀ ਕੈਸ਼ ਨੂੰ ਸਾਫ਼ ਕਰਕੇ ਕੋਸ਼ਿਸ਼ ਕਰੋ
@@ -162,8 +174,11 @@ media-device-channels = ਚੈਨਲ
 media-device-rate = ਰੇਟ
 media-device-latency = ਦੇਰੀ
 media-capabilities-title = ਮੀਡਿਆ ਸਮਰੱਥਾਵਾਂ
+media-codec-support-info = Codec ਸਹਿਯੋਗ ਜਾਣਕਾਰੀ
 # List all the entries of the database.
 media-capabilities-enumerate = ਡਾਟਾਬੇਸ ਦੇ ਇੰਦਰਾਜ਼ਾਂ ਦੀ ਸੂਚੀ
+
+## Codec support table
 
 ##
 
@@ -191,37 +206,6 @@ remote-debugging-accepting-connections = ਮਨਜ਼ੂਰ ਕੀਤੇ ਕਨੈ�
 remote-debugging-url = URL
 
 ##
-
-support-third-party-modules-title = ਤੀਜੀ ਧਿਰ ਮੋਡੀਊਲ
-support-third-party-modules-module = ਮੋਡੀਊਲ ਫਾਇਲ
-support-third-party-modules-version = ਫਾਇਲ ਦਾ ਵਰਜ਼ਨ
-support-third-party-modules-vendor = ਵੇਂਡਰ ਦੀ ਜਾਣਕਾਰੀ
-support-third-party-modules-occurrence = ਮੌਜੂਦਗੀ
-support-third-party-modules-process = ਪ੍ਰੋਸੈਸ ਦੀ ਕਿਸਮ ਤੇ ਆਈਡੀ
-support-third-party-modules-thread = ਥਰਿੱਡ
-support-third-party-modules-base = ਚਿੱਤਰ-ਬੇਸ ਸਿਰਨਾਵਾਂ
-support-third-party-modules-uptime = ਪਰੋਸੈਸ ਅੱਪਟਾਈਮ (ਮਿਲੀਸਕਿੰਟ)
-support-third-party-modules-duration = ਲੋਡਿੰਗ ਅੰਤਰਾਲ (ਮਿਲੀਸਕਿੰਟ)
-support-third-party-modules-status = ਹਾਲਤ
-support-third-party-modules-status-loaded = ਲੋਡ ਕੀਤਾ
-support-third-party-modules-status-blocked = ਪਾਬੰਦੀ ਲਾਇਆ
-support-third-party-modules-status-redirected = ਰਿ-ਡਾਇਰੈਕਟ
-support-third-party-modules-empty = ਕੋਈ ਵੀ ਸੁਤੰਤਰ ਧਿਰ ਦਾ ਮੋਡੀਊਲੋਡ ਲੋਡ  ਨਹੀਂ ਕੀਤਾ ਗਿਆ।
-support-third-party-modules-no-value = (ਕੋਈ ਮੁੱਲ ਨਹੀਂ)
-support-third-party-modules-button-open =
-    .title = …ਫਾਇਲ ਟਿਕਾਣੇ ਨੂੰ ਖੋਲ੍ਹੋ
-support-third-party-modules-expand =
-    .title = ਵੇਰਵੇ ਸਮੇਤ ਜਾਣਕਾਰੀ ਵੇਖਾਓ
-support-third-party-modules-collapse =
-    .title = ਵੇਰਵੇ ਸਮੇਤ ਜਾਣਕਾਰੀ ਨੂੰ ਸਮੇਟੋ
-support-third-party-modules-unsigned-icon =
-    .title = ਇਹ ਮੋਡੀਊਲ ਸਾਈਨ ਨਹੀਂ ਹੈ
-support-third-party-modules-folder-icon =
-    .title = …ਫਾਇਲ ਟਿਕਾਣੇ ਨੂੰ ਖੋਲ੍ਹੋ
-support-third-party-modules-down-icon =
-    .title = ਵੇਰਵੇ ਸਮੇਤ ਜਾਣਕਾਰੀ ਵੇਖਾਓ
-support-third-party-modules-up-icon =
-    .title = ਵੇਰਵੇ ਸਮੇਤ ਜਾਣਕਾਰੀ ਨੂੰ ਸਮੇਟੋ
 
 # Variables
 # $days (Integer) - Number of days of crashes to log
@@ -317,11 +301,8 @@ webgl2-renderer = WebGL2 ਰੈਂਡਰਰ
 webgl2-version = WebGL 2 Driver Version
 webgl2-driver-extensions = WebGL 2 Driver Extensions
 webgl2-extensions = WebGL 2 Extensions
-blocklisted-bug = ਜਾਣੀਆਂ ਹੋਈਆਂ ਸਮੱਸਿਆਵਾਂ ਕਰਕੇ ਪਾਬੰਦੀ ਲਗਾਈ ਹੈ
-
-# Variables
-# $bugNumber (string) - String of bug number from Bugzilla
-bug-link = ਬੱਗ { $bugNumber }
+webgpu-default-adapter = WebGPU ਮੂਲ ਅਡੈਪਟਰ
+webgpu-fallback-adapter = WebGPU ਫ਼ਾਲਬੈਕ ਅਡੈਪਟਰ
 
 # Variables
 #   $bugNumber (string) - Bug number on Bugzilla
@@ -332,8 +313,6 @@ support-blocklisted-bug = ਜਾਣੇ-ਪਛਾਣੇ ਮਸਲਿਆਂ ਕਰ
 unknown-failure = ਪਾਬੰਦੀਸ਼ੁਦਾ; ਅਸਫ਼ਲਤਾ ਕੋਡ { $failureCode }
 
 d3d11layers-crash-guard = D3D11 ਕੰਪੋਜ਼ਿਟਰ
-d3d11video-crash-guard = D3D11 ਵੀਡੀਓ ਡੀਕੋਡਰ
-d3d9video-crash-guard = D3D9 ਵੀਡੀਓ ਡੀਕੋਡਰ
 glcontext-crash-guard = OpenGL
 wmfvpxvideo-crash-guard = WMF VPX ਵੀਡਿਓ ਡੀਕੋਡਰ
 
@@ -358,6 +337,8 @@ can-sandbox-content = ਪ੍ਰਸੰਗ ਕਾਰਵਾਈ ਸੈਂਡਬੌ�
 can-sandbox-media = ਮੀਡੀਆ ਪਲੱਗਇਨ ਸੈਂਡਬੌਕਸਿੰਗ
 content-sandbox-level = Content Process Sandbox Level
 effective-content-sandbox-level = ਪ੍ਰਭਾਵੀ ਸਮੱਗਰੀ ਕਾਰਵਾਈ ਸੈਂਡਬਾਕਸ ਪੱਧਰ
+content-win32k-lockdown-state = ਸਮੱਗਰੀ ਸੁਰੱਖਿਆ ਲਈ Win32k ਲਾਕਡਾਊਨ ਸਥਿਤੀ
+support-sandbox-gpu-level = GPU ਪ੍ਰੋਸੈਸ ਸੈਂਡਬਾਕਸ ਪੱਧਰ
 sandbox-proc-type-content = ਸਮੱਗਰੀ
 sandbox-proc-type-file = ਫ਼ਾਇਲ ਸਮੱਗਰੀ
 sandbox-proc-type-media-plugin = ਮੀਡੀਆ ਪਲੱਗਇਨ
@@ -378,15 +359,6 @@ launcher-process-status-unknown = ਅਣਪਛਾਤੀ ਹਾਲਤ
 # $remoteWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
 multi-process-windows = { $remoteWindows }/{ $totalWindows }
-multi-process-status-0 = ਵਰਤੋਂਕਾਰ ਵਲੋਂ ਸਮਰੱਥ ਕੀਤਾ
-multi-process-status-1 = ਮੂਲ ਰੂਪ ਵਿੱਚ ਸਮਰੱਥ ਕੀਤਾ
-multi-process-status-2 = ਅਸਮਰੱਥ ਕੀਤਾ
-multi-process-status-4 = ਅਸੈਸਬਿਲਟੀ ਟੂਲਾਂ ਵਲੋਂ ਅਸਮਰੱਥ ਕੀਤਾ
-multi-process-status-6 = ਗ਼ੈਰ-ਸਹਾਇਕ ਟੈਕਸਟ ਇਨਪੁਟ ਵਲੋਂ ਅਸਮਰੱਥ ਕੀਤਾ
-multi-process-status-7 = ਐਡ-ਆਨ ਵਲੋਂ ਅਸਮਰੱਥ ਕੀਤਾ
-multi-process-status-8 = ਧੱਕੇ ਨਾਲ ਅਸਮਰੱਥ ਕੀਤਾ
-multi-process-status-unknown = ਅਣਜਾਣ ਹਾਲਤ
-
 # Variables
 # $fissionWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
@@ -395,12 +367,13 @@ fission-status-experiment-control = ਤਰਜਬੇ ਵਲੋਂ ਅਸਮਰੱ
 fission-status-experiment-treatment = ਤਜਰਬੇ ਵਲੋਂ ਸਮਰੱਥ ਕੀਤਾ
 fission-status-disabled-by-e10s-env = ਵਾਤਾਵਰਨ ਰਾਹੀਂ ਅਸਮਰੱਥ ਕੀਤਾ
 fission-status-enabled-by-env = ਵਾਤਾਵਰਨ ਰਾਹੀਂ ਸਮਰੱਥ ਕੀਤਾ
-fission-status-disabled-by-safe-mode = ਸੁਰੱਖਿਅਤ ਢੰਗ ਰਾਹੀਂ ਅਸਮਰੱਥ ਕੀਤਾ
+fission-status-disabled-by-env = ਪ੍ਰਣਾਲੀ ਵਲੋਂ ਅਸਮਰੱਥ ਕੀਤਾ ਹੈ
 fission-status-enabled-by-default = ਮੂਲ ਰੂਪ ਵਿੱਚ ਸਮਰੱਥ ਹੈ
 fission-status-disabled-by-default = ਮੂਲ ਰੂਪ 'ਚ ਅਸਮਰੱਥ ਹੈ
 fission-status-enabled-by-user-pref = ਵਰਤੋਂਕਾਰ ਵਲੋਂ ਸਮਰੱਥ ਕੀਤਾ
 fission-status-disabled-by-user-pref = ਵਰਤੋਂਕਾਰ ਵਲੋਂ ਅਸਮਰੱਥ ਹੈ
 fission-status-disabled-by-e10s-other = E10s ਅਸਮਰੱਥ ਹੈ
+fission-status-enabled-by-rollout = ਲੜੀਵਾਰ ਵੰਡਣ ਰਾਹੀਂ ਸਮਰੱਥ ਕੀਤਾ
 
 async-pan-zoom = ਅਸਮਕਾਲੀ ਪੈਨ/ਜ਼ੂਮ
 apz-none = ਕੋਈ ਨਹੀਂ

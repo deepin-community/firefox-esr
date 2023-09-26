@@ -65,11 +65,6 @@ options-stylesheet-autocompletion-tooltip =
 # The heading
 options-screenshot-label = Láimhseáil Seatanna den Scáileán
 
-# Label for the checkbox that toggles screenshot to clipboard feature
-options-screenshot-clipboard-label = Cóipeáil sa ghearrthaisce
-options-screenshot-clipboard-tooltip =
-    .title = Sábhálfar seat den scáileán go díreach sa ghearrthaisce
-
 # Label for the checkbox that toggles the camera shutter audio for screenshot tool
 options-screenshot-audio-label = Seinn fuaim an chomhla
 options-screenshot-audio-tooltip =
@@ -129,8 +124,3 @@ options-context-triggers-page-refresh = * An seisiún seo amháin; athlódálann
 
 ##
 
-# The label for the checkbox that toggles the display of the platform data in the
-# Profiler i.e. devtools.profiler.ui.show-platform-data a boolean preference in about:config
-options-show-platform-data-label = Taispeáin sonraí faoin ardán Gecko
-options-show-platform-data-tooltip =
-    .title = Leis an rogha seo, cuirfidh an próifíleoir JavaScript siombailí ardáin Gecko  san áireamh

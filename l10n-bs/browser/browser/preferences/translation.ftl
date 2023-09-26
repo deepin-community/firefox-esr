@@ -2,9 +2,9 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-translation-window =
+translation-window2 =
     .title = Izuzeci - Prijevod
-    .style = width: 36em
+    .style = min-width: 36em
 
 translation-close-key =
     .key = w
@@ -34,10 +34,6 @@ translation-sites-button-remove =
 translation-sites-button-remove-all =
     .label = Ukloni sve stranice
     .accesskey = e
-
-translation-button-close =
-    .label = Zatvori
-    .accesskey = Z
 
 translation-dialog =
     .buttonlabelaccept = Zatvori

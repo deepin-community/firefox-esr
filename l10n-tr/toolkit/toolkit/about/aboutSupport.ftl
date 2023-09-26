@@ -4,16 +4,12 @@
 
 page-title = Sorun giderme bilgileri
 page-subtitle = Bu sayfa, bir sorunu gidermeye çalışırken işinize yarabilecek teknik bilgiler içerir. { -brand-short-name } hakkında genel sorularla ilgili yanıt arıyorsanız <a data-l10n-name="support-link">destek sitemizi</a> ziyaret edin.
+
 crashes-title = Çökme Raporları
 crashes-id = Rapor numarası
 crashes-send-date = Gönderilme tarihi
 crashes-all-reports = Tüm çökme raporları
 crashes-no-config = Bu uygulama, çökme raporlarını görüntülemek için yapılandırılmamış.
-extensions-title = Uzantılar
-extensions-name = Adı
-extensions-enabled = Etkin mi?
-extensions-version = Sürüm
-extensions-id = Kimlik
 support-addons-title = Eklentiler
 support-addons-name = Adı
 support-addons-type = Tür
@@ -77,6 +73,14 @@ app-basics-location-service-key-google = Google Konum Hizmeti anahtarı
 app-basics-safebrowsing-key-google = Google Safebrowsing anahtarı
 app-basics-key-mozilla = Mozilla Konum Hizmeti anahtarı
 app-basics-safe-mode = Güvenli kip
+app-basics-memory-size = Bellek boyutu (RAM)
+app-basics-disk-available = Kullanılabilir disk alanı
+
+# Variables:
+#   $value (number) - Amount of data being stored
+#   $unit (string) - The unit of data being stored (e.g. MB)
+app-basics-data-size = { $value } { $unit }
+
 show-dir-label =
     { PLATFORM() ->
         [macos] Finder'da göster
@@ -106,11 +110,21 @@ graphics-gpu2-title = GPU #2
 graphics-decision-log-title = Karar günlüğü
 graphics-crash-guards-title = Çökme koruyucusu tarafından kapatılan özellikler
 graphics-workarounds-title = Çözümler
+graphics-device-pixel-ratios = Pencere cihaz piksel oranları
 # Windowing system in use on Linux (e.g. X11, Wayland).
 graphics-window-protocol = Pencere protokolü
 # Desktop environment in use on Linux (e.g. GNOME, KDE, XFCE, etc).
 graphics-desktop-environment = Masaüstü ortamı
 place-database-title = Places veritabanı
+place-database-stats = İstatistikler
+place-database-stats-show = İstatistikleri göster
+place-database-stats-hide = İstatistikleri gizle
+place-database-stats-entity = Varlık
+place-database-stats-count = Sayaç
+place-database-stats-size-kib = Boyut (KiB)
+place-database-stats-size-perc = Boyut (%)
+place-database-stats-efficiency-perc = Verimlilik (%)
+place-database-stats-sequentiality-perc = Sıralılık (%)
 place-database-integrity = Bütünlük
 place-database-verify-integrity = Bütünlüğü doğrula
 a11y-title = Erişilebilirlik
@@ -130,8 +144,6 @@ sandbox-sys-call-tid = TID
 sandbox-sys-call-proc-type = İşlem türü
 sandbox-sys-call-number = Sistem çağrısı
 sandbox-sys-call-args = Parametreler
-safe-mode-title = Güvenli kipi deneyin
-restart-in-safe-mode-label = Eklentileri devre dışı bırakıp yeniden başlat…
 troubleshoot-mode-title = Sorunları tanılayın
 restart-in-troubleshoot-mode-label = Sorun giderme modu…
 clear-startup-cache-title = Başlangıç önbelleğini temizlemeyi deneyin
@@ -159,8 +171,17 @@ media-device-channels = Kanallar
 media-device-rate = Oran
 media-device-latency = Gecikme
 media-capabilities-title = Çoku ortam yetenekleri
+media-codec-support-info = Codec destek bilgileri
 # List all the entries of the database.
 media-capabilities-enumerate = Veritabanını numaralandır
+
+## Codec support table
+
+media-codec-support-sw-decoding = Yazılımsal çözme
+media-codec-support-hw-decoding = Donanımsal çözme
+media-codec-support-codec-name = Codec adı
+media-codec-support-supported = Destekleniyor
+media-codec-support-unsupported = Desteklenmiyor
 
 ##
 
@@ -189,36 +210,6 @@ remote-debugging-url = URL
 
 ##
 
-support-third-party-modules-title = Üçüncü taraf modülleri
-support-third-party-modules-module = Modül dosyası
-support-third-party-modules-version = Dosya sürümü
-support-third-party-modules-vendor = Sağlayıcı bilgileri
-support-third-party-modules-occurrence = Tekrar
-support-third-party-modules-process = İşlem türü ve kimliği
-support-third-party-modules-thread = İş parçacığı
-support-third-party-modules-base = Imagebase adresi
-support-third-party-modules-uptime = İşlemin çalışma süresi (ms)
-support-third-party-modules-duration = Yükleme süresi (ms)
-support-third-party-modules-status = Durum
-support-third-party-modules-status-loaded = Yüklendi
-support-third-party-modules-status-blocked = Engellendi
-support-third-party-modules-status-redirected = Yönlendirildi
-support-third-party-modules-empty = Hiçbir üçüncü taraf modülü yüklenmedi.
-support-third-party-modules-no-value = (Değer yok)
-support-third-party-modules-button-open =
-    .title = Dosya konumunu aç…
-support-third-party-modules-expand =
-    .title = Ayrıntılı bilgileri göster
-support-third-party-modules-collapse =
-    .title = Ayrıntılı bilgileri gizle
-support-third-party-modules-unsigned-icon =
-    .title = Bu modül imzalanmamış
-support-third-party-modules-folder-icon =
-    .title = Dosya konumunu aç…
-support-third-party-modules-down-icon =
-    .title = Ayrıntılı bilgileri göster
-support-third-party-modules-up-icon =
-    .title = Ayrıntılı bilgileri gizle
 # Variables
 # $days (Integer) - Number of days of crashes to log
 report-crash-for-days =
@@ -226,6 +217,7 @@ report-crash-for-days =
         [one] Son { $days } günün çökme raporları
        *[other] Son { $days } günün çökme raporları
     }
+
 # Variables
 # $minutes (integer) - Number of minutes since crash
 crashes-time-minutes =
@@ -233,6 +225,7 @@ crashes-time-minutes =
         [one] { $minutes } dakika önce
        *[other] { $minutes } dakika önce
     }
+
 # Variables
 # $hours (integer) - Number of hours since crash
 crashes-time-hours =
@@ -240,6 +233,7 @@ crashes-time-hours =
         [one] { $hours } saat önce
        *[other] { $hours } saat önce
     }
+
 # Variables
 # $days (integer) - Number of days since crash
 crashes-time-days =
@@ -247,6 +241,7 @@ crashes-time-days =
         [one] { $days } gün önce
        *[other] { $days } gün önce
     }
+
 # Variables
 # $reports (integer) - Number of pending reports
 pending-reports =
@@ -254,6 +249,7 @@ pending-reports =
         [one] Tüm çökme raporları (belirtilen zaman aralığındaki { $reports } bekleyen çökme dahil)
        *[other] Tüm çökme raporları (belirtilen zaman aralığındaki { $reports } bekleyen çökme dahil)
     }
+
 raw-data-copied = Ham veriler panoya kopyalandı
 text-copied = Metin panoya kopyalandı
 
@@ -266,9 +262,11 @@ blocked-mismatched-version = Kayıt defteriyle DLL arasındaki grafik sürücüs
 # Variables
 # $driverVersion - The graphics driver version string
 try-newer-driver = Grafik kartı sürücüsü sürümünüz için engellenmiştir. Grafik kartı sürücünüzü { $driverVersion } veya daha yeni bir sürüme güncellemeyi deneyin.
+
 # "ClearType" is a proper noun and should not be translated. Feel free to leave English strings if
 # there are no good translations, these are only used in about:support
 clear-type-parameters = ClearType parametreleri
+
 compositing = Çizici
 hardware-h264 = Donanımsal H264 çözme
 main-thread-no-omtc = ana işlem parçacığı, OMTC yok
@@ -283,6 +281,7 @@ virtual-monitor-disp = Sanal monitör ekranı
 
 found = Bulundu
 missing = Eksik
+
 gpu-process-pid = GPUProcessPid
 gpu-process = GPUProcess
 gpu-description = Tanım
@@ -305,21 +304,21 @@ webgl2-renderer = WebGL2 çizici
 webgl2-version = WebGL 2 sürücü sürümü
 webgl2-driver-extensions = WebGL 2 sürücü uzantıları
 webgl2-extensions = WebGL 2 uzantıları
-blocklisted-bug = Bilinen sorunlar nedeniyle engellendi
-# Variables
-# $bugNumber (string) - String of bug number from Bugzilla
-bug-link = bug { $bugNumber }
+webgpu-default-adapter = Varsayılan WebGPU bağdaştırıcısı
+webgpu-fallback-adapter = Yedek WebGPU bağdaştırıcısı
+
 # Variables
 #   $bugNumber (string) - Bug number on Bugzilla
 support-blocklisted-bug = Bilinen sorunlar nedeniyle engellendi: <a data-l10n-name="bug-link">bug { $bugNumber }</a>
+
 # Variables
 # $failureCode (string) - String that can be searched in the source tree.
 unknown-failure = Engellendi. Hata kodu { $failureCode }
+
 d3d11layers-crash-guard = D3D11 Compositor
-d3d11video-crash-guard = D3D11 Video Çözücüsü
-d3d9video-crash-guard = D3D9 Video Çözücüsü
 glcontext-crash-guard = OpenGL
 wmfvpxvideo-crash-guard = WMF VPX video çözücüsü
+
 reset-on-next-restart = Sonraki yeniden başlatmada sıfırla
 gpu-process-kill-button = GPU işlemini sonlandır
 gpu-device-reset = Aygıtı sıfırla
@@ -329,8 +328,10 @@ content-uses-tiling = Tiling kullanımı (içerik)
 off-main-thread-paint-enabled = Off main thread painting etkin
 off-main-thread-paint-worker-count = Off main thread painting işçi sayısı
 target-frame-rate = Hedef kare hızı
+
 min-lib-versions = Beklenen minimum sürüm
 loaded-lib-versions = Kullanılan sürüm
+
 has-seccomp-bpf = Seccomp-BPF (sistem çağrısı filtreleme)
 has-seccomp-tsync = Seccomp işlem senkronizasyonu
 has-user-namespaces = Kullanıcı isim uzayları
@@ -340,31 +341,27 @@ can-sandbox-media = Medya yan uygulaması kum havuzu
 content-sandbox-level = İçerik işlemi kum havuzu düzeyi
 effective-content-sandbox-level = Etkin içerik işlemi kum havuzu düzeyi
 content-win32k-lockdown-state = İçerik İşlemi için Win32k Kilitleme Durumu
+support-sandbox-gpu-level = GPU işlemi kum havuzu düzeyi
 sandbox-proc-type-content = içerik
 sandbox-proc-type-file = dosya içeriği
 sandbox-proc-type-media-plugin = ortam yan uygulaması
 sandbox-proc-type-data-decoder = veri çözücü
+
 startup-cache-title = Başlangıç önbelleği
 startup-cache-disk-cache-path = Disk önbellek yolu
 startup-cache-ignore-disk-cache = Disk önbelleğini yok say
 startup-cache-found-disk-cache-on-init = Başlangıçta disk önbelleği bulundu
 startup-cache-wrote-to-disk-cache = Disk önbelleğine yazıldı
+
 launcher-process-status-0 = Etkin
 launcher-process-status-1 = Hata nedeniyle devre dışı
 launcher-process-status-2 = Zorla devre dışı bırakıldı
 launcher-process-status-unknown = Bilinmeyen durum
+
 # Variables
 # $remoteWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
 multi-process-windows = { $remoteWindows }/{ $totalWindows }
-multi-process-status-0 = kullanıcı tarafından etkinleştirildi
-multi-process-status-1 = Varsayılan olarak etkin
-multi-process-status-2 = Devre dışı
-multi-process-status-4 = Erişilebilirlik araçları tarafından devre dışı bırakıldı
-multi-process-status-6 = Desteklenmeyen metin girdisi tarafından devre dışı bırakıldı
-multi-process-status-7 = Eklentiler tarafından devre dışı bırakıldı
-multi-process-status-8 = Zorla devre dışı bırakıldı
-multi-process-status-unknown = Bilinmeyen durum
 # Variables
 # $fissionWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
@@ -373,13 +370,14 @@ fission-status-experiment-control = Deney tarafından kapatıldı
 fission-status-experiment-treatment = Deney tarafından açıldı
 fission-status-disabled-by-e10s-env = Ortam tarafından kapatıldı
 fission-status-enabled-by-env = Ortam tarafından açıldı
-fission-status-disabled-by-safe-mode = Güvenli mod tarafından kapatıldı
+fission-status-disabled-by-env = Ortam tarafından kapatıldı
 fission-status-enabled-by-default = Varsayılan olarak açık
 fission-status-disabled-by-default = varsayılan olarak kapalı
 fission-status-enabled-by-user-pref = kullanıcı tarafından açıldı
 fission-status-disabled-by-user-pref = Kullanıcı tarafından kapatıldı
 fission-status-disabled-by-e10s-other = E10s devre dışı
 fission-status-enabled-by-rollout = Aşamalı dağıtımla etkinleştirildi
+
 async-pan-zoom = Asenkron kaydır/yakınlaştır
 apz-none = yok
 wheel-enabled = tekerlek girdisi etkin
@@ -416,6 +414,7 @@ support-remote-experiments-title = Uzak deneyler
 support-remote-experiments-name = Adı
 support-remote-experiments-branch = Deney kolu
 support-remote-experiments-see-about-studies = Daha fazla bilgi için <a data-l10n-name="support-about-studies-link">about:studies</a> sayfasına bakabilirsiniz. O sayfadan deneyleri tek tek kapatabilir veya { -brand-short-name } tarayıcınızın gelecekte bu tür deneyleri çalıştırmasını engelleyebilirsiniz.
+
 support-remote-features-title = Uzak özellikler
 support-remote-features-name = Adı
 support-remote-features-status = Durum

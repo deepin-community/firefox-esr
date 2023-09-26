@@ -11,6 +11,12 @@ reload-tab =
 select-all-tabs =
     .label = Përzgjidhi Krejt Skedat
     .accesskey = P
+tab-context-play-tab =
+    .label = Luaje lëndën e Skedës
+    .accesskey = L
+tab-context-play-tabs =
+    .label = Luaje lëndën e Skedave
+    .accesskey = u
 duplicate-tab =
     .label = Përsëdyte Skedën
     .accesskey = P
@@ -48,12 +54,9 @@ unpin-selected-tabs =
 bookmark-selected-tabs =
     .label = Faqeruani Skeda…
     .accesskey = q
-bookmark-tab =
-    .label = Faqeruaje Skedën
+tab-context-bookmark-tab =
+    .label = Faqeruaje Skedën…
     .accesskey = q
-reopen-in-container =
-    .label = Rihape në Kontejner
-    .accesskey = h
 tab-context-open-in-new-container-tab =
     .label = Hape në Skedë të Re Kontejneri
     .accesskey = a
@@ -69,31 +72,9 @@ move-to-new-window =
 tab-context-close-multiple-tabs =
     .label = Mbyll Skeda të Shumta
     .accesskey = u
-tab-context-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Zhbëje Mbylljen e Skedës
-            [one] Zhbëje Mbylljen e Skedës
-           *[other] Zhbëje Mbylljen e Skedave
-        }
-    .accesskey = Z
-close-tab =
-    .label = Mbylleni Skedën
-    .accesskey = M
-close-tabs =
-    .label = Mbylli Skedat
-    .accesskey = S
-move-tabs =
-    .label = Lëvizni Skeda
-    .accesskey = v
-move-tab =
-    .label = Lëvizeni Skedën
-    .accesskey = v
 tab-context-share-url =
     .label = Ndajeni me të tjerët
     .accesskey = N
-tab-context-share-more =
-    .label = Më tepër…
 
 ## Variables:
 ##  $tabCount (Number): the number of tabs that are affected by the action.
@@ -106,12 +87,11 @@ tab-context-reopen-closed-tabs =
            *[other] Rihap Skedat e Mbyllura
         }
     .accesskey = R
-tab-context-close-tabs =
+tab-context-close-n-tabs =
     .label =
         { $tabCount ->
             [1] Mbylle Skedën
-            [one] Mbylle Skedën
-           *[other] Mbylli Skedat
+           *[other] Mbylli { $tabCount } Skedat
         }
     .accesskey = M
 tab-context-move-tabs =
@@ -122,3 +102,11 @@ tab-context-move-tabs =
            *[other] Lëvizni Skeda
         }
     .accesskey = L
+
+tab-context-send-tabs-to-device =
+    .label =
+        { $tabCount ->
+            [one] Dërgoje Skedën te Pajisje
+           *[other] Dërgo { $tabCount } Skedë te Pajisje
+        }
+    .accesskey = D

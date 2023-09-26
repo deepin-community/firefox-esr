@@ -5,19 +5,8 @@
 
 about-logins-page-title = புகுபதிகைககளும் கடவுச்சொற்களும்
 
-# "Google Play" and "App Store" are both branding and should not be translated
-
-login-app-promo-title = உமது கடவுச்சொற்களை எங்கும் எடுத்துச்செல்க
-login-app-promo-subtitle = இலவசமாக { -lockwise-brand-name } செயிலியைப் பெறுக
-login-app-promo-android =
-    .alt = Google Play இல் பெற
-login-app-promo-apple =
-    .alt = App Store-இல் தரவிறக்குக
-login-filter =
-    .placeholder = புகுபதிகைகளைத் தேடு
-create-login-button = புதிய புகுபதிகையை உருவாக்கு
 fxaccounts-sign-in-text = உங்கள் கடவுச்சொற்களை மற்ற சாதனங்களில் பெறுங்கள்
-fxaccounts-sign-in-button = { -sync-brand-short-name } உள்நுழைக
+fxaccounts-sign-in-sync-button = ஒத்திசைக்க உள்நுழை
 fxaccounts-avatar-button =
     .title = கணக்கை நிர்வகி
 
@@ -29,14 +18,13 @@ menu =
 about-logins-menu-menuitem-import-from-another-browser = மற்றொரு உலாவியிலிருந்து இறக்குமதி செய்க…
 about-logins-menu-menuitem-import-from-a-file = கோப்பிலிருந்து இறக்குமதி செய்க…
 about-logins-menu-menuitem-export-logins = உள்நுழைவுகளை ஏற்றுமதிச்செய் …
+about-logins-menu-menuitem-remove-all-logins = எல்லா உள்நுழைவுகளையும் நீக்கு…
 menu-menuitem-preferences =
     { PLATFORM() ->
         [windows] விருப்பங்கள்
        *[other] முன்னுரிமைகள்
     }
 about-logins-menu-menuitem-help = உதவி
-menu-menuitem-android-app = ஆண்ட்ராய்டிற்கான { -lockwise-brand-short-name }
-menu-menuitem-iphone-app = ஐபோன் மற்றம் ஐபேட்டுக்கான { -lockwise-brand-short-name }
 
 ## Login List
 
@@ -50,21 +38,34 @@ login-list-count =
 login-list-sort-label-text = வரிசைப்படுத்து:
 login-list-name-option = பெயர் (அ-ஃ)
 login-list-name-reverse-option = பெயர் (ஃ-அ)
+login-list-username-option = பயனர்பெயர் (A-Z)
+login-list-username-reverse-option = பயனர்பெயர் (Z-A)
 about-logins-login-list-alerts-option = விழிப்பூட்டல்
-login-list-last-changed-option = கடைசியாக மாற்ற‌ப்பட்டது:
+login-list-last-changed-option = இறுதியாக மாற்ற‌ப்பட்டது:
 login-list-last-used-option = இறுதியாக பயன்படுத்தியது
 login-list-intro-title = உள்நுழைவுகள் ஏதுமில்லை
 login-list-intro-description = கடவுச்சொல்லை { -brand-product-name } என்பதில் சேமிக்கும் பொருட்டு, இங்கே காட்டும்
 about-logins-login-list-empty-search-title = உள்நுழைவுகள் ஏதுமில்லை
-about-logins-login-list-empty-search-description = உங்கள் தேடலுடன் பொருந்தக்கூடிய முடிவுகள் எதுவும் இல்லை.
+about-logins-login-list-empty-search-description = தங்கள் தேடலுடன் பொருந்தக்கூடிய முடிவுகள் எதுவும் இல்லை.
 login-list-item-title-new-login = புதிய உள்நுழைவு
 login-list-item-subtitle-new-login = உங்கள் உள்நுழைவு சான்றுகளை உள்ளிடவும்
 login-list-item-subtitle-missing-username = (பயனர் பெயர் இல்லை)
+about-logins-list-item-breach-icon =
+    .title = அரிபட்ட வலைத்தளம்
+about-logins-list-item-vulnerable-password-icon =
+    .title = பாதிக்கப்படக்கூடிய கடவுச்சொல்
+about-logins-list-section-breach = மீறப்பட்ட வலைத்தளங்கள்
+about-logins-list-section-vulnerable = பாதிக்கப்படக்கூடிய கடவுச்சொற்கள்
+about-logins-list-section-nothing = எச்சரிக்கை இல்லை
+about-logins-list-section-today = இன்று
+about-logins-list-section-yesterday = நேற்று
+about-logins-list-section-week = கடந்த 7 நாட்கள்
 
 ## Introduction screen
 
-login-intro-heading = உங்கள் சேமித்த உள்நுழைவுகளைத் தேடுகிறீர்களா? { -sync-brand-short-name } அமை
+about-logins-login-intro-heading-logged-out2 = உங்கள் சேமித்த உள்நுழைவுகளைத் தேடுகிறீர்களா? ஒத்திசைவை இயக்குக அல்லது அவற்றை இறக்குமதி செய்க.
 about-logins-login-intro-heading-logged-in = ஒத்திசைக்கப்பட்ட உள்நுழைவுகள் எதுமில்லை.
+login-intro-description = உங்கள் உள்நுழைவுகளை வேறு சாதனத்திலுள்ள { -brand-product-name }-இல் சேமித்தீர்களெனில், அவற்றை இங்கெவ்வாறு பெறுவதென்பது இங்கே:
 
 ## Login
 
@@ -78,28 +79,35 @@ login-item-username-label = பயனர்பெயர்
 about-logins-login-item-username =
     .placeholder = (பயனர் பெயர் இல்லை)
 login-item-copy-username-button-text = நகலெடு
-login-item-copied-username-button-text = நகலெடுக்கப்பட்டது!
+login-item-copied-username-button-text = நகலில்!
 login-item-password-label = கடவுச்சொல்
+login-item-password-reveal-checkbox =
+    .aria-label = கடவுச்சொல்லை காட்டு
 login-item-copy-password-button-text = நகலெடு
-login-item-copied-password-button-text = நகலெடுக்கப்பட்டது
+login-item-copied-password-button-text = நகலில்!
 login-item-save-changes-button = மாற்றங்களைச் சேமி
 login-item-save-new-button = சேமி
 login-item-cancel-button = இரத்து
-login-item-time-changed = கடைசி மாற்றம்: { DATETIME($timeChanged, day: "numeric", month: "long", year: "numeric") }
-login-item-time-created = தோற்றம்: { DATETIME($timeCreated, day: "numeric", month: "long", year: "numeric") }
-login-item-time-used = கடைசியாகப் பயனில் இருந்த நேரம்: { DATETIME($timeUsed, day: "numeric", month: "long", year: "numeric") }
+
+## The date is displayed in a timeline showing the password evolution.
+## A label is displayed under the date to describe the type of change.
+## (e.g. updated, created, etc.)
 
 ## OS Authentication dialog
 
+about-logins-os-auth-dialog-caption = { -brand-full-name }
 
 ## The macOS strings are preceded by the operating system with "Firefox is trying to "
 ## and includes subtitle of "Enter password for the user "xxx" to allow this." These
 ## notes are only valid for English. Please test in your respected locale.
 
+# This message can be seen when attempting to reveal a password in about:logins
+# On MacOS, only provide the reason that account verification is needed. Do not put a complete sentence here.
+about-logins-reveal-password-os-auth-dialog-message-macosx = சேமித்த கடவுச்சொல்லை வெளிப்படுத்து
 
-## Master Password notification
-
-master-password-notification-message = சேமித்த உள்நுழைவுகளையும் கடவுச்சொற்களையும் காண உங்களின் முதன்மை கடவுச்சொல்லை உள்ளிடவும்
+# This message can be seen when attempting to copy a password in about:logins
+# On MacOS, only provide the reason that account verification is needed. Do not put a complete sentence here.
+about-logins-copy-password-os-auth-dialog-message-macosx = சேமித்த கடவுச்சொல்லை நகலெடு
 
 ## Primary Password notification
 
@@ -107,45 +115,55 @@ master-password-reload-button =
     .label = உள் நுழை
     .accesskey = L
 
-## Password Sync notification
-
-enable-password-sync-preferences-button =
-    .label =
-        { PLATFORM() ->
-            [windows] { -sync-brand-short-name } தேர்வுகளைப் பார்
-           *[other] { -sync-brand-short-name } விருப்பங்களைப் பார்
-        }
-    .accesskey = V
-about-logins-enable-password-sync-dont-ask-again-button =
-    .label = மீண்டும் கேட்காதே
-    .accesskey = D
-
 ## Dialogs
 
 confirmation-dialog-cancel-button = இரத்து
 confirmation-dialog-dismiss-button =
     .title = இரத்து
+
 about-logins-confirm-remove-dialog-title = இந்த உள்நுழைவை நீக்கவா?
 confirm-delete-dialog-message = இச்செயலை மீட்க முடியாது.
 about-logins-confirm-remove-dialog-confirm-button = நீக்கு
+
+## Variables
+##   $count (number) - Number of items
+
+about-logins-confirm-remove-all-dialog-confirm-button-label =
+    { $count ->
+        [1] நீக்கு
+        [one] நீக்கு
+       *[other] அனைத்தையும் நீக்குக
+    }
+
+about-logins-confirm-remove-all-dialog-title =
+    { $count ->
+        [one] { $count } புகுபதிகையை நீக்கவா?
+       *[other] { $count } புகுபதிகைகளை நீக்கவா?
+    }
+
+##
+
 about-logins-confirm-export-dialog-title = உள்நுழைவுகளையும் கடவுச்சொற்களையும் ஏற்றுமதி செய்
+about-logins-confirm-export-dialog-message = தங்கள் கடவுச்சொற்கள் படிக்கக்கூடிய உரையாகச் சேமிக்கப்படும் (எ.கா., BadP@ssw0rd) எனவே ஏற்றுமதி செய்யப்பட்ட கோப்பைத் திறக்கக்கூடிய எவரும் அவற்றைக் காணலாம்.
 about-logins-confirm-export-dialog-confirm-button = ஏற்றுமதி...
+
 confirm-discard-changes-dialog-title = சேமிக்காத மாற்றங்களை நிராகரிக்கவா?
 confirm-discard-changes-dialog-message = சேமிக்கப்படாத அனைத்து மாற்றங்களும் இழக்கப்படும்.
 confirm-discard-changes-dialog-confirm-button = நிராகரி
 
 ## Breach Alert notification
 
-about-logins-breach-alert-title = வலைத்தள அத்மீறல்
-breach-alert-text = உங்கள் உள்நுழைவு விவரங்களைக் கடைசியாகப் புதுப்பித்ததிலிருந்து இந்த வலைத்தளத்திலிருந்து கடவுச்சொற்கள் கசிந்தன அல்லது திருடப்பட்டன. உங்கள் கணக்கைப் பாதுகாக்க கடவுச்சொல்லை மாற்றவும்.
+about-logins-breach-alert-title = வலைத்தள மீறல்
+breach-alert-text = தங்கள் புகுபதிகை விவரங்களின் கடைசி இற்றையிலிருந்து இந்த வலைத்தளத்தின் கடவுச்சொற்கள் கசிந்தன அல்லது திருடப்பட்டன. தங்கள் கணக்கைப் பாதுகாக்க கடவுச்சொல்லை மாற்றவும்.
+about-logins-breach-alert-date = இந்த மீறல் ஏற்பட்டது { DATETIME($date, day: "numeric", month: "long", year: "numeric") }
 # Variables:
 #   $hostname (String) - The hostname of the website associated with the login, e.g. "example.com"
 about-logins-breach-alert-link = { $hostname } தளத்திற்குச் செல்க
-about-logins-breach-alert-learn-more-link = மேலும் அறிக
 
 ## Vulnerable Password notification
 
 about-logins-vulnerable-alert-title = பாதிப்பிற்குள்ளாகும் கடவுச்சொல்
+about-logins-vulnerable-alert-text2 = இந்த கடவுச்சொல் தரவு மீறலுக்குள்ளான மற்றொரு கணக்கில் பயன்படுத்தப்பட்டுள்ளது. சான்றுகளை மீண்டும் பயன்படுத்துவது தங்கள் எல்லா கணக்குகளையும் ஆபத்தில் வைக்கிறது. இந்த கடவுச்சொல்லை மாற்றவும்.
 # Variables:
 #   $hostname (String) - The hostname of the website associated with the login, e.g. "example.com"
 about-logins-vulnerable-alert-link = { $hostname } தளத்திற்குச் செல்க
@@ -153,6 +171,14 @@ about-logins-vulnerable-alert-learn-more-link = மேலும் அறிக
 
 ## Error Messages
 
+# This is an error message that appears when a user attempts to save
+# a new login that is identical to an existing saved login.
+# Variables:
+#   $loginTitle (String) - The title of the website associated with the login.
+about-logins-error-message-duplicate-login-with-link = { $loginTitle } -க்கான நுழைவு ஏற்கனவே அந்தப் பயனர்பெயருடன் உள்ளது.<a data-l10n-name="duplicate-link">இருக்கும் நுழைவுக்குச் செல்லவா?</a>
+
+# This is a generic error message.
+about-logins-error-message-default = இந்த கடவுச்சொல்லைச் சேமிக்க முயற்சிக்கும்போது பிழை ஏற்பட்டது.
 
 ## Login Export Dialog
 

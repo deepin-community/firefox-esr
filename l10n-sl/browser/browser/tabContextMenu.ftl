@@ -11,6 +11,12 @@ reload-tab =
 select-all-tabs =
     .label = Izberi vse zavihke
     .accesskey = b
+tab-context-play-tab =
+    .label = Predvajaj zavihek
+    .accesskey = P
+tab-context-play-tabs =
+    .label = Predvajaj zavihke
+    .accesskey = j
 duplicate-tab =
     .label = Podvoji zavihek
     .accesskey = o
@@ -48,12 +54,9 @@ unpin-selected-tabs =
 bookmark-selected-tabs =
     .label = Dodaj zavihke med zaznamke …
     .accesskey = m
-bookmark-tab =
-    .label = Dodaj zavihek med zaznamke
-    .accesskey = D
-reopen-in-container =
-    .label = Ponovno odpri v vsebniku
-    .accesskey = v
+tab-context-bookmark-tab =
+    .label = Dodaj zavihke med zaznamke …
+    .accesskey = z
 tab-context-open-in-new-container-tab =
     .label = Odpri v novem zavihku vsebnika
     .accesskey = O
@@ -69,33 +72,9 @@ move-to-new-window =
 tab-context-close-multiple-tabs =
     .label = Zapri več zavihkov
     .accesskey = č
-tab-context-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Ponovno odpri zavihek
-            [one] Ponovno odpri zavihek
-            [two] Ponovno odpri zavihka
-            [few] Ponovno odpri zavihke
-           *[other] Ponovno odpri zavihke
-        }
-    .accesskey = h
-close-tab =
-    .label = Zapri zavihek
-    .accesskey = Z
-close-tabs =
-    .label = Zapri zavihke
-    .accesskey = Z
-move-tabs =
-    .label = Premakni zavihke
-    .accesskey = k
-move-tab =
-    .label = Premakni zavihek
-    .accesskey = k
 tab-context-share-url =
     .label = Deli
     .accesskey = D
-tab-context-share-more =
-    .label = Več …
 
 ## Variables:
 ##  $tabCount (Number): the number of tabs that are affected by the action.
@@ -109,16 +88,6 @@ tab-context-reopen-closed-tabs =
            *[other] Obnovi zaprte zavihke
         }
     .accesskey = h
-tab-context-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Zapri zavihek
-            [one] Zapri zavihek
-            [two] Zapri zavihka
-            [few] Zapri zavihke
-           *[other] Zapri zavihke
-        }
-    .accesskey = Z
 tab-context-close-n-tabs =
     .label =
         { $tabCount ->
@@ -139,3 +108,13 @@ tab-context-move-tabs =
            *[other] Premakni zavihke
         }
     .accesskey = m
+
+tab-context-send-tabs-to-device =
+    .label =
+        { $tabCount ->
+            [one] Pošlji zavihek na napravo
+            [two] Pošlji { $tabCount } zavihka na napravo
+            [few] Pošlji { $tabCount } zavihke na napravo
+           *[other] Pošlji { $tabCount } zavihkov na napravo
+        }
+    .accesskey = š

@@ -23,6 +23,8 @@ profile-selection-delete-button =
     .label = ....ਪਰੋਫਾਈਲ ਹਟਾਓ
     .accesskey = D
 
+profile-selection-conflict-message = { -brand-product-name } ਦੀ ਹੋਰ ਕਾਪੀ ਨੇ ਪਰੋਫਾਈਲਾਂ ਵਿੱਚ ਤਬਦੀਲੀਆਂ ਕੀਤੀਆਂ ਹਨ। ਹੋਰ ਤਬਦੀਲੀਆਂ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਤੁਹਾਨੂੰ { -brand-short-name } ਮੁੜ-ਚਾਲੂ ਕਰਨਾ ਪਵੇਗਾ।
+
 ## Messages used in the profile manager
 
 profile-manager-description = { -brand-short-name } ਤੁਹਾਡੇ ਪਰੋਫਾਈਲ ਵਿੱਚ ਤੁਹਾਡੀ ਸੈਟਿੰਗ, ਤੁਹਾਡੀ ਪਸੰਦ ਅਤੇ ਹੋਰ ਵਰਤੋਂਕਾਰ ਆਈਟਮਾਂ ਬਾਰੇ ਜਾਣਕਾਰੀ ਸੰਭਾਲ ਕੇ ਰੱਖੀ ਜਾਂਦੀ ਹੈ।

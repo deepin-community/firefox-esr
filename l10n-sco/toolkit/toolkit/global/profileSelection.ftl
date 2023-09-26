@@ -23,6 +23,8 @@ profile-selection-delete-button =
     .label = Dicht Profile…
     .accesskey = D
 
+profile-selection-conflict-message = Anither copy o { -brand-product-name } has makkit chynges tae profiles. Ye maun restert { -brand-short-name } afore makkin mair chynges.
+
 ## Messages used in the profile manager
 
 profile-manager-description = { -brand-short-name } stores information aboot yer settins, preferences, and ither yaiser items in yer yaiser profile.

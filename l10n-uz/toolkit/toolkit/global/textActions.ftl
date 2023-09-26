@@ -48,3 +48,21 @@ text-action-select-all =
 text-action-select-all-shortcut =
     .key = A
 
+text-action-spell-add-to-dictionary =
+    .label = Lugʻatga qoʻshish
+    .accesskey = q
+
+text-action-spell-undo-add-to-dictionary =
+    .label = Qoʻshishni bekor qilish
+    .accesskey = b
+
+text-action-spell-check-toggle =
+    .label = Imloni tekshirish
+    .accesskey = t
+
+text-action-spell-dictionaries =
+    .label = Tillar
+    .accesskey = T
+
+text-action-search-text-box-clear =
+    .title = Tozalash

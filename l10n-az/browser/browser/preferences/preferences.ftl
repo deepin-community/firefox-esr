@@ -7,28 +7,6 @@ do-not-track-learn-more = Ətraflı öyrən
 do-not-track-option-always =
     .label = Həmişə
 
-pref-page-title =
-    { PLATFORM() ->
-        [windows] Seçimlər
-       *[other] Nizamlamalar
-    }
-
-# This is used to determine the width of the search field in about:preferences,
-# in order to make the entire placeholder string visible
-#
-# Please keep the placeholder string short to avoid truncation.
-#
-# Notice: The value of the `.style` attribute is a CSS string, and the `width`
-# is the name of the CSS property. It is intended only to adjust the element's width.
-# Do not translate.
-search-input-box =
-    .style = width: 15.4em
-    .placeholder =
-        { PLATFORM() ->
-            [windows] Seçimlərdə tap
-           *[other] Nizamlamalarda tap
-        }
-
 pane-general-title = Ümumi
 category-general =
     .tooltiptext = { pane-general-title }
@@ -44,10 +22,6 @@ category-search =
 pane-privacy-title = Məxfilik və Təhlükəsizlik
 category-privacy =
     .tooltiptext = { pane-privacy-title }
-
-pane-sync-title2 = { -sync-brand-short-name }
-category-sync2 =
-    .tooltiptext = { pane-sync-title2 }
 
 help-button-label = { -brand-short-name } Dəstək
 addons-button-label = Uzantılar və Mövzular
@@ -77,33 +51,16 @@ restart-later = Sonra yenidən başlat
 ## Variables:
 ##   $name (String): name of the extension
 
-# This string is shown to notify the user that their home page
-# is being controlled by an extension.
-extension-controlled-homepage-override = Uzantı, <img data-l10n-name="icon"/> { $name }, ana səhifənizi idarə edir.
 
-# This string is shown to notify the user that their new tab page
-# is being controlled by an extension.
-extension-controlled-new-tab-url = Uzantı, <img data-l10n-name="icon"/> { $name }, Yeni Vərəq səhifənizi idarə edir.
-
-# This string is shown to notify the user that their notifications permission
-# is being controlled by an extension.
-extension-controlled-web-notifications = <img data-l10n-name="icon"/> { $name } adlı uzantı bu tənzimləməni idarə edir.
-
-# This string is shown to notify the user that the default search engine
-# is being controlled by an extension.
-extension-controlled-default-search = <img data-l10n-name="icon"/> { $name } uzantısı əsas axtarış mühərriyinizi dəyişdirdi.
-
-# This string is shown to notify the user that Container Tabs
-# are being enabled by an extension.
-extension-controlled-privacy-containers = Uzantı, <img data-l10n-name="icon"/> { $name }, Konteyner vərəqlərini tələb edir.
-
-# This string is shown to notify the user that their content blocking "All Detected Trackers"
-# preferences are being controlled by an extension.
-extension-controlled-websites-content-blocking-all-trackers = Bu tənzimləməni uzantı, <img data-l10n-name="icon"/> { $name }, idarə edir.
-
-# This string is shown to notify the user that their proxy configuration preferences
-# are being controlled by an extension.
-extension-controlled-proxy-config = Uzantı, <img data-l10n-name="icon"/> { $name }, { -brand-short-name } səyyahının internetə necə qoşulduğunu idarə edir.
+## Extension Control Notifications
+##
+## These strings are used to inform the user
+## about changes made by extensions to browser settings.
+##
+## <img data-l10n-name="icon"/> is going to be replaced by the extension icon.
+##
+## Variables:
+##   $name (string) - Name of the extension
 
 # This string is shown after the user disables an extension to notify the user
 # how to enable an extension that they disabled.
@@ -116,26 +73,11 @@ extension-controlled-enable = Uzantını aktivləşdirmək üçün <img data-l10
 
 search-results-header = Axtarış Nəticələri
 
-# `<span data-l10n-name="query"></span>` will be replaced by the search term.
-search-results-empty-message =
-    { PLATFORM() ->
-        [windows] Bağışlayın! Seçimlərdə “<span data-l10n-name="query"></span>” üçün nəticə yoxdur.
-       *[other] Bağışlayın! Nizamlamalarda “<span data-l10n-name="query"></span>” üçün nəticə yoxdur.
-    }
-
 search-results-help-link = Kömək lazımdır? <a data-l10n-name="url">{ -brand-short-name } Dəstək</a> ziyarət edin
 
 ## General Section
 
 startup-header = Başlanğıc
-
-# { -brand-short-name } will be 'Firefox Developer Edition',
-# since this setting is only exposed in Firefox Developer Edition
-separate-profile-mode =
-    .label = { -brand-short-name } və Firefox-un eyni anda işləməsinə icazə ver
-use-firefox-sync = Məsləhət: Bu fərqli profillər işlədir. Aralarında məlumatları paylaşmaq üçün { -sync-brand-short-name } işlət.
-get-started-not-logged-in = { -sync-brand-short-name } üçün daxil ol…
-get-started-configured = { -sync-brand-short-name } nizamlamalarını aç
 
 always-check-default =
     .label = { -brand-short-name } səyyahının əsas səyyahınız olub olmadığını hər dəfə yoxla
@@ -147,10 +89,6 @@ is-not-default = { -brand-short-name } əsas səyyahınız deyil
 set-as-my-default-browser =
     .label = Əsas səyyahım et…
     .accesskey = m
-
-startup-restore-previous-session =
-    .label = Əvvəlki sessiyanı bərpa et
-    .accesskey = s
 
 disable-extension =
     .label = Uzantını söndür
@@ -165,17 +103,9 @@ open-new-link-as-tabs =
     .label = Keçidləri yeni pəncərə yerinə vərəqlərdə aç
     .accesskey = p
 
-warn-on-close-multiple-tabs =
-    .label = Birdən çox vərəq bağlarkən xəbərdar olun
-    .accesskey = B
-
 warn-on-open-many-tabs =
     .label = Çoxlu vərəq açmağın { -brand-short-name } səyyahını yavaşlada biləcəyindən xəbərdar olun
     .accesskey = d
-
-switch-links-to-new-tabs =
-    .label = Keçidi yeni vərəqdə açdığımda, dərhal o vərəqə keç
-    .accesskey = h
 
 show-tabs-in-taskbar =
     .label = Vərəqlərə ön baxışı Windows tapşırıq panelində göstər
@@ -192,6 +122,10 @@ browser-containers-settings =
     .accesskey = i
 
 containers-disable-alert-title = Bütün konteyner vərəqlər qapatılsın?
+
+## Variables:
+##   $tabCount (number) - Number of tabs
+
 containers-disable-alert-desc =
     { $tabCount ->
         [one] Əgər Konteyner Vərəqlərini indi söndürsəniz { $tabCount } konteyner vərəqi qapadılacaq. Konteyner Vərəqləri söndürmək istədiyinizə əminsiniz?
@@ -203,6 +137,9 @@ containers-disable-alert-ok-button =
         [one] { $tabCount } konteyner vərəqini qapat
        *[other] { $tabCount } konteyner vərəqini qapat
     }
+
+##
+
 containers-disable-alert-cancel-button = Açıq tut
 
 containers-remove-alert-title = Bu konteyner silinsin?
@@ -218,12 +155,9 @@ containers-remove-alert-msg =
 containers-remove-ok-button = Bu konteyneri sil
 containers-remove-cancel-button = Bu konteyneri silmə
 
-
 ## General Section - Language & Appearance
 
 language-and-appearance-header = Dil və Görünüş
-
-fonts-and-colors-header = Şriftlər və Rənglər
 
 default-font = Əsas şrift
     .accesskey = f
@@ -233,10 +167,6 @@ default-font-size = Ölçü
 advanced-fonts =
     .label = Təkmilləşmiş…
     .accesskey = T
-
-colors-settings =
-    .label = Rənglər…
-    .accesskey = R
 
 language-header = Dil
 
@@ -275,8 +205,7 @@ files-and-applications-title = Fayllar və Tətbiqlər
 
 download-header = Endirilənlər
 
-download-save-to =
-    .label = Faylların saxlandığı yer
+download-save-where = Faylların saxlandığı yer
     .accesskey = y
 
 download-choose-folder =
@@ -334,11 +263,6 @@ applications-manage-app =
     .label = Proqram detalları…
 applications-always-ask =
     .label = Həmişə soruş
-applications-type-pdf = Daşına bilən sənəd formatı (PDF)
-
-# Variables:
-#   $type (String) - the MIME type (e.g application/binary)
-applications-type-pdf-with-type = { applications-type-pdf } ({ $type })
 
 # Variables:
 #   $type-description (String) - Description of the type (e.g "Portable Document Format")
@@ -495,11 +419,6 @@ home-restore-defaults =
     .label = İlkin Seçənəkləri Bərpa et
     .accesskey = R
 
-# "Firefox" should be treated as a brand and kept in English,
-# while "Home" and "(Default)" can be localized.
-home-mode-choice-default =
-    .label = Firefox Ana Səhifə (İlkin)
-
 home-mode-choice-custom =
     .label = Fərdi Ünvanlar…
 
@@ -527,17 +446,15 @@ choose-bookmark =
 
 ## Home Section - Firefox Home Content Customization
 
-home-prefs-content-header = Firefox Ev Məzmunu
-home-prefs-content-description = Firefox Evdə hansı məzmunları görmək istədiyinizi seçin.
-
 home-prefs-search-header =
     .label = Web Axtarış
-home-prefs-topsites-header =
-    .label = Qabaqcıl Saytlar
-home-prefs-topsites-description = Ən çox ziyarət etdiyiniz saytlar
 
 ## Variables:
 ##  $provider (String): Name of the corresponding content provider, e.g "Pocket".
+
+
+## Variables:
+##  $provider (string) - Name of the corresponding content provider, e.g "Pocket".
 
 # Variables:
 #  $provider (String): Name of the corresponding content provider, e.g "Pocket".
@@ -550,9 +467,6 @@ home-prefs-recommended-by-learn-more = Bu necə işləyir
 home-prefs-recommended-by-option-sponsored-stories =
     .label = Sponsorlaşdırılmış Hekayələr
 
-home-prefs-highlights-header =
-    .label = Seçilmişlər
-home-prefs-highlights-description = Saxladığınız və ya ziyarət etdiyiniz saytlardan seçmələr
 home-prefs-highlights-option-visited-pages =
     .label = Baxılmış Səhifələr
 home-prefs-highlights-options-bookmarks =
@@ -568,7 +482,6 @@ home-prefs-highlights-option-saved-to-pocket =
 # and non-essential but also not entirely trivial and useless.
 home-prefs-snippets-header =
     .label = Hissələr
-home-prefs-snippets-description = { -vendor-short-name } və { -brand-product-name }dan yeniliklər
 
 home-prefs-sections-rows-option =
     .label =
@@ -595,6 +508,7 @@ search-show-suggestions-url-bar-option =
     .label = Ünvan sətri nəticələrində axtarış təkliflərini göstər
     .accesskey = l
 
+
 # This string describes what the user will observe when the system
 # prioritizes search suggestions over browsing history in the results
 # that extend down from the address bar. In the original English string,
@@ -604,8 +518,6 @@ search-show-suggestions-above-history-option =
     .label = Ünvan Sətri nəticələrində axtarış təkliflərini səyahət tarixçəsindən əvvəl göstər
 
 search-suggestions-cant-show = { -brand-short-name } səyyahını tarixçəni xatırlamayacaq şəkildə nizamladığınız üçün ünvan sətri nəticələrində axtarış təklifləri göstərilməyəcək.
-
-search-one-click-header = Tək klikli axtarış mühərrikləri
 
 search-one-click-desc = Ünvan və axtarış sətrinə söz daxil etdiyinizdə gələn axtarış mühərriklərini seçin.
 
@@ -639,20 +551,17 @@ containers-add-button =
     .label = Yeni konteyner əlavə et
     .accesskey = A
 
-containers-preferences-button =
-    .label = Nizamlamalar
-
 containers-remove-button =
     .label = Sil
-
-## Sync Section - Signed out
-
 
 ## Firefox Account - Signed out. Note that "Sync" and "Firefox Account" are now
 ## more discrete ("signed in" no longer means "and sync is connected").
 
+
+## Firefox account - Signed out. Note that "Sync" and "Firefox account" are now
+## more discrete ("signed in" no longer means "and sync is connected").
+
 sync-signedout-caption = Web-inizi özünüzlə gəzdirin
-sync-signedout-description = Əlfəçin, keçmiş, vərəq, parol, əlavə və nizamlamalarınızı bütün cihazlarınız arasında sinxronlaşdırın.
 
 # This message contains two links and two icon images.
 #   `<img data-l10n-name="android-icon"/>` - Android logo icon
@@ -664,10 +573,10 @@ sync-signedout-description = Əlfəçin, keçmiş, vərəq, parol, əlavə və n
 # to your language, but should not be changed or translated.
 sync-mobile-promo = Mobil cihazınızda sinronlaşdırmaq istəyirsinizsə <img data-l10n-name="android-icon"/> <a data-l10n-name="android-link">Android</a> və ya <img data-l10n-name="ios-icon"/> <a data-l10n-name="ios-link">iOS</a> üçün Firefox endirin.
 
-## Sync Section - Signed in
-
-
 ## Firefox Account - Signed in
+
+
+## Firefox account - Signed in
 
 sync-profile-picture =
     .tooltiptext = Profil şəklini dəyiş
@@ -675,8 +584,13 @@ sync-profile-picture =
 sync-manage-account = Hesabı idarə et
     .accesskey = b
 
+## Variables
+## $email (string) - Email used for Firefox account
+
 sync-signedin-unverified = { $email } təsdiqlənməyib.
 sync-signedin-login-failure = Yenidən qoşulmaq üçün daxil olun { $email }
+
+##
 
 sync-resend-verification =
     .label = Təsdiqi təkrar göndər
@@ -726,15 +640,6 @@ sync-engine-addons =
     .tooltiptext = Firefox masaüstü üçün uzantı və mövzular
     .accesskey = Ə
 
-sync-engine-prefs =
-    .label =
-        { PLATFORM() ->
-            [windows] Seçimlər
-           *[other] Nizamlamalar
-        }
-    .tooltiptext = Dəyişdirdiyiniz Ümumi, Məxfilik və Təhlükəsizlik tənzimləmələri
-    .accesskey = l
-
 ## The device name controls.
 
 sync-device-name-header = Cihaz Adı
@@ -753,12 +658,19 @@ sync-device-name-save =
 
 sync-connect-another-device = Digər cihazı qoş
 
+## These strings are shown in a desktop notification after the
+## user requests we resend a verification email.
+
+sync-verification-sent-title = Təsdiqləmə Göndərildi
+# Variables:
+#   $email (String): Email address of user's Firefox account.
+sync-verification-sent-body = Təsdiqləmə keçidi { $email } ünvanına göndərildi.
+sync-verification-not-sent-title = Təsdiqləmə göndərilə bilmədi
+sync-verification-not-sent-body = Hazırda təsdiqləmə e-poçtunu göndərə bilmirik. Lütfən daha sonra təkrar yoxlayın.
+
 ## Privacy Section
 
 privacy-header = Səyahər Məxfiliyi
-
-## Privacy Section - Forms
-
 
 ## Privacy Section - Logins and Passwords
 
@@ -776,14 +688,9 @@ forms-exceptions =
 forms-saved-logins =
     .label = Saxlanmış Daxil olmalar…
     .accesskey = D
-forms-master-pw-use =
-    .label = Ana parol istifadə et
-    .accesskey = i
 forms-master-pw-change =
     .label = Ana parolu dəyişdir…
     .accesskey = d
-
-forms-master-pw-fips-title = Hazırda FIPS rejimindəsiniz. FIPS rejimi üçün ana parol lazımdır.
 
 forms-master-pw-fips-desc = Parolu dəyişdirmək mümkün olmadı.
 
@@ -880,9 +787,8 @@ sitedata-settings =
     .label = Məlumatları idarə et…
     .accesskey = M
 
-sitedata-cookies-permissions =
-    .label = İcazələri idarə et…
-    .accesskey = i
+## Privacy Section - Cookie Banner Handling
+
 
 ## Privacy Section - Address Bar
 
@@ -922,7 +828,7 @@ enhanced-tracking-protection-setting-custom =
 
 ##
 
-content-blocking-all-third-party-cookies = Bütün üçüncü tərəf çərəzləri
+# The tcp-rollout strings are no longer used for the rollout but for tcp-by-default in the standard section
 
 content-blocking-warning-title = Diqqət!
 
@@ -982,10 +888,6 @@ permissions-block-popups =
     .label = Peyda olan pəncərələri blokla
     .accesskey = b
 
-permissions-block-popups-exceptions =
-    .label = İstisnalar…
-    .accesskey = a
-
 permissions-addon-install-warning =
     .label = Saytlar əlavə quraşdırmaq istədikdə xəbərdar olun
     .accesskey = x
@@ -993,12 +895,6 @@ permissions-addon-install-warning =
 permissions-addon-exceptions =
     .label = İstisnalar…
     .accesskey = s
-
-permissions-a11y-privacy-checkbox =
-    .label = Əlçatanlıq xidmətlərinin səyyahınıza girişə icazə verilməsinin qabağın al
-    .accesskey = a
-
-permissions-a11y-privacy-link = Ətraflı öyrən
 
 ## Privacy Section - Data Collection
 
@@ -1021,11 +917,6 @@ addon-recommendations-link = Ətraflı öyrən
 # This message is displayed above disabled data sharing options in developer builds
 # or builds with no Telemetry support available.
 collection-health-report-disabled = Bu quraşdırmanın konfiqurasiyasında məlumat xəbərdarlığı söndürülüb
-
-collection-backlogged-crash-reports =
-    .label = { -brand-short-name } səyyahına sizin adınıza yığılmış çəkmə hesabatlarını göndərməyə icazə ver
-    .accesskey = c
-collection-backlogged-crash-reports-link = Daha Ətraflı
 
 ## Privacy Section - Security
 ##
@@ -1053,16 +944,6 @@ security-block-uncommon-software =
 
 certs-header = Sertifikatlar
 
-certs-personal-label = Hər hansı bir server şəxsi sertifikatınızı istədikdə
-
-certs-select-auto-option =
-    .label = Birini avtomatik seç
-    .accesskey = S
-
-certs-select-ask-option =
-    .label = Hər dəfə soruş
-    .accesskey = H
-
 certs-enable-ocsp =
     .label = Sertifikatların keçərliliyini təsdiqləmək üçün OCSP cavabdehlik serverlərinə Sorğu göndər
     .accesskey = S
@@ -1075,43 +956,14 @@ certs-devices =
     .label = Təhlükəsizlik cihazları…
     .accesskey = T
 
-space-alert-learn-more-button =
-    .label = Ətraflı öyrən
-    .accesskey = L
-
-space-alert-over-5gb-pref-button =
-    .label =
-        { PLATFORM() ->
-            [windows] Seçimləri aç
-           *[other] Nizamlamaları aç
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] O
-           *[other] O
-        }
-
-space-alert-over-5gb-message =
-    { PLATFORM() ->
-        [windows] { -brand-short-name } səyyahının diskdə yaddaşı dolur. Sayt məzmunları səhv göstərilə bilər. Saxlanılmış məlumatları Seçimlər > Məxfilik və Təhlükəsizlik > Çərəzlər və Sayt Məlumatları bölümündə silə bilərsiz.
-       *[other] { -brand-short-name } səyyahının diskdə yaddaşı dolur. Sayt məzmunları səhv göstərilə bilər. Saxlanılmış məlumatları Nizamlamalar > Məxfilik və Təhlükəsizlik > Çərəzlər və Sayt Məlumatları bölümündə silə bilərsiz.
-    }
-
-space-alert-under-5gb-ok-button =
-    .label = Tamam, başa düşdüm
-    .accesskey = T
-
-space-alert-under-5gb-message = { -brand-short-name } səyyahının diskdə yaddaşı dolur. Sayt məzmunları səhv göstərilə bilər. Daha yaxşı internet səyahəti təcrübəsi üçün “Ətraflı Öyrən”-i ziyarət edərək disk istifadənizi optimallaşdıra bilərsiz.
-
 ## Privacy Section - HTTPS-Only
+
+
+## DoH Section
+
 
 ## The following strings are used in the Download section of settings
 
 desktop-folder-name = İşçi masası
 downloads-folder-name = Endirmələr
 choose-download-folder-title = Endirmə qovluğunu seçin:
-
-# Variables:
-#   $service-name (String) - Name of a cloud storage provider like Dropbox, Google Drive, etc...
-save-files-to-cloud-storage =
-    .label = Faylları { $service-name } xidmətində saxla

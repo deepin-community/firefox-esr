@@ -6,9 +6,6 @@ password-quality-meter = Tomhais ar cháilíocht fhocail faire
 
 ## Change Password dialog
 
-change-password-window =
-    .title = Athraigh an Príomhfhocal Faire
-
 # Variables:
 # $tokenName (String) - Security device of the change password dialog
 change-password-token = Gléas Slándála: { $tokenName }
@@ -16,23 +13,16 @@ change-password-old = Focal Faire Reatha:
 change-password-new = Focal Faire Nua:
 change-password-reenter = Focal Faire Nua (Arís):
 
-## Reset Password dialog
-
-reset-password-window =
-    .title = Bánaigh an Príomhfhocal Faire
-    .style = width: 40em
-
 ## Reset Primary Password dialog
 
 reset-password-button-label =
     .label = Bánaigh
-reset-password-text = Má bhánaíonn tú do Phríomhfhocal Faire, caillfear na focail faire ríomhphoist agus Gréasáin a stóráil tú, na sonraí ó fhoirmeacha, do theastais phearsanta, agus d'eochracha príobháideacha. An bhfuil tú cinnte gur mian leat do Phríomhfhocal Faire a bhánú?
 
 ## Downloading cert dialog
 
-download-cert-window =
+download-cert-window2 =
     .title = Teastas á íoslódáil
-    .style = width: 46em
+    .style = min-width: 46em
 download-cert-message = Iarrtar ort muinín a bheith agat as Údarás Deimhniúcháin nua.
 download-cert-trust-ssl =
     .label = Tá muinín agat as an údarás deimhniúcháin seo chun suímh Ghréasáin a shainaithint.
@@ -64,7 +54,5 @@ set-password-reminder = Tábhachtach: má dhéanann tú dearmad ar an bhfocal fa
 
 ## Protected Auth dialog
 
-protected-auth-window =
-    .title = Fíordheimhniú le Comhartha Cosanta
-protected-auth-msg = Fíordheimhnigh leis an gcomhartha le do thoil. Braitheann an modh fíordheimhnithe ar chineál do chomhartha.
-protected-auth-token = Ceadchomhartha:
+## Protected authentication alert
+

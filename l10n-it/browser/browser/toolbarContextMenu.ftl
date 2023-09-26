@@ -20,14 +20,6 @@ toolbar-context-menu-bookmark-selected-tabs =
 toolbar-context-menu-select-all-tabs =
     .label = Seleziona tutte le schede
     .accesskey = u
-toolbar-context-menu-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Riapri scheda chiusa
-           *[other] Riapri schede chiuse
-        }
-    .accesskey = a
-
 toolbar-context-menu-reopen-closed-tabs =
     .label =
         { $tabCount ->
@@ -56,12 +48,12 @@ toolbar-context-menu-report-extension =
 toolbar-context-menu-pin-to-overflow-menu =
     .label = Aggiungi al menu extra
     .accesskey = x
-toolbar-context-menu-auto-hide-downloads-button =
-    .label = Nascondi automaticamente nella barra degli strumenti
-    .accesskey = N
 toolbar-context-menu-auto-hide-downloads-button-2 =
     .label = Nascondi pulsante quando vuoto
     .accesskey = N
+toolbar-context-menu-always-open-downloads-panel =
+    .label = Mostra pannello quando si avvia un download
+    .accesskey = M
 toolbar-context-menu-remove-from-toolbar =
     .label = Rimuovi dalla barra degli strumenti
     .accesskey = b
@@ -71,6 +63,12 @@ toolbar-context-menu-view-customize-toolbar =
 toolbar-context-menu-view-customize-toolbar-2 =
     .label = Personalizza barra degli strumenti…
     .accesskey = P
+
+# This is only ever shown when toolbar-context-menu-pin-to-overflow-menu
+# is hidden, so they can share access keys.
+toolbar-context-menu-pin-to-toolbar =
+    .label = Aggiungi alla barra degli strumenti
+    .accesskey = A
 
 toolbar-context-menu-bookmarks-toolbar-always-show-2 =
     .label = Mostra sempre
@@ -85,3 +83,7 @@ toolbar-context-menu-bookmarks-toolbar-on-new-tab-2 =
 toolbar-context-menu-bookmarks-show-other-bookmarks =
     .label = Mostra Altri segnalibri
     .accesskey = A
+
+toolbar-context-menu-menu-bar-cmd =
+    .toolbarname = Barra dei menu
+    .accesskey = m

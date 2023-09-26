@@ -11,6 +11,12 @@ reload-tab =
 select-all-tabs =
     .label = Select All Tabs
     .accesskey = S
+tab-context-play-tab =
+    .label = Play Tab
+    .accesskey = l
+tab-context-play-tabs =
+    .label = Play Tabs
+    .accesskey = y
 duplicate-tab =
     .label = Duplicate Tab
     .accesskey = D
@@ -48,12 +54,9 @@ unpin-selected-tabs =
 bookmark-selected-tabs =
     .label = Bookmark Tabs…
     .accesskey = B
-bookmark-tab =
-    .label = Bookmark Tab
+tab-context-bookmark-tab =
+    .label = Bookmark Tab…
     .accesskey = B
-reopen-in-container =
-    .label = Reopen in Container
-    .accesskey = e
 tab-context-open-in-new-container-tab =
     .label = Open in New Container Tab
     .accesskey = e
@@ -69,30 +72,9 @@ move-to-new-window =
 tab-context-close-multiple-tabs =
     .label = Close Multiple Tabs
     .accesskey = M
-tab-context-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Undo Close Tab
-           *[other] Undo Close Tabs
-        }
-    .accesskey = U
-close-tab =
-    .label = Close Tab
-    .accesskey = C
-close-tabs =
-    .label = Close Tabs
-    .accesskey = s
-move-tabs =
-    .label = Move Tabs
-    .accesskey = v
-move-tab =
-    .label = Move Tab
-    .accesskey = v
 tab-context-share-url =
     .label = Share
     .accesskey = h
-tab-context-share-more =
-    .label = More…
 
 ## Variables:
 ##  $tabCount (Number): the number of tabs that are affected by the action.
@@ -104,13 +86,6 @@ tab-context-reopen-closed-tabs =
            *[other] Reopen Closed Tabs
         }
     .accesskey = o
-tab-context-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Close Tab
-           *[other] Close Tabs
-        }
-    .accesskey = C
 tab-context-close-n-tabs =
     .label =
         { $tabCount ->
@@ -125,3 +100,11 @@ tab-context-move-tabs =
            *[other] Move Tabs
         }
     .accesskey = v
+
+tab-context-send-tabs-to-device =
+    .label =
+        { $tabCount ->
+            [1] Send Tab to Device
+           *[other] Send { $tabCount } Tabs to Device
+        }
+    .accesskey = n

@@ -11,6 +11,12 @@ reload-tab =
 select-all-tabs =
     .label = Seleccionar todas las pestañas
     .accesskey = S
+tab-context-play-tab =
+    .label = Reproducir pestaña
+    .accesskey = p
+tab-context-play-tabs =
+    .label = Reproducir pestañas
+    .accesskey = t
 duplicate-tab =
     .label = Duplicar pestaña
     .accesskey = D
@@ -48,12 +54,9 @@ unpin-selected-tabs =
 bookmark-selected-tabs =
     .label = Marcar pestañas…
     .accesskey = a
-bookmark-tab =
-    .label = Marcar pestaña
-    .accesskey = a
-reopen-in-container =
-    .label = Reabrir en contenedor
-    .accesskey = e
+tab-context-bookmark-tab =
+    .label = Agregar pestaña a marcadores…
+    .accesskey = m
 tab-context-open-in-new-container-tab =
     .label = Abrir en nueva pestaña contenedora
     .accesskey = e
@@ -69,31 +72,9 @@ move-to-new-window =
 tab-context-close-multiple-tabs =
     .label = Cerrar varias pestañas
     .accesskey = e
-tab-context-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Deshacer cerrar pestaña
-            [one] Deshacer cerrar pestañas
-           *[other] Deshacer cerrar pestañas
-        }
-    .accesskey = U
-close-tab =
-    .label = Cerrar pestaña
-    .accesskey = c
-close-tabs =
-    .label = Cerrar pestañas
-    .accesskey = S
-move-tabs =
-    .label = Mover pestañas
-    .accesskey = v
-move-tab =
-    .label = Mover pestaña
-    .accesskey = v
 tab-context-share-url =
     .label = Compartir
     .accesskey = m
-tab-context-share-more =
-    .label = Más…
 
 ## Variables:
 ##  $tabCount (Number): the number of tabs that are affected by the action.
@@ -102,18 +83,10 @@ tab-context-reopen-closed-tabs =
     .label =
         { $tabCount ->
             [1] Reabrir pestaña cerrada
-            [one] Reabrir pestañas cerrada
+            [one] Reabrir pestaña cerrada
            *[other] Reabrir pestañas cerradas
         }
     .accesskey = b
-tab-context-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Cerrar pestaña
-            [one] Cerrar pestaña
-           *[other] Cerrar pestañas
-        }
-    .accesskey = C
 tab-context-close-n-tabs =
     .label =
         { $tabCount ->
@@ -130,3 +103,11 @@ tab-context-move-tabs =
            *[other] Mover pestañas
         }
     .accesskey = v
+
+tab-context-send-tabs-to-device =
+    .label =
+        { $tabCount ->
+            [one] Enviar la Pestaña al dispositivo
+           *[other] Enviar las Pestañas { $tabCount } al dispositivo
+        }
+    .accesskey = n

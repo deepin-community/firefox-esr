@@ -23,6 +23,8 @@ profile-selection-delete-button =
     .label = Dileu Proffil…
     .accesskey = D
 
+profile-selection-conflict-message = Mae copi arall o { -brand-product-name } wedi gwneud newidiadau i broffiliau. Rhaid ailgychwyn { -brand-short-name } cyn gwneud mwy o newidiadau.
+
 ## Messages used in the profile manager
 
 profile-manager-description = Mae { -brand-short-name } yn storio gwybodaeth am eich gosodiadau, dewisiadau ac eitemau defnyddiwr arall yn eich proffil defnyddiwr.

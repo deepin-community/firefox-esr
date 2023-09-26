@@ -11,20 +11,7 @@ about-logins-page-title = Giriş və Parollar
 
 # "Google Play" and "App Store" are both branding and should not be translated
 
-login-app-promo-title = Parollarınızı yanınızda daşıyın
-login-app-promo-subtitle = Pulsuz { -lockwise-brand-name } tətbiqini əldə et
-login-app-promo-android =
-    .alt = Google Play-dən əldə edin
-login-app-promo-apple =
-    .alt = App Store-dan endirin
-
-login-filter =
-    .placeholder = Hesablarda axtar
-
-create-login-button = Yeni hesab yarat
-
 fxaccounts-sign-in-text = Parollarınız bütün cihazlarınızda sizinlə olsunlar
-fxaccounts-sign-in-button = { -sync-brand-short-name } daxil ol
 fxaccounts-avatar-button =
     .title = Hesabı idarə et
 
@@ -40,8 +27,6 @@ menu-menuitem-preferences =
        *[other] Nizamlamalar
     }
 about-logins-menu-menuitem-help = Kömək
-menu-menuitem-android-app = Android üçün { -lockwise-brand-short-name }
-menu-menuitem-iphone-app = iPhone və iPad üçün { -lockwise-brand-short-name }
 
 ## Login List
 
@@ -92,9 +77,10 @@ login-item-copied-password-button-text = Köçürüldü!
 login-item-save-changes-button = Dəyişiklikləri yadda saxla
 login-item-save-new-button = Saxla
 login-item-cancel-button = Ləğv et
-login-item-time-changed = Son dəyişiklik: { DATETIME($timeChanged, day: "numeric", month: "long", year: "numeric") }
-login-item-time-created = Yaradılıb: { DATETIME($timeCreated, day: "numeric", month: "long", year: "numeric") }
-login-item-time-used = Son işlədilmə: { DATETIME($timeUsed, day: "numeric", month: "long", year: "numeric") }
+
+## The date is displayed in a timeline showing the password evolution.
+## A label is displayed under the date to describe the type of change.
+## (e.g. updated, created, etc.)
 
 ## OS Authentication dialog
 
@@ -118,8 +104,6 @@ about-logins-copy-password-os-auth-dialog-message-macosx = saxlanılmış parolu
 
 ## Master Password notification
 
-master-password-notification-message = Saxlanılmış hesab və parolları görmək üçün lütfən ana parolunuzu daxil edin
-
 ## Primary Password notification
 
 master-password-reload-button =
@@ -139,13 +123,16 @@ about-logins-confirm-remove-dialog-title = Bu hesab silinsin?
 confirm-delete-dialog-message = Bu əməliyyat geri qaytrıla bilməz.
 about-logins-confirm-remove-dialog-confirm-button = Sil
 
+## Variables
+##   $count (number) - Number of items
+
+##
+
 confirm-discard-changes-dialog-title = Saxlanılmamış dəyişikliklər ləğv edilsin?
 confirm-discard-changes-dialog-message = Bütün saxlanılmamış dəyişikliklər itiriləcək.
 confirm-discard-changes-dialog-confirm-button = Ləğv et
 
 ## Breach Alert notification
-
-about-logins-breach-alert-learn-more-link = Ətraflı öyrən
 
 ## Vulnerable Password notification
 

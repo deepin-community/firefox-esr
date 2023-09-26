@@ -28,16 +28,6 @@ serviceworker-worker-unregister = 등록 취소
 serviceworker-worker-debug = 디버그
     .title = 실행되고 있는 Service Worker만 디버그할 수 있음
 
-# Text for the debug link displayed for an already started Service Worker, when we
-# are in multi e10s mode, which effectively disables this link.
-serviceworker-worker-debug-forbidden = 디버그
-    .title = 다중 e10s가 비활성화 된 경우에만 Service Worker를 디버깅 할 수 있습니다.
-
-# Text for the start link displayed for a registered but not running Service Worker.
-# Clicking on the link will attempt to start the service worker.
-serviceworker-worker-start2 = 시작
-    .title = 다중 e10s가 비활성화 된 경우에만 Service Worker를 시작할 수 있습니다.
-
 # Alt text for the image icon displayed inside a debug link for a service worker.
 serviceworker-worker-inspect-icon =
     .alt = 검사
@@ -48,13 +38,9 @@ serviceworker-worker-start3 = 시작
 
 # Text displayed for the updated time of the service worker. The <time> element will
 # display the last update time of the service worker script.
+# Variables:
+#   $date (date) - Update date
 serviceworker-worker-updated = <time>{ DATETIME($date, month: "long", year: "numeric", day: "numeric", hour: "numeric", minute: "numeric", second: "numeric") }</time>에 업데이트됨
-
-# Text displayed next to the URL for the source of the service worker (e-g. "Source my/path/to/worker-js")
-serviceworker-worker-source = 소스
-
-# Text displayed next to the current status of the service worker.
-serviceworker-worker-status = 상태
 
 ## Service Worker status strings: all serviceworker-worker-status-* strings are also
 ## defined in aboutdebugging.properties and should be synchronized with them.
@@ -65,26 +51,6 @@ serviceworker-worker-status-running = 실행 중
 
 # Service Worker status. A stopped service worker is registered but not currently active.
 serviceworker-worker-status-stopped = 중지됨
-
-# Text displayed when no service workers are visible for the current page. Clicking on the
-# link will open https://developer-mozilla-org/docs/Web/API/Service_Worker_API/Using_Service_Workers
-serviceworker-empty-intro = 여기서 검사하려면 Service Worker를 등록해야 합니다. <a>더 알아보기</a>
-
-# Text displayed when there are no Service Workers to display for the current page,
-# introducing hints to debug Service Worker issues.
-serviceworker-empty-suggestions = 현재 페이지에 Service Worker가 있어야 한다면 몇가지 시도해 볼 수 있습니다
-
-# Suggestion to check for errors in the Console to investigate why a service worker is not
-# registered. Clicking on the link opens the webconsole.
-serviceworker-empty-suggestions-console = 콘솔에서 오류를 확인해 보세요. <a>콘솔 열기</a>
-
-# Suggestion to use the debugger to investigate why a service worker is not registered.
-# Clicking on the link will switch from the Application panel to the debugger.
-serviceworker-empty-suggestions-debugger = Service Worker 등록과정을 살펴보고 예외를 확인해 보세요. <a>디버거 열기</a>
-
-# Suggestion to go to about:debugging in order to see Service Workers for all domains.
-# Clicking on the link will open about:debugging in a new tab.
-serviceworker-empty-suggestions-aboutdebugging = 다른 도메인의 Service Worker를 조사해 보세요. <a>about:debugging 열기</a>
 
 # Text displayed when no service workers are visible for the current page.
 serviceworker-empty-intro2 = Service Worker 없음
@@ -103,10 +69,6 @@ serviceworker-empty-suggestions-aboutdebugging2 = 다른 도메인의 Service Wo
 
 # Header for the Manifest page when we have an actual manifest
 manifest-view-header = 앱 매니페스트
-
-# Header for the Manifest page when there's no manifest to inspect
-# The link will open https://developer.mozilla.org/en-US/docs/Web/Manifest
-manifest-empty-intro = 여기서 검사하려면 웹 앱 매니페스트를 추가해야 합니다. <a>더 알아보기</a>
 
 # Header for the Manifest page when there's no manifest to inspect
 manifest-empty-intro2 = 웹 앱 매니페스트가 감지되지 않음
@@ -138,7 +100,7 @@ manifest-loaded-error = 매니페스트를 로드하는 동안 오류가 발생�
 
 # Text displayed as an error when there has been a Firefox DevTools error while
 # trying to load the manifest
-manifest-loaded-devtools-error = Firefox DevTools 오류
+manifest-loaded-devtools-error = Firefox 개발자 도구 오류
 
 # Text displayed when the page has no manifest available
 manifest-non-existing = 검사할 매니페스트가 없습니다.
@@ -149,6 +111,8 @@ manifest-json-link-data-url = 매니페스트는 데이터 URL에 포함됩니�
 
 # Text displayed at manifest icons to label their purpose, as declared
 # in the manifest.
+# Variables:
+#   $purpose (string) - Manifest purpose
 manifest-icon-purpose = 용도: <code> { $purpose } </code>
 
 # Text displayed as the alt attribute for <img> tags showing the icons in the
@@ -157,8 +121,11 @@ manifest-icon-img =
     .alt = 아이콘
 
 # Text displayed as the title attribute for <img> tags showing the icons in the
-# manifest. `$sizes` is a user-dependent string that has been parsed as a
-# space-separated list of `<width>x<height>` sizes or the keyword `any`.
+# manifest.
+# Variables:
+#   $sizes (string) - User-dependent string that has been parsed as a
+#                     space-separated list of `<width>x<height>` sizes or
+#                     the keyword `any`.
 manifest-icon-img-title = 아이콘 크기: { $sizes }
 
 # Text displayed as the title attribute for <img> tags showing the icons in the
@@ -184,4 +151,3 @@ icon-warning =
 icon-error =
     .alt = 오류 아이콘
     .title = 오류
-

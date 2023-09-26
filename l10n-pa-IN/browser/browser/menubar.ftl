@@ -38,20 +38,9 @@ menu-quit =
             [windows] x
            *[other] Q
         }
-
 # This menu-quit-mac string is only used on macOS.
 menu-quit-mac =
     .label = { -brand-shorter-name } ਤੋਂ ਬਾਹਰ
-
-# This menu-quit-button string is only used on Linux.
-menu-quit-button =
-    .label = { menu-quit.label }
-
-# This menu-quit-button-win string is only used on Windows.
-menu-quit-button-win =
-    .label = { menu-quit.label }
-    .tooltip = { -brand-shorter-name } ਤੋਂ ਬਾਹਰ
-
 menu-about =
     .label = { -brand-shorter-name } ਬਾਰੇ
     .accesskey = A
@@ -81,8 +70,14 @@ menu-file-open-location =
 menu-file-open-file =
     .label = …ਫਾਈਲ ਨੂੰ ਖੋਲ੍ਹੋ
     .accesskey = O
-menu-file-close =
-    .label = ਬੰਦ ਕਰੋ
+# Variables:
+#  $tabCount (Number): the number of tabs that are affected by the action.
+menu-file-close-tab =
+    .label =
+        { $tabCount ->
+            [1] ਟੈਬ ਬੰਦ ਕਰੋ
+           *[other] { $tabCount } ਟੈਬਾਂ ਬੰਦ ਕਰੋ
+        }
     .accesskey = C
 menu-file-close-window =
     .label = ਵਿੰਡੋ ਨੂੰ ਬੰਦ ਕਰੋ
@@ -93,12 +88,12 @@ menu-file-save-page =
 menu-file-email-link =
     .label = …ਲਿੰਕ ਨੂੰ ਈਮੇਲ ਕਰੋ
     .accesskey = E
+menu-file-share-url =
+    .label = ਸਾਂਝਾ ਕਰੋ
+    .accesskey = h
 menu-file-print-setup =
     .label = …ਸਫ਼ੇ ਦਾ ਸੈਟਅੱਪ
     .accesskey = u
-menu-file-print-preview =
-    .label = ਪਰਿੰਟ ਝਲਕ
-    .accesskey = v
 menu-file-print =
     .label = …ਪਰਿੰਟ ਕਰੋ
     .accesskey = P
@@ -114,9 +109,6 @@ menu-file-go-offline =
 menu-edit =
     .label = ਸੋਧੋ
     .accesskey = E
-menu-edit-find-on =
-    .label = …ਇਸ ਸਫ਼ੇ ਉੱਤੇ ਲੱਭੋ
-    .accesskey = F
 menu-edit-find-in-page =
     .label = …ਸਫ਼ੇ ਵਿੱਚ ਲੱਭੋ
     .accesskey = F
@@ -135,9 +127,6 @@ menu-view =
 menu-view-toolbars-menu =
     .label = ਟੂਲਬਾਰ
     .accesskey = T
-menu-view-customize-toolbar =
-    .label = …ਪਸੰਦ
-    .accesskey = C
 menu-view-customize-toolbar2 =
     .label = …ਟੂਲਬਾਰ ਨੂੰ ਕਸਟਮਾਈਜ਼ ਕਰੋ
     .accesskey = C
@@ -172,12 +161,8 @@ menu-view-page-style-no-style =
     .label = ਕੋਈ ਸਟਾਇਲ ਨਹੀਂ
     .accesskey = n
 menu-view-page-basic-style =
-    .label = ਡਿਫਾਲਟ ਸਫ਼ੇ ਦਾ ਸਟਾਇਲ
+    .label = ਸਫ਼ੇ ਦਾ ਮੂਲ ਸਟਾਇਲ
     .accesskey = b
-menu-view-charset =
-    .label = ਟੈਕਸਟ ਇੰਕੋਡਿੰਗ
-    .accesskey = c
-
 menu-view-repair-text-encoding =
     .label = ਲਿਖਤ ਇੰਕੋਡਿੰਗ ਰਿਪੇਅਰ ਕਰੋ
     .accesskey = c
@@ -194,6 +179,17 @@ menu-view-exit-full-screen =
 menu-view-full-screen =
     .label = ਪੂਰੀ ਸਕਰੀਨ ਉੱਤੇ
     .accesskey = F
+
+## These menu items may use the same accesskey.
+
+# This should match reader-view-enter-button in browser.ftl
+menu-view-enter-readerview =
+    .label = ਪੜ੍ਹਨ ਝਲਕ ਖੋਲ੍ਹੋ
+    .accesskey = R
+# This should match reader-view-close-button in browser.ftl
+menu-view-close-readerview =
+    .label = ਪੜ੍ਹਨ ਝਲਕ ਬੰਦ ਕਰੋ
+    .accesskey = R
 
 ##
 
@@ -218,30 +214,23 @@ menu-history-synced-tabs =
 menu-history-restore-last-session =
     .label = ਪਿਛਲੇ ਸ਼ੈਸ਼ਨ ਨੂੰ ਬਹਾਲ ਕਰੋ
 menu-history-hidden-tabs =
-    .label = ਟੈਬਾਂ ਲੁਕਾਓ
+    .label = ਲੁਕਵੀਆਂ ਟੈਬਾਂ
 menu-history-undo-menu =
     .label = ਤਾਜ਼ਾ ਖੋਲ੍ਹੀਆਂ ਟੈਬਾਂ
 menu-history-undo-window-menu =
     .label = ਤਾਜ਼ਾ ਬੰਦ ਕੀਤੀਆਂ ਵਿੰਡੋ
-
-menu-history-reopen-all-tabs = ਸਭ ਟੈਬਾਂ ਨੂੰ ਮੁੜ-ਖੋਲ੍ਹੋ
-menu-history-reopen-all-windows = ਸਾਰੀਆਂ ਵਿੰਡੋ ਨੂੰ ਮੁੜ-ਖੋਲ੍ਹੋ
 
 ## Bookmarks Menu
 
 menu-bookmarks-menu =
     .label = ਬੁੱਕਮਾਰਕ
     .accesskey = B
-menu-bookmarks-show-all =
-    .label = ਸਭ ਬੁੱਕਮਾਰਕਾਂ ਨੂੰ ਵੇਖੋ
-menu-bookmark-this-page =
-    .label = ਇਹ ਸਫ਼ੇ ਨੂੰ ਬੁੱਕਮਾਰਕ ਕਰੋ
 menu-bookmarks-manage =
     .label = ਬੁੱਕਮਾਰਕਾਂ ਦਾ ਇੰਤਜ਼ਾਮ
-menu-bookmark-current-tab =
-    .label = ਮੌਜੂਦਾ ਟੈਬ ਨੂੰ ਬੁੱਕਮਾਰਕ ਕਰੋ
-menu-bookmark-edit =
-    .label = ਇਹ ਬੁੱਕਮਾਰਕ ਨੂੰ ਸੋਧੋ
+menu-bookmark-tab =
+    .label = …ਮੌਜੂਦਾ ਟੈਬ ਨੂੰ ਬੁੱਕਮਾਰਕ ਕਰੋ
+menu-edit-bookmark =
+    .label = …ਇਹ ਬੁੱਕਮਾਰਕ ਨੂੰ ਸੋਧੋ
 menu-bookmarks-all-tabs =
     .label = …ਸਭ ਟੈਬਾਂ ਲਈ ਬੁੱਕਮਾਰਕ ਬਣਾਓ
 menu-bookmarks-toolbar =
@@ -259,15 +248,6 @@ menu-tools =
 menu-tools-downloads =
     .label = ਡਾਊਨਲੋਡ
     .accesskey = D
-menu-tools-addons =
-    .label = ਐਡ-ਆਨ
-    .accesskey = A
-menu-tools-fxa-sign-in =
-    .label = …{ -brand-product-name } ਲਈ ਸਾਇਨ ਇਨ ਕਰੋ
-    .accesskey = g
-menu-tools-turn-on-sync =
-    .label = …{ -sync-brand-short-name } ਚਾਲੂ ਕਰੋ
-    .accesskey = n
 menu-tools-addons-and-themes =
     .label = ਐਡ-ਆਨ ਤੇ ਥੀਮ
     .accesskey = A
@@ -283,9 +263,6 @@ menu-tools-sync-now =
 menu-tools-fxa-re-auth =
     .label = …{ -brand-product-name } ਨਾਲ ਮੁੜ-ਕਨੈਕਟ ਕਰੋ
     .accesskey = R
-menu-tools-web-developer =
-    .label = ਵੈੱਬ ਡਿਵੈਲਪਰ
-    .accesskey = W
 menu-tools-browser-tools =
     .label = ਬਰਾਊਜ਼ਰ ਟੂਲ
     .accesskey = B
@@ -298,17 +275,6 @@ menu-tools-page-source =
 menu-tools-page-info =
     .label = ਸਫ਼ੇ ਦੀ ਜਾਣਕਾਰੀ
     .accesskey = I
-menu-preferences =
-    .label =
-        { PLATFORM() ->
-            [windows] ਚੋਣਾਂ
-           *[other] ਮੇਰੀ ਪਸੰਦ
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] O
-           *[other] n
-        }
 menu-settings =
     .label = ਸੈਟਿੰਗਾਂ
     .accesskey =
@@ -341,21 +307,6 @@ menu-window-bring-all-to-front =
 menu-help =
     .label = ਮਦਦ
     .accesskey = H
-menu-help-product =
-    .label = { -brand-shorter-name } ਮਦਦ
-    .accesskey = H
-menu-help-show-tour =
-    .label = { -brand-shorter-name } ਟੂਰ
-    .accesskey = o
-menu-help-import-from-another-browser =
-    .label = …ਹੋਰ ਬਰਾਊਜ਼ਰ ਤੋਂ ਦਰਾਮਦ ਕਰੋ
-    .accesskey = I
-menu-help-keyboard-shortcuts =
-    .label = ਕੀਬੋਰਡ ਸ਼ਾਰਟਕੱਟ
-    .accesskey = K
-menu-help-troubleshooting-info =
-    .label = ਸਮੱਸਿਆ ਹੱਲ ਜਾਣਕਾਰੀ
-    .accesskey = T
 menu-get-help =
     .label = ਮਦਦ ਲਵੋ
     .accesskey = H
@@ -364,21 +315,18 @@ menu-help-more-troubleshooting-info =
     .accesskey = T
 menu-help-report-site-issue =
     .label = …ਸਾਈਟ ਮਸਲੇ ਬਾਰੇ ਜਾਣਕਾਰੀ ਦਿਓ
-menu-help-feedback-page =
-    .label = …ਸੁਝਾਅ ਭੇਜੋ
+menu-help-share-ideas =
+    .label = …ਵਿਚਾਰ ਤੇ ਸੁਝਾਅ ਸਾਂਝੇ ਕਰੋ
     .accesskey = S
-menu-help-safe-mode-without-addons =
-    .label = …ਐਡ-ਆਨ ਬੰਦ ਕਰਕੇ ਮੁੜ-ਚਾਲੂ ਕਰੋ
-    .accesskey = R
-menu-help-safe-mode-with-addons =
-    .label = ਐਡ-ਆਨ ਸਮਰੱਥ ਕਰਕੇ ਮੁੜ-ਚਾਲੂ ਕਰੋ
-    .accesskey = R
 menu-help-enter-troubleshoot-mode2 =
     .label = ਸਮੱਸਿਆ ਨਿਪਟਾਰਾ ਢੰਗ…
     .accesskey = M
 menu-help-exit-troubleshoot-mode =
     .label = ਸਮੱਸਿਆ ਨਿਪਟਾਰਾ ਢੰਗ ਬੰਦ ਹੈ
     .accesskey = M
+menu-help-switch-device =
+    .label = ਨਵੇਂ ਡਿਵਾਈਸ ਲਈ ਬਦਲਣਾ
+    .accesskey = N
 # Label of the Help menu item. Either this or
 # menu-help-notdeceptive is shown.
 menu-help-report-deceptive-site =

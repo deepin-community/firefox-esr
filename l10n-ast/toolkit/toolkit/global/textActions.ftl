@@ -50,3 +50,18 @@ text-action-select-all-shortcut =
 
 text-action-spell-no-suggestions =
     .label = Nun hai suxerencies ortográfiques
+
+text-action-spell-check-toggle =
+    .label = Correutor ortográficu
+    .accesskey = g
+
+text-action-spell-add-dictionaries =
+    .label = Amestar diccionarios…
+    .accesskey = A
+
+text-action-spell-dictionaries =
+    .label = Llingües
+    .accesskey = L
+
+text-action-search-text-box-clear =
+    .title = Llimpiar

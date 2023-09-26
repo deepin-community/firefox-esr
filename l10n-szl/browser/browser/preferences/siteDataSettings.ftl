@@ -30,14 +30,6 @@ site-data-remove-selected =
     .label = Wyciep ôbrane
     .accesskey = W
 
-site-data-button-cancel =
-    .label = Pociep
-    .accesskey = P
-
-site-data-button-save =
-    .label = Spamiyntej zmiany
-    .accesskey = S
-
 site-data-settings-dialog =
     .buttonlabelaccept = Spamiyntej zmiany
     .buttonaccesskeyaccept = S
@@ -67,5 +59,8 @@ site-data-removing-dialog =
 site-data-removing-header = Wyciepowanie cookies i danych strōn
 
 site-data-removing-desc = Wyciepanie cookies i danych strōn może cie wylogować ze strōn. Na zicher chcesz wkludzić te zmiany?
+# Variables:
+#   $baseDomain (String) - The single domain for which data is being removed
+site-data-removing-single-desc = Skasowanie cookies i danych strōn może cie wylogować z niykerych strōn. Na zicher chcesz skasować cookies i dane strōny <strong>{ $baseDomain }</strong>?
 
 site-data-removing-table = Na tych strōnach cookies i dane strōn bydōm wyciepane

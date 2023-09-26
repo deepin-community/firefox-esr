@@ -19,3 +19,20 @@ opensearch-error-download-desc = { -brand-short-name } ਖੋਜ ਪਲੱਗਇ
 
 ##
 
+searchbar-submit =
+    .tooltiptext = ਖੋਜ ਭੇਜੋ
+
+# This string is displayed in the search box when the input field is empty
+searchbar-input =
+    .placeholder = ਖੋਜੋ
+
+searchbar-icon =
+    .tooltiptext = ਖੋਜੋ
+
+## Infobar shown when search engine is removed and replaced.
+## Variables
+## $oldEngine (String) - the search engine to be removed.
+## $newEngine (String) - the search engine to replace the removed search engine.
+
+removed-search-engine-message = <strong>ਤੁਹਾਡਾ ਮੂਲ ਖੋਜ ਇੰਜਣ ਬਦਲਿਆ ਗਿਆ ਹੈ।</strong>{ $oldEngine } { -brand-short-name } ਵਿੱਚ ਮੂਲ ਖੋਜ ਇੰਜਣ ਵਜੋਂ ਕੰਮ ਨਹੀਂ ਕਰ ਰਿਹਾ ਹੈ। { $newEngine } ਹੁਣ ਤੁਹਾਡਾ ਮੂਲ ਖੋਜ ਇੰਜਣ ਹੈ। ਹੋਰ ਮੂਲ ਖੋਜ ਇੰਜਣ ਬਦਲਣ ਲਈ ਸੈਟਿੰਗਾਂ ਉੱਤੇ ਜਾਓ। <label data-l10n-name="remove-search-engine-article">ਹੋਰ ਸਿੱਖੋ</label>
+remove-search-engine-button = ਠੀਕ ਹੈ

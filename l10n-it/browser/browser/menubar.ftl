@@ -35,15 +35,6 @@ menu-quit =
 menu-quit-mac =
     .label = Esci da { -brand-shorter-name }
 
-# This menu-quit-button string is only used on Linux.
-menu-quit-button =
-    .label = { menu-quit.label }
-
-# This menu-quit-button-win string is only used on Windows.
-menu-quit-button-win =
-    .label = { menu-quit.label }
-    .tooltip = Chiudi { -brand-shorter-name }
-
 menu-about =
     .label = Informazioni su { -brand-shorter-name }
     .accesskey = I
@@ -73,8 +64,14 @@ menu-file-open-location =
 menu-file-open-file =
     .label = Apri file…
     .accesskey = A
-menu-file-close =
-    .label = Chiudi
+# Variables:
+#  $tabCount (Number): the number of tabs that are affected by the action.
+menu-file-close-tab =
+    .label =
+        { $tabCount ->
+            [1] Chiudi scheda
+           *[other] Chiudi { $tabCount } schede
+        }
     .accesskey = C
 menu-file-close-window =
     .label = Chiudi finestra
@@ -91,9 +88,6 @@ menu-file-share-url =
 menu-file-print-setup =
     .label = Imposta pagina…
     .accesskey = t
-menu-file-print-preview =
-    .label = Anteprima di stampa
-    .accesskey = p
 menu-file-print =
     .label = Stampa…
     .accesskey = m
@@ -109,9 +103,6 @@ menu-file-go-offline =
 menu-edit =
     .label = Modifica
     .accesskey = M
-menu-edit-find-on =
-    .label = Trova in questa pagina…
-    .accesskey = v
 menu-edit-find-in-page =
     .label = Trova nella pagina…
     .accesskey = v
@@ -130,9 +121,6 @@ menu-view =
 menu-view-toolbars-menu =
     .label = Barre degli strumenti
     .accesskey = B
-menu-view-customize-toolbar =
-    .label = Personalizza…
-    .accesskey = P
 menu-view-customize-toolbar2 =
     .label = Personalizza barra degli strumenti…
     .accesskey = P
@@ -169,10 +157,6 @@ menu-view-page-style-no-style =
 menu-view-page-basic-style =
     .label = Stile pagina di base
     .accesskey = S
-menu-view-charset =
-    .label = Codifica testo
-    .accesskey = C
-
 menu-view-repair-text-encoding =
     .label = Correggi codifica testo
     .accesskey = C
@@ -189,6 +173,17 @@ menu-view-exit-full-screen =
 menu-view-full-screen =
     .label = Schermo intero
     .accesskey = S
+
+## These menu items may use the same accesskey.
+
+# This should match reader-view-enter-button in browser.ftl
+menu-view-enter-readerview =
+    .label = Attiva Modalità lettura
+    .accesskey = A
+# This should match reader-view-close-button in browser.ftl
+menu-view-close-readerview =
+    .label = Chiudi Modalità lettura
+    .accesskey = C
 
 ##
 
@@ -219,24 +214,20 @@ menu-history-undo-menu =
 menu-history-undo-window-menu =
     .label = Finestre chiuse di recente
 
-menu-history-reopen-all-tabs = Riapri tutte le schede
-menu-history-reopen-all-windows = Riapri tutte le finestre
-
 ## Bookmarks Menu
 
 menu-bookmarks-menu =
     .label = Segnalibri
     .accesskey = e
-menu-bookmarks-show-all =
-    .label = Visualizza tutti i segnalibri
-menu-bookmark-this-page =
-    .label = Aggiungi pagina ai segnalibri
 menu-bookmarks-manage =
     .label = Gestisci segnalibri
-menu-bookmark-current-tab =
-    .label = Aggiungi scheda corrente ai segnalibri
-menu-bookmark-edit =
-    .label = Modifica segnalibro
+menu-bookmark-tab =
+    .label = Aggiungi scheda corrente ai segnalibri…
+menu-edit-bookmark =
+    .label = Modifica segnalibro…
+# "Search" is a verb, as in "Search in bookmarks"
+menu-bookmarks-search =
+    .label = Cerca nei segnalibri
 menu-bookmarks-all-tabs =
     .label = Tutte le schede nei segnalibri…
 menu-bookmarks-toolbar =
@@ -254,15 +245,6 @@ menu-tools =
 menu-tools-downloads =
     .label = Download
     .accesskey = D
-menu-tools-addons =
-    .label = Componenti aggiuntivi
-    .accesskey = C
-menu-tools-fxa-sign-in =
-    .label = Accedi a { -brand-product-name }…
-    .accesskey = c
-menu-tools-turn-on-sync =
-    .label = Attiva { -sync-brand-short-name }…
-    .accesskey = v
 menu-tools-addons-and-themes =
     .label = Estensioni e temi
     .accesskey = E
@@ -278,9 +260,6 @@ menu-tools-sync-now =
 menu-tools-fxa-re-auth =
     .label = Riconnetti a { -brand-product-name }…
     .accesskey = R
-menu-tools-web-developer =
-    .label = Sviluppo web
-    .accesskey = v
 menu-tools-browser-tools =
     .label = Strumenti del browser
     .accesskey = w
@@ -293,17 +272,6 @@ menu-tools-page-source =
 menu-tools-page-info =
     .label = Informazioni sulla pagina
     .accesskey = I
-menu-preferences =
-    .label =
-        { PLATFORM() ->
-            [windows] Opzioni
-           *[other] Preferenze
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] O
-           *[other] n
-        }
 menu-settings =
     .label = Impostazioni
     .accesskey =
@@ -328,15 +296,6 @@ menu-window-bring-all-to-front =
 # NOTE: For Engineers, any additions or changes to Help menu strings should
 # also be reflected in the related strings in appmenu.ftl. Those strings, by
 # convention, will have the same ID as these, but prefixed with "app".
-# Example: appmenu-help-product
-#
-# These strings are duplicated to allow for different casing depending on
-# where the strings appear.
-
-
-# NOTE: For Engineers, any additions or changes to Help menu strings should
-# also be reflected in the related strings in appmenu.ftl. Those strings, by
-# convention, will have the same ID as these, but prefixed with "app".
 # Example: appmenu-get-help
 #
 # These strings are duplicated to allow for different casing depending on
@@ -345,21 +304,6 @@ menu-window-bring-all-to-front =
 menu-help =
     .label = Aiuto
     .accesskey = A
-menu-help-product =
-    .label = Guida di { -brand-shorter-name }
-    .accesskey = G
-menu-help-show-tour =
-    .label = Panoramica di { -brand-shorter-name }
-    .accesskey = o
-menu-help-import-from-another-browser =
-    .label = Importa da un altro browser…
-    .accesskey = b
-menu-help-keyboard-shortcuts =
-    .label = Scorciatoie da tastiera
-    .accesskey = S
-menu-help-troubleshooting-info =
-    .label = Risoluzione dei problemi
-    .accesskey = R
 menu-get-help =
     .label = Ottieni assistenza
     .accesskey = n
@@ -368,21 +312,18 @@ menu-help-more-troubleshooting-info =
     .accesskey = r
 menu-help-report-site-issue =
     .label = Segnala problema con questo sito…
-menu-help-feedback-page =
-    .label = Invia feedback…
+menu-help-share-ideas =
+    .label = Condividi idee e feedback…
     .accesskey = k
-menu-help-safe-mode-without-addons =
-    .label = Riavvia disattivando i componenti aggiuntivi…
-    .accesskey = d
-menu-help-safe-mode-with-addons =
-    .label = Riavvia attivando i componenti aggiuntivi
-    .accesskey = R
 menu-help-enter-troubleshoot-mode2 =
     .label = Modalità risoluzione problemi…
     .accesskey = M
 menu-help-exit-troubleshoot-mode =
     .label = Disattiva Modalità risoluzione problemi
     .accesskey = m
+menu-help-switch-device =
+    .label = Passaggio a un nuovo dispositivo
+    .accesskey = P
 # Label of the Help menu item. Either this or
 # safeb.palm.notdeceptive.label from
 # phishing-afterload-warning-message.dtd is shown.
@@ -392,3 +333,5 @@ menu-help-report-deceptive-site =
 menu-help-not-deceptive =
     .label = Non è un sito ingannevole…
     .accesskey = e
+
+

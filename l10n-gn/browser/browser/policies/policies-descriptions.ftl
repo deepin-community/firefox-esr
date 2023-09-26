@@ -16,6 +16,8 @@ policy-AllowedDomainsForApps = Emboaty umi mba’éva oñemoneĩva oike hag̃ua 
 
 policy-AppAutoUpdate = Embojuruja térã eipe’a ñembohekopyahu ijeheguíva jepysokuégui.
 
+policy-AppUpdatePin = Aníkena rembopyahu { -brand-short-name } ohasávo pe versión oje’éva.
+
 policy-AppUpdateURL = Embohekopyahu URL kundaharape rembipuru ñemomba’epyre.
 
 policy-Authentication = Emboheko ñemoañete ojuajúva ñanduti rendápe g̃uarã moneĩmbyre.
@@ -39,6 +41,9 @@ policy-CaptivePortal = Embojuruja térã eipe’a pe pytyvõha ñapytĩmbýva.
 policy-CertificatesDescription = Embojuaju mboajepyre térã eipuru mboajepyre moingepyre.
 
 policy-Cookies = Emoneĩ térã embotove ani ñanduti renda omoinge kookie.
+
+# Containers in this context is referring to container tabs in Firefox.
+policy-Containers = Eheka purureko ojokupytýva mba’eryru ndive.
 
 policy-DisabledCiphers = Embogue papapy.
 
@@ -65,13 +70,11 @@ policy-DisableForgetButton = Ani eheja votõ Tesaráipe jeike.
 
 policy-DisableFormHistory = Ani nemandu’a jeheka ha tembiasakue myanyhẽha rehe.
 
-policy-DisableMasterPasswordCreation = Ojepurúrõ true, ndaikatúi emoheñói ñe’ẽñemi ha’etéva.
-
 policy-DisablePrimaryPasswordCreation = Añetérõ, ndaikatúi emoheñói Ñe’ẽñemi ha’etéva.
 
 policy-DisablePasswordReveal = Ani emoneĩ ojehecha ñe’ẽñemi tembiapo ñepyrũ ñongatupyrépe.
 
-policy-DisablePocket = Eipe’a ñanduti renda ñeñongatu rembiapoite Pocket-pe.
+policy-DisablePocket2 = Eipe’a ñanduti renda ñeñongatu rembiapoite { -pocket-brand-name }-pe.
 
 policy-DisablePrivateBrowsing = Eipe’a kundaha ñemigua.
 
@@ -89,6 +92,8 @@ policy-DisableSystemAddonUpdate = Ani eheja kundahárape omohenda ha ombohekopya
 
 policy-DisableTelemetry = Eipe’aite Telemetría.
 
+policy-DisableThirdPartyModuleBlocking = Emboyke puruháragui ani ojoko ta’ãha mbohapyháva oikekuaáva { -brand-short-name } mba’eapópe.
+
 policy-DisplayBookmarksToolbar = Ehechauka Techaukaha rembipuru renda ijypykue rupi.
 
 policy-DisplayMenuBar = Ehechauka Poravorã renda ijypykue rupi.
@@ -105,6 +110,8 @@ policy-EnableTrackingProtection = Embojuruja térã eipe’a tetepy jejoko ha ej
 # “lock” means that the user won’t be able to change this setting
 policy-EncryptedMediaExtensions = Emyandy térã embogue Jepysokue papapypyréva ha, ejaposéramo, ejoko.
 
+policy-ExemptDomainFileTypePairsFromFileTypeDownloadWarnings = Embogue umi ñe’ẽñemi oñemopyendáva jeipyso rehe umi vore ha'etévape g̃uarã umi tenda rupi.
+
 # A “locked” extension can’t be disabled or removed by the user. This policy
 # takes 3 keys (“Install”, ”Uninstall”, ”Locked”), you can either keep them in
 # English or translate them as verbs.
@@ -114,9 +121,9 @@ policy-ExtensionSettings = Eñangareko opaite mba’e jepysokue ñemohendáre.
 
 policy-ExtensionUpdate = Embojuruja térã eipe’a ñembohekopyahu ijeheguíva jepysokue rehegua.
 
-policy-FirefoxHome = Emboheko Firefox ñepyrũ.
+policy-FirefoxHome2 = Emboheko { -firefox-home-brand-name }.
 
-policy-FlashPlugin = Emoneĩ térã embotove mboguejyrã’i Flash jepuru.
+policy-GoToIntranetSiteForSingleWordEntryInAddressBar = Emohembiapo ñeikundahatee ñanduti rendápe ehekarangue jeikeha peteĩ ñe’ẽmente ojehaíva kundaharape rendápe.
 
 policy-Handlers = Emboheko tembipuru’i ñangarekoha ypykuegua.
 
@@ -141,8 +148,6 @@ policy-LocalFileLinks = Emoneĩ ñanduti renda moha’eñopyrépe ojuajúvo mara
 
 policy-ManagedBookmarks = Emboheko peteĩ techaukaha rysýi iñangarekohára omoneĩ’ỹva puruhápe ñemoambue.
 
-policy-MasterPassword = Ejerure térã emboyke ñe’ẽñemi ha’etéva jepuru.
-
 policy-ManualAppUpdateOnly = Emoneĩ ñembohekopyahu po rupigua añoite ha ani emomarandu puruhárape ñembohekopyahu rehegua.
 
 policy-PrimaryPassword = Ejerure térã emboyke ñe’ẽñemi ñepyrũgua jepuru.
@@ -162,6 +167,8 @@ policy-OverrideFirstRunPage = Emboyke kuatiarogue tembiapo ñepyrũguáva. Emboa
 policy-OverridePostUpdatePage = Emboyke kuatiarogue “Mba’epyahu” embohekopyahu rire. Emboaje ko purureko mba’eve’ỹre eipe’aséramo kuatiarogue embohekopyahu rire.
 
 policy-PasswordManagerEnabled = Embojuruja ñe’ẽñemi ñongatu ñe’ẽñemi ñangarekohápe.
+
+policy-PasswordManagerExceptions = Eñeha’ã { -brand-short-name } ani eñongatu pe’aha tenda ha’etévape.
 
 # PDF.js and PDF should not be translated
 policy-PDFjs = Eipe’a térã emboheko PDF.js, PDF jehechaha oĩva { -brand-short-name } ryepýpe.
@@ -188,8 +195,8 @@ policy-SearchEngines = Emboheko jehekaha ñemoĩporã. Ko purureko eipurukuaa pe
 
 policy-SearchSuggestEnabled = Emyandy térã embogue jeheka rehegua.
 
-# For more information, see https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSS/PKCS11/Module_Installation
-policy-SecurityDevices = Emohenda PKCS # 11 ra’ãha.
+# For more information, see https://wikipedia.org/wiki/PKCS_11
+policy-SecurityDevices2 = Embojuaju térã eipe’a PKCS #11 ta’ãha.
 
 policy-ShowHomeButton = Ehechauka ñepyrũha votõ tembipuru rendápe.
 
@@ -197,9 +204,13 @@ policy-SSLVersionMax = Emboheko SSL rembiapokue ipyahuvéva.
 
 policy-SSLVersionMin = Emboheko SSL rembiapokue oiko’ivéva.
 
+policy-StartDownloadsInTempDirectory = Embojere umi ñemboguejy oñepyrũ hag̃ua peteĩ tenda sapy’agua tendápe, tenda’i ñemboguejyrã ñepyrũrã rangue.
+
 policy-SupportMenu = Embojuaju mba’epuru poravorãgua ñemomba’epyréva pytyvõha poravorãme.
 
 policy-UserMessaging = Ani ehechauka heta ñe’ẽmondo puruhárape.
+
+policy-UseSystemPrintDialog = Eguenohẽ kuatiáre eipuruhápe apopyvusúpe ñe’ẽñemi kuatiáre ñeguenohẽ rehegua.
 
 # “format” refers to the format used for the value of this policy.
 policy-WebsiteFilter = Ejoko ñanduti rendápe jeike. Emoñe’ẽ kuatiaita ehechakuaa hag̃ua mba’emimi ko ysaja rehegua.

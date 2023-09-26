@@ -71,26 +71,45 @@ cryptominer-tab-content = Gant ar c'hriptogleuzerien e vez implijet gallout jedi
 protections-close-button2 =
     .aria-label = Serriñ
     .title = Serriñ
-  
+
 mobile-app-title = Stankañ an heulierien bruderezh war meur a ardivink
+mobile-app-card-content = Ober gant ar merdeer hezoug gant ar gwarez ebarzhet a-enep d'ar bruderezh heuliañ.
 mobile-app-links = { -brand-product-name } Merdeer evit <a data-l10n-name="android-mobile-inline-link">Android</a> ha <a data-l10n-name="ios-mobile-inline-link">iOS</a>
 
 lockwise-title = Na zisoñjit biken ken ur ger-tremen
-lockwise-title-logged-in2 = Merañ ar gerioù-tremen
-lockwise-header-content = { -lockwise-brand-name } a zalc'h diogelet ho kerioù-tremen en ho merdeer.
+passwords-title-logged-in = Merañ ho kerioù-tremen
+passwords-header-content = { -brand-product-name } a gadav ho kerioù-tremen en ho merdeer en un doare diogel.
 lockwise-header-content-logged-in = Kadavit ha goubredit ho kerioù-tremen etre ho holl drevnadoù en un doare diogel.
-protection-report-save-passwords-button = Enrollañ ar gerioù-tremen
-    .title = Enrollañ ar gerioù-tremen e-barzh { -lockwise-brand-short-name }
-protection-report-manage-passwords-button = Merañ ar gerioù-tremen
-    .title = Merañ ar gerioù-tremen e-barzh{ -lockwise-brand-short-name }
-lockwise-mobile-app-title = Tapit ho kerioù-tremen ganeoc'h e pep lec'h
-lockwise-no-logins-card-content = Implijit ar gerioù-tremen enrollet e { -brand-short-name } war kement trevnad.
-lockwise-app-links = { -lockwise-brand-name } evit <a data-l10n-name="lockwise-android-inline-link">Android</a> hag <a data-l10n-name="lockwise-ios-inline-link">iOS</a>
+protection-report-passwords-save-passwords-button = Enrollañ ar gerioù-tremen
+    .title = Enrollañ ar gerioù-tremen
+protection-report-passwords-manage-passwords-button = Merañ ar gerioù-tremen
+    .title = Merañ ar gerioù-tremen
 
+
+# Variables:
+# $count (Number) - Number of passwords exposed in data breaches.
+lockwise-scanned-text-breached-logins =
+    { $count ->
+        [one] 1 ger-tremen a c'hallfe bezañ diskouezet en ur fuadur roadennoù.
+        [two] { $count } c'her-tremen a c'hallfe bezañ diskouezet en ur fuadur roadennoù.
+        [few] { $count } ger-tremen a c'hallfe bezañ diskouezet en ur fuadur roadennoù.
+        [many] { $count } a c'herioù-tremen a c'hallfe bezañ diskouezet en ur fuadur roadennoù.
+       *[other] { $count } ger-tremen a c'hallfe bezañ diskouezet en ur fuadur roadennoù.
+    }
+
+# While English doesn't use the number in the plural form, you can add $count to your language
+# if needed for grammatical reasons.
+# Variables:
+# $count (Number) - Number of passwords stored in Lockwise.
+lockwise-scanned-text-no-breached-logins =
+    { $count ->
+        [one] 1 ger-tremen kadavet ent diogel
+        [two] Ho kerioù-tremen a zo kadavet ent diogel
+        [few] Ho kerioù-tremen a zo kadavet ent diogel
+        [many] Ho kerioù-tremen a zo kadavet ent diogel
+       *[other] Ho kerioù-tremen a zo kadavet ent diogel
+    }
 lockwise-how-it-works-link = Penaos ez a en-dro
-
-turn-on-sync = Gweredekaat { -sync-brand-short-name }…
-    .title = Mont d'ar gwellvezioù goubredañ
 
 monitor-title = Diwallit diouzh ar fuadurioù roadennoù
 monitor-link = Penaos ec'h a en-dro
@@ -100,11 +119,106 @@ monitor-sign-up-link = Emezelit d'ar galvoù-diwall war ar fuadur roadennoù
     .title = Emezelit d'ar galvoù-diwall war ar fuadur roadennoù war { -monitor-brand-name }
 auto-scan = Gwiriekaet hiziv ent emgefreek
 
+monitor-emails-tooltip =
+    .title = Gwelet ar chomlec'hioù postel evezhit war { -monitor-brand-short-name }
+monitor-breaches-tooltip =
+    .title = Gwelet ar fuadur roadennoù anavezet war { -monitor-brand-short-name }
+monitor-passwords-tooltip =
+    .title = Gwelet ar gerioù-tremen diskouezet war { -monitor-brand-short-name }
+
+# This string is displayed after a large numeral that indicates the total number
+# of email addresses being monitored. Don’t add $count to
+# your localization, because it would result in the number showing twice.
+info-monitored-emails =
+    { $count ->
+        [one] Evezhiet eo ar chomlec'h postel
+        [two] Evezhiet eo ar chomlec'hioù postel
+        [few] Evezhiet eo ar chomlec'hioù postel
+        [many] Evezhiet eo ar chomlec'hioù postel
+       *[other] Evezhiet eo ar chomlec'hioù postel
+    }
+
+# This string is displayed after a large numeral that indicates the total number
+# of known data breaches. Don’t add $count to
+# your localization, because it would result in the number showing twice.
+info-known-breaches-found =
+    { $count ->
+        [one] Ur fuadur roadennoù en deus diskouezet ho titouroù
+        [two] Fuadurioù roadennoù en deus diskouezet ho titouroù
+        [few] Fuadurioù roadennoù en deus diskouezet ho titouroù
+        [many] Fuadurioù roadennoù en deus diskouezet ho titouroù
+       *[other] Fuadurioù roadennoù en deus diskouezet ho titouroù
+    }
+
+# This string is displayed after a large numeral that indicates the total number
+# of known data breaches that are marked as resolved by the user. Don’t add $count
+# to your localization, because it would result in the number showing twice.
+info-known-breaches-resolved =
+    { $count ->
+        [one] Fuadenn roadennoù anavezet ha merket evel stouvet
+        [two] Fuadenn roadennoù anavezet ha merket evel stouvet
+        [few] Fuadenn roadennoù anavezet ha merket evel stouvet
+        [many] Fuadenn roadennoù anavezet ha merket evel stouvet
+       *[other] Fuadenn roadennoù anavezet ha merket evel stouvet
+    }
+
+# This string is displayed after a large numeral that indicates the total number
+# of exposed passwords. Don’t add $count to
+# your localization, because it would result in the number showing twice.
+info-exposed-passwords-found =
+    { $count ->
+        [one] Ger-tremen en arvar gant an holl fuadennoù roadennoù
+        [two] Ger-tremen en arvar gant an holl fuadennoù roadennoù
+        [few] Ger-tremen en arvar gant an holl fuadennoù roadennoù
+        [many] Ger-tremen en arvar gant an holl fuadennoù roadennoù
+       *[other] Ger-tremen en arvar gant an holl fuadennoù roadennoù
+    }
+
+# This string is displayed after a large numeral that indicates the total number
+# of exposed passwords that are marked as resolved by the user. Don’t add $count
+# to your localization, because it would result in the number showing twice.
+info-exposed-passwords-resolved =
+    { $count ->
+        [one] Ger-tremen en arvar gant fuadennoù roadennoù
+        [two] Ger-tremen en arvar gant fuadennoù roadennoù
+        [few] Ger-tremen en arvar gant fuadennoù roadennoù
+        [many] Ger-tremen en arvar gant fuadennoù roadennoù
+       *[other] Ger-tremen en arvar gant fuadennoù roadennoù
+    }
+
 monitor-no-breaches-title = Keloù mat!
+monitor-no-breaches-description = N'oc'h ket e-barzh ar fuadennoù roadennoù anavezet. Ma cheñch e lavarimp deoc'h.
+monitor-view-report-link = Gwelout an danevell
+    .title = Stouvañ ar fuadennoù roadennoù gant { -monitor-brand-short-name }
+monitor-breaches-unresolved-title = Stouvit ho fuadennoù roadennoù
+monitor-breaches-unresolved-description = Ur wech m'ho peus sellet ouzh titouroù ar fuadennoù roadennoù ha kemeret diarbennoù surentez e c'hallit merkañ int stouvet.
+monitor-manage-breaches-link = Merañ ar fuadennoù roadennoù
+    .title = Merañ ar fuadennoù roadennoù gant { -monitor-brand-short-name }
+monitor-breaches-resolved-title = Brav! Stouvet ho peus an holl fuadennoù roadennoù anavezet.
+monitor-breaches-resolved-description = Lavarout a rimp deoc'h m'emañ ho chomlec'h mail en ur fuadenn roadennoù.
+
+# Variables:
+# $numBreachesResolved (Number) - Number of breaches marked as resolved by the user on Monitor.
+# $numBreaches (Number) - Number of breaches in which a user's data was involved, detected by Monitor.
+monitor-partial-breaches-title =
+    { $numBreaches ->
+        [one] { $numBreachesResolved } fuadenn war { $numBreaches } merket evel stouvet.
+        [two] { $numBreachesResolved } fuadenn war { $numBreaches } merket evel stouvet.
+        [few] { $numBreachesResolved } fuadenn war { $numBreaches } merket evel stouvet.
+        [many] { $numBreachesResolved } fuadenn war { $numBreaches } merket evel stouvet.
+       *[other] { $numBreachesResolved } fuadenn war { $numBreaches } merket evel stouvet.
+    }
+
+# Variables:
+# $percentageResolved (Number) - Percentage of breaches marked as resolved by a user on Monitor.
+monitor-partial-breaches-percentage = { $percentageResolved }% echu
 
 monitor-partial-breaches-motivation-title-start = Ul loc'hadenn vat!
 monitor-partial-breaches-motivation-title-middle = Kendalc'hit ganti!
 monitor-partial-breaches-motivation-title-end = Tost echu! Kendalc'hit!
+monitor-partial-breaches-motivation-description = Stouvañ peurrest ho fuadennoù roadennoù gant { -monitor-brand-short-name }.
+monitor-resolve-breaches-link = Stouvañ fuadennoù roadennoù
+    .title = Stouvañ fuadennoù roadennoù gant { -monitor-brand-short-name }
 
 ## The title attribute is used to display the type of protection.
 ## The aria-label is spoken by screen readers to make the visual graph accessible to blind users.
@@ -113,3 +227,53 @@ monitor-partial-breaches-motivation-title-end = Tost echu! Kendalc'hit!
 ##   $count (Number) - Number of specific trackers
 ##   $percentage (Number) - Percentage this type of tracker contributes to the whole graph
 
+bar-tooltip-social =
+    .title = Heulierien Media kevredadel
+    .aria-label =
+        { $count ->
+            [one] { $count } heulier media kevredadel ({ $percentage }%)
+            [two] { $count } heulier media kevredadel ({ $percentage }%)
+            [few] { $count } heulier media kevredadel ({ $percentage }%)
+            [many] { $count } heulier media kevredadel ({ $percentage }%)
+           *[other] { $count } heulier media kevredadel ({ $percentage }%)
+        }
+bar-tooltip-cookie =
+    .title = Toupinoù heuliañ etre lec'hiennoù
+    .aria-label =
+        { $count ->
+            [one] { $count } toupin heuliañ etre lec'hiennoù ({ $percentage }%)
+            [two] { $count } toupin heuliañ etre lec'hiennoù ({ $percentage }%)
+            [few] { $count } toupin heuliañ etre lec'hiennoù ({ $percentage }%)
+            [many] { $count } toupin heuliañ etre lec'hiennoù ({ $percentage }%)
+           *[other] { $count } toupin heuliañ etre lec'hiennoù ({ $percentage }%)
+        }
+bar-tooltip-tracker =
+    .title = Endalc'had heuliañ
+    .aria-label =
+        { $count ->
+            [one] { $count } endalc'had heuliañ ({ $percentage }%)
+            [two] { $count } endalc'had heuliañ ({ $percentage }%)
+            [few] { $count } endalc'had heuliañ ({ $percentage }%)
+            [many] { $count } endalc'had heuliañ ({ $percentage }%)
+           *[other] { $count } endalc'had heuliañ ({ $percentage }%)
+        }
+bar-tooltip-fingerprinter =
+    .title = Dinoerien roudoù niverel
+    .aria-label =
+        { $count ->
+            [one] { $count } dinoer roudoù niverel ({ $percentage }%)
+            [two] { $count } dinoer roudoù niverel ({ $percentage }%)
+            [few] { $count } dinoer roudoù niverel ({ $percentage }%)
+            [many] { $count } dinoer roudoù niverel ({ $percentage }%)
+           *[other] { $count } dinoer roudoù niverel ({ $percentage }%)
+        }
+bar-tooltip-cryptominer =
+    .title = Kriptogleuzerien
+    .aria-label =
+        { $count ->
+            [one] { $count } kriptogleuzer ({ $percentage }%)
+            [two] { $count } kriptogleuzer ({ $percentage }%)
+            [few] { $count } kriptogleuzer ({ $percentage }%)
+            [many] { $count } kriptogleuzer ({ $percentage }%)
+           *[other] { $count } kriptogleuzer ({ $percentage }%)
+        }

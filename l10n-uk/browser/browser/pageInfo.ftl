@@ -50,7 +50,7 @@ media-tab =
 media-location =
     .value = Розташування:
 media-text =
-    .value = Пов’язаний текст:
+    .value = Пов'язаний текст:
 media-alt-header =
     .label = Замінний текст
 media-address =
@@ -65,6 +65,9 @@ media-dimension =
     .value = Виміри:
 media-long-desc =
     .value = Розширений опис:
+media-select-all =
+    .label = Вибрати все
+    .accesskey = В
 media-save-as =
     .label = Зберегти як…
     .accesskey = З
@@ -97,13 +100,13 @@ security-view-identity-verifier =
 security-view-identity-validity =
     .value = Завершується:
 security-view-privacy =
-    .value = Конфіденційність та історія
+    .value = Приватність та історія
 
 security-view-privacy-history-value = Чи відвідувався цей сайт раніше?
-security-view-privacy-sitedata-value = Чи зберігає цей вебсайт інформацію на моєму комп’ютері?
+security-view-privacy-sitedata-value = Чи зберігає цей вебсайт інформацію на моєму комп'ютері?
 
 security-view-privacy-clearsitedata =
-    .label = Стерти куки і дані сайтів
+    .label = Стерти куки та дані сайтів
     .accesskey = т
 
 security-view-privacy-passwords-value = Чи зберігаю я паролі для цього сайту?
@@ -141,8 +144,8 @@ media-bg-img = Тло
 media-border-img = Рамка
 media-list-img = Маркер
 media-cursor = Курсор
-media-object = Об’єкт
-media-embed = Вбудований об’єкт
+media-object = Об'єкт
+media-embed = Вбудований об'єкт
 media-link = Піктограма
 media-input = Поле введення
 media-video = Відео
@@ -244,6 +247,9 @@ media-dimensions =
 #   $size (number) - The size of the media file in kilobytes
 media-file-size = { $size } КБ
 
+## Variables:
+##   $website (string) — The url of the website pageInfo is getting info for
+
 # This string is used to display the website name next to the
 # "Block Images" checkbox in the media tab
 # Variables:
@@ -255,7 +261,7 @@ media-block-image =
 # This string is used to display the URL of the website on top of the
 # pageInfo dialog box
 # Variables:
-#   $website (string) - The url of the website pageInfo is getting info for
+#   $website (string) — The url of the website pageInfo is getting info for
 page-info-page =
     .title = Інформація про сторінку - { $website }
 page-info-frame =

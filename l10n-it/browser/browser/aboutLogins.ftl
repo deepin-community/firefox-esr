@@ -11,20 +11,14 @@ about-logins-page-title = Credenziali e password
 
 # "Google Play" and "App Store" are both branding and should not be translated
 
-login-app-promo-title = Porta le tue password sempre con te
-login-app-promo-subtitle = Installa l’app gratuita { -lockwise-brand-name }
-login-app-promo-android =
-    .alt = Scarica da Google Play
-login-app-promo-apple =
-    .alt = Scarica da App Store
+about-logins-login-filter =
+   .placeholder = Cerca nelle credenziali
+   .key = F
 
-login-filter =
-    .placeholder = Cerca nelle credenziali
-
-create-login-button = Inserisci nuove credenziali
+create-new-login-button =
+  .title = Inserisci nuove credenziali
 
 fxaccounts-sign-in-text = Ritrova le tue password su tutti i tuoi dispositivi
-fxaccounts-sign-in-button = Accedi a { -sync-brand-short-name }
 fxaccounts-sign-in-sync-button = Accedi per sincronizzare
 fxaccounts-avatar-button =
     .title = Gestisci account
@@ -44,14 +38,19 @@ menu-menuitem-preferences =
        *[other] Preferenze
     }
 about-logins-menu-menuitem-help = Supporto
-menu-menuitem-android-app = { -lockwise-brand-short-name } per Android
-menu-menuitem-iphone-app = { -lockwise-brand-short-name } per iPhone e iPad
 
 ## Login List
 
 login-list =
     .aria-label = Credenziali corrispondenti ai criteri di ricerca
 login-list-count = { $count } credenziali
+
+login-list-filtered-count =
+  { $total ->
+      [one] { $count } di { $total } credenziale
+     *[other] { $count } di { $total } credenziali
+  }
+
 login-list-sort-label-text = Ordina per:
 login-list-name-option = Nome (A-Z)
 login-list-name-reverse-option = Nome (Z-A)
@@ -71,6 +70,7 @@ about-logins-list-item-breach-icon =
     .title = Sito web coinvolto in violazioni di dati
 about-logins-list-item-vulnerable-password-icon =
   .title = Password vulnerabile
+
 about-logins-list-section-breach = Siti con violazioni
 about-logins-list-section-vulnerable = Password vulnerabili
 about-logins-list-section-nothing = Nessun avviso
@@ -80,18 +80,14 @@ about-logins-list-section-week = Ultimi 7 giorni
 
 ## Introduction screen
 
-login-intro-heading = Stai cercando le credenziali che hai salvato? Configura { -sync-brand-short-name }.
-
 about-logins-login-intro-heading-logged-out2 = Stai cercando le credenziali che hai salvato? Attiva la sincronizzazione o importale.
 about-logins-login-intro-heading-logged-in = Credenziali sincronizzate non trovate.
 login-intro-description = Se le credenziali sono salvate in { -brand-product-name } su un altro dispositivo, ecco come renderle disponibili qui:
-login-intro-instruction-fxa = Accedi o crea un { -fxaccount-brand-name } sul dispositivo dove sono salvate le credenziali
-login-intro-instruction-fxa-settings = Assicurati che la casella “Credenziali” sia selezionata nelle impostazioni di { -sync-brand-short-name }
-about-logins-intro-instruction-help = Visita il <a data-l10n-name="help-link">supporto per { -lockwise-brand-short-name }</a> per ulteriori informazioni
 login-intro-instructions-fxa = Accedi o crea un { -fxaccount-brand-name } sul dispositivo dove sono salvate le credenziali.
 login-intro-instructions-fxa-settings = Apri Impostazioni > Sincronizzazione > Attiva sincronizzazione… e seleziona la casella Credenziali e password.
-login-intro-instructions-fxa-help = Visita il <a data-l10n-name="help-link">supporto per { -lockwise-brand-short-name }</a> per ulteriori informazioni.
-about-logins-intro-import = Se le credenziali sono salvate in un altro browser, è possibile <a data-l10n-name="import-link">importarle in { -lockwise-brand-short-name }</a>
+
+login-intro-instructions-fxa-passwords-help = Visita la pagina di <a data-l10n-name="passwords-help-link">supporto per le password</a> per ottenere aiuto.
+about-logins-intro-browser-only-import = Se le credenziali sono salvate in un altro browser, è possibile <a data-l10n-name="import-link">importarle in { -brand-product-name }</a>
 
 about-logins-intro-import2 = Se le credenziali sono salvate al di fuori di { -brand-product-name }, è possibile <a data-l10n-name="import-browser-link">importarle da un altro browser</a> o <a data-l10n-name="import-file-link">da un file</a>
 
@@ -117,9 +113,15 @@ login-item-copied-password-button-text = Copiata.
 login-item-save-changes-button = Salva modifiche
 login-item-save-new-button = Salva
 login-item-cancel-button = Annulla
-login-item-time-changed = Ultima modifica: { DATETIME($timeChanged, day: "numeric", month: "long", year: "numeric") }
-login-item-time-created = Data creazione: { DATETIME($timeCreated, day: "numeric", month: "long", year: "numeric") }
-login-item-time-used = Ultimo utilizzo: { DATETIME($timeUsed, day: "numeric", month: "long", year: "numeric") }
+
+## The date is displayed in a timeline showing the password evolution.
+## A label is displayed under the date to describe the type of change.
+## (e.g. updated, created, etc.)
+
+login-item-timeline-point-date = { DATETIME($datetime, day: "numeric", month: "short", year: "numeric") }
+login-item-timeline-action-created = Creazione
+login-item-timeline-action-updated = Aggiornamento
+login-item-timeline-action-used = Utilizzo
 
 ## OS Authentication dialog
 
@@ -149,8 +151,6 @@ about-logins-copy-password-os-auth-dialog-message-macosx = copiare la password s
 
 ## Master Password notification
 
-master-password-notification-message = Inserire la password principale per visualizzare le credenziali e le password salvate
-
 # This message can be seen when attempting to export a password in about:logins on Windows.
 about-logins-export-password-os-auth-dialog-message-win = Per esportare le credenziali salvate, inserire le credenziali di accesso a Windows. Questo aiuta a garantire la sicurezza dei tuoi account.
 # This message can be seen when attempting to export a password in about:logins
@@ -166,22 +166,6 @@ master-password-reload-button =
 
 ## Password Sync notification
 
-enable-password-sync-notification-message =
-    { PLATFORM() ->
-        [windows] Vuoi avere a disposizione le tue credenziali ovunque utilizzi { -brand-product-name }? Apri le opzioni di { -sync-brand-short-name } e seleziona la voce “Credenziali”.
-       *[other] Vuoi avere a disposizione le tue credenziali ovunque utilizzi { -brand-product-name }? Apri le preferenze di { -sync-brand-short-name } e seleziona la voce “Credenziali”.
-    }
-enable-password-sync-preferences-button =
-    .label =
-        { PLATFORM() ->
-            [windows] Apri le opzioni di { -sync-brand-short-name }
-           *[other] Apri le preferenze di { -sync-brand-short-name }
-        }
-    .accesskey = A
-about-logins-enable-password-sync-dont-ask-again-button =
-  .label = Non chiedere nuovamente
-  .accesskey = N
-
 ## Dialogs
 
 confirmation-dialog-cancel-button = Annulla
@@ -191,6 +175,9 @@ confirmation-dialog-dismiss-button =
 about-logins-confirm-remove-dialog-title = Rimuovere queste credenziali?
 confirm-delete-dialog-message = Questa operazione non può essere annullata.
 about-logins-confirm-remove-dialog-confirm-button = Rimuovi
+
+## Variables
+##   $count (number) - Number of items
 
 about-logins-confirm-remove-all-dialog-confirm-button-label =
   { $count ->
@@ -216,6 +203,8 @@ about-logins-confirm-remove-all-sync-dialog-title =
 
 about-logins-confirm-remove-all-sync-dialog-message = Questa operazione rimuoverà le credenziali salvate in { -brand-short-name } su tutti i dispositivi sincronizzati con l’{ -fxaccount-brand-name }. Anche i relativi avvisi sulle violazioni verranno rimossi. Non sarà possibile annullare questa operazione.
 
+##
+
 about-logins-confirm-export-dialog-title = Esportazione credenziali e password
 about-logins-confirm-export-dialog-message = Le password verranno salvate come testo leggibile (ad esempio “Password123”). Chiunque abbia accesso al file esportato potrà vederle.
 about-logins-confirm-export-dialog-confirm-button = Esporta…
@@ -235,7 +224,6 @@ about-logins-breach-alert-date = Questa violazione si è verificata il giorno { 
 # Variables:
 #   $hostname (String) - The hostname of the website associated with the login, e.g. "example.com"
 about-logins-breach-alert-link = Apri { $hostname }
-about-logins-breach-alert-learn-more-link = Ulteriori informazioni
 
 ## Vulnerable Password notification
 

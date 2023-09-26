@@ -2,7 +2,7 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-restore-page-tab-title = Restaurar sesión previa
+restore-page-tab-title = Restaurar sesión
 
 # The title is intended to be apologetic and disarming, expressing dismay
 # and regret that we are unable to restore the session for the user
@@ -47,5 +47,4 @@ welcome-back-restore-button =
 welcome-back-restore-all-label = Restaurar todas las ventanas & pestañas
 welcome-back-restore-some-label = Restaurar solo las que quiere
 
-welcome-back-page-info-link = Los complementos y personalizaciones se eliminaron y la configuración del navegador se restauró a sus valores predeterminados. Si esto no corrige el problema, <a data-l10n-name="link-more">conozca más acerca de lo que puede hacer.</a>
-
+welcome-back-page-info-link = Los complementos y personalizaciones se eliminaron y los ajustes del navegador se restauraron a sus valores predeterminados. Si esto no corrige el problema, <a data-l10n-name="link-more">conozca más acerca de lo que puede hacer.</a>

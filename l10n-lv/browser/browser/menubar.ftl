@@ -39,15 +39,6 @@ menu-quit =
 menu-quit-mac =
     .label = Iziet no { -brand-shorter-name }
 
-# This menu-quit-button string is only used on Linux.
-menu-quit-button =
-    .label = { menu-quit.label }
-
-# This menu-quit-button-win string is only used on Windows.
-menu-quit-button-win =
-    .label = { menu-quit.label }
-    .tooltip = Aizvērt { -brand-shorter-name }
-
 menu-about =
     .label = Par { -brand-shorter-name }
     .accesskey = a
@@ -77,9 +68,6 @@ menu-file-open-location =
 menu-file-open-file =
     .label = Atvērt failu…
     .accesskey = A
-menu-file-close =
-    .label = Aizvērt
-    .accesskey = z
 menu-file-close-window =
     .label = Aizvērt logu
     .accesskey = g
@@ -92,9 +80,6 @@ menu-file-email-link =
 menu-file-print-setup =
     .label = Lapas iestatījumi…
     .accesskey = u
-menu-file-print-preview =
-    .label = Drukas priekšskatījums
-    .accesskey = p
 menu-file-print =
     .label = Drukāt…
     .accesskey = D
@@ -107,9 +92,6 @@ menu-file-go-offline =
 menu-edit =
     .label = Rediģēt
     .accesskey = e
-menu-edit-find-on =
-    .label = Atrast šajā lapā…
-    .accesskey = A
 menu-edit-find-again =
     .label = Meklēt vēlreiz
     .accesskey = k
@@ -125,9 +107,6 @@ menu-view =
 menu-view-toolbars-menu =
     .label = Rīkjoslas
     .accesskey = l
-menu-view-customize-toolbar =
-    .label = Pielāgot…
-    .accesskey = P
 menu-view-sidebar =
     .label = Sānu josla
     .accesskey = a
@@ -158,9 +137,6 @@ menu-view-page-style-no-style =
 menu-view-page-basic-style =
     .label = Lapas pamata stils
     .accesskey = m
-menu-view-charset =
-    .label = Teksta kodējums
-    .accesskey = k
 
 ## These should match what Safari and other Apple applications
 ## use on macOS.
@@ -174,6 +150,17 @@ menu-view-exit-full-screen =
 menu-view-full-screen =
     .label = Pa visu ekrānu
     .accesskey = v
+
+## These menu items may use the same accesskey.
+
+# This should match reader-view-enter-button in browser.ftl
+menu-view-enter-readerview =
+    .label = Ieiet lasītāja skatā
+    .accesskey = L
+# This should match reader-view-close-button in browser.ftl
+menu-view-close-readerview =
+    .label = Aizvērt lasītāja skatu
+    .accesskey = L
 
 ##
 
@@ -209,12 +196,6 @@ menu-history-undo-window-menu =
 menu-bookmarks-menu =
     .label = Grāmatzīmes
     .accesskey = G
-menu-bookmarks-show-all =
-    .label = Rādīt visas grāmatzīmes
-menu-bookmark-this-page =
-    .label = Saglabāt šo lapu grāmatzīmēs
-menu-bookmark-edit =
-    .label = Rediģēt šo grāmatzīmi
 menu-bookmarks-all-tabs =
     .label = Saglabāt visas cilnes grāmatzīmēs…
 menu-bookmarks-toolbar =
@@ -232,32 +213,15 @@ menu-tools =
 menu-tools-downloads =
     .label = Lejupielādes
     .accesskey = d
-menu-tools-addons =
-    .label = Papildinājumi
-    .accesskey = a
 menu-tools-sync-now =
     .label = Sinhronizēt
     .accesskey = S
-menu-tools-web-developer =
-    .label = Izstrādātāju rīki
-    .accesskey = T
 menu-tools-page-source =
     .label = Lapas pirmkods
     .accesskey = o
 menu-tools-page-info =
     .label = Informācija par lapu
     .accesskey = I
-menu-preferences =
-    .label =
-        { PLATFORM() ->
-            [windows] Iestatījumi
-           *[other] Iestatījumi
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] m
-           *[other] m
-        }
 menu-tools-layout-debugger =
     .label = Izkārtojuma atkļūdotājs
     .accesskey = I
@@ -275,15 +239,6 @@ menu-window-bring-all-to-front =
 # NOTE: For Engineers, any additions or changes to Help menu strings should
 # also be reflected in the related strings in appmenu.ftl. Those strings, by
 # convention, will have the same ID as these, but prefixed with "app".
-# Example: appmenu-help-product
-#
-# These strings are duplicated to allow for different casing depending on
-# where the strings appear.
-
-
-# NOTE: For Engineers, any additions or changes to Help menu strings should
-# also be reflected in the related strings in appmenu.ftl. Those strings, by
-# convention, will have the same ID as these, but prefixed with "app".
 # Example: appmenu-get-help
 #
 # These strings are duplicated to allow for different casing depending on
@@ -292,29 +247,8 @@ menu-window-bring-all-to-front =
 menu-help =
     .label = Palīdzība
     .accesskey = P
-menu-help-product =
-    .label = { -brand-shorter-name } palīdzība
-    .accesskey = l
-menu-help-show-tour =
-    .label = { -brand-shorter-name } ekskursija
-    .accesskey = r
-menu-help-keyboard-shortcuts =
-    .label = Taustiņu kombinācijas
-    .accesskey = k
-menu-help-troubleshooting-info =
-    .label = Problēmu novēršanas informācija
-    .accesskey = P
 menu-help-report-site-issue =
     .label = Ziņot par problēmu ar lapu…
-menu-help-feedback-page =
-    .label = Nosūtīt atsauksmi…
-    .accesskey = s
-menu-help-safe-mode-without-addons =
-    .label = Pārstartēt ar deaktivētiem papildinājumiem…
-    .accesskey = r
-menu-help-safe-mode-with-addons =
-    .label = Pārstartēt ar aktivētiem papildinājumiem
-    .accesskey = r
 # Label of the Help menu item. Either this or
 # safeb.palm.notdeceptive.label from
 # phishing-afterload-warning-message.dtd is shown.

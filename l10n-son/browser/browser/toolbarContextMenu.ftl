@@ -9,3 +9,6 @@ toolbar-context-menu-view-customize-toolbar =
     .label = Hanse war boŋ se…
     .accesskey = H
 
+toolbar-context-menu-menu-bar-cmd =
+    .toolbarname = Šilbayboŋ žeeri
+    .accesskey = r

@@ -48,7 +48,7 @@ protections-panel-content-blocking-tracking-protection = Змест з элем�
 
 protections-panel-content-blocking-socialblock = Трэкеры сацыяльных сетак
 protections-panel-content-blocking-cryptominers-label = Майнеры крыптавалют
-protections-panel-content-blocking-fingerprinters-label = Збіральнікі адбіткаў пальцаў
+protections-panel-content-blocking-fingerprinters-label = Збіральнікі лічбавых адбіткаў
 
 ## In the protections panel, Content Blocking category items are in three sections:
 ##   "Blocked" for categories being blocked in the current page,
@@ -63,7 +63,6 @@ protections-panel-not-found-label = Не выяўлены
 ##
 
 protections-panel-settings-label = Налады аховы
-# This should match the "appmenuitem-protection-dashboard-title" string in browser/appmenu.ftl.
 protections-panel-protectionsdashboard-label = Панэль аховы
 
 ## In the Site Not Working? view, we suggest turning off protections if
@@ -78,6 +77,7 @@ protections-panel-site-not-working-view-issue-list-forms = Формамі
 protections-panel-site-not-working-view-issue-list-payments = Плацяжамі
 protections-panel-site-not-working-view-issue-list-comments = Каментарыі
 protections-panel-site-not-working-view-issue-list-videos = Відэа
+protections-panel-site-not-working-view-issue-list-fonts = Шрыфты
 
 protections-panel-site-not-working-view-send-report = Даслаць справаздачу
 
@@ -85,7 +85,7 @@ protections-panel-site-not-working-view-send-report = Даслаць справ�
 
 protections-panel-cross-site-tracking-cookies = Гэтыя кукі ідуць за вамі з сайта на сайт, каб сабраць звесткі пра тое, што вы робіце ў сеціве. Яны ўсталёўваюцца трэцімі бакамі, такімі як рэкламадаўцы і аналітычныя кампаніі.
 protections-panel-cryptominers = Майнеры крыптавалют выкарыстоўваюць вылічальную магутнасць вашай сістэмы, каб здабываць лічбавыя грошы. Скрыпты для здабычы крыптавалют разраджаюць вашу батарэю, запавольваюць працу камп'ютара і могуць павялічыць ваш выдаткі на электраэнергію.
-protections-panel-fingerprinters = Збіральнікі адбіткаў пальцаў збіраюць налады вашага браўзера і камп'ютара для стварэння вашага профілю. Выкарыстоўваючы гэты лічбавы адбітак, яны могуць асочваць вас на розных сайтах.
+protections-panel-fingerprinters = Збіральнікі лічбавых адбіткаў збіраюць налады вашага браўзера і камп'ютара для стварэння вашага профілю. Выкарыстоўваючы гэты лічбавы адбітак, яны могуць асочваць вас на розных сайтах.
 protections-panel-tracking-content = Вэб-сайты могуць загружаць вонкавую рэкламу, відэа і іншае змесціва з кодам асочвання. Блакіроўка элементаў асочвання можа дапамагчы сайтам хутчэй загружацца, але некаторыя кнопкі, формы і палі ўваходу могуць не працаваць.
 protections-panel-social-media-trackers = Сацыяльныя сеткі размяшчаюць трэкеры на іншых сайтах, каб сачыць за тым, што вы робіце, бачыце і глядзіце ў сеціве. Гэта дазваляе кампаніям сацыяльных сетак даведацца пра вас больш за тое, чым вы дзяліцеся ў сваіх профілях у сацыяльных сетках.
 
@@ -101,6 +101,7 @@ protections-panel-content-blocking-manage-settings =
 protections-panel-content-blocking-breakage-report-view =
     .title = Паведаміць пра пашкоджаны сайт
 protections-panel-content-blocking-breakage-report-view-description = Блакаванне пэўных трэкераў можа выклікаць праблемы з некаторымі вэб-сайтамі. Паведамленне пра такія праблемы дапамагае зрабіць { -brand-short-name } лепшым для ўсіх. Адпраўка гэтай справаздачы дашле URL-адрас разам з інфармацыяй пра вашы налады браўзера ў Mozilla. <label data-l10n-name="learn-more">Даведацца больш</label>
+protections-panel-content-blocking-breakage-report-view-description2 = Блакаванне пэўных трэкераў можа выклікаць праблемы з некаторымі вэб-сайтамі. Паведамленне пра такія праблемы дапамагае зрабіць { -brand-short-name } лепшым для ўсіх. Адпраўка гэтай справаздачы дашле URL-адрас разам з інфармацыяй пра вашы налады браўзера ў { -vendor-short-name }.
 protections-panel-content-blocking-breakage-report-view-collection-url = URL
 protections-panel-content-blocking-breakage-report-view-collection-url-label =
     .aria-label = URL
@@ -111,3 +112,22 @@ protections-panel-content-blocking-breakage-report-view-cancel =
     .label = Скасаваць
 protections-panel-content-blocking-breakage-report-view-send-report =
     .label = Адправіць паведамленне
+
+# Cookie Banner Handling
+
+protections-panel-cookie-banner-handling-header = Памяншэнне колькасці банераў кукі
+protections-panel-cookie-banner-handling-enabled = Уключана для гэтага сайта
+protections-panel-cookie-banner-handling-disabled = Выключана для гэтага сайта
+protections-panel-cookie-banner-handling-undetected = Сайт зараз не падтрымліваецца
+
+protections-panel-cookie-banner-view-title =
+    .title = Памяншэнне колькасці банераў кукі
+# Variables
+#  $host (String): the hostname of the site that is being displayed.
+protections-panel-cookie-banner-view-turn-off-for-site = Выключыць памяншэнне колькасці банераў кукі для { $host }?
+protections-panel-cookie-banner-view-turn-on-for-site = Уключыць памяншэнне колькасці банераў кукі для гэтага сайта?
+protections-panel-cookie-banner-view-cookie-clear-warning = { -brand-short-name } выдаліць файлы кукі гэтага сайта і абновіць старонку. Выдаленне ўсіх файлаў кукі можа прывесці да выхаду з сістэмы або ачышчэння кошыка для пакупак.
+protections-panel-cookie-banner-view-turn-on-description = { -brand-short-name } спрабуе аўтаматычна адхіляць усе запыты файлаў кукі на сайтах, якія падтрымліваюцца.
+protections-panel-cookie-banner-view-cancel = Скасаваць
+protections-panel-cookie-banner-view-turn-off = Выключыць
+protections-panel-cookie-banner-view-turn-on = Уключыць

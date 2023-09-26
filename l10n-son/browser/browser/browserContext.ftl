@@ -11,12 +11,6 @@ navbar-tooltip-instruction =
 
 ## Back
 
-navbar-tooltip-back =
-    .value = { main-context-menu-back.tooltiptext }
-
-toolbar-button-back =
-    .label = { main-context-menu-back.aria-label }
-
 navbar-tooltip-back-2 =
     .value = { main-context-menu-back-2.tooltiptext }
 
@@ -24,12 +18,6 @@ toolbar-button-back-2 =
     .label = { main-context-menu-back-2.aria-label }
 
 ## Forward
-
-navbar-tooltip-forward =
-    .value = { main-context-menu-forward.tooltiptext }
-
-toolbar-button-forward =
-    .label = { main-context-menu-forward.aria-label }
 
 navbar-tooltip-forward-2 =
     .value = { main-context-menu-forward-2.tooltiptext }
@@ -60,9 +48,6 @@ main-context-menu-page-save =
     .label = Moɲoo gaabu sanda…
     .accesskey = P
 
-toolbar-button-page-save =
-    .label = { main-context-menu-page-save.label }
-
 ## Simple menu items
 
 main-context-menu-open-link =
@@ -85,10 +70,6 @@ main-context-menu-open-link-new-private-window =
     .label = Doboo feeri zanfun taaga ra
     .accesskey = z
 
-main-context-menu-bookmark-this-link =
-    .label = Doboo woo šilbay
-    .accesskey = D
-
 main-context-menu-save-link =
     .label = Doboo gaabu sanda…
     .accesskey = D
@@ -104,10 +85,6 @@ main-context-menu-save-link =
 main-context-menu-copy-email =
     .label = Bataga aderesoo berandi
     .accesskey = a
-
-main-context-menu-copy-link =
-    .label = Doboo dogoo berandi
-    .accesskey = D
 
 ## Media (video/audio) controls
 ##
@@ -132,28 +109,6 @@ main-context-menu-media-mute =
 main-context-menu-media-unmute =
     .label = Jinde feeri
     .accesskey = J
-
-main-context-menu-media-play-speed =
-    .label = Hẽenandiyan cahãri
-    .accesskey = i
-
-main-context-menu-media-play-speed-slow =
-    .label = Mosso (0.5×)
-    .accesskey = s
-
-main-context-menu-media-play-speed-fast =
-    .label = Cahã (1.25×)
-    .accesskey = C
-
-main-context-menu-media-play-speed-faster =
-    .label = Cahã ka tonton (1.5×)
-    .accesskey = a
-
-# "Ludicrous" is a reference to the movie "Space Balls" and is meant
-# to say that this speed is very fast.
-main-context-menu-media-play-speed-fastest =
-    .label = Haarayhaya (2×)
-    .accesskey = r
 
 main-context-menu-media-loop =
     .label = Kunkuni
@@ -184,28 +139,8 @@ main-context-menu-image-reload =
     .label = Bii dam taaga
     .accesskey = B
 
-main-context-menu-image-view =
-    .label = Bii guna
-    .accesskey = B
-
-main-context-menu-video-view =
-    .label = Widewo guna
-    .accesskey = W
-
 main-context-menu-image-copy =
     .label = Biyoo berandi
-    .accesskey = b
-
-main-context-menu-image-copy-location =
-    .label = Biyoo dogoo berandi
-    .accesskey = b
-
-main-context-menu-video-copy-location =
-    .label = Widewo dogoo berandi
-    .accesskey = b
-
-main-context-menu-audio-copy-location =
-    .label = Jindetukoo dogoo berandi
     .accesskey = b
 
 main-context-menu-image-save-as =
@@ -215,10 +150,6 @@ main-context-menu-image-save-as =
 main-context-menu-image-email =
     .label = Bataga bii…
     .accesskey = g
-
-main-context-menu-image-set-as-background =
-    .label = Suuba goytaabal bandafaari se…
-    .accesskey = S
 
 main-context-menu-image-info =
     .label = Bii alhabar guna
@@ -236,10 +167,6 @@ main-context-menu-audio-save-as =
     .label = Jindetukoo gaabu sanda…
     .accesskey = b
 
-main-context-menu-video-image-save-as =
-    .label = Zaafoo-bii gaabu sanda...
-    .accesskey = g
-
 main-context-menu-video-email =
     .label = Widewo sanba bataga ra…
     .accesskey = a
@@ -248,21 +175,9 @@ main-context-menu-audio-email =
     .label = Jinde tukoo sanba…
     .accesskey = a
 
-main-context-menu-plugin-play =
-    .label = Sukaroo woo tunandi
-    .accesskey = a
-
-main-context-menu-plugin-hide =
-    .label = Sukaroo woo tugu
-    .accesskey = k
-
 main-context-menu-send-to-device =
     .label = Moɲoo sanba jinaa ga
     .accesskey = j
-
-main-context-menu-view-background-image =
-    .label = Bandafaari bii guna
-    .accesskey = B
 
 ## The access keys for "Use Saved Login" and "Use Saved Password"
 ## should be the same if possible; the two context menu items
@@ -298,10 +213,6 @@ main-context-menu-frame-reload =
     .label = Kungaa dam taaga
     .accesskey = d
 
-main-context-menu-frame-bookmark =
-    .label = Kungaa woo šilbay
-    .accesskey = K
-
 main-context-menu-frame-save-as =
     .label = Kunga gaabu sanda…
     .accesskey = K
@@ -326,10 +237,6 @@ main-context-menu-view-page-source =
     .label = Moo aššil guna
     .accesskey = g
 
-main-context-menu-view-page-info =
-    .label = Moo alhabar guna
-    .accesskey = a
-
 main-context-menu-bidi-switch-text =
     .label = Kalimaɲaa kuru tenjaroo barmay
     .accesskey = K
@@ -338,10 +245,7 @@ main-context-menu-bidi-switch-page =
     .label = Moo tenjaroo barmay
     .accesskey = D
 
-main-context-menu-inspect-element =
-    .label = Haya-ize koroši
-    .accesskey = Q
-
 main-context-menu-eme-learn-more =
     .label = Bay ka tonton DRM ga…
     .accesskey = D
+

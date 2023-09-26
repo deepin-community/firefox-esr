@@ -2,17 +2,16 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-addons-window =
-    .title = Add-on Manager
-
 addons-page-title = Add-on Manager
 
 search-header =
     .placeholder = Hanapin sa addons.mozilla.org
     .searchbuttonlabel = Hanapin
 
-search-header-shortcut =
-    .key = f
+## Variables
+##   $domain - Domain name where add-ons are available (e.g. addons.mozilla.org)
+
+##
 
 list-empty-installed =
     .value = Wala kang mga add-on na ganitong uri na nakakabit
@@ -33,60 +32,11 @@ help-button = Suporta sa mga Add-on
 sidebar-help-button-title =
     .title = Suporta sa mga Add-on
 
-preferences =
-    { PLATFORM() ->
-        [windows] Mga pagpipilian sa { -brand-short-name }
-       *[other] Mga kagustuhan sa { -brand-short-name }
-    }
-sidebar-preferences-button-title =
-    .title =
-        { PLATFORM() ->
-            [windows] Mga pagpipilian sa { -brand-short-name }
-           *[other] Mga kagustuhan sa { -brand-short-name }
-        }
-
 show-unsigned-extensions-button =
     .label = Ang ibang mga extension ay hindi kayang ma-verify
 
 show-all-extensions-button =
     .label = Ipakita ang lahat ng mga extension
-
-cmd-show-details =
-    .label = Magpakita ng Karagdagang Impormasyon
-    .accesskey = s
-
-cmd-find-updates =
-    .label = Hanapin ang mga Update
-    .accesskey = H
-
-cmd-preferences =
-    .label =
-        { PLATFORM() ->
-            [windows] Mga Pagpipilian
-           *[other] Mga Kagustuhan
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] O
-           *[other] P
-        }
-
-cmd-enable-theme =
-    .label = Isuot ang Theme
-    .accesskey = I
-
-cmd-disable-theme =
-    .label = Tigilan ang pagsuot ng Theme
-    .accesskey = W
-
-cmd-install-addon =
-    .label = I-install
-    .accesskey = I
-
-cmd-contribute =
-    .label = Tumulong
-    .accesskey = S
-    .tooltiptext = Tumulong sa pagpapaunlad ng add-on na ito
 
 detail-version =
     .label = Bersyon
@@ -230,7 +180,6 @@ extensions-warning-update-security = Naka-disable ang update security checking. 
 extensions-warning-update-security-button = I-enable
     .title = I-enable ang add-on security checking
 
-
 ## Strings connected to add-on updates
 
 addon-updates-check-for-updates = Maghanap ng mga Update
@@ -373,7 +322,6 @@ extension-enabled-heading = Naka-enable
 extension-disabled-heading = Naka-disable
 
 theme-enabled-heading = Naka-enable
-theme-disabled-heading = Naka-disable
 
 plugin-enabled-heading = Naka-enable
 plugin-disabled-heading = Naka-disable
@@ -383,8 +331,6 @@ dictionary-disabled-heading = Naka-disable
 
 locale-enabled-heading = Naka-enable
 locale-disabled-heading = Naka-disable
-
-ask-to-activate-button = Magtanong para i-activate
 
 always-activate-button = Palaging i-activate
 never-activate-button = Wag kailanman i-activate
@@ -442,6 +388,9 @@ addon-detail-private-browsing-help = Kapag pinayagan, ang extension ay magkakaro
 addon-detail-private-browsing-allow = Payagan
 addon-detail-private-browsing-disallow = Huwag Payagan
 
+## "sites with restrictions" (internally called "quarantined") are special domains
+## where add-ons are normally blocked for security reasons.
+
 ## This is the tooltip text for the recommended badges for an extension in about:addons. The
 ## badge is a small icon displayed next to an extension when it is recommended on AMO.
 
@@ -483,3 +432,29 @@ addons-heading-search-input =
 
 addon-page-options-button =
     .title = Mga kagamitan para sa lahat ng mga add-on
+
+## Detail notifications
+## Variables:
+##   $name (String): name of the add-on.
+
+## Detail notifications
+## Variables:
+##   $name (string) - Name of the add-on.
+
+# Variables:
+#   $version (String): application version.
+details-notification-incompatible = Ang { $name } ay di akma para sa { -brand-short-name } { $version }.
+
+details-notification-unsigned-and-disabled = Ang { $name } ay hindi maaaring patunayan para magamit sa { -brand-short-name } at kasalukuyang hindi pinagana.
+details-notification-unsigned-and-disabled-link = Karagdagang Impormasyon
+
+details-notification-unsigned = Ang { $name } ay hindi maaaring mapatunayan para magamit sa { -brand-short-name }. Maingat na magpatuloy.
+details-notification-unsigned-link = Karagdagang Impormasyon
+
+details-notification-blocked = Ang { $name } ay kasalukuyang hindi pinagana dahil sa mga isyu sa seguridad o stabilidad.
+details-notification-blocked-link = Karagdagang Impormasyon
+
+details-notification-softblocked = Ang { $name } ay kilala na magdudulot ng mga isyu sa seguridad at stabilidad.
+details-notification-softblocked-link = Karagdagang Impormasyon
+
+details-notification-gmp-pending = Ang { $name } ay ikakabit sa ilang sandali.

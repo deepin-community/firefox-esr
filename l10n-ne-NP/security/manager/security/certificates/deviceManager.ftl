@@ -5,9 +5,9 @@
 
 ## Strings used for device manager
 
-devmgr =
+devmgr-window =
     .title = यन्त्र प्रबन्धक
-    .style = width: 67em; height: 32em;
+    .style = min-width: 67em; min-height: 32em;
 
 devmgr-devlist =
     .label = सुरक्षा मोड्युलहरू र यन्त्रहरू
@@ -115,8 +115,6 @@ devinfo-label =
 
 devinfo-serialnum =
     .label = क्रम सङ्ख्या
-
-fips-nonempty-password-required = FIPS मोडले तपाईँको प्रत्येक सुरक्षा यन्त्रका लागि एउटा मुल गोप्यशब्द सेट भएको चाहन्छ। कृपया FIPS मोडलाई सक्षम पार्ने प्रयास गर्नुभन्दा पहिले गोप्यशब्द सेट गर्नुहोस्।
 
 unable-to-toggle-fips = सुरक्षा यन्त्र लागि FIPS मोड परिवर्तन गर्न सकिएन। यो तपाईँ बाहिर निस्कन वा यो अनुप्रयोग पुनः सुरु सिफारिस गरिएको छ।
 

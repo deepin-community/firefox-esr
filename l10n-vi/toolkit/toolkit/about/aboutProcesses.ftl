@@ -16,17 +16,21 @@ about-processes-shutdown-process =
 about-processes-shutdown-tab =
     .title = Đóng thẻ
 
+# Profiler icons
+# Variables:
+#    $duration (Number) The time in seconds during which the profiler will be running.
+#                       The value will be an integer, typically less than 10.
+about-processes-profile-process =
+    .title =
+        { $duration ->
+           *[other] Phân tích tất cả các luồng của tiến trình này trong { $duration } giây
+        }
+
 ## Column headers
 
 about-processes-column-name = Tên
 about-processes-column-memory-resident = Bộ nhớ
 about-processes-column-cpu-total = CPU
-
-## Process names
-## Variables:
-##    $pid (String) The process id of this process, assigned by the OS.
-##    $origin (String) The domain name for this process.
-##    $type (String) The raw type for this process. Used for unknown processes.
 
 ## Process names
 ## Variables:
@@ -44,8 +48,10 @@ about-processes-gpu-process = GPU ({ $pid })
 about-processes-vr-process = VR ({ $pid })
 about-processes-rdd-process = Bộ giải mã dữ liệu ({ $pid })
 about-processes-socket-process = Mạng ({ $pid })
+about-processes-remote-sandbox-broker-process = Remote Sandbox Broker ({ $pid })
 about-processes-fork-server-process = Máy chủ Fork ({ $pid })
 about-processes-preallocated-process = Được tải trước ({ $pid })
+about-processes-utility-process = Tiện ích ({ $pid })
 
 # Unknown process names
 # Variables:
@@ -59,7 +65,10 @@ about-processes-unknown-process = Khác: { $type } ({ $pid })
 ##    $origin (String) The domain name for this process.
 
 about-processes-web-isolated-process = { $origin } ({ $pid })
+about-processes-web-serviceworker = { $origin } ({ $pid }, serviceworker)
+about-processes-with-coop-coep-process = { $origin } ({ $pid }, đã cô lập cross-origin)
 about-processes-web-isolated-process-private = { $origin } — Riêng tư ({ $pid })
+about-processes-with-coop-coep-process-private = { $origin } — Riêng tư ({ $pid }, đã cô lập cross-origin)
 
 ## Details within processes
 
@@ -113,6 +122,17 @@ about-processes-frame-name-one = Khung phụ: { $url }
 #   $shortUrl (String) The shared prefix for the subframes in the group.
 about-processes-frame-name-many = Khung phụ ({ $number }): { $shortUrl }
 
+## Utility process actor names
+
+about-processes-utility-actor-unknown = Tác nhân không xác định
+about-processes-utility-actor-audio-decoder-generic = Bộ giải mã âm thanh chung
+about-processes-utility-actor-audio-decoder-applemedia = Bộ giải mã âm thanh Apple Media
+about-processes-utility-actor-audio-decoder-wmf = Bộ giải mã âm thanh Windows Media Framework
+about-processes-utility-actor-mf-media-engine = Windows Media Foundation Media Engine CDM
+# "Oracle" refers to an internal Firefox process and should be kept in English
+about-processes-utility-actor-js-oracle = JavaScript Oracle
+about-processes-utility-actor-windows-utils = Tiện ích Windows
+
 ## Displaying CPU (percentage and total)
 ## Variables:
 ##    $percent (Number) The percentage of CPU used by the process or thread.
@@ -129,9 +149,14 @@ about-processes-cpu = { NUMBER($percent, maximumSignificantDigits: 2, style: "pe
 # Special case: data is not available yet.
 about-processes-cpu-user-and-kernel-not-ready = (đang đo)
 
+# Special case: process or thread is almost idle (using less than 0.1% of a CPU core).
+# This case only occurs on Windows where the precision of the CPU times is low.
+about-processes-cpu-almost-idle = < 0.1%
+    .title = Tổng thời gian CPU: { NUMBER($total, maximumFractionDigits: 0) }{ $unit }
+
 # Special case: process or thread is currently idle.
-about-processes-cpu-idle = Rảnh
-    .title = Tổng thời gian CPU: { NUMBER($total, maximumFractionDigits: 2) }{ $unit }
+about-processes-cpu-fully-idle = rảnh
+    .title = Tổng thời gian CPU: { NUMBER($total, maximumFractionDigits: 0) }{ $unit }
 
 ## Displaying Memory (total and delta)
 ## Variables:
@@ -143,6 +168,10 @@ about-processes-cpu-idle = Rảnh
 ##                        or "-" if it has decreased.
 ##    $deltaUnit (String) The unit in which to display $delta. See the definitions
 ##                        of `memory-unit-*`.
+
+# Common case.
+about-processes-total-memory-size-changed = { NUMBER($total, maximumFractionDigits: 0) }{ $totalUnit }
+    .title = Thay đổi: { $deltaSign }{ NUMBER($delta, maximumFractionDigits: 0) }{ $deltaUnit }
 
 # Special case: no change.
 about-processes-total-memory-size-no-change = { NUMBER($total, maximumFractionDigits: 0) }{ $totalUnit }

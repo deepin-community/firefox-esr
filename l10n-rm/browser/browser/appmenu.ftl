@@ -5,18 +5,20 @@
 
 ## App Menu
 
-appmenuitem-update-banner3 =
-    .label-update-downloading = Telechargiar l'actualisaziun da { -brand-shorter-name }
-    .label-update-available = Actualisaziun disponibla – ussa telechargiar
-    .label-update-manual = Actualisaziun disponibla – ussa telechargiar
-    .label-update-unsupported = Impussibel dad actualisar – sistem incumpatibel
-    .label-update-restart = Actualisaziun disponibla – ussa reaviar
+appmenuitem-banner-update-downloading =
+    .label = Telechargiar l'actualisaziun da { -brand-shorter-name }
 
-appmenuitem-protection-dashboard-title = Survista da las protecziuns
-appmenuitem-customize-mode =
-    .label = Persunalisar…
+appmenuitem-banner-update-available =
+    .label = Actualisaziun disponibla – ussa telechargiar
 
-## Zoom Controls
+appmenuitem-banner-update-manual =
+    .label = Actualisaziun disponibla – ussa telechargiar
+
+appmenuitem-banner-update-unsupported =
+    .label = Impussibel dad actualisar – sistem incumpatibel
+
+appmenuitem-banner-update-restart =
+    .label = Actualisaziun disponibla – ussa reaviar
 
 appmenuitem-new-tab =
     .label = Nov tab
@@ -24,14 +26,26 @@ appmenuitem-new-window =
     .label = Nova fanestra
 appmenuitem-new-private-window =
     .label = Nova fanestra privata
+appmenuitem-history =
+    .label = Cronologia
+appmenuitem-downloads =
+    .label = Telechargiadas
 appmenuitem-passwords =
     .label = Pleds-clav
 appmenuitem-addons-and-themes =
     .label = Supplements e designs
+appmenuitem-print =
+    .label = Stampar…
 appmenuitem-find-in-page =
     .label = Tschertgar en la pagina…
+appmenuitem-translate =
+    .label = Translatar la pagina…
+appmenuitem-zoom =
+    .value = Zoom
 appmenuitem-more-tools =
     .label = Ulteriurs utensils
+appmenuitem-help =
+    .label = Agid
 appmenuitem-exit2 =
     .label =
         { PLATFORM() ->
@@ -56,21 +70,41 @@ appmenuitem-zoom-enlarge =
     .label = Engrondir
 appmenuitem-zoom-reduce =
     .label = Empitschnir
-
 appmenuitem-fullscreen =
     .label = Maletg entir
 
 ## Firefox Account toolbar button and Sync panel in App menu.
-
-fxa-toolbar-sync-now =
-    .label = Sincronisar ussa
 
 appmenu-remote-tabs-sign-into-sync =
     .label = S'annunziar per sincronisar…
 appmenu-remote-tabs-turn-on-sync =
     .label = Activar la sincronisaziun…
 
+# This is shown after the tabs list if we can display more tabs by clicking on the button
+appmenu-remote-tabs-showmore =
+    .label = Mussar dapli tabs
+    .tooltiptext = Mussar ulteriurs tabs da quest apparat
+
+# This is shown beneath the name of a device when that device has no open tabs
+appmenu-remote-tabs-notabs = Nagins tabs averts
+
+# This is shown when Sync is configured but syncing tabs is disabled.
+appmenu-remote-tabs-tabsnotsyncing = Activescha la sincronisaziun da tabs per vesair ina glista dals tabs da tes auters apparats.
+
+appmenu-remote-tabs-opensettings =
+    .label = Parameters
+
+# This is shown when Sync is configured but this appears to be the only device attached to
+# the account. We also show links to download Firefox for android/ios.
+appmenu-remote-tabs-noclients = Vuls ti vesair qua tes tabs dad auters apparats?
+
+appmenu-remote-tabs-connectdevice =
+    .label = Colliar in auter apparat
+appmenu-remote-tabs-welcome = Mussar ina glista dals tabs da tes auters apparats.
+appmenu-remote-tabs-unverified = Tes conto sto vegnir verifitgà.
+
 appmenuitem-fxa-toolbar-sync-now2 = Sincronisar ussa
+appmenuitem-fxa-sign-in = S'annunziar tar { -brand-product-name }
 appmenuitem-fxa-manage-account = Administrar il conto
 appmenu-fxa-header2 = { -fxaccount-brand-name }
 # Variables
@@ -82,7 +116,6 @@ appmenu-fxa-sync-and-save-data2 = Sincronisar e memorisar las datas
 appmenu-fxa-signed-in-label = S'annunziar
 appmenu-fxa-setup-sync =
     .label = Activar la sincronisaziun…
-appmenu-fxa-show-more-tabs = Mussar dapli tabs
 
 appmenuitem-save-page =
     .label = Memorisar la pagina sut…
@@ -101,8 +134,19 @@ whatsnew-panel-footer-checkbox =
 ## performance profiles. To enable it go to profiler.firefox.com and click
 ## "Enable Profiler Menu Button".
 
-profiler-popup-title =
-    .value = { -profiler-brand-name }
+profiler-popup-button-idle =
+    .label = Analisa da la prestaziun
+    .tooltiptext = Registrar in profil per l'analisa da la prestaziun
+
+profiler-popup-button-recording =
+    .label = Profilader
+    .tooltiptext = Il profilader registrescha in profil
+
+profiler-popup-button-capturing =
+    .label = Profilader
+    .tooltiptext = Il profilader registrescha in profil
+
+profiler-popup-header-text = { -profiler-brand-name }
 
 profiler-popup-reveal-description-button =
     .aria-label = Mussar ulteriuras infurmaziuns
@@ -112,24 +156,17 @@ profiler-popup-description-title =
 
 profiler-popup-description = Collavurar en cas da problems da prestaziun cun publitgar profils per als cundivider cun tes team.
 
-profiler-popup-learn-more = Ulteriuras infurmaziuns
+profiler-popup-learn-more-button =
+    .label = Ulteriuras infurmaziuns
 
 profiler-popup-settings =
     .value = Parameters
 
 # This link takes the user to about:profiling, and is only visible with the Custom preset.
-profiler-popup-edit-settings = Modifitgar ils parameters…
-
-profiler-popup-disabled =
-    Il profiler è actualmain deactivà, probablamain pervia dad ina fanestra da
-    navigaziun privata ch'è averta.
+profiler-popup-edit-settings-button =
+    .label = Modifitgar ils parameters…
 
 profiler-popup-recording-screen = Registraziun…
-
-# The profiler presets list is generated elsewhere, but the custom preset is defined
-# here only.
-profiler-popup-presets-custom =
-    .label = Persunalisà
 
 profiler-popup-start-recording-button =
     .label = Cumenzar a registrar
@@ -152,13 +189,51 @@ profiler-popup-capture-shortcut =
        *[other] Ctrl+Shift+2
     }
 
+## Profiler presets
+## They are shown in the popup's select box.
+
+
+# Presets and their l10n IDs are defined in the file
+# devtools/client/performance-new/popup/background.jsm.js
+# Please take care that the same values are also defined in devtools' perftools.ftl.
+
+
+# Presets and their l10n IDs are defined in the file
+# devtools/client/performance-new/shared/background.jsm.js
+# Please take care that the same values are also defined in devtools' perftools.ftl.
+
+profiler-popup-presets-web-developer-description = Preselecziun recumandada per il debugadi da las bleras web-apps cun pitschen overhead.
+profiler-popup-presets-web-developer-label =
+    .label = Svilup web
+
+profiler-popup-presets-firefox-description = Preselecziun recumandada per il profiladi da { -brand-shorter-name }.
+profiler-popup-presets-firefox-label =
+    .label = { -brand-shorter-name }
+
+profiler-popup-presets-graphics-description = Preselecziun per examinar sbagls da grafica en { -brand-shorter-name }.
+profiler-popup-presets-graphics-label =
+    .label = Grafica
+
+profiler-popup-presets-media-description2 = Preselecziun per examinar sbagls dad audio e video en { -brand-shorter-name }.
+profiler-popup-presets-media-label =
+    .label = Multimedia
+
+profiler-popup-presets-networking-description = Preselecziun per examinar sbagls da rait en { -brand-shorter-name }.
+profiler-popup-presets-networking-label =
+    .label = Rait
+
+profiler-popup-presets-power-description = Preselecziun per examinar sbagls en connex cun il consum d'energia en { -brand-shorter-name }, cun pauc overhead.
+# "Power" is used in the sense of energy (electricity used by the computer).
+profiler-popup-presets-power-label =
+    .label = Energia
+
+profiler-popup-presets-custom-label =
+    .label = Persunalisà
+
 ## History panel
 
 appmenu-manage-history =
     .label = Administrar la cronologia
-appmenu-reopen-all-tabs = Reavrir tut ils tabs
-appmenu-reopen-all-windows = Reavrir tut las fanestras
-
 appmenu-restore-session =
     .label = Restaurar l'ultima sesida
 appmenu-clear-history =
@@ -168,6 +243,9 @@ appmenu-recently-closed-tabs =
     .label = Tabs serrads dacurt
 appmenu-recently-closed-windows =
     .label = Fanestras serradas dacurt
+# This allows to search through the browser's history.
+appmenu-search-history =
+    .label = Tschertgar en la cronologia
 
 ## Help panel
 
@@ -184,9 +262,11 @@ appmenu-help-more-troubleshooting-info =
     .accesskey = D
 appmenu-help-report-site-issue =
     .label = Rapportar in problem cun la pagina…
-appmenu-help-feedback-page =
-    .label = Trametter in resun…
+appmenu-help-share-ideas =
+    .label = Cundivida ideas e resuns…
     .accesskey = s
+appmenu-help-switch-device =
+    .label = Midar ad in nov apparat
 
 ## appmenu-help-enter-troubleshoot-mode and appmenu-help-exit-troubleshoot-mode
 ## are mutually exclusive, so it's possible to use the same accesskey for both.
@@ -212,8 +292,6 @@ appmenu-help-not-deceptive =
 
 appmenu-customizetoolbar =
     .label = Persunalisar la trav d'utensils…
-appmenu-taskmanager =
-    .label = Task Manager
 
 appmenu-developer-tools-subheader = Utensils dal navigatur
 appmenu-developer-tools-extensions =

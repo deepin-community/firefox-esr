@@ -6,9 +6,6 @@ password-quality-meter = Parolning mustahkamlik darajasi
 
 ## Change Password dialog
 
-change-password-window =
-    .title = Parol ustasini oʻzgartirish
-
 # Variables:
 # $tokenName (String) - Security device of the change password dialog
 change-password-token = Xavfsiz qurilma: { $tokenName }
@@ -16,23 +13,16 @@ change-password-old = Joriy parol:
 change-password-new = Yangi parol:
 change-password-reenter = Yangi parol (yana):
 
-## Reset Password dialog
-
-reset-password-window =
-    .title = Parol ustasini tiklash
-    .style = width: 40em
-
 ## Reset Primary Password dialog
 
 reset-password-button-label =
     .label = Tiklash
-reset-password-text = Agar parol ustasini tiklasangiz, barcha internetdagi va e-pochta mazillaringiz, to‘ldirish shakllari ma’lumotlari, shaxsiy sertifikatlar va maxfiy kalitlaringiz parollari unutiladi. Parol ustasini tiklashni xohlashingizga ishonchingiz komilmi?
 
 ## Downloading cert dialog
 
-download-cert-window =
+download-cert-window2 =
     .title = Sertifikat yuklab olinmoqda
-    .style = width: 46em
+    .style = min-width: 46em
 download-cert-message = Sizdan yangi sertifikat tasdig‘i (CA)ga ishonishingiz so‘ralgan edi.
 download-cert-trust-ssl =
     .label = Ushbu CA tasdiqli vebsaytlarga ishonish.
@@ -63,7 +53,5 @@ set-password-reminder = Muhim: agar siz sertifikat zahira parolini unutsangiz, u
 
 ## Protected Auth dialog
 
-protected-auth-window =
-    .title = Himoyalangan ulam tasdig‘i
-protected-auth-msg = Ulamga tasdiqdan o‘tkazing. Tasdiqdan o‘tkazish uslubi ulamingiz turiga bog‘liq.
-protected-auth-token = Ulam:
+## Protected authentication alert
+

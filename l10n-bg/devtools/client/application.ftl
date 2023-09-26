@@ -28,15 +28,17 @@ serviceworker-worker-unregister = Отмяна на регистрацията
 serviceworker-worker-debug = Отстраняване на дефекти
     .title = Дефекти могат да бъдат отстранявани само от работещи обслужващи нишки
 
+# Alt text for the image icon displayed inside a debug link for a service worker.
+serviceworker-worker-inspect-icon =
+    .alt = Инспектиране
+
+# Text for the start link displayed for a registered but not running Service Worker.
+# Clicking on the link will attempt to start the service worker.
+serviceworker-worker-start3 = Включване
+
 # Text displayed for the updated time of the service worker. The <time> element will
 # display the last update time of the service worker script.
 serviceworker-worker-updated = Обновена на <time>{ DATETIME($date, day: "numeric", month: "long", year: "numeric", hour: "numeric", minute: "numeric", second: "numeric") }</time>
-
-# Text displayed next to the URL for the source of the service worker (e-g. "Source my/path/to/worker-js")
-serviceworker-worker-source = Адрес
-
-# Text displayed next to the current status of the service worker.
-serviceworker-worker-status = Състояние
 
 ## Service Worker status strings: all serviceworker-worker-status-* strings are also
 ## defined in aboutdebugging.properties and should be synchronized with them.
@@ -48,26 +50,6 @@ serviceworker-worker-status-running = Включена
 # Service Worker status. A stopped service worker is registered but not currently active.
 serviceworker-worker-status-stopped = Спряна
 
-# Text displayed when no service workers are visible for the current page. Clicking on the
-# link will open https://developer-mozilla-org/docs/Web/API/Service_Worker_API/Using_Service_Workers
-serviceworker-empty-intro = Трябва да сте регистрирали обслужваща нишка, за да я виждате тук. <a>Научете повече</a>
-
-# Text displayed when there are no Service Workers to display for the current page,
-# introducing hints to debug Service Worker issues.
-serviceworker-empty-suggestions = Ако текущата страница би трябвало да има обслужваща нишка ето някои неща, които може да опитате
-
-# Suggestion to check for errors in the Console to investigate why a service worker is not
-# registered. Clicking on the link opens the webconsole.
-serviceworker-empty-suggestions-console = Погледнете за грешки в конзолата. <a>Отваряне на конзолата</a>
-
-# Suggestion to use the debugger to investigate why a service worker is not registered.
-# Clicking on the link will switch from the Application panel to the debugger.
-serviceworker-empty-suggestions-debugger = Прегледайте процеса на регистриране на вашата обслужваща нишка и гледайте за изключения. <a>Отваряне на дебъгера</a>
-
-# Suggestion to go to about:debugging in order to see Service Workers for all domains.
-# Clicking on the link will open about:debugging in a new tab.
-serviceworker-empty-suggestions-aboutdebugging = Изследвайте обслужващи нишки от други домейни. <a>Отваряне на about:debugging</a>
-
 # Link will open https://developer.mozilla.org/docs/Web/API/Service_Worker_API/Using_Service_Workers
 serviceworker-empty-intro-link = Научете повече
 
@@ -77,10 +59,18 @@ manifest-item-warnings = Грешки и предупреждения
 # Header for the Icon section of Manifest inspection displayed in the application panel.
 manifest-item-icons = Пиктограми
 
+# Text displayed while we are loading the manifest file
+manifest-loading = Зареждане на manifest…
+
 # Text displayed as the alt attribute for <img> tags showing the icons in the
 # manifest.
 manifest-icon-img =
     .alt = Пиктограма
+
+# Text displayed as the title attribute for <img> tags showing the icons in the
+# manifest. `$sizes` is a user-dependent string that has been parsed as a
+# space-separated list of `<width>x<height>` sizes or the keyword `any`.
+manifest-icon-img-title = Икона с размери: { $sizes }
 
 # Sidebar navigation item for Manifest sidebar item section
 sidebar-item-manifest = Манифест
@@ -92,3 +82,7 @@ icon-warning =
     .alt = Пиктограма на предупреждение
     .title = Предупреждение
 
+# Text for the ALT and TITLE attributes of the error icon
+icon-error =
+    .alt = Икона за грешка
+    .title = Грешка

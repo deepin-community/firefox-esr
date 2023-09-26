@@ -11,6 +11,12 @@ reload-tab =
 select-all-tabs =
     .label = Chọn tất cả các thẻ
     .accesskey = S
+tab-context-play-tab =
+    .label = Phát âm thanh thẻ
+    .accesskey = l
+tab-context-play-tabs =
+    .label = Phát âm thanh các thẻ
+    .accesskey = y
 duplicate-tab =
     .label = Nhân đôi thẻ
     .accesskey = D
@@ -48,12 +54,9 @@ unpin-selected-tabs =
 bookmark-selected-tabs =
     .label = Đánh dấu các thẻ…
     .accesskey = k
-bookmark-tab =
-    .label = Đánh dấu thẻ
+tab-context-bookmark-tab =
+    .label = Đánh dấu thẻ…
     .accesskey = B
-reopen-in-container =
-    .label = Mở trong ngăn chứa
-    .accesskey = e
 tab-context-open-in-new-container-tab =
     .label = Mở liên kết trong thẻ ngăn chứa mới
     .accesskey = e
@@ -69,30 +72,9 @@ move-to-new-window =
 tab-context-close-multiple-tabs =
     .label = Đóng nhiều thẻ
     .accesskey = M
-tab-context-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Mở lại thẻ vừa đóng
-           *[other] Mở lại các thẻ vừa đóng
-        }
-    .accesskey = U
-close-tab =
-    .label = Đóng thẻ
-    .accesskey = c
-close-tabs =
-    .label = Đóng các thẻ
-    .accesskey = S
-move-tabs =
-    .label = Di chuyển các thẻ
-    .accesskey = v
-move-tab =
-    .label = Di chuyển thẻ
-    .accesskey = v
 tab-context-share-url =
     .label = Chia sẻ
     .accesskey = h
-tab-context-share-more =
-    .label = Thêm…
 
 ## Variables:
 ##  $tabCount (Number): the number of tabs that are affected by the action.
@@ -104,13 +86,6 @@ tab-context-reopen-closed-tabs =
            *[other] Mở lại các thẻ đã đóng
         }
     .accesskey = o
-tab-context-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Đóng thẻ
-           *[other] Đóng các thẻ
-        }
-    .accesskey = C
 tab-context-close-n-tabs =
     .label =
         { $tabCount ->
@@ -125,3 +100,7 @@ tab-context-move-tabs =
            *[other] Di chuyển các thẻ
         }
     .accesskey = v
+
+tab-context-send-tabs-to-device =
+    .label = Gửi { $tabCount } thẻ đến thiết bị
+    .accesskey = n

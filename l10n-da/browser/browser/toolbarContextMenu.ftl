@@ -20,14 +20,6 @@ toolbar-context-menu-bookmark-selected-tabs =
 toolbar-context-menu-select-all-tabs =
     .label = Vælg alle faneblade
     .accesskey = a
-toolbar-context-menu-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Fortryd lukning af faneblad
-           *[other] Fortryd lukning af faneblade
-        }
-    .accesskey = l
-
 toolbar-context-menu-reopen-closed-tabs =
     .label =
         { $tabCount ->
@@ -51,18 +43,18 @@ toolbar-context-menu-report-extension =
     .label = Rapporter udvidelse
     .accesskey = o
 
-# Can appear on the same context menu as menubarCmd ("Menu Bar") and
-# personalbarCmd ("Bookmarks Toolbar"), so they should have different
-# access keys.
+# Can appear on the same context menu as toolbar-context-menu-menu-bar-cmd
+# ("Menu Bar") and personalbarCmd ("Bookmarks Toolbar"), so they should
+# have different access keys.
 toolbar-context-menu-pin-to-overflow-menu =
     .label = Fastgør til >>-menuen
     .accesskey = a
-toolbar-context-menu-auto-hide-downloads-button =
-    .label = Skjul automatisk i værktøjslinje
-    .accesskey = S
 toolbar-context-menu-auto-hide-downloads-button-2 =
     .label = Skjul knap, når tom
     .accesskey = S
+toolbar-context-menu-always-open-downloads-panel =
+    .label = Vis panel når filhentning starter
+    .accesskey = p
 toolbar-context-menu-remove-from-toolbar =
     .label = Fjern fra værktøjslinje
     .accesskey = j
@@ -72,6 +64,11 @@ toolbar-context-menu-view-customize-toolbar =
 toolbar-context-menu-view-customize-toolbar-2 =
     .label = Tilpas værktøjslinje…
     .accesskey = v
+# This is only ever shown when toolbar-context-menu-pin-to-overflow-menu
+# is hidden, so they can share access keys.
+toolbar-context-menu-pin-to-toolbar =
+    .label = Fastgør til værktøjslinje
+    .accesskey = a
 
 toolbar-context-menu-bookmarks-toolbar-always-show-2 =
     .label = Vis altid
@@ -86,3 +83,7 @@ toolbar-context-menu-bookmarks-toolbar-on-new-tab-2 =
 toolbar-context-menu-bookmarks-show-other-bookmarks =
     .label = Vis Andre bogmærker
     .accesskey = V
+
+toolbar-context-menu-menu-bar-cmd =
+    .toolbarname = Menulinje
+    .accesskey = M

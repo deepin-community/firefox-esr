@@ -10,11 +10,6 @@ crashes-id = ID Laporan
 crashes-send-date = Dikirim
 crashes-all-reports = Semua Laporan Kerusakan
 crashes-no-config = Aplikasi ini tidak dikonfigurasikan untuk menampilkan laporan kerusakan.
-extensions-title = Ekstensi
-extensions-name = Nama
-extensions-enabled = Aktif
-extensions-version = Versi
-extensions-id = ID
 support-addons-title = Pengaya
 support-addons-name = Nama
 support-addons-type = Tipe
@@ -44,8 +39,8 @@ app-basics-update-channel = Kanal Pemutakhiran
 # as in "Folder for updates". "Update" is a noun, not a verb.
 app-basics-update-dir =
     { PLATFORM() ->
-        [linux] Pemutakhiran Direktori
-       *[other] Pemutakhiran Folder
+        [linux] Direktori Pemutakhiran
+       *[other] Folder Pemutakhiran
     }
 app-basics-update-history = Riwayat Pemutakhiran
 app-basics-show-update-history = Tampilkan Riwayat Pemutakhiran
@@ -60,12 +55,14 @@ app-basics-enabled-plugins = Plugin Terpasang
 app-basics-build-config = Konfigurasi Build
 app-basics-user-agent = User Agent
 app-basics-os = OS
+app-basics-os-theme = Tema Sistem Operasi
 # Rosetta is Apple's translation process to run apps containing x86_64
 # instructions on Apple Silicon. This should remain in English.
 app-basics-rosetta = Rosetta Translated
 app-basics-memory-use = Penggunaan Memori
 app-basics-performance = Kinerja
 app-basics-service-workers = Service Worker Terdaftar
+app-basics-third-party = Modul Pihak Ketiga
 app-basics-profiles = Profil
 app-basics-launcher-process-status = Proses Peluncur
 app-basics-multi-process-support = Jendela Multiproses
@@ -76,6 +73,14 @@ app-basics-location-service-key-google = Google Location Service Key
 app-basics-safebrowsing-key-google = Google Safebrowsing Key
 app-basics-key-mozilla = Kunci Layanan Lokasi Mozilla
 app-basics-safe-mode = Mode Aman
+app-basics-memory-size = Ukuran Memori (RAM)
+app-basics-disk-available = Kapasitas Disk Tersedia
+
+# Variables:
+#   $value (number) - Amount of data being stored
+#   $unit (string) - The unit of data being stored (e.g. MB)
+app-basics-data-size = { $value } { $unit }
+
 show-dir-label =
     { PLATFORM() ->
         [macos] Tampilkan di Finder
@@ -105,11 +110,21 @@ graphics-gpu2-title = GPU #2
 graphics-decision-log-title = Log Keputusan
 graphics-crash-guards-title = Fitur Penjaga Kerusakan yang Dinonaktifkan
 graphics-workarounds-title = Solusi sementara
+graphics-device-pixel-ratios = Rasio Piksel Perangkat Jendela
 # Windowing system in use on Linux (e.g. X11, Wayland).
 graphics-window-protocol = Protokol Jendela
 # Desktop environment in use on Linux (e.g. GNOME, KDE, XFCE, etc).
 graphics-desktop-environment = Lingkungan Desktop
 place-database-title = Basis Data Places
+place-database-stats = Statistik
+place-database-stats-show = Tampilkan Statistik
+place-database-stats-hide = Sembunyikan Statistik
+place-database-stats-entity = Entitas
+place-database-stats-count = Jumlah
+place-database-stats-size-kib = Ukuran (KB)
+place-database-stats-size-perc = Ukuran (%)
+place-database-stats-efficiency-perc = Efisiensi (%)
+place-database-stats-sequentiality-perc = Urutan (%)
 place-database-integrity = Integritas
 place-database-verify-integrity = Verifikasikan Integritas
 a11y-title = Aksesibilitas
@@ -129,9 +144,6 @@ sandbox-sys-call-tid = TID
 sandbox-sys-call-proc-type = Jenis Proses
 sandbox-sys-call-number = Syscall
 sandbox-sys-call-args = Argumen
-safe-mode-title = Coba Mode Aman
-restart-in-safe-mode-label = Mulai Ulang dengan Pengaya Dinonaktifkan…
-
 troubleshoot-mode-title = Diagnosis masalah
 restart-in-troubleshoot-mode-label = Mode Pemecahan Masalah…
 clear-startup-cache-title = Coba bersihkan tembolok permulaan
@@ -159,8 +171,11 @@ media-device-channels = Kanal
 media-device-rate = Nilai
 media-device-latency = Latensi
 media-capabilities-title = Kemampuan Media
+media-codec-support-info = Informasi Dukungan Codec
 # List all the entries of the database.
 media-capabilities-enumerate = Daftar basis data
+
+## Codec support table
 
 ##
 
@@ -188,37 +203,6 @@ remote-debugging-accepting-connections = Menerima Koneksi
 remote-debugging-url = URL
 
 ##
-
-support-third-party-modules-title = Modul Pihak Ketiga
-support-third-party-modules-module = Berkas Modul
-support-third-party-modules-version = Versi File
-support-third-party-modules-vendor = Info Vendor
-support-third-party-modules-occurrence = Kejadian
-support-third-party-modules-process = ID & Jenis Proses
-support-third-party-modules-thread = Thread
-support-third-party-modules-base = Alamat Imagebase
-support-third-party-modules-uptime = Waktu Operasi Proses (md)
-support-third-party-modules-duration = Durasi Pemuatan (md)
-support-third-party-modules-status = Status
-support-third-party-modules-status-loaded = Dimuat
-support-third-party-modules-status-blocked = Diblokir
-support-third-party-modules-status-redirected = Diarahkan ulang
-support-third-party-modules-empty = Tidak ada modul pihak ketiga yang dimuat.
-support-third-party-modules-no-value = (Tidak ada nilai)
-support-third-party-modules-button-open =
-    .title = Buka lokasi berkas…
-support-third-party-modules-expand =
-    .title = Tampilkan informasi rinci
-support-third-party-modules-collapse =
-    .title = Ciutkan informasi rinci
-support-third-party-modules-unsigned-icon =
-    .title = Modul ini tidak ditandatangani
-support-third-party-modules-folder-icon =
-    .title = Buka lokasi berkas…
-support-third-party-modules-down-icon =
-    .title = Tampilkan informasi rinci
-support-third-party-modules-up-icon =
-    .title = Ciutkan informasi rinci
 
 # Variables
 # $days (Integer) - Number of days of crashes to log
@@ -294,11 +278,6 @@ webgl2-renderer = Perender WebGL2
 webgl2-version = Versi Penggerak WebGL 2
 webgl2-driver-extensions = Ekstensi Penggerak WebGL 2
 webgl2-extensions = Ekstensi WebGL 2
-blocklisted-bug = Dicekal karena alasan yang diketahui
-
-# Variables
-# $bugNumber (string) - String of bug number from Bugzilla
-bug-link = bug { $bugNumber }
 
 # Variables
 #   $bugNumber (string) - Bug number on Bugzilla
@@ -309,8 +288,6 @@ support-blocklisted-bug = Dicekal karena masalah yang diketahui: <a data-l10n-na
 unknown-failure = Dicekal: kode kegagalan { $failureCode }
 
 d3d11layers-crash-guard = Compositor D3D11
-d3d11video-crash-guard = Pendekode Video D3D11
-d3d9video-crash-guard = Pendekode Video D3D9
 glcontext-crash-guard = OpenGL
 wmfvpxvideo-crash-guard = WMF VPX Video Decoder
 
@@ -336,6 +313,7 @@ can-sandbox-media = Media Plugin Sandboxing
 content-sandbox-level = Tingkat Proses Konten Sandbox
 effective-content-sandbox-level = Tingkat Sandbox Proses Konten Efektif
 content-win32k-lockdown-state = Status Penguncian Win32k untuk Proses Konten
+support-sandbox-gpu-level = Tingkat Sandbox Proses GPU
 sandbox-proc-type-content = konten
 sandbox-proc-type-file = konten berkas
 sandbox-proc-type-media-plugin = plugin media
@@ -356,15 +334,6 @@ launcher-process-status-unknown = Status tak diketahui
 # $remoteWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
 multi-process-windows = { $remoteWindows }/{ $totalWindows }
-multi-process-status-0 = Diaktifkan pengguna
-multi-process-status-1 = Diaktifkan secara baku
-multi-process-status-2 = Dinonaktifkan
-multi-process-status-4 = Dinonaktifkan oleh alat aksesibilitas
-multi-process-status-6 = Dinonaktifkan oleh masukan teks yang tidak didukung
-multi-process-status-7 = Dinonaktifkan oleh pengaya
-multi-process-status-8 = Dinonaktifkan secara paksa
-multi-process-status-unknown = Status tak diketahui
-
 # Variables
 # $fissionWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
@@ -373,12 +342,13 @@ fission-status-experiment-control = Dinonaktifkan oleh eksperimen
 fission-status-experiment-treatment = Diaktifkan oleh eksperimen
 fission-status-disabled-by-e10s-env = Dinonaktifkan oleh lingkungan
 fission-status-enabled-by-env = Diaktifkan oleh lingkungan
-fission-status-disabled-by-safe-mode = Dinonaktifkan oleh mode aman
+fission-status-disabled-by-env = Dinonaktifkan oleh lingkungan
 fission-status-enabled-by-default = Diaktifkan secara baku
 fission-status-disabled-by-default = Dinonaktifkan secara baku
 fission-status-enabled-by-user-pref = Diaktifkan oleh pengguna
 fission-status-disabled-by-user-pref = Dinonaktifkan oleh pengguna
 fission-status-disabled-by-e10s-other = E10s dinonaktifkan
+fission-status-enabled-by-rollout = Diaktifkan dengan peluncuran bertahap
 
 async-pan-zoom = Geser/Perbesaran Asinkron
 apz-none = tidak ada

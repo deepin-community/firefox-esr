@@ -11,17 +11,6 @@ navbar-tooltip-instruction =
 
 ## Back
 
-main-context-menu-back =
-    .tooltiptext = Mundur satu laman
-    .aria-label = Mundur
-    .accesskey = K
-
-navbar-tooltip-back =
-    .value = { main-context-menu-back.tooltiptext }
-
-toolbar-button-back =
-    .label = { main-context-menu-back.aria-label }
-
 # Variables
 #   $shortcut (String) - A keyboard shortcut for the Go Back command.
 main-context-menu-back-2 =
@@ -41,17 +30,6 @@ toolbar-button-back-2 =
     .label = { main-context-menu-back-2.aria-label }
 
 ## Forward
-
-main-context-menu-forward =
-    .tooltiptext = Maju satu laman
-    .aria-label = Maju
-    .accesskey = M
-
-navbar-tooltip-forward =
-    .value = { main-context-menu-forward.tooltiptext }
-
-toolbar-button-forward =
-    .label = { main-context-menu-forward.aria-label }
 
 # Variables
 #   $shortcut (String) - A keyboard shortcut for the Go Forward command.
@@ -116,48 +94,45 @@ main-context-menu-page-save =
     .label = Simpan Laman dengan Nama…
     .accesskey = P
 
-toolbar-button-page-save =
-    .label = { main-context-menu-page-save.label }
-
 ## Simple menu items
 
-main-context-menu-bookmark-add =
-    .aria-label = Markahi Laman ini
+main-context-menu-bookmark-page =
+    .aria-label = Markahi Laman
     .accesskey = m
-    .tooltiptext = Markahi laman ini
+    .tooltiptext = Markahi laman
 
 # This menuitem is only visible on macOS
-# Cannot be shown at the same time as main-context-menu-bookmark-edit-mac,
+# Cannot be shown at the same time as main-context-menu-edit-bookmark-mac,
 # so should probably have the same access key if possible.
-main-context-menu-bookmark-add-mac =
-    .label = Markahi Laman
+main-context-menu-bookmark-page-mac =
+    .label = Markahi Laman…
+    .accesskey = m
+
+# This menuitem is only visible on macOS
+# Cannot be shown at the same time as main-context-menu-bookmark-page-mac,
+# so should probably have the same access key if possible.
+main-context-menu-edit-bookmark-mac =
+    .label = Ubah Markah…
     .accesskey = M
-
-# This menuitem is only visible on macOS
-# Cannot be shown at the same time as main-context-menu-bookmark-add-mac,
-# so should probably have the same access key if possible.
-main-context-menu-bookmark-edit-mac =
-    .label = Edit Markah
-    .accesskey = E
 
 # Variables
 #   $shortcut (String) - A keyboard shortcut for the add bookmark command.
-main-context-menu-bookmark-add-with-shortcut =
-    .aria-label = Markahi Laman ini
+main-context-menu-bookmark-page-with-shortcut =
+    .aria-label = Markahi Laman…
     .accesskey = m
-    .tooltiptext = Markahi laman ini ({ $shortcut })
+    .tooltiptext = Markahi laman ({ $shortcut })
 
-main-context-menu-bookmark-change =
-    .aria-label = Edit Markah Ini
+main-context-menu-edit-bookmark =
+    .aria-label = Ubah Markah…
     .accesskey = m
-    .tooltiptext = Edit markah ini
+    .tooltiptext = Ubah Markah
 
 # Variables
 #   $shortcut (String) - A keyboard shortcut for the edit bookmark command.
-main-context-menu-bookmark-change-with-shortcut =
-    .aria-label = Edit Markah Ini
+main-context-menu-edit-bookmark-with-shortcut =
+    .aria-label = Ubah Markah…
     .accesskey = m
-    .tooltiptext = Edit markah ini ({ $shortcut })
+    .tooltiptext = Ubah Markah ({ $shortcut })
 
 main-context-menu-open-link =
     .label = Buka Tautan
@@ -179,13 +154,9 @@ main-context-menu-open-link-new-private-window =
     .label = Buka Tautan di Jendela Mode Penjelajahan Pribadi Baru
     .accesskey = P
 
-main-context-menu-bookmark-this-link =
-    .label = Markahi Tautan Ini
+main-context-menu-bookmark-link-2 =
+    .label = Markahi Tautan…
     .accesskey = T
-
-main-context-menu-bookmark-link =
-    .label = Markahi Tautan
-    .accesskey = M
 
 main-context-menu-save-link =
     .label = Simpan Tautan dengan Nama…
@@ -195,11 +166,6 @@ main-context-menu-save-link-to-pocket =
     .label = Simpan Tautan ke { -pocket-brand-name }
     .accesskey = o
 
-## The access keys for "Copy Link Location" and "Copy Email Address"
-## should be the same if possible; the two context menu items
-## are mutually exclusive.
-
-
 ## The access keys for "Copy Link" and "Copy Email Address"
 ## should be the same if possible; the two context menu items
 ## are mutually exclusive.
@@ -208,9 +174,9 @@ main-context-menu-copy-email =
     .label = Salin Alamat Surel
     .accesskey = E
 
-main-context-menu-copy-link =
-    .label = Salin Lokasi Tautan
-    .accesskey = S
+main-context-menu-copy-phone =
+    .label = Salin Nomor Telepon
+    .accesskey = o
 
 main-context-menu-copy-link-simple =
     .label = Salin Tautan
@@ -239,32 +205,6 @@ main-context-menu-media-mute =
 main-context-menu-media-unmute =
     .label = Keraskan
     .accesskey = K
-
-main-context-menu-media-play-speed =
-    .label = Kecepatan Pemutaran
-    .accesskey = K
-
-main-context-menu-media-play-speed-slow =
-    .label = Lambat (0.5 ×)
-    .accesskey = L
-
-main-context-menu-media-play-speed-normal =
-    .label = Normal
-    .accesskey = N
-
-main-context-menu-media-play-speed-fast =
-    .label = Cepat (1.25 ×)
-    .accesskey = C
-
-main-context-menu-media-play-speed-faster =
-    .label = Lebih Cepat (1.5×)
-    .accesskey = p
-
-# "Ludicrous" is a reference to the movie "Space Balls" and is meant
-# to say that this speed is very fast.
-main-context-menu-media-play-speed-fastest =
-    .label = Sangat Cepat (2×)
-    .accesskey = t
 
 main-context-menu-media-play-speed-2 =
     .label = Kecepatan
@@ -312,12 +252,6 @@ main-context-menu-media-video-leave-fullscreen =
 
 # This is used when right-clicking on a video in the
 # content area when the Picture-in-Picture feature is enabled.
-main-context-menu-media-pip =
-    .label = Gambar-dalam-gambar
-    .accesskey = g
-
-# This is used when right-clicking on a video in the
-# content area when the Picture-in-Picture feature is enabled.
 main-context-menu-media-watch-pip =
     .label = Tonton dalam Format Gambar-dalam-Gambar
     .accesskey = G
@@ -325,14 +259,6 @@ main-context-menu-media-watch-pip =
 main-context-menu-image-reload =
     .label = Muat Ulang Gambar
     .accesskey = U
-
-main-context-menu-image-view =
-    .label = Lihat Gambar
-    .accesskey = G
-
-main-context-menu-video-view =
-    .label = Tampilkan Video
-    .accesskey = V
 
 main-context-menu-image-view-new-tab =
     .label = Buka Gambar di Tab Baru
@@ -345,18 +271,6 @@ main-context-menu-video-view-new-tab =
 main-context-menu-image-copy =
     .label = Salin Gambar
     .accesskey = G
-
-main-context-menu-image-copy-location =
-    .label = Salin Lokasi Gambar
-    .accesskey = o
-
-main-context-menu-video-copy-location =
-    .label = Salin Lokasi Video
-    .accesskey = o
-
-main-context-menu-audio-copy-location =
-    .label = Salin Lokasi Audio
-    .accesskey = o
 
 main-context-menu-image-copy-link =
     .label = Salin Tautan Gambar
@@ -378,13 +292,13 @@ main-context-menu-image-email =
     .label = Surelkan Gambar…
     .accesskey = k
 
-main-context-menu-image-set-as-background =
-    .label = Jadikan sebagai Latar Belakang Desktop…
-    .accesskey = D
-
 main-context-menu-image-set-image-as-background =
     .label = Jadikan Gambar Sebagai Latar Belakang Desktop…
     .accesskey = D
+
+main-context-menu-image-copy-text =
+    .label = Salin Teks dari Gambar
+    .accesskey = T
 
 main-context-menu-image-info =
     .label = Lihat Informasi Gambar
@@ -402,10 +316,6 @@ main-context-menu-audio-save-as =
     .label = Simpan Audio dengan Nama…
     .accesskey = S
 
-main-context-menu-video-image-save-as =
-    .label = Simpan Cuplikan dengan Nama…
-    .accesskey = S
-
 main-context-menu-video-take-snapshot =
     .label = Ambil Tangkapan Gambar Diam…
     .accesskey = A
@@ -418,14 +328,6 @@ main-context-menu-audio-email =
     .label = Surelkan Audio…
     .accesskey = k
 
-main-context-menu-plugin-play =
-    .label = Aktifkan plugin ini
-    .accesskey = p
-
-main-context-menu-plugin-hide =
-    .label = Sembunyikan plugin ini
-    .accesskey = y
-
 main-context-menu-save-to-pocket =
     .label = Simpan Laman ke { -pocket-brand-name }
     .accesskey = k
@@ -433,14 +335,6 @@ main-context-menu-save-to-pocket =
 main-context-menu-send-to-device =
     .label = Kirim Laman ke Perangkat
     .accesskey = L
-
-main-context-menu-view-background-image =
-    .label = Lihat Gambar Latar Belakang
-    .accesskey = L
-
-main-context-menu-generate-new-password =
-    .label = Gunakan Sandi yang Dihasilkan
-    .accesskey = D
 
 ## The access keys for "Use Saved Login" and "Use Saved Password"
 ## should be the same if possible; the two context menu items
@@ -455,6 +349,10 @@ main-context-menu-use-saved-password =
     .accesskey = G
 
 ##
+
+main-context-menu-use-relay-mask =
+    .label = Gunakan Topeng Email { -relay-brand-short-name }
+    .accesskey = T
 
 main-context-menu-suggest-strong-password =
     .label = Sarankan Kata Sandi Kuat…
@@ -492,9 +390,9 @@ main-context-menu-frame-reload =
     .label = Muatkan Bingkai Lagi
     .accesskey = t
 
-main-context-menu-frame-bookmark =
-    .label = Markahi Bingkai Ini
-    .accesskey = B
+main-context-menu-frame-add-bookmark =
+    .label = Markahi Bingkai...
+    .accesskey = M
 
 main-context-menu-frame-save-as =
     .label = Simpan Bingkai dengan Nama…
@@ -512,8 +410,8 @@ main-context-menu-frame-view-info =
     .label = Lihat Informasi Bingkai
     .accesskey = I
 
-main-context-menu-print-selection =
-    .label = Cetak yang Dipilih
+main-context-menu-print-selection-2 =
+    .label = Cetak yang Dipilih…
     .accesskey = C
 
 main-context-menu-view-selection-source =
@@ -532,10 +430,6 @@ main-context-menu-view-page-source =
     .label = Lihat Kode Sumber Laman
     .accesskey = h
 
-main-context-menu-view-page-info =
-    .label = Lihat Informasi Laman
-    .accesskey = I
-
 main-context-menu-bidi-switch-text =
     .label = Ubah Arah Teks
     .accesskey = T
@@ -543,10 +437,6 @@ main-context-menu-bidi-switch-text =
 main-context-menu-bidi-switch-page =
     .label = Ubah Arah Laman
     .accesskey = A
-
-main-context-menu-inspect-element =
-    .label = Inspeksi Elemen
-    .accesskey = n
 
 main-context-menu-inspect =
     .label = Inspeksi
@@ -558,3 +448,13 @@ main-context-menu-inspect-a11y-properties =
 main-context-menu-eme-learn-more =
     .label = Pelajari lebih lanjut tentang DRM…
     .accesskey = D
+
+# Variables
+#   $containerName (String): The name of the current container
+main-context-menu-open-link-in-container-tab =
+    .label = Buka Tautan di Tab { $containerName } Baru
+    .accesskey = T
+
+main-context-menu-reveal-password =
+    .label = Tampilkan Sandi
+    .accesskey = S

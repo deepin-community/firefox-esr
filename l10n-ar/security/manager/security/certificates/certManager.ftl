@@ -20,49 +20,12 @@ certmgr-tab-ca =
 certmgr-mine = لديك شهادات من هذه المنظّمات التي تعرّفك
 certmgr-remembered = تُستعمل هذه الشهادات لتعريف نفسك إلى المواقع
 certmgr-people = لديك شهادات على ملفّ تعرّف هؤلاء الناس
-certmgr-servers = لديك شهادات على ملف تُعرّف هذه الخواديم
 certmgr-server = تُعرّف هذه المُدخلات استثناءات الأعطال في شهادات الخواديم
 certmgr-ca = لديك شهادات على ملفّ تعرّف سلطات الشّهادات هذه
 
-certmgr-detail-general-tab-title =
-    .label = عام
-    .accesskey = ع
-
-certmgr-detail-pretty-print-tab-title =
-    .label = تفاصيل
-    .accesskey = ت
-
-certmgr-pending-label =
-    .value = يقوم حاليا بالتحقق من الشهادات…
-
-certmgr-subject-label = مُصْدَرة إلى
-
-certmgr-issuer-label = مُصْدَرة مِن
-
-certmgr-period-of-validity = فترة الصلاحية
-
-certmgr-fingerprints = البصمات
-
-certmgr-cert-detail =
-    .title = تفاصيل الشّهادة
-    .buttonlabelaccept = أغلق
-    .buttonaccesskeyaccept = غ
-
-certmgr-cert-detail-commonname = الاسم الشّائع (اش)
-
-certmgr-cert-detail-org = المنظّمة (م)
-
-certmgr-cert-detail-orgunit = الوحدة التّنظيمية (وت)
-
-certmgr-cert-detail-serial-number = الرّقم التّسلسلي
-
-certmgr-cert-detail-sha-256-fingerprint = بصمة SHA-256
-
-certmgr-cert-detail-sha-1-fingerprint = بصمة SHA1
-
-certmgr-edit-ca-cert =
+certmgr-edit-ca-cert2 =
     .title = حرِّر إعدادات ثقة شهادة سلطة الشّهادات
-    .style = width: 48em;
+    .style = min-width: 48em;
 
 certmgr-edit-cert-edit-trust = حرِّر إعدادات الثّقة:
 
@@ -72,9 +35,9 @@ certmgr-edit-cert-trust-ssl =
 certmgr-edit-cert-trust-email =
     .label = تستطيع هذه الشّهادة تعريف مستخدمي البريد.
 
-certmgr-delete-cert =
+certmgr-delete-cert2 =
     .title = احذف الشّهادة
-    .style = width: 48em; height: 24em;
+    .style = min-width: 48em; min-height: 24em;
 
 certmgr-cert-host =
     .label = المستضيف
@@ -85,18 +48,11 @@ certmgr-cert-name =
 certmgr-cert-server =
     .label = الخادوم
 
-certmgr-override-lifetime =
-    .label = الصلاحية
-
 certmgr-token-name =
     .label = جهاز الأمن
 
-certmgr-begins-on = تبدأ في
-
 certmgr-begins-label =
     .label = تبدأ في
-
-certmgr-expires-on = تنقضي في
 
 certmgr-expires-label =
     .label = تنقضي في
@@ -138,18 +94,6 @@ certmgr-backup-all =
 certmgr-restore =
     .label = استورِد…
     .accesskey = س
-
-certmgr-details =
-    .value = حقول الشّهادة
-    .accesskey = ق
-
-certmgr-fields =
-    .value = قيمة الحقل
-    .accesskey = م
-
-certmgr-hierarchy =
-    .value = شجريّة الشّهادة
-    .accesskey = ش
 
 certmgr-add-exception =
     .label = أضِف استثناءً…
@@ -213,12 +157,6 @@ delete-user-cert-confirm = أمتأكّد أنّك تريد حذف هذه الش
 delete-user-cert-impact = إذا حذفت واحدة من شهاداتك، لن تكون قادرًا على استخدامها لتعريف نفسك بعد الآن.
 
 
-delete-ssl-cert-title =
-    .title = احذف استثناءات شهادة الخادوم
-delete-ssl-cert-confirm = أمتأكد أنك تريد حذف استثناءات الخادوم هذه؟
-delete-ssl-cert-impact = إذا حذفت استثناء خادوم، فستستعيد اختبارات الأمن المعتادة لهذا الموقع وسيحتاج إلى استخدام شهادة مقبولة.
-
-
 delete-ca-cert-title =
     .title = حذف أو نزع الثقة من شهادة تابعة لسلطة شهادات
 delete-ca-cert-confirm = لقد طلبت حذف الشهادات من سلطة الشهادات هذه. بالنسبة للشهادات المضمنة، ستنزع منها الثقة جميعها، وهو التأثير نفسه. أمتأكد من أنك تريد الحذف أو نزع الثقة؟
@@ -236,47 +174,6 @@ delete-email-cert-impact = إن حذفت شهادة بريد لشخص، فلن �
 #   $serialNumber : the serial number of the cert in AA:BB:CC hex format.
 cert-with-serial =
     .value = شهادة بالرقم التسلسلي: { $serialNumber }
-
-## Cert Viewer
-
-# Title used for the Certificate Viewer.
-#
-# Variables:
-#   $certificate : a string representative of the certificate being viewed.
-cert-viewer-title =
-    .title = عارض الشّهادات: ”{ $certName }“
-
-not-present =
-    .value = <ليس جزءًا من الشّهادة>
-
-# Cert verification
-cert-verified = تمّ التحقّق من هذه الشّهادة للاستخدامات التّالية:
-
-# Add usage
-verify-ssl-client =
-    .value = شهادة عميل SSL
-
-verify-ssl-server =
-    .value = شهادة خادوم SSL
-
-verify-ssl-ca =
-    .value = سلطة شهادة SSL
-
-verify-email-signer =
-    .value = شهادة مُوقّع البريد الإلكتروني
-
-verify-email-recip =
-    .value = شهادة مستلم البريد الإلكتروني
-
-# Cert verification
-cert-not-verified-cert-revoked = تعذّر التحقّق من هذه الشّهادة لأنّه قد تمّ نقضُها.
-cert-not-verified-cert-expired = تعذّر التحقّق من هذه الشّهادة لأنّ صلاحيّتها انتهت.
-cert-not-verified-cert-not-trusted = تعذّر التحقّق من هذه الشّهادة لأنّها غير موثوقة.
-cert-not-verified-issuer-not-trusted = تعذّر التحقّق من هذه الشّهادة لأنّ المُصدِر غير موثوق.
-cert-not-verified-issuer-unknown = تعذّر التحقّق من هذه الشّهادة لأنّ المُصدِر مجهول.
-cert-not-verified-ca-invalid = تعذّر التحقّق من هذه الشّهادة لأنّ شهادة سلطة الشّهادات غير صالحة.
-cert-not-verified_algorithm-disabled = تعذّر التحقق من هذه الشهادة لأنها وُقعت باستخدام خوارزمية توقيع عُطّلت لعدم أمانها.
-cert-not-verified-unknown = تعذّر التحقّق من هذه الشّهادة لأسباب مجهولة.
 
 ## Used to show whether an override is temporary or permanent
 

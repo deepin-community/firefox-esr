@@ -23,6 +23,8 @@ profile-selection-delete-button =
     .label = מחיקת פרופיל…
     .accesskey = ח
 
+profile-selection-conflict-message = עותק אחר של { -brand-product-name } ביצע שינויים לפרופילים. יש להפעיל את { -brand-short-name } מחדש לפני ביצוע שינויים נוספים.
+
 ## Messages used in the profile manager
 
 profile-manager-description = { -brand-short-name } מאחסן מידע על ההגדרות, ההעדפות, ופריטי משתמש אחרים שלך בפרופיל המשתמש שלך.

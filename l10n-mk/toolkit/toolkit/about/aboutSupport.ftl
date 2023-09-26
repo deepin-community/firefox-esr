@@ -8,11 +8,6 @@ page-subtitle =
     обидувате да решите некој проблем. Ако барате одговори на често поставувани прашања
     за { -brand-short-name }, појдете на нашиот <a data-l10n-name="support-link">веб сајт за поддршка</a>.
 
-extensions-title = Проширувања
-extensions-name = Име
-extensions-enabled = Вклучен
-extensions-version = Верзија
-extensions-id = ID
 support-addons-name = Име
 support-addons-version = Верзија
 support-addons-id = ID
@@ -28,6 +23,7 @@ app-basics-enabled-plugins = Овозможени приклучоци
 app-basics-build-config = Конфигурација на изданието
 app-basics-user-agent = Кориснички агент
 app-basics-memory-use = Искористеност на меморија
+
 modified-key-prefs-title = Важни променети параметри
 modified-prefs-name = Име
 modified-prefs-value = Вредност
@@ -43,6 +39,8 @@ copy-raw-data-to-clipboard-label = Копирај ги сировите пода
 
 ## Media titles
 
+
+## Codec support table
 
 ##
 
@@ -88,7 +86,6 @@ loaded-lib-versions = Верзија во употреба
 # $remoteWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
 multi-process-windows = { $remoteWindows }/{ $totalWindows }
-multi-process-status-4 = Оневозможено од алатките за пристапност
 
 drag-enabled = влечење на лизгач овозможено
 

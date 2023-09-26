@@ -11,6 +11,12 @@ reload-tab =
 select-all-tabs =
     .label = 选择所有标签页
     .accesskey = S
+tab-context-play-tab =
+    .label = 播放标签页
+    .accesskey = P
+tab-context-play-tabs =
+    .label = 播放标签页
+    .accesskey = y
 duplicate-tab =
     .label = 克隆标签页
     .accesskey = D
@@ -48,12 +54,9 @@ unpin-selected-tabs =
 bookmark-selected-tabs =
     .label = 为标签页添加书签…
     .accesskey = k
-bookmark-tab =
-    .label = 为标签页添加书签
+tab-context-bookmark-tab =
+    .label = 将标签页加入书签…
     .accesskey = B
-reopen-in-container =
-    .label = 用身份标签页打开
-    .accesskey = e
 tab-context-open-in-new-container-tab =
     .label = 新建身份标签页打开
     .accesskey = e
@@ -69,30 +72,9 @@ move-to-new-window =
 tab-context-close-multiple-tabs =
     .label = 批量关闭标签页
     .accesskey = M
-tab-context-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] 恢复关闭的标签页
-           *[other] 恢复关闭的标签页
-        }
-    .accesskey = U
-close-tab =
-    .label = 关闭标签页
-    .accesskey = c
-close-tabs =
-    .label = 关闭标签页
-    .accesskey = S
-move-tabs =
-    .label = 移动标签页
-    .accesskey = v
-move-tab =
-    .label = 移动标签页
-    .accesskey = v
 tab-context-share-url =
     .label = 共享
     .accesskey = h
-tab-context-share-more =
-    .label = 更多…
 
 ## Variables:
 ##  $tabCount (Number): the number of tabs that are affected by the action.
@@ -104,13 +86,6 @@ tab-context-reopen-closed-tabs =
            *[other] 恢复关闭的 { $tabCount } 个标签页
         }
     .accesskey = o
-tab-context-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] 关闭标签页
-           *[other] 关闭标签页
-        }
-    .accesskey = C
 tab-context-close-n-tabs =
     .label =
         { $tabCount ->
@@ -125,3 +100,11 @@ tab-context-move-tabs =
            *[other] 移动标签页
         }
     .accesskey = v
+
+tab-context-send-tabs-to-device =
+    .label =
+        { $tabCount ->
+            [1] 发送标签页至设备
+           *[other] 发送 { $tabCount } 个标签页至设备
+        }
+    .accesskey = n

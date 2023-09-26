@@ -12,11 +12,17 @@
 
 policy-3rdparty = Gwelout ar reolennoù a c'hall bezañ haezet gant ar WebExtensions dre chrome.storage.managed.
 
+policy-AllowedDomainsForApps = Despizañ an domanioù aotreet da haeziñ Google Workspace.
+
 policy-AppAutoUpdate = Gweredekaat pe ziweredekaat hizivadur emgefreek an arload.
 
 policy-AppUpdateURL = Lakaat un URL hizivaat personelaet evit an arload.
 
 policy-Authentication = Kefluniañ an dilesa ebarzhet evit al lec'hiennoù skoret.
+
+policy-AutoLaunchProtocolsFromOrigins = Despizañ ur roll komenadoù diavaez a c'hall bezañ arveret eus an orinoù er roll hep goulenn gant an arveriad.
+
+policy-BackgroundAppUpdate2 = Gweredekaat pe diweredekaat hizivaer en drekleur.
 
 policy-BlockAboutAddons = Stankañ an ardoer askouezhioù (about:addons).
 
@@ -42,6 +48,8 @@ policy-DisableAppUpdate = Mirout ar merdeer da hizivaat.
 
 policy-DisableBuiltinPDFViewer = Diweredekaat PDF.js, gweler PDF enkorfet { -brand-short-name }.
 
+policy-DisableDefaultBrowserAgent = Mirout gwezher ar merdeer dre ziouer d'ober ur gwered. N’hall bezañ arloet war Windows hepken, ar savennoù all n'o deus ket ar gwezher-mañ.
+
 policy-DisableDeveloperTools = Stankañ an ostilhoù diorroer.
 
 policy-DisableFeedbackCommands = Diweredekaat arc'hadoù evit kas evezhiadennoù adalek al lañser skoazell (Reiñ ho meno ha Danevelliñ ul lec'hienn dagus).
@@ -57,13 +65,11 @@ policy-DisableForgetButton = Diweredekaat an afell evit dilemel ar roadennoù.
 
 policy-DisableFormHistory = Chom hep derc'hel soñj eus ar roll istor klask ha furmskridoù.
 
-policy-DisableMasterPasswordCreation = M’eo gwir e vo tu krouiñ ur ger-tremen mestr.
-
 policy-DisablePrimaryPasswordCreation = M’eo gwir e vo tu krouiñ ur ger-tremen pennañ.
 
 policy-DisablePasswordReveal = Na aotren ar gerioù-tremen da vezañ diskouezet en titouroù kennaskañ enrollet.
 
-policy-DisablePocket = Diweredekaat ar c'heweriuster evit enrollañ pajennoù e Pocket.
+policy-DisablePocket2 = Diweredekaat ar c'heweriuster evit enrollañ pajennoù e { -pocket-brand-name }.
 
 policy-DisablePrivateBrowsing = Diweredekaat ar merdeiñ prevez.
 
@@ -94,6 +100,9 @@ policy-DownloadDirectory = Arventennot ha morailhit ar c'havlec'h pellgargañ.
 # “lock” means that the user won’t be able to change this setting
 policy-EnableTrackingProtection = Gweredekaat pe diweredekaat stankadur an endalc'hadoù. Gallout a rit prennañ an dibab-mañ.
 
+# “lock” means that the user won’t be able to change this setting
+policy-EncryptedMediaExtensions = Gweredekaat pe diweredekaat astenn ar mediaoù. Gallout a rit prennañ an dibab-mañ.
+
 # A “locked” extension can’t be disabled or removed by the user. This policy
 # takes 3 keys (“Install”, ”Uninstall”, ”Locked”), you can either keep them in
 # English or translate them as verbs.
@@ -103,9 +112,7 @@ policy-ExtensionSettings = Ardoit pep tra a sell deus an askouezhioù
 
 policy-ExtensionUpdate = (Di)weredekaat hizivadennoù askouezhioù ent emgefreek.
 
-policy-FirefoxHome = Kefluniañ degemer firefox
-
-policy-FlashPlugin = Aotren pe difenn arver an enlugellad Flash.
+policy-Handlers = Kefluniañ ar verourien arloadoù dre ziouer.
 
 policy-HardwareAcceleration = M’eo lakaet da Gaou e vo diweredekaet herrekadur ar periant.
 
@@ -118,10 +125,19 @@ policy-LegacyProfiles = Diweredekaat ar c'heweriuster a redi un aelad distag evi
 
 ## Do not translate "SameSite", it's the name of a cookie attribute.
 
+policy-LegacySameSiteCookieBehaviorEnabled = Gweredekaat dre ziouer an arventenn emzalc’h kozh SameSite evit an toupinoù.
+
+policy-LegacySameSiteCookieBehaviorEnabledForDomainList = Distreiñ d'emzalc’h kozh SameSite evit an toupinoù war lec’hiennoù 'zo.
 
 ##
 
 policy-LocalFileLinks = Aotren lec'hiennoù ’zo da liammañ restroù lec’hel.
+
+policy-ManagedBookmarks = Kefluniañ ur roll sinedoù meret gant an ardoer ha n’hallont ket bezañ kemmet gant an arveriad.
+
+policy-ManualAppUpdateOnly = Aotren hizivadennoù dre zorn hepken ha na rebuziñ an arveriad diwar-benn an hizivadennoù.
+
+policy-PrimaryPassword = Rediañ pe difenn implij ur ger-tremen pennañ.
 
 policy-NetworkPrediction = (Di)weredekaat an diougan rouedad (rakkerc'hat DNS)
 
@@ -138,6 +154,8 @@ policy-OverrideFirstRunPage = Merañ ar bajenn loc'hadur kentañ. Laoskit ar reo
 policy-OverridePostUpdatePage = Merañ ar pajenn "Petra nevez?" goude un hizivadenn. Laoskit ar reolenn-mañ goullo ma fell deoc'h diweredekaat ar bajenn goude un hizivadenn.
 
 policy-PasswordManagerEnabled = Gweredekaat enrollañ ar gerioù-tremen en ardoer gerioù-tremen.
+
+policy-PasswordManagerExceptions = Mirout { -brand-short-name } da enrollañ gerioù-tremen evit lec’hiennoù resis.
 
 # PDF.js and PDF should not be translated
 policy-PDFjs = Diweredekaat pe kefluniañ PDF.js, gweler PDF enkorfet { -brand-short-name }.
@@ -164,8 +182,7 @@ policy-SearchEngines = Kefluniañ arventennoù al lusker enklask. Ar reolenn-ma�
 
 policy-SearchSuggestEnabled = (Di)weredekaat an alioù klask.
 
-# For more information, see https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSS/PKCS11/Module_Installation
-policy-SecurityDevices = Staliañ ar molladoù PKCS #11.
+policy-ShowHomeButton = Diskouez an afell degemer er varrenn ostilhoù.
 
 policy-SSLVersionMax = Arventennañ an handelv SSL uhelañ.
 
@@ -178,3 +195,4 @@ policy-UserMessaging = Na ziskouez kemennadennoù ’zo d'an arveriad.
 # “format” refers to the format used for the value of this policy.
 policy-WebsiteFilter = Stankañ al lec'hiennoù da vezañ gweladennet. Lennit an teuliadur evit kaout muioc'h a vunudoù war ar mentrezh.
 
+policy-Windows10SSO = Aotren dilesa eeun Windows evit ar c'hontoù Microsoft, al labour hag ar c'hontoù skol.

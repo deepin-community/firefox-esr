@@ -19,3 +19,20 @@ opensearch-error-download-desc = { -brand-short-name } njejo mógał pytański t
 
 ##
 
+searchbar-submit =
+    .tooltiptext = Pytanje startowaś
+
+# This string is displayed in the search box when the input field is empty
+searchbar-input =
+    .placeholder = Pytaś
+
+searchbar-icon =
+    .tooltiptext = Pytaś
+
+## Infobar shown when search engine is removed and replaced.
+## Variables
+## $oldEngine (String) - the search engine to be removed.
+## $newEngine (String) - the search engine to replace the removed search engine.
+
+removed-search-engine-message = <strong>Waša standardna pytnica jo se změniła.</strong> { $oldEngine } njejo wěcej ako standardna pytnica w { -brand-short-name } k dispoziciji. { $newEngine } jo něnto waša standardna pytnica. Aby standardnu pytnicu změnił, źiśo do nastajenjow. <label data-l10n-name="remove-search-engine-article">Dalšne informacije</label>
+remove-search-engine-button = W pórěźe

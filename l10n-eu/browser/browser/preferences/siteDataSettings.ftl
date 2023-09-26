@@ -30,14 +30,6 @@ site-data-remove-selected =
     .label = Kendu hautatutakoak
     .accesskey = K
 
-site-data-button-cancel =
-    .label = Utzi
-    .accesskey = U
-
-site-data-button-save =
-    .label = Gorde aldaketak
-    .accesskey = G
-
 site-data-settings-dialog =
     .buttonlabelaccept = Gorde aldaketak
     .buttonaccesskeyaccept = G
@@ -67,5 +59,8 @@ site-data-removing-dialog =
 site-data-removing-header = Cookieak eta guneetako datuak kentzea
 
 site-data-removing-desc = Cookieak eta guneetako datuak kentzeak webguneetako saioak amaitzea eragin lezake. Ziur zaude aldaketak burutu nahi dituzula?
+# Variables:
+#   $baseDomain (String) - The single domain for which data is being removed
+site-data-removing-single-desc = Cookieak eta guneetako datuak ezabatzeak webguneetako zure saioak amai litzake. Ziur zaude cookieak eta guneetako datuak ezabatu nahi dituzula <strong>{ $baseDomain }</strong> domeinurako?
 
 site-data-removing-table = Ondorengo webguneetako cookieak eta datuak kendu egingo dira

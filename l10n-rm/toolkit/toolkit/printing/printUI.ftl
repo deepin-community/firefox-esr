@@ -15,6 +15,9 @@ printui-sheets-count =
     }
 
 printui-page-range-all = Tuttas
+printui-page-range-current = Actual
+printui-page-range-odd = Spèr
+printui-page-range-even = Pèr
 printui-page-range-custom = Persunalisà
 printui-page-range-label = Paginas
 printui-page-range-picker =
@@ -57,8 +60,6 @@ printui-two-sided-printing-short-edge = Volver enturn l'ur curt
 printui-options = Opziuns
 printui-headers-footers-checkbox = Stampar ils chaus-pagina ed ils pes-pagina
 printui-backgrounds-checkbox = Stampar ils funds davos
-
-printui-selection-checkbox = Mo stampar la selecziun
 
 ## The "Format" section, select a version of the website to print. Radio
 ## options to select between the original page, selected text only, or a version

@@ -59,13 +59,11 @@ policy-DisableForgetButton = Spriječite pristup tipki za brisanje povijesti pre
 
 policy-DisableFormHistory = Nemoj pamtiti povijest pretraživanja i obrazaca.
 
-policy-DisableMasterPasswordCreation = Ukoliko je točno, korisnik neće moći stvoriti glavnu lozinku.
-
 policy-DisablePrimaryPasswordCreation = Ukoliko je točno, neće biti moguće postaviti primarnu lozinku.
 
 policy-DisablePasswordReveal = Nemoj dozvoliti prikaz spremljenih lozinki.
 
-policy-DisablePocket = Onemogući mogućnost spremanja web stranica u Pocket.
+policy-DisablePocket2 = Onemogući mogućnost spremanja web stranica u { -pocket-brand-name }.
 
 policy-DisablePrivateBrowsing = Onemogući privatno pregledavanje.
 
@@ -108,10 +106,6 @@ policy-ExtensionSettings = Upravljaj svim aspektima instalacije dodataka.
 
 policy-ExtensionUpdate = Aktiviraj ili deaktiviraj automatska aktualiziranja dodataka.
 
-policy-FirefoxHome = Postavi početnu stranicu za Firefox.
-
-policy-FlashPlugin = Dozvoli ili zabrani upotrebu dodatka Flash.
-
 policy-Handlers = Postavite zadane rukovatelje aplikacijama.
 
 policy-HardwareAcceleration = Ukoliko je netočno, isključuje hardversko ubrzanje.
@@ -134,8 +128,6 @@ policy-LegacySameSiteCookieBehaviorEnabledForDomainList = Vrati se na staro pona
 policy-LocalFileLinks = Omogućite određenim web stranicama poveznice na lokalne datoteke.
 
 policy-ManagedBookmarks = Konfigurira popis zabilješki kojima upravlja administrator, a koje korisnik ne može mijenjati.
-
-policy-MasterPassword = Zahtijevaj ili spriječi upotrebu glavne lozinke.
 
 policy-ManualAppUpdateOnly = Dopusti samo ručno aktualiziranje i ne obavještavaj korisnika o novim verzijama.
 
@@ -181,9 +173,6 @@ policy-SearchBar = Postavi standardno mjesto za traku pretrage. Korisnik je i da
 policy-SearchEngines = Prilagodi postavke tražilice. Ovo pravilo dostupno je samo u izdanju proširene podrške (ESR).
 
 policy-SearchSuggestEnabled = Aktiviraj ili deaktiviraj prijedloge za pretraživanje.
-
-# For more information, see https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSS/PKCS11/Module_Installation
-policy-SecurityDevices = Instaliraj PKCS #11 module.
 
 policy-ShowHomeButton = Prikaži gumb početne stranice u alatnoj traci.
 

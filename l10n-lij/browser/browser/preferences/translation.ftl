@@ -2,9 +2,9 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-translation-window =
+translation-window2 =
     .title = Eceçioin - Traduçion
-    .style = width: 38em
+    .style = min-width: 38em
 
 translation-close-key =
     .key = w
@@ -34,10 +34,6 @@ translation-sites-button-remove =
 translation-sites-button-remove-all =
     .label = Scancella tutti i sciti
     .accesskey = u
-
-translation-button-close =
-    .label = Særa
-    .accesskey = r
 
 translation-dialog =
     .buttonlabelaccept = Særa

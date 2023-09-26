@@ -9,11 +9,6 @@ crashes-id = Rapport-ID
 crashes-send-date = Datum
 crashes-all-reports = Alla kraschrapporter
 crashes-no-config = Det här programmet är inte konfigurerat att visa kraschrapporter.
-extensions-title = Tillägg
-extensions-name = Namn
-extensions-enabled = Aktiverad
-extensions-version = Version
-extensions-id = ID
 support-addons-title = Tillägg
 support-addons-name = Namn
 support-addons-type = Typ
@@ -77,6 +72,12 @@ app-basics-location-service-key-google = Nyckel Google Location Service
 app-basics-safebrowsing-key-google = Nyckel Google Safe browsing
 app-basics-key-mozilla = Nyckel Mozilla Location Service
 app-basics-safe-mode = Felsäkert läge
+app-basics-memory-size = Minnesstorlek (RAM)
+app-basics-disk-available = Tillgängligt diskutrymme
+# Variables:
+#   $value (number) - Amount of data being stored
+#   $unit (string) - The unit of data being stored (e.g. MB)
+app-basics-data-size = { $value } { $unit }
 show-dir-label =
     { PLATFORM() ->
         [macos] Visa i Finder
@@ -106,11 +107,21 @@ graphics-gpu2-title = GPU #2
 graphics-decision-log-title = Beslutslogg
 graphics-crash-guards-title = Kraschskydd inaktiverade funktioner
 graphics-workarounds-title = Lösningar
+graphics-device-pixel-ratios = Pixelförhållande för fönsterenhet
 # Windowing system in use on Linux (e.g. X11, Wayland).
 graphics-window-protocol = Fönsterprotokoll
 # Desktop environment in use on Linux (e.g. GNOME, KDE, XFCE, etc).
 graphics-desktop-environment = Skrivbordsmiljö
 place-database-title = Platser databas
+place-database-stats = Statistik
+place-database-stats-show = Visa statistik
+place-database-stats-hide = Dölj statistik
+place-database-stats-entity = Entitet
+place-database-stats-count = Antal
+place-database-stats-size-kib = Storlek (KiB)
+place-database-stats-size-perc = Storlek (%)
+place-database-stats-efficiency-perc = Effektivitet (%)
+place-database-stats-sequentiality-perc = Sekvensitet (%)
 place-database-integrity = Integritet
 place-database-verify-integrity = Verifiera integritet
 a11y-title = Tillgänglighet
@@ -130,8 +141,6 @@ sandbox-sys-call-tid = TID
 sandbox-sys-call-proc-type = Processtyp
 sandbox-sys-call-number = Syscall
 sandbox-sys-call-args = Argument
-safe-mode-title = Prova felsäkert läge
-restart-in-safe-mode-label = Starta om utan tillägg…
 troubleshoot-mode-title = Diagnostisera problem
 restart-in-troubleshoot-mode-label = Felsökningsläge…
 clear-startup-cache-title = Prova att rensa startcachen
@@ -159,8 +168,18 @@ media-device-channels = Kanaler
 media-device-rate = Hastighet
 media-device-latency = Fördröjning
 media-capabilities-title = Mediefunktioner
+media-codec-support-info = Supportinformation för codec
 # List all the entries of the database.
 media-capabilities-enumerate = Räkna upp databasen
+
+## Codec support table
+
+media-codec-support-sw-decoding = Programvaruavkodning
+media-codec-support-hw-decoding = Hårdvaruavkodning
+media-codec-support-codec-name = Namn på codec
+media-codec-support-supported = Stöds
+media-codec-support-unsupported = Stöds inte
+media-codec-support-error = Codec-supportinformation är inte tillgänglig. Försök igen efter att ha spelat upp en mediefil.
 
 ##
 
@@ -189,36 +208,6 @@ remote-debugging-url = URL
 
 ##
 
-support-third-party-modules-title = Tredjepartsmoduler
-support-third-party-modules-module = Modulfil
-support-third-party-modules-version = Filversion
-support-third-party-modules-vendor = Leverantörsinformation
-support-third-party-modules-occurrence = Förekomster
-support-third-party-modules-process = Processtyp & ID
-support-third-party-modules-thread = Tråd
-support-third-party-modules-base = Bildbaserad adress
-support-third-party-modules-uptime = Processdrifttid (ms)
-support-third-party-modules-duration = Laddningstid (ms)
-support-third-party-modules-status = Status
-support-third-party-modules-status-loaded = Laddad
-support-third-party-modules-status-blocked = Blockerad
-support-third-party-modules-status-redirected = Omdirigerad
-support-third-party-modules-empty = Inga tredjepartsmoduler laddades.
-support-third-party-modules-no-value = (Inget värde)
-support-third-party-modules-button-open =
-    .title = Öppna filplats…
-support-third-party-modules-expand =
-    .title = Visa detaljerad information
-support-third-party-modules-collapse =
-    .title = Dölj detaljerad information
-support-third-party-modules-unsigned-icon =
-    .title = Denna modul är inte signerad
-support-third-party-modules-folder-icon =
-    .title = Öppna filplats…
-support-third-party-modules-down-icon =
-    .title = Visa detaljerad information
-support-third-party-modules-up-icon =
-    .title = Dölj detaljerad information
 # Variables
 # $days (Integer) - Number of days of crashes to log
 report-crash-for-days =
@@ -305,10 +294,8 @@ webgl2-renderer = WebGL 2 drivrutinsrenderare
 webgl2-version = WebGL 2 drivrutinsversion
 webgl2-driver-extensions = WebGL 2 drivrutinsutökning
 webgl2-extensions = WebGL 2 utökning
-blocklisted-bug = Svartlistad på grund av kända problem
-# Variables
-# $bugNumber (string) - String of bug number from Bugzilla
-bug-link = bugg { $bugNumber }
+webgpu-default-adapter = WebGPU standardadapter
+webgpu-fallback-adapter = WebGPU reservadapter
 # Variables
 #   $bugNumber (string) - Bug number on Bugzilla
 support-blocklisted-bug = Blockerad på grund av kända problem: <a data-l10n-name="bug-link">bugg { $bugNumber }</a>
@@ -316,8 +303,6 @@ support-blocklisted-bug = Blockerad på grund av kända problem: <a data-l10n-na
 # $failureCode (string) - String that can be searched in the source tree.
 unknown-failure = Svartlistad; felkod { $failureCode }
 d3d11layers-crash-guard = D3D11 Kompositör
-d3d11video-crash-guard = D3D11 Videoavkodare
-d3d9video-crash-guard = D3D9 Videoavkodare
 glcontext-crash-guard = OpenGL
 wmfvpxvideo-crash-guard = WMF VPX Videoavkodare
 reset-on-next-restart = Återställ vid nästa omstart
@@ -340,6 +325,7 @@ can-sandbox-media = Sandlåda för insticksmodul media
 content-sandbox-level = Sandlådenivå för innehållsprocess
 effective-content-sandbox-level = Effektiv sandlådenivå för innehållsprocess
 content-win32k-lockdown-state = Win32k-låsstatus för innehållsprocess
+support-sandbox-gpu-level = Sandlådenivå för GPU-process
 sandbox-proc-type-content = innehåll
 sandbox-proc-type-file = filinnehåll
 sandbox-proc-type-media-plugin = insticksmodul media
@@ -357,14 +343,6 @@ launcher-process-status-unknown = Okänd status
 # $remoteWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
 multi-process-windows = { $remoteWindows }/{ $totalWindows }
-multi-process-status-0 = Aktiverad av användare
-multi-process-status-1 = Aktiverad som standard
-multi-process-status-2 = Inaktiverad
-multi-process-status-4 = Inaktiverad av tillgänglighetsverktyget
-multi-process-status-6 = Inaktiverad av att textinmatning inte stöds
-multi-process-status-7 = Inaktiverad av tillägg
-multi-process-status-8 = Inaktiverad med tvång
-multi-process-status-unknown = Okänd status
 # Variables
 # $fissionWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
@@ -373,7 +351,7 @@ fission-status-experiment-control = Inaktiverad av experiment
 fission-status-experiment-treatment = Aktiverad av experiment
 fission-status-disabled-by-e10s-env = Inaktiverad av miljön
 fission-status-enabled-by-env = Aktiverad av miljön
-fission-status-disabled-by-safe-mode = Inaktiverat av säkert läge
+fission-status-disabled-by-env = Inaktiverad av miljön
 fission-status-enabled-by-default = Aktiverad som standard
 fission-status-disabled-by-default = Inaktiverad som standard
 fission-status-enabled-by-user-pref = Aktiverad av användaren

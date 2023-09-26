@@ -19,3 +19,20 @@ opensearch-error-download-desc = { -brand-short-name } قادر به بارگی�
 
 ##
 
+searchbar-submit =
+    .tooltiptext = ثبت جست‌وجو
+
+# This string is displayed in the search box when the input field is empty
+searchbar-input =
+    .placeholder = جست‌وجو
+
+searchbar-icon =
+    .tooltiptext = جست‌وجو
+
+## Infobar shown when search engine is removed and replaced.
+## Variables
+## $oldEngine (String) - the search engine to be removed.
+## $newEngine (String) - the search engine to replace the removed search engine.
+
+removed-search-engine-message = <strong>موتور جست‌وجوی پیش‌گزیده‌تان عوض شد.</strong> { $oldEngine } دیگر موتور جست‌وجوی پیش‌گزیده در { -brand-short-name } نیست. { $newEngine } موتور جستو‌جوی جدید شماست. برای جایگزین کردن آن به بخش پیکربندی بروید. <label data-l10n-name="remove-search-engine-article">بیشتر بدانید</label>
+remove-search-engine-button = تأیید

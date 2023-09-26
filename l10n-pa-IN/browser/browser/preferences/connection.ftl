@@ -2,12 +2,12 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-connection-window =
+connection-window2 =
     .title = ਕੁਨੈਕਸ਼ਨ ਸੈਟਿੰਗ
     .style =
         { PLATFORM() ->
-            [macos] width: 44em
-           *[other] width: 49em
+            [macos] min-width: 44em
+           *[other] min-width: 49em
         }
 
 connection-close-key =
@@ -35,10 +35,6 @@ connection-proxy-http = HTTP ਪਰਾਕਸੀ
     .accesskey = x
 connection-proxy-http-port = ਪੋਰਟ
     .accesskey = p
-connection-proxy-http-sharing =
-    .label = ਇਹੀ ਪਰਾਕਸੀ FTP ਅਤੇ HTTPS ਲਈ ਵੀ ਵਰਤੋ
-    .accesskey = s
-
 connection-proxy-https-sharing =
     .label = ਇਹੀ ਪਰਾਕਸੀ HTTPS ਲਈ ਵੀ ਵਰਤੋਂ
     .accesskey = s
@@ -47,11 +43,6 @@ connection-proxy-https = HTTPS ਪਰਾਕਸੀ
     .accesskey = H
 connection-proxy-ssl-port = ਪੋਰਟ
     .accesskey = o
-
-connection-proxy-ftp = FTP ਪਰਾਕਸੀ
-    .accesskey = F
-connection-proxy-ftp-port = ਪੋਰਟ
-    .accesskey = r
 
 connection-proxy-socks = SOCKS ਹੋਸਟ
     .accesskey = C
@@ -69,9 +60,6 @@ connection-proxy-noproxy = ਇਸ ਲਈ ਕੋਈ ਪਰਾਕਸੀ ਨਹੀ�
 
 connection-proxy-noproxy-desc = ਜਿਵੇਂ: .mozilla.org, .net.nz, 192.168.1.0/24
 
-# Do not translate localhost, 127.0.0.1 and ::1.
-connection-proxy-noproxy-localhost-desc = ਲੋਕਲਹੋਸਟ, 127.0.0.1, ਅਤੇ :: 1 ਨਾਲ ਕਨੈਕਸ਼ਨ ਕਦੇ ਵੀ ਪਰਾਕਸੀ ਨਹੀਂ ਹੁੰਦੇ।
-
 # Do not translate "localhost", "127.0.0.1/8" and "::1". (You can translate "and".)
 connection-proxy-noproxy-localhost-desc-2 = localhost, 127.0.0.1/8 ਅਤੇ ::1 ਲਈ ਕਨੈਕਸ਼ਨ ਕਦੇ ਪਰਾਕਸੀ ਨਹੀਂ ਹੁੰਦੇ ਹਨ।
 
@@ -84,20 +72,18 @@ connection-proxy-reload =
     .accesskey = l
 
 connection-proxy-autologin =
-    .label = ਜੇ ਪਛਾਣ-ਸ਼ਬਦ ਸੰਭਾਲਿਆ ਹੈ ਤਾਂ ਪਰਮਾਣਿਤ ਕਰਨ ਲਈ ਨਾ ਪੁੱਛੋ
+    .label = ਜੇ ਪਾਸਵਰਡ ਸੰਭਾਲਿਆ ਹੈ ਤਾਂ ਪਰਮਾਣਿਤ ਕਰਨ ਲਈ ਨਾ ਪੁੱਛੋ
     .accesskey = i
-    .tooltip = ਇਹ ਚੋਣ ਚੁੱਪਚਾਪ ਢੰਗ ਨਾਲ ਤੁਹਾਨੂੰ ਪਰਾਕਸੀਆਂ ਲਈ ਪਰਮਾਣਿਤ ਕਰਦੀ ਹੈ, ਜਦੋਂ ਤੁਸੀਂ ਉਹਨਾਂ ਲਈ ਪਰਮਾਣਕਿਤਾ ਸੰਭਾਲਦੇ ਹੋ। ਤੁਹਾਨੂੰ ਪੁੱਛਿਆ ਜਾਵੇਗਾ, ਜੇ ਪ੍ਰਮਾਣਕਿਤਾ ਫੇਲ੍ਹ ਹੋਈ।
+    .tooltip = ਇਹ ਚੋਣ ਚੁੱਪਚਾਪ ਢੰਗ ਨਾਲ ਤੁਹਾਨੂੰ ਪਰਾਕਸੀਆਂ ਲਈ ਪਰਮਾਣਿਤ ਕਰਦੀ ਹੈ, ਜਦੋਂ ਤੁਸੀਂ ਉਹਨਾਂ ਲਈ ਪਰਮਾਣਕਿਤਾ ਸੰਭਾਲਦੇ ਹੋ। ਤੁਹਾਨੂੰ ਪੁੱਛਿਆ ਜਾਵੇਗਾ, ਜੇ ਪਰਮਾਣਕਿਤਾ ਫੇਲ੍ਹ ਹੋਈ।
+
+connection-proxy-autologin-checkbox =
+    .label = ਜੇ ਪਾਸਵਰਡ ਸੰਭਾਲਿਆ ਹੈ ਤਾਂ ਪਰਮਾਣਿਤ ਕਰਨ ਲਈ ਨਾ ਪੁੱਛੋ
+    .accesskey = i
+    .tooltiptext = ਇਹ ਚੋਣ ਚੁੱਪਚਾਪ ਢੰਗ ਨਾਲ ਤੁਹਾਨੂੰ ਪਰਾਕਸੀਆਂ ਲਈ ਪਰਮਾਣਿਤ ਕਰਦੀ ਹੈ, ਜਦੋਂ ਤੁਸੀਂ ਉਹਨਾਂ ਲਈ ਪਰਮਾਣਕਿਤਾ ਸੰਭਾਲਦੇ ਹੋ। ਤੁਹਾਨੂੰ ਪੁੱਛਿਆ ਜਾਵੇਗਾ, ਜੇ ਪਰਮਾਣਕਿਤਾ ਫੇਲ੍ਹ ਹੋਈ।
 
 connection-proxy-socks-remote-dns =
     .label = ਪਰਾਕਸੀ DNS, ਜਦੋਂ SOCKS v5 ਦੀ ਵਰਤੋਂ ਹੋਵੇ
     .accesskey = d
-
-connection-dns-over-https =
-    .label = HTTPS ‘ਤੇ DNS ਸਮਰੱਥ ਕਰੋ
-    .accesskey = b
-
-connection-dns-over-https-url-resolver = ਪੂਰਕ ਵਰਤੋ
-    .accesskey = P
 
 # Variables:
 #   $name (String) - Display name or URL for the DNS over HTTPS provider

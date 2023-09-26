@@ -16,8 +16,8 @@ downloads-panel =
 # The style attribute has the width of the Downloads Panel expressed using
 # a CSS unit. The longest labels that should fit are usually those of
 # in-progress and blocked downloads.
-downloads-panel-list =
-    .style = width: 70ch
+downloads-panel-items =
+    .style = width: 35em
 
 downloads-cmd-pause =
     .label = Παύση
@@ -30,42 +30,65 @@ downloads-cmd-cancel =
 downloads-cmd-cancel-panel =
     .aria-label = Ακύρωση
 
-# This message is only displayed on Windows and Linux devices
-downloads-cmd-show-menuitem =
-    .label = Άνοιγμα φακέλου λήψης
+downloads-cmd-show-menuitem-2 =
+    .label =
+        { PLATFORM() ->
+            [macos] Εμφάνιση στο Finder
+           *[other] Εμφάνιση στον φάκελο
+        }
     .accesskey = φ
 
-# This message is only displayed on macOS devices
-downloads-cmd-show-menuitem-mac =
-    .label = Προβολή στο Finder
-    .accesskey = ρ
+## Displayed in the downloads context menu for files that can be opened.
+## Variables:
+##   $handler (String) - The name of the mime type's default file handler.
+##   Example: "Notepad", "Acrobat Reader DC", "7-Zip File Manager"
 
 downloads-cmd-use-system-default =
     .label = Άνοιγμα με το πρόγραμμα προβολής συστήματος
     .accesskey = π
+# This version is shown when the download's mime type has a valid file handler.
+downloads-cmd-use-system-default-named =
+    .label = Άνοιγμα σε «{ $handler }»
+    .accesskey = ο
 
+# We can use the same accesskey as downloads-cmd-always-open-similar-files.
+# Both should not be visible in the downloads context menu at the same time.
 downloads-cmd-always-use-system-default =
     .label = Άνοιγμα πάντα με το πρόγραμμα προβολής συστήματος
     .accesskey = ν
+# We can use the same accesskey as downloads-cmd-always-open-similar-files.
+# Both should not be visible in the downloads context menu at the same time.
+# This version is shown when the download's mime type has a valid file handler.
+downloads-cmd-always-use-system-default-named =
+    .label = Άνοιγμα πάντα στο «{ $handler }»
+    .accesskey = γ
 
-downloads-cmd-show-button =
+##
+
+# We can use the same accesskey as downloads-cmd-always-use-system-default.
+# Both should not be visible in the downloads context menu at the same time.
+downloads-cmd-always-open-similar-files =
+    .label = Να ανοίγονται πάντα παρόμοια αρχεία
+    .accesskey = χ
+
+downloads-cmd-show-button-2 =
     .tooltiptext =
         { PLATFORM() ->
-            [macos] Προβολή στο Finder
-           *[other] Άνοιγμα φακέλου λήψης
+            [macos] Εμφάνιση στο Finder
+           *[other] Εμφάνιση στον φάκελο
         }
 
-downloads-cmd-show-panel =
+downloads-cmd-show-panel-2 =
     .aria-label =
         { PLATFORM() ->
-            [macos] Προβολή στο Finder
-           *[other] Άνοιγμα φακέλου λήψης
+            [macos] Εμφάνιση στο Finder
+           *[other] Εμφάνιση στον φάκελο
         }
-downloads-cmd-show-description =
+downloads-cmd-show-description-2 =
     .value =
         { PLATFORM() ->
-            [macos] Προβολή στο Finder
-           *[other] Άνοιγμα φακέλου λήψης
+            [macos] Εμφάνιση στο Finder
+           *[other] Εμφάνιση στον φάκελο
         }
 
 downloads-cmd-show-downloads =
@@ -84,11 +107,14 @@ downloads-cmd-remove-from-history =
     .label = Αφαίρεση από το ιστορικό
     .accesskey = ι
 downloads-cmd-clear-list =
-    .label = Απαλοιφή πλαισίου προεπισκόπησης
+    .label = Απαλοιφή περιοχής προεπισκόπησης
     .accesskey = κ
 downloads-cmd-clear-downloads =
-    .label = Εκκαθάριση λήψεων
-    .accesskey = θ
+    .label = Απαλοιφή λήψεων
+    .accesskey = λ
+downloads-cmd-delete-file =
+    .label = Διαγραφή
+    .accesskey = Δ
 
 # This command is shown in the context menu when downloads are blocked.
 downloads-cmd-unblock =
@@ -115,10 +141,10 @@ downloads-cmd-choose-unblock-panel =
 # blocked.This opens a dialog where the user can choose whether to open the
 # file or remove the download. Opening is the default option.
 downloads-cmd-choose-open =
-    .tooltiptext = Άνοιγμα ή διαγραφή του αρχείου
+    .tooltiptext = Άνοιγμα ή αφαίρεση αρχείου
 
 downloads-cmd-choose-open-panel =
-    .aria-label = Άνοιγμα ή διαγραφή του αρχείου
+    .aria-label = Άνοιγμα ή αφαίρεση αρχείου
 
 # Displayed when hovering a blocked download, indicates that it's possible to
 # show more information for user to take the next action.
@@ -138,11 +164,18 @@ downloads-open-file =
 ##   $seconds (number) - Amount of seconds left till the file opens.
 ##   $minutes (number) - Amount of minutes till the file opens.
 
-downloading-file-opens-in-hours-and-minutes = Άνοιγμα σε { $hours }ώ { $minutes }λ…
-downloading-file-opens-in-minutes = Άνοιγμα σε { $minutes }λ…
-downloading-file-opens-in-minutes-and-seconds = Άνοιγμα σε { $minutes }λ { $seconds }δ…
-downloading-file-opens-in-seconds = Άνοιγμα σε { $seconds }δ…
-downloading-file-opens-in-some-time = Άνοιγμα όταν ολοκληρωθεί…
+downloading-file-opens-in-hours-and-minutes-2 =
+    .value = Άνοιγμα σε { $hours }ώ { $minutes }λ…
+downloading-file-opens-in-minutes-2 =
+    .value = Άνοιγμα σε { $minutes }λ…
+downloading-file-opens-in-minutes-and-seconds-2 =
+    .value = Άνοιγμα σε { $minutes }λ { $seconds }δ…
+downloading-file-opens-in-seconds-2 =
+    .value = Άνοιγμα σε { $seconds }δ…
+downloading-file-opens-in-some-time-2 =
+    .value = Άνοιγμα όταν ολοκληρωθεί…
+downloading-file-click-to-open =
+    .value = Άνοιγμα όταν ολοκληρωθεί
 
 ##
 
@@ -160,17 +193,32 @@ downloads-cancel-download =
 # downloads fit in the available space, or when there are no downloads in
 # the panel at all.
 downloads-history =
-    .label = Προβολή όλων των λήψεων
-    .accesskey = Π
+    .label = Εμφάνιση όλων των λήψεων
+    .accesskey = Ε
 
 # This string is shown at the top of the Download Details Panel, to indicate
 # that we are showing the details of a single download.
 downloads-details =
     .title = Λεπτομέρειες λήψης
 
+## Displayed when a site attempts to automatically download many files.
+## Variables:
+##   $num (number) - Number of blocked downloads.
+##   $url (string) - The url of the suspicious site, stripped of http, https and www prefix.
+
+downloads-files-not-downloaded =
+    { $num ->
+        [one] Δεν έγινε λήψη του αρχείου.
+       *[other] Δεν έγινε λήψη { $num } αρχείων.
+    }
+downloads-blocked-from-url = Αποκλείστηκαν λήψεις από το { $url }.
+downloads-blocked-download-detailed-info = Το { $url } προσπάθησε να κάνει αυτόματα λήψη πολλαπλών αρχείων. Ο ιστότοπος ενδέχεται να δυσλειτουργεί ή να προσπαθεί να αποθηκεύσει ανεπιθύμητα αρχεία στη συσκευή σας.
+
+##
+
 downloads-clear-downloads-button =
-    .label = Εκκαθάριση λήψεων
-    .tooltiptext = Απομακρύνει από τη λίστα τις ολοκληρωμένες, ακυρωμένες και αποτυχημένες λήψεις
+    .label = Απαλοιφή λήψεων
+    .tooltiptext = Διαγράφει τις ολοκληρωμένες, ακυρωμένες και αποτυχημένες λήψεις
 
 # This string is shown when there are no items in the Downloads view, when it
 # is displayed inside a browser tab.
@@ -179,4 +227,28 @@ downloads-list-empty =
 
 # This string is shown when there are no items in the Downloads Panel.
 downloads-panel-empty =
-    .value = Καμία λήψη για αυτή τη συνεδρία.
+    .value = Καμία λήψη για αυτήν τη συνεδρία.
+
+# This is displayed in an item at the bottom of the Downloads Panel when there
+# are more downloads than can fit in the list in the panel.
+#   $count (number) - number of files being downloaded that are not shown in the
+#                     panel list.
+downloads-more-downloading =
+    { $count ->
+        [one] Γίνεται λήψη { $count } ακόμη αρχείου
+       *[other] Γίνεται λήψη { $count } ακόμη αρχείων
+    }
+
+## Download errors
+
+downloads-error-alert-title = Σφάλμα λήψης
+# Variables:
+#   $extension (String): the name of the blocking extension.
+downloads-error-blocked-by = Δεν είναι δυνατή η αποθήκευση της λήψης, επειδή αποκλείστηκε από το { $extension }.
+# Used when the name of the blocking extension is unavailable.
+downloads-error-extension = Δεν είναι δυνατή η αποθήκευση της λήψης, επειδή αποκλείστηκε από μια επέκταση.
+# Line breaks in this message are meaningful, and should be maintained.
+downloads-error-generic =
+    Δεν είναι δυνατή η αποθήκευση του ληφθέντος αρχείου λόγω ενός άγνωστου σφάλματος.
+    
+    Παρακαλώ προσπαθήστε ξανά.

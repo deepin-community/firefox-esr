@@ -7,28 +7,6 @@ do-not-track-learn-more = अझै जान्नुहोस्
 do-not-track-option-always =
     .label = सधैँ
 
-pref-page-title =
-    { PLATFORM() ->
-        [windows] विकल्पहरू
-       *[other] प्राथमिकताहरू
-    }
-
-# This is used to determine the width of the search field in about:preferences,
-# in order to make the entire placeholder string visible
-#
-# Please keep the placeholder string short to avoid truncation.
-#
-# Notice: The value of the `.style` attribute is a CSS string, and the `width`
-# is the name of the CSS property. It is intended only to adjust the element's width.
-# Do not translate.
-search-input-box =
-    .style = width: 15.4em
-    .placeholder =
-        { PLATFORM() ->
-            [windows] विकल्पहरू मा फेला पार्नुहोस्
-           *[other] प्राथमिकताहरू मा फेला पार्नुहोस्
-        }
-
 pane-general-title = सामान्य
 category-general =
     .tooltiptext = { pane-general-title }
@@ -72,42 +50,27 @@ restart-later = केहि समयपछि पुनःसुरु गर�
 ## Variables:
 ##   $name (String): name of the extension
 
-# This string is shown to notify the user that their home page
-# is being controlled by an extension.
-extension-controlled-homepage-override = यो एक्सटेन्सन, <img data-l10n-name="icon"/> { $name }, ले तपाईंको गृहपृष्ठ नियन्त्रण गरिरहेको छ।
 
-# This string is shown to notify the user that their new tab page
-# is being controlled by an extension.
-extension-controlled-new-tab-url = यो एक्सटेन्सन, <img data-l10n-name="icon"/> { $name }, ले तपाईंको नयाँ ट्याब पेज नियन्त्रण गरिरहेको छ।
+## Extension Control Notifications
+##
+## These strings are used to inform the user
+## about changes made by extensions to browser settings.
+##
+## <img data-l10n-name="icon"/> is going to be replaced by the extension icon.
+##
+## Variables:
+##   $name (string) - Name of the extension
 
-# This string is shown to notify the user that Container Tabs
-# are being enabled by an extension.
-extension-controlled-privacy-containers = यो एक्सटेन्सन, <img data-l10n-name="icon"/> { $name } , लाई कन्टेनर ट्याबहरू चाहिन्छ ।
 
 ## Preferences UI Search Results
 
 search-results-header = खोजी परिणामहरू
-
-# `<span data-l10n-name="query"></span>` will be replaced by the search term.
-search-results-empty-message =
-    { PLATFORM() ->
-        [windows] माफ गर्नुहोस्! त्यहाँ “<span data-l10n-name="query"></span>” को लागि विकल्पहरूमा नतिजा छैन ।
-       *[other] माफ गर्नुहोस्! त्यहाँ “<span data-l10n-name="query"></span>” को लागि प्राथमिकताहरूमा नतिजा छैन ।
-    }
 
 search-results-help-link = सहयोग चाहियो? <a data-l10n-name="url">{ -brand-short-name } सहयोग</a> भ्रमण गर्नुहोस्
 
 ## General Section
 
 startup-header = सुरुवात
-
-# { -brand-short-name } will be 'Firefox Developer Edition',
-# since this setting is only exposed in Firefox Developer Edition
-separate-profile-mode =
-    .label = { -brand-short-name } र Firefox एकै समयमा चलाउन अनुमति दिनुहोस्
-use-firefox-sync = सुझाव: यसले अलग प्रोफाइल प्रयोग गर्दछ। तिनीहरू बीच डाटा साझेदारी गर्न { -sync-brand-short-name } प्रयोग गर्नुहोस्।
-get-started-not-logged-in = { -sync-brand-short-name }मा साइन इन गर्नुहोस्…
-get-started-configured = { -sync-brand-short-name } को प्राथमिकताहरू खोल्नुहोस्
 
 always-check-default =
     .label = सधैं { -brand-short-name } आफ्नो पूर्वनिर्धारित ब्राउजर हो भन्ने बारे जाँच गर्नुहोस्
@@ -133,17 +96,9 @@ open-new-link-as-tabs =
     .label = नयाँ सञ्झ्यालको साटोमा नयाँ ट्याबमा लिङ्क खोल्नुहोस्
     .accesskey = w
 
-warn-on-close-multiple-tabs =
-    .label = धेरै ट्याबहरू बन्द गर्न खोज्दा तपाईँलाई चेतावनी दिनुहोस्
-    .accesskey = m
-
 warn-on-open-many-tabs =
     .label = धेरै ट्याबहरू खोल्दा { -brand-short-name } ढिलो हुन सक्छ भने तपाईँलाई चेतावनी दिनुहोस्
     .accesskey = d
-
-switch-links-to-new-tabs =
-    .label = जब तपाईँ नयाँ ट्याबमा लिङ्क खोल्नुहुन्छ, तुरुन्तै स्विच गर्नुहोस्
-    .accesskey = h
 
 show-tabs-in-taskbar =
     .label = सञ्झ्याल कार्यपट्टीमा ट्याबको पूर्वावलोकनहरू देखाउनुहोस्
@@ -160,6 +115,10 @@ browser-containers-settings =
     .accesskey = i
 
 containers-disable-alert-title = सबै कन्टेनर ट्याबहरू बन्द गर्न चाहनुहुन्छ?
+
+## Variables:
+##   $tabCount (number) - Number of tabs
+
 containers-disable-alert-desc =
     { $tabCount ->
         [one] यदि तपाईँले अहिले कन्टेनर ट्याबहरू अक्षम गर्नुभयो भने { $tabCount } कन्टेनर ट्याब बन्द हुने छ। के तपाईँ कन्टेनर ट्याबहरू अक्षम गर्न चाहनुहुन्छ?
@@ -171,6 +130,9 @@ containers-disable-alert-ok-button =
         [one] { $tabCount } कन्टेनर ट्याब बन्द गर्नुहोस्
        *[other] { $tabCount } कन्टेनर ट्याबहरू बन्द गर्नुहोस्
     }
+
+##
+
 containers-disable-alert-cancel-button = सक्षम राख्नुहोस्
 
 containers-remove-alert-title = यो कन्टेनर हटाउने हो ?
@@ -186,12 +148,9 @@ containers-remove-alert-msg =
 containers-remove-ok-button = यो कन्टेनर हटाउनुहोस्
 containers-remove-cancel-button = यो कन्टेनर नहटाउनुहोस्
 
-
 ## General Section - Language & Appearance
 
 language-and-appearance-header = भाषा र रूप
-
-fonts-and-colors-header = फन्टहरू र रङहरू
 
 default-font = पूर्वनिर्धारित फन्ट
     .accesskey = D
@@ -201,10 +160,6 @@ default-font-size = आकार
 advanced-fonts =
     .label = अग्रसर
     .accesskey = A
-
-colors-settings =
-    .label = रङहरू...
-    .accesskey = C
 
 language-header = भाषा
 
@@ -236,8 +191,7 @@ files-and-applications-title = फाइलहरू र अनुप्रय�
 
 download-header = डाउनलोडहरू
 
-download-save-to =
-    .label = फाइलहरू यहाँ सङ्ग्रह गर्नुहोस्
+download-save-where = फाइलहरू यहाँ सङ्ग्रह गर्नुहोस्
     .accesskey = v
 
 download-choose-folder =
@@ -295,11 +249,6 @@ applications-manage-app =
     .label = एप्लिकेसन विवरणहरू
 applications-always-ask =
     .label = सधै सोध्नुहोस्
-applications-type-pdf = Portable Document Format (PDF)
-
-# Variables:
-#   $type (String) - the MIME type (e.g application/binary)
-applications-type-pdf-with-type = { applications-type-pdf } ({ $type })
 
 # Variables:
 #   $type-description (String) - Description of the type (e.g "Portable Document Format")
@@ -422,7 +371,11 @@ browsing-search-on-start-typing =
     .label = टाइप गर्न सुरु गरेपछि पाठ खोजी गर्नुहोस्
     .accesskey = x
 
+browsing-cfr-recommendations-learn-more = थप जान्नुहोस्
+
 ## General Section - Proxy
+
+network-settings-title = नेटवर्क सेटिङ्गहरु
 
 network-proxy-connection-learn-more = अझै जान्नुहोस्
 
@@ -443,11 +396,6 @@ home-newtabs-mode-label = नयाँ ट्याबहरु
 home-restore-defaults =
     .label = पूर्वानिर्धारित अवस्थामा ल्याउनुहोस्
     .accesskey = R
-
-# "Firefox" should be treated as a brand and kept in English,
-# while "Home" and "(Default)" can be localized.
-home-mode-choice-default =
-    .label = Firefox गृहपृष्ठ (पूर्वनिर्धारित)
 
 home-mode-choice-custom =
     .label = अनुकूल URLहरू
@@ -476,32 +424,24 @@ choose-bookmark =
 
 ## Home Section - Firefox Home Content Customization
 
-home-prefs-content-header = Firefox गृह सामग्री
-home-prefs-content-description = तपाईंको Firefox गृह पृष्ठमा तपाईँ कुन सामग्री राख्न चाहनुहुन्छ छान्नुहोस् ।
-
 home-prefs-search-header =
     .label = वेब खोजि
-home-prefs-topsites-header =
-    .label = शीर्ष साइटहरू
-home-prefs-topsites-description = तपाईंले धेरै भ्रमण गर्नुभएका साइटहरू
 
 ## Variables:
 ##  $provider (String): Name of the corresponding content provider, e.g "Pocket".
 
-# Variables:
-#  $provider (String): Name of the corresponding content provider, e.g "Pocket".
+
+## Variables:
+##  $provider (string) - Name of the corresponding content provider, e.g "Pocket".
+
 home-prefs-recommended-by-header =
     .label = { $provider } द्वारा सिफारिस गरिएको
 
 ##
 
-
 home-prefs-recommended-by-option-sponsored-stories =
     .label = प्रायोजित गरिएको कथाहरू
 
-home-prefs-highlights-header =
-    .label = विशेषताहरू
-home-prefs-highlights-description = तपाईंले सुरक्षित गर्नुभएको वा भ्रमण गर्नुभएको साइटहरू
 home-prefs-highlights-option-visited-pages =
     .label = भ्रमण गरिएका पृष्ठहरू
 home-prefs-highlights-options-bookmarks =
@@ -517,7 +457,6 @@ home-prefs-highlights-option-saved-to-pocket =
 # and non-essential but also not entirely trivial and useless.
 home-prefs-snippets-header =
     .label = स्निप्पेटस्
-home-prefs-snippets-description = { -vendor-short-name } र { -brand-product-name } का अद्यावधिकहरू
 
 home-prefs-sections-rows-option =
     .label =
@@ -544,9 +483,8 @@ search-show-suggestions-url-bar-option =
     .label = ठेगानापट्टिको नतिजाहरूमा खोज सुझावहरू देखाउनुहोस्
     .accesskey = I
 
-search-suggestions-cant-show = खोज इतिहास कहिले पनि लोकेसन बारमा देखिदैन किनभने { -brand-short-name } लाई कहिले पनि इतिहास नसम्झनेमा सेट गर्नुभएको छ ।
 
-search-one-click-header = एक-क्लिक खोज इन्जिनहरू
+search-suggestions-cant-show = खोज इतिहास कहिले पनि लोकेसन बारमा देखिदैन किनभने { -brand-short-name } लाई कहिले पनि इतिहास नसम्झनेमा सेट गर्नुभएको छ ।
 
 search-one-click-desc = बैकल्पिक खोज इन्जिनहरू चयन गर्नुहोस् जुन तपाईँले खोजशब्दहरू प्रविष्ट गर्न थालेपछि ठेगानापट्टि र खोजीपट्टि को तलपट्टि देखा पर्दछ ।
 
@@ -580,20 +518,17 @@ containers-add-button =
     .label = नयाँ कन्टेनर थप्नुहोस्
     .accesskey = A
 
-containers-preferences-button =
-    .label = प्राथमिकताहरू
-
 containers-remove-button =
     .label = हटाउनुहोस्
-
-## Sync Section - Signed out
-
 
 ## Firefox Account - Signed out. Note that "Sync" and "Firefox Account" are now
 ## more discrete ("signed in" no longer means "and sync is connected").
 
+
+## Firefox account - Signed out. Note that "Sync" and "Firefox account" are now
+## more discrete ("signed in" no longer means "and sync is connected").
+
 sync-signedout-caption = तपाईँको वेब अाफुसँगै लैजानुहोस्
-sync-signedout-description = सबै यन्त्रहरूमा आफ्नो पुस्तकचिनो, इतिहास, ट्याबहरू, गोप्यशब्दहरू, एडअनहरू, र प्राथमिकताहरू समक्रमण गर्नुहोस्।
 
 # This message contains two links and two icon images.
 #   `<img data-l10n-name="android-icon"/>` - Android logo icon
@@ -605,10 +540,10 @@ sync-signedout-description = सबै यन्त्रहरूमा आफ�
 # to your language, but should not be changed or translated.
 sync-mobile-promo = निम्नको लागि Firefox डाउनलोड गर्नुहोस् <img data-l10n-name="android-icon"/> <a data-l10n-name="android-link">Android</a> वा <img data-l10n-name="ios-icon"/> <a data-l10n-name="ios-link">iOS</a> ‌मोबाइल यन्त्रमा समक्रमण गर्नको लागि।
 
-## Sync Section - Signed in
-
-
 ## Firefox Account - Signed in
+
+
+## Firefox account - Signed in
 
 sync-profile-picture =
     .tooltiptext = प्रोफाइल तस्वीर परिवर्तन गर्नुहोस्
@@ -616,8 +551,13 @@ sync-profile-picture =
 sync-manage-account = खाता व्यवस्थापन गर्नुहोस्
     .accesskey = o
 
+## Variables
+## $email (string) - Email used for Firefox account
+
 sync-signedin-unverified = { $email } प्रमाणित गरिएको छैन।
 sync-signedin-login-failure = कृपया पुनः जडान गर्न साइन-इन गर्नुहोस् { $email }
+
+##
 
 sync-sign-in =
     .label = साइन इन गर्नुहोस्
@@ -655,12 +595,19 @@ sync-device-name-save =
     .label = सङ्ग्रह गर्नुहोस्
     .accesskey = v
 
+## These strings are shown in a desktop notification after the
+## user requests we resend a verification email.
+
+sync-verification-sent-title = प्रमाणीकरण पाठइयो
+# Variables:
+#   $email (String): Email address of user's Firefox account.
+sync-verification-sent-body = एक प्रमाणीकरण लिङ्क { $email } मा पठाइएको छ।
+sync-verification-not-sent-title = प्रमाणिकरण पठाउन असमर्थ
+sync-verification-not-sent-body = हामी यस समय प्रमाणिकरण मेल पठाउन असमर्थ छौँ, पछि पुनःप्रयास गर्नुहोस्।
+
 ## Privacy Section
 
 privacy-header = ब्राउजर गोपनीयता
-
-## Privacy Section - Forms
-
 
 ## Privacy Section - Logins and Passwords
 
@@ -671,18 +618,17 @@ forms-exceptions =
 forms-saved-logins =
     .label = सङ्ग्रह गरेको लग-इनहरू…
     .accesskey = L
-forms-master-pw-use =
-    .label = मुल गोप्यशब्द प्रयोग गर्नुहोस्
-    .accesskey = U
+# This string uses the former name of the Primary Password feature
+# ("Master Password" in English) so that the preferences can be found
+# when searching for the old name. The accesskey is unused.
 forms-master-pw-change =
     .label = मुल गोप्यशब्द परिवर्तन गर्नुहोस्...
     .accesskey = M
 
-forms-master-pw-fips-title = तपाईँ अहिले FIPS ढाँचामा हुनुहुन्छ। FIPSलाई खाली नभएको मुल गोप्यशब्द चाहिन्छ।
-
 forms-master-pw-fips-desc = गोप्यशब्द परिवर्तन असफल
 
 ## OS Authentication dialog
+
 
 ## Privacy Section - History
 
@@ -727,11 +673,29 @@ history-clear-on-close-settings =
 
 ## Privacy Section - Site Data
 
+sitedata-header = कुकिजहरु र साइट डेटा
+
 sitedata-learn-more = अझ जान्नुहोस्
+
+sitedata-disallow-cookies-option =
+    .label = कुकिजहरु र साइट डेटा ब्लक गर्नुहोस्
+    .accesskey = B
+
+# This label means 'type of content that is blocked', and is followed by a drop-down list with content types below.
+# The list items are the strings named sitedata-block-*-option*.
+sitedata-block-desc = टाइप अवरुद्ध गरिएको छ
+    .accesskey = T
 
 sitedata-clear =
     .label = डेटा खालीगर्नुहोस्…
     .accesskey = l
+
+sitedata-settings =
+    .label = डेटा व्यवस्थापन गर्नुहोस्…
+    .accesskey = M
+
+## Privacy Section - Cookie Banner Handling
+
 
 ## Privacy Section - Address Bar
 
@@ -753,12 +717,17 @@ addressbar-suggestions-settings = खोज इन्जिन सुझाव�
 
 ## Privacy Section - Content Blocking
 
+content-blocking-learn-more = थप जान्नुहोस्
 
 ## These strings are used to define the different levels of
 ## Enhanced Tracking Protection.
 
 
 ##
+
+
+# The tcp-rollout strings are no longer used for the rollout but for tcp-by-default in the standard section
+
 
 ## Privacy Section - Tracking
 
@@ -796,10 +765,6 @@ permissions-block-popups =
     .label = पप-अप सञ्झ्यालहरूलाई अवरुद्द गर्नुहोस्
     .accesskey = B
 
-permissions-block-popups-exceptions =
-    .label = अपवादहरू…
-    .accesskey = E
-
 permissions-addon-install-warning =
     .label = वेबसाइटहरूले एड-अनहरू स्थापना गर्न खोज्दा तपाईँलाई चेतावनी दिनुहोस्
     .accesskey = W
@@ -807,12 +772,6 @@ permissions-addon-install-warning =
 permissions-addon-exceptions =
     .label = अपवादहरू...
     .accesskey = E
-
-permissions-a11y-privacy-checkbox =
-    .label = पहुँच सेवाहरूलाई तपाईँको ब्राउजरमा पहुँच लिन बाट रोक्नुहोस्
-    .accesskey = a
-
-permissions-a11y-privacy-link = अझै जान्नुहोस्
 
 ## Privacy Section - Data Collection
 
@@ -829,8 +788,6 @@ collection-health-report-link = अझ जान्नुहोस्
 # This message is displayed above disabled data sharing options in developer builds
 # or builds with no Telemetry support available.
 collection-health-report-disabled = यस निर्माण कन्फिगरेसनको लागि डाटा रिपोर्टिङ अक्षम गरिएको छ
-
-collection-backlogged-crash-reports-link = अझ जान्नुहोस्
 
 ## Privacy Section - Security
 ##
@@ -858,16 +815,6 @@ security-block-uncommon-software =
 
 certs-header = प्रमाणपत्रहरू
 
-certs-personal-label = जब एक सर्भर तपाईँको व्यक्तिगत प्रमाणपत्रको लागि अनुरोध गर्छ
-
-certs-select-auto-option =
-    .label = स्वचालित रूपमा एउटा छान्नुहोस्
-    .accesskey = S
-
-certs-select-ask-option =
-    .label = तपाईँलाई हरेक पटक सोध्नुहोस्
-    .accesskey = A
-
 certs-enable-ocsp =
     .label = प्रमाणपत्रको वर्तमान वैधानिकता बारे जान्न OSCP को प्रतिक्रिया दिने सर्भरहरूलाई सोध्नुहोस्
     .accesskey = Q
@@ -880,33 +827,14 @@ certs-devices =
     .label = सुरक्षा उपकरणहरू…
     .accesskey = D
 
-space-alert-learn-more-button =
-    .label = अझै जान्नुहोस्
-    .accesskey = L
-
-space-alert-over-5gb-pref-button =
-    .label =
-        { PLATFORM() ->
-            [windows] विकल्पहरू खोल्नुहोस्
-           *[other] प्राथमिकताहरू खोल्नुहोस्
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] O
-           *[other] O
-        }
-
-space-alert-under-5gb-ok-button =
-    .label = ठीक छ, थाहा पाएँ
-    .accesskey = K
-
-space-alert-under-5gb-message = { -brand-short-name } लाई डिस्क स्पेसको कमि भईरहेको छ । वेबसाइट सामग्रीहरू ठीक नदेखिन सक्छन् । अझै राम्रो ब्राउजिङ्ग अनुभवको लागि डिस्क उपयोग अनुकूलन गर्न “अझै जान्नुहोस्” मा जानुहोस् ।
-
 ## Privacy Section - HTTPS-Only
+
+
+## DoH Section
+
 
 ## The following strings are used in the Download section of settings
 
 desktop-folder-name = डेस्कटप
 downloads-folder-name = Downloads
 choose-download-folder-title = डाउनलोड फोल्डर रोज्नुहोस्:
-

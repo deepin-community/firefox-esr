@@ -12,11 +12,6 @@ crashes-id = ID de reporto
 crashes-send-date = Submittite
 crashes-all-reports = Tote le reportos de collapso
 crashes-no-config = Iste application non ha essite configurate pro monstrar le reportos de collapso.
-extensions-title = Extensiones
-extensions-name = Nomine
-extensions-enabled = Activate
-extensions-version = Version
-extensions-id = ID
 support-addons-title = Additivos
 support-addons-name = Nomine
 support-addons-type = Typo
@@ -80,6 +75,12 @@ app-basics-location-service-key-google = Clave del servicio de localisation de G
 app-basics-safebrowsing-key-google = Clave de Google Safebrowsing
 app-basics-key-mozilla = Clave del servicio de localisation de Mozilla
 app-basics-safe-mode = Modo secur
+app-basics-memory-size = Dimension de memoria (RAM)
+app-basics-disk-available = Spatio de disco disponibile
+# Variables:
+#   $value (number) - Amount of data being stored
+#   $unit (string) - The unit of data being stored (e.g. MB)
+app-basics-data-size = { $value } { $unit }
 show-dir-label =
     { PLATFORM() ->
         [macos] Monstrar in Finder
@@ -109,11 +110,21 @@ graphics-gpu2-title = GPU #2
 graphics-decision-log-title = Registro de decision
 graphics-crash-guards-title = Functionalitates inactive de protection contra collapso
 graphics-workarounds-title = Solutiones alternative
+graphics-device-pixel-ratios = Proportion in pixels del apparato del fenestras
 # Windowing system in use on Linux (e.g. X11, Wayland).
 graphics-window-protocol = Protocollo de fenestra
 # Desktop environment in use on Linux (e.g. GNOME, KDE, XFCE, etc).
 graphics-desktop-environment = Ambiente scriptorio
 place-database-title = Base de datos de locos
+place-database-stats = Statistica
+place-database-stats-show = Monstrar statistica
+place-database-stats-hide = Celar statistica
+place-database-stats-entity = Entitate
+place-database-stats-count = Conto
+place-database-stats-size-kib = Dimension (KiB)
+place-database-stats-size-perc = Dimension (%)
+place-database-stats-efficiency-perc = Efficientia (%)
+place-database-stats-sequentiality-perc = Sequentialitate (%)
 place-database-integrity = Integritate
 place-database-verify-integrity = Verificar le integritate
 a11y-title = Accessibilitate
@@ -133,13 +144,11 @@ sandbox-sys-call-tid = TID
 sandbox-sys-call-proc-type = Typo de processo
 sandbox-sys-call-number = Syscall
 sandbox-sys-call-args = Argumentos
-safe-mode-title = Probar le modo secur
-restart-in-safe-mode-label = Reinitiar con le additivos inactive…
 troubleshoot-mode-title = Diagnosticar problemas
 restart-in-troubleshoot-mode-label = Modo diagnostic…
 clear-startup-cache-title = Prova vacuar le cache de initio
 clear-startup-cache-label = Vacuar le cache de initio…
-startup-cache-dialog-title2 = Reinitiar { -brand-short-name } pro clarar le cache initial?
+startup-cache-dialog-title2 = Reinitiar { -brand-short-name } pro vacuar le cache de initio?
 startup-cache-dialog-body2 = Isto non cambiara tu parametros ni removera extensiones.
 restart-button-label = Reinitiar
 
@@ -162,8 +171,18 @@ media-device-channels = Canales
 media-device-rate = Rata
 media-device-latency = Latentia
 media-capabilities-title = Functionalitates del medios
+media-codec-support-info = Informationes de supporto codec
 # List all the entries of the database.
 media-capabilities-enumerate = Enumerar base de datos
+
+## Codec support table
+
+media-codec-support-sw-decoding = Decodification del software
+media-codec-support-hw-decoding = Decodification del hardware
+media-codec-support-codec-name = Nomine del codec
+media-codec-support-supported = Supportate
+media-codec-support-unsupported = Non supportate
+media-codec-support-error = Informationes de supporto codecs indisponibile.
 
 ##
 
@@ -192,36 +211,6 @@ remote-debugging-url = Adresse URL
 
 ##
 
-support-third-party-modules-title = Modulos de tertios
-support-third-party-modules-module = File del modulo
-support-third-party-modules-version = Version de file
-support-third-party-modules-vendor = Info del venditor
-support-third-party-modules-occurrence = Occurrentia
-support-third-party-modules-process = Typo e ID del processo
-support-third-party-modules-thread = Argumento
-support-third-party-modules-base = Adresse imagebase
-support-third-party-modules-uptime = Tempore de activitate del processo (ms)
-support-third-party-modules-duration = Duration del cargamento (ms)
-support-third-party-modules-status = Stato
-support-third-party-modules-status-loaded = Cargate
-support-third-party-modules-status-blocked = Blocate
-support-third-party-modules-status-redirected = Re-dirigite
-support-third-party-modules-empty = Nulle modulo de tertios ha essite cargate.
-support-third-party-modules-no-value = (Sin valor)
-support-third-party-modules-button-open =
-    .title = Aperir position del file…
-support-third-party-modules-expand =
-    .title = Monstrar informationes detaliate
-support-third-party-modules-collapse =
-    .title = Collaber informationes detaliate
-support-third-party-modules-unsigned-icon =
-    .title = Iste modulo non es signate
-support-third-party-modules-folder-icon =
-    .title = Aperir position del file…
-support-third-party-modules-down-icon =
-    .title = Monstrar informationes detaliate
-support-third-party-modules-up-icon =
-    .title = Collaber informationes detaliate
 # Variables
 # $days (Integer) - Number of days of crashes to log
 report-crash-for-days =
@@ -254,8 +243,8 @@ crashes-time-days =
 # $reports (integer) - Number of pending reports
 pending-reports =
     { $reports ->
-        [one] Tote le reportos de collapso (includente { $reports } collapso pendente in le intervallo indicate)
-       *[other] Tote le reportos de collapso (includente { $reports } collapsos pendente in le intervallo indicate)
+        [one] Tote le reportos de crash (includente { $reports } crash pendente in le intervallo indicate)
+       *[other] Tote le reportos de crashes (includente { $reports } crashes pendente in le intervallo indicate)
     }
 raw-data-copied = Datos brute copiate al area de transferentia
 text-copied = Texto copiate al area de transferentia
@@ -308,10 +297,8 @@ webgl2-renderer = Driver WebGL 2 - renditor
 webgl2-version = Driver WebGL 2 - version
 webgl2-driver-extensions = Driver WebGL 2 - extensiones
 webgl2-extensions = Extensiones WebGL 2
-blocklisted-bug = Inserite in le lista del blocates per problemas note
-# Variables
-# $bugNumber (string) - String of bug number from Bugzilla
-bug-link = error { $bugNumber }
+webgpu-default-adapter = Scheda WebGPU predefinite
+webgpu-fallback-adapter = Scheda WebGPU predefinite
 # Variables
 #   $bugNumber (string) - Bug number on Bugzilla
 support-blocklisted-bug = Inserite in lista del blocadas per note problemas: <a data-l10n-name="bug-link">bug { $bugNumber }</a>
@@ -319,8 +306,6 @@ support-blocklisted-bug = Inserite in lista del blocadas per note problemas: <a 
 # $failureCode (string) - String that can be searched in the source tree.
 unknown-failure = Inserite in le lista del blocates: codice de error { $failureCode }
 d3d11layers-crash-guard = Compositor D3D11
-d3d11video-crash-guard = Decodificator de video D3D11
-d3d9video-crash-guard = Decodificator de video D3D9
 glcontext-crash-guard = OpenGL
 wmfvpxvideo-crash-guard = Decodificator de video WMF VPX
 reset-on-next-restart = Reinitialisar post quitar e reaperir
@@ -342,7 +327,8 @@ can-sandbox-content = Sandbox pro le processo de contento
 can-sandbox-media = Sandbox pro le plugin de media
 content-sandbox-level = Nivello de sandbox del processo de contento
 effective-content-sandbox-level = Nivello de sandbox del contento effective
-content-win32k-lockdown-state = Stato Reclusion de Win32k pro le processo de contento
+content-win32k-lockdown-state = Stato de blocamento de Win32k pro le processo de contento
+support-sandbox-gpu-level = Nivello del alveo a sablo pro le processo del GPU
 sandbox-proc-type-content = contento
 sandbox-proc-type-file = contento del file
 sandbox-proc-type-media-plugin = plugin de media
@@ -360,14 +346,6 @@ launcher-process-status-unknown = Stato incognite
 # $remoteWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
 multi-process-windows = { $remoteWindows }/{ $totalWindows }
-multi-process-status-0 = Activate per le usator
-multi-process-status-1 = Activate per predefinition
-multi-process-status-2 = Inactive
-multi-process-status-4 = Disactivate per le instrumentos de accessibilitate
-multi-process-status-6 = Disactivate per entrata de texto non supportate
-multi-process-status-7 = Disactivate per additivos
-multi-process-status-8 = Disactivate fortiatemente
-multi-process-status-unknown = Stato incognite
 # Variables
 # $fissionWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
@@ -376,7 +354,7 @@ fission-status-experiment-control = Disactivate per experimento
 fission-status-experiment-treatment = Activate per experimento
 fission-status-disabled-by-e10s-env = Disactivate per ambiente
 fission-status-enabled-by-env = Activate per ambiente
-fission-status-disabled-by-safe-mode = Disactivate per modo secur
+fission-status-disabled-by-env = Disactivate per ambiente
 fission-status-enabled-by-default = Activate per predefinition
 fission-status-disabled-by-default = Disactivate per predefinition
 fission-status-enabled-by-user-pref = Activate per le usator
@@ -418,7 +396,7 @@ support-printing-prefs-value = Valor
 support-remote-experiments-title = Experimentos remote
 support-remote-experiments-name = Nomine
 support-remote-experiments-branch = Ramo experimental
-support-remote-experiments-see-about-studies = Vider <a data-l10n-name="support-about-studies-link">about:studies</a> pro altere informationes, includite como disactivar experimentos individual o impedir a { -brand-short-name } de exequer iste typo de experimento in le futuro.
+support-remote-experiments-see-about-studies = Vide <a data-l10n-name="support-about-studies-link">about:studies</a> pro plus informationes, p.ex. como disactivar experimentos individual o impedir a { -brand-short-name } de exequer iste typo de experimento in le futuro.
 support-remote-features-title = Functiones remote
 support-remote-features-name = Nomine
 support-remote-features-status = Stato

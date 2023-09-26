@@ -2,13 +2,12 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-screenshots-context-menu = Ta en skärmbild
-
-screenshots-my-shots-button = Mina skärmbilder
-
 screenshot-toolbarbutton =
     .label = Skärmdump
     .tooltiptext = Ta en skärmdump
+
+screenshot-shortcut =
+    .key = S
 
 screenshots-instructions = Dra eller klicka på sidan för att välja en region. Tryck på ESC för att avbryta.
 screenshots-cancel-button = Avbryt
@@ -18,6 +17,14 @@ screenshots-download-button = Hämta
 screenshots-download-button-tooltip = Hämta skärmbild
 screenshots-copy-button = Kopiera
 screenshots-copy-button-tooltip = Kopiera skärmbild till urklipp
+screenshots-download-button-title =
+    .title = Ladda ner skärmdump
+screenshots-copy-button-title =
+    .title = Kopiera skärmdump till urklipp
+screenshots-cancel-button-title =
+    .title = Avbryt
+screenshots-retry-button-title =
+    .title = Försök ta skärmdump igen
 
 screenshots-meta-key =
     { PLATFORM() ->
@@ -41,8 +48,6 @@ screenshots-login-error-details = Vi kunde inte spara din skärmbild eftersom de
 screenshots-unshootable-page-error-title = Vi kan inte ta en skärmbild av sidan.
 screenshots-unshootable-page-error-details = Detta är inte en vanlig webbsida, så du kan inte ta en skärmbild av den.
 
-screenshots-self-screenshot-error-title = Du kan inte ta en skärmbild av sidan { -screenshots-brand-name }!
-
 screenshots-empty-selection-error-title = Ditt val är för litet
 
 screenshots-private-window-error-title = { -screenshots-brand-name } är inaktiverad i privat surfläge
@@ -50,3 +55,6 @@ screenshots-private-window-error-details = Ledsen för besväret. Vi arbetar med
 
 screenshots-generic-error-title = Oj! { -screenshots-brand-name } verkar inte fungera korrekt.
 screenshots-generic-error-details = Vi är inte säkra på vad som just hände. Kan du försöka igen eller ta en bild på en annan sida?
+
+screenshots-too-large-error-title = Din skärmdump har beskurits eftersom den var för stor
+screenshots-too-large-error-details = Prova att välja ett område som är mindre än 32 700 pixlar på sin längsta sida eller 124 900 000 pixlar total yta.

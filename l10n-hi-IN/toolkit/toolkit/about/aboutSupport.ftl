@@ -10,11 +10,6 @@ crashes-id = रिपोर्ट ID
 crashes-send-date = सुपुर्द
 crashes-all-reports = सभी क्रैश रिपोर्ट
 crashes-no-config = इस अनुप्रयोग को क्रैश रिपोर्ट को दिखाने के लिए विन्यस्त किया गया है.
-extensions-title = विस्तार
-extensions-name = नाम
-extensions-enabled = सक्रिय
-extensions-version = संस्करण
-extensions-id = आईडी
 support-addons-title = ऐड-ऑन
 support-addons-name = नाम
 support-addons-version = संस्करण
@@ -53,6 +48,7 @@ app-basics-enabled-plugins = सक्रिय प्लगिन
 app-basics-build-config = बिल्ड विन्यास
 app-basics-user-agent = उपयोक्ता प्रतिनिधि
 app-basics-os = OS
+app-basics-os-theme = OS थीम
 app-basics-memory-use = स्मृति के उपयोग
 app-basics-performance = प्रदर्शन
 app-basics-service-workers = सर्विस श्रमिक पंजीकृत किया गया
@@ -61,6 +57,12 @@ app-basics-multi-process-support = बहुप्रक्रिया वि�
 app-basics-enterprise-policies = एंटरप्राइज नीतियाँ
 app-basics-key-mozilla = Mozilla अवस्थिति सेवा कुंजी
 app-basics-safe-mode = सेफ मोड
+
+# Variables:
+#   $value (number) - Amount of data being stored
+#   $unit (string) - The unit of data being stored (e.g. MB)
+app-basics-data-size = { $value } { $unit }
+
 show-dir-label =
     { PLATFORM() ->
         [macos] फाइंडर में पता करें
@@ -106,8 +108,6 @@ sandbox-sys-call-tid = TID
 sandbox-sys-call-proc-type = प्रक्रिया का प्रकार
 sandbox-sys-call-number = सिसकॉल
 sandbox-sys-call-args = मापदंड
-safe-mode-title = सुरक्षित मोड में कोशिश करें
-restart-in-safe-mode-label = निष्क्रिय सहयुक्तियों के साथ फिर आरंभ करें...
 
 ## Media titles
 
@@ -126,6 +126,8 @@ media-device-format = प्रारूप
 media-device-channels = चैनल्स
 media-device-rate = दर
 media-device-latency = विलंबता
+
+## Codec support table
 
 ##
 
@@ -244,20 +246,14 @@ webgl2-renderer = WebGL 2 ड्राइवर रेंडेरेर
 webgl2-version = WebGL 2 ड्राइवर वर्ज़न
 webgl2-driver-extensions = WebGL 2 ड्राइवर एक्सटेंशन
 webgl2-extensions = WebGL 2 एक्सटेंशन
-blocklisted-bug = ज्ञात समस्याओं के कारण प्रतिबाधित सूची में डाला गया
-
-# Variables
-# $bugNumber (string) - String of bug number from Bugzilla
-bug-link = { $bugNumber } दोष
 
 # Variables
 # $failureCode (string) - String that can be searched in the source tree.
 unknown-failure = निरुद्ध सूचीबद्ध किया गया; { $failureCode } असफल कूट
 
 d3d11layers-crash-guard = डी3डी11 अक्षर योजक
-d3d11video-crash-guard = डी3डी11 वीडियो विसंकेतक
-d3d9video-crash-guard = डी3डी9 वीडियो विसंकेतक
 glcontext-crash-guard = जीएल खोलें
+wmfvpxvideo-crash-guard = WMF VPX वीडियो डिकोडर
 
 reset-on-next-restart = अगला पुनः आरंभ फिर सेट करें
 gpu-process-kill-button = GPU प्रक्रिया समाप्त करें
@@ -289,19 +285,12 @@ launcher-process-status-unknown = अज्ञात स्थिति
 # $remoteWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
 multi-process-windows = { $remoteWindows }/{ $totalWindows }
-multi-process-status-0 = उपयोक्ता द्वारा सक्षम
-multi-process-status-1 = तयशुदा द्वारा सक्षम
-multi-process-status-2 = निष्क्रिय
-multi-process-status-4 = सुगम्य उपकरणों द्वारा निष्क्रिय किया गया
-multi-process-status-6 = असमर्थित अवतरण निवेश द्वारा निष्क्रिय किया गया
-multi-process-status-7 = ऐड-ऑन्स द्वारा निष्क्रिय किया गया
-multi-process-status-8 = जबरन अक्षम
-multi-process-status-unknown = अज्ञात अवस्था
-
 # Variables
 # $fissionWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
 fission-windows = { $fissionWindows }/{ $totalWindows }
+fission-status-enabled-by-user-pref = उपयोगकर्ता द्वारा सक्षम
+fission-status-disabled-by-user-pref = उपयोगकर्ता द्वारा अक्षम
 
 async-pan-zoom = असमन्वित पैन/Zoom
 apz-none = कोई नहीं

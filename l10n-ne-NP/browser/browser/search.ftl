@@ -19,3 +19,18 @@ opensearch-error-download-desc = { -brand-short-name } ले खोजी प�
 
 ##
 
+searchbar-submit =
+    .tooltiptext = खोज बुझाउनुहोस्
+
+# This string is displayed in the search box when the input field is empty
+searchbar-input =
+    .placeholder = खोजी गर्नुहोस्
+
+searchbar-icon =
+    .tooltiptext = खोजी गर्नुहोस्
+
+## Infobar shown when search engine is removed and replaced.
+## Variables
+## $oldEngine (String) - the search engine to be removed.
+## $newEngine (String) - the search engine to replace the removed search engine.
+

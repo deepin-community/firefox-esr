@@ -2,9 +2,9 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-clear-site-data-window =
+clear-site-data-window2 =
     .title = માહિતી સાફ કરો
-    .style = width: 35em
+    .style = min-width: 35em
 
 clear-site-data-description = { -brand-short-name } દ્વારા સંગ્રહિત બધી કૂકીઝ અને સાઇટ ડેટાને સાફ કરી રહ્યું છે તે વેબસાઇટ્સથી તમને સાઇન આઉટ કરી શકે છે અને ઑફલાઇન વેબ સામગ્રીને દૂર કરી શકે છે. કેશ ડેટા નિકાળવા તમારા લૉગિનને અસર કરશે નહીં.
 
@@ -50,14 +50,6 @@ clear-site-data-cache-empty =
     .accesskey = W
 
 clear-site-data-cache-info = વેબસાઇટ્સને છબીઓ અને ડેટા ફરીથી લોડ કરવાની જરૂર પડશે
-
-clear-site-data-cancel =
-    .label = રદ કરો
-    .accesskey = C
-
-clear-site-data-clear =
-    .label = સાફ કરો
-    .accesskey = I
 
 clear-site-data-dialog =
     .buttonlabelaccept = સાફ કરો

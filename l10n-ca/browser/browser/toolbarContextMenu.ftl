@@ -20,14 +20,6 @@ toolbar-context-menu-bookmark-selected-tabs =
 toolbar-context-menu-select-all-tabs =
     .label = Selecciona totes les pestanyes
     .accesskey = t
-toolbar-context-menu-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Desfés el tancament de la pestanya
-           *[other] Desfés el tancament de les pestanyes
-        }
-    .accesskey = f
-
 toolbar-context-menu-reopen-closed-tabs =
     .label =
         { $tabCount ->
@@ -50,18 +42,18 @@ toolbar-context-menu-report-extension =
     .label = Informa sobre l'extensió
     .accesskey = o
 
-# Can appear on the same context menu as menubarCmd ("Menu Bar") and
-# personalbarCmd ("Bookmarks Toolbar"), so they should have different
-# access keys.
+# Can appear on the same context menu as toolbar-context-menu-menu-bar-cmd
+# ("Menu Bar") and personalbarCmd ("Bookmarks Toolbar"), so they should
+# have different access keys.
 toolbar-context-menu-pin-to-overflow-menu =
     .label = Fixa al menú d'eines addicionals (»)
     .accesskey = F
-toolbar-context-menu-auto-hide-downloads-button =
-    .label = Amaga automàticament en la barra d'eines
-    .accesskey = A
 toolbar-context-menu-auto-hide-downloads-button-2 =
     .label = Amaga el botó quan la llista sigui buida
     .accesskey = A
+toolbar-context-menu-always-open-downloads-panel =
+    .label = Mostra la subfinestra en iniciar la baixada
+    .accesskey = s
 toolbar-context-menu-remove-from-toolbar =
     .label = Elimina de la barra d'eines
     .accesskey = E
@@ -71,6 +63,11 @@ toolbar-context-menu-view-customize-toolbar =
 toolbar-context-menu-view-customize-toolbar-2 =
     .label = Personalitza la barra d'eines…
     .accesskey = P
+# This is only ever shown when toolbar-context-menu-pin-to-overflow-menu
+# is hidden, so they can share access keys.
+toolbar-context-menu-pin-to-toolbar =
+    .label = Fixa a la barra de tasques
+    .accesskey = F
 
 toolbar-context-menu-bookmarks-toolbar-always-show-2 =
     .label = Mostra sempre
@@ -85,3 +82,7 @@ toolbar-context-menu-bookmarks-toolbar-on-new-tab-2 =
 toolbar-context-menu-bookmarks-show-other-bookmarks =
     .label = Mostra «Altres adreces d'interès»
     .accesskey = M
+
+toolbar-context-menu-menu-bar-cmd =
+    .toolbarname = Barra de menú
+    .accesskey = m

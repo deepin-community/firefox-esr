@@ -2,17 +2,6 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-bookmark-overlay-name =
-    .value = Nom :
-    .accesskey = N
-
-bookmark-overlay-location =
-    .value = Adresse :
-    .accesskey = A
-
-bookmark-overlay-folder =
-    .value = Dossier :
-
 bookmark-overlay-name-2 =
     .value = Nom
     .accesskey = N
@@ -35,13 +24,15 @@ bookmark-overlay-folders-expander =
     .tooltiptextdown = { bookmark-overlay-folders-expander.tooltiptext }
     .tooltiptextup = Masquer
 
+bookmark-overlay-folders-expander2 =
+    .tooltiptext = Afficher tous les dossiers de marque-pages
+
+bookmark-overlay-folders-expander-hide =
+    .tooltiptext = Masquer
+
 bookmark-overlay-new-folder-button =
     .label = Nouveau dossier
     .accesskey = v
-
-bookmark-overlay-tags =
-    .value = Étiquettes :
-    .accesskey = u
 
 bookmark-overlay-tags-2 =
     .value = Étiquettes
@@ -55,9 +46,11 @@ bookmark-overlay-tags-expander =
     .tooltiptextdown = { bookmark-overlay-tags-expander.tooltiptext }
     .tooltiptextup = Masquer
 
-bookmark-overlay-keyword =
-    .value = Mot-clé :
-    .accesskey = M
+bookmark-overlay-tags-expander2 =
+    .tooltiptext = Afficher toutes les étiquettes
+
+bookmark-overlay-tags-expander-hide =
+    .tooltiptext = Masquer
 
 bookmark-overlay-keyword-2 =
     .value = Mot-clé

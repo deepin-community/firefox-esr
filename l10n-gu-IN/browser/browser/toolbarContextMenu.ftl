@@ -31,9 +31,6 @@ toolbar-context-menu-remove-extension =
 toolbar-context-menu-pin-to-overflow-menu =
     .label = ઓવરફ્લો મેનૂ પર પિન કરો
     .accesskey = P
-toolbar-context-menu-auto-hide-downloads-button =
-    .label = ટૂલબાર સ્વતઃ-છુપાવો
-    .accesskey = A
 toolbar-context-menu-remove-from-toolbar =
     .label = સાધનપટ્ટીમાંથી દૂર કરો
     .accesskey = R
@@ -41,3 +38,6 @@ toolbar-context-menu-view-customize-toolbar =
     .label = વૈવિધ્યપૂર્ણ બનાવો...
     .accesskey = C
 
+toolbar-context-menu-menu-bar-cmd =
+    .toolbarname = મેનુ પટ્ટી
+    .accesskey = M

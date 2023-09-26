@@ -5,7 +5,7 @@
 protections-panel-sendreportview-error = Er is een fout opgetreden bij het verzenden van het rapport. Probeer het later nog eens.
 
 # A link shown when ETP is disabled for a site. Opens the breakage report subview when clicked.
-protections-panel-sitefixedsendreport-label = Website gerepareerd? Verzend rapport
+protections-panel-sitefixedsendreport-label = Website gerepareerd? Rapport verzenden
 
 ## These strings are used to define the different levels of
 ## Enhanced Tracking Protection.
@@ -63,7 +63,6 @@ protections-panel-not-found-label = Geen gedetecteerd
 ##
 
 protections-panel-settings-label = Beschermingsinstellingen
-# This should match the "appmenuitem-protection-dashboard-title" string in browser/appmenu.ftl.
 protections-panel-protectionsdashboard-label = Beveiligingsdashboard
 
 ## In the Site Not Working? view, we suggest turning off protections if
@@ -78,6 +77,7 @@ protections-panel-site-not-working-view-issue-list-forms = Formulieren
 protections-panel-site-not-working-view-issue-list-payments = Betalingen
 protections-panel-site-not-working-view-issue-list-comments = Opmerkingen
 protections-panel-site-not-working-view-issue-list-videos = Video’s
+protections-panel-site-not-working-view-issue-list-fonts = Lettertypen
 
 protections-panel-site-not-working-view-send-report = Rapport verzenden
 
@@ -101,6 +101,7 @@ protections-panel-content-blocking-manage-settings =
 protections-panel-content-blocking-breakage-report-view =
     .title = Niet-werkende website melden
 protections-panel-content-blocking-breakage-report-view-description = Het blokkeren van bepaalde trackers kan problemen met bepaalde websites veroorzaken. Door deze problemen te melden, helpt u { -brand-short-name } voor iedereen te verbeteren. Als u dit rapport verzendt, wordt zowel een URL als informatie over uw browserinstellingen naar Mozilla verzonden. <label data-l10n-name="learn-more">Meer info</label>
+protections-panel-content-blocking-breakage-report-view-description2 = Het blokkeren van bepaalde trackers kan problemen met bepaalde websites veroorzaken. Door deze problemen te melden, helpt u { -brand-short-name } voor iedereen te verbeteren. Als u dit rapport verzendt, wordt zowel een URL als informatie over uw browserinstellingen naar { -vendor-short-name } verzonden.
 protections-panel-content-blocking-breakage-report-view-collection-url = URL
 protections-panel-content-blocking-breakage-report-view-collection-url-label =
     .aria-label = URL
@@ -111,3 +112,22 @@ protections-panel-content-blocking-breakage-report-view-cancel =
     .label = Annuleren
 protections-panel-content-blocking-breakage-report-view-send-report =
     .label = Rapport verzenden
+
+# Cookie Banner Handling
+
+protections-panel-cookie-banner-handling-header = Reductie van cookiebanners
+protections-panel-cookie-banner-handling-enabled = Aan voor deze website
+protections-panel-cookie-banner-handling-disabled = Uit voor deze website
+protections-panel-cookie-banner-handling-undetected = Website wordt momenteel niet ondersteund
+
+protections-panel-cookie-banner-view-title =
+    .title = Reductie van cookiebanners
+# Variables
+#  $host (String): the hostname of the site that is being displayed.
+protections-panel-cookie-banner-view-turn-off-for-site = Reductie van cookiebanners uitschakelen voor { $host }?
+protections-panel-cookie-banner-view-turn-on-for-site = Reductie van cookiebanners inschakelen voor deze website?
+protections-panel-cookie-banner-view-cookie-clear-warning = { -brand-short-name } wist de cookies voor deze website en vernieuwt de pagina. Als alle cookies worden gewist, wordt u mogelijk afgemeld of worden winkelwagentjes geleegd.
+protections-panel-cookie-banner-view-turn-on-description = { -brand-short-name } probeert alle cookieverzoeken op ondersteunde websites automatisch te weigeren.
+protections-panel-cookie-banner-view-cancel = Annuleren
+protections-panel-cookie-banner-view-turn-off = Uitschakelen
+protections-panel-cookie-banner-view-turn-on = Inschakelen

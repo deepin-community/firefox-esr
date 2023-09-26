@@ -20,14 +20,6 @@ toolbar-context-menu-bookmark-selected-tabs =
 toolbar-context-menu-select-all-tabs =
     .label = 選擇所有分頁
     .accesskey = S
-toolbar-context-menu-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] 復原已關閉分頁
-           *[other] 復原已關閉分頁
-        }
-    .accesskey = U
-
 toolbar-context-menu-reopen-closed-tabs =
     .label =
         { $tabCount ->
@@ -50,18 +42,18 @@ toolbar-context-menu-report-extension =
     .label = 回報擴充套件
     .accesskey = o
 
-# Can appear on the same context menu as menubarCmd ("Menu Bar") and
-# personalbarCmd ("Bookmarks Toolbar"), so they should have different
-# access keys.
+# Can appear on the same context menu as toolbar-context-menu-menu-bar-cmd
+# ("Menu Bar") and personalbarCmd ("Bookmarks Toolbar"), so they should
+# have different access keys.
 toolbar-context-menu-pin-to-overflow-menu =
     .label = 釘選到收藏選單
     .accesskey = P
-toolbar-context-menu-auto-hide-downloads-button =
-    .label = 於工具列自動隱藏
-    .accesskey = A
 toolbar-context-menu-auto-hide-downloads-button-2 =
     .label = 無內容時隱藏按鈕
     .accesskey = H
+toolbar-context-menu-always-open-downloads-panel =
+    .label = 開始下載時顯示面板
+    .accesskey = S
 toolbar-context-menu-remove-from-toolbar =
     .label = 自工具列移除
     .accesskey = R
@@ -71,6 +63,11 @@ toolbar-context-menu-view-customize-toolbar =
 toolbar-context-menu-view-customize-toolbar-2 =
     .label = 自訂工具列…
     .accesskey = C
+# This is only ever shown when toolbar-context-menu-pin-to-overflow-menu
+# is hidden, so they can share access keys.
+toolbar-context-menu-pin-to-toolbar =
+    .label = 釘選至工具列
+    .accesskey = P
 
 toolbar-context-menu-bookmarks-toolbar-always-show-2 =
     .label = 每次都顯示
@@ -85,3 +82,7 @@ toolbar-context-menu-bookmarks-toolbar-on-new-tab-2 =
 toolbar-context-menu-bookmarks-show-other-bookmarks =
     .label = 顯示其他書籤
     .accesskey = h
+
+toolbar-context-menu-menu-bar-cmd =
+    .toolbarname = 選單列
+    .accesskey = M

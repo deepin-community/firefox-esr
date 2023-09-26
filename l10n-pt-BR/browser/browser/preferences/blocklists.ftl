@@ -2,9 +2,9 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-blocklist-window =
+blocklist-window2 =
     .title = Listas de bloqueio
-    .style = width: 50em
+    .style = min-width: 55em
 
 blocklist-description = Escolha a lista que o { -brand-short-name } deve usar para bloquear rastreadores online. Listas fornecidas por <a data-l10n-name="disconnect-link" title="Disconnect">Disconnect</a>.
 blocklist-close-key =
@@ -12,14 +12,6 @@ blocklist-close-key =
 
 blocklist-treehead-list =
     .label = Lista
-
-blocklist-button-cancel =
-    .label = Cancelar
-    .accesskey = C
-
-blocklist-button-ok =
-    .label = Salvar alterações
-    .accesskey = S
 
 blocklist-dialog =
     .buttonlabelaccept = Salvar alterações

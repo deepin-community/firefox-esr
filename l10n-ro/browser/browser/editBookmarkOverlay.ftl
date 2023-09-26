@@ -2,17 +2,6 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-bookmark-overlay-name =
-    .value = Nume:
-    .accesskey = N
-
-bookmark-overlay-location =
-    .value = Locație:
-    .accesskey = L
-
-bookmark-overlay-folder =
-    .value = Dosar:
-
 bookmark-overlay-name-2 =
     .value = Nume
     .accesskey = N
@@ -35,13 +24,15 @@ bookmark-overlay-folders-expander =
     .tooltiptextdown = { bookmark-overlay-folders-expander.tooltiptext }
     .tooltiptextup = Ascunde
 
+bookmark-overlay-folders-expander2 =
+    .tooltiptext = Afișează toate dosarele cu marcaje
+
+bookmark-overlay-folders-expander-hide =
+    .tooltiptext = Ascunde
+
 bookmark-overlay-new-folder-button =
     .label = Dosar nou
     .accesskey = o
-
-bookmark-overlay-tags =
-    .value = Etichete:
-    .accesskey = T
 
 bookmark-overlay-tags-2 =
     .value = Etichete
@@ -55,9 +46,11 @@ bookmark-overlay-tags-expander =
     .tooltiptextdown = { bookmark-overlay-tags-expander.tooltiptext }
     .tooltiptextup = Ascunde
 
-bookmark-overlay-keyword =
-    .value = Cuvânt cheie:
-    .accesskey = K
+bookmark-overlay-tags-expander2 =
+    .tooltiptext = Afișează toate etichetele
+
+bookmark-overlay-tags-expander-hide =
+    .tooltiptext = Ascunde
 
 bookmark-overlay-keyword-2 =
     .value = Cuvânt cheie

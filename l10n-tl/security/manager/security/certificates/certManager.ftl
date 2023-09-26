@@ -22,48 +22,11 @@ certmgr-tab-ca =
 
 certmgr-mine = May mga certificate ka mula sa mga organisasyong ito na nakakakilala sa iyo
 certmgr-people = May mga certificate kang nakatago na kumikilala sa mga taong ito
-certmgr-servers = May mga certificate kang nakatago na kumikilala sa mga server na ito
 certmgr-ca = May mga certificate ka na nakatago na kumikilala sa mga certificate authority na ito
 
-certmgr-detail-general-tab-title =
-    .label = Pangkalahatan
-    .accesskey = P
-
-certmgr-detail-pretty-print-tab-title =
-    .label = Mga Detalye
-    .accesskey = D
-
-certmgr-pending-label =
-    .value = Kasalukuyan pang beneberipika ang certificate...
-
-certmgr-subject-label = Ibinigay Kay
-
-certmgr-issuer-label = Ibinigay Ni
-
-certmgr-period-of-validity = Panahon ng Bisa
-
-certmgr-fingerprints = Mga Fingerprint
-
-certmgr-cert-detail =
-    .title = Detalye ng Sertipiko
-    .buttonlabelaccept = Isara
-    .buttonaccesskeyaccept = I
-
-certmgr-cert-detail-commonname = Common Name (CN)
-
-certmgr-cert-detail-org = Organisasyon (O)
-
-certmgr-cert-detail-orgunit = Organizational Unit (OU)
-
-certmgr-cert-detail-serial-number = Serial Number
-
-certmgr-cert-detail-sha-256-fingerprint = SHA-256 Fingerprint
-
-certmgr-cert-detail-sha-1-fingerprint = SHA1 Fingerprint
-
-certmgr-edit-ca-cert =
+certmgr-edit-ca-cert2 =
     .title = i-Edit ang CA certificate trust settings
-    .style = width: 48em;
+    .style = min-width: 48em;
 
 certmgr-edit-cert-edit-trust = i-Edit ang trust settings:
 
@@ -73,9 +36,9 @@ certmgr-edit-cert-trust-ssl =
 certmgr-edit-cert-trust-email =
     .label = Ang sertipiko na ito ay maaaring makilala ang mga gumagamit ng mail.
 
-certmgr-delete-cert =
+certmgr-delete-cert2 =
     .title = Burahin ang Sertipiko
-    .style = width: 48em; height: 24em;
+    .style = min-width: 48em; min-height: 24em;
 
 certmgr-cert-host =
     .label = Host
@@ -86,18 +49,11 @@ certmgr-cert-name =
 certmgr-cert-server =
     .label = Server
 
-certmgr-override-lifetime =
-    .label = Haba ng buhay
-
 certmgr-token-name =
     .label = Security Device
 
-certmgr-begins-on = Nagsisimula Sa
-
 certmgr-begins-label =
     .label = Nagsisimula Sa
-
-certmgr-expires-on = Mawawalan ng Bisa Sa
 
 certmgr-expires-label =
     .label = Mawawalan ng Bisa Sa
@@ -139,18 +95,6 @@ certmgr-backup-all =
 certmgr-restore =
     .label = I-import...
     .accesskey = m
-
-certmgr-details =
-    .value = Mga Patlang ng Certificate
-    .accesskey = F
-
-certmgr-fields =
-    .value = Halaga ng Patlang
-    .accesskey = V
-
-certmgr-hierarchy =
-    .value = Certificate Hierarchy
-    .accesskey = H
 
 certmgr-add-exception =
     .label = Magdagdag ng Exception…
@@ -214,12 +158,6 @@ delete-user-cert-confirm = Nakasisiguro ka bang nais mong burahin ang mga sertip
 delete-user-cert-impact = Kung tatangalin mo ang isa sa iyong mga sariling sertipiko, maaari mong hindi na magagamit ito upang kilalanin ang iyong sarili.
 
 
-delete-ssl-cert-title =
-    .title = Burahin ang mga Server Certificate Exception
-delete-ssl-cert-confirm = Sigurado ka bang gusto mong burahin ang mga server exception na ito?
-delete-ssl-cert-impact = Kung ibubura mo ang serverver exception, ibalik mo ang mga karaniwang na pagsusuri ng seguridad para sa server at kailangan ito ay gumagamit ng isang wastong sertipiko.
-
-
 delete-ssl-override-confirm = Sigurado ka bang gusto mong tanggalin itong server exception?
 
 delete-ca-cert-title =
@@ -239,47 +177,6 @@ delete-email-cert-impact = Kung tatangalin mo ang e-mail certificate ng isang ta
 #   $serialNumber : the serial number of the cert in AA:BB:CC hex format.
 cert-with-serial =
     .value = Certificate na may serial number: { $serialNumber }
-
-## Cert Viewer
-
-# Title used for the Certificate Viewer.
-#
-# Variables:
-#   $certificate : a string representative of the certificate being viewed.
-cert-viewer-title =
-    .title = Certificate Viewer: ”{ $certName }”
-
-not-present =
-    .value = <Not Part Of Certificate>
-
-# Cert verification
-cert-verified = Ang sertipikong ito ay nasiyasat para sa mga sumusunod na gamit:
-
-# Add usage
-verify-ssl-client =
-    .value = SSL Client Certificate
-
-verify-ssl-server =
-    .value = SSL Server Certificate
-
-verify-ssl-ca =
-    .value = SSL Certificate Authority
-
-verify-email-signer =
-    .value = Email Signer Certificate
-
-verify-email-recip =
-    .value = Email Recipient Certificate
-
-# Cert verification
-cert-not-verified-cert-revoked = Hindi masiyasat ang sertipikong ito dahil napawalang-bisa ito.
-cert-not-verified-cert-expired = Hindi masiyasat ang sertipikong ito dahil ito ay lumipas na.
-cert-not-verified-cert-not-trusted = Hindi masiyasat ang sertipikong ito dahil hindi ito mapagkakatiwalaan.
-cert-not-verified-issuer-not-trusted = Hindi ma-verify itong sertipiko dahil ang issuer ay hindi mapagkakatiwalaan.
-cert-not-verified-issuer-unknown = Hindi ma-verify itong sertipiko dahil ang issuer ay hindi kilala.
-cert-not-verified-ca-invalid = Hindi ma-verify itong sertipiko dahil ang CA certificate ay hindi wasto.
-cert-not-verified_algorithm-disabled = Hindi ma-verify ang certificate na ito dahil ito ay signed gamit ang signature algorithm na naka-disable dahil hindi ito ligtas gamitin.
-cert-not-verified-unknown = Hindi ma-verify ang sertipiko na ito para sa hindi kilalang dahilan.
 
 # Used when no cert is stored for an override
 no-cert-stored-for-override = (Hindi Nakaimbak)

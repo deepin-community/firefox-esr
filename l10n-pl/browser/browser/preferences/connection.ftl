@@ -2,12 +2,12 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-connection-window =
+connection-window2 =
     .title = Ustawienia połączenia
     .style =
         { PLATFORM() ->
-            [macos] width: 45em
-           *[other] width: 49em
+            [macos] min-width: 45em
+           *[other] min-width: 49em
         }
 
 connection-close-key =
@@ -35,10 +35,6 @@ connection-proxy-http = Serwer proxy HTTP:
     .accesskey = H
 connection-proxy-http-port = Port:
     .accesskey = o
-connection-proxy-http-sharing =
-    .label = Użyj tego serwera proxy także dla FTP i HTTPS
-    .accesskey = U
-
 connection-proxy-https-sharing =
     .label = Użyj tego serwera proxy także dla HTTPS
     .accesskey = U
@@ -47,11 +43,6 @@ connection-proxy-https = Serwer proxy HTTPS:
     .accesskey = S
 connection-proxy-ssl-port = Port:
     .accesskey = r
-
-connection-proxy-ftp = Serwer proxy FTP:
-    .accesskey = F
-connection-proxy-ftp-port = Port:
-    .accesskey = t
 
 connection-proxy-socks = Host SOCKS:
     .accesskey = C
@@ -69,9 +60,6 @@ connection-proxy-noproxy = Nie używaj proxy dla:
 
 connection-proxy-noproxy-desc = Przykład: .mozilla.org, .com.pl, 192.168.1.0/24
 
-# Do not translate localhost, 127.0.0.1 and ::1.
-connection-proxy-noproxy-localhost-desc = Połączania z localhost, 127.0.0.1 i ::1 nigdy nie używają serwera proxy.
-
 # Do not translate "localhost", "127.0.0.1/8" and "::1". (You can translate "and".)
 connection-proxy-noproxy-localhost-desc-2 = Połączania z localhost, 127.0.0.1/8 i ::1 nigdy nie używają serwera proxy.
 
@@ -88,16 +76,14 @@ connection-proxy-autologin =
     .accesskey = j
     .tooltip = Umożliwia automatyczne uwierzytelnianie na serwerach proxy, jeśli wcześniej zostały zachowane dane logowania. W przypadku nieudanego uwierzytelniania zostanie wyświetlone standardowe pytanie.
 
+connection-proxy-autologin-checkbox =
+    .label = Nie pytaj o uwierzytelnianie, jeśli istnieje zachowane hasło
+    .accesskey = j
+    .tooltiptext = Umożliwia automatyczne uwierzytelnianie na serwerach proxy, jeśli wcześniej zostały zachowane dane logowania. W przypadku nieudanego uwierzytelniania zostanie wyświetlone standardowe pytanie.
+
 connection-proxy-socks-remote-dns =
     .label = Proxy DNS podczas używania SOCKS v5
     .accesskey = x
-
-connection-dns-over-https =
-    .label = DNS poprzez HTTPS
-    .accesskey = D
-
-connection-dns-over-https-url-resolver = Dostawca
-    .accesskey = D
 
 # Variables:
 #   $name (String) - Display name or URL for the DNS over HTTPS provider

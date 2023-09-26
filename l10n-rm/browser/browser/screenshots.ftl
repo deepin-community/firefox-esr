@@ -2,13 +2,12 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-screenshots-context-menu = Far in maletg dal visur
-
-screenshots-my-shots-button = Mes maletgs da visur
-
 screenshot-toolbarbutton =
     .label = Maletg dal visur
     .tooltiptext = Far in maletg dal visur
+
+screenshot-shortcut =
+    .key = S
 
 screenshots-instructions = Tira u clicca sin la pagina per tscherner ina regiun. Smatga ESC per interrumper.
 screenshots-cancel-button = Interrumper
@@ -18,6 +17,14 @@ screenshots-download-button = Telechargiar
 screenshots-download-button-tooltip = Telechargiar il maletg dal visur
 screenshots-copy-button = Copiar
 screenshots-copy-button-tooltip = Copiar il maletg dal visur en l'archiv provisoric
+screenshots-download-button-title =
+    .title = Telechargiar il maletg dal visur
+screenshots-copy-button-title =
+    .title = Copiar il maletg dal visur en l'archiv provisoric
+screenshots-cancel-button-title =
+    .title = Interrumper
+screenshots-retry-button-title =
+    .title = Reempruvar il maletg dal visur
 
 screenshots-meta-key =
     { PLATFORM() ->
@@ -41,8 +48,6 @@ screenshots-login-error-details = Impussibel da memorisar tes maletg da virus pe
 screenshots-unshootable-page-error-title = Impussibel da far in maletg da visur da questa pagina.
 screenshots-unshootable-page-error-details = Quai n'è betg ina pagina web da standard, perquai n'èsi betg pussaivel da far in maletg da visur dad ella.
 
-screenshots-self-screenshot-error-title = Impussibel da far in maletg da visur dad ina pagina da { -screenshots-brand-name }.
-
 screenshots-empty-selection-error-title = La zona selecziunada è memia pitschna
 
 screenshots-private-window-error-title = { -screenshots-brand-name } è deactivà en il modus privat
@@ -50,3 +55,6 @@ screenshots-private-window-error-details = Perstgisa las malempernaivladads. Nus
 
 screenshots-generic-error-title = Oh dieu! { -screenshots-brand-name } ha il singlut.
 screenshots-generic-error-details = Nus na savain betg tge ch'è gist capità. Vuls empruvar anc ina giada, forsa cun in'autra pagina?
+
+screenshots-too-large-error-title = Tes maletg dal visur è vegnì retaglià perquai ch'el era memia grond
+screenshots-too-large-error-details = Emprova da tscherner ina zona che n'ha nagina vart che surpassa 32'700 pixels. Ultra da quai sto la surfatscha esser pli pitschna che 124'900'000 pixels.

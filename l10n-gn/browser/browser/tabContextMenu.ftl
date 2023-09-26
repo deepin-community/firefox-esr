@@ -11,6 +11,12 @@ reload-tab =
 select-all-tabs =
     .label = Eiporavopaite tendayke
     .accesskey = S
+tab-context-play-tab =
+    .label = Tenda’i mbohetaha
+    .accesskey = l
+tab-context-play-tabs =
+    .label = Tendayke mboheta
+    .accesskey = y
 duplicate-tab =
     .label = Embojoyvy Tendayke
     .accesskey = D
@@ -48,12 +54,9 @@ unpin-selected-tabs =
 bookmark-selected-tabs =
     .label = Emongurusu tendayke…
     .accesskey = k
-bookmark-tab =
-    .label = Techaukaha rendayke
+tab-context-bookmark-tab =
+    .label = Embojuaju kuatiarogue techaukaháre…
     .accesskey = B
-reopen-in-container =
-    .label = Embojurujajey guerekohápe
-    .accesskey = e
 tab-context-open-in-new-container-tab =
     .label = Ijuruja guerekoha rendayke pyahúpe
     .accesskey = e
@@ -69,31 +72,9 @@ move-to-new-window =
 tab-context-close-multiple-tabs =
     .label = Emboty tendaykeita
     .accesskey = M
-tab-context-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Emboguevi tendayke mboty
-            [one] Emboguevi tendayke mboty
-           *[other] Emboguevi tendayke mboty
-        }
-    .accesskey = U
-close-tab =
-    .label = Tendayke mboty
-    .accesskey = C
-close-tabs =
-    .label = Emboty tendayke
-    .accesskey = S
-move-tabs =
-    .label = Eguerova tendayke
-    .accesskey = v
-move-tab =
-    .label = Eguerova tendayke
-    .accesskey = v
 tab-context-share-url =
     .label = Moherakuã
     .accesskey = h
-tab-context-share-more =
-    .label = Hetave…
 
 ## Variables:
 ##  $tabCount (Number): the number of tabs that are affected by the action.
@@ -106,14 +87,6 @@ tab-context-reopen-closed-tabs =
            *[other] Embojurujajey umi tendayke mbotypyre
         }
     .accesskey = o
-tab-context-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Emboty tendayke
-            [one] Emboty tendaykekuéra
-           *[other] Emboty tendaykekuéra
-        }
-    .accesskey = C
 tab-context-close-n-tabs =
     .label =
         { $tabCount ->
@@ -130,3 +103,11 @@ tab-context-move-tabs =
            *[other] Eguerova tendaykekuéra
         }
     .accesskey = v
+
+tab-context-send-tabs-to-device =
+    .label =
+        { $tabCount ->
+            [one] Emondo tendayke mba’e’okápe
+           *[other] Emondo umi tendayke { $tabCount } mba’e’okápe
+        }
+    .accesskey = n

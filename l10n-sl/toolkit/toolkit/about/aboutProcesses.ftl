@@ -25,12 +25,6 @@ about-processes-column-cpu-total = CPE
 ## Process names
 ## Variables:
 ##    $pid (String) The process id of this process, assigned by the OS.
-##    $origin (String) The domain name for this process.
-##    $type (String) The raw type for this process. Used for unknown processes.
-
-## Process names
-## Variables:
-##    $pid (String) The process id of this process, assigned by the OS.
 
 about-processes-browser-process = { -brand-short-name } ({ $pid })
 about-processes-web-process = Skupni spletni proces ({ $pid })
@@ -58,6 +52,8 @@ about-processes-unknown-process = Drugo: { $type } ({ $pid })
 ##    $origin (String) The domain name for this process.
 
 about-processes-web-isolated-process = { $origin } ({ $pid })
+about-processes-web-serviceworker = { $origin } ({ $pid }, serviceworker)
+about-processes-web-isolated-process-private = { $origin } – Zaseben ({ $pid })
 
 ## Details within processes
 
@@ -117,6 +113,16 @@ about-processes-frame-name-one = Podokvir: { $url }
 #   $shortUrl (String) The shared prefix for the subframes in the group.
 about-processes-frame-name-many = Podokviri ({ $number }): { $shortUrl }
 
+## Utility process actor names
+
+about-processes-utility-actor-audio-decoder-generic = Splošni zvočni dekodirnik
+about-processes-utility-actor-audio-decoder-applemedia = Zvočni dekodirnik Apple Media
+about-processes-utility-actor-audio-decoder-wmf = Zvočni dekodirnik Windows Media Framework
+about-processes-utility-actor-mf-media-engine = Windows Media Foundation Media Engine CDM
+# "Oracle" refers to an internal Firefox process and should be kept in English
+about-processes-utility-actor-js-oracle = Oracle za JavaScript
+about-processes-utility-actor-windows-utils = Orodja Windows
+
 ## Displaying CPU (percentage and total)
 ## Variables:
 ##    $percent (Number) The percentage of CPU used by the process or thread.
@@ -133,9 +139,14 @@ about-processes-cpu = { NUMBER($percent, maximumSignificantDigits: 2, style: "pe
 # Special case: data is not available yet.
 about-processes-cpu-user-and-kernel-not-ready = (merjenje)
 
+# Special case: process or thread is almost idle (using less than 0.1% of a CPU core).
+# This case only occurs on Windows where the precision of the CPU times is low.
+about-processes-cpu-almost-idle = < 0,1 %
+    .title = Skupen čas CPE: { NUMBER($total, maximumFractionDigits: 0) } { $unit }
+
 # Special case: process or thread is currently idle.
-about-processes-cpu-idle = nedejavno
-    .title = Skupen čas CPE: { NUMBER($total, maximumFractionDigits: 2) } { $unit }
+about-processes-cpu-fully-idle = nedejavno
+    .title = Skupen čas CPE: { NUMBER($total, maximumFractionDigits: 0) } { $unit }
 
 ## Displaying Memory (total and delta)
 ## Variables:

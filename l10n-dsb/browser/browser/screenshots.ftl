@@ -2,13 +2,12 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-screenshots-context-menu = Foto wobrazowki gótowaś
-
-screenshots-my-shots-button = Móje fota wobrazowki
-
 screenshot-toolbarbutton =
     .label = Foto wobrazowki
     .tooltiptext = Foto wobrazowki gótowaś
+
+screenshot-shortcut =
+    .key = S
 
 screenshots-instructions = Śěgniśo abo klikniśo na bok, aby wobceŕk wubrał. Tłocćo na ESC, aby pśetergnuł.
 screenshots-cancel-button = Pśetergnuś
@@ -18,6 +17,14 @@ screenshots-download-button = Ześěgnuś
 screenshots-download-button-tooltip = Foto wobrazowki ześěgnuś
 screenshots-copy-button = Kopěrowaś
 screenshots-copy-button-tooltip = Foto wobrazowki do mjazywótkłada kopěrowaś
+screenshots-download-button-title =
+    .title = Foto wobrazowki ześěgnuś
+screenshots-copy-button-title =
+    .title = Foto wobrazowki do mjazywótkłada kopěrowaś
+screenshots-cancel-button-title =
+    .title = Pśetergnuś
+screenshots-retry-button-title =
+    .title = Foto wobrazowki znowego wopytaś
 
 screenshots-meta-key =
     { PLATFORM() ->
@@ -41,8 +48,6 @@ screenshots-login-error-details = Njesjmy mógli swójo foto wobrazowki składow
 screenshots-unshootable-page-error-title = Foto wobrazowki toś togo boka njejo móžne.
 screenshots-unshootable-page-error-details = To njejo standardny webbok, togodla foto wobrazowki wót njeje njejo móžne.
 
-screenshots-self-screenshot-error-title = Njamóžośo wobrazowku boka { -screenshots-brand-name } fotografěrowaś!
-
 screenshots-empty-selection-error-title = Waš wuběrk jo pśemały
 
 screenshots-private-window-error-title = Firefox { -screenshots-brand-name } jo w priwatnem modusu znjemóžnjony
@@ -50,3 +55,6 @@ screenshots-private-window-error-details = Wódajśo pšosym wobuznosći. Źěł
 
 screenshots-generic-error-title = Hopla! { -screenshots-brand-name } njeźěła.
 screenshots-generic-error-details = Njejsmy se wěste, což jo se stało. Cośo hyšći raz wopytaś abo cośo drugi bok fotografěrowaś?
+
+screenshots-too-large-error-title = Wašo foto wobrazowki jo se pśirězało, dokulaž jo było pśewjelike
+screenshots-too-large-error-details = Wopytajśo, region wubraś, kótaryž jo mjeńšy ako 32.700 pikselow na jogo nejdelšem boku abo 124.900.000 pikselow na jogo cełkownej płoninje.

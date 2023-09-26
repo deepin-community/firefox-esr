@@ -20,17 +20,6 @@ toolbar-context-menu-bookmark-selected-tabs =
 toolbar-context-menu-select-all-tabs =
     .label = Izberi vse zavihke
     .accesskey = b
-toolbar-context-menu-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Ponovno odpri zavihek
-            [one] Ponovno odpri zavihek
-            [two] Ponovno odpri zavihka
-            [few] Ponovno odpri zavihke
-           *[other] Ponovno odpri zavihke
-        }
-    .accesskey = P
-
 toolbar-context-menu-reopen-closed-tabs =
     .label =
         { $tabCount ->
@@ -55,18 +44,18 @@ toolbar-context-menu-report-extension =
     .label = Prijavi razširitev
     .accesskey = j
 
-# Can appear on the same context menu as menubarCmd ("Menu Bar") and
-# personalbarCmd ("Bookmarks Toolbar"), so they should have different
-# access keys.
+# Can appear on the same context menu as toolbar-context-menu-menu-bar-cmd
+# ("Menu Bar") and personalbarCmd ("Bookmarks Toolbar"), so they should
+# have different access keys.
 toolbar-context-menu-pin-to-overflow-menu =
     .label = Pripni v meni prekoračitve
     .accesskey = P
-toolbar-context-menu-auto-hide-downloads-button =
-    .label = Samodejno skrij v orodni vrstici
-    .accesskey = S
 toolbar-context-menu-auto-hide-downloads-button-2 =
     .label = Skrij gumb, ko je seznam prazen
     .accesskey = S
+toolbar-context-menu-always-open-downloads-panel =
+    .label = Ob začetku prenosa prikaži ploščo
+    .accesskey = š
 toolbar-context-menu-remove-from-toolbar =
     .label = Odstrani iz orodne vrstice
     .accesskey = R
@@ -75,6 +64,11 @@ toolbar-context-menu-view-customize-toolbar =
     .accesskey = P
 toolbar-context-menu-view-customize-toolbar-2 =
     .label = Prilagodi orodno vrstico …
+    .accesskey = P
+# This is only ever shown when toolbar-context-menu-pin-to-overflow-menu
+# is hidden, so they can share access keys.
+toolbar-context-menu-pin-to-toolbar =
+    .label = Pripni v orodno vrstico
     .accesskey = P
 
 toolbar-context-menu-bookmarks-toolbar-always-show-2 =
@@ -90,3 +84,7 @@ toolbar-context-menu-bookmarks-toolbar-on-new-tab-2 =
 toolbar-context-menu-bookmarks-show-other-bookmarks =
     .label = Prikaži druge zaznamke
     .accesskey = d
+
+toolbar-context-menu-menu-bar-cmd =
+    .toolbarname = Vrstica z menijem
+    .accesskey = M

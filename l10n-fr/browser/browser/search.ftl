@@ -19,3 +19,20 @@ opensearch-error-download-desc = { -brand-short-name } n’a pas pu télécharge
 
 ##
 
+searchbar-submit =
+    .tooltiptext = Lancer la recherche
+
+# This string is displayed in the search box when the input field is empty
+searchbar-input =
+    .placeholder = Rechercher
+
+searchbar-icon =
+    .tooltiptext = Rechercher
+
+## Infobar shown when search engine is removed and replaced.
+## Variables
+## $oldEngine (String) - the search engine to be removed.
+## $newEngine (String) - the search engine to replace the removed search engine.
+
+removed-search-engine-message = <strong>Votre moteur de recherche par défaut a été changé.</strong> { $oldEngine } n’est plus disponible comme moteur de recherche par défaut dans { -brand-short-name }. Désormais, { $newEngine } le remplace. Pour changer le moteur de recherche par défaut, accédez aux paramètres. <label data-l10n-name="remove-search-engine-article">En savoir plus</label>
+remove-search-engine-button = OK

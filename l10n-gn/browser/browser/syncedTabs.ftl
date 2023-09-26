@@ -7,26 +7,43 @@ synced-tabs-sidebar-noclients-subtitle = Ehechasépa tendaykekuéra ambue mba’
 synced-tabs-sidebar-intro = Ehecha tendayke rysýi ambue ne mba’e’okagua.
 synced-tabs-sidebar-unverified = Tekotevẽ oñemboaje ne mba’ete.
 synced-tabs-sidebar-notabs = Ndaipóri tendayke ijurujáva
-synced-tabs-sidebar-openprefs = Eike { -sync-brand-short-name } oguerohoryvévape
 synced-tabs-sidebar-open-settings = Embojuruja Ñembojuehe moĩporã
 synced-tabs-sidebar-tabsnotsyncing = Eike ehecha tendayke rysýi ambue mba’e’okapeguáva.
 synced-tabs-sidebar-connect-another-device = Embojoaju Ambue Mba’e’oka
 synced-tabs-sidebar-search =
     .placeholder = Tendayke mbojuehepyre reka
+
+## Displayed in the Synced Tabs sidebar's context menu when right-clicking tabs
+## and/or devices in the list. The "Open" strings below should be translated
+## consistently with the equivalent strings for the bookmarks manager's context
+## menu. That menu is activated by right-clicking a bookmark in the Library
+## window. The bookmarks manager context's strings are located in places.ftl.
+
 synced-tabs-context-open =
     .label = Ijurujáva
     .accesskey = O
-synced-tabs-context-open-in-new-tab =
-    .label = Tendayke Pyahúpe jeike
+synced-tabs-context-open-in-tab =
+    .label = Eike tendayke pyahúpe
     .accesskey = w
-synced-tabs-context-open-in-new-window =
-    .label = Ovetã pyahu joajuhápe jeike
+synced-tabs-context-open-in-container-tab =
+    .label = Eike mbyatyha rendayke pyahúpe
+    .accesskey = i
+synced-tabs-context-open-in-window =
+    .label = Eike Ovetã Pyahúpe
     .accesskey = N
-synced-tabs-context-open-in-new-private-window =
-    .label = Ovetã ñemi pyahu joajuhápe jeike
+synced-tabs-context-open-in-private-window =
+    .label = Eike Ovetã Ñemigua Pyahúpe
     .accesskey = P
-synced-tabs-context-bookmark-single-tab =
-    .label = Emongurusu ko tendayke…
+
+##
+
+# Displayed in the Synced Tabs sidebar's context menu when right-clicking tabs
+# and/or devices in the list. This string is for a menuitem equivalent to one in
+# the tab context menu (activated by right-clicking a tab in the tabstrip). That
+# string is located in tabContextMenu.ftl. So, this string should be translated
+# consistently with the "Bookmark Tab…" string there.
+synced-tabs-context-bookmark =
+    .label = Embojuaju kuatiarogue techaukaháre…
     .accesskey = B
 synced-tabs-context-copy =
     .label = Mbohasarã
@@ -40,7 +57,5 @@ synced-tabs-context-manage-devices =
 synced-tabs-context-sync-now =
     .label = Embojuehe ko’ág̃a
     .accesskey = S
-fxa-sign-in = { -sync-brand-short-name }-pe jeike
-turn-on-sync = Emyandy { -sync-brand-short-name }
 synced-tabs-fxa-sign-in = Eike embojuehe hag̃ua
 synced-tabs-turn-on-sync = Emyandy ñembojuehe

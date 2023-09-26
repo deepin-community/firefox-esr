@@ -5,9 +5,9 @@
 
 ## Strings used for device manager
 
-devmgr =
+devmgr-window =
     .title = Gestionari de periferics
-    .style = width: 67em; height: 32em;
+    .style = min-width: 67em; min-height: 32em;
 
 devmgr-devlist =
     .label = Moduls e periferics de seguretat
@@ -115,8 +115,6 @@ devinfo-label =
 
 devinfo-serialnum =
     .label = Numèro de seria
-
-fips-nonempty-password-required = Lo mòde FIPS exigís qu'ajatz definit un senhal principal per cada periferic de seguretat. Definissètz lo senhal principal abans d'activar lo mòde FIPS.
 
 fips-nonempty-primary-password-required = Lo mòde FIPS exigís qu'ajatz definit un senhal principal per cada periferic de seguretat. Definissètz lo senhal principal abans d'activar lo mòde FIPS.
 unable-to-toggle-fips = Impossible de modificar lo mode FIPS pel periferic de seguretat. Vos recomandam de quitar e de reaviar aquesta aplicacion.

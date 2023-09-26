@@ -23,49 +23,12 @@ certmgr-tab-ca =
 certmgr-mine = 您有來自下列組織的憑證可以識別您自己
 certmgr-remembered = 下列憑證可用來向網站識別您的身分
 certmgr-people = 您有可識別下列人員的憑證
-certmgr-servers = 您有可識別下列伺服器的憑證
 certmgr-server = 下列是伺服器憑證例外項目
 certmgr-ca = 您有可識別下列憑證機構的憑證
 
-certmgr-detail-general-tab-title =
-    .label = 一般
-    .accesskey = G
-
-certmgr-detail-pretty-print-tab-title =
-    .label = 詳細資訊
-    .accesskey = D
-
-certmgr-pending-label =
-    .value = 正在驗證憑證…
-
-certmgr-subject-label = 簽發給
-
-certmgr-issuer-label = 簽發者
-
-certmgr-period-of-validity = 有效期間
-
-certmgr-fingerprints = 指紋
-
-certmgr-cert-detail =
-    .title = 憑證細節
-    .buttonlabelaccept = 關閉
-    .buttonaccesskeyaccept = C
-
-certmgr-cert-detail-commonname = 一般名稱 (CN)
-
-certmgr-cert-detail-org = 組織 (O)
-
-certmgr-cert-detail-orgunit = 組織單位 (OU)
-
-certmgr-cert-detail-serial-number = 序號
-
-certmgr-cert-detail-sha-256-fingerprint = SHA-256 指紋
-
-certmgr-cert-detail-sha-1-fingerprint = SHA1 指紋
-
-certmgr-edit-ca-cert =
+certmgr-edit-ca-cert2 =
     .title = 編輯憑證機構信任關係設定
-    .style = width: 48em;
+    .style = min-width: 48em;
 
 certmgr-edit-cert-edit-trust = 編輯信任關係設定:
 
@@ -75,9 +38,9 @@ certmgr-edit-cert-trust-ssl =
 certmgr-edit-cert-trust-email =
     .label = 此憑證可用來識別 Email 使用者。
 
-certmgr-delete-cert =
+certmgr-delete-cert2 =
     .title = 刪除憑證
-    .style = width: 48em; height: 24em;
+    .style = min-width: 48em; min-height: 24em;
 
 certmgr-cert-host =
     .label = 主機
@@ -88,18 +51,11 @@ certmgr-cert-name =
 certmgr-cert-server =
     .label = 伺服器
 
-certmgr-override-lifetime =
-    .label = 有效時間
-
 certmgr-token-name =
     .label = 安全裝置
 
-certmgr-begins-on = 開始於
-
 certmgr-begins-label =
     .label = 開始於
-
-certmgr-expires-on = 過期於
 
 certmgr-expires-label =
     .label = 過期於
@@ -109,6 +65,9 @@ certmgr-email =
 
 certmgr-serial =
     .label = 序號
+
+certmgr-fingerprint-sha-256 =
+    .label = SHA-256 指紋
 
 certmgr-view =
     .label = 檢視…
@@ -141,18 +100,6 @@ certmgr-backup-all =
 certmgr-restore =
     .label = 匯入…
     .accesskey = m
-
-certmgr-details =
-    .value = 憑證欄位
-    .accesskey = f
-
-certmgr-fields =
-    .value = 欄位值
-    .accesskey = V
-
-certmgr-hierarchy =
-    .value = 憑證層級
-    .accesskey = H
 
 certmgr-add-exception =
     .label = 新增例外網站…
@@ -216,12 +163,6 @@ delete-user-cert-confirm = 您確定要刪除這些憑證嗎？
 delete-user-cert-impact = 如果您刪除了您自己的憑證，您就再也不能用它來識別您自己了。
 
 
-delete-ssl-cert-title =
-    .title = 刪除伺服器憑證例外
-delete-ssl-cert-confirm = 您確定要刪除這些例外伺服器嗎？
-delete-ssl-cert-impact = 若您刪除了例外伺服器，下次再連線到該伺服器時又會進行安全性檢查，要求使用有效憑證。
-
-
 delete-ssl-override-title =
     .title = 刪除伺服器憑證例外項目
 delete-ssl-override-confirm = 您確定要刪除此伺服器例外項目嗎？
@@ -244,47 +185,6 @@ delete-email-cert-impact = 如果您刪除了一個人的 E-mail 憑證，您將
 #   $serialNumber : the serial number of the cert in AA:BB:CC hex format.
 cert-with-serial =
     .value = 序號為 { $serialNumber } 的憑證
-
-## Cert Viewer
-
-# Title used for the Certificate Viewer.
-#
-# Variables:
-#   $certificate : a string representative of the certificate being viewed.
-cert-viewer-title =
-    .title = 憑證檢視器:「{ $certName }」
-
-not-present =
-    .value = <不存在於憑證中>
-
-# Cert verification
-cert-verified = 此憑證已驗證用於下列用途:
-
-# Add usage
-verify-ssl-client =
-    .value = SSL 客戶端憑證
-
-verify-ssl-server =
-    .value = SSL 伺服器憑證
-
-verify-ssl-ca =
-    .value = SSL 憑證機構
-
-verify-email-signer =
-    .value = Email 簽署憑證
-
-verify-email-recip =
-    .value = Email 接收憑證
-
-# Cert verification
-cert-not-verified-cert-revoked = 無法驗證此憑證，因為憑證已廢止。
-cert-not-verified-cert-expired = 無法驗證此憑證，因為憑證已過期。
-cert-not-verified-cert-not-trusted = 無法驗證此憑證，因為憑證未被信任。
-cert-not-verified-issuer-not-trusted = 無法驗證此憑證，因為憑證發行者未被信任。
-cert-not-verified-issuer-unknown = 無法驗證此憑證，因為憑證發行者不明。
-cert-not-verified-ca-invalid = 無法驗證此憑證，因為憑證機構憑證不正確。
-cert-not-verified_algorithm-disabled = 由於簽章所使用的演算法不安全被停用的緣故，無法驗證此憑證。
-cert-not-verified-unknown = 無法驗證此憑證，原因不明。
 
 # Used to indicate that the user chose not to send a client authentication certificate to a server that requested one in a TLS handshake.
 send-no-client-certificate = 並未傳送客戶端憑證

@@ -2,13 +2,12 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-screenshots-context-menu = Λήψη στιγμιότυπου
-
-screenshots-my-shots-button = Οι λήψεις μου
-
 screenshot-toolbarbutton =
     .label = Στιγμιότυπο
     .tooltiptext = Λήψη στιγμιότυπου
+
+screenshot-shortcut =
+    .key = S
 
 screenshots-instructions = Σύρετε ή κάντε κλικ στη σελίδα για να επιλέξετε μια περιοχή. Για ακύρωση πιέστε το πλήκτρο ESC.
 screenshots-cancel-button = Ακύρωση
@@ -18,6 +17,14 @@ screenshots-download-button = Λήψη
 screenshots-download-button-tooltip = Λήψη στιγμιότυπου
 screenshots-copy-button = Αντιγραφή
 screenshots-copy-button-tooltip = Αντιγραφή στιγμιότυπου στο πρόχειρο
+screenshots-download-button-title =
+    .title = Λήψη στιγμιότυπου
+screenshots-copy-button-title =
+    .title = Αντιγραφή στιγμιότυπου στο πρόχειρο
+screenshots-cancel-button-title =
+    .title = Ακύρωση
+screenshots-retry-button-title =
+    .title = Επανάληψη στιγμιότυπου
 
 screenshots-meta-key =
     { PLATFORM() ->
@@ -39,9 +46,7 @@ screenshots-connection-error-details = Ελέγξτε τη σύνδεσή σας
 screenshots-login-error-details = Δεν μπορέσαμε να αποθηκεύσουμε την λήψη σας γιατί υπάρχει κάποιο πρόβλημα με την υπηρεσία { -screenshots-brand-name }. Προσπαθήστε ξανά αργότερα.
 
 screenshots-unshootable-page-error-title = Δεν μπορούμε να λάβουμε στιγμιότυπο αυτής της σελίδας.
-screenshots-unshootable-page-error-details = Δεν μπορεί να γίνει λήψη στιγμιότυπου καθώς αυτή δεν είναι μια τυπική σελίδα του Διαδικτύου.
-
-screenshots-self-screenshot-error-title = Δεν μπορεί να γίνει λήψη ενός στιγμιότυπου της σελίδας { -screenshots-brand-name }!
+screenshots-unshootable-page-error-details = Δεν μπορεί να γίνει λήψη στιγμιότυπου καθώς αυτή δεν είναι μια τυπική ιστοσελίδα.
 
 screenshots-empty-selection-error-title = Η επιλογή σας είναι πολύ μικρή
 
@@ -50,3 +55,6 @@ screenshots-private-window-error-details = Λυπούμαστε για την τ
 
 screenshots-generic-error-title = Ωχ! Κάτι πήγε στραβά στην υπηρεσία { -screenshots-brand-name }.
 screenshots-generic-error-details = Δεν είμαστε σίγουροι για το τι ακριβώς συνέβη. Προσπαθήστε ξανά ή κάντε λήψη σε μια άλλη σελίδα.
+
+screenshots-too-large-error-title = Το στιγμιότυπο οθόνης σας περικόπηκε επειδή ήταν πολύ μεγάλο
+screenshots-too-large-error-details = Δοκιμάστε να επιλέξετε μια περιοχή μικρότερη από 32.700 pixel στη μεγαλύτερη πλευρά της ή 124.900.000 pixel σε συνολική επιφάνεια.

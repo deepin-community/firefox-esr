@@ -5,9 +5,9 @@
 
 ## Strings used for device manager
 
-devmgr =
+devmgr-window =
     .title = Aygıt yöneticisi
-    .style = width: 67em; height: 32em;
+    .style = min-width: 67em; min-height: 32em;
 
 devmgr-devlist =
     .label = Güvenlik Modülleri ve Aygıtları
@@ -115,8 +115,6 @@ devinfo-label =
 
 devinfo-serialnum =
     .label = Seri numarası
-
-fips-nonempty-password-required = FIPS kipi, bütün güvenlik ayarlamaları için bir ana parola ihtiyaç duyar. Gerekli parolayı yerleştirin ve FIPS kipi etkinleştirmek için tekrar deneyin.
 
 fips-nonempty-primary-password-required = FIPS kipi, her güvenlik cihazı bir ana parolaya ihtiyaç duyar. FIPS kipini etkinleştirmeden önce lütfen parolayı ayarlayın.
 unable-to-toggle-fips = FIPS kipi güvenlik aygıtı için değiştirilemiyor. Bu uygulamadan çıkıp uygulamayı yeniden başlatmanız tavsiye edilir.

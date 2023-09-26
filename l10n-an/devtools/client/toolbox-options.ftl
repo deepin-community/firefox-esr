@@ -65,11 +65,6 @@ options-stylesheet-autocompletion-tooltip =
 # The heading
 options-screenshot-label = Comportamiento de foto de pantalla
 
-# Label for the checkbox that toggles screenshot to clipboard feature
-options-screenshot-clipboard-label = Gravar foto de pantalla en o portafuellas
-options-screenshot-clipboard-tooltip =
-    .title = Alza la foto de pantalla directament en o portafuellas
-
 # Label for the checkbox that toggles the camera shutter audio for screenshot tool
 options-screenshot-audio-label = Reproducir lo soniu d'obturador d'a camara
 options-screenshot-audio-tooltip =
@@ -129,8 +124,3 @@ options-source-maps-tooltip =
 # The message shown for settings that trigger page reload
 options-context-triggers-page-refresh = * esviella a pachina nomás ta ista sesión
 
-# The label for the checkbox that toggles the display of the platform data in the
-# Profiler i.e. devtools.profiler.ui.show-platform-data a boolean preference in about:config
-options-show-platform-data-label = Amostrar os datos d'a plataforma Gecko
-options-show-platform-data-tooltip =
-    .title = Si activa ista opción, os informes d'o perfilador JavaScript incluirán os simbolos d'a plataforma Gecko

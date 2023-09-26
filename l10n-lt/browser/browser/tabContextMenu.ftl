@@ -11,6 +11,12 @@ reload-tab =
 select-all-tabs =
     .label = Pasirinkti visas korteles
     .accesskey = P
+tab-context-play-tab =
+    .label = Groti kortelę
+    .accesskey = G
+tab-context-play-tabs =
+    .label = Groti korteles
+    .accesskey = i
 duplicate-tab =
     .label = Dubliuoti kortelę
     .accesskey = D
@@ -48,12 +54,6 @@ unpin-selected-tabs =
 bookmark-selected-tabs =
     .label = Korteles įtraukti į adresyną…
     .accesskey = t
-bookmark-tab =
-    .label = Įrašyti kortelę į adresyną
-    .accesskey = r
-reopen-in-container =
-    .label = Atverti iš naujo sudėtiniame rodinyje
-    .accesskey = e
 tab-context-open-in-new-container-tab =
     .label = Atverti naujoje sudėtinėje kortelėje
     .accesskey = e
@@ -69,32 +69,9 @@ move-to-new-window =
 tab-context-close-multiple-tabs =
     .label = Užverti keletą kortelių
     .accesskey = v
-tab-context-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Atšaukti kortelės užvėrimą
-            [one] Atšaukti kortelės užvėrimą
-            [few] Atšaukti kortelių užvėrimus
-           *[other] Atšaukti kortelių užvėrimus
-        }
-    .accesskey = A
-close-tab =
-    .label = Užverti kortelę
-    .accesskey = U
-close-tabs =
-    .label = Užverti korteles
-    .accesskey = e
-move-tabs =
-    .label = Perkelti korteles
-    .accesskey = t
-move-tab =
-    .label = Perkelti kortelę
-    .accesskey = t
 tab-context-share-url =
     .label = Dalintis
     .accesskey = i
-tab-context-share-more =
-    .label = Daugiau…
 
 ## Variables:
 ##  $tabCount (Number): the number of tabs that are affected by the action.
@@ -108,15 +85,6 @@ tab-context-reopen-closed-tabs =
            *[other] Atkurti užvertas korteles
         }
     .accesskey = r
-tab-context-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Užverti kortelę
-            [one] Užverti kortelę
-            [few] Užverti korteles
-           *[other] Užverti kortelių
-        }
-    .accesskey = U
 tab-context-close-n-tabs =
     .label =
         { $tabCount ->
@@ -135,3 +103,12 @@ tab-context-move-tabs =
            *[other] Perkelti kortelių
         }
     .accesskey = k
+
+tab-context-send-tabs-to-device =
+    .label =
+        { $tabCount ->
+            [one] Siųsti kortelę į įrenginį
+            [few] Siųsti { $tabCount } kortelių į įrenginį
+           *[other] Siųsti { $tabCount } korteles į įrenginį
+        }
+    .accesskey = t

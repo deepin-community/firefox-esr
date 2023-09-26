@@ -7,20 +7,7 @@ about-logins-page-title = Prijave & lozinke
 
 # "Google Play" and "App Store" are both branding and should not be translated
 
-login-app-promo-title = Ponesite svoje lozinke svugdje
-login-app-promo-subtitle = Preuzmite besplatnu { -lockwise-brand-name } app
-login-app-promo-android =
-    .alt = Preuzmite na Google Play
-login-app-promo-apple =
-    .alt = Preuzmite na App Store
-
-login-filter =
-    .placeholder = Pretraži prijave
-
-create-login-button = Kreiraj novu prijavu
-
 fxaccounts-sign-in-text = Pristupite lozinkama na drugim uređajima
-fxaccounts-sign-in-button = Prijava na { -sync-brand-short-name }
 fxaccounts-avatar-button =
     .title = Upravljanje računom
 
@@ -39,8 +26,6 @@ menu-menuitem-preferences =
        *[other] Postavke
     }
 about-logins-menu-menuitem-help = Pomoć
-menu-menuitem-android-app = { -lockwise-brand-short-name } za Android
-menu-menuitem-iphone-app = { -lockwise-brand-short-name } za iPhone i iPad
 
 ## Login List
 
@@ -72,14 +57,8 @@ about-logins-list-item-vulnerable-password-icon =
 
 ## Introduction screen
 
-login-intro-heading = Tražite vaše spašene prijave? Podesite { -sync-brand-short-name }.
-
 about-logins-login-intro-heading-logged-in = Nema pronađenih sinhronizovanih prijava.
 login-intro-description = Ako ste spasili prijave u { -brand-product-name } na drugom uređaju, evo kako im možete pristupiti:
-login-intro-instruction-fxa = Kreirajte ili se prijavite na vaš { -fxaccount-brand-name } na uređaju na kojem ste spasili prijave
-login-intro-instruction-fxa-settings = Provjeri, je li potvrdni okvir prijave označen u { -sync-brand-short-name } postavkama
-about-logins-intro-instruction-help = Posjeti <a data-l10n-name="help-link">{ -lockwise-brand-short-name } podršku</a> za dodatnu pomoć
-about-logins-intro-import = Ako su tvoje prijave spremljene u jednom drugom browseru, možeš ih <a data-l10n-name="import-link"> uvesti u { -lockwise-brand-short-name } </a>
 
 about-logins-intro-import2 = Ako su tvoje prijave spremljene izvan { -brand-product-name }a, možeš ih <a data-l10n-name="import-browser-link">uvesti iz jednog drugog browsera</a> ili <a data-l10n-name="import-file-link">iz jedne datoteke</a>
 
@@ -105,9 +84,10 @@ login-item-copied-password-button-text = Kopirano!
 login-item-save-changes-button = Spasi promjene
 login-item-save-new-button = Spasi
 login-item-cancel-button = Otkaži
-login-item-time-changed = Zadnja izmjena: { DATETIME($timeChanged, day: "numeric", month: "long", year: "numeric") }
-login-item-time-created = Stvoreno: { DATETIME($timeCreated, day: "numeric", month: "long", year: "numeric") }
-login-item-time-used = Zadnji put korišteno: { DATETIME($timeUsed, day: "numeric", month: "long", year: "numeric") }
+
+## The date is displayed in a timeline showing the password evolution.
+## A label is displayed under the date to describe the type of change.
+## (e.g. updated, created, etc.)
 
 ## OS Authentication dialog
 
@@ -149,10 +129,6 @@ master-password-reload-button =
 
 ## Password Sync notification
 
-about-logins-enable-password-sync-dont-ask-again-button =
-    .label = Ne pitaj me ponovo
-    .accesskey = N
-
 ## Dialogs
 
 confirmation-dialog-cancel-button = Otkaži
@@ -162,6 +138,11 @@ confirmation-dialog-dismiss-button =
 about-logins-confirm-remove-dialog-title = Ukloniti ovu prijavu?
 confirm-delete-dialog-message = Ova radnja se ne može poništiti.
 about-logins-confirm-remove-dialog-confirm-button = Ukloni
+
+## Variables
+##   $count (number) - Number of items
+
+##
 
 about-logins-confirm-export-dialog-title = Izvezi prijave i lozinke
 about-logins-confirm-export-dialog-confirm-button = Izvoz…
@@ -175,7 +156,6 @@ confirm-discard-changes-dialog-confirm-button = Odbaci
 # Variables:
 #   $hostname (String) - The hostname of the website associated with the login, e.g. "example.com"
 about-logins-breach-alert-link = Posjeti { $hostname }
-about-logins-breach-alert-learn-more-link = Saznajte više
 
 ## Vulnerable Password notification
 

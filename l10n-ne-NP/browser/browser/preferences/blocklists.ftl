@@ -2,23 +2,15 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-blocklist-window =
+blocklist-window2 =
     .title = रोक सूचीहरू
-    .style = width: 50em
+    .style = min-width: 50em
 
 blocklist-close-key =
     .key = w
 
 blocklist-treehead-list =
     .label = सूची
-
-blocklist-button-cancel =
-    .label = रद्द गर्नुहोस्
-    .accesskey = C
-
-blocklist-button-ok =
-    .label = परिवर्तनहरू सङ्ग्रह गर्नुहोस्
-    .accesskey = S
 
 
 # This template constructs the name of the block list in the block lists dialog.

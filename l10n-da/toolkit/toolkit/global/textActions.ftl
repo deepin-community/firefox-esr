@@ -34,6 +34,10 @@ text-action-paste =
     .label = Indsæt
     .accesskey = I
 
+text-action-paste-no-formatting =
+    .label = Indsæt uden formatering
+    .accesskey = u
+
 text-action-paste-shortcut =
     .key = V
 
@@ -50,3 +54,26 @@ text-action-select-all-shortcut =
 
 text-action-spell-no-suggestions =
     .label = Ingen staveforslag
+
+text-action-spell-add-to-dictionary =
+    .label = Føj til ordbog
+    .accesskey = ø
+
+text-action-spell-undo-add-to-dictionary =
+    .label = Fortryd tilføjelse til ordbog
+    .accesskey = y
+
+text-action-spell-check-toggle =
+    .label = Stavekontrol
+    .accesskey = t
+
+text-action-spell-add-dictionaries =
+    .label = Tilføj ordbøger
+    .accesskey = o
+
+text-action-spell-dictionaries =
+    .label = Sprog
+    .accesskey = p
+
+text-action-search-text-box-clear =
+    .title = Ryd

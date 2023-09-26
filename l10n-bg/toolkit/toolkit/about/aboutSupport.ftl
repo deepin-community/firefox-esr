@@ -10,11 +10,6 @@ crashes-id = Идентификатор на доклад
 crashes-send-date = Изпратен
 crashes-all-reports = Всички доклади за сривове
 crashes-no-config = Приложението не е настроено да показва доклади за сривове.
-extensions-title = Разширения
-extensions-name = Наименование
-extensions-enabled = Включено
-extensions-version = Версия
-extensions-id = ID
 support-addons-name = Наименование
 support-addons-version = Версия
 support-addons-id = ID
@@ -65,6 +60,7 @@ app-basics-remote-processes-count = Отдалечени процеси
 app-basics-enterprise-policies = Ведомствени ограничения
 app-basics-key-mozilla = Mozilla Location Service Key
 app-basics-safe-mode = Надежден режим
+
 show-dir-label =
     { PLATFORM() ->
         [macos] Показване във Finder
@@ -108,8 +104,7 @@ sandbox-sys-call-tid = TID
 sandbox-sys-call-proc-type = Вид процес
 sandbox-sys-call-number = Syscall
 sandbox-sys-call-args = Аргументи
-safe-mode-title = Пробвайте надеждния режим
-restart-in-safe-mode-label = Рестартиране с изключени добавки…
+clear-startup-cache-title = Опитайте да изчистите междинната памет за стартиране
 
 ## Media titles
 
@@ -128,6 +123,8 @@ media-device-format = Формат
 media-device-channels = Канали
 media-device-rate = Честота
 media-device-latency = Закъснение
+
+## Codec support table
 
 ##
 
@@ -249,19 +246,12 @@ webgl2-renderer = Рендер на драйвера за WebGL 2
 webgl2-version = Версия на драйвера за WebGL 2
 webgl2-driver-extensions = Разширения на драйвера за WebGL 2
 webgl2-extensions = Разширения на WebGL 2
-blocklisted-bug = В списъка на блокирането поради известни проблеми
-
-# Variables
-# $bugNumber (string) - String of bug number from Bugzilla
-bug-link = дефект { $bugNumber }
 
 # Variables
 # $failureCode (string) - String that can be searched in the source tree.
 unknown-failure = В списъка на блокираните: код на грешка { $failureCode }
 
 d3d11layers-crash-guard = Сглобяване с D3D11
-d3d11video-crash-guard = Видео декодер на D3D11
-d3d9video-crash-guard = Видео декодер на D3D9
 glcontext-crash-guard = OpenGL
 
 reset-on-next-restart = Анулиране при следващото рестартиране
@@ -293,14 +283,6 @@ sandbox-proc-type-media-plugin = приставка за медия
 # $remoteWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
 multi-process-windows = { $remoteWindows }/{ $totalWindows }
-multi-process-status-0 = включени от потребителя
-multi-process-status-1 = включени по подразбиране
-multi-process-status-2 = изключени
-multi-process-status-4 = изключени от инструменти по достъпността
-multi-process-status-6 = изключени поради неподдържан текстов вход
-multi-process-status-7 = изключени от добавки
-multi-process-status-8 = принудително изключени
-multi-process-status-unknown = неизвестно състояние
 
 async-pan-zoom = Асинхронно преместване / мащабиране
 apz-none = няма

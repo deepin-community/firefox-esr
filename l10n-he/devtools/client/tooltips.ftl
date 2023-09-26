@@ -38,8 +38,6 @@ inactive-css-not-grid-or-flex-container-fix = כדאי לנסות להוסיף <
 
 inactive-css-not-grid-or-flex-container-or-multicol-container-fix = כדאי לנסות להוסיף <strong>display:grid</strong>, ‏<strong>display:flex</strong>, או <strong>columns:2</strong>. { learn-more }
 
-inactive-css-not-grid-or-flex-item-fix-2 = כדאי לנסות להוסיף <strong>display:grid</strong>, ‏<strong>display:flex</strong>, ‏<strong>display:inline-grid</strong>, או <strong>display:inline-flex</strong>. { learn-more }
-
 inactive-css-not-grid-item-fix-2 = כדאי לנסות להוסיף <strong>display:grid</strong> או <strong>display:inline-grid</strong> להורה של הרכיב. { learn-more }
 
 inactive-css-not-grid-container-fix = כדאי לנסות להוסיף <strong>display:grid</strong> או <strong>display:inline-grid</strong>. { learn-more }
@@ -55,6 +53,10 @@ inactive-css-non-replaced-inline-or-table-row-or-row-group-fix = כדאי לנס
 inactive-css-non-replaced-inline-or-table-column-or-column-group-fix = כדאי לנסות להוסיף <strong>display:inline-block</strong>. { learn-more }
 
 inactive-css-not-display-block-on-floated-fix = כדאי לנסות להסיר את <strong>float</strong> או להוסיף <strong>display:block</strong>. { learn-more }
+
+inactive-text-overflow-when-no-overflow-fix = כדאי לנסות להוסיף <strong>overflow:hidden</strong>. { learn-more }
+
+inactive-css-ruby-element-fix = כדאי לנסות לשנות את ה־<strong>font-size</strong> טקסט ה־ruby. { learn-more }
 
 ## In the Rule View when a CSS property may have compatibility issues with other browsers
 ## we display an icon. When this icon is hovered this message is displayed to explain why

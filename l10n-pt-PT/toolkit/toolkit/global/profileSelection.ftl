@@ -23,6 +23,8 @@ profile-selection-delete-button =
     .label = Apagar perfil…
     .accesskey = A
 
+profile-selection-conflict-message = Outra cópia do { -brand-product-name } fez alterações nos perfis. Deve reiniciar o { -brand-short-name } antes de fazer mais alterações.
+
 ## Messages used in the profile manager
 
 profile-manager-description = O { -brand-short-name } armazena informação acerca das suas definições, preferências e outros dados no seu perfil de utilizador.

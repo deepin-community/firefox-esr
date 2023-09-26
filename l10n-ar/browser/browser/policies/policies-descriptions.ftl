@@ -59,13 +59,11 @@ policy-DisableForgetButton = منع الوصول إلى زر النسيان.
 
 policy-DisableFormHistory = عدم تذكّر تأريخ الاستمارات والبحث.
 
-policy-DisableMasterPasswordCreation = إن كان ”صحيح“، فلا يمكن إنشاء كلمة سر رئيسية.
-
 policy-DisablePrimaryPasswordCreation = إن كان ”صحيح“، فلا يمكن إنشاء كلمة سر رئيسية.
 
 policy-DisablePasswordReveal = لا تسمح بكشف كلمات السر في جلسات الولوج المحفوظة.
 
-policy-DisablePocket = تعطيل ميزة حفظ الصفحات في Pocket.
+policy-DisablePocket2 = تعطيل ميزة حفظ الصفحات في { -pocket-brand-name }.
 
 policy-DisablePrivateBrowsing = تعطيل التصفح الخاص.
 
@@ -108,10 +106,6 @@ policy-ExtensionSettings = إدارة كل ما يتعلّق بتثبيت الا
 
 policy-ExtensionUpdate = تفعيل/تعطيل تحديث الامتدادات تلقائيًا.
 
-policy-FirefoxHome = ضبط صفحة المنزل داخل Firefox.
-
-policy-FlashPlugin = السماح باستخدام ملحقة فلاش أو منع ذلك.
-
 policy-Handlers = ضبط طرائق التعامل مع التطبيقات المبدئية.
 
 policy-HardwareAcceleration = إن كان ”خطأ“، عطِّل التسريع العتادي.
@@ -134,8 +128,6 @@ policy-LegacySameSiteCookieBehaviorEnabledForDomainList = العودة إلى س
 policy-LocalFileLinks = السماح لمواقع بعينها أن تصنع روابط إلى ملفات محلية.
 
 policy-ManagedBookmarks = ضبط قائمة من العلامات المُدارة من الإدارة بحيث لا يمكن للمستخدم تغييرها.
-
-policy-MasterPassword = طلب استعمال كلمة سر رئيسية، أو منع ذلك.
 
 policy-ManualAppUpdateOnly = السماح بالتحديثات اليدوية فقط وعدم إعلام المستخدم بالتحديثات.
 
@@ -182,9 +174,6 @@ policy-SearchEngines = ضبط إعدادات محرّك البحث. هذه ال�
 
 policy-SearchSuggestEnabled = تفعيل/تعطيل اقتراحات البحث.
 
-# For more information, see https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSS/PKCS11/Module_Installation
-policy-SecurityDevices = تثبيت وحدات PKCS #11.
-
 policy-ShowHomeButton = عرض زر الصفحة الرئيسية في شريط الأدوات.
 
 policy-SSLVersionMax = ضبط إصدارة SSL العليا.
@@ -198,3 +187,4 @@ policy-UserMessaging = عدم عرض بعض الرسائل بعينها للمس
 # “format” refers to the format used for the value of this policy.
 policy-WebsiteFilter = منع زيارة المواقع. طالع التوثيق لتفاصيل أكثر بخصوص النسق.
 
+policy-Windows10SSO = السماح بالولوج الموحّد من وِندوز إلى حسابات ميكروسوفت وحسابات العمل والحسابات المدرسية.

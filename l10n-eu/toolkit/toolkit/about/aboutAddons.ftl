@@ -2,19 +2,22 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-addons-window =
-    .title = Gehigarrien kudeatzailea
-
 addons-page-title = Gehigarrien kudeatzailea
 
 search-header =
     .placeholder = Bilatu addons.mozilla.org gunean
     .searchbuttonlabel = Bilaketa
 
-search-header-shortcut =
-    .key = f
+## Variables
+##   $domain - Domain name where add-ons are available (e.g. addons.mozilla.org)
 
 list-empty-get-extensions-message = Eskuratu hedapen eta itxurak <a data-l10n-name="get-extensions">{ $domain }</a> gunean.
+
+list-empty-get-dictionaries-message = Eskuratu hiztegiak <a data-l10n-name="get-extensions">{ $domain }</a> gunean.
+
+list-empty-get-language-packs-message = Eskuratu hizkuntza-paketeak <a data-l10n-name="get-extensions">{ $domain }</a> gunean.
+
+##
 
 list-empty-installed =
     .value = Ez daukazu mota honetako gehigarririk instalatuta
@@ -35,18 +38,6 @@ help-button = Gehigarrien laguntza
 sidebar-help-button-title =
     .title = Gehigarrien laguntza
 
-preferences =
-    { PLATFORM() ->
-        [windows] { -brand-short-name } aukerak
-       *[other] { -brand-short-name } hobespenak
-    }
-sidebar-preferences-button-title =
-    .title =
-        { PLATFORM() ->
-            [windows] { -brand-short-name } aukerak
-           *[other] { -brand-short-name } hobespenak
-        }
-
 addons-settings-button = { -brand-short-name } ezarpenak
 sidebar-settings-button-title =
     .title = { -brand-short-name } ezarpenak
@@ -57,48 +48,14 @@ show-unsigned-extensions-button =
 show-all-extensions-button =
     .label = Erakutsi gehigarri guztiak
 
-cmd-show-details =
-    .label = Erakutsi informazio gehiago
-    .accesskey = E
-
-cmd-find-updates =
-    .label = Bilatu eguneraketak
-    .accesskey = B
-
-cmd-preferences =
-    .label =
-        { PLATFORM() ->
-            [windows] Aukerak
-           *[other] Hobespenak
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] A
-           *[other] H
-        }
-
-cmd-enable-theme =
-    .label = Jantzi itxura
-    .accesskey = J
-
-cmd-disable-theme =
-    .label = Erantzi itxura
-    .accesskey = E
-
-cmd-install-addon =
-    .label = Instalatu
-    .accesskey = I
-
-cmd-contribute =
-    .label = Lagundu
-    .accesskey = L
-    .tooltiptext = Lagundu gehigarri honen garapenean
-
 detail-version =
     .label = Bertsioa
 
 detail-last-updated =
     .label = Azken eguneraketa
+
+addon-detail-description-expand = Erakutsi gehiago
+addon-detail-description-collapse = Erakutsi gutxiago
 
 detail-contributions-description = Ekarpen txiki bat eginda garapenerako laguntza eskatzen dizu gehigarri honen garatzaileak.
 
@@ -225,6 +182,13 @@ addon-category-available-updates-title =
 addon-category-recent-updates = Azken eguneraketak
 addon-category-recent-updates-title =
     .title = Azken eguneraketak
+addon-category-sitepermission = Gunearen baimenak
+addon-category-sitepermission-title =
+    .title = Gunearen baimenak
+# String displayed in about:addons in the Site Permissions section
+# Variables:
+#  $host (string): DNS host name for which the webextension enables permissions
+addon-sitepermission-host = { $host } ostalarirako baimenak
 
 ## These are global warnings
 
@@ -235,7 +199,6 @@ extensions-warning-check-compatibility-button = Gaitu
 extensions-warning-update-security = Gehigarrien eguneraketa-segurtasuna egiaztatzea desgaituta dago. Eguneraketek arriskuan jar zaitzakete.
 extensions-warning-update-security-button = Gaitu
     .title = Gaitu gehigarrien eguneraketa-segurtasuna egiaztatzea
-
 
 ## Strings connected to add-on updates
 
@@ -348,6 +311,7 @@ install-theme-button = Instalatu itxura
 # the detailed add-on view is opened, from where the add-on can be managed.
 manage-addon-button = Kudeatu
 find-more-addons = Bilatu gehigarri gehiago
+find-more-themes = Aurkitu itxura gehiago
 
 # This is a label for the button to open the "more options" menu, it is only
 # used for screen readers.
@@ -379,7 +343,7 @@ extension-enabled-heading = Gaituta
 extension-disabled-heading = Desgaituta
 
 theme-enabled-heading = Gaituta
-theme-disabled-heading = Desgaituta
+theme-disabled-heading2 = Gordetako itxurak
 
 plugin-enabled-heading = Gaituta
 plugin-disabled-heading = Desgaituta
@@ -390,7 +354,8 @@ dictionary-disabled-heading = Desgaituta
 locale-enabled-heading = Gaituta
 locale-disabled-heading = Desgaituta
 
-ask-to-activate-button = Galdetu aktibatzea
+sitepermission-enabled-heading = Gaituta
+sitepermission-disabled-heading = Desgaituta
 
 always-activate-button = Aktibatu beti
 never-activate-button = Ez aktibatu inoiz
@@ -448,13 +413,15 @@ addon-detail-private-browsing-help = Baimenduta dagoenean, hedapenak zure lineak
 addon-detail-private-browsing-allow = Baimendu
 addon-detail-private-browsing-disallow = Ez baimendu
 
+## "sites with restrictions" (internally called "quarantined") are special domains
+## where add-ons are normally blocked for security reasons.
+
 ## This is the tooltip text for the recommended badges for an extension in about:addons. The
 ## badge is a small icon displayed next to an extension when it is recommended on AMO.
 
 addon-badge-recommended2 =
     .title = Segurtasun eta errendimendurako gure estandarrak betetzen dituzten hedapenak gomendatzen ditu { -brand-product-name }(e)k
     .aria-label = { addon-badge-recommended2.title }
-
 # We hard code "Mozilla" in the string below because the extensions are built
 # by Mozilla and we don't want forks to display "by Fork".
 addon-badge-line3 =
@@ -473,13 +440,14 @@ release-notes-loading = Kargatzen…
 release-notes-error = Errorea gertatu da bertsio-oharrak kargatzean.
 
 addon-permissions-empty = Hedapen honek ez du baimenik behar
-
 addon-permissions-required = Oinarrizko funtzionaltasunerako beharrezko baimenak:
 addon-permissions-optional = Funtzionaltasun gehigarrirako aukerazko baimenak:
 addon-permissions-learnmore = Baimenei buruzko argibide gehiago
 
 recommended-extensions-heading = Gomendatutako hedapenak
 recommended-themes-heading = Gomendatutako itxurak
+
+addon-sitepermissions-required = Ondorengo gaitasunak baimentzen dizkio <span data-l10n-name="hostname">{ $hostname }</span> guneari:
 
 # A recommendation for the Firefox Color theme shown at the bottom of the theme
 # list view. The "Firefox Color" name itself should not be translated.
@@ -493,6 +461,7 @@ plugin-heading = Kudeatu zure pluginak
 dictionary-heading = Kudeatu zure hiztegiak
 locale-heading = Kudeatu zure hizkuntzak
 updates-heading = Kudeatu zure eguneraketak
+sitepermission-heading = Kudeatu zure gunearen baimenak
 discover-heading = Pertsonalizatu zure { -brand-short-name }
 shortcuts-heading = Kudeatu hedapenen lasterbideak
 
@@ -502,3 +471,30 @@ addons-heading-search-input =
 
 addon-page-options-button =
     .title = Tresnak gehigarri guztientzat
+
+## Detail notifications
+## Variables:
+##   $name (String): name of the add-on.
+
+## Detail notifications
+## Variables:
+##   $name (string) - Name of the add-on.
+
+# Variables:
+#   $version (String): application version.
+details-notification-incompatible = { $name } bateraezina da { -brand-short-name } { $version } bertsioarekin.
+details-notification-incompatible-link = Informazio gehiago
+
+details-notification-unsigned-and-disabled = Ezin da { $name } gehigarria { -brand-short-name }(r)en erabiltzeko egiaztatu eta desgaitu egin da.
+details-notification-unsigned-and-disabled-link = Informazio gehiago
+
+details-notification-unsigned = Ezin da { $name } gehigarria { -brand-short-name }(r)en erabiltzeko egiaztatu. Kontuz jarraitu.
+details-notification-unsigned-link = Informazio gehiago
+
+details-notification-blocked = { $name } desgaitu egin da segurtasun- edo egonkortasun-arazoengatik.
+details-notification-blocked-link = Informazio gehiago
+
+details-notification-softblocked = { $name } gehigarriak segurtasun- edo egonkortasun-arazoak eragiten dituela jakina da.
+details-notification-softblocked-link = Informazio gehiago
+
+details-notification-gmp-pending = { $name } laster instalatuko da.

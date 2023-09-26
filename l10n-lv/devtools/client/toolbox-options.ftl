@@ -65,11 +65,6 @@ options-stylesheet-autocompletion-tooltip =
 # The heading
 options-screenshot-label = Ekrānattēla uzvedība
 
-# Label for the checkbox that toggles screenshot to clipboard feature
-options-screenshot-clipboard-label = Ekrānattēls uz starpliktuvi
-options-screenshot-clipboard-tooltip =
-    .title = Saglabā ekrānattēlu starpliktuvē (datora atmiņā)
-
 # Label for the checkbox that toggles the camera shutter audio for screenshot tool
 options-screenshot-audio-label = Atskaņot fotografēšanas skaņu
 options-screenshot-audio-tooltip =
@@ -131,8 +126,3 @@ options-context-triggers-page-refresh = * Tikai šo sesiju, pārlādē lapu
 
 ##
 
-# The label for the checkbox that toggles the display of the platform data in the
-# Profiler i.e. devtools.profiler.ui.show-platform-data a boolean preference in about:config
-options-show-platform-data-label = Rādīt Gecko platformas datus
-options-show-platform-data-tooltip =
-    .title = Ja aktivizēsiet šo iespēju, JavaScript profilatora ziņojumos būs iekļauti arī Gecko platformas simboli

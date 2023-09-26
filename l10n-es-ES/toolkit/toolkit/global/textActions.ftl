@@ -34,6 +34,10 @@ text-action-paste =
     .label = Pegar
     .accesskey = P
 
+text-action-paste-no-formatting =
+    .label = Pegar sin formato
+    .accesskey = m
+
 text-action-paste-shortcut =
     .key = V
 
@@ -50,3 +54,26 @@ text-action-select-all-shortcut =
 
 text-action-spell-no-suggestions =
     .label = No hay sugerencias ortográficas
+
+text-action-spell-add-to-dictionary =
+    .label = Añadir al diccionario
+    .accesskey = o
+
+text-action-spell-undo-add-to-dictionary =
+    .label = Deshacer Añadir al diccionario
+    .accesskey = n
+
+text-action-spell-check-toggle =
+    .label = Revisar ortografía
+    .accesskey = g
+
+text-action-spell-add-dictionaries =
+    .label = Añadir diccionarios…
+    .accesskey = A
+
+text-action-spell-dictionaries =
+    .label = Idiomas
+    .accesskey = I
+
+text-action-search-text-box-clear =
+    .title = Limpiar

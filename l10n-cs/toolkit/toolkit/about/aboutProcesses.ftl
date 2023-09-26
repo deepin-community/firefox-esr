@@ -16,17 +16,23 @@ about-processes-shutdown-process =
 about-processes-shutdown-tab =
     .title = Zavřít panel
 
+# Profiler icons
+# Variables:
+#    $duration (Number) The time in seconds during which the profiler will be running.
+#                       The value will be an integer, typically less than 10.
+about-processes-profile-process =
+    .title =
+        { $duration ->
+            [one] Profilovat všechna vlákna tohoto procesu po dobu jedné sekundy
+            [few] Profilovat všechna vlákna tohoto procesu po dobu { $duration } sekund
+           *[other] Profilovat všechna vlákna tohoto procesu po dobu { $duration } sekund
+        }
+
 ## Column headers
 
 about-processes-column-name = Název
 about-processes-column-memory-resident = Paměť
 about-processes-column-cpu-total = CPU
-
-## Process names
-## Variables:
-##    $pid (String) The process id of this process, assigned by the OS.
-##    $origin (String) The domain name for this process.
-##    $type (String) The raw type for this process. Used for unknown processes.
 
 ## Process names
 ## Variables:
@@ -38,7 +44,11 @@ about-processes-file-process = Soubory ({ $pid })
 about-processes-extension-process = Rozšíření ({ $pid })
 about-processes-privilegedabout-process = About stránka ({ $pid })
 about-processes-plugin-process = Zásuvné moduly ({ $pid })
-about-processes-privilegedmozilla-process = Stránky { -vendor-short-name(case: "gen") } ({ $pid })
+about-processes-privilegedmozilla-process =
+    { -vendor-short-name.case-status ->
+        [with-cases] Stránky { -vendor-short-name(case: "gen") } ({ $pid })
+       *[no-cases] Stránky organizace { -vendor-short-name(case: "gen") } ({ $pid })
+    }
 about-processes-gmp-plugin-process = Mediální moduly jádra Gecko ({ $pid })
 about-processes-gpu-process = GPU ({ $pid })
 about-processes-vr-process = VR ({ $pid })
@@ -47,6 +57,7 @@ about-processes-socket-process = Síť ({ $pid })
 about-processes-remote-sandbox-broker-process = Remote Sandbox Broker ({ $pid })
 about-processes-fork-server-process = Fork Server ({ $pid })
 about-processes-preallocated-process = Předalokováno ({ $pid })
+about-processes-utility-process = Nástroj ({ $pid })
 
 # Unknown process names
 # Variables:
@@ -60,10 +71,9 @@ about-processes-unknown-process = Ostatní: { $type } ({ $pid })
 ##    $origin (String) The domain name for this process.
 
 about-processes-web-isolated-process = { $origin } ({ $pid })
-about-processes-web-large-allocation-process = { $origin } ({ $pid }, velký)
+about-processes-web-serviceworker = { $origin } ({ $pid }, serviceworker)
 about-processes-with-coop-coep-process = { $origin } ({ $pid }, izolovaný cross-origin)
 about-processes-web-isolated-process-private = { $origin } — anonymní ({ $pid })
-about-processes-web-large-allocation-process-private = { $origin } — anonymní ({ $pid }, velký)
 about-processes-with-coop-coep-process-private = { $origin } — anonymní ({ $pid }, izolovaný cross-origin)
 
 ## Details within processes
@@ -122,6 +132,17 @@ about-processes-frame-name-one = Podrám: { $url }
 #   $shortUrl (String) The shared prefix for the subframes in the group.
 about-processes-frame-name-many = Podrámy ({ $number }): { $shortUrl }
 
+## Utility process actor names
+
+about-processes-utility-actor-unknown = Neznámý actor
+about-processes-utility-actor-audio-decoder-generic = Obecný zvukový dekodér
+about-processes-utility-actor-audio-decoder-applemedia = Zvukový dekodér Apple Media
+about-processes-utility-actor-audio-decoder-wmf = Zvukový dekodér Windows Media Framework
+about-processes-utility-actor-mf-media-engine = Windows Media Foundation Media Engine CDM
+# "Oracle" refers to an internal Firefox process and should be kept in English
+about-processes-utility-actor-js-oracle = JavaScript Oracle
+about-processes-utility-actor-windows-utils = Windows Utils
+
 ## Displaying CPU (percentage and total)
 ## Variables:
 ##    $percent (Number) The percentage of CPU used by the process or thread.
@@ -138,9 +159,14 @@ about-processes-cpu = { NUMBER($percent, maximumSignificantDigits: 2, style: "pe
 # Special case: data is not available yet.
 about-processes-cpu-user-and-kernel-not-ready = (probíhá měření)
 
+# Special case: process or thread is almost idle (using less than 0.1% of a CPU core).
+# This case only occurs on Windows where the precision of the CPU times is low.
+about-processes-cpu-almost-idle = < 0,1 %
+    .title = Celkový čas CPU: { NUMBER($total, maximumFractionDigits: 0) } { $unit }
+
 # Special case: process or thread is currently idle.
-about-processes-cpu-idle = nečinný
-    .title = Celkový čas CPU: { NUMBER($total, maximumFractionDigits: 2) } { $unit }
+about-processes-cpu-fully-idle = nečinný
+    .title = Celkový čas CPU: { NUMBER($total, maximumFractionDigits: 0) } { $unit }
 
 ## Displaying Memory (total and delta)
 ## Variables:

@@ -5,6 +5,9 @@
 reload-tab =
     .label = Herlaai oortjie
     .accesskey = H
+tab-context-play-tab =
+    .label = Speel oortjie
+    .accesskey = l
 close-tabs-to-the-end =
     .label = Sluit oortjies wat regs lê
     .accesskey = e
@@ -20,10 +23,6 @@ unpin-tab =
 move-to-new-window =
     .label = Skuif na nuwe venster
     .accesskey = v
-
-close-tab =
-    .label = Sluit oortjie
-    .accesskey = S
 
 ## Variables:
 ##  $tabCount (Number): the number of tabs that are affected by the action.

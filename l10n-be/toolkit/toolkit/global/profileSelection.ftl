@@ -23,6 +23,8 @@ profile-selection-delete-button =
     .label = Выдаліць профіль…
     .accesskey = д
 
+profile-selection-conflict-message = Іншы асобнік { -brand-product-name } унёс змены ў профіль. Неабходна перазапусціць { -brand-short-name } перш чым рабіць больш змяненняў.
+
 ## Messages used in the profile manager
 
 profile-manager-description = { -brand-short-name } захоўвае звесткі пра вашы налады, перавагі і іншыя рэчы ў вашым профілі карыстальніка.
@@ -32,5 +34,5 @@ profile-manager-work-offline =
     .accesskey = п
 
 profile-manager-use-selected =
-    .label = Ужываць вылучаны профіль без запыту падчас запуску
+    .label = Ужываць вылучаны профіль без запыту пры запуску
     .accesskey = ж

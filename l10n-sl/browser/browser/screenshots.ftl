@@ -2,13 +2,12 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-screenshots-context-menu = Zajemi posnetek zaslona
-
-screenshots-my-shots-button = Moji posnetki
-
 screenshot-toolbarbutton =
     .label = Posnetek zaslona
     .tooltiptext = Zajemi posnetek zaslona
+
+screenshot-shortcut =
+    .key = S
 
 screenshots-instructions = Povlecite ali kliknite na strani za izbiro območja. Pritisnite ESC za preklic.
 screenshots-cancel-button = Prekliči
@@ -18,6 +17,14 @@ screenshots-download-button = Prenesi
 screenshots-download-button-tooltip = Prenesi posnetek zaslona
 screenshots-copy-button = Kopiraj
 screenshots-copy-button-tooltip = Kopiraj posnetek zaslona v odložišče
+screenshots-download-button-title =
+    .title = Prenesi posnetek zaslona
+screenshots-copy-button-title =
+    .title = Kopiraj posnetek zaslona v odložišče
+screenshots-cancel-button-title =
+    .title = Prekliči
+screenshots-retry-button-title =
+    .title = Zajemi nov posnetek
 
 screenshots-meta-key =
     { PLATFORM() ->
@@ -41,8 +48,6 @@ screenshots-login-error-details = Ne moremo shraniti vašega posnetka, ker je pr
 screenshots-unshootable-page-error-title = Ne moremo zajeti posnetka te strani.
 screenshots-unshootable-page-error-details = To ni običajna spletna stran, zato ne morete zajeti njenega zaslonskega posnetka.
 
-screenshots-self-screenshot-error-title = Posnetka strani { -screenshots-brand-name } ni mogoče zajeti!
-
 screenshots-empty-selection-error-title = Vaš izbor je premajhen
 
 screenshots-private-window-error-title = { -screenshots-brand-name } je onemogočen v zasebnem načinu brskanja
@@ -50,3 +55,6 @@ screenshots-private-window-error-details = Oprostite za nevšečnost. To možnos
 
 screenshots-generic-error-title = Uf! { -screenshots-brand-name } se je pokvaril.
 screenshots-generic-error-details = Ne vemo točno, kaj se je pravkar zgodilo. Bi radi poskusili znova ali pa zajeli posnetek kakšne druge strani?
+
+screenshots-too-large-error-title = Posnetek zaslona je bil obrezan, ker je bil prevelik
+screenshots-too-large-error-details = Poskusite izbrati območje, manjše od 32.700 slikovnih pik po daljši strani ali 124.900.000 slikovnih pik skupne površine.

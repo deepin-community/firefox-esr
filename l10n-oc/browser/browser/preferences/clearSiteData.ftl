@@ -2,9 +2,9 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-clear-site-data-window =
+clear-site-data-window2 =
     .title = Escafar las donadas
-    .style = width: 35em
+    .style = min-width: 35em
 
 clear-site-data-description = Escafar totes los cookies e las dondas dels sites emmagazinats per { -brand-short-name } pòt provocar una desconnexion als sites web e suprimir de contenguts fòra linha. Escafar las donadas en cache afècta pas las sessions iniciadas.
 
@@ -50,14 +50,6 @@ clear-site-data-cache-empty =
     .accesskey = e
 
 clear-site-data-cache-info = Caldrà que los sites web tòrnen cargar los imatges e las donadas
-
-clear-site-data-cancel =
-    .label = Anullar
-    .accesskey = A
-
-clear-site-data-clear =
-    .label = Escafar
-    .accesskey = E
 
 clear-site-data-dialog =
     .buttonlabelaccept = Escafar

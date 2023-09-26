@@ -5,9 +5,9 @@
 
 ## Strings used for device manager
 
-devmgr =
+devmgr-window =
     .title = Apparaatbeheerder
-    .style = width: 67em; height: 32em;
+    .style = min-width: 67em; min-height: 32em;
 
 devmgr-devlist =
     .label = Beveiligingsmodules en -apparaten
@@ -115,8 +115,6 @@ devinfo-label =
 
 devinfo-serialnum =
     .label = Serienummer
-
-fips-nonempty-password-required = FIPS-modus vereist dat u een hoofdwachtwoord hebt ingesteld voor elk beveiligingsapparaat. Stel het wachtwoord in voordat u FIPS-modus probeert in te schakelen.
 
 fips-nonempty-primary-password-required = FIPS-modus vereist dat u een hoofdwachtwoord hebt ingesteld voor elk beveiligingsapparaat. Stel het wachtwoord in voordat u FIPS-modus probeert in te schakelen.
 unable-to-toggle-fips = Kan de FIPS-modus voor het beveiligingsapparaat niet wijzigen. Het wordt aangeraden deze toepassing af te sluiten en te herstarten.

@@ -23,49 +23,12 @@ certmgr-tab-ca =
 certmgr-mine = Dëshmi që ju identifikojnë keni prej këtyre enteve
 certmgr-remembered = Këto dëshmi përdoren për t’ju identifikuar në sajte
 certmgr-people = Keni të ruajtura dëshmi që identifikojnë këta persona
-certmgr-servers = Keni të ruajtura dëshmi që identifikojnë këta shërbyes
 certmgr-server = Këto zëra identifikojnë përjashtime gabimesh dëshmish shërbyesi
 certmgr-ca = Keni të ruajtura dëshmi që identifikojnë këta autoritete dëshmish
 
-certmgr-detail-general-tab-title =
-    .label = Të përgjithshme
-    .accesskey = T
-
-certmgr-detail-pretty-print-tab-title =
-    .label = Hollësi
-    .accesskey = H
-
-certmgr-pending-label =
-    .value = Po verifikohet dëshmia…
-
-certmgr-subject-label = Lëshuar Për
-
-certmgr-issuer-label = Lëshuar Nga
-
-certmgr-period-of-validity = Periudhë Vlefshmërie
-
-certmgr-fingerprints = Shenja gishtash
-
-certmgr-cert-detail =
-    .title = Hollësi Dëshmie
-    .buttonlabelaccept = Mbylleni
-    .buttonaccesskeyaccept = M
-
-certmgr-cert-detail-commonname = Emër i Rëndomtë (ER)
-
-certmgr-cert-detail-org = Ent (E)
-
-certmgr-cert-detail-orgunit = Njësi Organizative (OU)
-
-certmgr-cert-detail-serial-number = Numër Serial
-
-certmgr-cert-detail-sha-256-fingerprint = Shenja gishtash SHA-256
-
-certmgr-cert-detail-sha-1-fingerprint = Shenja gishtash SHA1
-
-certmgr-edit-ca-cert =
+certmgr-edit-ca-cert2 =
     .title = Përpunoni rregullime besueshmërie dëshmish AD-sh
-    .style = width: 48em;
+    .style = min-width: 48em;
 
 certmgr-edit-cert-edit-trust = Përpunoni rregullime besueshmërie:
 
@@ -75,9 +38,9 @@ certmgr-edit-cert-trust-ssl =
 certmgr-edit-cert-trust-email =
     .label = Kjo dëshmi mund të identifikojë përdorues poste.
 
-certmgr-delete-cert =
+certmgr-delete-cert2 =
     .title = Fshini Dëshmi
-    .style = width: 48em; height: 24em;
+    .style = min-width: 48em; min-height: 24em;
 
 certmgr-cert-host =
     .label = Strehë
@@ -88,18 +51,11 @@ certmgr-cert-name =
 certmgr-cert-server =
     .label = Shërbyes
 
-certmgr-override-lifetime =
-    .label = Jetëgjatësi
-
 certmgr-token-name =
     .label = Pajisje Sigurie
 
-certmgr-begins-on = Fillon Më
-
 certmgr-begins-label =
     .label = Fillon Më
-
-certmgr-expires-on = Skadon Më
 
 certmgr-expires-label =
     .label = Skadon Më
@@ -142,18 +98,6 @@ certmgr-restore =
     .label = Importoni…
     .accesskey = I
 
-certmgr-details =
-    .value = Fusha Dëshmie
-    .accesskey = F
-
-certmgr-fields =
-    .value = Vlerë Fushe
-    .accesskey = V
-
-certmgr-hierarchy =
-    .value = Hierarki Dëshmish
-    .accesskey = H
-
 certmgr-add-exception =
     .label = Shtoni Përjashtim…
     .accesskey = o
@@ -165,7 +109,7 @@ exception-mgr-extra-button =
     .label = Ripohoni Përjashtime Sigurie
     .accesskey = R
 
-exception-mgr-supplemental-warning = Banka, dyqane të ligjshme, dhe sajte të tjerë publikë nuk do t'ju kërkojnë ta bëni këtë.
+exception-mgr-supplemental-warning = Banka, dyqane të ligjshme dhe sajte të tjerë publikë s’do t'ju kërkojnë ta bëni këtë.
 
 exception-mgr-cert-location-url =
     .value = Vendndodhje:
@@ -216,12 +160,6 @@ delete-user-cert-confirm = Jeni i sigurt se doni të fshihen këto dëshmi?
 delete-user-cert-impact = Nëse fshini një nga dëshmitë tuaja vetjake, nuk mund ta përdorni më për identifikimin e vetvetes.
 
 
-delete-ssl-cert-title =
-    .title = Fshi Përjashtime Dëshmish Shërbyesi
-delete-ssl-cert-confirm = Jeni i sigurt që doni të fshihen këto përjashtime shërbyesi?
-delete-ssl-cert-impact = Nëse fshini një përjashtim shërbyesi, riktheni kështu kontrollet e zakonshëm të sigurisë për atë shërbyes dhe e shtrëngoni të përdorë një dëshmi të vlefshme.
-
-
 delete-ssl-override-title =
     .title = Fshi Përjashtim Dëshmish Shërbyesi
 delete-ssl-override-confirm = Jeni i sigurt se doni të fshihet ky përjashtim shërbyesi?
@@ -245,52 +183,14 @@ delete-email-cert-impact = Nëse fshini dëshminë e email-it të dikujt, nuk do
 cert-with-serial =
     .value = Dëshmia me numër serial: { $serialNumber }
 
-## Cert Viewer
-
-# Title used for the Certificate Viewer.
-#
-# Variables:
-#   $certificate : a string representative of the certificate being viewed.
-cert-viewer-title =
-    .title = Shfaqës Dëshmish: “{ $certName }”
-
-not-present =
-    .value = <Jo Pjesë Dëshmie>
-
-# Cert verification
-cert-verified = Kjo dëshmi është verifikuar për përdorimet vijuese:
-
-# Add usage
-verify-ssl-client =
-    .value = Dëshmi Klienti SSL
-
-verify-ssl-server =
-    .value = Dëshmi Shërbyesi SSL
-
-verify-ssl-ca =
-    .value = Autoritet Dëshmish SSL
-
-verify-email-signer =
-    .value = Dëshmi Nënshkruesi Email
-
-verify-email-recip =
-    .value = Dëshmi Marrësi Email
-
-# Cert verification
-cert-not-verified-cert-revoked = S’verifikoi dot këtë dëshmi, sepse është shfuqizuar.
-cert-not-verified-cert-expired = S’verifikoi dot këtë dëshmi, sepse ka skaduar.
-cert-not-verified-cert-not-trusted = S’verifikoi dot këtë dëshmi, sepse nuk është besuar.
-cert-not-verified-issuer-not-trusted = S’verifikoi dot këtë dëshmi, sepse nuk është besuar lëshuesi.
-cert-not-verified-issuer-unknown = S’verifikoi dot këtë dëshmi, sepse lëshuesi është i panjohur.
-cert-not-verified-ca-invalid = S’verifikoi dot këtë dëshmi, sepse dëshmia e AD-ve është e pavlefshme.
-cert-not-verified_algorithm-disabled = Kjo dëshmi nuk u verifikua dot, ngaqë qe nënshkruar duke përdorur një algoritëm nënshkrimesh i cili është i çaktivizuar, pasi nuk është algoritëm i sigurt.
-cert-not-verified-unknown = Për arsye të panjohura, s’verifikoi dot këtë dëshmi.
-
 # Used to indicate that the user chose not to send a client authentication certificate to a server that requested one in a TLS handshake.
 send-no-client-certificate = Mos dërgo dëshmi klienti
 
 # Used when no cert is stored for an override
 no-cert-stored-for-override = (E Paruajtur)
+
+# When a certificate is unavailable (for example, it has been deleted or the token it exists on has been removed).
+certificate-not-available = (Jo e passhme)
 
 ## Used to show whether an override is temporary or permanent
 
@@ -304,7 +204,7 @@ add-exception-invalid-header = Ky sajt po përpiqet të identifikojë veten për
 add-exception-domain-mismatch-short = Sajt i Gabuar
 add-exception-domain-mismatch-long = Dëshmia i përket një sajti tjetër, çka mund të jetë shenjë se dikush po përpiqet të bëjë një sajt të duket si i juaji.
 add-exception-expired-short = Të dhëna të Vjetruara
-add-exception-expired-long = Dëshmia nuk është e vlefshme hëpërhë. Mund të jetë vjedhur ose humbur, dhe mund të përdoret nga dikush për ta bërë një sajt të vetin të duket si i juaji.
+add-exception-expired-long = Dëshmia nuk është e vlefshme hëpërhë. Mund të jetë vjedhur ose humbur dhe mund të përdoret nga dikush për ta bërë një sajt të vetin të duket si i juaji.
 add-exception-unverified-or-bad-signature-short = Identitet i Panjohur
 add-exception-unverified-or-bad-signature-long = Dëshmia nuk u besua, ngaqë s’është vërtetuar si e lëshuar nga një autoritet i besuar që përdor nënshkrim të sigurt.
 add-exception-valid-short = Dëshmi e Vlefshme

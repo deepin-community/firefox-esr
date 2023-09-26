@@ -5,9 +5,9 @@
 
 ## Strings used for device manager
 
-devmgr =
+devmgr-window =
     .title = Manaidsear nan uidheaman
-    .style = width: 67em; height: 32em;
+    .style = min-width: 67em; min-height: 32em;
 
 devmgr-devlist =
     .label = Mòidealan is uidheaman tèarainteachd
@@ -115,8 +115,6 @@ devinfo-label =
 
 devinfo-serialnum =
     .label = Àireamh shreathach
-
-fips-nonempty-password-required = Tha e riatanach sa mhodh FIPS gu bheil prìomh fhacal-faire agad airson gach uidheam tèarainteachd. Suidhich am facal-faire mus feuch thu ris a' mhodh FIPS a chur an comas.
 
 fips-nonempty-primary-password-required = Tha e riatanach sa mhodh FIPS gu bheil prìomh fhacal-faire agad airson gach uidheam tèarainteachd. Suidhich am facal-faire mus feuch thu ris a' mhodh FIPS a chur an comas.
 unable-to-toggle-fips = Cha ghabh am modh FIPS airson an uidheim tèarainteachd atharrachadh. Mholar dhut gum fàg thu an-seo 's gun tòisich thu an aplacaid seo a-rithist.

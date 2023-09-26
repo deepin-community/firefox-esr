@@ -11,17 +11,6 @@ navbar-tooltip-instruction =
 
 ## Back
 
-main-context-menu-back =
-    .tooltiptext = Vienu tinklalapiu atgal
-    .aria-label = Atgal
-    .accesskey = A
-
-navbar-tooltip-back =
-    .value = { main-context-menu-back.tooltiptext }
-
-toolbar-button-back =
-    .label = { main-context-menu-back.aria-label }
-
 # Variables
 #   $shortcut (String) - A keyboard shortcut for the Go Back command.
 main-context-menu-back-2 =
@@ -41,17 +30,6 @@ toolbar-button-back-2 =
     .label = { main-context-menu-back-2.aria-label }
 
 ## Forward
-
-main-context-menu-forward =
-    .tooltiptext = Vienu tinklalapiu pirmyn
-    .aria-label = Pirmyn
-    .accesskey = P
-
-navbar-tooltip-forward =
-    .value = { main-context-menu-forward.tooltiptext }
-
-toolbar-button-forward =
-    .label = { main-context-menu-forward.aria-label }
 
 # Variables
 #   $shortcut (String) - A keyboard shortcut for the Go Forward command.
@@ -116,48 +94,45 @@ main-context-menu-page-save =
     .label = Įrašyti kaip…
     .accesskey = p
 
-toolbar-button-page-save =
-    .label = { main-context-menu-page-save.label }
-
 ## Simple menu items
 
-main-context-menu-bookmark-add =
-    .aria-label = Įrašyti į adresyną
-    .accesskey = y
-    .tooltiptext = Įtraukti šį tinklalapį į adresyną
+main-context-menu-bookmark-page =
+    .aria-label = Įtraukti į adresyną…
+    .accesskey = k
+    .tooltiptext = Įtraukti į adresyną
 
 # This menuitem is only visible on macOS
-# Cannot be shown at the same time as main-context-menu-bookmark-edit-mac,
+# Cannot be shown at the same time as main-context-menu-edit-bookmark-mac,
 # so should probably have the same access key if possible.
-main-context-menu-bookmark-add-mac =
-    .label = Įtraukti į adresyną
-    .accesskey = t
+main-context-menu-bookmark-page-mac =
+    .label = Įtraukti į adresyną…
+    .accesskey = k
 
 # This menuitem is only visible on macOS
-# Cannot be shown at the same time as main-context-menu-bookmark-add-mac,
+# Cannot be shown at the same time as main-context-menu-bookmark-page-mac,
 # so should probably have the same access key if possible.
-main-context-menu-bookmark-edit-mac =
-    .label = Redaguoti adresyno įrašą
-    .accesskey = t
+main-context-menu-edit-bookmark-mac =
+    .label = Redaguoti adresyno įrašą…
+    .accesskey = g
 
 # Variables
 #   $shortcut (String) - A keyboard shortcut for the add bookmark command.
-main-context-menu-bookmark-add-with-shortcut =
-    .aria-label = Įrašyti į adresyną
-    .accesskey = y
-    .tooltiptext = Įtraukti šį tinklalapį į adresyną ({ $shortcut })
+main-context-menu-bookmark-page-with-shortcut =
+    .aria-label = Įtraukti į adresyną…
+    .accesskey = k
+    .tooltiptext = Įtraukti į adresyną ({ $shortcut })
 
-main-context-menu-bookmark-change =
-    .aria-label = Taisyti adresyno įrašą
-    .accesskey = y
-    .tooltiptext = Taisyti šį adresyno įrašą
+main-context-menu-edit-bookmark =
+    .aria-label = Redaguoti adresyno įrašą…
+    .accesskey = g
+    .tooltiptext = Redaguoti adresyno įrašą
 
 # Variables
 #   $shortcut (String) - A keyboard shortcut for the edit bookmark command.
-main-context-menu-bookmark-change-with-shortcut =
-    .aria-label = Taisyti adresyno įrašą
-    .accesskey = y
-    .tooltiptext = Taisyti šį adresyno įrašą ({ $shortcut })
+main-context-menu-edit-bookmark-with-shortcut =
+    .aria-label = Redaguoti adresyno įrašą…
+    .accesskey = g
+    .tooltiptext = Redaguoti adresyno įrašą ({ $shortcut })
 
 main-context-menu-open-link =
     .label = Atverti saitą
@@ -179,13 +154,9 @@ main-context-menu-open-link-new-private-window =
     .label = Atverti saitą naujame privačiojo naršymo lange
     .accesskey = p
 
-main-context-menu-bookmark-this-link =
-    .label = Įtraukti saitą į adresyną
-    .accesskey = d
-
-main-context-menu-bookmark-link =
-    .label = Įtraukti saitą į adresyną
-    .accesskey = t
+main-context-menu-bookmark-link-2 =
+    .label = Įtraukti į adresyną…
+    .accesskey = k
 
 main-context-menu-save-link =
     .label = Įrašyti saistomą objektą kaip…
@@ -195,11 +166,6 @@ main-context-menu-save-link-to-pocket =
     .label = Įrašyti saitą į „{ -pocket-brand-name }“
     .accesskey = o
 
-## The access keys for "Copy Link Location" and "Copy Email Address"
-## should be the same if possible; the two context menu items
-## are mutually exclusive.
-
-
 ## The access keys for "Copy Link" and "Copy Email Address"
 ## should be the same if possible; the two context menu items
 ## are mutually exclusive.
@@ -208,9 +174,9 @@ main-context-menu-copy-email =
     .label = Kopijuoti el. pašto adresą
     .accesskey = t
 
-main-context-menu-copy-link =
-    .label = Kopijuoti saito adresą
-    .accesskey = a
+main-context-menu-copy-phone =
+    .label = Kopijuoti telefono numerį
+    .accesskey = o
 
 main-context-menu-copy-link-simple =
     .label = Kopijuoti saitą
@@ -239,32 +205,6 @@ main-context-menu-media-mute =
 main-context-menu-media-unmute =
     .label = Įjungti garsą
     .accesskey = r
-
-main-context-menu-media-play-speed =
-    .label = Atkūrimo greitis
-    .accesskey = e
-
-main-context-menu-media-play-speed-slow =
-    .label = Lėtas (0.5×)
-    .accesskey = L
-
-main-context-menu-media-play-speed-normal =
-    .label = Normalus
-    .accesskey = N
-
-main-context-menu-media-play-speed-fast =
-    .label = Greitas (1.25×)
-    .accesskey = G
-
-main-context-menu-media-play-speed-faster =
-    .label = Greitesnis (1.5×)
-    .accesskey = r
-
-# "Ludicrous" is a reference to the movie "Space Balls" and is meant
-# to say that this speed is very fast.
-main-context-menu-media-play-speed-fastest =
-    .label = Pasiutęs (2×)
-    .accesskey = P
 
 main-context-menu-media-play-speed-2 =
     .label = Greitis
@@ -312,12 +252,6 @@ main-context-menu-media-video-leave-fullscreen =
 
 # This is used when right-clicking on a video in the
 # content area when the Picture-in-Picture feature is enabled.
-main-context-menu-media-pip =
-    .label = Vaizdas-vaizde
-    .accesskey = z
-
-# This is used when right-clicking on a video in the
-# content area when the Picture-in-Picture feature is enabled.
 main-context-menu-media-watch-pip =
     .label = Žiūrėti per vaizdą-vaizde
     .accesskey = v
@@ -325,14 +259,6 @@ main-context-menu-media-watch-pip =
 main-context-menu-image-reload =
     .label = Atsiųsti paveikslą iš naujo
     .accesskey = n
-
-main-context-menu-image-view =
-    .label = Rodyti paveikslą
-    .accesskey = y
-
-main-context-menu-video-view =
-    .label = Rodyti vaizdo įrašą
-    .accesskey = y
 
 main-context-menu-image-view-new-tab =
     .label = Atverti paveikslą naujoje kortelėje
@@ -345,18 +271,6 @@ main-context-menu-video-view-new-tab =
 main-context-menu-image-copy =
     .label = Kopijuoti paveikslą
     .accesskey = p
-
-main-context-menu-image-copy-location =
-    .label = Kopijuoti paveikslo adresą
-    .accesskey = o
-
-main-context-menu-video-copy-location =
-    .label = Kopijuoti vaizdo adresą
-    .accesskey = o
-
-main-context-menu-audio-copy-location =
-    .label = Kopijuoti garso adresą
-    .accesskey = o
 
 main-context-menu-image-copy-link =
     .label = Kopijuoti paveikslo saitą
@@ -378,13 +292,13 @@ main-context-menu-image-email =
     .label = Išsiųsti paveikslą el. paštu…
     .accesskey = s
 
-main-context-menu-image-set-as-background =
-    .label = Naudoti kaip darbastalio foną…
-    .accesskey = d
-
 main-context-menu-image-set-image-as-background =
     .label = Naudoti kaip darbastalio foną…
     .accesskey = N
+
+main-context-menu-image-copy-text =
+    .label = Kopijuoti paveikslo tekstą
+    .accesskey = v
 
 main-context-menu-image-info =
     .label = Rodyti paveikslo savybes
@@ -402,10 +316,6 @@ main-context-menu-audio-save-as =
     .label = Įrašyti garsą kaip…
     .accesskey = r
 
-main-context-menu-video-image-save-as =
-    .label = Įrašyti kadrą kaip…
-    .accesskey = k
-
 main-context-menu-video-take-snapshot =
     .label = Padaryti vaizdo nuotrauką…
     .accesskey = n
@@ -418,14 +328,6 @@ main-context-menu-audio-email =
     .label = Išsiųsti garso įrašą el. paštu…
     .accesskey = s
 
-main-context-menu-plugin-play =
-    .label = Aktyvinti šį papildinį
-    .accesskey = A
-
-main-context-menu-plugin-hide =
-    .label = Slėpti šį papildinį
-    .accesskey = S
-
 main-context-menu-save-to-pocket =
     .label = Įrašyti tinklalapį į „{ -pocket-brand-name }“
     .accesskey = k
@@ -433,14 +335,6 @@ main-context-menu-save-to-pocket =
 main-context-menu-send-to-device =
     .label = Siųsti tinklalapį į įrenginį
     .accesskey = r
-
-main-context-menu-view-background-image =
-    .label = Rodyti fono piešinį
-    .accesskey = f
-
-main-context-menu-generate-new-password =
-    .label = Naudoti sugeneruotą slaptažodį
-    .accesskey = g
 
 ## The access keys for "Use Saved Login" and "Use Saved Password"
 ## should be the same if possible; the two context menu items
@@ -492,9 +386,9 @@ main-context-menu-frame-reload =
     .label = Atsiųsti kadrą iš naujo
     .accesskey = n
 
-main-context-menu-frame-bookmark =
-    .label = Įtraukti kadrą į adresyną
-    .accesskey = d
+main-context-menu-frame-add-bookmark =
+    .label = Įtraukti į adresyną…
+    .accesskey = k
 
 main-context-menu-frame-save-as =
     .label = Įrašyti kadrą kaip…
@@ -512,9 +406,9 @@ main-context-menu-frame-view-info =
     .label = Informacija apie kadrą
     .accesskey = I
 
-main-context-menu-print-selection =
-    .label = Spausdinti pažymėtą sritį
-    .accesskey = p
+main-context-menu-print-selection-2 =
+    .label = Spausdinti pažymėtą sritį…
+    .accesskey = t
 
 main-context-menu-view-selection-source =
     .label = Rodyti atrankos pirminį tekstą
@@ -532,10 +426,6 @@ main-context-menu-view-page-source =
     .label = Pirminis tekstas
     .accesskey = e
 
-main-context-menu-view-page-info =
-    .label = Informacija apie tinklalapį
-    .accesskey = I
-
 main-context-menu-bidi-switch-text =
     .label = Pakeisti teksto kryptį
     .accesskey = k
@@ -543,10 +433,6 @@ main-context-menu-bidi-switch-text =
 main-context-menu-bidi-switch-page =
     .label = Pakeisti puslapio kryptį
     .accesskey = a
-
-main-context-menu-inspect-element =
-    .label = Tirti elementą
-    .accesskey = T
 
 main-context-menu-inspect =
     .label = Tirti
@@ -558,3 +444,13 @@ main-context-menu-inspect-a11y-properties =
 main-context-menu-eme-learn-more =
     .label = Sužinokite daugiau apie DRM…
     .accesskey = D
+
+# Variables
+#   $containerName (String): The name of the current container
+main-context-menu-open-link-in-container-tab =
+    .label = Atverti saitą naujoje „{ $containerName }“ kortelėje
+    .accesskey = t
+
+main-context-menu-reveal-password =
+    .label = Parodyti slaptažodį
+    .accesskey = y

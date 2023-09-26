@@ -2,13 +2,12 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-screenshots-context-menu = Tog glacadh-sgrìn
-
-screenshots-my-shots-button = Na glacaidhean agam
-
 screenshot-toolbarbutton =
     .label = Glacadh-sgrìn
     .tooltiptext = Tog glacadh-sgrìn
+
+screenshot-shortcut =
+    .key = S
 
 screenshots-instructions = Dèan briogadh no slaodadh air an duilleag airson raon a thaghadh. Brùth ESC airson sgur dheth.
 screenshots-cancel-button = Sguir dheth
@@ -18,6 +17,14 @@ screenshots-download-button = Luchdaich a-nuas
 screenshots-download-button-tooltip = Luchdaich a-nuas an glacadh-sgrìn
 screenshots-copy-button = Dèan lethbhreac
 screenshots-copy-button-tooltip = Cuir lethbhreac dhen ghlacadh-sgrìn air an stòr-bhòrd
+screenshots-download-button-title =
+    .title = Luchdaich a-nuas an glacadh-sgrìn
+screenshots-copy-button-title =
+    .title = Cuir lethbhreac dhen ghlacadh-sgrìn air an stòr-bhòrd
+screenshots-cancel-button-title =
+    .title = Sguir dheth
+screenshots-retry-button-title =
+    .title = Feuch ri glacadh-sgrìn a thogail a-rithist
 
 screenshots-meta-key =
     { PLATFORM() ->
@@ -41,8 +48,6 @@ screenshots-login-error-details = Cha b’ urrainn dhuinn an glacadh agad a shà
 screenshots-unshootable-page-error-title = Chan urrainn dhuinn glacadh-sgrìn a dhèanamh dhen duilleag seo.
 screenshots-unshootable-page-error-details = Chan eil duilleag-lìn àbhaisteach a tha seo ’s chan urrainn dhut glacadh-sgrìn a dhèanamh dheth.
 
-screenshots-self-screenshot-error-title = Chan urrainn dhut glacadh a thogail dhen duilleag { -screenshots-brand-name }!
-
 screenshots-empty-selection-error-title = Tha na thagh thu ro bheag
 
 screenshots-private-window-error-title = Tha { -screenshots-brand-name } à comas ann am modh a’ bhrabhsaidh phrìobhaidich
@@ -50,3 +55,6 @@ screenshots-private-window-error-details = Tha sinn duilich mu dhèidhinn. Tha s
 
 screenshots-generic-error-title = Ìoc! Sin { -screenshots-brand-name } air feadh na fìdhle.
 screenshots-generic-error-details = Chan eil sinn cinnteach dè thachair. A bheil thu airson feuchainn ris a-rithist no glacadh a thogail de dhuilleag eile?
+
+screenshots-too-large-error-title = Chaidh an glacadh-sgrìn agad a bhearradh a chionn ’s gun robh e ro mhòr
+screenshots-too-large-error-details = Tagh raon a tha nas lugha na 32,700 piogsail air an taobh as fhaide no raon de 124,900,000 piogsail uile gu lèir.

@@ -10,11 +10,6 @@ crashes-id = ID d'o informe
 crashes-send-date = Ninviau
 crashes-all-reports = Totz os informes de fallo
 crashes-no-config = Ista aplicación no ye configurada ta amostrar informes de fallos.
-extensions-title = Extensions
-extensions-name = Nombre
-extensions-enabled = Activada
-extensions-version = Versión
-extensions-id = ID
 support-addons-title = Complementos
 support-addons-name = Nombre
 support-addons-type = Tipo
@@ -72,6 +67,7 @@ app-basics-location-service-key-google = Clau d'o servicio de plazamiento de Goo
 app-basics-safebrowsing-key-google = Clau d'o servicio de navegación segura de Google
 app-basics-key-mozilla = Clau d'o servicio de plazamiento de Mozilla
 app-basics-safe-mode = Modo seguro
+
 show-dir-label =
     { PLATFORM() ->
         [macos] Amostrar en o Finder
@@ -125,8 +121,6 @@ sandbox-sys-call-tid = TID
 sandbox-sys-call-proc-type = Tipo de proceso
 sandbox-sys-call-number = Syscall
 sandbox-sys-call-args = Argumentos
-safe-mode-title = Intentar en Modo Seguro
-restart-in-safe-mode-label = Reiniciar con os complementos desactivaus…
 
 clear-startup-cache-title = Mira de limpiar la caché d'inicio
 clear-startup-cache-label = Limpiando la caché d'inicio...
@@ -153,6 +147,8 @@ media-device-latency = Latencia
 media-capabilities-title = Capacidatz multimedia
 # List all the entries of the database.
 media-capabilities-enumerate = Enumerar la base de datos
+
+## Codec support table
 
 ##
 
@@ -275,11 +271,6 @@ webgl2-renderer = WebGL 2 Driver Renderer
 webgl2-version = WebGL 2 Driver Version
 webgl2-driver-extensions = WebGL 2 Driver Extensions
 webgl2-extensions = WebGL 2 Extensions
-blocklisted-bug = S'ha ficau en a lista de bloqueyo por problemas conoixius
-
-# Variables
-# $bugNumber (string) - String of bug number from Bugzilla
-bug-link = bug { $bugNumber }
 
 # Variables
 #   $bugNumber (string) - Bug number on Bugzilla
@@ -290,8 +281,6 @@ support-blocklisted-bug = Blocada per problemas conoixius d'o <a data-l10n-name=
 unknown-failure = En a lista de bloqueyo; codigo de fallo { $failureCode }
 
 d3d11layers-crash-guard = Compositor D3D11
-d3d11video-crash-guard = Decodificador de video D3D11
-d3d9video-crash-guard = Decodificador de video D3D9
 glcontext-crash-guard = OpenGL
 wmfvpxvideo-crash-guard = Decodificador de video WMF VPX
 
@@ -336,14 +325,6 @@ launcher-process-status-unknown = Estau desconoixiu
 # $remoteWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
 multi-process-windows = { $remoteWindows }/{ $totalWindows }
-multi-process-status-0 = Activau por l'usuario
-multi-process-status-1 = Activau por defecto
-multi-process-status-2 = Desactivau
-multi-process-status-4 = Desactivau por las ferramientas d'accesibilidat
-multi-process-status-6 = Desactivau por no estar soportada la dentrada de texto
-multi-process-status-7 = Desactivau por complementos
-multi-process-status-8 = Desactivar forzadament
-multi-process-status-unknown = Estau desconoixiu
 
 async-pan-zoom = Pan/Zoom asincronos
 apz-none = garra

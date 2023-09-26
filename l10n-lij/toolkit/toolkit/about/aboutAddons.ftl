@@ -2,17 +2,17 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-addons-window =
-    .title = Gestô di conponenti azonti
-
 addons-page-title = Gestô di conponenti azonti
 
 search-header =
     .placeholder = Çerca in addons.mozilla.org
     .searchbuttonlabel = Çerca
 
-search-header-shortcut =
-    .key = f
+## Variables
+##   $domain - Domain name where add-ons are available (e.g. addons.mozilla.org)
+
+##
+
 
 list-empty-installed =
     .value = Ti no gh'æ di conponenti azonti de sto tipo instalæ
@@ -30,7 +30,6 @@ list-empty-button =
     .label = Ciù informaçioin in sci conponenti azonti
 
 help-button = Sopòrto conponenti azonti
-
 sidebar-help-button-title =
     .title = Sopòrto conponenti azonti
 
@@ -39,43 +38,6 @@ show-unsigned-extensions-button =
 
 show-all-extensions-button =
     .label = Amia tutte e estenscioin
-
-cmd-show-details =
-    .label = Fanni vedde ciù informaçioin
-    .accesskey = F
-
-cmd-find-updates =
-    .label = Treuva agiornamento
-    .accesskey = T
-
-cmd-preferences =
-    .label =
-        { PLATFORM() ->
-            [windows] Inpostaçioin
-           *[other] Preferense
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] o
-           *[other] P
-        }
-
-cmd-enable-theme =
-    .label = Metti o Tema
-    .accesskey = M
-
-cmd-disable-theme =
-    .label = Leva o Tema
-    .accesskey = L
-
-cmd-install-addon =
-    .label = Installa
-    .accesskey = I
-
-cmd-contribute =
-    .label = Agiutta
-    .accesskey = A
-    .tooltiptext = Agiutta a svilupâ sto conponente azonto
 
 detail-version =
     .label = Verscion
@@ -201,7 +163,6 @@ extensions-warning-update-security = O contròllo de seguessa in sci agiornament
 extensions-warning-update-security-button = Abilita
     .title = Abilita o contròllo de seguessa in sci agiornamenti di conponenti azonti
 
-
 ## Strings connected to add-on updates
 
 addon-updates-check-for-updates = Çerca agiornamenti
@@ -283,8 +244,12 @@ permissions-addon-button = Permissi
 ## Pending uninstall message bar
 
 
+## "sites with restrictions" (internally called "quarantined") are special domains
+## where add-ons are normally blocked for security reasons.
+
 ## This is the tooltip text for the recommended badges for an extension in about:addons. The
 ## badge is a small icon displayed next to an extension when it is recommended on AMO.
+
 
 ##
 
@@ -302,3 +267,29 @@ addons-heading-search-input =
 
 addon-page-options-button =
     .title = Angæsi pe tutti i conponenti azonti
+
+## Detail notifications
+## Variables:
+##   $name (String): name of the add-on.
+
+## Detail notifications
+## Variables:
+##   $name (string) - Name of the add-on.
+
+# Variables:
+#   $version (String): application version.
+details-notification-incompatible = { $name } o no l'é conpatibile con { -brand-short-name } { $version }.
+
+details-notification-unsigned-and-disabled = { $name } o l'é dizativou perché l'uzo o no l'é verificou pe { -brand-short-name }.
+details-notification-unsigned-and-disabled-link = Atre informaçioin
+
+details-notification-unsigned = { $name } o no l'é verificou pe l'uzo in { -brand-short-name }. Stanni atento.
+details-notification-unsigned-link = Atre informaçioin
+
+details-notification-blocked = { $name } o l'é stæto dizabilitou pe problemi de stabilitæ ò seguessa.
+details-notification-blocked-link = Ciù informaçioin
+
+details-notification-softblocked = { $name } o l'é in angæzo ben conosciuo a caozâ problemi de stabilitæ ò seguessa.
+details-notification-softblocked-link = Ciù informaçioin
+
+details-notification-gmp-pending = { $name } o saiâ instalou tra quarche momento.

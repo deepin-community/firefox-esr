@@ -2,20 +2,14 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-containers-window-new =
+containers-window-new2 =
     .title = Lisää uusi eristystila
-    .style = width: 45em
+    .style = min-width: 45em
 # Variables
 #   $name (String) - Name of the container
-containers-window-update =
+containers-window-update-settings2 =
     .title = { $name }-eristystilan asetukset
-    .style = width: 45em
-
-# Variables
-#   $name (String) - Name of the container
-containers-window-update-settings =
-    .title = { $name }-eristystilan asetukset
-    .style = width: 45em
+    .style = min-width: 45em
 
 containers-window-close =
     .key = w
@@ -45,10 +39,6 @@ containers-icon-label = Kuvake
 containers-color-label = Väri
     .accesskey = r
     .style = { -containers-labels-style }
-
-containers-button-done =
-    .label = Valmis
-    .accesskey = V
 
 containers-dialog =
     .buttonlabelaccept = Valmis

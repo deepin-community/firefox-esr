@@ -6,10 +6,10 @@ toolbar-context-menu-new-tab =
     .label = 新建标签页
     .accesskey = w
 toolbar-context-menu-reload-selected-tab =
-    .label = 重新载入所选标签页
+    .label = 重新加载所选标签页
     .accesskey = R
 toolbar-context-menu-reload-selected-tabs =
-    .label = 重新载入选中的标签页
+    .label = 重新加载选中的标签页
     .accesskey = R
 toolbar-context-menu-bookmark-selected-tab =
     .label = 为选中标签页添加书签…
@@ -20,14 +20,8 @@ toolbar-context-menu-bookmark-selected-tabs =
 toolbar-context-menu-select-all-tabs =
     .label = 选择所有标签页
     .accesskey = S
-toolbar-context-menu-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] 恢复关闭的标签页
-           *[other] 恢复关闭的标签页
-        }
-    .accesskey = U
-
+# Variables
+#   $tabCount (number) - Number of tabs
 toolbar-context-menu-reopen-closed-tabs =
     .label =
         { $tabCount ->
@@ -50,18 +44,18 @@ toolbar-context-menu-report-extension =
     .label = 举报扩展
     .accesskey = o
 
-# Can appear on the same context menu as menubarCmd ("Menu Bar") and
-# personalbarCmd ("Bookmarks Toolbar"), so they should have different
-# access keys.
+# Can appear on the same context menu as toolbar-context-menu-menu-bar-cmd
+# ("Menu Bar") and personalbarCmd ("Bookmarks Toolbar"), so they should
+# have different access keys.
 toolbar-context-menu-pin-to-overflow-menu =
     .label = 隐藏到折叠菜单
     .accesskey = P
-toolbar-context-menu-auto-hide-downloads-button =
-    .label = 于工具栏自动隐去
-    .accesskey = A
 toolbar-context-menu-auto-hide-downloads-button-2 =
     .label = 空闲时隐藏按钮
     .accesskey = H
+toolbar-context-menu-always-open-downloads-panel =
+    .label = 下载开始时显示面板
+    .accesskey = S
 toolbar-context-menu-remove-from-toolbar =
     .label = 从工具栏中移除
     .accesskey = R
@@ -71,6 +65,11 @@ toolbar-context-menu-view-customize-toolbar =
 toolbar-context-menu-view-customize-toolbar-2 =
     .label = 定制工具栏…
     .accesskey = C
+# This is only ever shown when toolbar-context-menu-pin-to-overflow-menu
+# is hidden, so they can share access keys.
+toolbar-context-menu-pin-to-toolbar =
+    .label = 固定到工具栏
+    .accesskey = P
 
 toolbar-context-menu-bookmarks-toolbar-always-show-2 =
     .label = 始终显示
@@ -85,3 +84,7 @@ toolbar-context-menu-bookmarks-toolbar-on-new-tab-2 =
 toolbar-context-menu-bookmarks-show-other-bookmarks =
     .label = 显示 - 其他书签
     .accesskey = h
+
+toolbar-context-menu-menu-bar-cmd =
+    .toolbarname = 菜单栏
+    .accesskey = M

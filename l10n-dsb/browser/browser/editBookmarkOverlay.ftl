@@ -2,17 +2,6 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-bookmark-overlay-name =
-    .value = Mě:
-    .accesskey = M
-
-bookmark-overlay-location =
-    .value = Městno:
-    .accesskey = t
-
-bookmark-overlay-folder =
-    .value = Zarědnik:
-
 bookmark-overlay-name-2 =
     .value = Mě
     .accesskey = M
@@ -35,13 +24,15 @@ bookmark-overlay-folders-expander =
     .tooltiptextdown = { bookmark-overlay-folders-expander.tooltiptext }
     .tooltiptextup = Schowaś
 
+bookmark-overlay-folders-expander2 =
+    .tooltiptext = Wšykne zarědniki cytańskich znamjenjow pokazaś
+
+bookmark-overlay-folders-expander-hide =
+    .tooltiptext = Schowaś
+
 bookmark-overlay-new-folder-button =
     .label = Nowy zarědnik
     .accesskey = o
-
-bookmark-overlay-tags =
-    .value = Wobznamjenja:
-    .accesskey = b
 
 bookmark-overlay-tags-2 =
     .value = Wobznamjenja
@@ -55,9 +46,11 @@ bookmark-overlay-tags-expander =
     .tooltiptextdown = { bookmark-overlay-tags-expander.tooltiptext }
     .tooltiptextup = Schowaś
 
-bookmark-overlay-keyword =
-    .value = Klucowe słowo:
-    .accesskey = l
+bookmark-overlay-tags-expander2 =
+    .tooltiptext = Wšykne wobznamjenja pokazaś
+
+bookmark-overlay-tags-expander-hide =
+    .tooltiptext = Schowaś
 
 bookmark-overlay-keyword-2 =
     .value = Klucowe słowo

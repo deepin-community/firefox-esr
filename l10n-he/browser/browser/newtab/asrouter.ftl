@@ -7,7 +7,6 @@
 
 cfr-doorhanger-extension-heading = הרחבה מומלצת
 cfr-doorhanger-feature-heading = תכונה מומלצת
-cfr-doorhanger-pintab-heading = התנסות בתכונה: נעיצת לשונית
 
 ##
 
@@ -19,8 +18,6 @@ cfr-doorhanger-extension-cancel-button = לא עכשיו
 
 cfr-doorhanger-extension-ok-button = הוספה כעת
     .accesskey = ס
-cfr-doorhanger-pintab-ok-button = נעיצת לשונית זו
-    .accesskey = נ
 
 cfr-doorhanger-extension-manage-settings-button = ניהול הגדרות המלצות
     .accesskey = ג
@@ -68,18 +65,6 @@ cfr-doorhanger-extension-total-users =
        *[other] { $total } משתמשים
     }
 
-cfr-doorhanger-pintab-description = קבלת גישה פשוטה לאתרים שהכי משמשים אותך. להשאיר אתרים פתוחים בלשונית (אפילו לאחר הפעלה מחדש).
-
-## These messages are steps on how to use the feature and are shown together.
-
-cfr-doorhanger-pintab-step1 = יש ללחוץ עם <b>הכפתור הימני</b> על הלשונית שברצונך לנעוץ.
-cfr-doorhanger-pintab-step2 = יש לבחור ב<b>נעיצת לשונית</b> מהתפריט.
-cfr-doorhanger-pintab-step3 = אם לאתר זה יהיה עדכון, תופיע נקודה כחולה על הלשונית הנעוצה שלך.
-
-cfr-doorhanger-pintab-animation-pause = השהיה
-cfr-doorhanger-pintab-animation-resume = המשך
-
-
 ## Firefox Accounts Message
 
 cfr-doorhanger-bookmark-fxa-header = סנכרון הסימניות שלך לכל מקום.
@@ -104,107 +89,9 @@ cfr-whatsnew-button =
     .label = מה חדש
     .tooltiptext = מה חדש
 
-cfr-whatsnew-panel-header = מה חדש
-
 cfr-whatsnew-release-notes-link-text = קריאת הערור השחרור
 
-cfr-whatsnew-fx70-title = { -brand-short-name } כעת נלחם יותר למען הפרטיות שלך
-cfr-whatsnew-fx70-body = העדכון האחרון משפר את תכונת הגנת המעקב והופך את האפשרות ליצור ססמאות מאובטחות לכל אתר קלה מאי פעם.
-
-cfr-whatsnew-tracking-protect-title = הגנה מפני רכיבי מעקב
-cfr-whatsnew-tracking-protect-body = { -brand-short-name } חוסם  הרבה רכיבי מעקב מוכרים של רשתות חברתיות ורכיבי מעקב חוצי אתרים שעוקבים אחרי הפעילויות המקוונות שלך.
-cfr-whatsnew-tracking-protect-link-text = הצגת הדוח שלך
-
-# This string is displayed before a large numeral that indicates the total
-# number of tracking elements blocked. Don’t add $blockedCount to your
-# localization, because it would result in the number showing twice.
-cfr-whatsnew-tracking-blocked-title =
-    { $blockedCount ->
-        [one] רכיבי מעקב נחסמו
-       *[other] רכיבי מעקב נחסמו
-    }
-cfr-whatsnew-tracking-blocked-subtitle = מאז { DATETIME($earliestDate, month: "long", year: "numeric") }
-cfr-whatsnew-tracking-blocked-link-text = הצגת דוח
-
-cfr-whatsnew-lockwise-backup-title = גיבוי הססמאות שלך
-cfr-whatsnew-lockwise-backup-link-text = הפעלת גיבויים
-
-cfr-whatsnew-lockwise-take-title = לקחת את הססמאות שלך לכל מקום
-cfr-whatsnew-lockwise-take-body = היישומון לנייד { -lockwise-brand-short-name } מאפשר לך לגשת באופן מאובטח לססמאות המגובות שלך מכל מקום.
-cfr-whatsnew-lockwise-take-link-text = הורדת היישומון
-
-## Search Bar
-
-cfr-whatsnew-searchbar-title = להקליד פחות ולמצוא יותר עם שורת הכתובת
-cfr-whatsnew-searchbar-body-topsites = מעכשיו, אפשר ללחוץ על שורת הכתובת והיא תתרחב עם קישורים לאתרים המובילים שלך.
-
-## Search bar
-
-cfr-whatsnew-searchbar-icon-alt-text = סמל זכוכית מגדלת
-
-## Picture-in-Picture
-
-cfr-whatsnew-pip-header = צפייה בסרטונים תוך כדי גלישה
-cfr-whatsnew-pip-body = במצב תמונה בתוך תמונה, הסרטון קופץ אל חלון מרחף כך שניתן לצפות בו תוך כדי עבודה בלשוניות אחרות.
-cfr-whatsnew-pip-cta = מידע נוסף
-
-## Permission Prompt
-
-cfr-whatsnew-permission-prompt-header = פחות חלונות קופצים מעצבנים
-cfr-whatsnew-permission-prompt-body = { -brand-shorter-name } מונע מעתה באופן אוטומטי מאתרים לבקש לשלוח לך הודעות קופצות.
-cfr-whatsnew-permission-prompt-cta = מידע נוסף
-
-## Fingerprinter Counter
-
-
-## Bookmark Sync
-
-cfr-doorhanger-sync-bookmarks-header = קבלת הסימנייה הזו בטלפון שלך
-cfr-doorhanger-sync-bookmarks-ok-button = הפעלת { -sync-brand-short-name }
-    .accesskey = ה
-
-## Login Sync
-
-cfr-doorhanger-sync-logins-header = אף ססמה לא תלך עוד לאיבוד
-cfr-doorhanger-sync-logins-body = אחסון וסנכרון הססמאות שלך באופן מאובטח לכל המכשירים שלך.
-cfr-doorhanger-sync-logins-ok-button = הפעלת { -sync-brand-short-name }
-    .accesskey = ה
-
-## Send Tab
-
-cfr-doorhanger-send-tab-header = לקריאה בדרכים
-cfr-doorhanger-send-tab-ok-button = לנסות את Send Tab
-    .accesskey = ל
-
-## Firefox Send
-
-cfr-doorhanger-firefox-send-header = שיתוף ה־PDF הזה באופן מאובטח
-cfr-doorhanger-firefox-send-ok-button = לנסות את { -send-brand-name }
-    .accesskey = ל
-
-## Social Tracking Protection
-
-cfr-doorhanger-socialtracking-ok-button = הצגת הגנות
-    .accesskey = ג
-cfr-doorhanger-socialtracking-close-button = סגירה
-    .accesskey = ס
-cfr-doorhanger-socialtracking-dont-show-again = לא להציג לי הודעות כאלו שוב
-    .accesskey = ל
-cfr-doorhanger-socialtracking-heading = { -brand-short-name } מנע מעקב של רשת חברתית כאן
-cfr-doorhanger-socialtracking-description = הפרטיות שלך חשובה. { -brand-short-name } חוסם כעת רכיבי מעקב נפוצים של מדיה חברתית, ומגביל את כמות הנתונים שהם יכולים לאסוף על הפעילויות שלך ברשת.
-cfr-doorhanger-cryptominers-heading = { -brand-short-name } חסם כורה מטבעות דיגיטליים בדף זה
-cfr-doorhanger-cryptominers-description = הפרטיות שלך חשובה. { -brand-short-name } חוסם כעת כורי מטבעות דיגיטליים, המשתמשים בכוח העיבוד של המערכת שלך כדי לכרות כסף דיגיטלי.
-
 ## Enhanced Tracking Protection Milestones
-
-# Variables:
-#   $blockedCount (Number) - The total count of blocked trackers. This number will always be greater than 1.
-#   $date (String) - The date we began recording the count of blocked trackers
-cfr-doorhanger-milestone-heading =
-    { $blockedCount ->
-        [one] ‏{ -brand-short-name } חסם יותר מרכיב מעקב אחד מאז { $date }!
-       *[other] ‏{ -brand-short-name } חסם למעלה מ־<b>{ $blockedCount }</b> רכיבי מעקב מאז { $date }!
-    }
 
 # Variables:
 #   $blockedCount (Number) - The total count of blocked trackers. This number will always be greater than 1.
@@ -216,42 +103,8 @@ cfr-doorhanger-milestone-heading2 =
     }
 cfr-doorhanger-milestone-ok-button = צפייה בהכל
     .accesskey = צ
-
-## What’s New Panel Content for Firefox 76
-
-
-## Lockwise message
-
-cfr-whatsnew-lockwise-header = יצירת ססמאות מאובטחות בקלות
-cfr-whatsnew-lockwise-icon-alt = סמל { -lockwise-brand-short-name }
-
-## Vulnerable Passwords message
-
-cfr-whatsnew-passwords-header = קבלת התרעות על ססמאות פגיעות
-cfr-whatsnew-passwords-body = פצחנים יודעים שאנשים משתמשים באותן הססמאות. אם השתמשת באותה הססמה במספר אתרים, ואחד מאותם האתרים נחשף בדליפת נתונים, תתקבל התרעה ב־{ -lockwise-brand-short-name } כדי לשנות את הססמה שלך באתרים אלה.
-cfr-whatsnew-passwords-icon-alt = סמל מפתח ססמה פגיעה
-
-## Picture-in-Picture fullscreen message
-
-cfr-whatsnew-pip-fullscreen-header = העברת מצב תמונה בתוך תמונה למסך מלא
-cfr-whatsnew-pip-fullscreen-icon-alt = סמל תמונה בתוך תמונה
-
-## Protections Dashboard message
-
-cfr-whatsnew-protections-header = הגנות במבט חטוף
-cfr-whatsnew-protections-cta-link = הצגת לוח ההגנות
-cfr-whatsnew-protections-icon-alt = סמל מגן
-
-## Better PDF message
-
-cfr-whatsnew-better-pdf-header = חוויית PDF טובה יותר
-cfr-whatsnew-better-pdf-body = מסמכי PDF נפתחים כעת ישירות ב־{ -brand-short-name }, תוך שמירה על זרימת העבודה.
-
 cfr-doorhanger-milestone-close-button = סגירה
     .accesskey = ס
-
-## What’s New Panel Content for Firefox 76
-## Protections Dashboard message
 
 ## DOH Message
 
@@ -264,27 +117,127 @@ cfr-doorhanger-doh-secondary-button = השבתה
 
 ## Fission Experiment Message
 
-cfr-doorhanger-fission-header = בידוד אתרים
-cfr-doorhanger-fission-primary-button = בסדר, הבנתי
-    .accesskey = ב
-cfr-doorhanger-fission-secondary-button = מידע נוסף
-    .accesskey = מ
-
-## What's new: Cookies message
-
-## What's new: Media controls message
-
-## What's new: Search shortcuts
-
-## What's new: Cookies protection
-
-## What's new: Better bookmarking
-
-## What's new: Cross-site cookie tracking
-
 ## Full Video Support CFR message
 
 cfr-doorhanger-video-support-body = ייתכן שסרטונים באתר זה לא יעבדו כראוי בגרסה זו של { -brand-short-name }. לקבלת תמיכה מלאה בווידאו, יש לעדכן את { -brand-short-name } כעת.
 cfr-doorhanger-video-support-header = עדכון { -brand-short-name } להפעלת הסרטונים
 cfr-doorhanger-video-support-primary-button = עדכון כעת
     .accesskey = ע
+
+## Spotlight modal shared strings
+
+## VPN promotion dialog for public Wi-Fi users
+##
+## If a user is detected to be on a public Wi-Fi network, they are given a
+## bit of info about how to improve their privacy and then offered a button
+## to the Mozilla VPN page and a link to dismiss the dialog.
+
+# This header text can be explicitly wrapped.
+spotlight-public-wifi-vpn-header = נראה שהתחברת לרשת אלחוטית ציבורית
+spotlight-public-wifi-vpn-body = כדי להסתיר את המיקום ואת פעילות הגלישה שלך, כדאי לשקול להשתמש ברשת וירטואלית פרטית (VPN). היא תסייע לך להתגונן בזמן גלישה במקומות ציבוריים כמו נמלי תעופה ובתי קפה.
+spotlight-public-wifi-vpn-primary-button = להישאר אנונימי עם { -mozilla-vpn-brand-name }
+    .accesskey = ל
+spotlight-public-wifi-vpn-link = לא כעת
+    .accesskey = ל
+
+## Total Cookie Protection Rollout
+
+## Emotive Continuous Onboarding
+
+spotlight-better-internet-header = אינטרנט טוב יותר מתחיל בך
+spotlight-better-internet-body = הבחירה להשתמש ב־{ -brand-short-name } משמעה הצבעה עבור אינטרנט פתוח ונגיש שטוב יותר לכולם.
+spotlight-peace-mind-body = בכל חודש, { -brand-short-name } חוסם בממוצע למעלה מ־3,000 רכיבי מעקב למשתמש. כי שום דבר, במיוחד מטרדי פרטיות כמו רכיבי מעקב, לא צריך לעמוד בינך לבין האינטרנט הטוב.
+spotlight-pin-primary-button =
+    { PLATFORM() ->
+        [macos] שמירה ב־Dock
+       *[other] הצמדה לשורת המשימות
+    }
+spotlight-pin-secondary-button = לא כעת
+
+## MR2022 Background Update Windows native toast notification strings.
+##
+## These strings will be displayed by the Windows operating system in
+## a native toast, like:
+##
+## <b>multi-line title</b>
+## multi-line text
+## <img>
+## [ primary button ] [ secondary button ]
+##
+## The button labels are fitted into narrow fixed-width buttons by
+## Windows and therefore must be as narrow as possible.
+
+mr2022-background-update-toast-title = ‏{ -brand-short-name } חדש. יותר פרטיות. פחות רכיבי מעקב. ללא פשרות.
+mr2022-background-update-toast-text = נסו את { -brand-short-name } החדש ביותר כעת, משודרג עם ההגנה החזקה ביותר שלנו עד כה נגד מעקב.
+
+# This button label will be fitted into a narrow fixed-width button by
+# Windows. Try to not exceed the width of the English text (compare it
+# using a variable font like Arial): the button can only fit 1-2
+# additional characters, exceeding characters will be truncated.
+mr2022-background-update-toast-primary-button-label = פתיחת { -brand-shorter-name } כעת
+
+# This button label will be fitted into a narrow fixed-width button by
+# Windows. Try to not exceed the width of the English text (compare it using a
+# variable font like Arial): the button can only fit 1-2 additional characters,
+# exceeding characters will be truncated.
+mr2022-background-update-toast-secondary-button-label = להזכיר לי מאוחר יותר
+
+## Firefox View CFR
+
+firefoxview-cfr-primarybutton = בואו ננסה
+    .accesskey = נ
+firefoxview-cfr-secondarybutton = לא כעת
+    .accesskey = ל
+firefoxview-cfr-header-v2 = להמשיך בזריזות מאיפה שהפסקת
+
+## Firefox View Spotlight
+
+firefoxview-spotlight-promo-title = תגידו שלום ל־{ -firefoxview-brand-name }
+
+# “Poof” refers to the expression to convey when something or someone suddenly disappears, or in this case, reappears. For example, “Poof, it’s gone.”
+firefoxview-spotlight-promo-subtitle = רוצה את הלשונית הפתוחה הזאת שבטלפון שלך? קיבלת. יש לך צורך באתר שבדיוק עכשיו ביקרת? פוף, הנה הוא כאן ב־{ -firefoxview-brand-name }.
+firefoxview-spotlight-promo-primarybutton = כיצד זה עובד
+firefoxview-spotlight-promo-secondarybutton = דילוג
+
+## Colorways expiry reminder CFR
+
+colorways-cfr-primarybutton = בחירת ערכת צבעים
+    .accesskey = ב
+
+# "shades" refers to the different color options available to users in colorways.
+colorways-cfr-body = צבעו את הדפדפן שלכם בגוונים בלעדיים של { -brand-short-name } בהשראת קולות שמשנים תרבות.
+
+## Cookie Banner Handling CFR
+
+
+## These strings are used in the Fox doodle Pin/set default spotlights
+
+july-jam-set-default-primary = פתיחת הקישורים שלי באמצעות { -brand-short-name }
+fox-doodle-pin-headline = ברוכים השבים
+
+# “indie” is short for the term “independent”.
+# In this instance, free from outside influence or control.
+fox-doodle-pin-body = רק תזכורת קטנה שבאפשרותך לשמור את הדפדפן העצמאי האהוב עליך במרחק לחיצה אחת בלבד.
+fox-doodle-pin-primary = פתיחת הקישורים שלי באמצעות { -brand-short-name }
+fox-doodle-pin-secondary = לא כעת
+
+## These strings are used in the Set Firefox as Default PDF Handler for Existing Users experiment
+
+set-default-pdf-handler-headline = <strong>מסמכי ה־PDF שלך נפתחים כעת באמצעות { -brand-short-name }.</strong> באפשרותך לערוך או לחתום על טפסים ישירות בדפדפן שלך. כדי לשנות, יש לחפש ״PDF״ בהגדרות.
+set-default-pdf-handler-primary = הבנתי
+
+## FxA sync CFR
+
+fxa-sync-cfr-header = יהיה לך מכשיר חדש בעתיד?
+fxa-sync-cfr-body = כדאי לוודא שהסימניות, הססמאות והלשוניות ביותר שלך מגיעות איתך בכל פעם שתפתח דפדפן { -brand-product-name } במכשיר חדש.
+fxa-sync-cfr-primary = מידע נוסף
+    .accesskey = מ
+fxa-sync-cfr-secondary = להזכיר לי מאוחר יותר
+    .accesskey = ל
+
+## Device Migration FxA Spotlight
+
+device-migration-fxa-spotlight-header = משתמשים במכשיר ישן?
+device-migration-fxa-spotlight-body = כדאי לגבות את הנתונים שלכם כדי לוודא שלא תאבדו מידע חשוב כמו סימניות וססמאות - במיוחד אם אתם עוברים למכשיר חדש.
+device-migration-fxa-spotlight-primary-button = כיצד לגבות את הנתונים שלי
+device-migration-fxa-spotlight-link = להזכיר לי מאוחר יותר

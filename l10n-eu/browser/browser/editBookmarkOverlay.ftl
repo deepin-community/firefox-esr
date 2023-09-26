@@ -2,17 +2,6 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-bookmark-overlay-name =
-    .value = Izena:
-    .accesskey = n
-
-bookmark-overlay-location =
-    .value = Helbidea:
-    .accesskey = l
-
-bookmark-overlay-folder =
-    .value = Karpeta:
-
 bookmark-overlay-name-2 =
     .value = Izena
     .accesskey = n
@@ -35,13 +24,15 @@ bookmark-overlay-folders-expander =
     .tooltiptextdown = { bookmark-overlay-folders-expander.tooltiptext }
     .tooltiptextup = Ezkutatu
 
+bookmark-overlay-folders-expander2 =
+    .tooltiptext = Ikusi laster-marka karpeta guztiak
+
+bookmark-overlay-folders-expander-hide =
+    .tooltiptext = Ezkutatu
+
 bookmark-overlay-new-folder-button =
     .label = Karpeta berria
     .accesskey = b
-
-bookmark-overlay-tags =
-    .value = Etiketak:
-    .accesskey = t
 
 bookmark-overlay-tags-2 =
     .value = Etiketak
@@ -55,9 +46,11 @@ bookmark-overlay-tags-expander =
     .tooltiptextdown = { bookmark-overlay-tags-expander.tooltiptext }
     .tooltiptextup = Ezkutatu
 
-bookmark-overlay-keyword =
-    .value = Gako-hitza:
-    .accesskey = k
+bookmark-overlay-tags-expander2 =
+    .tooltiptext = Ikusi etiketa guztiak
+
+bookmark-overlay-tags-expander-hide =
+    .tooltiptext = Ezkutatu
 
 bookmark-overlay-keyword-2 =
     .value = Gako-hitza

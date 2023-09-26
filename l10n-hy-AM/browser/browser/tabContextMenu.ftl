@@ -11,6 +11,12 @@ reload-tab =
 select-all-tabs =
     .label = Ընտրել բոլոր ներդիրները
     .accesskey = S
+tab-context-play-tab =
+    .label = Նվագարկել ներդիրը
+    .accesskey = l
+tab-context-play-tabs =
+    .label = Նվագարկել ներդիրները
+    .accesskey = y
 duplicate-tab =
     .label = Կրկնօրինակել ներդիրը
     .accesskey = D
@@ -48,12 +54,6 @@ unpin-selected-tabs =
 bookmark-selected-tabs =
     .label = Էջանշել ներդիրները
     .accesskey = B
-bookmark-tab =
-    .label = Էջանշել ներդիրը
-    .accesskey = B
-reopen-in-container =
-    .label = Կրկին բացել Պարունակում
-    .accesskey = e
 tab-context-open-in-new-container-tab =
     .label = Բացել Նոր Պարունակ Ներդիրում
     .accesskey = e
@@ -69,36 +69,27 @@ move-to-new-window =
 tab-context-close-multiple-tabs =
     .label = Փակել բազմակի ներդիրները
     .accesskey = M
-tab-context-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Հետարկել փակված ներդիրը
-            [one] Հետարկել փակված ներդիրները
-           *[other] Հետարկել փակված ներդիրները
-        }
-    .accesskey = U
-close-tab =
-    .label = Փակել ներդիրը
-    .accesskey = Փ
-close-tabs =
-    .label = Փակել ներդիրները
-    .accesskey = S
-move-tabs =
-    .label = Տեղափոխել ներդիրները
-    .accesskey = v
-move-tab =
-    .label = Տեղափոխել ներիրը
-    .accesskey = v
+tab-context-share-url =
+    .label = Համօգտագործել
+    .accesskey = h
 
 ## Variables:
 ##  $tabCount (Number): the number of tabs that are affected by the action.
 
-tab-context-close-tabs =
+tab-context-reopen-closed-tabs =
+    .label =
+        { $tabCount ->
+            [1] Կրկին բացել ներդիրը
+            [one] Կրկին բացել ներդիրները
+           *[other] Կրկին բացել ներդիրները
+        }
+    .accesskey = o
+tab-context-close-n-tabs =
     .label =
         { $tabCount ->
             [1] Փակել ներդիրը
-            [one] Փակել ներդիրները
-           *[other] Փակել ներդիրները
+            [one] Փակել { $tabCount } ներդիրները
+           *[other] Փակել { $tabCount } ներդիրները
         }
     .accesskey = C
 tab-context-move-tabs =
@@ -109,3 +100,11 @@ tab-context-move-tabs =
            *[other] Տեղափոխել ներդիրները
         }
     .accesskey = v
+
+tab-context-send-tabs-to-device =
+    .label =
+        { $tabCount ->
+            [one] Ուղարկել ներդիրը սարքին
+           *[other] Ուղարկել { $tabCount } ներդիրները սարքին
+        }
+    .accesskey = n

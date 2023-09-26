@@ -15,6 +15,8 @@ printui-sheets-count =
     }
 
 printui-page-range-all = Aw
+printui-page-range-odd = Odd
+printui-page-range-even = Even
 printui-page-range-custom = Custom
 printui-page-range-label = Pages
 printui-page-range-picker =
@@ -57,8 +59,6 @@ printui-two-sided-printing-short-edge = Flip on cutty edge
 printui-options = Options
 printui-headers-footers-checkbox = Prent heiders and dowp-enders
 printui-backgrounds-checkbox = Prent backgrunds
-
-printui-selection-checkbox = Prent walin anely
 
 ## The "Format" section, select a version of the website to print. Radio
 ## options to select between the original page, selected text only, or a version

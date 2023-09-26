@@ -5,9 +5,9 @@
 
 ## Strings used for device manager
 
-devmgr =
+devmgr-window =
     .title = Administrador de Dispositivo
-    .style = width: 67em; height: 32em;
+    .style = min-width: 67em; min-height: 32em;
 
 devmgr-devlist =
     .label = Este certificado personal no puede ser instalado porque no posees la clave privada correspondiente que fue creada cuando el certificado fue solicitado.
@@ -116,8 +116,6 @@ devinfo-label =
 devinfo-serialnum =
     .label = Número de serie
 
-fips-nonempty-password-required = El modo FIPS requiere que tenga una contraseña maestra establecida para cada dispositivo de seguridad. Por favor, establece la contraseña antes de tratar de activar el modo FIPS.
-
 fips-nonempty-primary-password-required = El modo FIPS requiere que tenga una contraseña primaria establecida para cada dispositivo de seguridad. Por favor, establece la contraseña antes de tratar de activar el modo FIPS.
 unable-to-toggle-fips = No se puede cambiar el modo FIPS para el dispositivo de seguridad. Se recomienda que salga y reinicie esta aplicación.
 load-pk11-module-file-picker-title = Elija un controlador de dispositivo PKCS#11 para cargar
@@ -131,5 +129,5 @@ load-module-help-root-certs-module-name =
     .value = "Root Certs" está reservado y no puede ser usado como el nombre del módulo.
 
 add-module-failure = No se pudo añadir el módulo
-del-module-warning = ¿Está seguro que desea eliminar este módulo de seguridad?
+del-module-warning = ¿De verdad quieres eliminar este módulo de seguridad?
 del-module-error = Incapaz de eliminar módulo

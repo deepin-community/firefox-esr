@@ -2,18 +2,34 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
+tab-context-new-tab =
+    .label = Uus kaart
+    .accesskey = U
 reload-tab =
     .label = Laadi kaart uuesti
     .accesskey = i
 select-all-tabs =
     .label = Vali kõik kaardid
     .accesskey = k
+tab-context-play-tab =
+    .label = Esita kaardi sisu
+    .accesskey = s
+tab-context-play-tabs =
+    .label = Esita kaartide sisu
+    .accesskey = E
 duplicate-tab =
     .label = Klooni kaart
     .accesskey = K
 duplicate-tabs =
     .label = Klooni kaardid
     .accesskey = o
+# The following string is displayed on a menuitem that will close the tabs from the start of the tabstrip to the currently targeted tab (excluding the currently targeted and any other selected tabs).
+# In left-to-right languages this should use "Left" and in right-to-left languages this should use "Right".
+close-tabs-to-the-start =
+    .label = Sulge vasakule jäävad kaardid
+    .accesskey = v
+# The following string is displayed on a menuitem that will close the tabs from the end of the tabstrip to the currently targeted tab (excluding the currently targeted and any other selected tabs).
+# In left-to-right languages this should use "Right" and in right-to-left languages this should use "Left".
 close-tabs-to-the-end =
     .label = Sulge paremale jäävad kaardid
     .accesskey = u
@@ -38,12 +54,9 @@ unpin-selected-tabs =
 bookmark-selected-tabs =
     .label = Lisa kaardid järjehoidjatesse…
     .accesskey = k
-bookmark-tab =
-    .label = Lisa kaart järjehoidjatesse
-    .accesskey = j
-reopen-in-container =
-    .label = Taasava konteineris
-    .accesskey = o
+tab-context-open-in-new-container-tab =
+    .label = Ava uuel konteinerkaardil
+    .accesskey = u
 move-to-start =
     .label = Liiguta algusesse
     .accesskey = a
@@ -56,37 +69,29 @@ move-to-new-window =
 tab-context-close-multiple-tabs =
     .label = Sulge mitu kaarti
     .accesskey = m
-
-tab-context-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [one] Võta kaardi sulgemine tagasi
-           *[other] Võta kaartide sulgemine tagasi
-        }
-    .accesskey = V
-close-tab =
-    .label = Sulge kaart
-    .accesskey = S
-close-tabs =
-    .label = Sulge kaardid
-    .accesskey = S
-move-tabs =
-    .label = Liiguta kaarte
-    .accesskey = i
-move-tab =
-    .label = Liiguta kaarti
-    .accesskey = i
+tab-context-share-url =
+    .label = Jaga
+    .accesskey = J
 
 ## Variables:
 ##  $tabCount (Number): the number of tabs that are affected by the action.
 
-tab-context-close-tabs =
+tab-context-reopen-closed-tabs =
     .label =
         { $tabCount ->
-            [one] Sulge kaart
-           *[other] Sulge kaardid
+            [1] Ava suletud kaart uuesti
+            [one] Ava suletud kaart uuesti
+           *[other] Ava suletud kaardid uuesti
         }
-    .accesskey = S
+    .accesskey = d
+tab-context-close-n-tabs =
+    .label =
+        { $tabCount ->
+            [1] Sulge kaart
+            [one] Sulge kaart
+           *[other] Sulge { $tabCount } kaarti
+        }
+    .accesskey = g
 tab-context-move-tabs =
     .label =
         { $tabCount ->
@@ -94,3 +99,11 @@ tab-context-move-tabs =
            *[other] Liiguta kaarte
         }
     .accesskey = L
+
+tab-context-send-tabs-to-device =
+    .label =
+        { $tabCount ->
+            [one] Saada kaart seadmesse
+           *[other] Saada { $tabCount } kaarti seadmesse
+        }
+    .accesskey = k

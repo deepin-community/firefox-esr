@@ -5,9 +5,9 @@
 
 ## Strings used for device manager
 
-devmgr =
+devmgr-window =
     .title = Mynedżer masziny
-    .style = width: 67em; height: 32em;
+    .style = min-width: 67em; min-height: 32em;
 
 devmgr-devlist =
     .label = Masziny i moduły ôd bezpieczyństwa
@@ -115,8 +115,6 @@ devinfo-label =
 
 devinfo-serialnum =
     .label = Nōmer seryje
-
-fips-nonempty-password-required = Tryb FIPS potrzebuje głōwnego hasła nastawiōnego do kożdyj masziny ôd bezpieczyństwa. Nastow hasło, podwiela załōnczysz tryb FIPS.
 
 fips-nonempty-primary-password-required = Tryb FIPS potrzebuje głōwnego hasła nastawiōnego do kożdyj masziny ôd bezpieczyństwa. Nastow hasło, podwiela załōnczysz tryb FIPS.
 unable-to-toggle-fips = Niy szło zmiynić trybu FIPS do tyj masziny ôd bezpieczyństwa. Doradzōmy, coby zawrzić i resztartnōnć ta aplikacyjo.

@@ -12,11 +12,6 @@ crashes-id = ID poročila
 crashes-send-date = Datum pošiljanja
 crashes-all-reports = Vsa poročila o sesutjih
 crashes-no-config = Ta program ni bil nastavljen za prikaz poročil o sesutjih.
-extensions-title = Razširitve
-extensions-name = Ime
-extensions-enabled = Vključeno
-extensions-version = Različica
-extensions-id = ID
 support-addons-title = Dodatki
 support-addons-name = Ime
 support-addons-type = Vrsta
@@ -80,6 +75,12 @@ app-basics-location-service-key-google = Ključ lokacijskih storitev Google
 app-basics-safebrowsing-key-google = Ključ Google Safebrowsing
 app-basics-key-mozilla = Ključ lokacijskih storitev Mozilla
 app-basics-safe-mode = Varni način
+app-basics-memory-size = Velikost pomnilnika (RAM)
+app-basics-disk-available = Razpoložljiv prostor na disku
+# Variables:
+#   $value (number) - Amount of data being stored
+#   $unit (string) - The unit of data being stored (e.g. MB)
+app-basics-data-size = { $value } { $unit }
 show-dir-label =
     { PLATFORM() ->
         [macos] Prikaži v Finderju
@@ -109,11 +110,21 @@ graphics-gpu2-title = GPE št. 2
 graphics-decision-log-title = Dnevnik odločitev
 graphics-crash-guards-title = Onemogočene možnosti zaščite pred sesutjem
 graphics-workarounds-title = Zaobidenja
+graphics-device-pixel-ratios = Razmerje slikovnih pik okna
 # Windowing system in use on Linux (e.g. X11, Wayland).
 graphics-window-protocol = Okenski protokol
 # Desktop environment in use on Linux (e.g. GNOME, KDE, XFCE, etc).
 graphics-desktop-environment = Namizno okolje
 place-database-title = Podatkovna zbirka mest
+place-database-stats = Statistika
+place-database-stats-show = Prikaži statistiko
+place-database-stats-hide = Skrij statistiko
+place-database-stats-entity = Entiteta
+place-database-stats-count = Število
+place-database-stats-size-kib = Velikost (KiB)
+place-database-stats-size-perc = Velikost (%)
+place-database-stats-efficiency-perc = Učinkovitost (%)
+place-database-stats-sequentiality-perc = Zaporednost (%)
 place-database-integrity = Celovitost
 place-database-verify-integrity = Preveri celovitost
 a11y-title = Dostopnost
@@ -133,8 +144,6 @@ sandbox-sys-call-tid = TID
 sandbox-sys-call-proc-type = Vrsta procesa
 sandbox-sys-call-number = Sistemski klic
 sandbox-sys-call-args = Argumenti
-safe-mode-title = Poskusite varni način
-restart-in-safe-mode-label = Ponovno zaženi z onemogočenimi dodatki …
 troubleshoot-mode-title = Odkrivanje težav
 restart-in-troubleshoot-mode-label = Način za odpravljanje težav …
 clear-startup-cache-title = Poskusite počistiti predpomnilnik zagona
@@ -162,8 +171,18 @@ media-device-channels = Kanali
 media-device-rate = Hitrost
 media-device-latency = Zakasnitev
 media-capabilities-title = Zmogljivosti večpredstavnosti
+media-codec-support-info = Podatki o podpori kodekov
 # List all the entries of the database.
 media-capabilities-enumerate = Oštevilči bazo podatkov
+
+## Codec support table
+
+media-codec-support-sw-decoding = Programsko dekodiranje
+media-codec-support-hw-decoding = Strojno dekodiranje
+media-codec-support-codec-name = Ime kodeka
+media-codec-support-supported = Podprt
+media-codec-support-unsupported = Nepodprt
+media-codec-support-error = Podatki o podpori kodeka niso na voljo. Poskusite znova po predvajanju predstavnostne datoteke.
 
 ##
 
@@ -288,10 +307,8 @@ webgl2-renderer = Izrisovalnik gonilnika WebGL 2
 webgl2-version = Različica gonilnika WebGL 2
 webgl2-driver-extensions = Razširitve gonilnika WebGL 2
 webgl2-extensions = Razširitve WebGL 2
-blocklisted-bug = Dodano na seznam zavrnjenih zaradi znanih težav
-# Variables
-# $bugNumber (string) - String of bug number from Bugzilla
-bug-link = hrošč { $bugNumber }
+webgpu-default-adapter = Privzeta vmesniška kartica za WebGPU
+webgpu-fallback-adapter = Pomožna vmesniška kartica za WebGPU
 # Variables
 #   $bugNumber (string) - Bug number on Bugzilla
 support-blocklisted-bug = Dodano na seznam zavrnjenih zaradi znanih težav: <a data-l10n-name="bug-link">hrošč { $bugNumber }</a>
@@ -299,8 +316,6 @@ support-blocklisted-bug = Dodano na seznam zavrnjenih zaradi znanih težav: <a d
 # $failureCode (string) - String that can be searched in the source tree.
 unknown-failure = Dodano na seznam zavrnjenih; koda napake { $failureCode }
 d3d11layers-crash-guard = Sestavljalnik D3D11
-d3d11video-crash-guard = Videodekodirnik D3D11
-d3d9video-crash-guard = Videodekodirnik D3D9
 glcontext-crash-guard = OpenGL
 wmfvpxvideo-crash-guard = Videodekodirnik WMF VPX
 reset-on-next-restart = Ponastavi ob naslednjem zagonu
@@ -309,8 +324,8 @@ gpu-device-reset = Ponastavitev naprave
 gpu-device-reset-button = Sproži ponastavitev naprave
 uses-tiling = Uporablja razpostavljanje
 content-uses-tiling = Uporablja razpostavljanje (vsebina)
-off-main-thread-paint-enabled = Izrisovanje izven glavne niti je omogočeno
-off-main-thread-paint-worker-count = Število workerjev za izrisovanje izven glavne niti
+off-main-thread-paint-enabled = Slikanje izven glavne niti je omogočeno
+off-main-thread-paint-worker-count = Število workerjev za slikanje izven glavne niti
 target-frame-rate = Ciljna hitrost sličic
 min-lib-versions = Najnižja podprta različica
 loaded-lib-versions = Trenutna različica
@@ -322,6 +337,8 @@ can-sandbox-content = Peskovnik vsebinskih procesov
 can-sandbox-media = Peskovnik večpredstavnih vtičnikov
 content-sandbox-level = Raven peskovnika vsebinskih opravil
 effective-content-sandbox-level = Dejanska raven peskovnika vsebinskih opravil
+content-win32k-lockdown-state = Stanje zaklepa Win32k za vsebinske procese
+support-sandbox-gpu-level = Raven peskovnika za procese GPE
 sandbox-proc-type-content = vsebina
 sandbox-proc-type-file = vsebina datoteke
 sandbox-proc-type-media-plugin = večpredstavni vtičnik
@@ -339,14 +356,6 @@ launcher-process-status-unknown = Neznano stanje
 # $remoteWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
 multi-process-windows = { $remoteWindows }/{ $totalWindows }
-multi-process-status-0 = Omogočil uporabnik
-multi-process-status-1 = Privzeto omogočeno
-multi-process-status-2 = Onemogočeno
-multi-process-status-4 = Onemogočila orodja za dostopnost
-multi-process-status-6 = Onemogočeno zaradi nepodprtega vnosa besedila
-multi-process-status-7 = Onemogočili dodatki
-multi-process-status-8 = Prisilno onemogočeno
-multi-process-status-unknown = Neznano stanje
 # Variables
 # $fissionWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
@@ -355,12 +364,13 @@ fission-status-experiment-control = Onemogočeno zaradi poskusa
 fission-status-experiment-treatment = Omogočeno zaradi poskusa
 fission-status-disabled-by-e10s-env = Onemogočeno s strani okolja
 fission-status-enabled-by-env = Omogočeno s strani okolja
-fission-status-disabled-by-safe-mode = Onemogočeno zaradi varnega načina
+fission-status-disabled-by-env = Onemogočeno s strani okolja
 fission-status-enabled-by-default = Privzeto omogočeno
 fission-status-disabled-by-default = Privzeto onemogočeno
 fission-status-enabled-by-user-pref = Omogočil uporabnik
 fission-status-disabled-by-user-pref = Onemogočil uporabnik
 fission-status-disabled-by-e10s-other = E10s Onemogočen
+fission-status-enabled-by-rollout = Omogoča izdajanje po korakih
 async-pan-zoom = Asinhrono pomikanje/povečava
 apz-none = brez
 wheel-enabled = vnos s koleščkom omogočen

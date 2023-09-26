@@ -66,11 +66,6 @@ options-stylesheet-autocompletion-tooltip =
 options-screenshot-label = Screenshot Behavior
 
 # Label for the checkbox that toggles screenshot to clipboard feature
-options-screenshot-clipboard-label = Screenshot to clipboard
-options-screenshot-clipboard-tooltip =
-    .title = Saves to the screenshot directly to the clipboard
-
-# Label for the checkbox that toggles screenshot to clipboard feature
 options-screenshot-clipboard-only-label = Screenshot to clipboard only
 options-screenshot-clipboard-tooltip2 =
     .title = Saves the screenshot directly to the clipboard
@@ -136,8 +131,3 @@ options-source-maps-tooltip =
 # The message shown for settings that trigger page reload
 options-context-triggers-page-refresh = * Current session only, reloads the page
 
-# The label for the checkbox that toggles the display of the platform data in the
-# Profiler i.e. devtools.profiler.ui.show-platform-data a boolean preference in about:config
-options-show-platform-data-label = Show Gecko platform data
-options-show-platform-data-tooltip =
-    .title = If you enable this option the JavaScript Profiler reports will include Gecko platform symbols

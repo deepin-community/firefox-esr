@@ -23,6 +23,8 @@ profile-selection-delete-button =
     .label = Profil löschen…
     .accesskey = l
 
+profile-selection-conflict-message = Ein anderer { -brand-product-name }-Prozess hat Änderungen an Profilen vorgenommen. { -brand-short-name } muss neu gestartet werden, bevor weitere Änderungen möglich sind.
+
 ## Messages used in the profile manager
 
 profile-manager-description = { -brand-short-name } speichert Ihre persönlichen Einstellungen und Daten in Ihrem persönlichen Profil.

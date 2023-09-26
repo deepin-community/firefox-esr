@@ -5,9 +5,9 @@
 
 ## Strings used for device manager
 
-devmgr =
+devmgr-window =
     .title = Gestionnaire de périphériques
-    .style = width: 67em; height: 32em;
+    .style = min-width: 67em; min-height: 32em;
 
 devmgr-devlist =
     .label = Modules et périphériques de sécurité
@@ -115,8 +115,6 @@ devinfo-label =
 
 devinfo-serialnum =
     .label = Numéro de série
-
-fips-nonempty-password-required = Le mode FIPS exige que vous ayez défini un mot de passe principal pour chaque périphérique de sécurité. Veuillez définir le mot de passe principal avant d’activer le mode FIPS.
 
 fips-nonempty-primary-password-required = Le mode FIPS exige que vous ayez défini un mot de passe principal pour chaque périphérique de sécurité. Veuillez définir le mot de passe principal avant d’activer le mode FIPS.
 unable-to-toggle-fips = Impossible de modifier le mode FIPS pour le périphérique de sécurité. Nous vous recommandons de quitter et de redémarrer cette application.

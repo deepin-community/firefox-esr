@@ -2,12 +2,12 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-connection-window =
+connection-window2 =
     .title = Parametros de connexion
     .style =
         { PLATFORM() ->
-            [macos] width: 44em
-           *[other] width: 49em
+            [macos] min-width: 44em
+           *[other] min-width: 49em
         }
 
 connection-close-key =
@@ -35,10 +35,6 @@ connection-proxy-http = Proxy HTTP
     .accesskey = x
 connection-proxy-http-port = Porta
     .accesskey = P
-connection-proxy-http-sharing =
-    .label = Usar iste proxy etiam pro FTP e HTTPS
-    .accesskey = s
-
 connection-proxy-https-sharing =
     .label = Usar iste proxy alsi pro HTTPS
     .accesskey = s
@@ -47,11 +43,6 @@ connection-proxy-https = Proxy HTTPS
     .accesskey = H
 connection-proxy-ssl-port = Porta
     .accesskey = o
-
-connection-proxy-ftp = Proxy FTP
-    .accesskey = F
-connection-proxy-ftp-port = Porta
-    .accesskey = r
 
 connection-proxy-socks = Hoste SOCKS
     .accesskey = C
@@ -69,9 +60,6 @@ connection-proxy-noproxy = Nulle proxy pro
 
 connection-proxy-noproxy-desc = Exemplo: .mozilla.org, .asso.fr, 192.168.1.0/24
 
-# Do not translate localhost, 127.0.0.1 and ::1.
-connection-proxy-noproxy-localhost-desc = Le connexiones a localhost, 127.0.0.1 e ::1 nunquam passa per un proxy.
-
 # Do not translate "localhost", "127.0.0.1/8" and "::1". (You can translate "and".)
 connection-proxy-noproxy-localhost-desc-2 = Le connexiones a localhost, 127.0.0.1/8, e ::1 nunquam passa per un proxy.
 
@@ -84,20 +72,18 @@ connection-proxy-reload =
     .accesskey = e
 
 connection-proxy-autologin =
-    .label = Non demandar authenticar me si le contrasigno es salvate
+    .label = Non demandar authentication si le contrasigno es salvate
     .accesskey = i
     .tooltip = Iste option te authentica silentiosemente al proxies quando tu ha salvate lor credentiales. Tu essera demandate si le authentication falle.
+
+connection-proxy-autologin-checkbox =
+    .label = Non demandar authentication si le contrasigno es salvate
+    .accesskey = i
+    .tooltiptext = Iste option te authentica silentiosemente al proxies quando tu ha salvate lor credentiales. Tu essera demandate si le authentication falle.
 
 connection-proxy-socks-remote-dns =
     .label = Proxy DNS quando in SOCKS v5
     .accesskey = d
-
-connection-dns-over-https =
-    .label = Activar le DNS sur HTTPS
-    .accesskey = A
-
-connection-dns-over-https-url-resolver = Usar Fornitor
-    .accesskey = F
 
 # Variables:
 #   $name (String) - Display name or URL for the DNS over HTTPS provider

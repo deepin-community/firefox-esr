@@ -11,6 +11,12 @@ reload-tab =
 select-all-tabs =
     .label = Selectează toate filele
     .accesskey = S
+tab-context-play-tab =
+    .label = Redă fila
+    .accesskey = l
+tab-context-play-tabs =
+    .label = Redă filele
+    .accesskey = y
 duplicate-tab =
     .label = Duplică fila
     .accesskey = D
@@ -48,12 +54,9 @@ unpin-selected-tabs =
 bookmark-selected-tabs =
     .label = Marchează filele…
     .accesskey = k
-bookmark-tab =
-    .label = Marchează fila
+tab-context-bookmark-tab =
+    .label = Marchează fila…
     .accesskey = B
-reopen-in-container =
-    .label = Redeschide într-un container
-    .accesskey = e
 tab-context-open-in-new-container-tab =
     .label = Deschide într-o filă container nouă
     .accesskey = e
@@ -69,32 +72,9 @@ move-to-new-window =
 tab-context-close-multiple-tabs =
     .label = Închide mai multe file
     .accesskey = M
-tab-context-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Anulează închiderea filelor
-            [one] Anulează închiderea filei
-            [few] Anulează închiderea filelor
-           *[other] Anulează închiderea filelor
-        }
-    .accesskey = U
-close-tab =
-    .label = Închide fila
-    .accesskey = c
-close-tabs =
-    .label = Închide filele
-    .accesskey = S
-move-tabs =
-    .label = Mută filele
-    .accesskey = v
-move-tab =
-    .label = Mută fila
-    .accesskey = v
 tab-context-share-url =
     .label = Partajează
     .accesskey = h
-tab-context-share-more =
-    .label = Mai multe…
 
 ## Variables:
 ##  $tabCount (Number): the number of tabs that are affected by the action.
@@ -108,15 +88,6 @@ tab-context-reopen-closed-tabs =
            *[other] Redeschide filele închise
         }
     .accesskey = o
-tab-context-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Închide filele
-            [one] Închide fila
-            [few] Închide filele
-           *[other] Închide filele
-        }
-    .accesskey = C
 tab-context-close-n-tabs =
     .label =
         { $tabCount ->
@@ -135,3 +106,12 @@ tab-context-move-tabs =
            *[other] Mută filele
         }
     .accesskey = v
+
+tab-context-send-tabs-to-device =
+    .label =
+        { $tabCount ->
+            [one] Trimite fila către un dispozitiv
+            [few] Trimite { $tabCount } file către un dispozitiv
+           *[other] Trimite { $tabCount } de file către un dispozitiv
+        }
+    .accesskey = n

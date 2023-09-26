@@ -5,9 +5,9 @@
 
 ## Strings used for device manager
 
-devmgr =
+devmgr-window =
     .title = ডিভাইস ব্যবস্থাপক
-    .style = width: 67em; height: 32em;
+    .style = min-width: 67em; min-height: 32em;
 
 devmgr-devlist =
     .label = নিরাপত্তা মডিউল ও ডিভাইস
@@ -115,8 +115,6 @@ devinfo-label =
 
 devinfo-serialnum =
     .label = ক্রমিক সংখ্যা
-
-fips-nonempty-password-required = FIPS মোডের ক্ষেত্রে প্রতিটি নিরাপত্তা ডিভাইসের জন্য একটি মাস্টার পাসওয়ার্ড নির্ধারণ করা আবশ্যক। FIPS মোড সক্রিয় করার পূর্বে অনুগ্রহ করে পাসওয়ার্ড নির্ধারণ করুন।
 
 unable-to-toggle-fips = নিরাপত্তা যন্ত্রের FIPS মোড পরিবর্তন করা সম্ভব হয় নাই। আপনাকে এপ্লিকেশন টি বন্ধ করে পুনরায় চালু করতে সুপারিশ করা হচ্ছে।
 load-pk11-module-file-picker-title = লোড করার জন্য PKCS #11 ডিভাইস ড্রাইভার নির্বাচন করুন

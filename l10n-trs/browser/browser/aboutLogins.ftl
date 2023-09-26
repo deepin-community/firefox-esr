@@ -4,20 +4,13 @@
 # NOTE: New strings should use the about-logins- prefix.
 
 about-logins-page-title = Nej riña gayi'ì' sesiûn & nej da'nga' huìi
-
-# "Google Play" and "App Store" are both branding and should not be translated
-
-login-app-promo-title = Gata nej da'nga' huì nikajt danè' garan' ruhuât
-login-app-promo-subtitle = Nadunïnj 'ngo aplikasiûn nitaj du'ue hua { -lockwise-brand-name }
-login-app-promo-android =
-    .alt = Nadunij riña Google Play
-login-app-promo-apple =
-    .alt = Naduni' asîj riña App Store
-login-filter =
-    .placeholder = Nana'uì' nej riña gayi'ì sesiûn
-create-login-button = Giri 'ngo riña gayi'ì sesiûn nakàa
+about-logins-login-filter =
+    .placeholder = Nana'huì' nej riña gayi'ìt sesiûn
+    .key = F
+create-new-login-button =
+    .title = Giri 'ngo riña gayi'ì sesiûn nakàa
 fxaccounts-sign-in-text = Giri da'ngā huìi da' garasunt riña a'ngo aga'aj
-fxaccounts-sign-in-button = Gatu riña { -sync-brand-short-name }
+fxaccounts-sign-in-sync-button = Gāyi’ì sesión da’ nāgi’iaj gūñānt
 fxaccounts-avatar-button =
     .title = Si Kuendâ administrador
 
@@ -29,27 +22,38 @@ menu =
 about-logins-menu-menuitem-import-from-another-browser = Asìj riña a'ngô nabegadôr duguachînt ga'naj…
 about-logins-menu-menuitem-import-from-a-file = Gūxūn gā’naj āsìj riña ‘ngō archivo…
 about-logins-menu-menuitem-export-logins = Dūguachîn nej riña gayì’ìt sēsiûn…
+about-logins-menu-menuitem-remove-all-logins = Nādure\’ daran\’ chre riña gayi\’ìt sēsiûn…
 menu-menuitem-preferences =
     { PLATFORM() ->
         [windows] Nej sa huaa
        *[other] Nej sa arajsunt doj
     }
 about-logins-menu-menuitem-help = Sa rugûñu'unj un
-menu-menuitem-android-app = { -lockwise-brand-short-name } guenda Android
-menu-menuitem-iphone-app = { -lockwise-brand-short-name } guenda iPhone ni iPad
 
 ## Login List
 
 login-list =
     .aria-label = Gayi'ì sesiûn sani gachinj nan'anjt sa nana'ui'i
+# Variables
+#   $count (number) - Number of logins
 login-list-count =
     { $count ->
         [one] { $count } gayi'ì sesiûn
        *[other] { $count } nej ña gayi'ì sesiûn
     }
+# Variables
+#   $count (number) - Number of filtered logins
+#   $total (number) - Total number of logins
+login-list-filtered-count =
+    { $total ->
+        [one] { $count } si'hiaj { $total } gayi'ì man sesiûn
+       *[other] { $count } si'hiaj { $total } gayi'ì nej  man sesiûn
+    }
 login-list-sort-label-text = Nagi'aj chre' da':
 login-list-name-option = Si yugui (A-Z)
 login-list-name-reverse-option = Si yugui (Z-A)
+login-list-username-option = Si yūgui sa \‘iaj suun (A-Z)
+login-list-username-reverse-option = Si yūgui sa \‘iaj suun (Z-A)
 about-logins-login-list-alerts-option = Gā gūdadû
 login-list-last-changed-option = Sa nagi'iât ne' rukù ni'inj
 login-list-last-used-option = Sa garajsun rukù nï't
@@ -64,16 +68,17 @@ about-logins-list-item-breach-icon =
     .title = Gi'iaj yi'ì si riña sitiô nan
 about-logins-list-item-vulnerable-password-icon =
     .title = Nitāj si ran hua da’nga’ huìi
+about-logins-list-section-breach = Nej sitio giran\’ sāñūun
+about-logins-list-section-vulnerable = Nej da’nga’ huì huā ahīi
+about-logins-list-section-nothing = Nitāj sa atāj snan’ānj an hua
+about-logins-list-section-today = Gui hìaj
+about-logins-list-section-yesterday = Guki
+about-logins-list-section-week = Sa gahuin 7 gui ga'na'
 
 ## Introduction screen
 
-login-intro-heading = Nana'uit riña gayi'i si sesiôn raj? Gi'iaj yuhui { -sync-brand-short-name }
 about-logins-login-intro-heading-logged-in = Nu nari'ìj riña gayi'ìt sesiûn hua nuguan'àn
 login-intro-description = Si nari't riña gayi'ìt sesiôn riña { -brand-product-name } riña a'ngo aga'aj, ni ñuna ni'iaj daj gi'iát da' nari't riña aga' na.
-login-intro-instruction-fxa = Giri nej si gayi'ì sesiôn riña { -fxaccount-brand-name } riña nej aga' ngaà nun sa' ma.
-login-intro-instruction-fxa-settings = Ni'iaj si ganahuit riña gayi'iìt sesioôn riña { -sync-brand-short-name }
-about-logins-intro-instruction-help = Guij riña <a data-l10n-name="help-link">{ -lockwise-brand-short-name } Sopôrte</a> da' narì't doj sa rugûñu'unj sò'
-about-logins-intro-import = Sisī nej riña gayi’ìt sesiûn nu sà’ riña a’ngô riña nana’uî’t, ga’ue <a data-l10n-name="import-link">duguachînt riña { -lockwise-brand-short-name }</a>
 about-logins-intro-import2 = Sisī nej riña gayì’ìt sēsiûn nu sà’ ne’ yē’ { -brand-product-name }, ga’ue <a data-l10n-name="import-browser-link">gūxūnt ga’naj āsìj riña a’ngô sa riñā nana’uî’t</a> asi <a data-l10n-name="import-file-link">āsìj riña ‘ngō archivo</a>
 
 ## Login
@@ -97,9 +102,14 @@ login-item-copied-password-button-text = 'Ngà guxun'!
 login-item-save-changes-button = Na'nïnj sà' sa nadunât
 login-item-save-new-button = Na'nïnj sà'
 login-item-cancel-button = Duyichin'
-login-item-time-changed = Sa nadunâ rukù nïn't: { DATETIME($timeChanged, day: "numeric", month: "long", year: "numeric") }
-login-item-time-created = Sa girit: { DATETIME($timeCreated, day: "numeric", month: "long", year: "numeric") }
-login-item-time-used = Diû rukù garâj sunt man: { DATETIME($timeUsed, day: "numeric", month: "long", year: "numeric") }
+
+## The date is displayed in a timeline showing the password evolution.
+## A label is displayed under the date to describe the type of change.
+## (e.g. updated, created, etc.)
+
+login-item-timeline-action-created = Ngà girij
+login-item-timeline-action-updated = Ngà nahuin nàkaj
+login-item-timeline-action-used = Ngà garâj sunj
 
 ## OS Authentication dialog
 
@@ -124,10 +134,6 @@ about-logins-copy-password-os-auth-dialog-message-win = Da’ gūxūnt nī nāch
 # This message can be seen when attempting to copy a password in about:logins
 # On MacOS, only provide the reason that account verification is needed. Do not put a complete sentence here.
 about-logins-copy-password-os-auth-dialog-message-macosx = Gūxūn nī nāchrūn a’ngô hiūj da’nga’ huì nū sà’ ‘iát
-
-## Master Password notification
-
-master-password-notification-message = Gachrun da'naga' huî nikajt ni ga'ue ni'iajt si yugui usuârio ni nej da'nga' huì na'nïn sà't
 # This message can be seen when attempting to export a password in about:logins on Windows.
 about-logins-export-password-os-auth-dialog-message-win = Da’ gā’nïnt gan'ānj riña gayi’ìt sēsiûn, gāchrūn si krēdenciât nga gayi’ìt Windows. Rugûñun’ūnj nan da’ dūguminj nej si kuendât.
 # This message can be seen when attempting to export a password in about:logins
@@ -141,24 +147,6 @@ master-password-reload-button =
     .label = Gayi'ì sesiûn
     .accesskey = L
 
-## Password Sync notification
-
-enable-password-sync-notification-message =
-    { PLATFORM() ->
-        [windows] Ruhuât riña ayi'ìt sesiûn danè' huin man'an ayi'ìt ngà { -brand-product-name } aj? Guij danè' taj { -sync-brand-short-name } ni naguit nej riña ayi'ìt.
-       *[other] Ruhuât riña ayi'ìt sesiûn danè' huin man'an ayi'ìt ngà { -brand-product-name } aj?  Guij danè' taj { -sync-brand-short-name } Preferênsia ni naguit man.
-    }
-enable-password-sync-preferences-button =
-    .label =
-        { PLATFORM() ->
-            [windows] Ni'iaj daj hua { -sync-brand-short-name }
-           *[other] Ni'iaj daj hua { -sync-brand-short-name }
-        }
-    .accesskey = N
-about-logins-enable-password-sync-dont-ask-again-button =
-    .label = Sī gachín na’ānj ñût ñùnj
-    .accesskey = D
-
 ## Dialogs
 
 confirmation-dialog-cancel-button = Duyichin'
@@ -167,6 +155,18 @@ confirmation-dialog-dismiss-button =
 about-logins-confirm-remove-dialog-title = ¿Nadurê't riña gayi'ìt sesión na anj?
 confirm-delete-dialog-message = Si ga'ue dure' sa 'ngà gahuin na.
 about-logins-confirm-remove-dialog-confirm-button = Guxūn
+
+## Variables
+##   $count (number) - Number of items
+
+about-logins-confirm-remove-all-dialog-title =
+    { $count ->
+        [one] Nādurê't riña gayi'ìt sesión { $count } nan anj
+       *[other] Nādurê't nej riña gayi'ìt sesión { $count } nan anj
+    }
+
+##
+
 about-logins-confirm-export-dialog-title = Gā'nïnj gan'ānj nej riña gayi'ìt sēsiûn nī nej da'nga' huìi
 about-logins-confirm-export-dialog-message = Ngà lêchra nāginu sà’ nej da’nga’ huì huā ‘iát (Dàj rû’, BadP@ssw0rd) da’ ga’ue gīni’iāj ahuin mān’an duguî’ na’nïn archivo nan.
 about-logins-confirm-export-dialog-confirm-button = Gā’nïnj gān’an a’ngô hiūj u…
@@ -182,7 +182,6 @@ about-logins-breach-alert-date = Nuguan’ nan gurugui’ riña { DATETIME($date
 # Variables:
 #   $hostname (String) - The hostname of the website associated with the login, e.g. "example.com"
 about-logins-breach-alert-link = Gūij riña { $hostname }
-about-logins-breach-alert-learn-more-link = Gāhuin chrūn doj
 
 ## Vulnerable Password notification
 
@@ -236,6 +235,13 @@ about-logins-import-file-picker-csv-filter-title =
 ## Variables:
 ##  $count (number) - The number of affected elements
 
+about-logins-import-dialog-done = Gà' huaj
+about-logins-import-dialog-error-learn-more = Gāhuin chrūn doj
+about-logins-import-dialog-error-cancel = Dūyichin\'
+#
+# Variables:
+#  $number (number) - The number of the row
+about-logins-import-report-row-index = Dukuáan { $number }
 
 ##
 ## Variables:

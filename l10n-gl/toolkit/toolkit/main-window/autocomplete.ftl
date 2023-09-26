@@ -3,17 +3,8 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 
-## Import Logins Autocomplete
+### Import Logins Autocomplete
 
-# Variables:
-#   $browser (String) - Browser name to import logins from.
-#   $host (String) - Host name of the current site.
-autocomplete-import-logins =
-    <div data-l10n-name = "line1"> Importe o seu inicio de sesión desde { $browser } </div>
-    <div data-l10n-name = "line2"> para { $host } e outros sitios </div>
-
-autocomplete-import-logins-info =
-    .tooltiptext = Máis información
 
 ## Variables:
 ##   $host (String) - Host name of the current site.
@@ -30,4 +21,4 @@ autocomplete-import-logins-chromium-edge =
 
 ##
 
-autocomplete-import-learn-more = Saiba máis
+autocomplete-import-learn-more = Máis información

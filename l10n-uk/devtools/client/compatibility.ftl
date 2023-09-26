@@ -6,7 +6,7 @@
 ## Messages used as headers in the main pane
 
 compatibility-selected-element-header = Вибраний елемент
-compatibility-all-elements-header = Всі проблеми
+compatibility-all-elements-header = Усі проблеми
 
 ## Message used as labels for the type of issue
 
@@ -14,7 +14,6 @@ compatibility-issue-deprecated = (застаріле)
 compatibility-issue-experimental = (експериментальне)
 compatibility-issue-prefixneeded = (потрібен префікс)
 compatibility-issue-deprecated-experimental = (застаріле, експериментальне)
-
 compatibility-issue-deprecated-prefixneeded = (застаріле, потрібен префікс)
 compatibility-issue-experimental-prefixneeded = (експериментальне, потрібен префікс)
 compatibility-issue-deprecated-experimental-prefixneeded = (застаріле, експериментальне, потрібен префікс)
@@ -24,9 +23,6 @@ compatibility-issue-deprecated-experimental-prefixneeded = (застаріле, 
 compatibility-settings-button-label = Налаштування
 compatibility-settings-button-title =
     .title = Налаштування
-compatibility-feedback-button-label = Зворотній зв'язок
-compatibility-feedback-button-title =
-    .title = Зворотній зв'язок
 
 ## Messages used as headers in settings pane
 
@@ -48,3 +44,12 @@ compatibility-issue-occurrences =
 compatibility-no-issues-found = Не знайдено проблем із сумісністю.
 compatibility-close-settings-button =
     .title = Закрити налаштування
+
+# Text used in the element containing the browser icons for a given compatibility issue.
+# Line breaks are significant.
+# Variables:
+#   $browsers (String) - A line-separated list of browser information (e.g. Firefox 98\nChrome 99).
+compatibility-issue-browsers-list =
+    .title =
+        Проблеми з сумісністю в:
+        { $browsers }

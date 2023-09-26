@@ -31,9 +31,6 @@ toolbar-context-menu-remove-extension =
 toolbar-context-menu-pin-to-overflow-menu =
     .label = Daşma Menyusuna bərkid
     .accesskey = P
-toolbar-context-menu-auto-hide-downloads-button =
-    .label = Alət sətrində avtomatik gizlətmə
-    .accesskey = A
 toolbar-context-menu-remove-from-toolbar =
     .label = Alət sətrindən Sil
     .accesskey = S
@@ -41,3 +38,6 @@ toolbar-context-menu-view-customize-toolbar =
     .label = Fərdiləşdir…
     .accesskey = C
 
+toolbar-context-menu-menu-bar-cmd =
+    .toolbarname = Menyu sətri
+    .accesskey = M

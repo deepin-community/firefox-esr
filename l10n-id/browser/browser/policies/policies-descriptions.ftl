@@ -16,6 +16,8 @@ policy-AllowedDomainsForApps = Tentukan domain yang diizinkan untuk mengakses Go
 
 policy-AppAutoUpdate = Aktifkan atau nonaktifkan pembaruan aplikasi otomatis.
 
+policy-AppUpdatePin = Cegah { -brand-short-name } agar tidak diperbarui di luar versi yang ditentukan.
+
 policy-AppUpdateURL = Atur URL pemutakhiran aplikasi khusus
 
 policy-Authentication = Atur autentikasi terintegrasi untuk situs lain yang mendukung.
@@ -65,13 +67,11 @@ policy-DisableForgetButton = Cegah akses ke tombol Lupakan.
 
 policy-DisableFormHistory = Jangan ingat riwayat pencarian dan formulir.
 
-policy-DisableMasterPasswordCreation = Jika ya, sandi utama tidak bisa dibuat.
-
 policy-DisablePrimaryPasswordCreation = Jika ya, Sandi Utama tidak bisa dibuat.
 
 policy-DisablePasswordReveal = Jangan izinkan untuk menampilkan kata sandi dalam info masuk tersimpan.
 
-policy-DisablePocket = Nonaktifkan fitur untuk menyimpan laman web ke Pocket.
+policy-DisablePocket2 = Nonaktifkan fitur untuk menyimpan laman web ke { -pocket-brand-name }.
 
 policy-DisablePrivateBrowsing = Nonaktifkan Penjelajahan Pribadi.
 
@@ -89,6 +89,8 @@ policy-DisableSystemAddonUpdate = Mencegah peramban memasang dan memperbarui pen
 
 policy-DisableTelemetry = Nonaktifkan Telemetry.
 
+policy-DisableThirdPartyModuleBlocking = Cegah pengguna memblokir modul pihak ketiga yang disuntikkan ke proses { -brand-short-name }.
+
 policy-DisplayBookmarksToolbar = Tampilkan Bilah Markah secara baku.
 
 policy-DisplayMenuBar = Tampilkan Bilah Menu secara otomatis.
@@ -105,6 +107,8 @@ policy-EnableTrackingProtection = Aktifkan atau nonaktifkan Pemblokiran Konten d
 # “lock” means that the user won’t be able to change this setting
 policy-EncryptedMediaExtensions = Aktifkan atau nonaktifkan Ekstensi Media Terenkripsi dan kunci dia secara opsional.
 
+policy-ExemptDomainFileTypePairsFromFileTypeDownloadWarnings = Nonaktifkan peringatan berdasarkan ekstensi berkas untuk tipe berkas tertentu pada domain.
+
 # A “locked” extension can’t be disabled or removed by the user. This policy
 # takes 3 keys (“Install”, ”Uninstall”, ”Locked”), you can either keep them in
 # English or translate them as verbs.
@@ -114,9 +118,9 @@ policy-ExtensionSettings = Kelola semua aspek pemasangan ekstensi.
 
 policy-ExtensionUpdate = Aktifkan atau nonaktifkan pembaruan ekstensi otomatis.
 
-policy-FirefoxHome = Atur Firefox Home.
+policy-FirefoxHome2 = Atur { -firefox-home-brand-name }.
 
-policy-FlashPlugin = Izinkan atau tolak penggunaan plugin Flash.
+policy-GoToIntranetSiteForSingleWordEntryInAddressBar = Paksa untuk membuka situs intranet secara langsung alih-alih melakukan pencarian saat mengetik satu kata di bilah alamat.
 
 policy-Handlers = Konfigurasikan penanganan aplikasi baku.
 
@@ -141,8 +145,6 @@ policy-LocalFileLinks = Izinkan situs web tertentu untuk bertaut dengan berkas l
 
 policy-ManagedBookmarks = Mengonfigurasi daftar markah yang dikelola oleh administrator yang tidak dapat diubah oleh pengguna.
 
-policy-MasterPassword = Membutuhkan atau mencegah penggunaan kata sandi utama.
-
 policy-ManualAppUpdateOnly = Izinkan pembaruan manual saja dan jangan beri tahu pengguna tentang pembaruan.
 
 policy-PrimaryPassword = Membutuhkan atau mencegah penggunaan Sandi Utama.
@@ -162,6 +164,8 @@ policy-OverrideFirstRunPage = Ganti laman pertama yang dibuka. Setel kebijakan i
 policy-OverridePostUpdatePage = Ganti laman "Yang Baru" yang tampil setelah pembaruan. Setel kebijakan ini menjadi kosong jika ingin menonaktifkan laman setelah pembaruan.
 
 policy-PasswordManagerEnabled = Aktifkan penyimpanan sandi melalui manajer sandi.
+
+policy-PasswordManagerExceptions = Cegah { -brand-short-name } menyimpan sandi untuk situs tertentu.
 
 # PDF.js and PDF should not be translated
 policy-PDFjs = Nonaktifkan atau atur konfigurasi PDF.js, penampil PDF bawaan di { -brand-short-name }.
@@ -188,19 +192,21 @@ policy-SearchEngines = Konfigurasikan setelan mesin pencari. Kebijakan ini hanya
 
 policy-SearchSuggestEnabled = Aktifkan atau nonaktifkan saran pencarian.
 
-# For more information, see https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSS/PKCS11/Module_Installation
-policy-SecurityDevices = Pasang modul PKCS #11.
-
 policy-ShowHomeButton = Tampilkan tombol beranda pada bilah alat.
 
 policy-SSLVersionMax = Tetapkan versi SSL maksimum.
 
 policy-SSLVersionMin = Tetapkan versi SSL minimum.
 
+policy-StartDownloadsInTempDirectory = Paksa unduhan untuk dimulai di lokasi lokal dan sementara, bukan direktori unduhan baku.
+
 policy-SupportMenu = Tambahkan item menu dukungan khusus pada menu bantuan.
 
 policy-UserMessaging = Jangan tampilkan pesan tertentu kepada pengguna.
 
+policy-UseSystemPrintDialog = Cetak menggunakan dialog sistem.
+
 # “format” refers to the format used for the value of this policy.
 policy-WebsiteFilter = Blokir situs web agar tidak dikunjungi. Lihat dokumentasi lebih lanjut untuk formatnya.
 
+policy-Windows10SSO = Izinkan sistem masuk tunggal Windows untuk akun Microsoft, kantor, dan sekolah.

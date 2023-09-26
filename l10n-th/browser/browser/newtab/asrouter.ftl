@@ -7,7 +7,6 @@
 
 cfr-doorhanger-extension-heading = ส่วนขยายที่แนะนำ
 cfr-doorhanger-feature-heading = คุณลักษณะที่แนะนำ
-cfr-doorhanger-pintab-heading = ลองนี่: ปักหมุดแท็บ
 
 ##
 
@@ -15,12 +14,10 @@ cfr-doorhanger-extension-sumo-link =
     .tooltiptext = ทำไมฉันจึงเห็นสิ่งนี้
 
 cfr-doorhanger-extension-cancel-button = ไม่ใช่ตอนนี้
-    .accesskey = ม
+    .accesskey = ไ
 
 cfr-doorhanger-extension-ok-button = เพิ่มตอนนี้
-    .accesskey = พ
-cfr-doorhanger-pintab-ok-button = ปักหมุดแท็บนี้
-    .accesskey = P
+    .accesskey = เ
 
 cfr-doorhanger-extension-manage-settings-button = จัดการการตั้งค่าคำแนะนำ
     .accesskey = จ
@@ -66,18 +63,6 @@ cfr-doorhanger-extension-total-users =
        *[other] { $total } ผู้ใช้
     }
 
-cfr-doorhanger-pintab-description = เข้าถึงเว็บที่คุณใช้บ่อยได้อย่างง่ายดาย เปิดเว็บไว้ในแท็บตลอดเวลา (แม้ว่าคุณจะเปิดปิดใหม่ก็ตาม)
-
-## These messages are steps on how to use the feature and are shown together.
-
-cfr-doorhanger-pintab-step1 = <b>คลิกขวา</b> บนแท็บที่คุณต้องการจะปัก
-cfr-doorhanger-pintab-step2 = เลือก <b>ปักหมุดแท็บ</b> จากเมนู
-cfr-doorhanger-pintab-step3 = หากเว็บไซต์มีการเปลี่ยนแปลง คุณจะได้เห็นจุดสีฟ้าบนแท็บที่ถูกปัก
-
-cfr-doorhanger-pintab-animation-pause = หยุดชั่วคราว
-cfr-doorhanger-pintab-animation-resume = ทำต่อ
-
-
 ## Firefox Accounts Message
 
 cfr-doorhanger-bookmark-fxa-header = ซิงค์ที่คั่นหน้าของคุณได้ทุกที่
@@ -103,128 +88,9 @@ cfr-whatsnew-button =
     .label = มีอะไรใหม่
     .tooltiptext = มีอะไรใหม่
 
-cfr-whatsnew-panel-header = มีอะไรใหม่
-
 cfr-whatsnew-release-notes-link-text = อ่านบันทึกประจำรุ่น
 
-cfr-whatsnew-fx70-title = ตอนนี้ { -brand-short-name } ต่อสู้อย่างหนักขึ้นเพื่อความเป็นส่วนตัวของคุณ
-cfr-whatsnew-fx70-body =
-    การอัปเดตล่าสุดเพิ่มคุณลักษณะการป้องกันการติดตามและทำให้
-    สร้างรหัสผ่านที่ปลอดภัยสำหรับทุกไซต์ได้ง่ายขึ้นกว่าที่เคย
-
-cfr-whatsnew-tracking-protect-title = ป้องกันตัวคุณเองจากตัวติดตาม
-cfr-whatsnew-tracking-protect-body =
-    { -brand-short-name } บล็อกตัวติดตามสังคมออนไลน์และข้ามไซต์ทั่วไปจำนวนมากที่
-    ติดตามสิ่งที่คุณทำออนไลน์
-cfr-whatsnew-tracking-protect-link-text = ดูรายงานของคุณ
-
-# This string is displayed before a large numeral that indicates the total
-# number of tracking elements blocked. Don’t add $blockedCount to your
-# localization, because it would result in the number showing twice.
-cfr-whatsnew-tracking-blocked-title =
-    { $blockedCount ->
-       *[other] ตัวติดตามที่ถูกปิดกั้น
-    }
-cfr-whatsnew-tracking-blocked-subtitle = ตั้งแต่ { DATETIME($earliestDate, month: "long", year: "numeric") }
-cfr-whatsnew-tracking-blocked-link-text = ดูรายงาน
-
-cfr-whatsnew-lockwise-backup-title = สำรองรหัสผ่านของคุณ
-cfr-whatsnew-lockwise-backup-body = คุณสามารถสร้างรหัสผ่านที่ปลอดภัยซึ่งสามารถเข้าถึงได้ทุกที่ที่คุณลงชื่อเข้าได้แล้วตอนนี้
-cfr-whatsnew-lockwise-backup-link-text = เปิดการสำรองข้อมูล
-
-cfr-whatsnew-lockwise-take-title = นำรหัสผ่านของคุณไปกับคุณ
-cfr-whatsnew-lockwise-take-body = แอปมือถือ { -lockwise-brand-short-name } ช่วยให้คุณเข้าถึงรหัสผ่านที่สำรองไว้ของคุณจากทุกที่ได้อย่างปลอดภัย
-cfr-whatsnew-lockwise-take-link-text = รับแอป
-
-## Search Bar
-
-cfr-whatsnew-searchbar-title = ค้นหาได้มากขึ้นโดยพิมพ์น้อยลงในแถบที่อยู่
-cfr-whatsnew-searchbar-body-topsites = เพียงเลือกแถบที่อยู่แล้วกล่องจะขยายออกพร้อมลิงก์ไปยังไซต์เด่นของคุณ
-
-## Search bar
-
-cfr-whatsnew-searchbar-icon-alt-text = ไอคอนรูปแว่นขยาย
-
-## Picture-in-Picture
-
-cfr-whatsnew-pip-header = ดูวิดีโอขณะที่คุณเรียกดู
-cfr-whatsnew-pip-body = ภาพที่เล่นควบคู่แสดงวิดีโอเป็นหน้าต่างลอยเพื่อให้คุณรับชมขณะทำงานในแท็บอื่น ๆ ได้
-cfr-whatsnew-pip-cta = เรียนรู้เพิ่มเติม
-
-## Permission Prompt
-
-cfr-whatsnew-permission-prompt-header = ป๊อปอัปของไซต์ที่น่ารำคาญน้อยลง
-cfr-whatsnew-permission-prompt-body = ขณะนี้ { -brand-shorter-name } ปิดกั้นไม่ให้ไซต์ถามเพื่อส่งข้อความป๊อปอัปถึงคุณโดยอัตโนมัติ
-cfr-whatsnew-permission-prompt-cta = เรียนรู้เพิ่มเติม
-
-## Fingerprinter Counter
-
-# This string is displayed before a large numeral that indicates the total
-# number of tracking elements blocked. Don’t add $fingerprinterCount to your
-# localization, because it would result in the number showing twice.
-cfr-whatsnew-fingerprinter-counter-header =
-    { $fingerprinterCount ->
-       *[other] ลายนิ้วมือดิจิทัลถูกปิดกั้น
-    }
-cfr-whatsnew-fingerprinter-counter-body = { -brand-shorter-name } ปิดกั้นลายนิ้วมือดิจิทัลจำนวนมากที่แอบรวบรวมข้อมูลเกี่ยวกับอุปกรณ์และการใช้งานของคุณอย่างลับ ๆ เพื่อสร้างโปรไฟล์โฆษณาของคุณ
-
-# Message variation when fingerprinters count is less than 10
-cfr-whatsnew-fingerprinter-counter-header-alt = ลายนิ้วมือดิจิทัล
-cfr-whatsnew-fingerprinter-counter-body-alt = { -brand-shorter-name } สามารถปิดกั้นลายนิ้วมือดิจิทัลจำนวนมากที่แอบรวบรวมข้อมูลเกี่ยวกับอุปกรณ์และการใช้งานของคุณอย่างลับ ๆ เพื่อสร้างโปรไฟล์โฆษณาของคุณได้
-
-## Bookmark Sync
-
-cfr-doorhanger-sync-bookmarks-header = รับที่คั่นหน้านี้บนโทรศัพท์ของคุณ
-cfr-doorhanger-sync-bookmarks-body = นำที่คั่นหน้า, รหัสผ่าน, ประวัติและอื่น ๆ ของคุณไปทุกที่ที่คุณลงชื่อเข้า { -brand-product-name }
-cfr-doorhanger-sync-bookmarks-ok-button = เปิด { -sync-brand-short-name }
-    .accesskey = ป
-
-## Login Sync
-
-cfr-doorhanger-sync-logins-header = ไม่ต้องกลัวทำรหัสผ่านหายอีกต่อไป
-cfr-doorhanger-sync-logins-body = เก็บและซิงค์รหัสผ่านของคุณกับอุปกรณ์ทั้งหมดอย่างปลอดภัย
-cfr-doorhanger-sync-logins-ok-button = เปิด { -sync-brand-short-name }
-    .accesskey = ป
-
-## Send Tab
-
-cfr-doorhanger-send-tab-header = อ่านสิ่งนี้ได้ทุกที่
-cfr-doorhanger-send-tab-recipe-header = นำสูตรอาหารนี้ไปที่ห้องครัว
-cfr-doorhanger-send-tab-body = คุณลักษณะการส่งแท็บช่วยให้คุณสามารถแบ่งปันลิงก์นี้ไปที่โทรศัพท์ของคุณหรือที่ไหนก็ได้ที่คุณลงชื่อเข้า { -brand-product-name } ได้อย่างง่ายดาย
-cfr-doorhanger-send-tab-ok-button = ลองใช้คุณลักษณะการส่งแท็บ
-    .accesskey = ล
-
-## Firefox Send
-
-cfr-doorhanger-firefox-send-header = แบ่งปัน PDF นี้อย่างปลอดภัย
-cfr-doorhanger-firefox-send-body = รักษาเอกสารสำคัญของคุณให้ปลอดภัยจากการสอดส่องด้วยการเข้ารหัสจากต้นทางถึงปลายทางและลิงก์ที่จะหายไปเมื่อคุณทำงานกับเอกสารเหล่านั้นเสร็จแล้ว
-cfr-doorhanger-firefox-send-ok-button = ลองใช้ { -send-brand-name }
-    .accesskey = ล
-
-## Social Tracking Protection
-
-cfr-doorhanger-socialtracking-ok-button = ดูการป้องกัน
-    .accesskey = ด
-cfr-doorhanger-socialtracking-close-button = ปิด
-    .accesskey = ป
-cfr-doorhanger-socialtracking-dont-show-again = ไม่ต้องแสดงข้อความเช่นนี้ให้ฉันอีก
-    .accesskey = ม
-cfr-doorhanger-socialtracking-heading = { -brand-short-name } ได้หยุดเครือข่ายสังคมไม่ให้ติดตามคุณที่นี่
-cfr-doorhanger-socialtracking-description = ความเป็นส่วนตัวของคุณสำคัญ { -brand-short-name } จะปิดกั้นตัวติดตามสื่อสังคมออนไลน์ทั่วไป โดยจำกัดจำนวนข้อมูลที่สามารถรวบรวมเกี่ยวกับสิ่งที่คุณทำทางออนไลน์
-cfr-doorhanger-fingerprinters-heading = { -brand-short-name } ได้ปิดกั้นลายนิ้วมือดิจิทัลบนหน้านี้
-cfr-doorhanger-fingerprinters-description = ความเป็นส่วนตัวของคุณสำคัญ { -brand-short-name } จะปิดกั้นลายนิ้วมือดิจิทัล ซึ่งรวบรวมข้อมูลที่ไม่ซ้ำกันเกี่ยวกับอุปกรณ์ของคุณเพื่อติดตามคุณ
-cfr-doorhanger-cryptominers-heading = { -brand-short-name } ได้ปิดกั้นตัวชุดเหรียญดิจิทัลบนหน้านี้
-cfr-doorhanger-cryptominers-description = ความเป็นส่วนตัวของคุณมีความสำคัญ { -brand-short-name } จะปิดกั้นตัวขุดเหรียญดิจิทัล ซึ่งใช้พลังการคำนวณของระบบของคุณเพื่อสร้างรายได้ดิจิทัล
-
 ## Enhanced Tracking Protection Milestones
-
-# Variables:
-#   $blockedCount (Number) - The total count of blocked trackers. This number will always be greater than 1.
-#   $date (String) - The date we began recording the count of blocked trackers
-cfr-doorhanger-milestone-heading =
-    { $blockedCount ->
-       *[other] { -brand-short-name } ปิดกั้นตัวติดตามไปแล้ว <b>{ $blockedCount }</b> ตัวตั้งแต่ { $date }!
-    }
 
 # Variables:
 #   $blockedCount (Number) - The total count of blocked trackers. This number will always be greater than 1.
@@ -235,45 +101,8 @@ cfr-doorhanger-milestone-heading2 =
     }
 cfr-doorhanger-milestone-ok-button = ดูทั้งหมด
     .accesskey = ด
-
-## What’s New Panel Content for Firefox 76
-
-
-## Lockwise message
-
-cfr-whatsnew-lockwise-header = สร้างรหัสผ่านที่ปลอดภัยได้อย่างง่ายดาย
-cfr-whatsnew-lockwise-body = การคิดรหัสผ่านที่ไม่ซ้ำใครและปลอดภัยสำหรับทุกบัญชีนั้นเป็นเรื่องยาก เมื่อสร้างรหัสผ่าน ให้เลือกช่องกรอกรหัสผ่านเพื่อใช้รหัสผ่านที่ปลอดภัยซึ่งสร้างขึ้นจาก { -brand-shorter-name }
-cfr-whatsnew-lockwise-icon-alt = ไอคอน { -lockwise-brand-short-name }
-
-## Vulnerable Passwords message
-
-cfr-whatsnew-passwords-header = รับการแจ้งเตือนเกี่ยวกับรหัสผ่านที่อ่อนแอ
-cfr-whatsnew-passwords-body = แฮกเกอร์รู้ว่าผู้คนใช้รหัสผ่านเดียวกันซ้ำ หากคุณใช้รหัสผ่านเดียวกันในหลาย ๆ ไซต์และหนึ่งในเว็บไซต์เหล่านั้นอยู่ในการรั่วไหลของข้อมูล คุณจะเห็นการแจ้งเตือนใน { -lockwise-brand-short-name } เพื่อเปลี่ยนรหัสผ่านของคุณบนไซต์เหล่านั้น
-cfr-whatsnew-passwords-icon-alt = ไอคอนกุญแจรหัสผ่านที่อ่อนแอ
-
-## Picture-in-Picture fullscreen message
-
-cfr-whatsnew-pip-fullscreen-header = เปิดภาพที่เล่นควบคู่แบบเต็มหน้าจอ
-cfr-whatsnew-pip-fullscreen-body = เมื่อคุณเปิดวิดีโอในหน้าต่างลอย คุณสามารถคลิกสองครั้งที่หน้าต่างนั้นเพื่อแสดงแบบเต็มหน้าจอได้
-cfr-whatsnew-pip-fullscreen-icon-alt = ไอคอนภาพที่เล่นควบคู่
-
-## Protections Dashboard message
-
-cfr-whatsnew-protections-header = ภาพรวมการป้องกัน
-cfr-whatsnew-protections-body = แดชบอร์ดการป้องกันมีรายงานสรุปเกี่ยวกับข้อมูลที่รั่วไหลและการจัดการรหัสผ่าน โดยตอนนี้คุณสามารถติดตามได้ว่าคุณแก้ไขการรั่วไหลไปกี่รายการแล้ว และดูได้ว่ารหัสผ่านที่คุณบันทึกไว้รหัสใดรหัสหนึ่งมีโอกาสที่จะถูกเปิดเผยในข้อมูลที่รั่วไหลหรือไม่
-cfr-whatsnew-protections-cta-link = ดูแดชบอร์ดการป้องกัน
-cfr-whatsnew-protections-icon-alt = ไอคอนโล่
-
-## Better PDF message
-
-cfr-whatsnew-better-pdf-header = ประสบการณ์ PDF ที่ดีขึ้น
-cfr-whatsnew-better-pdf-body = ตอนนี้คุณสามารถเปิดเอกสาร PDF ได้โดยตรงใน { -brand-short-name } ช่วยให้คุณทำงานได้อย่างง่ายดาย
-
 cfr-doorhanger-milestone-close-button = ปิด
     .accesskey = C
-
-## What’s New Panel Content for Firefox 76
-## Protections Dashboard message
 
 ## DOH Message
 
@@ -286,28 +115,141 @@ cfr-doorhanger-doh-secondary-button = ปิดใช้งาน
 
 ## Fission Experiment Message
 
-cfr-doorhanger-fission-body-approved = ความเป็นส่วนตัวของคุณสำคัญ ขณะนี้ { -brand-short-name } จะแยกหรือแซนด์บ็อกซ์เว็บไซต์ออกจากกัน เพื่อให้แฮกเกอร์ขโมยรหัสผ่าน หมายเลขบัตรเครดิต และข้อมูลที่ละเอียดอ่อนอื่น ๆ ได้ยากขึ้น
-cfr-doorhanger-fission-header = การแยกไซต์
-cfr-doorhanger-fission-primary-button = ตกลง เข้าใจแล้ว
-    .accesskey = O
-cfr-doorhanger-fission-secondary-button = เรียนรู้เพิ่มเติม
-    .accesskey = L
-
-## What's new: Cookies message
-
-## What's new: Media controls message
-
-## What's new: Search shortcuts
-
-## What's new: Cookies protection
-
-## What's new: Better bookmarking
-
-## What's new: Cross-site cookie tracking
-
 ## Full Video Support CFR message
 
 cfr-doorhanger-video-support-body = วิดีโอบนไซต์นี้อาจเล่นไม่ถูกต้องใน { -brand-short-name } เวอร์ชันนี้ สำหรับการสนับสนุนวิดีโอเต็มรูปแบบ อัปเดต { -brand-short-name } ทันที
 cfr-doorhanger-video-support-header = อัปเดต { -brand-short-name } เพื่อเล่นวิดีโอ
 cfr-doorhanger-video-support-primary-button = อัปเดตตอนนี้
     .accesskey = U
+
+## Spotlight modal shared strings
+
+## VPN promotion dialog for public Wi-Fi users
+##
+## If a user is detected to be on a public Wi-Fi network, they are given a
+## bit of info about how to improve their privacy and then offered a button
+## to the Mozilla VPN page and a link to dismiss the dialog.
+
+# This header text can be explicitly wrapped.
+spotlight-public-wifi-vpn-header = ดูเหมือนว่าคุณกำลังใช้ Wi-Fi สาธารณะ
+spotlight-public-wifi-vpn-body = เมื่อต้องการซ่อนตำแหน่งที่ตั้งและกิจกรรมการเรียกดู ให้ใช้เครือข่ายส่วนตัวเสมือน ซึ่งจะช่วยปกป้องคุณเมื่อเรียกดูในที่สาธารณะ เช่น สนามบิน และร้านกาแฟ
+spotlight-public-wifi-vpn-primary-button = เป็นส่วนตัวอยู่เสมอด้วย { -mozilla-vpn-brand-name }
+    .accesskey = เ
+spotlight-public-wifi-vpn-link = ไม่ใช่ตอนนี้
+    .accesskey = N
+
+## Total Cookie Protection Rollout
+
+## Emotive Continuous Onboarding
+
+spotlight-better-internet-header = อินเทอร์เน็ตที่ดีขึ้นเริ่มที่ตัวคุณ
+spotlight-better-internet-body = เมื่อคุณใช้ { -brand-short-name } แสดงว่าคุณสนับสนุนอินเทอร์เน็ตที่เปิดกว้างและเข้าถึงได้ซึ่งดีขึ้นสำหรับทุกคน
+spotlight-peace-mind-header = เราปกป้องคุณอย่างครอบคลุม
+spotlight-peace-mind-body = ทุกเดือน { -brand-short-name } จะปิดกั้นตัวติดตามกว่า 3,000 ตัวโดยเฉลี่ยต่อผู้ใช้หนึ่งคน เพราะไม่ควรมีอะไรมาขวางกั้นระหว่างคุณกับอินเทอร์เน็ตที่ดี โดยเฉพาะปัญหาเกี่ยวกับความเป็นส่วนตัว เช่น ตัวติดตาม
+spotlight-pin-primary-button =
+    { PLATFORM() ->
+        [macos] เก็บใน Dock
+       *[other] ปักหมุดเข้ากับแถบงาน
+    }
+spotlight-pin-secondary-button = ไม่ใช่ตอนนี้
+
+## MR2022 Background Update Windows native toast notification strings.
+##
+## These strings will be displayed by the Windows operating system in
+## a native toast, like:
+##
+## <b>multi-line title</b>
+## multi-line text
+## <img>
+## [ primary button ] [ secondary button ]
+##
+## The button labels are fitted into narrow fixed-width buttons by
+## Windows and therefore must be as narrow as possible.
+
+mr2022-background-update-toast-title = { -brand-short-name } ใหม่ เป็นส่วนตัวมากขึ้น ตัวติดตามน้อยลง ไม่ล่วงละเมิด
+mr2022-background-update-toast-text = ลองใช้ { -brand-short-name } ใหม่ที่สุดที่ได้รับการอัพเกรดด้วยระบบการป้องกันการติดตามที่แข็งแกร่งที่สุดของเราเลย
+
+# This button label will be fitted into a narrow fixed-width button by
+# Windows. Try to not exceed the width of the English text (compare it
+# using a variable font like Arial): the button can only fit 1-2
+# additional characters, exceeding characters will be truncated.
+mr2022-background-update-toast-primary-button-label = เปิด { -brand-shorter-name } เลย
+
+# This button label will be fitted into a narrow fixed-width button by
+# Windows. Try to not exceed the width of the English text (compare it using a
+# variable font like Arial): the button can only fit 1-2 additional characters,
+# exceeding characters will be truncated.
+mr2022-background-update-toast-secondary-button-label = เตือนฉันภายหลัง
+
+## Firefox View CFR
+
+firefoxview-cfr-primarybutton = ลองดู
+    .accesskey = ล
+firefoxview-cfr-secondarybutton = ไม่ใช่ตอนนี้
+    .accesskey = ม
+firefoxview-cfr-header-v2 = ทำต่อจากจุดที่คุณค้างไว้อย่างรวดเร็ว
+firefoxview-cfr-body-v2 = นำแท็บที่ปิดไปล่าสุดกลับมา รวมทั้งสลับไปมาระหว่างอุปกรณ์ได้อย่างราบรื่นด้วย { -firefoxview-brand-name }
+
+## Firefox View Spotlight
+
+firefoxview-spotlight-promo-title = ทำความรู้จัก { -firefoxview-brand-name }
+
+# “Poof” refers to the expression to convey when something or someone suddenly disappears, or in this case, reappears. For example, “Poof, it’s gone.”
+firefoxview-spotlight-promo-subtitle = ต้องการให้แท็บที่เปิดไว้มาอยู่บนโทรศัพท์ของคุณหรือเปล่า เอามันมาเลยสิ ต้องการไซต์นั้นที่คุณเพิ่งเข้าชมไปหรือเปล่า ปิ๊ง มันกลับมาแล้วใน { -firefoxview-brand-name }
+firefoxview-spotlight-promo-primarybutton = ดูวิธีการทำงาน
+firefoxview-spotlight-promo-secondarybutton = ข้าม
+
+## Colorways expiry reminder CFR
+
+colorways-cfr-primarybutton = เลือกชุดรูปแบบสี
+    .accesskey = ล
+
+# "shades" refers to the different color options available to users in colorways.
+colorways-cfr-body = แต่งเติมสีสันให้กับเบราว์เซอร์ของคุณด้วยเฉดสีสุดพิเศษสำหรับ { -brand-short-name } ที่ได้แรงบันดาลใจจากเสียงที่เปลี่ยนแปลงวัฒนธรรม
+colorways-cfr-header-28days = ชุดรูปแบบสี “เสียงแห่งอิสระ” หมดเขต 16 มกราคมนี้
+colorways-cfr-header-14days = ชุดรูปแบบสี “เสียงแห่งอิสระ” หมดเขตในอีกสองสัปดาห์นี้
+colorways-cfr-header-7days = ชุดรูปแบบสี “เสียงแห่งอิสระ” หมดเขตสัปดาห์นี้
+colorways-cfr-header-today = ชุดรูปแบบสี “เสียงแห่งอิสระ” หมดเขตวันนี้
+
+## Cookie Banner Handling CFR
+
+cfr-cbh-header = อนุญาตให้ { -brand-short-name } ปฏิเสธแบนเนอร์คุกกี้หรือไม่?
+cfr-cbh-body = { -brand-short-name } สามารถปฏิเสธคำขอคุกกี้จำนวนมากได้โดยอัตโนมัติ
+cfr-cbh-confirm-button = ปฏิเสธแบนเนอร์คุกกี้
+    .accesskey = ป
+cfr-cbh-dismiss-button = ไม่ใช่ตอนนี้
+    .accesskey = ม
+
+## These strings are used in the Fox doodle Pin/set default spotlights
+
+july-jam-headline = เราปกป้องคุณอย่างครอบคลุม
+july-jam-body = ทุกเดือน { -brand-short-name } ปิดกั้นตัวติดตามเฉลี่ย 3,000+ ตัวต่อผู้ใช้หนึ่งคน ทำให้คุณเข้าถึงอินเทอร์เน็ตที่ดีได้อย่างปลอดภัยและรวดเร็ว
+july-jam-set-default-primary = เปิดลิงก์ของฉันด้วย { -brand-short-name }
+fox-doodle-pin-headline = ยินดีต้อนรับกลับมา
+
+# “indie” is short for the term “independent”.
+# In this instance, free from outside influence or control.
+fox-doodle-pin-body = นี่เป็นการแจ้งเตือนสั้นๆ ว่าคุณสามารถนำเบราว์เซอร์ที่ชื่นชอบของคุณมาไว้ใกล้ๆ ให้เข้าถึงได้ด้วยเพียงคลิกเดียว
+fox-doodle-pin-primary = เปิดลิงก์ของฉันด้วย { -brand-short-name }
+fox-doodle-pin-secondary = ยังไม่ทำตอนนี้
+
+## These strings are used in the Set Firefox as Default PDF Handler for Existing Users experiment
+
+set-default-pdf-handler-headline = <strong>ตอนนี้ไฟล์ PDF ของคุณจะเปิดใน { -brand-short-name }</strong> แก้ไขหรือเซ็นชื่อในแบบฟอร์มได้โดยตรงในเบราว์เซอร์ของคุณ หากต้องการเปลี่ยน ให้ค้นหาคำว่า “PDF” ในการตั้งค่า
+set-default-pdf-handler-primary = เข้าใจแล้ว
+
+## FxA sync CFR
+
+fxa-sync-cfr-header = คิดจะมีอุปกรณ์ใหม่ในภายหลังใช่ไหม?
+fxa-sync-cfr-body = ตรวจสอบให้แน่ใจว่าที่คั่นหน้า รหัสผ่าน และแท็บล่าสุดของคุณติดตัวมาด้วยทุกครั้งที่คุณเปิดเบราว์เซอร์ { -brand-product-name } ใหม่
+fxa-sync-cfr-primary = เรียนรู้เพิ่มเติม
+    .accesskey = ร
+fxa-sync-cfr-secondary = เตือนฉันภายหลัง
+    .accesskey = ต
+
+## Device Migration FxA Spotlight
+
+device-migration-fxa-spotlight-header = ใช้อุปกรณ์เดิมอยู่ใช่ไหม?
+device-migration-fxa-spotlight-body = สำรองข้อมูลเพื่อให้แน่ใจว่าคุณจะไม่สูญเสียข้อมูลสำคัญ เช่น ที่คั่นหน้าและรหัสผ่าน โดยเฉพาะอย่างยิ่งเมื่อคุณเปลี่ยนไปใช้อุปกรณ์เครื่องใหม่
+device-migration-fxa-spotlight-primary-button = วิธีสำรองข้อมูลของฉัน
+device-migration-fxa-spotlight-link = เตือนฉันภายหลัง

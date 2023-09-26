@@ -5,22 +5,14 @@
 
 about-logins-page-title = Inicis de sessió i contrasenyes
 
-# "Google Play" and "App Store" are both branding and should not be translated
-
-login-app-promo-title = Accediu a les vostres contrasenyes des de qualsevol lloc
-login-app-promo-subtitle = Instal·leu l'aplicació { -lockwise-brand-name } gratuïta
-login-app-promo-android =
-    .alt = Disponible a Google Play
-login-app-promo-apple =
-    .alt = Baixeu-lo de l'App Store
-
-login-filter =
+about-logins-login-filter =
     .placeholder = Cerca els inicis de sessió
+    .key = F
 
-create-login-button = Crea un inici de sessió
+create-new-login-button =
+    .title = Crea un inici de sessió
 
 fxaccounts-sign-in-text = Accediu a les contrasenyes en tots els vostres dispositius
-fxaccounts-sign-in-button = Inicia la sessió al { -sync-brand-short-name }
 fxaccounts-sign-in-sync-button = Inicia la sessió per sincronitzar
 fxaccounts-avatar-button =
     .title = Gestiona el compte
@@ -40,21 +32,32 @@ menu-menuitem-preferences =
        *[other] Preferències
     }
 about-logins-menu-menuitem-help = Ajuda
-menu-menuitem-android-app = { -lockwise-brand-short-name } per a l'Android
-menu-menuitem-iphone-app = { -lockwise-brand-short-name } per a l'iPhone i iPad
 
 ## Login List
 
 login-list =
     .aria-label = Inicis de sessió que coincideixen amb els criteris de cerca
+# Variables
+#   $count (number) - Number of logins
 login-list-count =
     { $count ->
         [one] { $count } inici de sessió
        *[other] { $count } inicis de sessió
     }
+# Variables
+#   $count (number) - Number of filtered logins
+#   $total (number) - Total number of logins
+login-list-filtered-count =
+    { $total ->
+        [11] { $count } d'{ $total } inicis de sessió
+        [one] { $count } d'{ $total } inici de sessió
+       *[other] { $count } de { $total } inicis de sessió
+    }
 login-list-sort-label-text = Ordena per:
 login-list-name-option = Nom (A-Z)
 login-list-name-reverse-option = Nom (Z-A)
+login-list-username-option = Nom d’usuari (A-Z)
+login-list-username-reverse-option = Nom d’usuari (Z-A)
 about-logins-login-list-alerts-option = Alertes
 login-list-last-changed-option = Darrera modificació
 login-list-last-used-option = Darrer ús
@@ -69,22 +72,22 @@ about-logins-list-item-breach-icon =
     .title = Lloc web amb filtració de dades
 about-logins-list-item-vulnerable-password-icon =
     .title = Contrasenya vulnerable
+about-logins-list-section-breach = Llocs web amb filtracions de dades
+about-logins-list-section-vulnerable = Contrasenyes vulnerables
+about-logins-list-section-nothing = Cap alerta
+about-logins-list-section-today = Avui
+about-logins-list-section-yesterday = Ahir
+about-logins-list-section-week = Darrers 7 dies
 
 ## Introduction screen
-
-login-intro-heading = Esteu cercant els inicis de sessió que heu desat? Configureu el { -sync-brand-short-name }.
 
 about-logins-login-intro-heading-logged-out2 = Cerqueu els vostres inicis de sessió desats? Activeu la sincronització o importeu-los.
 about-logins-login-intro-heading-logged-in = No s'ha trobat cap inici de sessió sincronitzat.
 login-intro-description = Si heu desat els vostres inicis de sessió en el { -brand-product-name } des d'un altre dispositiu, aquesta és la manera de tenir-los també aquí:
-login-intro-instruction-fxa = Creeu un { -fxaccount-brand-name } o inicieu-hi la sessió des del dispositiu on teniu desats els vostres inicis de sessió
-login-intro-instruction-fxa-settings = Assegureu-vos que heu seleccionat la casella de selecció Inicis de sessió en els paràmetres del { -sync-brand-short-name }
-about-logins-intro-instruction-help = Visiteu l'<a data-l10n-name="help-link">assistència del { -lockwise-brand-short-name }</a> per obtenir més ajuda
 login-intro-instructions-fxa = Creeu un { -fxaccount-brand-name } o inicieu-hi la sessió des del dispositiu on teniu desats els vostres inicis de sessió.
 login-intro-instructions-fxa-settings = Aneu a Paràmetres > Sync > Activa la sincronització... Marqueu la casella de selecció «Inicis de sessió i contrasenyes».
-login-intro-instructions-fxa-help = Visiteu l'<a data-l10n-name="help-link">assistència del { -lockwise-brand-short-name }</a> per obtenir més ajuda.
-about-logins-intro-import = Si els vostres inicis de sessió estan desats en un altre navegador, podeu <a data-l10n-name="import-link">importar-los al { -lockwise-brand-short-name }</a>
-
+login-intro-instructions-fxa-passwords-help = Visiteu l'<a data-l10n-name="passwords-help-link">assistència de contrasenyes</a> per a obtenir més ajuda.
+about-logins-intro-browser-only-import = Si teniu inicis de sessió desats en un altre navegador, podeu <a data-l10n-name="import-link">importar-los al { -brand-product-name }</a>.
 about-logins-intro-import2 = Si els vostres inicis de sessió estan desats fora del { -brand-product-name }, podeu <a data-l10n-name="import-browser-link">importar-los d'un altre navegador</a> o <a data-l10n-name="import-file-link">d'un fitxer</a>
 
 ## Login
@@ -109,9 +112,17 @@ login-item-copied-password-button-text = S'ha copiat
 login-item-save-changes-button = Desa els canvis
 login-item-save-new-button = Desa
 login-item-cancel-button = Cancel·la
-login-item-time-changed = Darrera modificació: { DATETIME($timeChanged, day: "numeric", month: "long", year: "numeric") }
-login-item-time-created = Creat: { DATETIME($timeCreated, day: "numeric", month: "long", year: "numeric") }
-login-item-time-used = Darrer ús: { DATETIME($timeUsed, day: "numeric", month: "long", year: "numeric") }
+
+## The date is displayed in a timeline showing the password evolution.
+## A label is displayed under the date to describe the type of change.
+## (e.g. updated, created, etc.)
+
+# Variables
+#   $datetime (date) - Event date
+login-item-timeline-point-date = { DATETIME($datetime, day: "numeric", month: "short", year: "numeric") }
+login-item-timeline-action-created = S'ha creat
+login-item-timeline-action-updated = S'ha actualitzat
+login-item-timeline-action-used = S'ha usat
 
 ## OS Authentication dialog
 
@@ -139,10 +150,6 @@ about-logins-copy-password-os-auth-dialog-message-win = Per copiar la contraseny
 # On MacOS, only provide the reason that account verification is needed. Do not put a complete sentence here.
 about-logins-copy-password-os-auth-dialog-message-macosx = copiar la contrasenya desada
 
-## Master Password notification
-
-master-password-notification-message = Introduïu la contrasenya mestra per veure els inicis de sessió i les contrasenyes desats
-
 # This message can be seen when attempting to export a password in about:logins on Windows.
 about-logins-export-password-os-auth-dialog-message-win = Per exportar els inicis de sessió, introduïu les vostres credencials d'inici de sessió al Windows. Això ajuda a protegir la seguretat dels vostres comptes.
 # This message can be seen when attempting to export a password in about:logins
@@ -156,24 +163,6 @@ master-password-reload-button =
     .label = Inicia la sessió
     .accesskey = I
 
-## Password Sync notification
-
-enable-password-sync-notification-message =
-    { PLATFORM() ->
-        [windows] Voleu accedir als vostres inicis de sessió arreu on utilitzeu el { -brand-product-name }? Aneu a les Opcions del { -sync-brand-short-name } i marqueu la casella de selecció Inicis de sessió.
-       *[other] Voleu accedir als vostres inicis de sessió arreu on utilitzeu el { -brand-product-name }? Aneu a les Preferències del { -sync-brand-short-name } i marqueu la casella de selecció Inicis de sessió.
-    }
-enable-password-sync-preferences-button =
-    .label =
-        { PLATFORM() ->
-            [windows] Vés a les Opcions del { -sync-brand-short-name }
-           *[other] Vés a les Preferències del { -sync-brand-short-name }
-        }
-    .accesskey = V
-about-logins-enable-password-sync-dont-ask-again-button =
-    .label = No m'ho tornis a demanar
-    .accesskey = N
-
 ## Dialogs
 
 confirmation-dialog-cancel-button = Cancel·la
@@ -183,6 +172,9 @@ confirmation-dialog-dismiss-button =
 about-logins-confirm-remove-dialog-title = Voleu eliminar aquest inici de sessió?
 confirm-delete-dialog-message = Aquesta acció no es pot desfer.
 about-logins-confirm-remove-dialog-confirm-button = Elimina
+
+## Variables
+##   $count (number) - Number of items
 
 about-logins-confirm-remove-all-dialog-confirm-button-label =
     { $count ->
@@ -222,6 +214,8 @@ about-logins-confirm-remove-all-sync-dialog-message =
        *[other] Això eliminarà tots els inicis de sessió desats pel { -brand-short-name } en tots els dispositius sincronitzats amb el vostre { -fxaccount-brand-name }. També eliminarà les alertes de filtracions que apareixen aquí. Aquesta acció no es pot desfer.
     }
 
+##
+
 about-logins-confirm-export-dialog-title = Exporta els inicis de sessió i contrasenyes
 about-logins-confirm-export-dialog-message = Les contrasenyes es desaran com a text llegible (per exemple, «malaC0ntr@senya»), de manera que qualsevol que pugui obrir el fitxer exportat les podrà veure.
 about-logins-confirm-export-dialog-confirm-button = Exporta…
@@ -241,7 +235,6 @@ about-logins-breach-alert-date = Data de la filtració: { DATETIME($date, day: "
 # Variables:
 #   $hostname (String) - The hostname of the website associated with the login, e.g. "example.com"
 about-logins-breach-alert-link = Vés a { $hostname }
-about-logins-breach-alert-learn-more-link = Més informació
 
 ## Vulnerable Password notification
 
@@ -262,7 +255,6 @@ about-logins-error-message-duplicate-login-with-link = Ja existeix una entrada p
 
 # This is a generic error message.
 about-logins-error-message-default = S'ha produït un error en intentar desar aquesta contrasenya.
-
 
 ## Login Export Dialog
 
@@ -344,7 +336,7 @@ about-logins-import-dialog-error-try-import-again = Torna a provar d'importar…
 about-logins-import-dialog-error-cancel = Cancel·la
 
 about-logins-import-report-title = Resum de la importació
-about-logins-import-report-description = Inici de sessió i contrasenyes importats en el { -brand-short-name }.
+about-logins-import-report-description = Inicis de sessió i contrasenyes importats en el { -brand-short-name }.
 
 #
 # Variables:

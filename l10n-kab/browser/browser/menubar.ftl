@@ -38,16 +38,11 @@ menu-quit =
             [windows] F
            *[other] F
         }
+
 # This menu-quit-mac string is only used on macOS.
 menu-quit-mac =
     .label = Anef { -brand-shorter-name }
-# This menu-quit-button string is only used on Linux.
-menu-quit-button =
-    .label = { menu-quit.label }
-# This menu-quit-button-win string is only used on Windows.
-menu-quit-button-win =
-    .label = { menu-quit.label }
-    .tooltip = Anef { -brand-shorter-name }
+
 menu-about =
     .label = Ɣef { -brand-shorter-name }
     .accesskey = Γ
@@ -77,8 +72,15 @@ menu-file-open-location =
 menu-file-open-file =
     .label = Ldi afaylu…
     .accesskey = L
-menu-file-close =
-    .label = Mdel
+# Variables:
+#  $tabCount (Number): the number of tabs that are affected by the action.
+menu-file-close-tab =
+    .label =
+        { $tabCount ->
+            [1] Mdel iccer
+            [one] Mdel iccer
+           *[other] Mdel { $tabCount } waccaren
+        }
     .accesskey = M
 menu-file-close-window =
     .label = Mdel asfaylu
@@ -95,9 +97,6 @@ menu-file-share-url =
 menu-file-print-setup =
     .label = Tarusi n yisebtar…
     .accesskey = a
-menu-file-print-preview =
-    .label = Awali send asiggez
-    .accesskey = s
 menu-file-print =
     .label = Siggez
     .accesskey = S
@@ -113,9 +112,6 @@ menu-file-go-offline =
 menu-edit =
     .label = Taẓrigt
     .accesskey = ẓ
-menu-edit-find-on =
-    .label = Nadi deg usebter-a…
-    .accesskey = d
 menu-edit-find-in-page =
     .label = Af deg usebter…
     .accesskey = A
@@ -134,9 +130,6 @@ menu-view =
 menu-view-toolbars-menu =
     .label = Afeggag n yifecka
     .accesskey = A
-menu-view-customize-toolbar =
-    .label = Sagen…
-    .accesskey = S
 menu-view-customize-toolbar2 =
     .label = Sagen afeggag n yifecka…
     .accesskey = S
@@ -173,9 +166,6 @@ menu-view-page-style-no-style =
 menu-view-page-basic-style =
     .label = Aɣanib azadur n usebter
     .accesskey = b
-menu-view-charset =
-    .label = Asettengel n uḍris
-    .accesskey = s
 menu-view-repair-text-encoding =
     .label = Ṣeggem asettengel n uḍris
     .accesskey = g
@@ -192,6 +182,17 @@ menu-view-exit-full-screen =
 menu-view-full-screen =
     .label = Agdil Ačaran
     .accesskey = A
+
+## These menu items may use the same accesskey.
+
+# This should match reader-view-enter-button in browser.ftl
+menu-view-enter-readerview =
+    .label = Uɣal ɣeṛ tmeẓri n tɣuṛi
+    .accesskey = R
+# This should match reader-view-close-button in browser.ftl
+menu-view-close-readerview =
+    .label = Mdel timeẓri n tɣuṛi
+    .accesskey = R
 
 ##
 
@@ -221,24 +222,18 @@ menu-history-undo-menu =
     .label = Accaren imedlen melmi kan
 menu-history-undo-window-menu =
     .label = Isfuyla imedlen melmi kan
-menu-history-reopen-all-tabs = Ales tawaledyawt n meṛṛa accaren
-menu-history-reopen-all-windows = Ales tawaledyawt n meṛṛa isfuyla
 
 ## Bookmarks Menu
 
 menu-bookmarks-menu =
     .label = Ticraḍ n yisebtar
     .accesskey = r
-menu-bookmarks-show-all =
-    .label = Sken akk ticraḍ n yisebtar
-menu-bookmark-this-page =
-    .label = Creḍ asebter-a
 menu-bookmarks-manage =
     .label = Sefrek ticraḍ n yisebtar
-menu-bookmark-current-tab =
-    .label = Creḍ iccer amiran
-menu-bookmark-edit =
-    .label = Ẓreg tacreḍṭ n usebter-a
+menu-bookmark-tab =
+    .label = Iccer amiran n tecreḍt n usebter…
+menu-edit-bookmark =
+    .label = Ẓreg tacreḍṭ n usebter-a…
 menu-bookmarks-all-tabs =
     .label = Creḍ akk accaren…
 menu-bookmarks-toolbar =
@@ -256,15 +251,6 @@ menu-tools =
 menu-tools-downloads =
     .label = Isadaren
     .accesskey = i
-menu-tools-addons =
-    .label = Izegrar
-    .accesskey = I
-menu-tools-fxa-sign-in =
-    .label = Qqen ɣer { -brand-product-name }...
-    .accesskey = q
-menu-tools-turn-on-sync =
-    .label = Rmed { -sync-brand-short-name }...
-    .accesskey = d
 menu-tools-addons-and-themes =
     .label = Izegrar d yisental
     .accesskey = I
@@ -280,9 +266,6 @@ menu-tools-sync-now =
 menu-tools-fxa-re-auth =
     .label = Qqen i tikelt-nniḍen ɣeṛ{ -brand-product-name }...
     .accesskey = Q
-menu-tools-web-developer =
-    .label = Aneflay web
-    .accesskey = A
 menu-tools-browser-tools =
     .label = Ifecka n yiminig
     .accesskey = F
@@ -295,17 +278,6 @@ menu-tools-page-source =
 menu-tools-page-info =
     .label = Talɣut ɣef usebter
     .accesskey = T
-menu-preferences =
-    .label =
-        { PLATFORM() ->
-            [windows] Iɣewwaren
-           *[other] Ismenyifen
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] w
-           *[other] s
-        }
 menu-settings =
     .label = Iɣewwaren
     .accesskey =
@@ -338,21 +310,6 @@ menu-window-bring-all-to-front =
 menu-help =
     .label = Tallelt
     .accesskey = T
-menu-help-product =
-    .label = Tallelt { -brand-shorter-name }
-    .accesskey = a
-menu-help-show-tour =
-    .label = Tirza fessusen ɣer { -brand-shorter-name }
-    .accesskey = r
-menu-help-import-from-another-browser =
-    .label = Kter seg iminig nniḍen…
-    .accesskey = K
-menu-help-keyboard-shortcuts =
-    .label = Inegzumen n unasiw
-    .accesskey = I
-menu-help-troubleshooting-info =
-    .label = Talɣut n usellek
-    .accesskey = Γ
 menu-get-help =
     .label = Awi tallelt
     .accesskey = A
@@ -361,20 +318,17 @@ menu-help-more-troubleshooting-info =
     .accesskey = T
 menu-help-report-site-issue =
     .label = Azen ugur ɣef usmel…
-menu-help-feedback-page =
-    .label = Efk-d tamuɣli-ik…
-    .accesskey = M
-menu-help-safe-mode-without-addons =
-    .label = Ales asenker s yizegrar irurmiden…
-    .accesskey = A
-menu-help-safe-mode-with-addons =
-    .label = Ales asenker s yizegrar urmiden
-    .accesskey = A
+menu-help-share-ideas =
+    .label = Bḍu taktiwin d tamawat…
+    .accesskey = B
 menu-help-enter-troubleshoot-mode2 =
     .label = Askar n usellek…
     .accesskey = A
 menu-help-exit-troubleshoot-mode =
     .label = Sens askar n ferru n wuguren
+    .accesskey = A
+menu-help-switch-device =
+    .label = Uɣal ɣer yibenk amaynut
     .accesskey = A
 # Label of the Help menu item. Either this or
 # menu-help-notdeceptive is shown.

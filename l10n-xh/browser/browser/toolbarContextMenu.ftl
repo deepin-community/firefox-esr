@@ -15,3 +15,6 @@ toolbar-context-menu-view-customize-toolbar =
     .label = Lungiselela…
     .accesskey = L
 
+toolbar-context-menu-menu-bar-cmd =
+    .toolbarname = Ibha yemenyu
+    .accesskey = I

@@ -15,6 +15,9 @@ printui-sheets-count =
     }
 
 printui-page-range-all = Totas
+printui-page-range-current = Actuala
+printui-page-range-odd = Impara
+printui-page-range-even = Para
 printui-page-range-custom = Personalizar
 printui-page-range-label = Paginas
 printui-page-range-picker =
@@ -57,8 +60,6 @@ printui-two-sided-printing-short-edge = Virar al costat cort
 printui-options = Opcions
 printui-headers-footers-checkbox = Imprimir las entèstas e los pès de pagina
 printui-backgrounds-checkbox = Imprimir los rèireplans
-
-printui-selection-checkbox = Sonque imprimir la seleccion
 
 ## The "Format" section, select a version of the website to print. Radio
 ## options to select between the original page, selected text only, or a version

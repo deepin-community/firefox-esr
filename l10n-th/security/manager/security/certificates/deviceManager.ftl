@@ -5,9 +5,9 @@
 
 ## Strings used for device manager
 
-devmgr =
+devmgr-window =
     .title = ตัวจัดการอุปกรณ์
-    .style = width: 67em; height: 32em;
+    .style = min-width: 67em; min-height: 32em;
 
 devmgr-devlist =
     .label = โมดูลและอุปกรณ์ความปลอดภัย
@@ -115,8 +115,6 @@ devinfo-label =
 
 devinfo-serialnum =
     .label = หมายเลขอนุกรม
-
-fips-nonempty-password-required = รูปแบบ FIPS จำเป็นต้องใช้รหัสผ่านหลักที่ตั้งไว้กับอุปกรณ์รักษาความปลอดภัยแต่ละตัว กรุณาตั้งรหัสผ่านก่อนการเปิดใช้งานรูปแบบ FIPS
 
 fips-nonempty-primary-password-required = โหมด FIPS ต้องการให้คุณตั้งรหัสผ่านหลักสำหรับอุปกรณ์ความปลอดภัยแต่ละเครื่อง โปรดตั้งรหัสผ่านก่อนลองเปิดใช้งานโหมด FIPS
 unable-to-toggle-fips = ไม่สามารถเปลี่ยนโหมด FIPS ให้เข้ากับอุปกรณ์รักษาความปลอดภัย แนะนำให้คุณออกและเริ่มโปรแกรมใหม่

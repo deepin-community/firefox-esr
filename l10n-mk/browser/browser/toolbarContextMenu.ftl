@@ -15,3 +15,6 @@ toolbar-context-menu-view-customize-toolbar =
     .label = Прилагоди…
     .accesskey = р
 
+toolbar-context-menu-menu-bar-cmd =
+    .toolbarname = Мени
+    .accesskey = М

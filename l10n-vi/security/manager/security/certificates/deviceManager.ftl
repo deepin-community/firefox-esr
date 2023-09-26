@@ -5,9 +5,9 @@
 
 ## Strings used for device manager
 
-devmgr =
+devmgr-window =
     .title = Quản lí thiết bị
-    .style = width: 67em; height: 32em;
+    .style = min-width: 67em; min-height: 32em;
 
 devmgr-devlist =
     .label = Mô-đun và thiết bị bảo mật
@@ -115,8 +115,6 @@ devinfo-label =
 
 devinfo-serialnum =
     .label = Số sê-ri
-
-fips-nonempty-password-required = Chế độ FIPS yêu cầu bạn đặt một mật khẩu chính cho mỗi thiết bị bảo mật. Vui lòng đặt mật khẩu trước khi bật chế độ FIPS.
 
 fips-nonempty-primary-password-required = Chế độ FIPS yêu cầu bạn phải đặt mật khẩu chính cho từng thiết bị bảo mật. Vui lòng đặt mật khẩu trước khi thử bật chế độ FIPS.
 unable-to-toggle-fips = Không thể thay đổi chế độ FIPS cho thiết bị bảo mật. Bạn nên thoát và khởi động lại ứng dụng này.

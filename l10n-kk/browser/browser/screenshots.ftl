@@ -2,13 +2,12 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-screenshots-context-menu = Скриншотты түсіру
-
-screenshots-my-shots-button = Менің скриншоттарым
-
 screenshot-toolbarbutton =
     .label = Скриншот
     .tooltiptext = Скриншотты түсіру
+
+screenshot-shortcut =
+    .key = S
 
 screenshots-instructions = Аймақты таңдау үшін бетте шертіңіз. Бас тарту үшін ESC басыңыз.
 screenshots-cancel-button = Бас тарту
@@ -18,6 +17,14 @@ screenshots-download-button = Жүктеп алу
 screenshots-download-button-tooltip = Скриншотты жүктеп алу
 screenshots-copy-button = Көшіріп алу
 screenshots-copy-button-tooltip = Скриншотты алмасу буферіне көшіріп алу
+screenshots-download-button-title =
+    .title = Скриншотты жүктеп алу
+screenshots-copy-button-title =
+    .title = Скриншотты алмасу буферіне көшіріп алу
+screenshots-cancel-button-title =
+    .title = Бас тарту
+screenshots-retry-button-title =
+    .title = Скриншотты қайталау
 
 screenshots-meta-key =
     { PLATFORM() ->
@@ -41,8 +48,6 @@ screenshots-login-error-details = Скриншотыңызды сақтай ал
 screenshots-unshootable-page-error-title = Бұл беттің скриншотын түсіре алмаймыз.
 screenshots-unshootable-page-error-details = Бұл қалыпты веб беті емес, сондықтан оның скриншотын түсіру мүмкін емес.
 
-screenshots-self-screenshot-error-title = { -screenshots-brand-name } бетінің скриншотын түсіру мүмкін емес!
-
 screenshots-empty-selection-error-title = Сіздің таңдауыңыз тым кішкентай
 
 screenshots-private-window-error-title = { -screenshots-brand-name } жекелік шолу режимінде сөнідірілген
@@ -50,3 +55,6 @@ screenshots-private-window-error-details = Қолайсыздық үшін ке�
 
 screenshots-generic-error-title = Қап! { -screenshots-brand-name } қуып кетті.
 screenshots-generic-error-details = Не болғанын білмейміз. Қайталап көресіз бе, немесе басқа парақтың скриншотын түсіріп көресіз бе?
+
+screenshots-too-large-error-title = Скриншот тым үлкен болғандықтан қиылды
+screenshots-too-large-error-details = Ең ұзын жағындағы 32 700 пиксельден кіші немесе жалпы аумағы 124 900 000 пикселден кіші аймақты таңдап көріңіз.

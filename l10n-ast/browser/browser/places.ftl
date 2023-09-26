@@ -5,9 +5,6 @@
 places-open =
     .label = Abrir
     .accesskey = A
-places-open-tab =
-    .label = Abrir nuna llingüeta nueva
-    .accesskey = t
 places-open-in-tab =
     .label = Abrir nuna llingüeta nueva
     .accesskey = l
@@ -17,32 +14,15 @@ places-open-all-bookmarks =
 places-open-all-in-tabs =
     .label = Abrir too en llingüetes
     .accesskey = o
-places-open-window =
-    .label = Abrir nuna ventana nueva
-    .accesskey = n
-places-open-private-window =
-    .label = Abrir nuna ventanta privada nueva
-    .accesskey = P
-
-places-new-bookmark =
-    .label = Marcador nuevu…
-    .accesskey = n
-places-new-folder-contextmenu =
-    .label = Carpeta nueva…
-    .accesskey = C
-places-new-folder =
-    .label = Carpeta nueva…
-    .accesskey = u
-places-new-separator =
-    .label = Separtador nuevu
-    .accesskey = v
-
 places-open-in-window =
     .label = Abrir nuna ventana nueva
     .accesskey = n
 places-open-in-private-window =
     .label = Abrir nuna ventana privada nueva
     .accesskey = p
+
+places-empty-bookmarks-folder =
+    .label = (Ensin marcadores)
 
 places-add-bookmark =
     .label = Amestar un marcador…
@@ -78,6 +58,8 @@ places-by-day-and-site =
 
 places-history-search =
     .placeholder = Buscar nel historial
+places-history =
+    .aria-label = Historial
 places-bookmarks-search =
     .placeholder = Buscar nos marcadores
 
@@ -87,10 +69,6 @@ places-delete-domain-data =
 places-sortby-name =
     .label = Ordenar pol nome
     .accesskey = r
-places-properties =
-    .label = Propiedaes
-    .accesskey = i
-
 # places-edit-bookmark and places-edit-generic will show one or the other and can have the same access key.
 places-edit-bookmark =
     .label = Editar el marcador…
@@ -98,14 +76,15 @@ places-edit-bookmark =
 places-edit-generic =
     .label = Editar…
     .accesskey = i
-places-remove-folder =
+# Variables:
+#   $count (number) - The number of pages selected for removal.
+places-delete-page =
     .label =
         { $count ->
-            [1] Quitar la carpeta
-            [one] Quitar les carpetes
-           *[other] Quitar les carpetes
+            [1] Desaniciar la páxina
+           *[other] Desaniciar les páxines
         }
-    .accesskey = Q
+    .accesskey = D
 
 # Managed bookmarks are created by an administrator and cannot be changed by the user.
 managed-bookmarks =
@@ -118,17 +97,148 @@ managed-bookmarks-subfolder =
 other-bookmarks-folder =
     .label = Otros marcadores
 
-# Variables:
-# $count (number) - The number of elements being selected for removal.
-places-remove-bookmark =
-    .label =
-        { $count ->
-            [1] Quitar el marcador
-            [one] Quitar el marcador
-           *[other] Quitar los marcadores
-        }
-    .accesskey = Q
-
 places-manage-bookmarks =
     .label = Xestionar los marcadores
     .accesskey = X
+
+places-library3 =
+    .title = Biblioteca
+
+places-organize-button =
+    .label = Organizar
+    .tooltiptext = Organiza los marcadores
+    .accesskey = O
+
+places-organize-button-mac =
+    .label = Organizar
+    .tooltiptext = Organiza los marcadores
+
+places-file-close =
+    .label = Zarrar
+    .accesskey = Z
+
+places-view-button =
+    .label = Vistes
+    .tooltiptext = Camuda la vista
+    .accesskey = V
+
+places-view-button-mac =
+    .label = Vistes
+    .tooltiptext = Camuda la vista
+
+places-view-menu-columns =
+    .label = Columnes
+    .accesskey = c
+
+places-view-menu-sort =
+    .label = Ordenar
+    .accesskey = O
+
+places-view-sort-unsorted =
+    .label = Ensin ordenar
+    .accesskey = E
+
+places-view-sort-ascending =
+    .label = Orde de clasificación A > Z
+    .accesskey = A
+
+places-view-sort-descending =
+    .label = Orde de clasificación Z > A
+    .accesskey = Z
+
+places-maintenance-button =
+    .label = Importar y esportar
+    .tooltiptext = Importa y esporta los marcadores
+    .accesskey = I
+
+places-maintenance-button-mac =
+    .label = Importar y esportar
+    .tooltiptext = Importa y esporta los marcadores
+
+places-cmd-restore =
+    .label = Restaurar
+    .accesskey = R
+
+places-cmd-restore-from-file =
+    .label = Escoyer un ficheru…
+    .accesskey = E
+
+places-import-other-browser =
+    .label = Importar los datos d'otru restolador…
+    .accesskey = o
+
+places-view-sort-col-name =
+    .label = Nome
+
+places-view-sort-col-tags =
+    .label = Etiquetes
+
+places-view-sort-col-url =
+    .label = Direición
+
+places-view-sort-col-most-recent-visit =
+    .label = Última visita
+
+places-view-sort-col-visit-count =
+    .label = Númberu de visites
+
+places-view-sort-col-date-added =
+    .label = Data d'amiestu
+
+places-view-sort-col-last-modified =
+    .label = Última modificación
+
+places-view-sortby-name =
+    .label = Ordenar pol nome
+    .accesskey = n
+places-view-sortby-url =
+    .label = Ordenar pol allugamientu
+    .accesskey = l
+places-view-sortby-date =
+    .label = Ordenar pola visita más recién
+    .accesskey = v
+places-view-sortby-visit-count =
+    .label = Ordenar pol númberu de visites
+    .accesskey = m
+places-view-sortby-date-added =
+    .label = Ordenar pola data d'amiestu
+    .accesskey = a
+places-view-sortby-last-modified =
+    .label = Ordenar pola última modificación
+    .accesskey = o
+places-view-sortby-tags =
+    .label = Ordenar poles etiquetes
+    .accesskey = e
+
+places-back-button =
+    .tooltiptext = Dir p'atrás
+
+places-forward-button =
+    .tooltiptext = Dir p'alantre
+
+places-details-pane-select-an-item-description = Esbilla un elementu pa ver y editar les sos propiedaes
+
+places-details-pane-no-items =
+    .value = Nun hai elementos
+# Variables:
+#   $count (Number): number of items
+places-details-pane-items-count =
+    .value =
+        { $count ->
+            [one] 1 elementu
+           *[other] { $count } elementos
+        }
+
+## Strings used as a placeholder in the Library search field. For example,
+## "Search History" stands for "Search through the browser's history".
+
+places-search-bookmarks =
+    .placeholder = Buscar nos marcadores
+places-search-history =
+    .placeholder = Buscar nel historial
+places-search-downloads =
+    .placeholder = Buscar nes descargues
+
+##
+
+places-locked-prompt = El sistema de marcadores ya historial nun va funcionar porque unu de los ficheros de { -brand-short-name } ta usándolu otra aplicación. Dalgún software de seguranza pue causar esti problema.

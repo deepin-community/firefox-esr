@@ -9,8 +9,6 @@
 
 process-type-web = Endalc'had Web
 
-process-type-browser = Pennañ
-
 # process used to run privileged about pages,
 # such as about:home
 process-type-privilegedabout = Pajennoù "A-zivout" brientekaet
@@ -23,10 +21,6 @@ process-type-extension = Askouezh
 
 # process used to open file:// URLs
 process-type-file = Restr lec'hel
-
-# process used to isolate webpages that requested special
-# permission to allocate large amounts of memory
-process-type-weblargeallocation = Derannañ ledan
 
 # process used to isolate a webpage from other web pages
 # to improve security

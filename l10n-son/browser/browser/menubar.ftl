@@ -39,15 +39,6 @@ menu-quit =
 menu-quit-mac =
     .label = Fatta { -brand-shorter-name } ra
 
-# This menu-quit-button string is only used on Linux.
-menu-quit-button =
-    .label = { menu-quit.label }
-
-# This menu-quit-button-win string is only used on Windows.
-menu-quit-button-win =
-    .label = { menu-quit.label }
-    .tooltip = Fatta { -brand-shorter-name } ra
-
 menu-about =
     .label = { -brand-shorter-name } ga
     .accesskey = a
@@ -77,9 +68,6 @@ menu-file-open-location =
 menu-file-open-file =
     .label = Tuku feeri…
     .accesskey = T
-menu-file-close =
-    .label = Daabu
-    .accesskey = D
 menu-file-close-window =
     .label = Zanfunoo daabu
     .accesskey = d
@@ -92,9 +80,6 @@ menu-file-email-link =
 menu-file-print-setup =
     .label = Moo kayandiyan
     .accesskey = k
-menu-file-print-preview =
-    .label = Moo-fur ka kar
-    .accesskey = f
 menu-file-print =
     .label = Kar…
     .accesskey = K
@@ -107,9 +92,6 @@ menu-file-go-offline =
 menu-edit =
     .label = Fasal
     .accesskey = F
-menu-edit-find-on =
-    .label = Moɲoo woo ceeci…
-    .accesskey = e
 menu-edit-find-again =
     .label = Ceeci koyne
     .accesskey = k
@@ -125,9 +107,6 @@ menu-view =
 menu-view-toolbars-menu =
     .label = Goyjinay žeerey
     .accesskey = G
-menu-view-customize-toolbar =
-    .label = Hanse war boŋ se…
-    .accesskey = H
 menu-view-sidebar =
     .label = Cerawžeeri
     .accesskey = C
@@ -158,9 +137,6 @@ menu-view-page-style-no-style =
 menu-view-page-basic-style =
     .label = Moo fasal faala
     .accesskey = f
-menu-view-charset =
-    .label = Hantum harfu-hawyan
-    .accesskey = a
 
 ## These should match what Safari and other Apple applications
 ## use on macOS.
@@ -174,6 +150,17 @@ menu-view-exit-full-screen =
 menu-view-full-screen =
     .label = Dijikul
     .accesskey = D
+
+## These menu items may use the same accesskey.
+
+# This should match reader-view-enter-button in browser.ftl
+menu-view-enter-readerview =
+    .label = Cawkaw gunari dam
+    .accesskey = R
+# This should match reader-view-close-button in browser.ftl
+menu-view-close-readerview =
+    .label = Cawkaw gunari daabu
+    .accesskey = R
 
 ##
 
@@ -207,12 +194,6 @@ menu-history-undo-window-menu =
 menu-bookmarks-menu =
     .label = Doo-šilbawey
     .accesskey = b
-menu-bookmarks-show-all =
-    .label = Doo-šilbawey kul cebe
-menu-bookmark-this-page =
-    .label = Moɲoo woo šilbay
-menu-bookmark-edit =
-    .label = Doo-šilbaa woo fasal
 menu-bookmarks-all-tabs =
     .label = Kanjey kul doo-šilbay…
 menu-bookmarks-toolbar =
@@ -230,32 +211,15 @@ menu-tools =
 menu-tools-downloads =
     .label = Zumandiyaney
     .accesskey = Z
-menu-tools-addons =
-    .label = Tontoney
-    .accesskey = T
 menu-tools-sync-now =
     .label = Sync sohõ
     .accesskey = S
-menu-tools-web-developer =
-    .label = Tataaru cinakaw
-    .accesskey = T
 menu-tools-page-source =
     .label = Moo aššil
     .accesskey = a
 menu-tools-page-info =
     .label = Moo alhabar
     .accesskey = a
-menu-preferences =
-    .label =
-        { PLATFORM() ->
-            [windows] Suubarey
-           *[other] Ibaayey
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] S
-           *[other] I
-        }
 
 ## Window Menu
 
@@ -270,14 +234,6 @@ menu-window-bring-all-to-front =
 # NOTE: For Engineers, any additions or changes to Help menu strings should
 # also be reflected in the related strings in appmenu.ftl. Those strings, by
 # convention, will have the same ID as these, but prefixed with "app".
-# Example: appmenu-help-product
-#
-# These strings are duplicated to allow for different casing depending on
-# where the strings appear.
-
-# NOTE: For Engineers, any additions or changes to Help menu strings should
-# also be reflected in the related strings in appmenu.ftl. Those strings, by
-# convention, will have the same ID as these, but prefixed with "app".
 # Example: appmenu-get-help
 #
 # These strings are duplicated to allow for different casing depending on
@@ -286,27 +242,6 @@ menu-window-bring-all-to-front =
 menu-help =
     .label = Faaba
     .accesskey = F
-menu-help-product =
-    .label = { -brand-shorter-name } faaba
-    .accesskey = f
-menu-help-show-tour =
-    .label = { -brand-shorter-name } wanga
-    .accesskey = w
-menu-help-keyboard-shortcuts =
-    .label = Walha dunbandiyaney
-    .accesskey = W
-menu-help-troubleshooting-info =
-    .label = Karkahattayan alhabar
-    .accesskey = K
-menu-help-feedback-page =
-    .label = Furari sanba…
-    .accesskey = s
-menu-help-safe-mode-without-addons =
-    .label = Tunandi taaga kaŋ tontoney kayandi…
-    .accesskey = u
-menu-help-safe-mode-with-addons =
-    .label = Tunandi taaga kaŋ tontoney ga kayandi
-    .accesskey = u
 # Label of the Help menu item. Either this or
 # safeb.palm.notdeceptive.label from
 # phishing-afterload-warning-message.dtd is shown.

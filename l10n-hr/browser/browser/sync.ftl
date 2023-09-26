@@ -2,19 +2,10 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-fxa-toolbar-sync-syncing =
-    .label = Sinkroniziranje…
-fxa-toolbar-sync-syncing-tabs =
-    .label = Sinkroniziranje kartica…
-
-sync-disconnect-dialog-title = Odspojiti { -sync-brand-short-name }?
-
 fxa-toolbar-sync-syncing2 = Sinkroniziranje…
 
 sync-disconnect-dialog-title2 = Odspojiti?
 sync-disconnect-dialog-body = { -brand-product-name } će prestati sinkronizirati tvoj račun, ali neće izbrisati podatke o tvom pregledavanju na ovom uređaju.
-fxa-disconnect-dialog-title = Odspojiti { -brand-product-name }?
-fxa-disconnect-dialog-body = { -brand-product-name } će se odspojiti od tvog račun, ali neće izbrisati podatke o tvom pregledavanju na ovom uređaju.
 sync-disconnect-dialog-button = Odspoji
 
 fxa-signout-dialog2-title = Odjaviti se iz servisa { -fxaccount-brand-name }?
@@ -30,6 +21,22 @@ fxa-menu-turn-on-sync-default = Uključi sinkronizaciju
 
 fxa-menu-connect-another-device =
     .label = Poveži novi uređaj…
+# Variables:
+#   $tabCount (Number): The number of tabs sent to the device.
+fxa-menu-send-tab-to-device =
+    .label =
+        { $tabCount ->
+            [one] Pošalji { $tabCount } karticu na uređaj
+            [few] Pošalji { $tabCount } kartice na uređaj
+           *[other] Pošalji { $tabCount } kartica na uređaj
+        }
+
+# This is shown dynamically within "Send tab to device" in fxa menu.
+fxa-menu-send-tab-to-device-syncnotready =
+    .label = Sinkroniziranje uređaja …
+
+# This is shown within "Send tab to device" in fxa menu if account is not configured.
+fxa-menu-send-tab-to-device-description = Trenutno šalji karticu na bilo koji uređaj na kojem si prijavljen/a.
 
 fxa-menu-sign-out =
     .label = Odjavi se…

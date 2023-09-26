@@ -61,10 +61,6 @@ about-debugging-sidebar-item-connect-button-connection-not-responding = ما ز�
 # Text displayed as connection error in sidebar item when the connection has timed out.
 about-debugging-sidebar-item-connect-button-connection-timeout = انتهت المهلة للاتصال
 
-# Temporary text displayed in sidebar items representing remote runtimes after
-# successfully connecting to them. Temporary UI, do not localize.
-about-debugging-sidebar-item-connected-label = متّصل
-
 # Text displayed in sidebar items for remote devices where a compatible browser (eg
 # Firefox) has not been detected yet. Typically, Android phones connected via USB with
 # USB debugging enabled, but where Firefox is not started.
@@ -239,6 +235,9 @@ about-debugging-runtime-name = ‏{ $name } ‏({ $version })
 # Clicking on the button will close the connection to the runtime.
 about-debugging-runtime-disconnect-button = اقطع الاتصال
 
+# Title of a modal dialog displayed on remote runtime pages after clicking on the Profile Runtime button.
+about-debugging-profiler-dialog-title2 = محلّل الأداء
+
 # Clicking on the header of a debug target category will expand or collapse the debug
 # target items in the category. This text is used as ’title’ attribute of the header,
 # to describe this feature.
@@ -306,10 +305,6 @@ about-debugging-worker-status-registering = يُسجّل
 # Displayed as title of the inspect button for zombie tabs (e.g. tabs loaded via a session restore).
 about-debugging-zombie-tab-inspect-action-disabled =
     .title = لم يُحمّل اللسان تمامًا ولا يمكن فحصه
-
-# Displayed as name for the Main Process debug target in the Processes category. Only for
-# remote runtimes, if `devtools.aboutdebugging.process-debugging` is true.
-about-debugging-main-process-name = السيرورة الأساسية
 
 # Displayed instead of the Main Process debug target when the preference
 # `devtools.browsertoolbox.fission` is true.

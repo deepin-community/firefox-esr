@@ -6,33 +6,20 @@ password-quality-meter = パスワードの品質レベル
 
 ## Change Password dialog
 
-change-password-window =
-    .title = マスターパスワードの変更
-
 change-device-password-window =
     .title = パスワードの変更
-
 # Variables:
 # $tokenName (String) - Security device of the change password dialog
 change-password-token = セキュリティデバイス: { $tokenName }
 change-password-old = 現在のパスワード:
 change-password-new = 新しいパスワード:
 change-password-reenter = 新しいパスワード(再入力):
-
-## Reset Password dialog
-
-reset-password-window =
-    .title = マスターパスワードのリセット
-    .style = width: 40em
-
 pippki-failed-pw-change = パスワードを変更できません。
 pippki-incorrect-pw = 現在のパスワードが正しく入力されませんでした。入力し直してください。
 pippki-pw-change-ok = パスワードの変更が完了しました。
-
 pippki-pw-empty-warning = 保存されたパスワードと秘密鍵は保護されません。
 pippki-pw-erased-ok = パスワードを削除しました。{ pippki-pw-empty-warning }
 pippki-pw-not-wanted = 警告！ パスワードの使用を取りやめました。{ pippki-pw-empty-warning }
-
 pippki-pw-change2empty-in-fips-mode = 現在 FIPS モードです。FIPS は空でないパスワードを必要とします。
 
 ## Reset Primary Password dialog
@@ -40,10 +27,12 @@ pippki-pw-change2empty-in-fips-mode = 現在 FIPS モードです。FIPS は空�
 reset-primary-password-window =
     .title = マスターパスワードのリセット
     .style = width: 40em
+reset-primary-password-window2 =
+    .title = マスターパスワードのリセット
+    .style = min-width: 40em
 reset-password-button-label =
     .label = リセット
-reset-password-text = マスターパスワードをリセットすると、保存されているすべてのウェブやメールのパスワード、フォームデータ、個人証明書、秘密鍵が失われます。本当にマスターパスワードをリセットしてもよろしいですか？
-
+# (^m^) en-US: "Primary Password"
 reset-primary-password-text = マスターパスワードをリセットすると、保存されているすべてのウェブやメールのパスワード、個人証明書、秘密鍵が失われます。本当にマスターパスワードをリセットしてもよろしいですか？
 pippki-reset-password-confirmation-title = マスターパスワードのリセット
 pippki-reset-password-confirmation-message = マスターパスワードがリセットされます。
@@ -53,6 +42,9 @@ pippki-reset-password-confirmation-message = マスターパスワードがリ�
 download-cert-window =
     .title = 証明書のインポート
     .style = width: 46em
+download-cert-window2 =
+    .title = 証明書のインポート
+    .style = min-width: 46em
 download-cert-message = 新しい認証局 (CA) を信頼するよう求められています。本当にこの認証局を信頼しますか？
 download-cert-trust-ssl =
     .label = この認証局によるウェブサイトの識別を信頼する
@@ -88,3 +80,9 @@ protected-auth-window =
     .title = 保護されたトークン認証
 protected-auth-msg = トークンの認証を行ってください。認証方法は使用するトークンの種類によって異なります。
 protected-auth-token = トークン:
+
+## Protected authentication alert
+
+# Variables:
+# $tokenName (String) - The name of the token to authenticate to (for example, "OS Client Cert Token (Modern)")
+protected-auth-alert = トークン “{ $tokenName }” の認証を行ってください。認証方法は使用するトークンの種類によって異なります (例えば、指紋認証リーダーの使用やキーパッドでのコード入力など)。

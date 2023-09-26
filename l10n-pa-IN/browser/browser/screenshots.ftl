@@ -2,13 +2,12 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-screenshots-context-menu = ਸਕਰੀਨ-ਸ਼ਾਟ ਲਵੋ
-
-screenshots-my-shots-button = ਮੇਰੇ ਸ਼ਾਟ
-
 screenshot-toolbarbutton =
     .label = ਸਕਰੀਨਸ਼ਾਟ
     .tooltiptext = ਸਕਰੀਨਸ਼ਾਟ ਲਵੋ
+
+screenshot-shortcut =
+    .key = S
 
 screenshots-instructions = ਖੇਤਰ ਨੂੰ ਚੁਣਨ ਵਾਸਤੇ ਖਿੱਚੋ ਜਾਂ ਕਲਿੱਕ ਕਰੋ। ਰੱਦ ਕਰਨ ਵਾਸਤੇ ESC ਦੱਬੋ।
 screenshots-cancel-button = ਰੱਦ ਕਰੋ
@@ -18,6 +17,14 @@ screenshots-download-button = ਡਾਊਨਲੋਡ ਕਰੋ
 screenshots-download-button-tooltip = ਸਕਰੀਨ ਸ਼ਾਟ ਡਾਊਨਲੋਡ ਕਰੋ
 screenshots-copy-button = ਕਾਪੀ
 screenshots-copy-button-tooltip = ਸਕਰੀਨਸ਼ਾਟ ਨੂੰ ਕਲਿੱਪਬੋਰਡ ਵਿੱਚ ਕਾਪੀ ਕਰੋ
+screenshots-download-button-title =
+    .title = ਸਕਰੀਨ ਸ਼ਾਟ ਡਾਊਨਲੋਡ ਕਰੋ
+screenshots-copy-button-title =
+    .title = ਸਕਰੀਨਸ਼ਾਟ ਨੂੰ ਕਲਿੱਪਬੋਰਡ ਵਿੱਚ ਕਾਪੀ ਕਰੋ
+screenshots-cancel-button-title =
+    .title = ਰੱਦ ਕਰੋ
+screenshots-retry-button-title =
+    .title = ਸਕਰੀਨਸ਼ਾਟ ਦੀ ਮੁੜ-ਕੋਸ਼ਿਸ਼ ਕਰੋ
 
 screenshots-meta-key =
     { PLATFORM() ->
@@ -41,8 +48,6 @@ screenshots-login-error-details = { -screenshots-brand-name } ਸੇਵਾ ਨ�
 screenshots-unshootable-page-error-title = ਅਸੀਂ ਇਸ ਸਫੇ ਦਾ ਸਕਰੀਨਸ਼ਾਟ ਨਹੀਂ ਲੈ ਸਕਦੇ।
 screenshots-unshootable-page-error-details = ਇਹ ਸਟੈਂਡਰਡ ਵੈੱਬ ਸਫ਼ਾ ਨਹੀਂ ਹੈ, ਇਸਕਰਕੇ ਤੁਸੀਂ ਇਸ ਦਾ ਸਕਰੀਨਸ਼ਾਟ ਨਹੀਂ ਲੈ ਸਕਦੇ ਹੋ।
 
-screenshots-self-screenshot-error-title = ਤੁਸੀਂ { -screenshots-brand-name } ਸਫ਼ੇ ਦੀ ਤਸਵੀਰ ਨਹੀਂ ਖਿੱਚ ਸਕਦੇ ਹੋ!
-
 screenshots-empty-selection-error-title = ਤੁਹਾਡੀ ਚੋਣ ਬਹੁਤ ਛੋਟੀ ਹੈ
 
 screenshots-private-window-error-title = ਨਿੱਜੀ ਬਰਾਊਜਿੰਗ ਮੋਡ ਵਿੱਚ { -screenshots-brand-name } ਸਮਰੱਥ ਹੈ
@@ -50,3 +55,6 @@ screenshots-private-window-error-details = ਔਖਿਆਈ ਲਈ ਅਫ਼ਸ�
 
 screenshots-generic-error-title = ਠਹਿਰੋ! { -screenshots-brand-name } ਲੈਣ 'ਚ ਸਮੱਸਿਆ ਆਈ
 screenshots-generic-error-details = ਸਾਨੂੰ ਨਹੀਂ ਪਤਾ ਹੈ ਕਿ ਹੁਣੇ ਕੀ ਵਾਪਰਿਆ ਹੈ। ਮੁੜ ਕੋਸ਼ਿਸ਼ ਕਰਨੀ ਹੈ ਜਾਂ ਵੱਖਰੇ ਸਫ਼ੇ ਉੱਤੇ ਫੋਟੋ ਖਿੱਚਣੀ ਹੈ?
+
+screenshots-too-large-error-title = ਬਹੁਤ ਵੱਡਾ ਹੋਣ ਕਰਕੇ ਤੁਹਾਡੇ ਸਕਰੀਨਸ਼ਾਟ ਨੂੰ ਛਾਂਗਿਆ ਗਿਆ ਸੀ।
+screenshots-too-large-error-details = ਸਭ ਤੋਂ ਲੰਮੇ ਪਾਸਿਓ 32,700 ਪਿਕਸਲ ਜਾਂ ਕੁੱਲ 124,900,000 ਪਿਕਸਲ ਦੇ ਖੇਤਰ ਤੋਂ ਘੱਟ ਦੇ ਖੇਤਰ ਨੂੰ ਚੁਣਨ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰੋ।

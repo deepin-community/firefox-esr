@@ -2,17 +2,6 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-bookmark-overlay-name =
-    .value = نام:
-    .accesskey = ن
-
-bookmark-overlay-location =
-    .value = مکان:
-    .accesskey = م
-
-bookmark-overlay-folder =
-    .value = پوشه:
-
 bookmark-overlay-name-2 =
     .value = نام
     .accesskey = ن
@@ -35,13 +24,15 @@ bookmark-overlay-folders-expander =
     .tooltiptextdown = { bookmark-overlay-folders-expander.tooltiptext }
     .tooltiptextup = مخفی کردن
 
+bookmark-overlay-folders-expander2 =
+    .tooltiptext = نمایش تمام پوشه‌های نشانک‌ها
+
+bookmark-overlay-folders-expander-hide =
+    .tooltiptext = مخفی کردن
+
 bookmark-overlay-new-folder-button =
     .label = پوشهٔ جدید
     .accesskey = پ
-
-bookmark-overlay-tags =
-    .value = برچسب‌ها:
-    .accesskey = ب
 
 bookmark-overlay-tags-2 =
     .value = برچسب‌ها
@@ -55,9 +46,11 @@ bookmark-overlay-tags-expander =
     .tooltiptextdown = { bookmark-overlay-tags-expander.tooltiptext }
     .tooltiptextup = مخفی کردن
 
-bookmark-overlay-keyword =
-    .value = کلیدواژه:
-    .accesskey = ک
+bookmark-overlay-tags-expander2 =
+    .tooltiptext = نمایش تمام برچسب‌ها
+
+bookmark-overlay-tags-expander-hide =
+    .tooltiptext = مخفی کردن
 
 bookmark-overlay-keyword-2 =
     .value = کلیدواژه

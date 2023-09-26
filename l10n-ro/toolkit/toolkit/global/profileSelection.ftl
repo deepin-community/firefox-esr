@@ -23,6 +23,8 @@ profile-selection-delete-button =
     .label = Șterge profilul…
     .accesskey = g
 
+profile-selection-conflict-message = O altă copie { -brand-product-name } a modificat profilurile. Trebuie să repornești { -brand-short-name } înainte de a putea face alte modificări.
+
 ## Messages used in the profile manager
 
 profile-manager-description = { -brand-short-name } păstrează informații despre setări, preferințe, precum și alte elemente personale în profilul tău individual.

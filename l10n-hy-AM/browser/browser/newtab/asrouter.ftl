@@ -7,7 +7,6 @@
 
 cfr-doorhanger-extension-heading = Երաշխավորված ընդլայնում
 cfr-doorhanger-feature-heading = Առաջարկվող հատկություն
-cfr-doorhanger-pintab-heading = Փորձեք սա. Ամրացնել ներդիրը
 
 ##
 
@@ -19,8 +18,6 @@ cfr-doorhanger-extension-cancel-button = Ոչ հիմա
 
 cfr-doorhanger-extension-ok-button = Ավելացնել հիմա
     .accesskey = A
-cfr-doorhanger-pintab-ok-button = Ամրացնել այս ներդիրը
-    .accesskey = P
 
 cfr-doorhanger-extension-manage-settings-button = Կառավարել երաշխավորվող կարգավորումները
     .accesskey = M
@@ -68,18 +65,6 @@ cfr-doorhanger-extension-total-users =
        *[other] { $total } օգտվող
     }
 
-cfr-doorhanger-pintab-description = Մատչեք առավել շատ օգտագործվող կայքերը։ Պահեք կայքերը բացված ներդիրում, եթե անգամ վերագործարկում եք։
-
-## These messages are steps on how to use the feature and are shown together.
-
-cfr-doorhanger-pintab-step1 = <b>Աջ սեղմում</b>՝ այն ներդիրի վրա, որը ցանկանում եք ամրացնել:
-cfr-doorhanger-pintab-step2 = Ընտրեք<b>Ամրացնել ներդիրը</b>՝ ցանկից:
-cfr-doorhanger-pintab-step3 = Եթե կայքը արդիացում ունի, դուք կտեսնեք կապույտ կետ ձեր ամրացված ներդիրում:
-
-cfr-doorhanger-pintab-animation-pause = Դադար
-cfr-doorhanger-pintab-animation-resume = Շարունակել
-
-
 ## Firefox Accounts Message
 
 cfr-doorhanger-bookmark-fxa-header = Համաժամեցրեք ձեր էջանիշերը ամեն տեղ:
@@ -105,129 +90,9 @@ cfr-whatsnew-button =
     .label = Ինչն է նոր
     .tooltiptext = Ինչն է նոր
 
-cfr-whatsnew-panel-header = Ինչն է նոր
-
 cfr-whatsnew-release-notes-link-text = Կարդալ թողարկման գրառումները
 
-cfr-whatsnew-fx70-title = { -brand-short-name } այժմ ավելի է պայքարում ձեր գաղտնիության համար
-cfr-whatsnew-fx70-body = Վերջին թարմացումը ուժեղացնում է Պաշտպանումը Վնասներից առանձնահատկությունը և դարձնում է այն ավելի հեշտ, քան երբևե բոլոր կայքերի համար անվտանգ գաղտնաբառեր ստեղծելը։
-
-cfr-whatsnew-tracking-protect-title = Պաշտպանեք ձեզ հետագծումներից
-cfr-whatsnew-tracking-protect-body = { -brand-short-name } արգելափակում է շատ տարածված սոցիալական և խաչմերուկային վնասները, որոնք հետևում են ձեր առցանց գործողություններին։
-cfr-whatsnew-tracking-protect-link-text = Դիտել ձեր զեկույցը
-
-# This string is displayed before a large numeral that indicates the total
-# number of tracking elements blocked. Don’t add $blockedCount to your
-# localization, because it would result in the number showing twice.
-cfr-whatsnew-tracking-blocked-title =
-    { $blockedCount ->
-        [one] Հետևումը արգելափակված է
-       *[other] Հետևումները արգելափակված են
-    }
-cfr-whatsnew-tracking-blocked-subtitle = Քանի որ { DATETIME($earliestDate, month: "long", year: "numeric") }
-cfr-whatsnew-tracking-blocked-link-text = Դիտել զեկույցը
-
-cfr-whatsnew-lockwise-backup-title = Կրկնօրինակել ձեր գաղտնաբառերը
-cfr-whatsnew-lockwise-backup-body = Այժմ ստեղծեք անվտանգ գաղտնաբառեր, որոնցից կարող եք մուտք գործել ցանկացած մուտք:
-cfr-whatsnew-lockwise-backup-link-text = Միացնել կրկնօրինակումները
-
-cfr-whatsnew-lockwise-take-title = Վերցրեք ձեր գաղտնաբառերը ձեզ հետ
-cfr-whatsnew-lockwise-take-body =
-    { -lockwise-brand-short-name } բջջային հավելվածը հնարավորություն է տալիս ապահով կերպով մուտք գործել ձեր
-    կրկնօրինակված գաղտնաբառերը ցանկացած վայրից:
-cfr-whatsnew-lockwise-take-link-text = Ստանալ հավելվածը
-
-## Search Bar
-
-cfr-whatsnew-searchbar-title = Մուտքագրեք ավելի քիչ, ավելին գտնեք հասցեի տողի հետ
-cfr-whatsnew-searchbar-body-topsites = Այժմ պարզապես ընտրեք հասցեների գոտին և տուփը կլրացվի ձեր լավագույն կայքերի հղումներով:
-
-## Search bar
-
-cfr-whatsnew-searchbar-icon-alt-text = Խոշորացույցի պատկերակ
-
-## Picture-in-Picture
-
-cfr-whatsnew-pip-header = Դիտել տեսահոլովակներ զննարկելիս
-cfr-whatsnew-pip-body = Նկարով նկարում տեսանյութը լողում է լողացող պատուհանի մեջ, որպեսզի կարողանաք դիտել այլ ներդիրներում աշխատելիս:
-cfr-whatsnew-pip-cta = Իմանալ ավելին
-
-## Permission Prompt
-
-cfr-whatsnew-permission-prompt-header = Ավելի քիչ նյարդայնացնող կայքի թռուցիկներ
-cfr-whatsnew-permission-prompt-body = { -brand-shorter-name } այժմ արգելափակում է կայքերը ինքնաբերաբար խնդրելով ձեզ ուղարկել թռուցիկ հաղորդագրություններ:
-cfr-whatsnew-permission-prompt-cta = Իմանալ ավելին
-
-## Fingerprinter Counter
-
-# This string is displayed before a large numeral that indicates the total
-# number of tracking elements blocked. Don’t add $fingerprinterCount to your
-# localization, because it would result in the number showing twice.
-cfr-whatsnew-fingerprinter-counter-header =
-    { $fingerprinterCount ->
-        [one] Մատնահետքը արգելափակվեց
-       *[other] Մատնահետքերը արգելափակվեցին
-    }
-cfr-whatsnew-fingerprinter-counter-body = { -brand-shorter-name } արգելափակում է մատնահետքերից շատերը, որոնք գաղտնի հավաքում են տեղեկատվություն ձեր սարքի և գործողությունների մասին ՝ ձեր կողմից գովազդային պրոֆիլ ստեղծելու համար:
-
-# Message variation when fingerprinters count is less than 10
-cfr-whatsnew-fingerprinter-counter-header-alt = Մատնահետքեր
-cfr-whatsnew-fingerprinter-counter-body-alt = { -brand-shorter-name } արգելափակում է մատնահետքերից շատերը, որոնք գաղտնի հավաքում են տեղեկատվություն ձեր սարքի և գործողությունների մասին ՝ ձեր կողմից գովազդային պրոֆիլ ստեղծելու համար:
-
-## Bookmark Sync
-
-cfr-doorhanger-sync-bookmarks-header = Ստացեք այս էջանիշը ձեր հեռախոսի վրա
-cfr-doorhanger-sync-bookmarks-body = Վերցնել ձեր էջանիշները, գաղտնաբառերը, պատմությունը և ավելին, որտեղ դուք մուտք եք գործել { -brand-product-name }։
-cfr-doorhanger-sync-bookmarks-ok-button = Միացնել { -sync-brand-short-name }
-    .accesskey = T
-
-## Login Sync
-
-cfr-doorhanger-sync-logins-header = Այլևս երբեք մի կորցրեք գաղտնաբառ
-cfr-doorhanger-sync-logins-body = Ապահով պահեք և համաժամացրեք ձեր գաղտնաբառերը ձեր բոլոր սարքերում:
-cfr-doorhanger-sync-logins-ok-button = Միացնել { -sync-brand-short-name }
-    .accesskey = T
-
-## Send Tab
-
-cfr-doorhanger-send-tab-header = Կարդացեք սա անմիջապես
-cfr-doorhanger-send-tab-recipe-header = Վերցրեք այս բաղադրատոմսը խոհանոց
-cfr-doorhanger-send-tab-body = Ուղարկել ներդիրը հնարավորություն է տալիս հեշտությամբ ուղարկել այս հղումը ձեր հեռախոսին կամ այն վայրից, որտեղ դուք մուտք եք գործել { -brand-product-name }:
-cfr-doorhanger-send-tab-ok-button = Փորձեք ուղարկել ներդիր
-    .accesskey = T
-
-## Firefox Send
-
-cfr-doorhanger-firefox-send-header = Համօգտագործել այս PDF- ն անվտանգ կերպով
-cfr-doorhanger-firefox-send-body = Պահպանեք ձեր զգայուն փաստաթղթերը զերծ հայացք նետելուց՝վերջնական ծածկագրմամբ և այն հղմամբ, որն անհայտանում է, երբ ավարտվում եք։
-cfr-doorhanger-firefox-send-ok-button = Փորձեք { -send-brand-name }
-    .accesskey = T
-
-## Social Tracking Protection
-
-cfr-doorhanger-socialtracking-ok-button = Տեսնել Պաշտպանությունները
-    .accesskey = P
-cfr-doorhanger-socialtracking-close-button = Փակել
-    .accesskey = C
-cfr-doorhanger-socialtracking-dont-show-again = Այլևս ցույց մի տվեք այսպիսի հաղորդագրություններ
-    .accesskey = D
-cfr-doorhanger-socialtracking-heading = { -brand-short-name }-ը դադարեցրել է սոցիալական ցանցի հետագծումը
-cfr-doorhanger-socialtracking-description = Ձեր գաղտնիությունը կարևոր է: { -brand-short-name }-ը այժմ արգելափակում է հանրային մեդիայի ընդհանուր վտանգները, սահմանելով, թե որքան տվյալներ կարող են հավաքել ձեր առցանց գործողությունների մասին։
-cfr-doorhanger-fingerprinters-heading = { -brand-short-name } արգելափակում է մատնահետքը այս էջում
-cfr-doorhanger-fingerprinters-description = Ձեր գաղտնիությունը կարևոր է: { -brand-short-name }-ն այժմ արգելափակում է մատնահետքեր, որոնք հավաքում են ձեր սարքի մասին եզակի անձնական տեղեկություններ վնասելու համար։
-cfr-doorhanger-cryptominers-heading = { -brand-short-name } արգելափակեց գաղտնազերծիչը այս էջում
-cfr-doorhanger-cryptominers-description = Ձեր գաղտնիությունը կարևոր է։ { -brand-short-name }-ը կարճ անունը հիմա արգելափակում է ծպտյալ սարքերը, որոնք օգտագործում են ձեր համակարգի հաշվարկային ուժը թվային փողերը հանելու համար։
-
 ## Enhanced Tracking Protection Milestones
-
-# Variables:
-#   $blockedCount (Number) - The total count of blocked trackers. This number will always be greater than 1.
-#   $date (String) - The date we began recording the count of blocked trackers
-cfr-doorhanger-milestone-heading =
-    { $blockedCount ->
-        [one] { -brand-short-name } արգելափակել է <b>{ $blockedCount }</b> հետևումը սկսած { $date }։
-       *[other] { -brand-short-name } արգելափակել է <b>{ $blockedCount }</b> հետևումները սկսած { $date }։
-    }
 
 # Variables:
 #   $blockedCount (Number) - The total count of blocked trackers. This number will always be greater than 1.
@@ -239,45 +104,8 @@ cfr-doorhanger-milestone-heading2 =
     }
 cfr-doorhanger-milestone-ok-button = Պահպանել բոլորը
     .accesskey = S
-
-## What’s New Panel Content for Firefox 76
-
-
-## Lockwise message
-
-cfr-whatsnew-lockwise-header = Հեշտությամբ ստեղծեք անվտանգ գաղտնաբառեր
-cfr-whatsnew-lockwise-body = Յուրաքանչյուր հաշվի համար դժվար է մտածել եզակի, անվտանգ գաղտնաբառ: Գաղտնաբառ ստեղծելիս ընտրեք գաղտնաբառի դաշտը՝ օգտագործելու համար անվտանգ, { -brand-shorter-name }-ի կողմից ստեղծված գաղտնաբառ:
-cfr-whatsnew-lockwise-icon-alt = { -lockwise-brand-short-name } պատկերակ
-
-## Vulnerable Passwords message
-
-cfr-whatsnew-passwords-header = Զգուշացումներ ստանալ խոցելի գաղտնաբառերի մասին
-cfr-whatsnew-passwords-body = Հակերները գիտեն, որ մարդիկ օգտագործում են նույն գաղտնաբառերը: Եթե դուք օգտագործում եք նույն գաղտնաբառը բազմաթիվ կայքերում, և այդ կայքերից մեկը տվյալների խախտման մեջ է, ապա այդ կայքերում ձեր գաղտնաբառը փոխելու համար կտեսնեք ազդանշան { -lockwise-brand-short-name }-ում:
-cfr-whatsnew-passwords-icon-alt = Խոցելի գաղտնաբառի բանալու պատկերակ
-
-## Picture-in-Picture fullscreen message
-
-cfr-whatsnew-pip-fullscreen-header = Ստանալ լիաէկրանի նկարը նկարում
-cfr-whatsnew-pip-fullscreen-body = Երբ դուք տեսանյութը տեղափոխում եք լողացող պատուհան՝ այժմ կարող եք կրկնակի սեղմել այդ պատուհանին և անցնել լիաէկրան:
-cfr-whatsnew-pip-fullscreen-icon-alt = Նկար-նկարում պատկերակ
-
-## Protections Dashboard message
-
-cfr-whatsnew-protections-header = Պաշտպանություն առաջին հայացքից
-cfr-whatsnew-protections-body = Պաշտպանությունների վահանակը ներառում է տվյալների խախտումների և գաղտնաբառերի կառավարման ընդհանրական զեկույցներ: Այժմ կարող եք հետևել, թե որքան խախտումներ եք դուք ուղղել և տեսնել, թե ձեր պահպանած գաղտնաբառերից քանիսին են ներառվել տվյալների խախտումներում:
-cfr-whatsnew-protections-cta-link = Դիտել պաշտպանության վահանակը
-cfr-whatsnew-protections-icon-alt = Վահանի պատկերակը
-
-## Better PDF message
-
-cfr-whatsnew-better-pdf-header = Ավելի լավ PDF փորձառություն
-cfr-whatsnew-better-pdf-body = PDF փաստաթղթերն այժմ բացվում են ուղղակիորեն { -brand-short-name }-ում, պահպանելով ձեր աշխատահոսքը հասանելիության պայմաններում:
-
 cfr-doorhanger-milestone-close-button = Փակել
     .accesskey = C
-
-## What’s New Panel Content for Firefox 76
-## Protections Dashboard message
 
 ## DOH Message
 
@@ -290,28 +118,79 @@ cfr-doorhanger-doh-secondary-button = Անջատել
 
 ## Fission Experiment Message
 
-cfr-doorhanger-fission-body-approved = Ձեր գաղտնիությունը կարևոր է: { -brand-short-name }-ն այժմ մեկուսացնում կամ ավազարկղում է կայքերը միմյանցից, ինչը հաքերների համար դժվարացնում է գաղտնաբառերը, բանկային քարտերի համարները և այլ զգայուն տեղեկություններ գողանալը:
-cfr-doorhanger-fission-header = Կայքի մեկուսացում
-cfr-doorhanger-fission-primary-button = Հասկանալի է
-    .accesskey = O
-cfr-doorhanger-fission-secondary-button = Իմանալ ավելին
-    .accesskey = L
-
-## What's new: Cookies message
-
-## What's new: Media controls message
-
-## What's new: Search shortcuts
-
-## What's new: Cookies protection
-
-## What's new: Better bookmarking
-
-## What's new: Cross-site cookie tracking
-
 ## Full Video Support CFR message
 
 cfr-doorhanger-video-support-body = { -brand-short-name }-ի այս տարբերակում տեսանյութերը կարող են ճիշտ չնվագարկվել: Տեսանյութի լրիվ աջակցման համար թարմացրեք { -brand-short-name }-ը հիմա:
 cfr-doorhanger-video-support-header = Թարմացրեք { -brand-short-name }-ը՝ տեսանյութը նվագարկելու համար
 cfr-doorhanger-video-support-primary-button = Թարմացնել Հիմա
     .accesskey = U
+
+## Spotlight modal shared strings
+
+## VPN promotion dialog for public Wi-Fi users
+##
+## If a user is detected to be on a public Wi-Fi network, they are given a
+## bit of info about how to improve their privacy and then offered a button
+## to the Mozilla VPN page and a link to dismiss the dialog.
+
+spotlight-public-wifi-vpn-primary-button = Մնացեք գաղտնի { -mozilla-vpn-brand-name }-ի հետ
+    .accesskey = S
+spotlight-public-wifi-vpn-link = Ոչ հիմա
+    .accesskey = N
+
+## Total Cookie Protection Rollout
+
+## Emotive Continuous Onboarding
+
+spotlight-pin-secondary-button = Ոչ հիմա
+
+## MR2022 Background Update Windows native toast notification strings.
+##
+## These strings will be displayed by the Windows operating system in
+## a native toast, like:
+##
+## <b>multi-line title</b>
+## multi-line text
+## <img>
+## [ primary button ] [ secondary button ]
+##
+## The button labels are fitted into narrow fixed-width buttons by
+## Windows and therefore must be as narrow as possible.
+
+# This button label will be fitted into a narrow fixed-width button by
+# Windows. Try to not exceed the width of the English text (compare it using a
+# variable font like Arial): the button can only fit 1-2 additional characters,
+# exceeding characters will be truncated.
+mr2022-background-update-toast-secondary-button-label = Հիշեցնել ավելի ուշ
+
+## Firefox View CFR
+
+firefoxview-cfr-primarybutton = Փորձիր
+    .accesskey = T
+firefoxview-cfr-secondarybutton = Ոչ հիմա
+    .accesskey = N
+
+## Firefox View Spotlight
+
+firefoxview-spotlight-promo-title = Ասեք բարև { -firefoxview-brand-name }-ին
+
+# “Poof” refers to the expression to convey when something or someone suddenly disappears, or in this case, reappears. For example, “Poof, it’s gone.”
+firefoxview-spotlight-promo-subtitle = Ցանկանո՞ւմ եք բացել ներդիրը ձեր հեռախոսում: Արեք դա: Պետք է բացել այն կայքը, որը նոր էիք այցելել: Պահ, այն { -firefoxview-brand-name }-ում է:
+firefoxview-spotlight-promo-primarybutton = Տեսեք, թե ինչպես է այն աշխատում
+firefoxview-spotlight-promo-secondarybutton = Բաց թողնել
+
+## Colorways expiry reminder CFR
+
+
+## Cookie Banner Handling CFR
+
+
+## These strings are used in the Fox doodle Pin/set default spotlights
+
+
+## These strings are used in the Set Firefox as Default PDF Handler for Existing Users experiment
+
+## FxA sync CFR
+
+## Device Migration FxA Spotlight
+

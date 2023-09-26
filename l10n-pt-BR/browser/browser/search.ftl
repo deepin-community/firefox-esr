@@ -19,3 +19,20 @@ opensearch-error-download-desc = O { -brand-short-name } não pôde baixar o mec
 
 ##
 
+searchbar-submit =
+    .tooltiptext = Enviar pesquisa
+
+# This string is displayed in the search box when the input field is empty
+searchbar-input =
+    .placeholder = Pesquisar
+
+searchbar-icon =
+    .tooltiptext = Pesquisar
+
+## Infobar shown when search engine is removed and replaced.
+## Variables
+## $oldEngine (String) - the search engine to be removed.
+## $newEngine (String) - the search engine to replace the removed search engine.
+
+removed-search-engine-message = <strong>Seu mecanismo de pesquisa padrão foi alterado.</strong> { $oldEngine } não está mais disponível como mecanismo de pesquisa padrão no { -brand-short-name }. { $newEngine } é agora seu mecanismo de pesquisa padrão. Para mudar para outro mecanismo de pesquisa padrão, vá em configurações. <label data-l10n-name="remove-search-engine-article">Saiba mais</label>
+remove-search-engine-button = OK

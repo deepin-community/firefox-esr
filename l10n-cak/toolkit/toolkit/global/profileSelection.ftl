@@ -23,6 +23,8 @@ profile-selection-delete-button =
     .label = Tiyuj el ri ruwäch b'i'aj…
     .accesskey = T
 
+profile-selection-conflict-message = Jun chik ruwachib'al { -brand-product-name } xerujäl ri taq ruwäch b'i'aj. K'o chi nitikirisäx chik { -brand-short-name } chuwäch ye'ab'äl ch'aqa' chik taq jaloj.
+
 ## Messages used in the profile manager
 
 profile-manager-description = { -brand-short-name } nuyäk etamab'äl pa ruwi' ri anuk'ulem, taq awajowab'äl chuqa' juley chik taq ch'akulal pa ri ruwäch ab'i'.

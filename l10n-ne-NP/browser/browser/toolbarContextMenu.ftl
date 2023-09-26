@@ -15,3 +15,6 @@ toolbar-context-menu-view-customize-toolbar =
     .label = अनुकुलित बनाउनुहोस्...
     .accesskey = C
 
+toolbar-context-menu-menu-bar-cmd =
+    .toolbarname = मेनु बार
+    .accesskey = M

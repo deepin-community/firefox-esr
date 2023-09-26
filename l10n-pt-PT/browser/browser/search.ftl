@@ -19,3 +19,20 @@ opensearch-error-download-desc = O { -brand-short-name } não conseguiu transfer
 
 ##
 
+searchbar-submit =
+    .tooltiptext = Submeter pesquisa
+
+# This string is displayed in the search box when the input field is empty
+searchbar-input =
+    .placeholder = Pesquisar
+
+searchbar-icon =
+    .tooltiptext = Pesquisa
+
+## Infobar shown when search engine is removed and replaced.
+## Variables
+## $oldEngine (String) - the search engine to be removed.
+## $newEngine (String) - the search engine to replace the removed search engine.
+
+removed-search-engine-message = <strong>O seu motor de pesquisa padrão foi alterado.</strong> O { $oldEngine } não está mais disponível como motor de pesquisa padrão no { -brand-short-name }. O { $newEngine } é agora o seu motor de pesquisa padrão. Para mudar para outro motor de pesquisa padrão, vá às configurações. <label data-l10n-name="remove-search-engine-article">Saiba mais</label>
+remove-search-engine-button = OK

@@ -10,11 +10,6 @@ crashes-id = ID segnalazione
 crashes-send-date = Inviata
 crashes-all-reports = Tutte le segnalazioni
 crashes-no-config = Questa applicazione non è stata configurata per visualizzare le segnalazioni di arresto anomalo.
-extensions-title = Estensioni
-extensions-name = Nome
-extensions-enabled = Attiva
-extensions-version = Versione
-extensions-id = ID
 support-addons-title = Componenti aggiuntivi
 support-addons-name = Nome
 support-addons-type = Tipo
@@ -67,6 +62,14 @@ app-basics-location-service-key-google = Chiave servizio Google Location
 app-basics-safebrowsing-key-google = Chiave servizio Google Safebrowsing
 app-basics-key-mozilla = Chiave per georilevazione di Mozilla
 app-basics-safe-mode = Modalità provvisoria
+app-basics-memory-size = Dimensione memoria (RAM)
+app-basics-disk-available = Spazio su disco disponibile
+
+# Variables:
+#   $value (number) - Amount of data being stored
+#   $unit (string) - The unit of data being stored (e.g. MB)
+app-basics-data-size = { $value } { $unit }
+
 show-dir-label =
     { PLATFORM() ->
         [macos] Mostra nel Finder
@@ -96,9 +99,19 @@ graphics-gpu2-title = GPU #2
 graphics-decision-log-title = Registro decisioni
 graphics-crash-guards-title = Funzioni disattivate da Crash Guard
 graphics-workarounds-title = Soluzioni alternative
+graphics-device-pixel-ratios = Proporzioni pixel dispositivo delle finestre
 graphics-window-protocol = Protocollo finestra
 graphics-desktop-environment = Ambiente desktop
 place-database-title = Database Places
+place-database-stats = Statistiche
+place-database-stats-show = Mostra statistiche
+place-database-stats-hide = Nascondi statistiche
+place-database-stats-entity = Entità
+place-database-stats-count = Numero
+place-database-stats-size-kib = Dimensione (KiB)
+place-database-stats-size-perc = Dimensione (%)
+place-database-stats-efficiency-perc = Efficienza (%)
+place-database-stats-sequentiality-perc = Sequenzialità (%)
 place-database-integrity = Integrità
 place-database-verify-integrity = Verifica integrità
 a11y-title = Accessibilità
@@ -118,8 +131,6 @@ sandbox-sys-call-tid = TID
 sandbox-sys-call-proc-type = Tipo processo
 sandbox-sys-call-number = Syscall
 sandbox-sys-call-args = Argomenti
-safe-mode-title = Prova la modalità provvisoria
-restart-in-safe-mode-label = Riavvia disattivando i componenti aggiuntivi…
 
 troubleshoot-mode-title = Identifica e risolvi problemi
 restart-in-troubleshoot-mode-label = Modalità risoluzione problemi…
@@ -148,7 +159,17 @@ media-device-channels = Canali
 media-device-rate = Frequenza
 media-device-latency = Latenza
 media-capabilities-title = Funzionalità media
+media-codec-support-info = Informazioni di supporto per i codec
 media-capabilities-enumerate = Enumerazione database
+
+## Codec support table
+
+media-codec-support-sw-decoding = Decodifica software
+media-codec-support-hw-decoding = Decodifica hardware
+media-codec-support-codec-name = Nome codec
+media-codec-support-supported = Supportata
+media-codec-support-unsupported = Non supportata
+media-codec-support-error = Informazioni di supporto sui codec non disponibili. Riprova dopo aver riprodotto un file multimediale.
 
 ##
 
@@ -271,11 +292,9 @@ webgl2-renderer = Renderer driver WebGL 2
 webgl2-version = Versione driver WebGL 2
 webgl2-driver-extensions = Estensioni driver WebGL 2
 webgl2-extensions = Estensioni WebGL 2
-blocklisted-bug = Bloccato per problemi noti
 
-# Variables
-# $bugNumber (string) - String of bug number from Bugzilla
-bug-link = bug { $bugNumber }
+webgpu-default-adapter = Scheda WebGPU predefinita
+webgpu-fallback-adapter = Scheda WebGPU di fallback
 
 support-blocklisted-bug = Bloccato per problemi noti: <a data-l10n-name="bug-link">bug { $bugNumber }</a>
 
@@ -284,13 +303,11 @@ support-blocklisted-bug = Bloccato per problemi noti: <a data-l10n-name="bug-lin
 unknown-failure = Bloccato: codice non funzionante { $failureCode }
 
 d3d11layers-crash-guard = D3D11 - Compositore
-d3d11video-crash-guard = D3D11 - Decoder video
-d3d9video-crash-guard = D3D9 - Decoder video
 glcontext-crash-guard = OpenGL
 wmfvpxvideo-crash-guard = WMF VPX - Decoder video
 
 reset-on-next-restart = Reimposta al prossimo avvio
-gpu-process-kill-button = Termina processo GPU
+gpu-process-kill-button = Interrompi processo GPU
 gpu-device-reset = Ripristino dispositivo
 gpu-device-reset-button = Avvia ripristino dispositivo
 uses-tiling = Usa Tiling
@@ -311,6 +328,7 @@ can-sandbox-media = Sandbox plugin multimediali
 content-sandbox-level = Livello sandbox content process
 effective-content-sandbox-level = Livello effettivo sandbox del processo per i contenuti
 content-win32k-lockdown-state = Stato Win32k Lockdown del processo per i contenuti
+support-sandbox-gpu-level = Livello sandbox processo GPU
 sandbox-proc-type-content = contenuti
 sandbox-proc-type-file = contenuto file
 sandbox-proc-type-media-plugin = plugin multimediale
@@ -331,14 +349,6 @@ launcher-process-status-unknown = Stato sconosciuto
 # $remoteWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
 multi-process-windows = { $remoteWindows }/{ $totalWindows }
-multi-process-status-0 = Attivato manualmente
-multi-process-status-1 = Attivato automaticamente
-multi-process-status-2 = Disattivato
-multi-process-status-4 = Disattivato a causa degli strumenti di accessibilità
-multi-process-status-6 = Disattivato per mancanza supporto inserimento testo
-multi-process-status-7 = Disattivato da componenti aggiuntivi
-multi-process-status-8 = Disattivato in modo forzato
-multi-process-status-unknown = Stato sconosciuto
 
 # Variables
 # $fissionWindows (integer) - Number of remote windows
@@ -348,7 +358,7 @@ fission-status-experiment-control = Disattivato da esperimento
 fission-status-experiment-treatment = Attivato da esperimento
 fission-status-disabled-by-e10s-env = Disattivato da ambiente
 fission-status-enabled-by-env = Attivato da ambiente
-fission-status-disabled-by-safe-mode = Disattivato da modalità provvisoria
+fission-status-disabled-by-env = Disattivato da ambiente
 fission-status-enabled-by-default = Attivato per impostaz. predefinita
 fission-status-disabled-by-default = Disattivato per impostaz. predefinita
 fission-status-enabled-by-user-pref = Attivato da utente

@@ -16,6 +16,8 @@ printui-sheets-count =
     }
 
 printui-page-range-all = Sve
+printui-page-range-odd = Neparne
+printui-page-range-even = Parne
 printui-page-range-custom = Prilagođeno
 printui-page-range-label = Stranice
 printui-page-range-picker =
@@ -29,7 +31,7 @@ printui-copies-label = Kopije
 
 printui-orientation = Usmjerenje
 printui-landscape = Horizontalno
-printui-portrait = Vertikalno
+printui-portrait = Uspravno
 
 # Section title for the printer or destination device to target
 printui-destination-label = Odredište
@@ -59,11 +61,18 @@ printui-options = Opcije
 printui-headers-footers-checkbox = Ispis zaglavlja i podnožja
 printui-backgrounds-checkbox = Ispis pozadine
 
-printui-selection-checkbox = Ispis samo odabira
-
 ## The "Format" section, select a version of the website to print. Radio
 ## options to select between the original page, selected text only, or a version
 ## where the page is processed with "Reader View".
+
+# The section title.
+printui-source-label = Format
+# Option for printing the original page.
+printui-source-radio = Izvorni
+# Option for printing just the content a user selected prior to printing.
+printui-selection-radio = Odabir
+# Option for "simplifying" the page by printing the Reader View version.
+printui-simplify-page-radio = Pojednostavljeno
 
 ##
 
@@ -123,8 +132,8 @@ printui-paper-b5 = B5
 printui-paper-b4 = B4
 printui-paper-jis-b5 = JIS-B5
 printui-paper-jis-b4 = JIS-B4
-printui-paper-letter = Američko pismo
-printui-paper-legal = Američki pravni
+printui-paper-letter = US Letter
+printui-paper-legal = US Legal
 printui-paper-tabloid = Tabloid
 
 ## Error messages shown when a user has an invalid input

@@ -7,33 +7,38 @@
 
 cfr-doorhanger-extension-heading = Asiɣzef yelhan
 cfr-doorhanger-feature-heading = Timahilin ihulen
-cfr-doorhanger-pintab-heading = Ɛreḍ aya: senṭeḍ iccer
 
 ##
 
 cfr-doorhanger-extension-sumo-link =
     .tooltiptext = Acuɣer i d-yettban waya
+
 cfr-doorhanger-extension-cancel-button = Mačči tura
     .accesskey = T
+
 cfr-doorhanger-extension-ok-button = Rnu Tura
     .accesskey = N
-cfr-doorhanger-pintab-ok-button = Senṭeḍ iccer-agi
-    .accesskey = S
+
 cfr-doorhanger-extension-manage-settings-button = Sefrek Iɣewwaṛen n wahul
     .accesskey = S
+
 cfr-doorhanger-extension-never-show-recommendation = Ur yid-skan ara Ahul Agi
     .accesskey = U
+
 cfr-doorhanger-extension-learn-more-link = Issin ugar
+
 # This string is used on a new line below the add-on name
 # Variables:
 #   $name (String) - Add-on author name
 cfr-doorhanger-extension-author = S { $name }
+
 # This is a notification displayed in the address bar.
 # When clicked it opens a panel with a message for the user.
 cfr-doorhanger-extension-notification = Awelleh
 cfr-doorhanger-extension-notification2 = Iwellihen
     .tooltiptext = Iseɣzaf ihulen
     .a11y-announcement = Iseɣzaf ihulen i yellan
+
 # This is a notification displayed in the address bar.
 # When clicked it opens a panel with a message for the user.
 cfr-doorhanger-feature-notification = Iwellihen
@@ -59,15 +64,6 @@ cfr-doorhanger-extension-total-users =
         [one] { $total } aseqdac
        *[other] { $total } iseqdacen
     }
-cfr-doorhanger-pintab-description = Awi anekcum fessusen ɣer yismal-ik i tesseqdaceḍ aṭas. Eǧǧ ismal ldin deg yiccer (xas ma tulseḍ tanekra).
-
-## These messages are steps on how to use the feature and are shown together.
-
-cfr-doorhanger-pintab-step1 = <b>Si s tqeffalt tayeffust</ b> ɣef yiccer i tebɣiḍ ad ɛelqeḍ.
-cfr-doorhanger-pintab-step2 = Fren<b>Siggez iccer</b> seg umuɣ.
-cfr-doorhanger-pintab-step3 = Ma yella asmel yettwalqem ad twaliḍ aggaz anili yettban-d deg iccer-ik iɛelqen.
-cfr-doorhanger-pintab-animation-pause = Asteɛfu
-cfr-doorhanger-pintab-animation-resume = Kemmel
 
 ## Firefox Accounts Message
 
@@ -89,120 +85,15 @@ cfr-protections-panel-link-text = Issin ugar
 # This string is used by screen readers to offer a text based alternative for
 # the notification icon
 cfr-badge-reader-label-newfeature = Timahilin timaynutin:
+
 cfr-whatsnew-button =
     .label = Amaynut
     .tooltiptext = Amaynut
-cfr-whatsnew-panel-header = Amaynut
+
 cfr-whatsnew-release-notes-link-text = Ɣer tizmilin n lqem.
-cfr-whatsnew-fx70-title = { -brand-short-name } yettnaḍaḥ tura ugar ɣef tudert-ik tabaḍnit
-cfr-whatsnew-fx70-body = Lqem aneggaru yesnerna tamahilt n ummesten mgal aḍfaṛ daɣen urǧin yella yessifses am akka, timerna n wawalen uffiren iɣelsanen i yal asmel.
-cfr-whatsnew-tracking-protect-title = Mmesten iman-ik seg yineḍfaren.
-cfr-whatsnew-tracking-protect-body = { -brand-short-name } yessewḥal ddeqs n yineḍfaren inmettiyen akked igrismal yettwassnen i yeṭṭafaṛen ayen i txeddmeḍ srid.
-cfr-whatsnew-tracking-protect-link-text = Wali aneqqis-ik
-# This string is displayed before a large numeral that indicates the total
-# number of tracking elements blocked. Don’t add $blockedCount to your
-# localization, because it would result in the number showing twice.
-cfr-whatsnew-tracking-blocked-title =
-    { $blockedCount ->
-        [one] Ineḍfaṛar ittwaḥbes
-       *[other] Ineḍfaṛen ttwaḥebsen
-    }
-cfr-whatsnew-tracking-blocked-subtitle = Si { DATETIME($earliestDate, month: "long", year: "numeric") }
-cfr-whatsnew-tracking-blocked-link-text = Wali aneqqis
-cfr-whatsnew-lockwise-backup-title = Sekles awalen-ik uffiren
-cfr-whatsnew-lockwise-backup-body = Tura, sirew-d awalen-ik uffiren iɣelsanen aniɣer i tzemreḍ ad tkecmeḍ sekra wanida teqqneḍ.
-cfr-whatsnew-lockwise-backup-link-text = Rmed asekles
-cfr-whatsnew-lockwise-take-title = Awi yid-k awalen-ik uffiren
-cfr-whatsnew-lockwise-take-body = Asna aziraz { -lockwise-brand-short-name } ad k-yeǧǧ ad tkecmeḍ s wudem aɣelsan ɣer wawalen-ik uffiren yettwaskelsen seg yal amkan.
-cfr-whatsnew-lockwise-take-link-text = Awi asnas
-
-## Search Bar
-
-cfr-whatsnew-searchbar-title = Aru cwiṭ, aff aṭas s ufeggag n tansiwin
-cfr-whatsnew-searchbar-body-topsites = Tura, fren afeggag n tunigin, ad d-timɣur texxamt s iseɣwan ɣer ismal-ik ifazen.
-cfr-whatsnew-searchbar-icon-alt-text = Tignit n lemri isimɣuren
-
-## Picture-in-Picture
-
-cfr-whatsnew-pip-header = Wali tividyutin kečč tettinigeḍ
-cfr-whatsnew-pip-body = Askar n usleɣ yeggar tavidyut deg usfaylu ufig akken ad tizmireḍ ad tt-twaliḍ ticki txeddmeḍ deg yiccaren-nniḍen.
-cfr-whatsnew-pip-cta = Issin ugar
-
-## Permission Prompt
-
-cfr-whatsnew-permission-prompt-header = Drus n yisfuyal udhimen n yismal yettɛekkiṛen
-cfr-whatsnew-permission-prompt-body = { -brand-shorter-name } yessewḥal akka tura ismal akken ad ak-d-sutren s wudem awurman tuzna n yiznan deg  yisfuyla udhimen.
-cfr-whatsnew-permission-prompt-cta = Issin ugar
-
-## Fingerprinter Counter
-
-# This string is displayed before a large numeral that indicates the total
-# number of tracking elements blocked. Don’t add $fingerprinterCount to your
-# localization, because it would result in the number showing twice.
-cfr-whatsnew-fingerprinter-counter-header =
-    { $fingerprinterCount ->
-        [one] Amaṭṭaf n yidsilen umḍinen iwḥel
-       *[other] Imaṭṭaffen n yidsilen umḍinen weḥlen
-    }
-cfr-whatsnew-fingerprinter-counter-body = { -brand-shorter-name } yessewḥal ddeqs n yidsilen umḍinen i d-ileqḍen talɣut-ik s tuffra ɣef yibenk-ik akked tigawin akken ad ixeddem adellel s useqdec n umaɣnu-ik.
-# Message variation when fingerprinters count is less than 10
-cfr-whatsnew-fingerprinter-counter-header-alt = Idsilen umḍinen
-cfr-whatsnew-fingerprinter-counter-body-alt = { -brand-shorter-name } izmer ad iseḥbes idsilen umḍinen i d-ileqḍen talɣut-ik s tuffra ɣef yibenk-ik akked tigawin akken ad ixeddem adellel s useqdec n umaɣnu-ik.
-
-## Bookmark Sync
-
-cfr-doorhanger-sync-bookmarks-header = Kcem ɣer tecreḍt-a n usebter ṣef tiliɣri-ik
-cfr-doorhanger-sync-bookmarks-body = Awi yid-k ticraḍ-ik n yisebtar, awalen-ik uffiren, azray, d wayen-nniḍen, sekra wanida i teqqneḍ ɣer umiḍan-ik { -brand-product-name }.
-cfr-doorhanger-sync-bookmarks-ok-button = Rmed { -sync-brand-short-name }
-    .accesskey = R
-
-## Login Sync
-
-cfr-doorhanger-sync-logins-header = Ur sṛuḥuy ara awalen-ik uffiren
-cfr-doorhanger-sync-logins-body = Sekles rnu mtawi awalen-ik·im uffiren ɣef yibenkan-ik·im i meṛṛa s wudem aɣelsan.
-cfr-doorhanger-sync-logins-ok-button = Rmed { -sync-brand-short-name }
-    .accesskey = R
-
-## Send Tab
-
-cfr-doorhanger-send-tab-header = Ɣer aya ticki teleḥḥuḍ
-cfr-doorhanger-send-tab-recipe-header = Ɣer amek yettwa wučči-a
-cfr-doorhanger-send-tab-body = "Azen Iccer" ad k-yeǧǧ ad siwḍeḍ s wudem afessas aseɣwen-a ɣer tiliɣri-ik neɣ yal ibenk-nniḍen yeqqnen ɣer umiḍan-ik { -brand-product-name }.
-cfr-doorhanger-send-tab-ok-button = Ɛreḍ tuzna n yiccer
-    .accesskey = Ɛ
-
-## Firefox Send
-
-cfr-doorhanger-firefox-send-header = Bḍu afaylu-a PDF s wudem aɣelsan
-cfr-doorhanger-firefox-send-body = Mmesten arratent-ik ibadniyen seg yir tamuɣli s uwgelhen si ṭṭerf ɣer ṭṭerf akken useɣwen ara yemmten ticki tfukkeḍ.
-cfr-doorhanger-firefox-send-ok-button = Reḍ { -send-brand-name }
-    .accesskey = T
-
-## Social Tracking Protection
-
-cfr-doorhanger-socialtracking-ok-button = Wali tarrayin n ummesten
-    .accesskey = W
-cfr-doorhanger-socialtracking-close-button = Mdel
-    .accesskey = M
-cfr-doorhanger-socialtracking-dont-show-again = Ur d-skanay ara iznan am wi tikkelt-nniḍen
-    .accesskey = D
-cfr-doorhanger-socialtracking-heading = { -brand-short-name } yessewḥel aẓeṭṭa inmetti akken ad k-yeḍfeṛ dagi
-cfr-doorhanger-socialtracking-description = Aqadeṛ n tudert-ik tabaḍnit yeɛna-aɣ. { -brand-short-name } yesseḥal akka tura ineḍfaṛen n yiẓeḍwa inmettiyen yettwassnen, ayen yettarran talast i tnecta n yisefka i zemren ad d-leqḍen armud-ik srid.
-cfr-doorhanger-fingerprinters-heading = { -brand-short-name } yessewḥel aneḍfaṛ n udsil umḍin ɣef usebter-a.
-cfr-doorhanger-fingerprinters-description = Aqader n tbaḍnit-ik teɛna-aɣ. { -brand-short-name } yessewḥal akka tura ineḍfaren n udsilen umḍinen, i d-ileqḍen talɣut tasuft yettwassnen ɣef yibenk-ik akken ad k-yeḍfer.
-cfr-doorhanger-cryptominers-heading = { -brand-short-name } yessewḥel akriptuminer ɣef usebter-a.
-cfr-doorhanger-cryptominers-description = Aqadeṛ n tudert-ik tusligt d ayen meqqren. { -brand-short-name } yessewḥal akka tura ikriptumniren i yesseqdacen tazmert n usiḍen n unagraw-ik n wammud akken ad d-kksen tadrimt tumḍint.
 
 ## Enhanced Tracking Protection Milestones
 
-# Variables:
-#   $blockedCount (Number) - The total count of blocked trackers. This number will always be greater than 1.
-#   $date (String) - The date we began recording the count of blocked trackers
-cfr-doorhanger-milestone-heading =
-    { $blockedCount ->
-        [one] { -brand-short-name } issewḥel u<b>{ $blockedCount }</b> yineḍfaren seg { $date }!
-       *[other] { -brand-short-name } issewḥel u<b>{ $blockedCount }</b> yineḍfaren seg { $date }!
-    }
 # Variables:
 #   $blockedCount (Number) - The total count of blocked trackers. This number will always be greater than 1.
 #   $date (Datetime) - The date we began recording the count of blocked trackers
@@ -213,39 +104,6 @@ cfr-doorhanger-milestone-heading2 =
     }
 cfr-doorhanger-milestone-ok-button = Wali akk
     .accesskey = W
-
-## What’s New Panel Content for Firefox 76
-
-
-## Lockwise message
-
-cfr-whatsnew-lockwise-header = Rnu awal uffir aɣelsan s wudem fessusen
-cfr-whatsnew-lockwise-body = Ur  fessus ara yal tikket ad txemmemeḍ ɣer wawalen uffiren isufen, iɣelsanen i yal amiḍan. Deg tmerna n wawal uffir, fren urti n wawal uffir akken ad tesqedceḍ awal uffir aɣelsan, ara d-yessirew { -brand-shorter-name }.
-cfr-whatsnew-lockwise-icon-alt = Tignit { -lockwise-brand-short-name }
-
-## Vulnerable Passwords message
-
-cfr-whatsnew-passwords-header = Awi ilɣa ɣef wawalen uffiren fessusen i truẓi
-cfr-whatsnew-passwords-body = Imakaren imsenselkamen zran dakken imdanen ttɛawaden aseqdec n kra kan n wawalen uffiren.  Ma yella tsqedceḍ yiwen wawal uffir deg watas n yesmal web, u yella yiwen ger yesmal-agi tella-d degs trewla n yisefka, ad twaliḍ alɣu deg { -lockwise-brand-short-name } akken ad tesnifleḍ awal-ik uffir deg yesmal-nni.
-cfr-whatsnew-passwords-icon-alt = Tignit n tsarut n wawal uffir fessusen i truẓi
-
-## Picture-in-Picture fullscreen message
-
-cfr-whatsnew-pip-fullscreen-header = Awi agdil aččuran n tugna-deg-tugna
-cfr-whatsnew-pip-fullscreen-body = Ticki ara terreḍ tavidyut deg usfaylu ufig, Tzemreḍ tura ad tsiteḍ snat n tikkal ɣef usfaylu-nni akken ad tɛeddiḍ ɣer ugdil aččuran.
-cfr-whatsnew-pip-fullscreen-icon-alt = Tignit n tugna-deg-tugna
-
-## Protections Dashboard message
-
-cfr-whatsnew-protections-header = Ammesten deg teṛmect n tiṭ
-cfr-whatsnew-protections-body = Tafelwit n usenqed n ummesten tegber-d agzul n y ineqqisen ɣef trewliwin n yisefka d usefrek n wawalen uffiren. Tzemreḍ tura ad ḍefreḍ acḥal n trewliwin i tseɣtaḍ, rnu a twaliḍ ma yella yiwen seg wawalen-inek/inem uffiren yettwaskelsen iban-d deg trewliwin n yisefka.
-cfr-whatsnew-protections-cta-link = Wali tafelwit n usenqed
-cfr-whatsnew-protections-icon-alt = Tignit Shield
-
-## Better PDF message
-
-cfr-whatsnew-better-pdf-header = Tirmit ifazen n PDF
-cfr-whatsnew-better-pdf-body = Imesliyen PDF ttaldayen-d tura srid deg { -brand-short-name }, eǧǧ tiddin n leqdic-ik ɣef wafus.
 cfr-doorhanger-milestone-close-button = Mdel
     .accesskey = C
 
@@ -260,16 +118,126 @@ cfr-doorhanger-doh-secondary-button = Sens
 
 ## Fission Experiment Message
 
-cfr-doorhanger-fission-body-approved = Tudert-ik·im tabaḍnit tesɛa azal. { -brand-short-name } tura yettaɛzal ismal web wa ɣef wa tett tastant gar-asen, ayen yeswaɛrayen i yimakaren ad ad akren awalen uffiren, uṭṭunen n tkarḍiwin n usmad d telɣut-nniḍen tamḥulfut.
-cfr-doorhanger-fission-header = Aɛzal n usmel
-cfr-doorhanger-fission-primary-button = IH, awi-t
-    .accesskey = O
-cfr-doorhanger-fission-secondary-button = Issin ugar
-    .accesskey = L
-
 ## Full Video Support CFR message
 
 cfr-doorhanger-video-support-body = Tividyutin ɣef usmel-a zemrent ur teddunt ara akken ilaq deg lqem-a n { -brand-short-name }. I tallalt n tvidyut taččurant, leqqem { -brand-short-name } tura.
 cfr-doorhanger-video-support-header = Leqqem { -brand-short-name } i tɣuri n tvidyut
 cfr-doorhanger-video-support-primary-button = Leqqem tura
     .accesskey = L
+
+## Spotlight modal shared strings
+
+## VPN promotion dialog for public Wi-Fi users
+##
+## If a user is detected to be on a public Wi-Fi network, they are given a
+## bit of info about how to improve their privacy and then offered a button
+## to the Mozilla VPN page and a link to dismiss the dialog.
+
+# This header text can be explicitly wrapped.
+spotlight-public-wifi-vpn-header = Akka yettban tseqqdaceḍ Wi-Fi azayaz
+spotlight-public-wifi-vpn-body = I tuffra n wadig-ik•im akked urmud n tunigin, muqel ad tesqedceḍ azeṭṭa uslig uhlis (VPN). Ad ak•akem-yeǧǧ tettummestneḍ mi ara tettinigeḍ deg yimekwan izayazen am deg yinaffagen d tḥuna.
+spotlight-public-wifi-vpn-primary-button = Qqim d uslig s { -mozilla-vpn-brand-name }
+    .accesskey = Q
+spotlight-public-wifi-vpn-link = Mačči tura
+    .accesskey = M
+
+## Total Cookie Protection Rollout
+
+## Emotive Continuous Onboarding
+
+spotlight-better-internet-header = Internet igerrzen yis-k
+spotlight-better-internet-body = Mi ara tesqedceḍ { -brand-short-name }, ad tferneḍ web yeldin akked internet igerrzen i yal yiwen.
+spotlight-peace-mind-header = Ad neḍmen ammesten-ik
+spotlight-peace-mind-body = Yal ayyur, { -brand-short-name } issewḥal azal n 3,000 n yineḍfaren i useqdac. Acku ulac, aṭas aṭas ayen yettḍurrun tudert tabaḍnit am yineḍfaren, ur ilaq ara ad ilin gar-k•m akked internet igerrzen.
+spotlight-pin-primary-button =
+    { PLATFORM() ->
+        [macos] Eǧǧ deg Dock
+       *[other] Senteḍ ɣer ufaggag n twuriwin
+    }
+spotlight-pin-secondary-button = Mačči tura
+
+## MR2022 Background Update Windows native toast notification strings.
+##
+## These strings will be displayed by the Windows operating system in
+## a native toast, like:
+##
+## <b>multi-line title</b>
+## multi-line text
+## <img>
+## [ primary button ] [ secondary button ]
+##
+## The button labels are fitted into narrow fixed-width buttons by
+## Windows and therefore must be as narrow as possible.
+
+mr2022-background-update-toast-title = { -brand-short-name } amaynut. D uslig ugar. Drus maḍi n yineḍfaren. War takerḍa.
+
+# This button label will be fitted into a narrow fixed-width button by
+# Windows. Try to not exceed the width of the English text (compare it
+# using a variable font like Arial): the button can only fit 1-2
+# additional characters, exceeding characters will be truncated.
+mr2022-background-update-toast-primary-button-label = Ldi { -brand-shorter-name } tura
+
+# This button label will be fitted into a narrow fixed-width button by
+# Windows. Try to not exceed the width of the English text (compare it using a
+# variable font like Arial): the button can only fit 1-2 additional characters,
+# exceeding characters will be truncated.
+mr2022-background-update-toast-secondary-button-label = Mekti-y-id ticki
+
+## Firefox View CFR
+
+firefoxview-cfr-primarybutton = Ɛreḍ-it
+    .accesskey = Ɛ
+firefoxview-cfr-secondarybutton = Mačči tura
+    .accesskey = M
+firefoxview-cfr-header-v2 = Kemmel zzerb seg anida telliḍ
+
+## Firefox View Spotlight
+
+firefoxview-spotlight-promo-title = Ini azul i { -firefoxview-brand-name }
+
+firefoxview-spotlight-promo-primarybutton = Wali amek i itteddu
+firefoxview-spotlight-promo-secondarybutton = Suref
+
+## Colorways expiry reminder CFR
+
+colorways-cfr-primarybutton = Fren afran n yiniten
+    .accesskey = F
+
+colorways-cfr-header-28days = Afran n yiniten n tuɣac tilelliyin ad ifakk deg 16 deg yennayer
+colorways-cfr-header-14days = Afran n yiniten n tuɣac tilelliyin ad ifakk deg sin n yimalasen
+colorways-cfr-header-7days = Afran n yiniten n tuɣac tilelliyin ad ifakk deg yimalas-a.
+colorways-cfr-header-today = Afran n yiniten n tuɣac tilelliyin ad ifakk ass-a
+
+## Cookie Banner Handling CFR
+
+cfr-cbh-header = Sireg { -brand-short-name } ad yegdel iɣarracen n yinagan n tuqqna?
+cfr-cbh-body = { -brand-short-name } yezmer ad yagi aṭas yissutar n yiɣarracen n yinagan n tuqqna s wudem awurman.
+cfr-cbh-confirm-button = Agi iɣarracen n yinagan n tuqqna
+    .accesskey = A
+cfr-cbh-dismiss-button = Mačči tura
+    .accesskey = M
+
+## These strings are used in the Fox doodle Pin/set default spotlights
+
+july-jam-headline = Ad neḍmen ammesten-ik·im
+july-jam-set-default-primary = Ldi iseɣwan-iw s { -brand-short-name }
+fox-doodle-pin-headline = Ansuf tikkelt niḍen
+
+fox-doodle-pin-primary = Ldi iseɣwan-iw s { -brand-short-name }
+fox-doodle-pin-secondary = Mačči tura
+
+## These strings are used in the Set Firefox as Default PDF Handler for Existing Users experiment
+
+set-default-pdf-handler-primary = Awi-t
+
+## FxA sync CFR
+
+fxa-sync-cfr-primary = Issin ugar
+    .accesskey = I
+fxa-sync-cfr-secondary = Smekti-y-id ticki
+    .accesskey = S
+
+## Device Migration FxA Spotlight
+
+device-migration-fxa-spotlight-header = Aseqdec n yibenk aqbur?
+device-migration-fxa-spotlight-link = Smekti-y-id ticki

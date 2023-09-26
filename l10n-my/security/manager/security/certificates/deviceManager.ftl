@@ -5,9 +5,9 @@
 
 ## Strings used for device manager
 
-devmgr =
+devmgr-window =
     .title = ကိရိယာ စီမံခန့်ခွဲသူ
-    .style = width: 67em; height: 32em;
+    .style = min-width: 67em; min-height: 32em;
 
 devmgr-devlist =
     .label = လုံခြုံရေး အစိတ်အပိုင်းများနဲ့ ကိရိယာများ
@@ -107,8 +107,6 @@ devinfo-label =
 
 devinfo-serialnum =
     .label = အစဉ်လိုက် အမှတ်စဉ်
-
-fips-nonempty-password-required = FIPS စနစ်က လုံခြုံရေး ကိရိယာတိုင်းအတွက် ပင်မ စကားဝှက် အစုတခု သင်ထားရှိဖို့ တောင်းဆိုတယ်။ FIPS စနစ်ကို ဖွင့်ဖို့ မကြိုးစားခင် စကားဝှက်ကို ထားရှိပါ။
 
 unable-to-toggle-fips = လုံခြုံရေးပစ္စည်းအတွက် FIPS အပြင်အဆင်သို့မပြောင်းလဲနိုင်ပါ။အက်ပလီကေးရှင်းအား ထွက်(သို့)ပြန်စလိုက်တာအကောင်းဆုံးဖြစ်သည်။
 load-pk11-module-file-picker-title = ဖွင့်ရန် PKCS#11 ကိရိယာတစ်ခုကို ရွေးချယ်ပါ

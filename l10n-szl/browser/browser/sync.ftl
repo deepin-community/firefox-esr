@@ -2,19 +2,10 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-fxa-toolbar-sync-syncing =
-    .label = Synchrōnizacyjo…
-fxa-toolbar-sync-syncing-tabs =
-    .label = Synchrōnizowanie kart…
-
-sync-disconnect-dialog-title = Rozłōnczyć { -sync-brand-short-name(case: "acc") }?
-
 fxa-toolbar-sync-syncing2 = Synchrōnizacyjo…
 
 sync-disconnect-dialog-title2 = Rozłōnczyć?
 sync-disconnect-dialog-body = { -brand-product-name } skōńczy synchrōnizować twoje kōnto, ale niy skasuje żodnych danych przeglōndanio na tyj maszinie.
-fxa-disconnect-dialog-title = Rozłōnczyć aplikacyjo { -brand-product-name }?
-fxa-disconnect-dialog-body = { -brand-product-name } ôdłōnczy sie ôd twojigo kōnta, ale niy skasuje żodnych danych przeglōndanio na tyj maszinie.
 sync-disconnect-dialog-button = Rozłōncz…
 
 fxa-signout-dialog2-title = Wylogować sie ze { -fxaccount-brand-name }?
@@ -30,6 +21,22 @@ fxa-menu-turn-on-sync-default = Załōncz synchronizacyjo
 
 fxa-menu-connect-another-device =
     .label = Połōncz inkszo maszina…
+# Variables:
+#   $tabCount (Number): The number of tabs sent to the device.
+fxa-menu-send-tab-to-device =
+    .label =
+        { $tabCount ->
+            [one] Poślij karta na maszina
+            [few] Poślij { $tabCount } katy na maszina
+           *[many] Poślij { $tabCount } kart na maszina
+        }
+
+# This is shown dynamically within "Send tab to device" in fxa menu.
+fxa-menu-send-tab-to-device-syncnotready =
+    .label = Synchrōnizacyjo maszin…
+
+# This is shown within "Send tab to device" in fxa menu if account is not configured.
+fxa-menu-send-tab-to-device-description = Posyłej karta na kożdo maszina, na keryj sie wlogujesz.
 
 fxa-menu-sign-out =
     .label = Wyloguj sie…

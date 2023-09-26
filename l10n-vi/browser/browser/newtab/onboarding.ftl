@@ -3,22 +3,7 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 
-### UI strings for the simplified onboarding modal / about:welcome
-### Various strings use a non-breaking space to avoid a single dangling /
-### widowed word, so test on various window sizes if you also want this.
-
-
-## These button action text can be split onto multiple lines, so use explicit
-## newlines in translations to control where the line break appears (e.g., to
-## avoid breaking quoted text).
-
-onboarding-button-label-learn-more = Tìm hiểu thêm
-onboarding-button-label-get-started = Bắt đầu
-
-## Welcome modal dialog strings
-
-
-### UI strings for the simplified onboarding / multistage about:welcome
+### UI strings for the MR1 onboarding / multistage about:welcome
 ### Various strings use a non-breaking space to avoid a single dangling /
 ### widowed word, so test on various window sizes if you also want this.
 
@@ -26,149 +11,9 @@ onboarding-button-label-get-started = Bắt đầu
 ## Welcome page strings
 
 onboarding-welcome-header = Chào mừng đến với { -brand-short-name }
-onboarding-welcome-body = Bạn đã có trình duyệt.<br/>Xem phần còn lại của { -brand-product-name }.
-onboarding-welcome-learn-more = Tìm hiểu thêm về các tiện ích.
-onboarding-welcome-modal-get-body = Bạn đã có trình duyệt.<br/>Bây giờ hãy tận dụng tối đa { -brand-product-name }.
-onboarding-welcome-modal-supercharge-body = Bảo vệ quyền riêng tư của bạn.
-onboarding-welcome-modal-privacy-body = Bạn đã có trình duyệt. Hãy để thêm bảo vệ quyền riêng tư.
-onboarding-welcome-modal-family-learn-more = Tìm hiểu về sản phẩm của gia đình { -brand-product-name }
-onboarding-welcome-form-header = Bắt đầu ở đây
-
-onboarding-join-form-body = Nhập địa chỉ thư điện tử của bạn để bắt đầu.
-onboarding-join-form-email =
-    .placeholder = Nhập thư điện tử
-onboarding-join-form-email-error = Yêu cầu thư điện tử hợp lệ
-onboarding-join-form-legal = Khi chọn tiếp tục, bạn đồng ý với <a data-l10n-name="terms">điều khoản dịch vụ</a> và <a data-l10n-name="privacy">thông báo bảo mật</a>.
-onboarding-join-form-continue = Tiếp tục
-
-# This message is followed by a link using onboarding-join-form-signin ("Sign In") as text.
-onboarding-join-form-signin-label = Đã có một tài khoản?
-# Text for link to submit the sign in form
-onboarding-join-form-signin = Đăng nhập
-
 onboarding-start-browsing-button-label = Bắt đầu duyệt web
-onboarding-cards-dismiss =
-    .title = Bỏ qua
-    .aria-label = Bỏ qua
-
-## Welcome full page string
-
-onboarding-fullpage-welcome-subheader = Hãy bắt đầu khám phá mọi thứ bạn có thể làm.
-onboarding-fullpage-form-email =
-    .placeholder = Địa chỉ email của bạn…
-
-## Firefox Sync modal dialog strings.
-
-onboarding-sync-welcome-header = Mang { -brand-product-name } theo bạn
-onboarding-sync-welcome-content = Đồng bộ các dấu trang, lịch sử, mật khẩu và các cài đặt khác lên tất cả các thiết bị của bạn.
-onboarding-sync-welcome-learn-more-link = Tìm hiểu thêm về Tài khoản Firefox
-
-onboarding-sync-form-input =
-    .placeholder = Email
-
-onboarding-sync-form-continue-button = Tiếp tục
-onboarding-sync-form-skip-login-button = Bỏ qua bước này
-
-## This is part of the line "Enter your email to continue to Firefox Sync"
-
-onboarding-sync-form-header = Nhập email của bạn
-onboarding-sync-form-sub-header = để tiếp tục với { -sync-brand-name }
-
-
-## These are individual benefit messages shown with an image, title and
-## description.
-
-onboarding-benefit-products-text = Hoàn thành công việc với một nhóm công cụ tôn trọng quyền riêng tư của bạn trên các thiết bị của bạn.
-
-# "Personal Data Promise" is a concept that should be translated consistently
-# across the product. It refers to a concept shown elsewhere to the user: "The
-# Firefox Personal Data Promise is the way we honor your data in everything we
-# make and do. We take less data. We keep it safe. And we make sure that we are
-# transparent about how we use it."
-onboarding-benefit-privacy-text = Tất cả mọi thứ chúng tôi làm đều tôn vinh lời hứa dữ liệu cá nhân của chúng tôi: Lấy ít hơn. Giữ nó an toàn. Không có bí mật.
-
-onboarding-benefit-sync-title = { -sync-brand-short-name }
-onboarding-benefit-sync-text = Nhận dấu trang, mật khẩu, lịch sử của bạn và nhiều nơi khác mà bạn đã đăng nhập vào { -brand-product-name }.
-
-onboarding-benefit-monitor-title = { -monitor-brand-short-name }
-onboarding-benefit-monitor-text = Nhận thông báo khi thông tin cá nhân của bạn bị rò rỉ trong dữ liệu đã biết.
-
-onboarding-benefit-lockwise-title = { -lockwise-brand-short-name }
-onboarding-benefit-lockwise-text = Quản lý mật khẩu được bảo vệ và di động.
-
-
-## These strings belong to the individual onboarding messages.
-
-
-## Each message has a title and a description of what the browser feature is.
-## Each message also has an associated button for the user to try the feature.
-## The string for the button is found above, in the UI strings section
-
-onboarding-tracking-protection-title2 = Bảo vệ khỏi trình theo dõi
-onboarding-tracking-protection-text2 = { -brand-short-name } giúp ngăn các trang web theo dõi bạn trực tuyến, khiến quảng cáo khó theo dõi bạn hơn trên web.
-onboarding-tracking-protection-button2 = Nó hoạt động như thế nào
-
-onboarding-data-sync-title = Mang theo các cài đặt của bạn
-# "Sync" is short for synchronize.
-onboarding-data-sync-text2 = Đồng bộ hóa dấu trang, mật khẩu và hơn thế nữa ở mọi nơi bạn sử dụng { -brand-product-name }.
-onboarding-data-sync-button2 = Đăng nhập vào { -sync-brand-short-name }
-
-onboarding-firefox-monitor-title = Cảnh báo về vi phạm dữ liệu
-onboarding-firefox-monitor-text2 = { -monitor-brand-name } giám sát nếu email của bạn xuất hiện trong vụ rò rỉ dữ liệu đã biết và thông báo cho bạn nếu nó xuất hiện trong vụ rò rỉ mới.
-onboarding-firefox-monitor-button = Đăng ký thông báo
-
-onboarding-browse-privately-title = Duyệt web riêng tư hơn
-onboarding-browse-privately-text = Duyệt web riêng tư sẽ xóa lịch sử tìm kiếm và duyệt web của bạn để giữ bí mật với bất kỳ ai sử dụng máy tính của bạn.
-onboarding-browse-privately-button = Mở một cửa sổ riêng tư
-
-onboarding-firefox-send-title = Giữ các tập tin bạn chia sẻ ở chế độ riêng tư
-onboarding-firefox-send-text2 = Tải tập tin của bạn lên { -send-brand-name } để chia sẻ chúng với mã hóa đầu cuối và liên kết tự động hết hạn.
-onboarding-firefox-send-button = Thử { -send-brand-name }
-
-onboarding-mobile-phone-title = Tải { -brand-product-name } trên điện thoại của bạn
-onboarding-mobile-phone-text = Tải xuống { -brand-product-name } cho iOS hoặc Android và đồng bộ dữ liệu của bạn trên các thiết bị khác nhau.
-# "Mobile" is short for mobile/cellular phone, "Browser" is short for web
-# browser.
-onboarding-mobile-phone-button = Tải về trình duyệt di động
-
-onboarding-send-tabs-title = Gửi ngay cho chính mình các thẻ
-# "Send Tabs" refers to "Send Tab to Device" feature that appears when opening a
-# tab's context menu.
-onboarding-send-tabs-text2 = Dễ dàng chia sẻ các trang giữa các thiết bị của bạn mà không phải sao chép liên kết hoặc rời khỏi trình duyệt.
-onboarding-send-tabs-button = Bắt đầu sử dụng trình gửi thẻ
-
-onboarding-pocket-anywhere-title = Đọc và nghe mọi nơi
-onboarding-pocket-anywhere-text2 = Lưu nội dung yêu thích của bạn ngoại tuyến với ứng dụng { -pocket-brand-name } và đọc, nghe và xem bất cứ khi nào nó tiện lợi cho bạn.
-onboarding-pocket-anywhere-button = Thử { -pocket-brand-name }
-
-onboarding-lockwise-strong-passwords-title = Tạo và lưu trữ mật khẩu mạnh
-onboarding-lockwise-strong-passwords-text = { -lockwise-brand-name } tạo mật khẩu mạnh ngay tại chỗ và lưu tất cả chúng vào một nơi.
-onboarding-lockwise-strong-passwords-button = Quản lý thông tin đăng nhập của bạn
-
-onboarding-facebook-container-title = Đặt ranh giới với Facebook
-onboarding-facebook-container-text2 = { -facebook-container-brand-name } giữ cho hồ sơ của bạn tách biệt với mọi thứ khác, khiến Facebook khó nhắm mục tiêu quảng cáo của bạn hơn.
-onboarding-facebook-container-button = Thêm phần mở rộng
-
-onboarding-import-browser-settings-title = Nhập dấu trang, mật khẩu và hơn thế nữa
-onboarding-import-browser-settings-text = Dễ dàng nhập các trang web và cài đặt Chrome.
-onboarding-import-browser-settings-button = Nhập dữ liệu từ Chrome
-
-onboarding-personal-data-promise-title = Được thiết kế xung quanh sự riêng tư
-onboarding-personal-data-promise-text = { -brand-product-name } xử lí dữ liệu của bạn một cách tôn trọng bằng cách lấy ít dữ liệu hơn, bảo vệ dữ liệu và hiểu rõ về cách chúng tôi sử dụng dữ liệu đó.
-onboarding-personal-data-promise-button = Đọc tuyên ngôn của chúng tôi
-
-## Message strings belonging to the Return to AMO flow
-
-return-to-amo-sub-header = Thật tuyệt, bạn đã có { -brand-short-name }
-
-# <icon></icon> will be replaced with the icon belonging to the extension
-#
-# Variables:
-#   $addon-name (String) - Name of the add-on
-return-to-amo-addon-header = Bây giờ chúng tôi sẽ cài đặt các tiện ích <icon></icon><b>{ $addon-name }.</b>
-return-to-amo-extension-button = Thêm tiện ích mở rộng
-return-to-amo-get-started-button = Bắt đầu với { -brand-short-name }
 onboarding-not-now-button-label = Không phải bây giờ
+mr1-onboarding-get-started-primary-button-label = Bắt đầu
 
 ## Custom Return To AMO onboarding strings
 
@@ -179,136 +24,23 @@ return-to-amo-subtitle = Thật tuyệt, bạn đã có { -brand-short-name }
 #   $addon-name (String) - Name of the add-on
 return-to-amo-addon-title = Bây giờ, bạn có thể cài đặt <img data-l10n-name="icon"/> <b>{ $addon-name }</b>.
 return-to-amo-add-extension-label = Thêm tiện ích mở rộng
+return-to-amo-add-theme-label = Thêm chủ đề
 
-## Multistage 3-screen onboarding flow strings (about:welcome pages)
+##  Variables: $addon-name (String) - Name of the add-on to be installed
 
-# The <span data-l10n-name="zap"></span> in this string allows a "zap" underline style to be
-# automatically added to the text inside it. { -brand-short-name } should stay inside the span.
-onboarding-multistage-welcome-header = Chào mừng bạn đến với <span data-l10n-name="zap">{ -brand-short-name }</span>
-onboarding-multistage-welcome-subtitle = Trình duyệt riêng tư nhanh chóng, an toàn và riêng tư được hỗ trợ bởi một tổ chức phi lợi nhuận.
-onboarding-multistage-welcome-primary-button-label = Bắt đầu thiết lập
-onboarding-multistage-welcome-secondary-button-label = Đăng nhập
-onboarding-multistage-welcome-secondary-button-text = Đã có một tài khoản?
+mr1-return-to-amo-subtitle = Gặp gỡ với { -brand-short-name }
+mr1-return-to-amo-addon-title = Bạn đã có một trình duyệt nhanh, riêng tư trong tầm tay. Giờ đây, bạn có thể thêm <b>{ $addon-name }</b> và thậm chí còn làm được nhiều hơn thế với { -brand-short-name }
+mr1-return-to-amo-add-extension-label = Thêm { $addon-name }
 
-# The <span data-l10n-name="zap"></span> in this string allows a "zap" underline style to be
-# automatically added to the text inside it. "default" should stay inside the span.
-onboarding-multistage-set-default-header = Đặt { -brand-short-name } làm <span data-l10n-name="zap">trình duyệt mặc định</span> của bạn
-onboarding-multistage-set-default-subtitle = Tốc độ, an toàn và quyền riêng tư mỗi khi bạn duyệt.
-onboarding-multistage-set-default-primary-button-label = Đặt làm mặc định
-onboarding-multistage-set-default-secondary-button-label = Không phải bây giờ
-
-# The <span data-l10n-name="zap"></span> in this string allows a "zap" underline style to be
-# automatically added to the text inside it. { -brand-short-name } should stay inside the span.
-onboarding-multistage-pin-default-header = Bắt đầu sử dụng <span data-l10n-name="zap">{ -brand-short-name }</span> sau vài cú nhấp chuột
-onboarding-multistage-pin-default-subtitle = Duyệt web nhanh chóng, an toàn và riêng tư mỗi khi bạn sử dụng web.
-# The "settings" here refers to "Windows 10 Settings App" and not the browser's
-onboarding-multistage-pin-default-waiting-subtitle = Chọn { -brand-short-name } trong trình duyệt Web khi cài đặt của bạn mở ra
-# The "settings" here refers to "Windows 10 Settings App" and not the browser's
-onboarding-multistage-pin-default-help-text = Thao tác này sẽ ghim { -brand-short-name } vào thanh tác vụ và mở cài đặt
-onboarding-multistage-pin-default-primary-button-label = Đặt { -brand-short-name } làm trình duyệt chính của tôi
-
-# The <span data-l10n-name="zap"></span> in this string allows a "zap" underline style to be
-# automatically added to the text inside it. "more" should stay inside the span.
-onboarding-multistage-import-header = Nhập mật khẩu, dấu trang và <span data-l10n-name="zap">hơn thế nữa</span>
-onboarding-multistage-import-subtitle = Đã sử dụng một trình duyệt khác? Rất dễ dàng để mang mọi thứ đến { -brand-short-name }.
-onboarding-multistage-import-primary-button-label = Bắt đầu nhập
-onboarding-multistage-import-secondary-button-label = Không phải bây giờ
-
-# Info displayed in the footer of import settings screen during onboarding flow.
-# This supports welcome screen showing top sites imported from the user's default browser.
-onboarding-import-sites-disclaimer = Các trang web được liệt kê ở đây đã được tìm thấy trên thiết bị này. { -brand-short-name } không lưu hoặc đồng bộ hóa dữ liệu từ trình duyệt khác trừ khi bạn chọn nhập nó.
+## Multistage onboarding strings (about:welcome pages)
 
 # Aria-label to make the "steps" of multistage onboarding visible to screen readers.
 # Variables:
 #   $current (Int) - Number of the current page
 #   $total (Int) - Total number of pages
-onboarding-welcome-steps-indicator =
-    .aria-label = Bắt đầu: { $current } của { $total }
 
-# The <span data-l10n-name="zap"></span> in this string allows a "zap" underline style to be
-# automatically added to the text inside it. "look" should stay inside the span.
-onboarding-multistage-theme-header = Chọn một <span data-l10n-name="zap">cách nhìn</span>
-onboarding-multistage-theme-subtitle = Cá nhân hóa { -brand-short-name } với một chủ đề.
-onboarding-multistage-theme-primary-button-label2 = Hoàn tất
-onboarding-multistage-theme-secondary-button-label = Không phải bây giờ
-
-# Automatic theme uses operating system color settings
-onboarding-multistage-theme-label-automatic = Tự động
-
-onboarding-multistage-theme-label-light = Sáng
-onboarding-multistage-theme-label-dark = Tối
-# "Firefox Alpenglow" here is the name of the theme, and should be kept in English.
-onboarding-multistage-theme-label-alpenglow = Firefox Alpenglow
-
-## Please make sure to split the content of the title attribute into lines whose
-## width corresponds to about 40 Latin characters, to ensure that the tooltip
-## doesn't become too long. Line breaks will be preserved when displaying the
-## tooltip.
-
-# Tooltip displayed on hover of automatic theme
-onboarding-multistage-theme-tooltip-automatic-2 =
-    .title =
-        Kế thừa sự xuất hiện của hệ điều hành
-        của bạn cho các nút, menu và cửa sổ.
-
-# Input description for automatic theme
-onboarding-multistage-theme-description-automatic-2 =
-    .aria-description =
-        Kế thừa sự xuất hiện của hệ điều hành
-        của bạn cho các nút, menu và cửa sổ.
-
-# Tooltip displayed on hover of light theme
-onboarding-multistage-theme-tooltip-light-2 =
-    .title =
-        Sử dụng giao diện sáng cho các nút,
-        menu và cửa sổ.
-
-# Input description for light theme
-onboarding-multistage-theme-description-light =
-    .aria-description =
-        Sử dụng giao diện sáng cho các nút,
-        menu và cửa sổ.
-
-# Tooltip displayed on hover of dark theme
-onboarding-multistage-theme-tooltip-dark-2 =
-    .title =
-        Sử dụng giao diện tối cho các nút,
-        menu và cửa sổ.
-
-# Input description for dark theme
-onboarding-multistage-theme-description-dark =
-    .aria-description =
-        Sử dụng giao diện tối cho các nút,
-        menu và cửa sổ.
-
-# Tooltip displayed on hover of Alpenglow theme
-onboarding-multistage-theme-tooltip-alpenglow-2 =
-    .title =
-        Sử dụng giao diện đầy màu sắc cho các nút,
-        menu và cửa sổ
-
-# Input description for Alpenglow theme
-onboarding-multistage-theme-description-alpenglow =
-    .aria-description =
-        Sử dụng giao diện đầy màu sắc cho các nút,
-        menu và cửa sổ
-
-## Multistage MR1 onboarding strings (MR1 about:welcome pages)
-
-# "Hero Text" displayed on left side of welcome screen.
-# The "Fire" in "Fire starts here" plays on the "Fire" in "Firefox".
-# It also signals the passion users bring to Firefox, how they use
-# Firefox to pursue those passions, as well as the boldness in their
-# choice to use Firefox over a larger competitor browser.
-# An alternative title for localization is: "It starts here".
-# This text can be formatted to span multiple lines as needed.
-mr1-welcome-screen-hero-text = Nó bắt đầu từ đây
-
-# Caption for background image in about:welcome. "Soraya Osorio" is the name
-# of the person and shouldn't be translated.
-# In case your language needs to adapt the nouns to a gender, Soraya is a female name (she/her).
-# You can see the picture in about:welcome in Nightly 90.
-mr1-onboarding-welcome-image-caption = Soraya Osorio — Nhà thiết kế nội thất, người hâm mộ Firefox
+onboarding-welcome-steps-indicator-label =
+    .aria-label = Tiến trình: bước { $current }/{ $total }
 
 # This button will open system settings to turn on prefers-reduced-motion
 mr1-onboarding-reduce-motion-button-label = Tắt hoạt ảnh
@@ -317,59 +49,23 @@ mr1-onboarding-reduce-motion-button-label = Tắt hoạt ảnh
 ## match the OS' application context menu item action where Windows uses "pin"
 ## and "taskbar" while macOS "keep" and "Dock" (proper noun).
 
-# Title used on welcome page when Firefox is not pinned
-mr1-onboarding-pin-header =
-    { PLATFORM() ->
-        [macos] Giữ { -brand-short-name } trong Dock của bạn để dễ dàng truy cập
-       *[other] Ghim { -brand-short-name } vào thanh tác vụ của bạn để dễ dàng truy cập
-    }
-# Primary button string used on welcome page when Firefox is not pinned.
-mr1-onboarding-pin-primary-button-label =
-    { PLATFORM() ->
-        [macos] Thêm vào thanh Dock
-       *[other] Ghim vào thanh tác vụ
-    }
-
 ## Multistage MR1 onboarding strings (about:welcome pages)
 
-# This string will be used on welcome page primary button label
-# when Firefox is both pinned and default
-mr1-onboarding-get-started-primary-button-label = Bắt đầu
-
-mr1-onboarding-welcome-header = Chào mừng đến với { -brand-short-name }
-mr1-onboarding-set-default-pin-primary-button-label = Đặt { -brand-short-name } làm trình duyệt mặc định của tôi
-    .title = Đặt { -brand-short-name } làm trình duyệt mặc định và ghim vào thanh tác vụ
-
-# This string will be used on welcome page primary button label
-# when Firefox is not default but already pinned
-mr1-onboarding-set-default-only-primary-button-label = Đặt { -brand-short-name } làm trình duyệt mặc định của tôi
-mr1-onboarding-set-default-secondary-button-label = Không phải bây giờ
+# String for the Firefox Accounts button
 mr1-onboarding-sign-in-button-label = Đăng nhập
 
 ## Title, subtitle and primary button string used on set default onboarding screen
 ## when Firefox is not default browser
 
-mr1-onboarding-default-header = Đặt { -brand-short-name } làm trình duyệt mặc định của bạn
-mr1-onboarding-default-subtitle = Đặt tốc độ, an toàn và quyền riêng tư vào chế độ tự động.
-mr1-onboarding-default-primary-button-label = Đặt làm trình duyệt mặc định
-
 ## Multistage MR1 onboarding strings (about:welcome pages)
-
-mr1-onboarding-import-header = Mang theo tất cả bên bạn
-mr1-onboarding-import-subtitle = Nhập mật khẩu của bạn, <br/>dấu trang và hơn thế nữa.
 
 # The primary import button label will depend on whether we can detect which browser was used to download Firefox.
 # Variables:
 #   $previous (Str) - Previous browser name, such as Edge, Chrome
 mr1-onboarding-import-primary-button-label-attribution = Nhập từ { $previous }
 
-# This string will be used in cases where we can't detect the previous browser name.
-mr1-onboarding-import-primary-button-label-no-attribution = Nhập từ trình duyệt trước
-mr1-onboarding-import-secondary-button-label = Không phải bây giờ
-
 mr1-onboarding-theme-header = Biến nó thành của riêng bạn
 mr1-onboarding-theme-subtitle = Cá nhân hóa { -brand-short-name } với một chủ đề.
-mr1-onboarding-theme-primary-button-label = Lưu chủ đề
 mr1-onboarding-theme-secondary-button-label = Không phải bây giờ
 
 # System theme uses operating system color settings
@@ -379,6 +75,8 @@ mr1-onboarding-theme-label-light = Sáng
 mr1-onboarding-theme-label-dark = Tối
 # "Alpenglow" here is the name of the theme, and should be kept in English.
 mr1-onboarding-theme-label-alpenglow = Alpenglow
+
+onboarding-theme-primary-button-label = Xong
 
 ## Please make sure to split the content of the title attribute into lines whose
 ## width corresponds to about 40 Latin characters, to ensure that the tooltip
@@ -432,3 +130,250 @@ mr1-onboarding-theme-description-alpenglow =
     .aria-description =
         Sử dụng giao diện động, đầy màu sắc
         cho các nút, menu và cửa sổ
+
+# Selector description for default themes
+mr2-onboarding-default-theme-label = Khám phá các chủ đề mặc định.
+
+## Strings for Thank You page
+
+mr2-onboarding-thank-you-header = Cảm ơn bạn đã chọn chúng tôi
+mr2-onboarding-thank-you-text = { -brand-short-name } là một trình duyệt độc lập được hỗ trợ bởi một tổ chức phi lợi nhuận. Cùng nhau, chúng ta đang làm cho web an toàn hơn, lành mạnh hơn và riêng tư hơn.
+mr2-onboarding-start-browsing-button-label = Bắt đầu duyệt web
+
+## Multistage live language reloading onboarding strings (about:welcome pages)
+##
+## The following language names are generated by the browser's Intl.DisplayNames API.
+##
+## Variables:
+##   $negotiatedLanguage (String) - The name of the langpack's language, e.g. "Español (ES)"
+
+
+## Multistage live language reloading onboarding strings (about:welcome pages)
+##
+## The following language names are generated by the browser's Intl.DisplayNames API.
+##
+## Variables:
+##   $negotiatedLanguage (String) - The name of the langpack's language, e.g. "Español (ES)"
+##   $systemLanguage (String) - The name of the system language, e.g "Español (ES)"
+##   $appLanguage (String) - The name of the language shipping in the browser build, e.g. "English (EN)"
+
+onboarding-live-language-header = Chọn ngôn ngữ của bạn
+
+mr2022-onboarding-live-language-text = { -brand-short-name } hỗ trợ ngôn ngữ của bạn
+
+mr2022-language-mismatch-subtitle = Cảm ơn cộng đồng của chúng tôi, { -brand-short-name } được dịch sang hơn 90 ngôn ngữ. Có vẻ như hệ thống của bạn đang sử dụng { $systemLanguage } và { -brand-short-name } đang sử dụng { $appLanguage }.
+
+onboarding-live-language-button-label-downloading = Đang tải xuống gói ngôn ngữ cho { $negotiatedLanguage }…
+onboarding-live-language-waiting-button = Nhận các ngôn ngữ khả dụng…
+onboarding-live-language-installing = Đang cài đặt gói ngôn ngữ cho { $negotiatedLanguage }…
+
+mr2022-onboarding-live-language-switch-to = Chuyển sang { $negotiatedLanguage }
+mr2022-onboarding-live-language-continue-in = Tiếp tục với ngôn ngữ { $appLanguage }
+
+onboarding-live-language-secondary-cancel-download = Hủy bỏ
+onboarding-live-language-skip-button-label = Bỏ qua
+
+## Firefox 100 Thank You screens
+
+# "Hero Text" displayed on left side of welcome screen. This text can be
+# formatted to span multiple lines as needed. The <span data-l10n-name="zap">
+# </span> in this string allows a "zap" underline style to be automatically
+# added to the text inside it. "Yous" should stay inside the zap span, but
+# "Thank" can be put inside instead if there's no "you" in the translation.
+# The English text would normally be "100 Thank-Yous" i.e., plural noun, but for
+# aesthetics of splitting it across multiple lines, the hyphen is omitted.
+fx100-thank-you-hero-text =
+    100
+    Cảm ơn <span data-l10n-name="zap">bạn</span>
+fx100-thank-you-subtitle = Đây là bản phát hành thứ 100 của chúng tôi! Cảm ơn bạn đã giúp chúng tôi xây dựng một Internet tốt hơn, lành mạnh hơn.
+fx100-thank-you-pin-primary-button-label =
+    { PLATFORM() ->
+        [macos] Giữ { -brand-short-name } trên thanh dock
+       *[other] Ghim { -brand-short-name } vào thanh tác vụ
+    }
+
+fx100-upgrade-thanks-header = 100 lần cảm ơn bạn
+# Message shown with a start-browsing button. Emphasis <em> should be for "you"
+# but "Thank" can be used instead if there's no "you" in the translation.
+fx100-upgrade-thank-you-body = Đây là bản phát hành thứ 100 của chúng tôi về { -brand-short-name }. Cảm ơn <em>bạn</em> đã giúp chúng tôi xây dựng một Internet tốt hơn, lành mạnh hơn.
+# Message shown with either a pin-to-taskbar or set-default button.
+fx100-upgrade-thanks-keep-body = Đây là bản phát hành thứ 100 của chúng tôi! Cảm ơn vì đã trở thành một phần của cộng đồng của chúng tôi. Giữ { -brand-short-name } một cú nhấp chuột cho lần tiếp theo thứ 100.
+
+mr2022-onboarding-secondary-skip-button-label = Bỏ qua bước này
+
+## MR2022 New User Easy Setup screen strings
+
+# Primary button string used on new user onboarding first screen showing multiple actions such as Set Default, Import from previous browser.
+mr2022-onboarding-easy-setup-primary-button-label = Lưu và tiếp tục
+# Set Default action checkbox label used on new user onboarding first screen
+mr2022-onboarding-easy-setup-set-default-checkbox-label = Đặt { -brand-short-name } làm trình duyệt mặc định
+# Import action checkbox label used on new user onboarding first screen
+mr2022-onboarding-easy-setup-import-checkbox-label = Nhập từ trình duyệt trước
+
+## MR2022 New User Pin Firefox screen strings
+
+# Title used on about:welcome for new users when Firefox is not pinned.
+# In this context, open up is synonymous with "Discover".
+# The metaphor is that when they open their Firefox browser, it helps them discover an amazing internet.
+# If this translation does not make sense in your language, feel free to use the word "discover."
+mr2022-onboarding-welcome-pin-header = Mở ra một mạng internet tuyệt vời
+# Subtitle is used on onboarding page for new users page when Firefox is not pinned
+mr2022-onboarding-welcome-pin-subtitle = Khởi chạy { -brand-short-name } từ bất kỳ đâu chỉ với một cú nhấp chuột. Mỗi lần như vậy, bạn đang chọn một trang web độc lập và cởi mở hơn.
+# Primary button string used on welcome page for when Firefox is not pinned.
+mr2022-onboarding-pin-primary-button-label =
+    { PLATFORM() ->
+        [macos] Giữ { -brand-short-name } trên thanh dock
+       *[other] Ghim { -brand-short-name } vào thanh tác vụ
+    }
+# Subtitle will be used when user already has Firefox pinned, but
+# has not set it as their default browser.
+# When translating "zip", please feel free to pick a verb that signifies movement and/or exploration
+# and makes sense in the context of navigating the web.
+mr2022-onboarding-set-default-only-subtitle = Bắt đầu với một trình duyệt được hỗ trợ bởi một tổ chức phi lợi nhuận. Chúng tôi bảo vệ quyền riêng tư của bạn trong khi bạn duyệt web.
+
+## MR2022 Existing User Pin Firefox Screen Strings
+
+# Title used on multistage onboarding page for existing users when Firefox is not pinned
+mr2022-onboarding-existing-pin-header = Cảm ơn bạn đã yêu thích { -brand-product-name }
+# Subtitle is used on onboarding page for existing users when Firefox is not pinned
+mr2022-onboarding-existing-pin-subtitle = Khởi động một mạng internet lành mạnh hơn từ mọi nơi chỉ với một cú nhấp chuột. Bản cập nhật mới nhất của chúng tôi chứa đựng những điều mới mà chúng tôi nghĩ rằng bạn sẽ yêu thích.
+# Subtitle will be used on the welcome screen for existing users
+# when they already have Firefox pinned but not set as default
+mr2022-onboarding-existing-set-default-only-subtitle = Sử dụng trình duyệt bảo vệ quyền riêng tư của bạn khi bạn lướt web. Bản cập nhật mới nhất của chúng tôi chứa đầy những thứ mà bạn yêu thích.
+mr2022-onboarding-existing-pin-checkbox-label = Đồng thời thêm { -brand-short-name } duyệt web riêng tư
+
+## MR2022 New User Set Default screen strings
+
+# This string is the title used when the user already has pinned the browser, but has not set default.
+mr2022-onboarding-set-default-title = Đặt { -brand-short-name } làm trình duyệt truy cập của bạn
+mr2022-onboarding-set-default-primary-button-label = Đặt { -brand-short-name } làm trình duyệt mặc định
+# When translating "zip", please feel free to pick a verb that signifies movement and/or exploration
+# and makes sense in the context of navigating the web.
+mr2022-onboarding-set-default-subtitle = Sử dụng trình duyệt được hỗ trợ bởi tổ chức phi lợi nhuận. Chúng tôi bảo vệ quyền riêng tư của bạn trong khi bạn duyệt web.
+
+## MR2022 Get Started screen strings.
+## These strings will be used on the welcome page
+## when Firefox is already set to default and pinned.
+
+# When translating "zip", please feel free to pick a verb that signifies movement and/or exploration
+# and makes sense in the context of navigating the web.
+mr2022-onboarding-get-started-primary-subtitle = Phiên bản mới nhất của chúng tôi được xây dựng xung quanh bạn, giúp bạn truy cập trên web dễ dàng hơn bao giờ hết. Nó được đóng gói với các tính năng mà chúng tôi nghĩ rằng bạn sẽ yêu thích.
+mr2022-onboarding-get-started-primary-button-label = Thiết lập trong vài giây
+
+## MR2022 Import Settings screen strings
+
+mr2022-onboarding-import-header = Thiết lập nhanh như chớp
+mr2022-onboarding-import-subtitle = Thiết lập { -brand-short-name } theo cách bạn thích. Thêm dấu trang, mật khẩu và hơn thế nữa từ trình duyệt cũ của bạn.
+mr2022-onboarding-import-primary-button-label-no-attribution = Nhập từ trình duyệt trước
+
+## If your language uses grammatical genders, in the description for the
+## colorway feel free to switch from "You are a X. You…" (e.g. "You are a
+## Playmaker. You create…") to "X: you…" ("Playmaker: You create…"). This might
+## help creating a more inclusive translation.
+
+mr2022-onboarding-colorway-title = Chọn màu sắc truyền cảm hứng cho bạn
+mr2022-onboarding-colorway-subtitle = Tiếng nói độc lập có thể thay đổi văn hóa.
+mr2022-onboarding-colorway-primary-button-label-continue = Đặt và tiếp tục
+mr2022-onboarding-existing-colorway-checkbox-label = Đặt { -firefox-home-brand-name } làm trang chủ đầy màu sắc của bạn
+
+mr2022-onboarding-colorway-label-default = Mặc định
+mr2022-onboarding-colorway-tooltip-default2 =
+    .title = Màu hiện tại của { -brand-short-name }
+mr2022-onboarding-colorway-description-default = <b>Sử dụng màu { -brand-short-name } hiện tại của tôi.</b>
+
+mr2022-onboarding-colorway-label-playmaker = Người kiến tạo lối chơi
+mr2022-onboarding-colorway-tooltip-playmaker2 =
+    .title = Người kiến tạo lối chơi (đỏ)
+mr2022-onboarding-colorway-description-playmaker = <b>Bạn là người kiến tạo lối chơi.</b> Bạn tạo cơ hội để giành chiến thắng và giúp mọi người xung quanh nâng tầm trò chơi của họ.
+
+mr2022-onboarding-colorway-label-expressionist = Trường phái biểu hiện
+mr2022-onboarding-colorway-tooltip-expressionist2 =
+    .title = Trường phái biểu hiện (vàng)
+mr2022-onboarding-colorway-description-expressionist = <b>Bạn là người theo chủ nghĩa biểu hiện.</b> Bạn nhìn thế giới một cách khác biệt và những sáng tạo của bạn khuấy động cảm xúc của người khác.
+
+mr2022-onboarding-colorway-label-visionary = Nhìn xa trông rộng
+mr2022-onboarding-colorway-tooltip-visionary2 =
+    .title = Nhìn xa trông rộng (xanh lá)
+mr2022-onboarding-colorway-description-visionary = <b>Bạn là một người có tầm nhìn xa.</b> Bạn đặt câu hỏi về hiện trạng và khiến người khác phải tưởng tượng về một tương lai tốt đẹp hơn.
+
+mr2022-onboarding-colorway-label-activist = Nhà hoạt động
+mr2022-onboarding-colorway-tooltip-activist2 =
+    .title = Nhà hoạt động (xanh nước biển)
+mr2022-onboarding-colorway-description-activist = <b>Bạn là một nhà hoạt động.</b> Bạn để lại cho thế giới một nơi tốt đẹp hơn những gì bạn đã tìm thấy và khiến người khác tin tưởng.
+
+mr2022-onboarding-colorway-label-dreamer = Người mơ mộng
+mr2022-onboarding-colorway-tooltip-dreamer2 =
+    .title = Người mơ mộng (tím)
+mr2022-onboarding-colorway-description-dreamer = <b>Bạn là một người mơ mộng.</b> Bạn tin rằng vận may ủng hộ những người mạnh dạn và truyền cảm hứng cho những người khác dũng cảm.
+
+mr2022-onboarding-colorway-label-innovator = Người đổi mới
+mr2022-onboarding-colorway-tooltip-innovator2 =
+    .title = Người đổi mới (cam)
+mr2022-onboarding-colorway-description-innovator = <b>Bạn là một người đổi mới.</b> Bạn nhìn thấy cơ hội ở khắp mọi nơi và tạo ra ảnh hưởng đến cuộc sống của mọi người xung quanh bạn.
+
+## MR2022 Multistage Mobile Download screen strings
+
+mr2022-onboarding-mobile-download-title = Chuyển từ máy tính xách tay sang điện thoại và quay lại một lần nữa
+mr2022-onboarding-mobile-download-subtitle = Lấy các thẻ từ một thiết bị và tiếp tục nơi bạn đã dừng lại trên một thiết bị khác. Ngoài ra, hãy đồng bộ hóa dấu trang và mật khẩu của bạn ở bất kỳ đâu bạn sử dụng { -brand-product-name }.
+mr2022-onboarding-mobile-download-cta-text = Quét mã QR để lấy liên kết tải xuống { -brand-product-name } dành cho di động hoặc <a data-l10n-name="download-label">gửi liên kết cho chính bạn.</a>
+mr2022-onboarding-no-mobile-download-cta-text = Quét mã QR để tải xuống { -brand-product-name } dành cho di động.
+
+## MR2022 Upgrade Dialog screens
+## Pin private window screen shown only for users who don't have Firefox private pinned
+
+mr2022-upgrade-onboarding-pin-private-window-header = Tự do duyệt web riêng tư trong một cú nhấp chuột
+mr2022-upgrade-onboarding-pin-private-window-subtitle = Không có cookie hoặc lịch sử đã lưu, ngay từ màn hình của bạn. Duyệt như không có ai đang xem.
+mr2022-upgrade-onboarding-pin-private-window-primary-button-label =
+    { PLATFORM() ->
+        [macos] Giữ { -brand-short-name } duyệt web ở chế độ riêng tư trong thanh Dock
+       *[other] Ghim { -brand-short-name } duyệt web ở chế độ riêng tư vào thanh tác vụ
+    }
+
+## MR2022 Privacy Segmentation screen strings
+
+mr2022-onboarding-privacy-segmentation-title = Chúng tôi luôn tôn trọng quyền riêng tư của bạn
+mr2022-onboarding-privacy-segmentation-subtitle = Từ các đề xuất thông minh đến tìm kiếm thông minh hơn, chúng tôi không ngừng nỗ lực để tạo ra { -brand-product-name } tốt hơn, cá nhân hóa hơn.
+mr2022-onboarding-privacy-segmentation-text-cta = Bạn muốn thấy gì khi chúng tôi cung cấp các tính năng mới sử dụng dữ liệu của bạn để nâng cao khả năng duyệt web của bạn?
+mr2022-onboarding-privacy-segmentation-button-primary-label = Sử dụng các đề xuất của { -brand-product-name }
+mr2022-onboarding-privacy-segmentation-button-secondary-label = Hiển thị thông tin chi tiết
+
+## MR2022 Multistage Gratitude screen strings
+
+mr2022-onboarding-gratitude-title = Bạn đang giúp chúng tôi xây dựng một trang web tốt hơn
+mr2022-onboarding-gratitude-subtitle = Cảm ơn bạn đã sử dụng { -brand-short-name }, được hỗ trợ bởi Mozilla Foundation. Với sự hỗ trợ của bạn, chúng tôi đang nỗ lực để làm cho Internet trở nên cởi mở hơn, dễ tiếp cận hơn và tốt hơn cho mọi người.
+mr2022-onboarding-gratitude-primary-button-label = Xem có gì mới
+mr2022-onboarding-gratitude-secondary-button-label = Bắt đầu duyệt web
+
+## Onboarding spotlight for infrequent users
+
+onboarding-infrequent-import-title = Tự nhiên như ở nhà
+onboarding-infrequent-import-subtitle = Cho dù bạn đang giải quyết hay chỉ ghé qua, hãy nhớ rằng bạn có thể nhập dấu trang, mật khẩu của mình và hơn thế nữa.
+onboarding-infrequent-import-primary-button = Nhập vào { -brand-short-name }
+
+## MR2022 Illustration alt tags
+## Descriptive tags for illustrations used by screen readers and other assistive tech
+
+mr2022-onboarding-pin-image-alt =
+    .aria-label = Người đang làm việc trên máy tính xách tay được bao quanh bởi các ngôi sao và hoa
+mr2022-onboarding-default-image-alt =
+    .aria-label = Người ôm logo { -brand-product-name }
+mr2022-onboarding-import-image-alt =
+    .aria-label = Người cưỡi ván trượt với một hộp biểu tượng phần mềm
+mr2022-onboarding-mobile-download-image-alt =
+    .aria-label = Ếch nhảy qua tấm lót lily với mã QR để tải xuống { -brand-product-name } cho thiết bị di động ở giữa
+mr2022-onboarding-pin-private-image-alt =
+    .aria-label = Cây đũa thần làm cho biểu trưng duyệt web riêng tư của { -brand-product-name } xuất hiện trên một chiếc mũ
+mr2022-onboarding-privacy-segmentation-image-alt =
+    .aria-label = Tay da sáng và da ngăm đen cao năm
+mr2022-onboarding-gratitude-image-alt =
+    .aria-label = Cảnh hoàng hôn qua cửa sổ với một con cáo và cây nhà trên bệ cửa sổ
+mr2022-onboarding-colorways-image-alt =
+    .aria-label = Bình xịt tay vẽ một bức tranh cắt dán đầy màu sắc của mắt xanh lá cây, giày màu cam, quả bóng rổ màu đỏ, tai nghe màu tím, trái tim màu xanh lam và vương miện màu vàng
+
+## Device migration onboarding
+
+onboarding-device-migration-image-alt =
+    .aria-label = Một con cáo trên màn hình máy tính xách tay đang vẫy tay. Máy tính xách tay có một thiết bị chuột cắm vào nó.
+onboarding-device-migration-title = Chào mừng trở lại!
+onboarding-device-migration-subtitle = Đăng nhập vào { -fxaccount-brand-name(capitalization: "sentence") } của bạn để mang theo dấu trang, mật khẩu và lịch sử của bạn trên thiết bị mới.
+onboarding-device-migration-primary-button-label = Đăng nhập

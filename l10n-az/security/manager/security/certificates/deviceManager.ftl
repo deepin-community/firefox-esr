@@ -5,9 +5,9 @@
 
 ## Strings used for device manager
 
-devmgr =
+devmgr-window =
     .title = Cihaz idarəçisi
-    .style = width: 67em; height: 32em;
+    .style = min-width: 67em; min-height: 32em;
 
 devmgr-devlist =
     .label = Təhlükəsizlik Parçaları və Cihazları
@@ -115,8 +115,6 @@ devinfo-label =
 
 devinfo-serialnum =
     .label = Seriya nömrəsi
-
-fips-nonempty-password-required = FIPS rejimi bütün cihazlarınızda Ana Parolun qurulu olmasını tələb edir. Lütfən FIPS rejimini aktiv etməzdən əvvəl parolu qurun.
 
 unable-to-toggle-fips = FIPSrejimi təhlükəsizlik cihazı üçün dəyişdirilə bilmir. Bu proqramdan çıxıb yenidən başlatmağınız tövsiyyə olunur.
 load-pk11-module-file-picker-title = Yükləmək üçün bir PKCS#11 cihaz sürücüsü seçin

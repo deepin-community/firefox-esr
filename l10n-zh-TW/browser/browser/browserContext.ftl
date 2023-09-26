@@ -11,14 +11,6 @@ navbar-tooltip-instruction =
 
 ## Back
 
-main-context-menu-back =
-    .tooltiptext = 回到上一頁
-    .aria-label = 上一頁
-    .accesskey = B
-navbar-tooltip-back =
-    .value = { main-context-menu-back.tooltiptext }
-toolbar-button-back =
-    .label = { main-context-menu-back.aria-label }
 # Variables
 #   $shortcut (String) - A keyboard shortcut for the Go Back command.
 main-context-menu-back-2 =
@@ -36,14 +28,6 @@ toolbar-button-back-2 =
 
 ## Forward
 
-main-context-menu-forward =
-    .tooltiptext = 前進下一頁
-    .aria-label = 下一頁
-    .accesskey = F
-navbar-tooltip-forward =
-    .value = { main-context-menu-forward.tooltiptext }
-toolbar-button-forward =
-    .label = { main-context-menu-forward.aria-label }
 # Variables
 #   $shortcut (String) - A keyboard shortcut for the Go Forward command.
 main-context-menu-forward-2 =
@@ -99,43 +83,41 @@ toolbar-button-fxaccount =
 main-context-menu-page-save =
     .label = 另存新檔…
     .accesskey = P
-toolbar-button-page-save =
-    .label = { main-context-menu-page-save.label }
 
 ## Simple menu items
 
-main-context-menu-bookmark-add =
-    .aria-label = 將本頁加入書籤
+main-context-menu-bookmark-page =
+    .aria-label = 將頁面加入書籤…
     .accesskey = m
-    .tooltiptext = 將本頁加入書籤
+    .tooltiptext = 將頁面加入書籤
 # This menuitem is only visible on macOS
-# Cannot be shown at the same time as main-context-menu-bookmark-edit-mac,
+# Cannot be shown at the same time as main-context-menu-edit-bookmark-mac,
 # so should probably have the same access key if possible.
-main-context-menu-bookmark-add-mac =
+main-context-menu-bookmark-page-mac =
     .label = 將頁面加入書籤
     .accesskey = m
 # This menuitem is only visible on macOS
-# Cannot be shown at the same time as main-context-menu-bookmark-add-mac,
+# Cannot be shown at the same time as main-context-menu-bookmark-page-mac,
 # so should probably have the same access key if possible.
-main-context-menu-bookmark-edit-mac =
-    .label = 編輯書籤
+main-context-menu-edit-bookmark-mac =
+    .label = 編輯書籤…
     .accesskey = m
 # Variables
 #   $shortcut (String) - A keyboard shortcut for the add bookmark command.
-main-context-menu-bookmark-add-with-shortcut =
-    .aria-label = 將本頁加入書籤
+main-context-menu-bookmark-page-with-shortcut =
+    .aria-label = 將頁面加入書籤…
     .accesskey = m
-    .tooltiptext = 將本頁加入書籤 ({ $shortcut })
-main-context-menu-bookmark-change =
-    .aria-label = 編輯此書籤
+    .tooltiptext = 將頁面加入書籤（{ $shortcut }）
+main-context-menu-edit-bookmark =
+    .aria-label = 編輯書籤…
     .accesskey = m
-    .tooltiptext = 編輯此書籤
+    .tooltiptext = 編輯書籤
 # Variables
 #   $shortcut (String) - A keyboard shortcut for the edit bookmark command.
-main-context-menu-bookmark-change-with-shortcut =
-    .aria-label = 編輯此書籤
+main-context-menu-edit-bookmark-with-shortcut =
+    .aria-label = 編輯書籤…
     .accesskey = m
-    .tooltiptext = 編輯此書籤 ({ $shortcut })
+    .tooltiptext = 編輯書籤（{ $shortcut }）
 main-context-menu-open-link =
     .label = 開啟鏈結
     .accesskey = O
@@ -151,11 +133,8 @@ main-context-menu-open-link-new-window =
 main-context-menu-open-link-new-private-window =
     .label = 用新隱私視窗開啟鏈結
     .accesskey = P
-main-context-menu-bookmark-this-link =
-    .label = 將此鏈結加入書籤
-    .accesskey = L
-main-context-menu-bookmark-link =
-    .label = 將鏈結加入書籤
+main-context-menu-bookmark-link-2 =
+    .label = 將鏈結加入書籤…
     .accesskey = B
 main-context-menu-save-link =
     .label = 鏈結另存新檔…
@@ -164,11 +143,6 @@ main-context-menu-save-link-to-pocket =
     .label = 將鏈結儲存至 { -pocket-brand-name }
     .accesskey = o
 
-## The access keys for "Copy Link Location" and "Copy Email Address"
-## should be the same if possible; the two context menu items
-## are mutually exclusive.
-
-
 ## The access keys for "Copy Link" and "Copy Email Address"
 ## should be the same if possible; the two context menu items
 ## are mutually exclusive.
@@ -176,12 +150,17 @@ main-context-menu-save-link-to-pocket =
 main-context-menu-copy-email =
     .label = 複製電子郵件地址
     .accesskey = E
-main-context-menu-copy-link =
-    .label = 複製鏈結網址
-    .accesskey = a
+main-context-menu-copy-phone =
+    .label = 複製電話號碼
+    .accesskey = o
 main-context-menu-copy-link-simple =
     .label = 複製鏈結
     .accesskey = L
+# This command copies the link, removing additional
+# query parameters used to track users across sites.
+main-context-menu-strip-on-share-link =
+    .label = 複製不含追蹤碼的鏈結
+    .accesskey = y
 
 ## Media (video/audio) controls
 ##
@@ -204,26 +183,6 @@ main-context-menu-media-mute =
 main-context-menu-media-unmute =
     .label = 取消靜音
     .accesskey = m
-main-context-menu-media-play-speed =
-    .label = 播放速度
-    .accesskey = d
-main-context-menu-media-play-speed-slow =
-    .label = 慢速（0.5×）
-    .accesskey = S
-main-context-menu-media-play-speed-normal =
-    .label = 標準
-    .accesskey = N
-main-context-menu-media-play-speed-fast =
-    .label = 快速（1.25×）
-    .accesskey = F
-main-context-menu-media-play-speed-faster =
-    .label = 更快（1.5×）
-    .accesskey = a
-# "Ludicrous" is a reference to the movie "Space Balls" and is meant
-# to say that this speed is very fast.
-main-context-menu-media-play-speed-fastest =
-    .label = 超快（2×）
-    .accesskey = L
 main-context-menu-media-play-speed-2 =
     .label = 速度
     .accesskey = d
@@ -261,23 +220,12 @@ main-context-menu-media-video-leave-fullscreen =
     .accesskey = u
 # This is used when right-clicking on a video in the
 # content area when the Picture-in-Picture feature is enabled.
-main-context-menu-media-pip =
-    .label = 子母畫面
-    .accesskey = u
-# This is used when right-clicking on a video in the
-# content area when the Picture-in-Picture feature is enabled.
 main-context-menu-media-watch-pip =
     .label = 使用子畫面觀賞
     .accesskey = u
 main-context-menu-image-reload =
     .label = 重新載入圖片
     .accesskey = R
-main-context-menu-image-view =
-    .label = 檢視圖片
-    .accesskey = I
-main-context-menu-video-view =
-    .label = 播放視訊檔案
-    .accesskey = I
 main-context-menu-image-view-new-tab =
     .label = 用新分頁開啟圖片
     .accesskey = I
@@ -287,15 +235,6 @@ main-context-menu-video-view-new-tab =
 main-context-menu-image-copy =
     .label = 複製圖片
     .accesskey = y
-main-context-menu-image-copy-location =
-    .label = 複製圖片網址
-    .accesskey = o
-main-context-menu-video-copy-location =
-    .label = 複製視訊檔案網址
-    .accesskey = o
-main-context-menu-audio-copy-location =
-    .label = 複製音訊檔案網址
-    .accesskey = o
 main-context-menu-image-copy-link =
     .label = 複製圖片鏈結
     .accesskey = o
@@ -311,12 +250,12 @@ main-context-menu-image-save-as =
 main-context-menu-image-email =
     .label = 郵寄圖片…
     .accesskey = g
-main-context-menu-image-set-as-background =
-    .label = 設為桌布…
-    .accesskey = S
 main-context-menu-image-set-image-as-background =
     .label = 將圖片設為桌布…
     .accesskey = S
+main-context-menu-image-copy-text =
+    .label = 複製圖片中的文字
+    .accesskey = T
 main-context-menu-image-info =
     .label = 檢視圖片資訊
     .accesskey = f
@@ -329,9 +268,6 @@ main-context-menu-video-save-as =
 main-context-menu-audio-save-as =
     .label = 另存音訊檔案…
     .accesskey = v
-main-context-menu-video-image-save-as =
-    .label = 另存快照為…
-    .accesskey = S
 main-context-menu-video-take-snapshot =
     .label = 拍攝快照…
     .accesskey = S
@@ -341,24 +277,12 @@ main-context-menu-video-email =
 main-context-menu-audio-email =
     .label = 郵寄音訊…
     .accesskey = a
-main-context-menu-plugin-play =
-    .label = 啟用此外掛程式
-    .accesskey = c
-main-context-menu-plugin-hide =
-    .label = 隱藏此外掛程式
-    .accesskey = H
 main-context-menu-save-to-pocket =
     .label = 將頁面儲存至 { -pocket-brand-name }
     .accesskey = k
 main-context-menu-send-to-device =
     .label = 將頁面傳送至裝置
     .accesskey = D
-main-context-menu-view-background-image =
-    .label = 檢視背景圖片
-    .accesskey = w
-main-context-menu-generate-new-password =
-    .label = 使用產生的密碼…
-    .accesskey = G
 
 ## The access keys for "Use Saved Login" and "Use Saved Password"
 ## should be the same if possible; the two context menu items
@@ -373,6 +297,9 @@ main-context-menu-use-saved-password =
 
 ##
 
+main-context-menu-use-relay-mask =
+    .label = 使用 { -relay-brand-short-name } 轉寄信箱
+    .accesskey = E
 main-context-menu-suggest-strong-password =
     .label = 建議一組安全的密碼…
     .accesskey = S
@@ -400,8 +327,8 @@ main-context-menu-frame-open-window =
 main-context-menu-frame-reload =
     .label = 重新載入頁框
     .accesskey = R
-main-context-menu-frame-bookmark =
-    .label = 將此頁框加入書籤
+main-context-menu-frame-add-bookmark =
+    .label = 將頁框加入書籤…
     .accesskey = m
 main-context-menu-frame-save-as =
     .label = 頁框另存新檔…
@@ -415,8 +342,8 @@ main-context-menu-frame-view-source =
 main-context-menu-frame-view-info =
     .label = 檢視頁框資訊
     .accesskey = I
-main-context-menu-print-selection =
-    .label = 僅列印選取區域
+main-context-menu-print-selection-2 =
+    .label = 列印選取區域…
     .accesskey = r
 main-context-menu-view-selection-source =
     .label = 檢視選取範圍原始碼
@@ -430,18 +357,12 @@ main-context-menu-take-frame-screenshot =
 main-context-menu-view-page-source =
     .label = 檢視原始碼
     .accesskey = V
-main-context-menu-view-page-info =
-    .label = 檢視頁面資訊
-    .accesskey = I
 main-context-menu-bidi-switch-text =
     .label = 改變文字方向
     .accesskey = w
 main-context-menu-bidi-switch-page =
     .label = 切換頁面方向
     .accesskey = D
-main-context-menu-inspect-element =
-    .label = 檢測元素
-    .accesskey = Q
 main-context-menu-inspect =
     .label = 檢測
     .accesskey = Q
@@ -455,3 +376,6 @@ main-context-menu-eme-learn-more =
 main-context-menu-open-link-in-container-tab =
     .label = 用新 { $containerName } 容器分頁開啟鏈結
     .accesskey = T
+main-context-menu-reveal-password =
+    .label = 顯示密碼
+    .accesskey = v

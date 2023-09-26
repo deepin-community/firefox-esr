@@ -10,11 +10,6 @@ crashes-id = Verslag-ID
 crashes-send-date = Ingedien
 crashes-all-reports = Alle omvalverslae
 crashes-no-config = Hierdie program is nie opgestel om omvalverslae te wys nie.
-extensions-title = Uitbreidings
-extensions-name = Naam
-extensions-enabled = Geaktiveer
-extensions-version = Weergawe
-extensions-id = ID
 support-addons-name = Naam
 support-addons-version = Weergawe
 support-addons-id = ID
@@ -39,6 +34,7 @@ app-basics-memory-use = Geheuegebruik
 app-basics-performance = Werkverrigting
 app-basics-profiles = Profiele
 app-basics-safe-mode = Veilige modus
+
 show-dir-label =
     { PLATFORM() ->
         [macos] Wys in Finder
@@ -65,11 +61,11 @@ library-version-title = Biblioteekweergawes
 copy-text-to-clipboard-label = Kopieer teks na die knipbord
 copy-raw-data-to-clipboard-label = Kopieer rou data na die knipbord
 sandbox-title = Sandput
-safe-mode-title = Probeer veilige modus
-restart-in-safe-mode-label = Herbegin met byvoegings gedeaktiveer…
 
 ## Media titles
 
+
+## Codec support table
 
 ##
 

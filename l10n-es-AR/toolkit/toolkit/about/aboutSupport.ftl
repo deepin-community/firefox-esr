@@ -12,11 +12,6 @@ crashes-id = ID de informe
 crashes-send-date = Enviados
 crashes-all-reports = Todos los informes de fallos
 crashes-no-config = Esta aplicación fue sido configurada para mostrar informes de fallos.
-extensions-title = Extensiones
-extensions-name = Nombre
-extensions-enabled = Habilitada
-extensions-version = Versión
-extensions-id = ID
 support-addons-title = Complementos
 support-addons-name = Nombre
 support-addons-type = Tipo
@@ -80,6 +75,12 @@ app-basics-location-service-key-google = Clave del servicio de localización de 
 app-basics-safebrowsing-key-google = Google Safebrowsing Key
 app-basics-key-mozilla = Clave del servicio de ubicación de Mozilla
 app-basics-safe-mode = Modo seguro
+app-basics-memory-size = Tamaño de la memoria (RAM)
+app-basics-disk-available = Espacio disponible en disco
+# Variables:
+#   $value (number) - Amount of data being stored
+#   $unit (string) - The unit of data being stored (e.g. MB)
+app-basics-data-size = { $value } { $unit }
 show-dir-label =
     { PLATFORM() ->
         [macos] Mostrar en Finder
@@ -109,11 +110,21 @@ graphics-gpu2-title = GPU #2
 graphics-decision-log-title = Registro de decisión
 graphics-crash-guards-title = Características de protección contra fallos deshabilitadas
 graphics-workarounds-title = Soluciones
+graphics-device-pixel-ratios = Proporción de pixeles de la ventana del dispositivo
 # Windowing system in use on Linux (e.g. X11, Wayland).
 graphics-window-protocol = Protocolo de ventana
 # Desktop environment in use on Linux (e.g. GNOME, KDE, XFCE, etc).
 graphics-desktop-environment = Entorno de escritorio
 place-database-title = Base de datos de lugares
+place-database-stats = Estadísticas
+place-database-stats-show = Mostrar estadísticas
+place-database-stats-hide = Ocultar estadísticas
+place-database-stats-entity = Entidad
+place-database-stats-count = Cantidad
+place-database-stats-size-kib = Tamaño (KiB
+place-database-stats-size-perc = Tamaño (%)
+place-database-stats-efficiency-perc = Eficiencia (%)
+place-database-stats-sequentiality-perc = Secuencialidad (%)
 place-database-integrity = Integridad
 place-database-verify-integrity = Verificar integridad
 a11y-title = Accesibilidad
@@ -133,8 +144,6 @@ sandbox-sys-call-tid = TID
 sandbox-sys-call-proc-type = Tipo de proceso
 sandbox-sys-call-number = Syscall
 sandbox-sys-call-args = Argumentos
-safe-mode-title = Intentar modo seguro
-restart-in-safe-mode-label = Reiniciar con complementos deshabilitados…
 troubleshoot-mode-title = Diagnosticar problemas
 restart-in-troubleshoot-mode-label = Modo de resolución de problemas…
 clear-startup-cache-title = Intentar borrar la caché de inicio
@@ -162,8 +171,18 @@ media-device-channels = Canales
 media-device-rate = Frecuencia
 media-device-latency = Latencia
 media-capabilities-title = Capacidades de medios
+media-codec-support-info = Información de soporte de códecs
 # List all the entries of the database.
 media-capabilities-enumerate = Enumerar base de datos
+
+## Codec support table
+
+media-codec-support-sw-decoding = Decodificación por software
+media-codec-support-hw-decoding = Decodificación por hardware
+media-codec-support-codec-name = Nombre del códec
+media-codec-support-supported = Soportado
+media-codec-support-unsupported = No soportado
+media-codec-support-error = La información de soporte del códec no está disponible. Vuelva a intentarlo después de reproducir de nuevo un archivo de medios
 
 ##
 
@@ -192,36 +211,6 @@ remote-debugging-url = URL
 
 ##
 
-support-third-party-modules-title = Módulos de terceros
-support-third-party-modules-module = Archivo de módulo
-support-third-party-modules-version = Versión de archivo
-support-third-party-modules-vendor = Información del fabricante
-support-third-party-modules-occurrence = Veces
-support-third-party-modules-process = Tipo de proceso e ID
-support-third-party-modules-thread = Hilo
-support-third-party-modules-base = Dirección de Imagebase
-support-third-party-modules-uptime = Tiempo de actividad del proceso (ms)
-support-third-party-modules-duration = Duración de carga (ms)
-support-third-party-modules-status = Estado
-support-third-party-modules-status-loaded = Cargado
-support-third-party-modules-status-blocked = Bloqueado
-support-third-party-modules-status-redirected = Redirigido
-support-third-party-modules-empty = No se cargaron módulos de terceros.
-support-third-party-modules-no-value = (Sin valor)
-support-third-party-modules-button-open =
-    .title = Abrir ubicación del archivo…
-support-third-party-modules-expand =
-    .title = Mostrar información detallada
-support-third-party-modules-collapse =
-    .title = Contraer información detallada
-support-third-party-modules-unsigned-icon =
-    .title = Este módulo no está firmado
-support-third-party-modules-folder-icon =
-    .title = Abrir ubicación del archivo…
-support-third-party-modules-down-icon =
-    .title = Mostrar información detallada
-support-third-party-modules-up-icon =
-    .title = Contraer información detallada
 # Variables
 # $days (Integer) - Number of days of crashes to log
 report-crash-for-days =
@@ -308,10 +297,8 @@ webgl2-renderer = Procesador WebGL2
 webgl2-version = Versión del controlador WebGL 2
 webgl2-driver-extensions = Extensiones del controlador WebGL 2
 webgl2-extensions = Extensiones WebGL 2
-blocklisted-bug = Bloqueado por problemas conocidos
-# Variables
-# $bugNumber (string) - String of bug number from Bugzilla
-bug-link = bug { $bugNumber }
+webgpu-default-adapter = Adaptador predeterminado de WebGPU
+webgpu-fallback-adapter = Adaptador alternativo de WebGPU
 # Variables
 #   $bugNumber (string) - Bug number on Bugzilla
 support-blocklisted-bug = En lista de bloqueo debido a problemas conocidos: <a data-l10n-name="bug-link">{ $bugNumber }</a>
@@ -319,8 +306,6 @@ support-blocklisted-bug = En lista de bloqueo debido a problemas conocidos: <a d
 # $failureCode (string) - String that can be searched in the source tree.
 unknown-failure = Bloqueado; código de falla { $failureCode }
 d3d11layers-crash-guard = Compositor D3D11
-d3d11video-crash-guard = Decodificador de video D3D11
-d3d9video-crash-guard = Decodificador de video D3D9
 glcontext-crash-guard = OpenGL
 wmfvpxvideo-crash-guard = Decodificador de video WMF VPX
 reset-on-next-restart = Restablecer en próximo reinicio
@@ -343,6 +328,7 @@ can-sandbox-media = Media Plugin Sandboxing
 content-sandbox-level = Content Process Sandbox Level
 effective-content-sandbox-level = Proceso de contenido efectivo del nivel de Sandbox
 content-win32k-lockdown-state = Estado de bloqueo de Win32k para proceso de contenido
+support-sandbox-gpu-level = Nivel de sandbox de proceso de GPU
 sandbox-proc-type-content = contenido
 sandbox-proc-type-file = contenido de archivo
 sandbox-proc-type-media-plugin = plugin de medios
@@ -360,14 +346,6 @@ launcher-process-status-unknown = Estado desconocido
 # $remoteWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
 multi-process-windows = { $remoteWindows }/{ $totalWindows }
-multi-process-status-0 = Habilitado por el usuario
-multi-process-status-1 = Habilitado por defecto
-multi-process-status-2 = Deshabilitado
-multi-process-status-4 = Deshabilitado por herramientas de accesibilidad
-multi-process-status-6 = Deshabiliatdo por ingreso de texto no soportado
-multi-process-status-7 = Deshabilitado por complementos
-multi-process-status-8 = Deshabilitado por la fuerza
-multi-process-status-unknown = Estado desconocido
 # Variables
 # $fissionWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
@@ -376,7 +354,7 @@ fission-status-experiment-control = Deshabilitado por el experimento
 fission-status-experiment-treatment = Habilitado por el experimento
 fission-status-disabled-by-e10s-env = Deshabilitado por el entorno
 fission-status-enabled-by-env = Habilitado por el entorno
-fission-status-disabled-by-safe-mode = Deshabilitado por el modo seguro
+fission-status-disabled-by-env = Deshabilitado por el entorno
 fission-status-enabled-by-default = Habilitado forma predeterminada
 fission-status-disabled-by-default = Deshabilitado de forma predeterminada
 fission-status-enabled-by-user-pref = Habilitado por el usuario

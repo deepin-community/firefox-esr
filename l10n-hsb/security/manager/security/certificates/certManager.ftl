@@ -23,49 +23,12 @@ certmgr-tab-ca =
 certmgr-mine = Maće certifikaty wot tutych organizacijow, kotrež was identifikuja
 certmgr-remembered = Tute certifikaty so wužiwaja, zo bychu was na websydłach identifikowali.
 certmgr-people = Maće certifikaty wo dataji, kotrež tutych ludźi identifikuja
-certmgr-servers = Maće certifikaty wo dataji, kotrež tute serwery identifikuja
 certmgr-server = Tute zapiski zmylkowe wuwzaća serweroweho certifikata identifikuja
 certmgr-ca = Maće certifikaty wo dataji, kotrež tute certifikatowe awtority identifikuja
 
-certmgr-detail-general-tab-title =
-    .label = Powšitkowny
-    .accesskey = P
-
-certmgr-detail-pretty-print-tab-title =
-    .label = Podrobnosće
-    .accesskey = d
-
-certmgr-pending-label =
-    .value = Certifikat so tuchwilu pruwuje…
-
-certmgr-subject-label = Wudaty za
-
-certmgr-issuer-label = Wudaty wot
-
-certmgr-period-of-validity = Doba płaćiwosće
-
-certmgr-fingerprints = Porstowy wotčišće
-
-certmgr-cert-detail =
-    .title = Podrobnosć certifikata
-    .buttonlabelaccept = Začinić
-    .buttonaccesskeyaccept = Z
-
-certmgr-cert-detail-commonname = Powšitkowne mjeno (CN)
-
-certmgr-cert-detail-org = Organizacija (O)
-
-certmgr-cert-detail-orgunit = Organizaciska jednotka (OU)
-
-certmgr-cert-detail-serial-number = Serijowe čisło
-
-certmgr-cert-detail-sha-256-fingerprint = Porstowy wotćišć SHA-256
-
-certmgr-cert-detail-sha-1-fingerprint = Porstowy wotćišć SHA1
-
-certmgr-edit-ca-cert =
+certmgr-edit-ca-cert2 =
     .title = Nastajenja dowěryhódnosće certifikata certifikatoweje awtority wobdźěłać
-    .style = width: 48em;
+    .style = min-width: 48em;
 
 certmgr-edit-cert-edit-trust = Nastajenja dwoěryhódnosće:
 
@@ -75,9 +38,9 @@ certmgr-edit-cert-trust-ssl =
 certmgr-edit-cert-trust-email =
     .label = Tutón certifikat móže e-mejlowych wužiwarjow identifikować.
 
-certmgr-delete-cert =
+certmgr-delete-cert2 =
     .title = Certifikat zhašeć
-    .style = width: 48em; height: 24em;
+    .style = min-width: 48em; min-height: 24em;
 
 certmgr-cert-host =
     .label = Host
@@ -88,18 +51,11 @@ certmgr-cert-name =
 certmgr-cert-server =
     .label = Serwer
 
-certmgr-override-lifetime =
-    .label = Žiwjenski čas
-
 certmgr-token-name =
     .label = Wěstotny grat
 
-certmgr-begins-on = Započnje so
-
 certmgr-begins-label =
     .label = Započnje so
-
-certmgr-expires-on = Spadnje
 
 certmgr-expires-label =
     .label = Spadnje
@@ -109,6 +65,9 @@ certmgr-email =
 
 certmgr-serial =
     .label = Serijowe čisło
+
+certmgr-fingerprint-sha-256 =
+    .label = Porstowy wotćišć SHA-256
 
 certmgr-view =
     .label = Wobhladać…
@@ -141,18 +100,6 @@ certmgr-backup-all =
 certmgr-restore =
     .label = Importować…
     .accesskey = m
-
-certmgr-details =
-    .value = Pola certifikata
-    .accesskey = c
-
-certmgr-fields =
-    .value = Hódnota pola
-    .accesskey = H
-
-certmgr-hierarchy =
-    .value = Certifikatowa hierarchija
-    .accesskey = h
 
 certmgr-add-exception =
     .label = Wuwzaće přidać…
@@ -216,12 +163,6 @@ delete-user-cert-confirm = Chceće woprawdźe tute certifikaty zhašeć?
 delete-user-cert-impact = jeli jedny ze swojich certifikatow zhašeće, njemóžeće wjace jón wužiwać, zo by was identifikował.
 
 
-delete-ssl-cert-title =
-    .title = Serwerowe wuwzaća certifikata zhašeć
-delete-ssl-cert-confirm = Chceće woprawdźe tute serwerowe wuwzaća zhašeć?
-delete-ssl-cert-impact = Jeli serwerowe wuwzaće zhašeće, wobnowiće zwučene kontrole wěstoty za tón serwer a je trěbne, zo wón płaćiwy certifikat wužiwa.
-
-
 delete-ssl-override-title =
     .title = Serwerowe wuwzaće certifikata zhašeć
 delete-ssl-override-confirm = Chceće woprawdźe tute serwerowe wuwzaće zhašeć?
@@ -244,47 +185,6 @@ delete-email-cert-impact = Jeli e-mejlowy certifikat někajkeje wosoby zhašeće
 #   $serialNumber : the serial number of the cert in AA:BB:CC hex format.
 cert-with-serial =
     .value = Certifikat ze serijowym čisłom: { $serialNumber }
-
-## Cert Viewer
-
-# Title used for the Certificate Viewer.
-#
-# Variables:
-#   $certificate : a string representative of the certificate being viewed.
-cert-viewer-title =
-    .title = Certifikatowy wobhladowak: “{ $certName }”
-
-not-present =
-    .value = <Njeje dźěl certifikata>
-
-# Cert verification
-cert-verified = Tutón certifikat je so za slědowace wužića přepruwował:
-
-# Add usage
-verify-ssl-client =
-    .value = Klientowy certifikat SSL
-
-verify-ssl-server =
-    .value = Serwerowy certifikat SSL
-
-verify-ssl-ca =
-    .value = SSL certifikatowa awtorita
-
-verify-email-signer =
-    .value = Certifikat e-mejloweho podpisarja
-
-verify-email-recip =
-    .value = Certifikat e-mejloweho přijimowarja
-
-# Cert verification
-cert-not-verified-cert-revoked = Tutón certifikat njeda so přepruwować, dokelž je so wotwołał.
-cert-not-verified-cert-expired = Tutón certifikat njeda so přepruwować, dokelž je spadnjeny.
-cert-not-verified-cert-not-trusted = Tutón certifikat njeda so přepruwować, dokelž njeje dwoěry hódny.
-cert-not-verified-issuer-not-trusted = Tutón certifikat njeda so přepruwować, dokelž wudawar njeje dowěry hódny.
-cert-not-verified-issuer-unknown = Tutón certifikat njeda so přepruwować, dokelž wudawar je njeznaty.
-cert-not-verified-ca-invalid = Tutón certifikat njeda so přepruwować, dokelž certifikat certifikatoweje awtority je njepłaćiwy.
-cert-not-verified_algorithm-disabled = Tutón certifikat njeda so přepruwować, dokelž je so ze signowanskim algoritmom signował, kotryž je so znjemóžnił, dokelž algoritm wěsty njeje.
-cert-not-verified-unknown = Tutón certifikat njeda so z njeznatych přičinow přepruwować.
 
 # Used to indicate that the user chose not to send a client authentication certificate to a server that requested one in a TLS handshake.
 send-no-client-certificate = Žadyn klientowy certifikat pósłać

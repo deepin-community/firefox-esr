@@ -16,6 +16,8 @@ policy-AllowedDomainsForApps = Domains festlegen, die auf Google Workspace zugre
 
 policy-AppAutoUpdate = Automatische Anwendungsaktualisierung aktivieren oder deaktivieren
 
+policy-AppUpdatePin = Verhindern, dass { -brand-short-name } über die angegebene Version hinaus aktualisiert wird
+
 policy-AppUpdateURL = Anwendungsaktualisierung über benutzerdefinierte Adresse festlegen
 
 policy-Authentication = Integrierte Authentifizierung für Websites, welche dies unterstützen, konfigurieren
@@ -40,6 +42,9 @@ policy-CertificatesDescription = Zertifikate hinzufügen oder eingebaute Zertifi
 
 policy-Cookies = Cookies setzen durch Websites erlauben oder verbieten
 
+# Containers in this context is referring to container tabs in Firefox.
+policy-Containers = Richtlinien für Umgebungen festlegen
+
 policy-DisabledCiphers = Chiffren deaktivieren
 
 policy-DefaultDownloadDirectory = Standardordner für Downloads festlegen
@@ -48,7 +53,7 @@ policy-DisableAppUpdate = Browser-Updates deaktivieren
 
 policy-DisableBuiltinPDFViewer = Eingebauten PDF-Betrachter von { -brand-short-name } (PDF.js) deaktivieren
 
-policy-DisableDefaultBrowserAgent = Aktionen des Programms zur Erkennung des Standardbrowser deaktivieren. Findet nur auf Windows Anwendung, da andere Betriebssysteme nicht über dieses Programm verfügen.
+policy-DisableDefaultBrowserAgent = Aktionen des Programms zur Erkennung des Standardbrowsers deaktivieren. Findet nur unter Windows Anwendung, da andere Betriebssysteme nicht über dieses Programm verfügen.
 
 policy-DisableDeveloperTools = Zugriff auf Entwicklerwerkzeuge deaktivieren
 
@@ -65,13 +70,11 @@ policy-DisableForgetButton = Zugriff auf "Vergessen"-Schaltfläche verhindern
 
 policy-DisableFormHistory = Formular- und Suchchronik nicht speichern
 
-policy-DisableMasterPasswordCreation = Master-Passwort kann nicht erstellt werden, falls true
-
 policy-DisablePrimaryPasswordCreation = Hauptpasswort kann nicht erstellt werden, falls true
 
 policy-DisablePasswordReveal = Option zur Klartextanzeige von Passwörtern in gespeicherten Zugangsdaten deaktivieren
 
-policy-DisablePocket = Pocket als Speicherliste für Webseiten deaktivieren
+policy-DisablePocket2 = { -pocket-brand-name } als Speicherliste für Webseiten deaktivieren
 
 policy-DisablePrivateBrowsing = Privates Surfen deaktivieren
 
@@ -89,6 +92,8 @@ policy-DisableSystemAddonUpdate = Installieren und Aktualisieren von System-Add-
 
 policy-DisableTelemetry = Datenerhebung zur Verbesserung von Firefox (Telemetrie) deaktivieren
 
+policy-DisableThirdPartyModuleBlocking = Verhindern, dass der Benutzer Module von Drittanbietern blockiert, die in den { -brand-short-name }-Prozess eingefügt werden
+
 policy-DisplayBookmarksToolbar = Lesezeichen-Symbolleiste standardmäßig anzeigen
 
 policy-DisplayMenuBar = Menüleiste standardmäßig anzeigen
@@ -105,6 +110,8 @@ policy-EnableTrackingProtection = Seitenelementeblockierung aktivieren oder deak
 # “lock” means that the user won’t be able to change this setting
 policy-EncryptedMediaExtensions = Encrypted Media Extensions (Module zur Wiedergabe verschlüsselter Mediendateien) aktivieren oder deaktivieren und optional Änderung dieser Einstellung verbieten
 
+policy-ExemptDomainFileTypePairsFromFileTypeDownloadWarnings = Warnungen basierend auf der Dateierweiterung für bestimmte Dateitypen in Domains deaktivieren
+
 # A “locked” extension can’t be disabled or removed by the user. This policy
 # takes 3 keys (“Install”, ”Uninstall”, ”Locked”), you can either keep them in
 # English or translate them as verbs.
@@ -114,9 +121,9 @@ policy-ExtensionSettings = Alle Einstellungen für die Erweiterungsinstallation 
 
 policy-ExtensionUpdate = Automatische Add-on-Updates aktivieren oder deaktivieren
 
-policy-FirefoxHome = Firefox-Startseite konfigurieren
+policy-FirefoxHome2 = { -firefox-home-brand-name } konfigurieren
 
-policy-FlashPlugin = Flash-Plugin-Verwendung erlauben oder verbieten
+policy-GoToIntranetSiteForSingleWordEntryInAddressBar = Direkte Navigation zu Intranet-Websites erzwingen, anstatt beim Eintippen von Einzelworteinträgen in die Adressleiste eine Suche zu starten
 
 policy-Handlers = Standardanwendungen für das Öffnen von Dateien, Protokollen und MIME-Typen festlegen
 
@@ -141,8 +148,6 @@ policy-LocalFileLinks = Festgelegten Websites Zugriff auf lokale Dateien erlaube
 
 policy-ManagedBookmarks = Eine Liste von Lesezeichen festlegen, die von einem Administrator verwaltet wird und vom Benutzer nicht geändert werden kann.
 
-policy-MasterPassword = Benutzung eines Master-Passworts erfordern oder verhindern
-
 policy-ManualAppUpdateOnly = Nur manuelle Updates erlauben und den Benutzer nicht über Updates benachrichtigen.
 
 policy-PrimaryPassword = Benutzung eines Hauptpassworts erfordern oder verhindern
@@ -162,6 +167,8 @@ policy-OverrideFirstRunPage = Einmalig geöffnete Einführungsseite beim Starten
 policy-OverridePostUpdatePage = Firefox-Neuigkeiten-Seite - angezeigt nach Programmaktualisierung - festlegen. Ein leerer Wert deaktiviert das Öffnen der Seite.
 
 policy-PasswordManagerEnabled = Speichern von Passwörtern in der Passwortverwaltung aktivieren
+
+policy-PasswordManagerExceptions = { -brand-short-name } daran hindern, Passwörter für bestimmte Websites zu speichern
 
 # PDF.js and PDF should not be translated
 policy-PDFjs = Eingebauten PDF-Betrachter von { -brand-short-name } (PDF.js) deaktivieren oder konfigurieren
@@ -188,8 +195,8 @@ policy-SearchEngines = Suchmaschineneinstellungen anpassen. Diese Richtlinie ist
 
 policy-SearchSuggestEnabled = Suchvorschläge aktivieren oder deaktivieren
 
-# For more information, see https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSS/PKCS11/Module_Installation
-policy-SecurityDevices = PKCS#11-Module installieren
+# For more information, see https://wikipedia.org/wiki/PKCS_11
+policy-SecurityDevices2 = PKCS#11-Module hinzufügen oder löschen
 
 policy-ShowHomeButton = Schaltfläche "Startseite" in der Symbolleiste anzeigen
 
@@ -197,9 +204,13 @@ policy-SSLVersionMax = Höchste zu verwendende SSL-Version festlegen
 
 policy-SSLVersionMin = Niedrigste zu verwendende SSL-Version festlegen
 
+policy-StartDownloadsInTempDirectory = Erzwingen, dass Downloads an einem lokalen, temporären Speicherort und nicht im Standard-Download-Verzeichnis beginnen
+
 policy-SupportMenu = Benutzerdefinierten Eintrag zum Menü "Hilfe" hinzufügen
 
 policy-UserMessaging = Anzeige von bestimmten Nachrichten deaktivieren
+
+policy-UseSystemPrintDialog = Mit Druckdialog des Systems drucken
 
 # “format” refers to the format used for the value of this policy.
 policy-WebsiteFilter = Bestimmte Website-Aufrufe blockieren. Weitere Details in der Dokumentation.

@@ -61,10 +61,6 @@ about-debugging-sidebar-item-connect-button-connection-not-responding = La conne
 # Text displayed as connection error in sidebar item when the connection has timed out.
 about-debugging-sidebar-item-connect-button-connection-timeout = S'ha esgotat el temps d'espera de la connexió
 
-# Temporary text displayed in sidebar items representing remote runtimes after
-# successfully connecting to them. Temporary UI, do not localize.
-about-debugging-sidebar-item-connected-label = Connectat
-
 # Text displayed in sidebar items for remote devices where a compatible browser (eg
 # Firefox) has not been detected yet. Typically, Android phones connected via USB with
 # USB debugging enabled, but where Firefox is not started.
@@ -293,6 +289,10 @@ about-debugging-extension-location =
 about-debugging-extension-id =
     .label = ID d'extensió
 
+# This string is displayed as a label of the button that starts a service worker.
+about-debugging-worker-action-start2 = Inicia
+    .disabledTitle = L'inici d'un procés de treball de servei està desactivat pel multiprocés del { -brand-shorter-name }
+
 # This string is displayed as a label of the button that unregisters a service worker.
 about-debugging-worker-action-unregister = Suprimeix el registre
 
@@ -322,10 +322,6 @@ about-debugging-worker-inspect-action-disabled =
 # Displayed as title of the inspect button for zombie tabs (e.g. tabs loaded via a session restore).
 about-debugging-zombie-tab-inspect-action-disabled =
     .title = Esta pestanya no s'ha acabat de carregat i no es pot inspeccionar
-
-# Displayed as name for the Main Process debug target in the Processes category. Only for
-# remote runtimes, if `devtools.aboutdebugging.process-debugging` is true.
-about-debugging-main-process-name = Procés principal
 
 # Displayed instead of the Main Process debug target when the preference
 # `devtools.browsertoolbox.fission` is true.

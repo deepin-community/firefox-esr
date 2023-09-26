@@ -2,19 +2,22 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-addons-window =
-    .title = Tilleggsbehandler
-
 addons-page-title = Tilleggsbehandler
 
 search-header =
     .placeholder = Søk på addons.mozilla.org
     .searchbuttonlabel = Søk
 
-search-header-shortcut =
-    .key = f
+## Variables
+##   $domain - Domain name where add-ons are available (e.g. addons.mozilla.org)
 
 list-empty-get-extensions-message = Last ned utvidelser og tema på <a data-l10n-name="get-extensions">{ $domain }</a>
+
+list-empty-get-dictionaries-message = Last ned ordbøker på <a data-l10n-name="get-extensions">{ $domain }</a>
+
+list-empty-get-language-packs-message = Last ned språkpakker på <a data-l10n-name="get-extensions">{ $domain }</a>
+
+##
 
 list-empty-installed =
     .value = Du har ikke installert noen utvidelser av denne typen
@@ -35,18 +38,6 @@ help-button = Brukerstøtte for utvidelser
 sidebar-help-button-title =
     .title = Brukerstøtte for utvidelser
 
-preferences =
-    { PLATFORM() ->
-        [windows] { -brand-short-name }-innstillinger
-       *[other] { -brand-short-name }-innstillinger
-    }
-sidebar-preferences-button-title =
-    .title =
-        { PLATFORM() ->
-            [windows] { -brand-short-name }-innstillinger
-           *[other] { -brand-short-name }-innstillinger
-        }
-
 addons-settings-button = { -brand-short-name }-innstillinger
 sidebar-settings-button-title =
     .title = { -brand-short-name }-innstillinger
@@ -57,48 +48,14 @@ show-unsigned-extensions-button =
 show-all-extensions-button =
     .label = Vis alle utvidelser
 
-cmd-show-details =
-    .label = Vis detaljer
-    .accesskey = V
-
-cmd-find-updates =
-    .label = Søk etter oppdateringer
-    .accesskey = S
-
-cmd-preferences =
-    .label =
-        { PLATFORM() ->
-            [windows] Innstillinger
-           *[other] Innstillinger
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] I
-           *[other] I
-        }
-
-cmd-enable-theme =
-    .label = Bruk tema
-    .accesskey = B
-
-cmd-disable-theme =
-    .label = Slutt å bruke tema
-    .accesskey = b
-
-cmd-install-addon =
-    .label = Installer
-    .accesskey = I
-
-cmd-contribute =
-    .label = Bidra
-    .accesskey = B
-    .tooltiptext = Bidra til utviklingen av denne utvidelsen
-
 detail-version =
     .label = Versjon
 
 detail-last-updated =
     .label = Sist oppdatert
+
+addon-detail-description-expand = Vis mer
+addon-detail-description-collapse = Vis mindre
 
 detail-contributions-description = Utvikleren av denne utvidelsen ber om at du hjelper å støtte videre utvikling ved å gjøre en liten donasjon.
 
@@ -230,6 +187,13 @@ addon-category-available-updates-title =
 addon-category-recent-updates = Nylig oppdatert
 addon-category-recent-updates-title =
     .title = Nylig oppdatert
+addon-category-sitepermission = Nettstedstillatelser
+addon-category-sitepermission-title =
+    .title = Nettstedstillatelser
+# String displayed in about:addons in the Site Permissions section
+# Variables:
+#  $host (string): DNS host name for which the webextension enables permissions
+addon-sitepermission-host = Nettstedtillatelser for { $host }
 
 ## These are global warnings
 
@@ -240,7 +204,6 @@ extensions-warning-check-compatibility-button = Slå på
 extensions-warning-update-security = Sikkerhetskontroll av utvidelsesoppdateringer er avslått. Sikkerheten din kan bli satt i fare av oppdateringer.
 extensions-warning-update-security-button = Slå på
     .title = Slå på sikkerhetskontroll av utvidelsesoppdateringer
-
 
 ## Strings connected to add-on updates
 
@@ -360,6 +323,7 @@ install-theme-button = Installer tema
 # the detailed add-on view is opened, from where the add-on can be managed.
 manage-addon-button = Behandle
 find-more-addons = Finn flere utvidelser
+find-more-themes = Finn flere tema
 
 # This is a label for the button to open the "more options" menu, it is only
 # used for screen readers.
@@ -391,7 +355,7 @@ extension-enabled-heading = Påslått
 extension-disabled-heading = Avslått
 
 theme-enabled-heading = Påslått
-theme-disabled-heading = Avslått
+theme-disabled-heading2 = Lagrede tema
 
 plugin-enabled-heading = Påslått
 plugin-disabled-heading = Avslått
@@ -402,7 +366,8 @@ dictionary-disabled-heading = Avslått
 locale-enabled-heading = Påslått
 locale-disabled-heading = Avslått
 
-ask-to-activate-button = Spør om aktivering
+sitepermission-enabled-heading = Påslått
+sitepermission-disabled-heading = Avslått
 
 always-activate-button = Aktiver alltid
 never-activate-button = Aktiver aldri
@@ -460,13 +425,15 @@ addon-detail-private-browsing-help = Når det er tillatt, vil utvidelsen få til
 addon-detail-private-browsing-allow = Tillat
 addon-detail-private-browsing-disallow = Ikke tillat
 
+## "sites with restrictions" (internally called "quarantined") are special domains
+## where add-ons are normally blocked for security reasons.
+
 ## This is the tooltip text for the recommended badges for an extension in about:addons. The
 ## badge is a small icon displayed next to an extension when it is recommended on AMO.
 
 addon-badge-recommended2 =
     .title = { -brand-product-name } anbefaler bare utvidelser som oppfyller våre standarder for sikkerhet og ytelse
     .aria-label = { addon-badge-recommended2.title }
-
 # We hard code "Mozilla" in the string below because the extensions are built
 # by Mozilla and we don't want forks to display "by Fork".
 addon-badge-line3 =
@@ -485,13 +452,14 @@ release-notes-loading = Laster…
 release-notes-error = Beklager, men en feil oppstod under lasting av versjonsnotatet.
 
 addon-permissions-empty = Denne utvidelsen krever ingen tillatelser
-
 addon-permissions-required = Nødvendige tillatelser for kjernefunksjonalitet:
 addon-permissions-optional = Valgfrie tillatelser for ekstra funksjonalitet:
 addon-permissions-learnmore = Les mer om tillatelser
 
 recommended-extensions-heading = Anbefalte utvidelser
 recommended-themes-heading = Anbefalte temaer
+
+addon-sitepermissions-required = Gir følgende funksjoner til <span data-l10n-name="hostname">{ $hostname }</span>:
 
 # A recommendation for the Firefox Color theme shown at the bottom of the theme
 # list view. The "Firefox Color" name itself should not be translated.
@@ -505,6 +473,7 @@ plugin-heading = Behandle programtilleggene dine
 dictionary-heading = Behandle ordbøkene dine
 locale-heading = Behandle språkene dine
 updates-heading = Behandle oppdateringene
+sitepermission-heading = Behandle nettstedstillatelsene dine
 discover-heading = Tilpass din { -brand-short-name }
 shortcuts-heading = Håndter snarveier for utvidelser
 
@@ -514,3 +483,30 @@ addons-heading-search-input =
 
 addon-page-options-button =
     .title = Verktøy for alle utvidelser
+
+## Detail notifications
+## Variables:
+##   $name (String): name of the add-on.
+
+## Detail notifications
+## Variables:
+##   $name (string) - Name of the add-on.
+
+# Variables:
+#   $version (String): application version.
+details-notification-incompatible = { $name } er inkompatibel med { -brand-short-name } { $version }.
+details-notification-incompatible-link = Mer informasjon
+
+details-notification-unsigned-and-disabled = { $name } har ikke blitt bekreftet for bruk i { -brand-short-name } og har blitt slått av.
+details-notification-unsigned-and-disabled-link = Mer informasjon
+
+details-notification-unsigned = { $name } har ikke blitt bekreftet for bruk i { -brand-short-name }. Fortsett med varsomhet.
+details-notification-unsigned-link = Mer informasjon
+
+details-notification-blocked = { $name } er avslått av sikkerhets- eller stabilitetshensyn .
+details-notification-blocked-link = Mer informasjon
+
+details-notification-softblocked = { $name } er kjent for å skape sikkerhets- eller stabilitetsproblemer.
+details-notification-softblocked-link = Mer informasjon
+
+details-notification-gmp-pending = { $name } vil installeres snart.

@@ -5,9 +5,9 @@
 
 ## Strings used for device manager
 
-devmgr =
+devmgr-window =
     .title = Eszközkezelő
-    .style = width: 67em; height: 32em;
+    .style = min-width: 67em; min-height: 32em;
 
 devmgr-devlist =
     .label = Biztonsági modulok és szolgáltatások
@@ -115,8 +115,6 @@ devinfo-label =
 
 devinfo-serialnum =
     .label = Sorozatszám
-
-fips-nonempty-password-required = A FIPS-módhoz szükséges, hogy minden adatvédelmi eszközhöz legyen mesterjelszó beállítva. Állítsa be a jelszót a FIPS-mód engedélyezése előtt.
 
 fips-nonempty-primary-password-required = A FIPS-módhoz szükséges, hogy minden adatvédelmi eszközhöz legyen elsődleges jelszó beállítva. Állítsa be a jelszót a FIPS-mód engedélyezése előtt.
 unable-to-toggle-fips = Nem sikerült módosítani a biztonsági eszköz FIPS-módját. Javasoljuk, hogy lépjen ki az alkalmazásból, és indítsa újra.

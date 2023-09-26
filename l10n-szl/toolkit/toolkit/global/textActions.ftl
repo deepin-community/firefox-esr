@@ -50,3 +50,6 @@ text-action-select-all-shortcut =
 
 text-action-spell-no-suggestions =
     .label = Żodnych doradōw szkryftu
+
+text-action-search-text-box-clear =
+    .title = Wypucuj

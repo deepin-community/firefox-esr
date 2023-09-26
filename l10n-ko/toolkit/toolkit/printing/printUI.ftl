@@ -14,6 +14,9 @@ printui-sheets-count =
     }
 
 printui-page-range-all = 모두
+printui-page-range-current = 현재
+printui-page-range-odd = 홀수
+printui-page-range-even = 짝수
 printui-page-range-custom = 사용자 지정
 printui-page-range-label = 페이지
 printui-page-range-picker =
@@ -56,8 +59,6 @@ printui-two-sided-printing-short-edge = 짧은 가장자리에서 뒤집기
 printui-options = 옵션
 printui-headers-footers-checkbox = 머리글 및 바닥글 인쇄
 printui-backgrounds-checkbox = 배경 인쇄
-
-printui-selection-checkbox = 선택 영역만 인쇄
 
 ## The "Format" section, select a version of the website to print. Radio
 ## options to select between the original page, selected text only, or a version

@@ -5,9 +5,9 @@
 
 ## Strings used for device manager
 
-devmgr =
-    .title = Einingshandtering
-    .style = width: 67em; height: 32em;
+devmgr-window =
+    .title = Einingshandsaming
+    .style = min-width: 67em; min-height: 32em;
 
 devmgr-devlist =
     .label = Tryggingsmodular og -einingar
@@ -115,8 +115,6 @@ devinfo-label =
 
 devinfo-serialnum =
     .label = Serienummer
-
-fips-nonempty-password-required = FIPS-modus krev at du har eit hovudpassord for kvar tryggingseining. Vel eit hovudpassord før du slår på FIPS-moduset.
 
 fips-nonempty-primary-password-required = FIPS-moduset krev at du har eit hovudpassord for kvar tryggingseining. Lag eit passord før du slår på FIPS-modus.
 unable-to-toggle-fips = Klarte ikkje å endra FIPS-modusen for tryggingseininga. Det er tilrådd at du avsluttar og startar denne applikasjonen på nytt.

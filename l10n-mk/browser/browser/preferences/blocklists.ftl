@@ -2,19 +2,15 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
+blocklist-window2 =
+    .title = Списоци за блокирање
+    .style = min-width: 55em
+
 blocklist-close-key =
     .key = w
 
 blocklist-treehead-list =
     .label = Список
-
-blocklist-button-cancel =
-    .label = Откажи
-    .accesskey = Ц
-
-blocklist-button-ok =
-    .label = Зачувај промени
-    .accesskey = С
 
 
 # This template constructs the name of the block list in the block lists dialog.
@@ -26,3 +22,6 @@ blocklist-button-ok =
 #   $description {string, "This list does a pretty good job."} - Description of the list.
 blocklist-item-list-template = { $listName } { $description }
 
+blocklist-item-moz-std-listName = Ниво 1 блок-листа (препорачано).
+blocklist-item-moz-full-listName = Ниво 2 блок-листа.
+blocklist-item-moz-full-description = Ги блокира сите откриени trackers. Некои веб-страници или содржина може да не се вчитаат правилно.

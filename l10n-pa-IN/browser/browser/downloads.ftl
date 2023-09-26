@@ -16,8 +16,8 @@ downloads-panel =
 # The style attribute has the width of the Downloads Panel expressed using
 # a CSS unit. The longest labels that should fit are usually those of
 # in-progress and blocked downloads.
-downloads-panel-list =
-    .style = width: 70ch
+downloads-panel-items =
+    .style = width: 35em
 
 downloads-cmd-pause =
     .label = ਵਿਰਾਮ
@@ -30,42 +30,65 @@ downloads-cmd-cancel =
 downloads-cmd-cancel-panel =
     .aria-label = ਰੱਦ ਕਰੋ
 
-# This message is only displayed on Windows and Linux devices
-downloads-cmd-show-menuitem =
-    .label = ਰੱਖਣ ਵਾਲੇ ਫੋਲਡਰ ਨੂੰ ਖੋਲ੍ਹੋ
+downloads-cmd-show-menuitem-2 =
+    .label =
+        { PLATFORM() ->
+            [macos] Finder ਵਿੱਚ ਵੇਖਾਓ
+           *[other] ਫੋਲਡਰ ਵਿੱਚ ਵੇਖਾਓ
+        }
     .accesskey = F
 
-# This message is only displayed on macOS devices
-downloads-cmd-show-menuitem-mac =
-    .label = Finder ਵਿੱਚ ਵੇਖੋ
-    .accesskey = F
+## Displayed in the downloads context menu for files that can be opened.
+## Variables:
+##   $handler (String) - The name of the mime type's default file handler.
+##   Example: "Notepad", "Acrobat Reader DC", "7-Zip File Manager"
 
 downloads-cmd-use-system-default =
     .label = ਸਿਸਟਮ ਦਰਸ਼ਕ ਵਿੱਚ ਖੋਲ੍ਹੋ
     .accesskey = V
+# This version is shown when the download's mime type has a valid file handler.
+downloads-cmd-use-system-default-named =
+    .label = { $handler } ਵਿੱਚ ਖੋਲ੍ਹੋ
+    .accesskey = I
 
+# We can use the same accesskey as downloads-cmd-always-open-similar-files.
+# Both should not be visible in the downloads context menu at the same time.
 downloads-cmd-always-use-system-default =
     .label = ਹਮੇਸ਼ਾ ਸਿਸਟਮ ਦਰਸ਼ਕ ਵਿੱਚ ਖੋਲ੍ਹੋ
     .accesskey = w
+# We can use the same accesskey as downloads-cmd-always-open-similar-files.
+# Both should not be visible in the downloads context menu at the same time.
+# This version is shown when the download's mime type has a valid file handler.
+downloads-cmd-always-use-system-default-named =
+    .label = ਹਮੇਸ਼ਾਂ { $handler } ਵਿੱਚ ਖੋਲ੍ਹੋ
+    .accesskey = w
 
-downloads-cmd-show-button =
+##
+
+# We can use the same accesskey as downloads-cmd-always-use-system-default.
+# Both should not be visible in the downloads context menu at the same time.
+downloads-cmd-always-open-similar-files =
+    .label = ਮਿਲਦੀਆਂ ਫਾਇਲਾਂ ਨੂੰ ਹਮੇਸ਼ਾਂ ਖੋਲ੍ਹੋ
+    .accesskey = w
+
+downloads-cmd-show-button-2 =
     .tooltiptext =
         { PLATFORM() ->
-            [macos] Finder ਵਿੱਚ ਵੇਖੋ
-           *[other] ਰੱਖਣ ਵਾਲੇ ਫੋਲਡਰ ਨੂੰ ਖੋਲ੍ਹੋ
+            [macos] Finder ਵਿੱਚ ਵੇਖਾਓ
+           *[other] ਫੋਲਡਰ ਵਿੱਚ ਵੇਖਾਓ
         }
 
-downloads-cmd-show-panel =
+downloads-cmd-show-panel-2 =
     .aria-label =
         { PLATFORM() ->
-            [macos] Finder ਵਿੱਚ ਵੇਖੋ
-           *[other] ਰੱਖਣ ਵਾਲੇ ਫੋਲਡਰ ਨੂੰ ਖੋਲ੍ਹੋ
+            [macos] Finder ਵਿੱਚ ਵੇਖਾਓ
+           *[other] ਫੋਲਡਰ ਵਿੱਚ ਵੇਖਾਓ
         }
-downloads-cmd-show-description =
+downloads-cmd-show-description-2 =
     .value =
         { PLATFORM() ->
-            [macos] Finder ਵਿੱਚ ਵੇਖੋ
-           *[other] ਰੱਖਣ ਵਾਲੇ ਫੋਲਡਰ ਨੂੰ ਖੋਲ੍ਹੋ
+            [macos] Finder ਵਿੱਚ ਵੇਖਾਓ
+           *[other] ਫੋਲਡਰ ਵਿੱਚ ਵੇਖਾਓ
         }
 
 downloads-cmd-show-downloads =
@@ -88,6 +111,9 @@ downloads-cmd-clear-list =
     .accesskey = a
 downloads-cmd-clear-downloads =
     .label = ਡਾਊਨਲੋਡ ਨੂੰ ਸਾਫ਼ ਕਰੋ
+    .accesskey = D
+downloads-cmd-delete-file =
+    .label = ਹਟਾਓ
     .accesskey = D
 
 # This command is shown in the context menu when downloads are blocked.
@@ -138,6 +164,19 @@ downloads-open-file =
 ##   $seconds (number) - Amount of seconds left till the file opens.
 ##   $minutes (number) - Amount of minutes till the file opens.
 
+downloading-file-opens-in-hours-and-minutes-2 =
+    .value = { $hours } ਘੰ { $minutes } ਮਿੰਟ ਵਿੱਚ ਖੋਲ੍ਹਿਆ ਜਾ ਰਿਹਾ ਹੈ…
+downloading-file-opens-in-minutes-2 =
+    .value = { $minutes } ਮਿੰਟ ਵਿੱਚ ਖੋਲ੍ਹਿਆ ਜਾ ਰਿਹਾ ਹੈ…
+downloading-file-opens-in-minutes-and-seconds-2 =
+    .value = { $minutes }ਮਿੰਟ { $seconds }ਸਕਿੰਟ ਵਿੱਚ ਖੋਲ੍ਹਿਆ ਜਾ ਰਿਹਾ ਹੈ…
+downloading-file-opens-in-seconds-2 =
+    .value = { $seconds } ਸਕਿੰਟ ਵਿੱਚ ਖੋਲ੍ਹਿਆ ਜਾ ਰਿਹਾ ਹੈ…
+downloading-file-opens-in-some-time-2 =
+    .value = ਜਦੋੰ ਪੂਰਾ ਹੋਇਆ ਤਾਂ ਖੋਲ੍ਹੋ…
+downloading-file-click-to-open =
+    .value = ਜਦੋਂ ਪੂਰਾ ਹੋਵੇ ਤਾਂ ਖੋਲ੍ਹੋ
+
 ##
 
 # Displayed when hovering a download which is able to be retried by users,
@@ -162,6 +201,21 @@ downloads-history =
 downloads-details =
     .title = ਡਾਊਨਲੋਡ ਦੇ ਵੇਰਵੇ
 
+## Displayed when a site attempts to automatically download many files.
+## Variables:
+##   $num (number) - Number of blocked downloads.
+##   $url (string) - The url of the suspicious site, stripped of http, https and www prefix.
+
+downloads-files-not-downloaded =
+    { $num ->
+        [one] ਫਾਇਲ ਡਾਊਨਲੋਡ ਨਹੀਂ ਹੋਈ।
+       *[other] { $num } ਫਾਇਲਾਂ ਡਾਊਨਲੋਡ ਨਹੀਂ ਹੋਈਆਂ।
+    }
+downloads-blocked-from-url = { $url } ਤੋਂ ਡਾਊਨਲੋਡਾਂ ਉੱਤੇ ਪਾਬੰਦੀ ਲਾਈ।
+downloads-blocked-download-detailed-info = { $url } ਨੇ ਆਪਣੇ-ਆਪ ਕਈ ਫਾਇਲਾਂ ਡਾਊਨਲੋਡ ਕਰਨ ਦੀ ਕੋਸ਼ਿਸ਼ ਕੀਤੀ ਹੈ। ਸਾਈਟ ਜਾਂ ਤਾਂ ਖ਼ਰਾਬ ਹੋ ਸਕਦੀ ਹੈ ਜਾਂ ਤੁਹਾਡੇ ਡਿਵਾਈਸ ਉੱਤੇ ਸਪਮ ਫਾਇਲਾਂ ਸਟੋਰ ਕਰਨ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰਦੀ ਹੋ ਸਕਦੀ ਹੈ।
+
+##
+
 downloads-clear-downloads-button =
     .label = ਡਾਊਨਲੋਡ ਨੂੰ ਸਾਫ਼ ਕਰੋ
     .tooltiptext = ਪੂਰੇ ਹੋਏ, ਰੱਦ ਕੀਤੇ ਅਤੇ ਫੇਲ੍ਹ ਹੋਏ ਡਾਊਨਲੋਡ ਸਾਫ਼ ਕਰੋ
@@ -174,3 +228,27 @@ downloads-list-empty =
 # This string is shown when there are no items in the Downloads Panel.
 downloads-panel-empty =
     .value = ਇਸ ਸ਼ੈਸ਼ਨ ਲਈ ਕੋਈ ਡਾਊਨਲੋਡ ਨਹੀ ਹੈ।
+
+# This is displayed in an item at the bottom of the Downloads Panel when there
+# are more downloads than can fit in the list in the panel.
+#   $count (number) - number of files being downloaded that are not shown in the
+#                     panel list.
+downloads-more-downloading =
+    { $count ->
+        [one] { $count } ਹੋਰ ਫਾਇਲ ਡਾਊਨਲੋਡ ਹੋ ਰਹੀ ਹੈ
+       *[other] { $count } ਹੋਰ ਫਾਇਲਾਂ ਡਾਊਨਲੋਡ ਹੋ ਰਹੀਆਂ ਹਨ
+    }
+
+## Download errors
+
+downloads-error-alert-title = ਡਾਊਨਲੋਡ ਗਲਤੀ
+# Variables:
+#   $extension (String): the name of the blocking extension.
+downloads-error-blocked-by = { $extension } ਵਲੋਂ ਪਾਬੰਦੀ ਲਾਏ ਜਾਣ ਕਰਕੇ ਡਾਊਨਲੋਡ ਨੂੰ ਸੰਭਾਲਿਆ ਨਹੀਂ ਜਾ ਸਕਦਾ ਹੈ।
+# Used when the name of the blocking extension is unavailable.
+downloads-error-extension = ਇਕਸਟੈਨਸ਼ਨ ਵਲੋਂ ਪਾਬੰਦੀ ਲਾਏ ਜਾਣ ਕਰਕੇ ਡਾਊਨਲੋਡ ਨੂੰ ਸੰਭਾਲਿਆ ਨਹੀਂ ਜਾ ਸਕਦਾ ਹੈ।
+# Line breaks in this message are meaningful, and should be maintained.
+downloads-error-generic =
+    ਡਾਊਨਲੋਡ ਸੰਭਾਲਿਆ ਨਹੀਂ ਜਾ ਸਕਦਾ ਹੈ, ਕਿਉਂਕਿ ਇੱਕ ਅਣਜਾਣ ਗਲਤੀ ਆਈ ਹੈ।
+    
+    ਬਾਅਦ 'ਚ ਕੋਸ਼ਿਸ਼ ਕਰੋ ਜੀ।

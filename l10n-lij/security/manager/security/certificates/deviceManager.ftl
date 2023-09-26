@@ -5,9 +5,9 @@
 
 ## Strings used for device manager
 
-devmgr =
+devmgr-window =
     .title = Gestô di aparati
-    .style = width: 67em; height: 32em;
+    .style = min-width: 67em; min-height: 32em;
 
 devmgr-devlist =
     .label = Mòdoli e aparati de seguessa
@@ -115,8 +115,6 @@ devinfo-label =
 
 devinfo-serialnum =
     .label = Numero de serie
-
-fips-nonempty-password-required = A-o mòddo FIPS serve che ti t'aggi 'na paròlla segreta prinçipâ  pe ògnidun di aparati de seguessa che gh'é. Pe piaxei inpòsta a paròlla segreta primma de provâ a abilitâ o mòddo FIPS.
 
 unable-to-toggle-fips = No riescio a cangiâ o mòddo FIPS inte l'aparato de seguessa. L'é megio che ti sciòrti e arvi torna st'aplicaçion.
 load-pk11-module-file-picker-title = Çerni 'n driver PKCS#11 do dispoxitivo da caregâ

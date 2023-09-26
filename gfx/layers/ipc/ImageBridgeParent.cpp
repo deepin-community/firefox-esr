@@ -15,11 +15,9 @@
 #include "mozilla/HalTypes.h"   // for hal::THREAD_PRIORITY_COMPOSITOR
 #include "mozilla/ipc/Endpoint.h"
 #include "mozilla/ipc/MessageChannel.h"  // for MessageChannel, etc
-#include "mozilla/ipc/Transport.h"       // for Transport
 #include "mozilla/media/MediaSystemResourceManagerParent.h"  // for MediaSystemResourceManagerParent
 #include "mozilla/layers/BufferTexture.h"
 #include "mozilla/layers/CompositableTransactionParent.h"
-#include "mozilla/layers/LayerManagerComposite.h"
 #include "mozilla/layers/LayersMessages.h"  // for EditReply
 #include "mozilla/layers/PImageBridgeParent.h"
 #include "mozilla/layers/TextureHostOGL.h"  // for TextureHostOGL
@@ -39,10 +37,6 @@
 
 #if defined(OS_WIN)
 #  include "mozilla/layers/TextureD3D11.h"
-#endif
-
-#ifdef MOZ_WIDGET_ANDROID
-#  include "mozilla/layers/AndroidHardwareBuffer.h"
 #endif
 
 namespace mozilla {
@@ -83,7 +77,6 @@ ImageBridgeParent* ImageBridgeParent::CreateSameProcess() {
   base::ProcessId pid = base::GetCurrentProcId();
   RefPtr<ImageBridgeParent> parent =
       new ImageBridgeParent(CompositorThread(), pid);
-  parent->mSelfRef = parent;
 
   {
     MonitorAutoLock lock(*sImageBridgesLock);
@@ -146,6 +139,10 @@ void ImageBridgeParent::Shutdown() {
 void ImageBridgeParent::ActorDestroy(ActorDestroyReason aWhy) {
   // Can't alloc/dealloc shmems from now on.
   mClosed = true;
+
+  for (const auto& entry : mCompositables) {
+    entry.second->OnReleased();
+  }
   mCompositables.clear();
   {
     MonitorAutoLock lock(*sImageBridgesLock);
@@ -157,10 +154,11 @@ void ImageBridgeParent::ActorDestroy(ActorDestroyReason aWhy) {
 
   // It is very important that this method gets called at shutdown (be it a
   // clean or an abnormal shutdown), because DeferredDestroy is what clears
-  // mSelfRef. If mSelfRef is not null and ActorDestroy is not called, the
-  // ImageBridgeParent is leaked which causes the CompositorThreadHolder to be
-  // leaked and CompsoitorParent's shutdown ends up spinning the event loop
-  // forever, waiting for the compositor thread to terminate.
+  // mCompositorThreadHolder. If mCompositorThreadHolder is not null and
+  // ActorDestroy is not called, the ImageBridgeParent is leaked which causes
+  // the CompositorThreadHolder to be leaked and CompsoitorParent's shutdown
+  // ends up spinning the event loop forever, waiting for the compositor thread
+  // to terminate.
 }
 
 class MOZ_STACK_CLASS AutoImageBridgeParentAsyncMessageSender final {
@@ -202,20 +200,14 @@ mozilla::ipc::IPCResult ImageBridgeParent::RecvUpdate(
     RefPtr<CompositableHost> compositable =
         FindCompositable(edit.compositable());
     if (!compositable ||
-        !ReceiveCompositableUpdate(edit.detail(), WrapNotNull(compositable))) {
+        !ReceiveCompositableUpdate(edit.detail(), WrapNotNull(compositable),
+                                   edit.compositable())) {
       return IPC_FAIL_NO_REASON(this);
     }
     uint32_t dropped = compositable->GetDroppedFrames();
     if (dropped) {
       Unused << SendReportFramesDropped(edit.compositable(), dropped);
     }
-  }
-
-  if (!IsSameProcess()) {
-    // Ensure that any pending operations involving back and front
-    // buffers have completed, so that neither process stomps on the
-    // other's buffer contents.
-    LayerManagerComposite::PlatformSyncBeforeReplyUpdate();
   }
 
   return IPC_OK();
@@ -240,7 +232,6 @@ bool ImageBridgeParent::CreateForContent(
 
 void ImageBridgeParent::Bind(Endpoint<PImageBridgeParent>&& aEndpoint) {
   if (!aEndpoint.Bind(this)) return;
-  mSelfRef = this;
 
   // If the child process ID was reused by the OS before the ImageBridgeParent
   // object was destroyed, we need to clean it up first.
@@ -280,10 +271,8 @@ mozilla::ipc::IPCResult ImageBridgeParent::RecvWillClose() {
 }
 
 mozilla::ipc::IPCResult ImageBridgeParent::RecvNewCompositable(
-    const CompositableHandle& aHandle, const TextureInfo& aInfo,
-    const LayersBackend& aLayersBackend) {
-  bool useWebRender = aLayersBackend == LayersBackend::LAYERS_WR;
-  RefPtr<CompositableHost> host = AddCompositable(aHandle, aInfo, useWebRender);
+    const CompositableHandle& aHandle, const TextureInfo& aInfo) {
+  RefPtr<CompositableHost> host = AddCompositable(aHandle, aInfo);
   if (!host) {
     return IPC_FAIL_NO_REASON(this);
   }
@@ -299,10 +288,10 @@ mozilla::ipc::IPCResult ImageBridgeParent::RecvReleaseCompositable(
 }
 
 PTextureParent* ImageBridgeParent::AllocPTextureParent(
-    const SurfaceDescriptor& aSharedData, const ReadLockDescriptor& aReadLock,
+    const SurfaceDescriptor& aSharedData, ReadLockDescriptor& aReadLock,
     const LayersBackend& aLayersBackend, const TextureFlags& aFlags,
     const uint64_t& aSerial, const wr::MaybeExternalImageId& aExternalImageId) {
-  return TextureHost::CreateIPDLActor(this, aSharedData, aReadLock,
+  return TextureHost::CreateIPDLActor(this, aSharedData, std::move(aReadLock),
                                       aLayersBackend, aFlags, aSerial,
                                       aExternalImageId);
 }
@@ -373,10 +362,7 @@ bool ImageBridgeParent::NotifyImageComposites(
   return ok;
 }
 
-void ImageBridgeParent::DeferredDestroy() {
-  mCompositorThreadHolder = nullptr;
-  mSelfRef = nullptr;  // "this" ImageBridge may get deleted here.
-}
+void ImageBridgeParent::DeferredDestroy() { mCompositorThreadHolder = nullptr; }
 
 already_AddRefed<ImageBridgeParent> ImageBridgeParent::GetInstance(
     ProcessId aId) {
@@ -391,22 +377,18 @@ already_AddRefed<ImageBridgeParent> ImageBridgeParent::GetInstance(
   return bridge.forget();
 }
 
-bool ImageBridgeParent::AllocShmem(size_t aSize,
-                                   ipc::SharedMemory::SharedMemoryType aType,
-                                   ipc::Shmem* aShmem) {
+bool ImageBridgeParent::AllocShmem(size_t aSize, ipc::Shmem* aShmem) {
   if (mClosed) {
     return false;
   }
-  return PImageBridgeParent::AllocShmem(aSize, aType, aShmem);
+  return PImageBridgeParent::AllocShmem(aSize, aShmem);
 }
 
-bool ImageBridgeParent::AllocUnsafeShmem(
-    size_t aSize, ipc::SharedMemory::SharedMemoryType aType,
-    ipc::Shmem* aShmem) {
+bool ImageBridgeParent::AllocUnsafeShmem(size_t aSize, ipc::Shmem* aShmem) {
   if (mClosed) {
     return false;
   }
-  return PImageBridgeParent::AllocUnsafeShmem(aSize, aType, aShmem);
+  return PImageBridgeParent::AllocUnsafeShmem(aSize, aShmem);
 }
 
 bool ImageBridgeParent::DeallocShmem(ipc::Shmem& aShmem) {
@@ -427,35 +409,6 @@ void ImageBridgeParent::NotifyNotUsed(PTextureParent* aTexture,
     return;
   }
 
-#ifdef MOZ_WIDGET_ANDROID
-  if (auto hardwareBuffer = texture->GetAndroidHardwareBuffer()) {
-    MOZ_ASSERT(texture->GetFlags() & TextureFlags::RECYCLE);
-
-    Maybe<FileDescriptor> fenceFd = Some(FileDescriptor());
-    auto* compositor = texture->GetProvider()
-                           ? texture->GetProvider()->AsCompositorOGL()
-                           : nullptr;
-    if (compositor) {
-      fenceFd = Some(compositor->GetReleaseFence());
-    }
-
-    auto* wrTexture = texture->AsWebRenderTextureHost();
-    if (wrTexture) {
-      MOZ_ASSERT(!fenceFd->IsValid());
-      fenceFd = Some(texture->GetAndResetReleaseFence());
-    }
-
-    // Invalid file descriptor could not be sent via IPC, but
-    // OpDeliverReleaseFence message needs to be sent to child side.
-    if (!fenceFd->IsValid()) {
-      fenceFd = Nothing();
-    }
-    mPendingAsyncMessage.push_back(OpDeliverReleaseFence(
-        std::move(fenceFd), hardwareBuffer->mId, aTransactionId,
-        /* usesImageBridge */ true));
-  }
-#endif
-
   if (!(texture->GetFlags() & TextureFlags::RECYCLE) &&
       !(texture->GetFlags() & TextureFlags::WAIT_HOST_USAGE_END)) {
     return;
@@ -467,51 +420,6 @@ void ImageBridgeParent::NotifyNotUsed(PTextureParent* aTexture,
   if (!IsAboutToSendAsyncMessages()) {
     SendPendingAsyncMessages();
   }
-}
-
-/* static */
-void ImageBridgeParent::NotifyBufferNotUsedOfCompositorBridge(
-    base::ProcessId aChildProcessId, TextureHost* aTexture,
-    uint64_t aTransactionId) {
-  RefPtr<ImageBridgeParent> bridge = GetInstance(aChildProcessId);
-  if (!bridge || bridge->mClosed) {
-    return;
-  }
-  bridge->NotifyBufferNotUsedOfCompositorBridge(aTexture, aTransactionId);
-}
-
-void ImageBridgeParent::NotifyBufferNotUsedOfCompositorBridge(
-    TextureHost* aTexture, uint64_t aTransactionId) {
-  MOZ_ASSERT(aTexture);
-  MOZ_ASSERT(aTexture->GetAndroidHardwareBuffer());
-
-#ifdef MOZ_WIDGET_ANDROID
-  auto* compositor = aTexture->GetProvider()
-                         ? aTexture->GetProvider()->AsCompositorOGL()
-                         : nullptr;
-  Maybe<FileDescriptor> fenceFd = Some(FileDescriptor());
-  if (compositor) {
-    fenceFd = Some(compositor->GetReleaseFence());
-  }
-
-  auto* wrTexture = aTexture->AsWebRenderTextureHost();
-  if (wrTexture) {
-    MOZ_ASSERT(!fenceFd->IsValid());
-    fenceFd = Some(aTexture->GetAndResetReleaseFence());
-  }
-
-  // Invalid file descriptor could not be sent via IPC, but
-  // OpDeliverReleaseFence message needs to be sent to child side.
-  if (!fenceFd->IsValid()) {
-    fenceFd = Nothing();
-  }
-  mPendingAsyncMessage.push_back(
-      OpDeliverReleaseFence(fenceFd, aTexture->GetAndroidHardwareBuffer()->mId,
-                            aTransactionId, /* usesImageBridge */ false));
-  SendPendingAsyncMessages();
-#else
-  MOZ_ASSERT_UNREACHABLE("unexpected to be called");
-#endif
 }
 
 }  // namespace layers

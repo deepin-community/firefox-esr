@@ -65,13 +65,11 @@ policy-DisableForgetButton = Stap ingang tae the Tyne button.
 
 policy-DisableFormHistory = Dinnae mind o airt-oot and form historie.
 
-policy-DisableMasterPasswordCreation = Gin true, a maister passwird cannae be makkit.
-
 policy-DisablePrimaryPasswordCreation = Gin true, a Primary Passwird cannae be makkit.
 
 policy-DisablePasswordReveal = Dinnae alloo passwirds tae be kythed in saved logins.
 
-policy-DisablePocket = Disable the featur tae save wabpages tae Pocket.
+policy-DisablePocket2 = Disable the featur tae save wabpages tae { -pocket-brand-name }.
 
 policy-DisablePrivateBrowsing = Disable Private Stravaigin
 
@@ -114,10 +112,6 @@ policy-ExtensionSettings = Manage aw aspecks o extension instawment.
 
 policy-ExtensionUpdate = Enable or disable automatic extension updates.
 
-policy-FirefoxHome = Confeegur Firefox Hame.
-
-policy-FlashPlugin = Alloo or deny yaisage o the Flash plugin.
-
 policy-Handlers = Confeegur staunart application handlers.
 
 policy-HardwareAcceleration = Gin wrang, turn aff haurdware acceleration.
@@ -140,8 +134,6 @@ policy-LegacySameSiteCookieBehaviorEnabledForDomainList = Chynge back tae bygane
 policy-LocalFileLinks = Alloo specific wabsites tae link tae local files.
 
 policy-ManagedBookmarks = Confeegurs a list o buikmerks managed by an admeenistrator that cannae be chynged by the yaiser.
-
-policy-MasterPassword = Require or prevent yaisin a maister passwird.
 
 policy-ManualAppUpdateOnly = Alloo manual updates anely and dinnae lat the yaiser ken aboot updates.
 
@@ -187,9 +179,6 @@ policy-SearchBar = Set the staunart airtin o the sairch baur. The yaiser can aye
 policy-SearchEngines = Confeegur airt-oot engine settins. This policy is available anely on the Extendit Support Release (ESR) version.
 
 policy-SearchSuggestEnabled = Enable or disable airt-oot suggestions.
-
-# For more information, see https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSS/PKCS11/Module_Installation
-policy-SecurityDevices = Instaw PKCS #11 modules.
 
 policy-ShowHomeButton = Kythe the hame button on the toolbaur.
 

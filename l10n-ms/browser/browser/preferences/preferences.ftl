@@ -7,28 +7,6 @@ do-not-track-learn-more = Ketahui selanjutnya
 do-not-track-option-always =
     .label = Sentiasa
 
-pref-page-title =
-    { PLATFORM() ->
-        [windows] Pilihan
-       *[other] Keutamaan
-    }
-
-# This is used to determine the width of the search field in about:preferences,
-# in order to make the entire placeholder string visible
-#
-# Please keep the placeholder string short to avoid truncation.
-#
-# Notice: The value of the `.style` attribute is a CSS string, and the `width`
-# is the name of the CSS property. It is intended only to adjust the element's width.
-# Do not translate.
-search-input-box =
-    .style = width: 15.4em
-    .placeholder =
-        { PLATFORM() ->
-            [windows] Cari dalam Pilihan
-           *[other] Cari dalam Keutamaan
-        }
-
 pane-general-title = Umum
 category-general =
     .tooltiptext = { pane-general-title }
@@ -73,33 +51,16 @@ restart-later = Mula semula Kemudian
 ## Variables:
 ##   $name (String): name of the extension
 
-# This string is shown to notify the user that their home page
-# is being controlled by an extension.
-extension-controlled-homepage-override = Ekstensi, <img data-l10n-name="icon"/> { $name }, mengawal laman anda.
 
-# This string is shown to notify the user that their new tab page
-# is being controlled by an extension.
-extension-controlled-new-tab-url = Ekstensi, <img data-l10n-name="icon"/> { $name }, mengawal halaman Tab Baru anda.
-
-# This string is shown to notify the user that their notifications permission
-# is being controlled by an extension.
-extension-controlled-web-notifications = Ekstensi, <img data-l10n-name="icon"/> { $name } mengawal tetapan ini.
-
-# This string is shown to notify the user that the default search engine
-# is being controlled by an extension.
-extension-controlled-default-search = Ekstensi, <img data-l10n-name="icon"/> { $name }, telah menetapkan enjin carian piawai anda.
-
-# This string is shown to notify the user that Container Tabs
-# are being enabled by an extension.
-extension-controlled-privacy-containers = Ekstensi <img data-l10n-name="icon"/> { $name }, memerlukan Tab Penyimpan.
-
-# This string is shown to notify the user that their content blocking "All Detected Trackers"
-# preferences are being controlled by an extension.
-extension-controlled-websites-content-blocking-all-trackers = Ekstensi, <img data-l10n-name="icon"/> { $name } mengawal tetapan ini.
-
-# This string is shown to notify the user that their proxy configuration preferences
-# are being controlled by an extension.
-extension-controlled-proxy-config = Ekstensi, <img data-l10n-name="icon"/> { $name }, mengawal cara { -brand-short-name } menyambung ke internet.
+## Extension Control Notifications
+##
+## These strings are used to inform the user
+## about changes made by extensions to browser settings.
+##
+## <img data-l10n-name="icon"/> is going to be replaced by the extension icon.
+##
+## Variables:
+##   $name (string) - Name of the extension
 
 # This string is shown after the user disables an extension to notify the user
 # how to enable an extension that they disabled.
@@ -112,26 +73,11 @@ extension-controlled-enable = Untuk membolehkan ekstensi pergi ke Add-ons <img d
 
 search-results-header = Hasil Carian
 
-# `<span data-l10n-name="query"></span>` will be replaced by the search term.
-search-results-empty-message =
-    { PLATFORM() ->
-        [windows] Maaf! Tiada keputusan dalam Pilihan untuk “<span data-l10n-name="query"></span>”.
-       *[other] Maaf! Tiada keputusan dalam Keutamaan untuk “<span data-l10n-name="query"></span>”.
-    }
-
 search-results-help-link = Perlu bantuan? Lawat <a data-l10n-name="url">Sokongan { -brand-short-name }</a>
 
 ## General Section
 
 startup-header = Permulaan
-
-# { -brand-short-name } will be 'Firefox Developer Edition',
-# since this setting is only exposed in Firefox Developer Edition
-separate-profile-mode =
-    .label = Izinkan { -brand-short-name } dan Firefox untuk dilancarkan pada masa yang sama
-use-firefox-sync = Tip: Ciri ini menggunakan profil yang berasingan. Gunakan { -sync-brand-short-name } untuk berkongsi data.
-get-started-not-logged-in = Daftar masuk ke { -sync-brand-short-name }…
-get-started-configured = Buka keutamaan { -sync-brand-short-name }
 
 always-check-default =
     .label = Sentiasa semak samada { -brand-short-name } adalah pelayar piawai anda
@@ -143,10 +89,6 @@ is-not-default = { -brand-short-name } bukan pelayar piawai anda
 set-as-my-default-browser =
     .label = Jadikan Piawai…
     .accesskey = P
-
-startup-restore-previous-session =
-    .label = Pulih sesi dahulu
-    .accesskey = s
 
 disable-extension =
     .label = Nyahdayakan Ekstensi
@@ -161,17 +103,9 @@ open-new-link-as-tabs =
     .label = Buka pautan sebagai tab, bukan tetingkap baru
     .accesskey = t
 
-warn-on-close-multiple-tabs =
-    .label = Beri amaran apabila menutup berbilang tab
-    .accesskey = B
-
 warn-on-open-many-tabs =
     .label = Beri amaran apabila membuka berbilang tab yang mungkin memperlahankan { -brand-short-name }
     .accesskey = p
-
-switch-links-to-new-tabs =
-    .label = Apabila membuka pautan dalam tetingkap baru, tukar terus kepadanya
-    .accesskey = A
 
 show-tabs-in-taskbar =
     .label = Papar previu tab dalam Tetingkap bar tugasan
@@ -188,9 +122,16 @@ browser-containers-settings =
     .accesskey = p
 
 containers-disable-alert-title = Tutup Semua Tab Penyimpan?
+
+## Variables:
+##   $tabCount (number) - Number of tabs
+
 containers-disable-alert-desc = Jika anda menyahaktif Tab Penyimpan sekarang, { $tabCount } tab penyimpan akan ditutup. Adakah anda pasti mahu menyahaktif Tab Penyimpan?
 
 containers-disable-alert-ok-button = Tutup { $tabCount } Tab Penyimpan
+
+##
+
 containers-disable-alert-cancel-button = Sentiasa didayakan
 
 containers-remove-alert-title = Buang Penyimpan Ini?
@@ -202,12 +143,9 @@ containers-remove-alert-msg = Jika anda mengalih keluar Penyimpan ini sekarang, 
 containers-remove-ok-button = Buang Penyimpan Ini
 containers-remove-cancel-button = Jangan buang Penyimpan Ini
 
-
 ## General Section - Language & Appearance
 
 language-and-appearance-header = Bahasa dan Penampilan
-
-fonts-and-colors-header = Fon & Warna
 
 default-font = Fon piawai
     .accesskey = F
@@ -217,10 +155,6 @@ default-font-size = Saiz
 advanced-fonts =
     .label = Lanjutan…
     .accesskey = L
-
-colors-settings =
-    .label = Warna…
-    .accesskey = W
 
 language-header = Bahasa
 
@@ -259,8 +193,7 @@ files-and-applications-title = Fail dan Aplikasi
 
 download-header = Muat turun
 
-download-save-to =
-    .label = Simpan fail ke
+download-save-where = Simpan fail ke
     .accesskey = n
 
 download-choose-folder =
@@ -318,11 +251,6 @@ applications-manage-app =
     .label = Butiran Aplikasi…
 applications-always-ask =
     .label = Sentiasa tanya
-applications-type-pdf = Portable Document Format (PDF)
-
-# Variables:
-#   $type (String) - the MIME type (e.g application/binary)
-applications-type-pdf-with-type = { applications-type-pdf } ({ $type })
 
 # Variables:
 #   $type-description (String) - Description of the type (e.g "Portable Document Format")
@@ -479,11 +407,6 @@ home-restore-defaults =
     .label = Pulih Piawai
     .accesskey = P
 
-# "Firefox" should be treated as a brand and kept in English,
-# while "Home" and "(Default)" can be localized.
-home-mode-choice-default =
-    .label = Halaman Utama Firefox (Piawai)
-
 home-mode-choice-custom =
     .label = URLs Penyesuaian...
 
@@ -511,17 +434,15 @@ choose-bookmark =
 
 ## Home Section - Firefox Home Content Customization
 
-home-prefs-content-header = Kandungan Halaman Utama Firefox
-home-prefs-content-description = Pilih kandungan yang mahu dalam skrin Halaman Utama Firefox.
-
 home-prefs-search-header =
     .label = Carian Web
-home-prefs-topsites-header =
-    .label = Laman Teratas
-home-prefs-topsites-description = Laman yang anda kerap lawati
 
 ## Variables:
 ##  $provider (String): Name of the corresponding content provider, e.g "Pocket".
+
+
+## Variables:
+##  $provider (string) - Name of the corresponding content provider, e.g "Pocket".
 
 # Variables:
 #  $provider (String): Name of the corresponding content provider, e.g "Pocket".
@@ -534,9 +455,6 @@ home-prefs-recommended-by-learn-more = Cara pelaksanaan
 home-prefs-recommended-by-option-sponsored-stories =
     .label = Kisah Tajaan
 
-home-prefs-highlights-header =
-    .label = Serlahan
-home-prefs-highlights-description = Pilihan laman yang anda sudah simpan atau lawati
 home-prefs-highlights-option-visited-pages =
     .label = Halaman Dilawati
 home-prefs-highlights-options-bookmarks =
@@ -552,7 +470,6 @@ home-prefs-highlights-option-saved-to-pocket =
 # and non-essential but also not entirely trivial and useless.
 home-prefs-snippets-header =
     .label = Cebisan
-home-prefs-snippets-description = Kemas kini daripada { -vendor-short-name } dan { -brand-product-name }
 
 home-prefs-sections-rows-option =
     .label = { $num } baris
@@ -575,6 +492,7 @@ search-show-suggestions-url-bar-option =
     .label = Papar cadangan carian dalam keputusan bar alamat
     .accesskey = P
 
+
 # This string describes what the user will observe when the system
 # prioritizes search suggestions over browsing history in the results
 # that extend down from the address bar. In the original English string,
@@ -584,8 +502,6 @@ search-show-suggestions-above-history-option =
     .label = Papar cadangan carian sebelum sejarah pelayaran dalam hasil bar alamat
 
 search-suggestions-cant-show = Cadangan carian tidak akan dipaparkan dalam keputusan bar lokasi kerana anda telah mengkonfigurasi { -brand-short-name } untuk tidak mengingati sejarah.
-
-search-one-click-header = Enjin carian klik-tunggal
 
 search-one-click-desc = Pilih enjin carian alternatif yang muncul di bawah bar alamat dan bar carian apabila anda mula memasukkan kata kunci.
 
@@ -619,20 +535,17 @@ containers-add-button =
     .label = Tambah Penyimpan Baru
     .accesskey = A
 
-containers-preferences-button =
-    .label = Keutamaan
-
 containers-remove-button =
     .label = Buang
-
-## Sync Section - Signed out
-
 
 ## Firefox Account - Signed out. Note that "Sync" and "Firefox Account" are now
 ## more discrete ("signed in" no longer means "and sync is connected").
 
+
+## Firefox account - Signed out. Note that "Sync" and "Firefox account" are now
+## more discrete ("signed in" no longer means "and sync is connected").
+
 sync-signedout-caption = Bawa Web dengan anda
-sync-signedout-description = Sync tandabuku, sejarah, tab, kata laluan, add-ons dan pilihan anda pada semua peranti anda.
 
 # This message contains two links and two icon images.
 #   `<img data-l10n-name="android-icon"/>` - Android logo icon
@@ -644,10 +557,10 @@ sync-signedout-description = Sync tandabuku, sejarah, tab, kata laluan, add-ons 
 # to your language, but should not be changed or translated.
 sync-mobile-promo = Muat turun Firefox untuk<img data-l10n-name="android-icon"/> <a data-l10n-name="android-link">Android</a> atau <img data-l10n-name="ios-icon"/> <a data-l10n-name="ios-link">iOS</a> untuk sync dengan peranti mudah alih anda.
 
-## Sync Section - Signed in
-
-
 ## Firefox Account - Signed in
+
+
+## Firefox account - Signed in
 
 sync-profile-picture =
     .tooltiptext = Tukar gambar profil
@@ -655,8 +568,13 @@ sync-profile-picture =
 sync-manage-account = Urus Akaun
     .accesskey = s
 
+## Variables
+## $email (string) - Email used for Firefox account
+
 sync-signedin-unverified = { $email } tidak disahkan.
 sync-signedin-login-failure = Sila daftar masuk untuk menyambung semula { $email }
+
+##
 
 sync-resend-verification =
     .label = Hantar semula Pengesahan
@@ -706,15 +624,6 @@ sync-engine-addons =
     .tooltiptext = Ekstensi dan tema untuk Firefox desktop
     .accesskey = A
 
-sync-engine-prefs =
-    .label =
-        { PLATFORM() ->
-            [windows] Pilihan
-           *[other] Keutamaan
-        }
-    .tooltiptext = Tetapan Umum, Privasi dan Keselamatan yang anda sudah ubah
-    .accesskey = a
-
 ## The device name controls.
 
 sync-device-name-header = Nama Peranti
@@ -731,12 +640,19 @@ sync-device-name-save =
     .label = Simpan
     .accesskey = p
 
+## These strings are shown in a desktop notification after the
+## user requests we resend a verification email.
+
+sync-verification-sent-title = Pengesahan Telah Dihantar
+# Variables:
+#   $email (String): Email address of user's Firefox account.
+sync-verification-sent-body = Pautan pengesahan telah dihantar kepada { $email }.
+sync-verification-not-sent-title = Gagal Menghantar Pengesahan
+sync-verification-not-sent-body = Kami tidak dapat menghantar e-mel pengesahan pada masa ini, sila cuba lagi selepas ini.
+
 ## Privacy Section
 
 privacy-header = Privasi Pelayar
-
-## Privacy Section - Forms
-
 
 ## Privacy Section - Logins and Passwords
 
@@ -754,14 +670,9 @@ forms-exceptions =
 forms-saved-logins =
     .label = Log masuk Tersimpan…
     .accesskey = L
-forms-master-pw-use =
-    .label = Guna kata laluan induk
-    .accesskey = U
 forms-master-pw-change =
     .label = Tukar Kata laluan Induk…
     .accesskey = T
-
-forms-master-pw-fips-title = Anda kini berada dalam mod FIPS. FIPS memerlukan Kata laluan Induk bukan-kosong.
 
 forms-master-pw-fips-desc = Kata laluan Gagal Ditukar
 
@@ -856,9 +767,8 @@ sitedata-settings =
     .label = Urus Data…
     .accesskey = U
 
-sitedata-cookies-permissions =
-    .label = Urus Keizinan
-    .accesskey = U
+## Privacy Section - Cookie Banner Handling
+
 
 ## Privacy Section - Address Bar
 
@@ -898,7 +808,7 @@ enhanced-tracking-protection-setting-custom =
 
 ##
 
-content-blocking-all-third-party-cookies = Semua kuki pihak ketiga
+# The tcp-rollout strings are no longer used for the rollout but for tcp-by-default in the standard section
 
 content-blocking-tracking-protection-change-block-list = Tukar senarai sekatan
 
@@ -945,10 +855,6 @@ permissions-block-popups =
     .label = Sekat tetingkap popup
     .accesskey = S
 
-permissions-block-popups-exceptions =
-    .label = Pengecualian…
-    .accesskey = E
-
 permissions-addon-install-warning =
     .label = Beri amaran apabila laman web cuba memasang add-ons
     .accesskey = B
@@ -956,12 +862,6 @@ permissions-addon-install-warning =
 permissions-addon-exceptions =
     .label = Pengecualian…
     .accesskey = E
-
-permissions-a11y-privacy-checkbox =
-    .label = Halang perkhidmatan daripada mengakses pelayar anda
-    .accesskey = a
-
-permissions-a11y-privacy-link = Ketahui selanjutnya
 
 ## Privacy Section - Data Collection
 
@@ -982,11 +882,6 @@ collection-studies-link = Papar kajian { -brand-short-name }
 # This message is displayed above disabled data sharing options in developer builds
 # or builds with no Telemetry support available.
 collection-health-report-disabled = Laporan data dinyahdayakan bagi konfigurasi binaan ini
-
-collection-backlogged-crash-reports =
-    .label = Izinkan { -brand-short-name } untuk menghantar backlog laporan ranap bagi pihak anda
-    .accesskey = r
-collection-backlogged-crash-reports-link = Ketahui selanjutnya
 
 ## Privacy Section - Security
 ##
@@ -1014,16 +909,6 @@ security-block-uncommon-software =
 
 certs-header = Sijil
 
-certs-personal-label = Apabila pelayan meminta sijil peribadi anda
-
-certs-select-auto-option =
-    .label = Pilih satu secara automatik
-    .accesskey = P
-
-certs-select-ask-option =
-    .label = Tanya setiap kali
-    .accesskey = T
-
 certs-enable-ocsp =
     .label = Minta penggerak balas pelayan OCSP untuk mengesahkan kesahihan sijil semasa
     .accesskey = T
@@ -1036,43 +921,14 @@ certs-devices =
     .label = Peranti Keselamatan…
     .accesskey = P
 
-space-alert-learn-more-button =
-    .label = Ketahui Selanjutnya
-    .accesskey = K
-
-space-alert-over-5gb-pref-button =
-    .label =
-        { PLATFORM() ->
-            [windows] Buka Pilihan
-           *[other] Buka Keutamaan
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] B
-           *[other] B
-        }
-
-space-alert-over-5gb-message =
-    { PLATFORM() ->
-        [windows] { -brand-short-name } sedang kehabisan ruang cakera. Kandungan laman web mungkin tidak dipaparkan dengan betul. Anda boleh mengosongkan data laman yang disimpan dalam Pilihan > Privasi & Keselamatan > Kuki dan Data Laman.
-       *[other] { -brand-short-name } sedang kehabisan ruang cakera. Kandungan laman web mungkin tidak dipaparkan dengan betul. Anda boleh mengosongkan data laman yang disimpan dalam Keutamaan > Privasi & Keselamatan > Kuki dan Data Laman.
-    }
-
-space-alert-under-5gb-ok-button =
-    .label = OK, Faham
-    .accesskey = K
-
-space-alert-under-5gb-message = { -brand-short-name } sedang kehabisan ruang cakera. Kandungan laman web mungkin tidak dipaparkan dengan betul. Lawati "Selanjutnya" untuk mengoptimumkan penggunaan cakera anda untuk pengalaman melayar yang lebih baik.
-
 ## Privacy Section - HTTPS-Only
+
+
+## DoH Section
+
 
 ## The following strings are used in the Download section of settings
 
 desktop-folder-name = Desktop
 downloads-folder-name = Muat turun
 choose-download-folder-title = Pilih Folder Muat turun:
-
-# Variables:
-#   $service-name (String) - Name of a cloud storage provider like Dropbox, Google Drive, etc...
-save-files-to-cloud-storage =
-    .label = Simpan fail ke { $service-name }

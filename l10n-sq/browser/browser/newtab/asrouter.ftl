@@ -7,7 +7,6 @@
 
 cfr-doorhanger-extension-heading = Zgjerim i Këshilluar
 cfr-doorhanger-feature-heading = Veçori e Këshilluar
-cfr-doorhanger-pintab-heading = Provoni Këtë: Fiksoni Skedë
 
 ##
 
@@ -19,8 +18,6 @@ cfr-doorhanger-extension-cancel-button = Jo Tani
 
 cfr-doorhanger-extension-ok-button = Shtoje Tani
     .accesskey = S
-cfr-doorhanger-pintab-ok-button = Fiksojeni Këtë Skedë
-    .accesskey = F
 
 cfr-doorhanger-extension-manage-settings-button = Administroni Rregullimet Mbi Rekomandimet
     .accesskey = A
@@ -68,18 +65,6 @@ cfr-doorhanger-extension-total-users =
        *[other] { $total } përdorues
     }
 
-cfr-doorhanger-pintab-description = Hyni kollaj te sajtet tuaj më të përdorur. Mbajini sajtet hapur në një skedë (madje edhe kur bëni rinisje).
-
-## These messages are steps on how to use the feature and are shown together.
-
-cfr-doorhanger-pintab-step1 = <b>Djathtasklikoni</b> te skeda që doni të fiksohet.
-cfr-doorhanger-pintab-step2 = Përzgjidhni <b>Fiksoje Skedën</b> që nga menuja.
-cfr-doorhanger-pintab-step3 = Nëse sajti ka një përditësim, do të shihni një pikë blu te skeda juaj e fiksuar.
-
-cfr-doorhanger-pintab-animation-pause = Ndalesë
-cfr-doorhanger-pintab-animation-resume = Vazhdoje
-
-
 ## Firefox Accounts Message
 
 cfr-doorhanger-bookmark-fxa-header = Njëkohësoni faqerojtësit tuaj kudo.
@@ -105,127 +90,9 @@ cfr-whatsnew-button =
     .label = Ç’ka të Re
     .tooltiptext = Ç’ka të Re
 
-cfr-whatsnew-panel-header = Ç’ka të Re
-
 cfr-whatsnew-release-notes-link-text = Lexoni shënimet mbi hedhjen në qarkullim
 
-cfr-whatsnew-fx70-title = { -brand-short-name } tanimë ndeshet më fort për privatësinë tuaj
-cfr-whatsnew-fx70-body = Përditësimet më të reja thellojnë veçorinë e Mbrojtjes Nga Gjurmimi dhe e bëjnë më të lehtë se kurrë krijimin e fjalëkalimeve të siguruar për çdo sajt.
-
-cfr-whatsnew-tracking-protect-title = Mbroni veten nga gjurmuesit
-cfr-whatsnew-tracking-protect-body = { -brand-short-name } bllokon mjaft gjurmues të rëndomtë rrjetesh shoqërorë dhe të tjerë që ju ndjekin nga sajti në sajt për të gjurmuar ç’bëni në internet.
-cfr-whatsnew-tracking-protect-link-text = Shihni Raportin Tuaj
-
-# This string is displayed before a large numeral that indicates the total
-# number of tracking elements blocked. Don’t add $blockedCount to your
-# localization, because it would result in the number showing twice.
-cfr-whatsnew-tracking-blocked-title =
-    { $blockedCount ->
-        [one] Gjurmues i bllokuar
-       *[other] Gjurmues të bllokuar
-    }
-cfr-whatsnew-tracking-blocked-subtitle = Që prej { DATETIME($earliestDate, month: "long", year: "numeric") }
-cfr-whatsnew-tracking-blocked-link-text = Shihni Raportin
-
-cfr-whatsnew-lockwise-backup-title = Kopjeruani fjalëkalimet tuaj
-cfr-whatsnew-lockwise-backup-body = Tanimë prodhoni fjalëkalime të siguruar që mund t’i përdorni kudo që bëni hyrje.
-cfr-whatsnew-lockwise-backup-link-text = Aktivizoni kopjeruajtjet
-
-cfr-whatsnew-lockwise-take-title = Merrini fjalëkalimet tuaj me vete
-cfr-whatsnew-lockwise-take-body = Aplikacioni { -lockwise-brand-short-name } për celular ju lejon të përdorni në mënyrë të parrezik prej ngado fjalëkalimet që keni kopjeruajtur.
-cfr-whatsnew-lockwise-take-link-text = Merrni aplikacionin
-
-## Search Bar
-
-cfr-whatsnew-searchbar-title = Shtypni më pak, gjeni më shumë me shtyllën e adresave
-cfr-whatsnew-searchbar-body-topsites = Tani, thjesht përzgjidhni shtyllën e adresave, dhe do të zgjerohet një kuadrat me lidhje për te sajtet tuaj kryesues.
-
-## Search bar
-
-cfr-whatsnew-searchbar-icon-alt-text = Ikonë thjerrëze zmadhimi
-
-## Picture-in-Picture
-
-cfr-whatsnew-pip-header = Shihni video teksa shfletoni
-cfr-whatsnew-pip-body = “Picture-in-picture” e hap videon në një dritare përsipër, kështu që mundeni ta shihni teksa punoni në skeda të tjera.
-cfr-whatsnew-pip-cta = Mësoni më tepër
-
-## Permission Prompt
-
-cfr-whatsnew-permission-prompt-header = Më pak flluska të bezdisshme nga sajte
-cfr-whatsnew-permission-prompt-body = { -brand-shorter-name }-i tani u bllokon sajteve të kërkojnë automatikisht t’ju dërgojnë mesazhe flluska.
-cfr-whatsnew-permission-prompt-cta = Mësoni më tepër
-
-## Fingerprinter Counter
-
-# This string is displayed before a large numeral that indicates the total
-# number of tracking elements blocked. Don’t add $fingerprinterCount to your
-# localization, because it would result in the number showing twice.
-cfr-whatsnew-fingerprinter-counter-header =
-    { $fingerprinterCount ->
-        [one] Krijues shenjash gishtash i bllokuar
-       *[other] Krijues shenjash gishtash të bllokuar
-    }
-cfr-whatsnew-fingerprinter-counter-body = { -brand-shorter-name }-i bllokon mjaft nga krijuesit e shenjave të gishtave që grumbullojnë fshehtas informacion mbi pajisjen dhe veprimet tuaja, për të krijuar një profil tuajin të synuar nga reklamuesit.
-
-# Message variation when fingerprinters count is less than 10
-cfr-whatsnew-fingerprinter-counter-header-alt = Krijues shenjash gishtash
-cfr-whatsnew-fingerprinter-counter-body-alt = { -brand-shorter-name }-i mund të bllokojë krijues shenjash gishtash që grumbullojnë fshehtas informacion mbi pajisjen dhe veprimet tuaja, për të krijuar një profil tuajin të synuar nga reklamuesit.
-
-## Bookmark Sync
-
-cfr-doorhanger-sync-bookmarks-header = Merreni këtë faqerojtës në telefonin tuaj
-cfr-doorhanger-sync-bookmarks-body = Merrini faqerojtësit tuaj, fjalëkalimet, historikun, etj, kudo ku keni bërë hyrjen në { -brand-product-name }.
-cfr-doorhanger-sync-bookmarks-ok-button = Aktivizoni { -sync-brand-short-name }
-    .accesskey = A
-
-## Login Sync
-
-cfr-doorhanger-sync-logins-header = Mos Humbni Kurrë Më një Fjalëkalim
-cfr-doorhanger-sync-logins-body = Depozitoni dhe njëkohësoni në mënyrë të sigurt fjalëkalimet tuaj në krejt pajisjet tuaja.
-cfr-doorhanger-sync-logins-ok-button = Aktivizoni { -sync-brand-short-name }
-    .accesskey = A
-
-## Send Tab
-
-cfr-doorhanger-send-tab-header = Lexojeni në rrugë e sipër
-cfr-doorhanger-send-tab-recipe-header = Merreni këtë recetë gatimi me vete në kuzhinë
-cfr-doorhanger-send-tab-body = Dërgoni Skeda ju lejon ta ndani lehtësisht këtë lidhje në telefonin tuaj ose kudo ku keni bërë hyrjen te { -brand-product-name }-i.
-cfr-doorhanger-send-tab-ok-button = Provoni Dërgim Skedash
-    .accesskey = P
-
-## Firefox Send
-
-cfr-doorhanger-firefox-send-header = Ndajeni me të tjerët në mënyrë të parrezik këtë PDF
-cfr-doorhanger-firefox-send-body = Mbajini dokumentet tuaj rezervat të parrezikuar nga sy përgjues, me fshehtëzim skaj-më-skaj dhe një lidhje që zhduket pasi të keni mbaruar punë.
-cfr-doorhanger-firefox-send-ok-button = Provoni { -send-brand-name }
-    .accesskey = P
-
-## Social Tracking Protection
-
-cfr-doorhanger-socialtracking-ok-button = Shihni Mbrojtje
-    .accesskey = o
-cfr-doorhanger-socialtracking-close-button = Mbylle
-    .accesskey = M
-cfr-doorhanger-socialtracking-dont-show-again = Mos më shfaq më mesazhe të tillë
-    .accesskey = M
-cfr-doorhanger-socialtracking-heading = { -brand-short-name } ndali gjurmimin tuaj këtu nga një rrjet shoqëror
-cfr-doorhanger-socialtracking-description = Privatësia juaj ka vlerë. { -brand-short-name } tanimë bllokon gjurmues prej rrjetesh të zakonshëm mediash shoqërore, duke kufizuar sa të dhëna mund të grumbullojnë rreth asaj çka bëni në internet.
-cfr-doorhanger-fingerprinters-heading = { -brand-short-name } bllokoi në këtë faqe nëj krijuesh shenjash gishtash
-cfr-doorhanger-fingerprinters-description = Privatësia juaj ka vlerë. { -brand-short-name } tanimë bllokon krijues shenjash gishtash, të cilët grumbullojnë rreth pajisjes tuaj të dhëna të identifikueshme në mënyrë unike për t’ju gjurmuar.
-cfr-doorhanger-cryptominers-heading = { -brand-short-name } bllokoi në këtë faqe një nxjerrës kriptomonedhash
-cfr-doorhanger-cryptominers-description = Privatësia juaj ka vlerë. { -brand-short-name } tanimë bllokon nxjerrës kriptomonedhash, të cilët përdorin fuqinë e përllogaritjes së sistemit tuaj për të nxjerrë para dixhitale.
-
 ## Enhanced Tracking Protection Milestones
-
-# Variables:
-#   $blockedCount (Number) - The total count of blocked trackers. This number will always be greater than 1.
-#   $date (String) - The date we began recording the count of blocked trackers
-cfr-doorhanger-milestone-heading =
-    { $blockedCount ->
-        [one] 	{ -brand-short-name } bllokoi mbi <b>{ $blockedCount }</b> gjurmues që prej { $date }!
-       *[other] 	{ -brand-short-name } bllokoi mbi <b>{ $blockedCount }</b> gjurmues që prej { $date }!
-    }
 
 # Variables:
 #   $blockedCount (Number) - The total count of blocked trackers. This number will always be greater than 1.
@@ -236,45 +103,8 @@ cfr-doorhanger-milestone-heading2 =
     }
 cfr-doorhanger-milestone-ok-button = Shihini Krejt
     .accesskey = S
-
-## What’s New Panel Content for Firefox 76
-
-
-## Lockwise message
-
-cfr-whatsnew-lockwise-header = Krijoni me lehtësi fjalëkalime të sigurt
-cfr-whatsnew-lockwise-body = Është e vështirë të mendohen fjalëkalime unikë, të sigurt, për çdo llogari. Kur krijohet një fjalëkalim, përzgjidhni fushën e fjalëkalimit për të përdorur një fjalëkalim të sigurt, të prodhuar nga { -brand-shorter-name }.
-cfr-whatsnew-lockwise-icon-alt = Ikonë { -lockwise-brand-short-name }
-
-## Vulnerable Passwords message
-
-cfr-whatsnew-passwords-header = Merrni sinjalizime rreth fjalëkalimesh të cenueshëm
-cfr-whatsnew-passwords-body = Hacker-ët e dinë që njerësit përdorin të njëjtët fjalëkalime. Nëse përdorni të njëjtin fjalëkalim në shumë sajte, dhe një nga këta sajte është parë në një cenim të dhënash, do të shihni një sinjalizim te { -lockwise-brand-short-name } për të ndryshuar fjalëkalimin tuaj në këto sajte.
-cfr-whatsnew-passwords-icon-alt = Ikonë dry fjalëkalimi të cenueshëm
-
-## Picture-in-Picture fullscreen message
-
-cfr-whatsnew-pip-fullscreen-header = Bëni foto-në-foto sa krejt ekrani
-cfr-whatsnew-pip-fullscreen-body = Kur hapni një video brenda një dritareje pezull, tani mundeni të dyklikoni mbi atë dritare për ta kaluar sa krejt ekrani.
-cfr-whatsnew-pip-fullscreen-icon-alt = Ikonë foto-në foto
-
-## Protections Dashboard message
-
-cfr-whatsnew-protections-header = Mbrojtje përmbledhtasi
-cfr-whatsnew-protections-body = Pulti i Mbrojtjeve përfshin raporte përmbledhëse rreth cenimesh të dhënash dhe administrimi fjalëkalimesh. Tani mund të ndiqni se sa cenime keni zgjidhur, dhe të shihni nëse ndonjë nga fjalëkalimet tuaj të ruajtur është ekspozuar në një cenim të dhënash.
-cfr-whatsnew-protections-cta-link = Shihni Pult Mbrojtjesh
-cfr-whatsnew-protections-icon-alt = Ikona mburojë
-
-## Better PDF message
-
-cfr-whatsnew-better-pdf-header = Punim më i mirë me PDF-të
-cfr-whatsnew-better-pdf-body = Dokumentet PDF tani hapen drejt e në { -brand-short-name }, duke e lehtësuar rrjedhën tuaj të punës.
-
 cfr-doorhanger-milestone-close-button = Mbylle
     .accesskey = M
-
-## What’s New Panel Content for Firefox 76
-## Protections Dashboard message
 
 ## DOH Message
 
@@ -287,28 +117,123 @@ cfr-doorhanger-doh-secondary-button = Çaktivizoje
 
 ## Fission Experiment Message
 
-cfr-doorhanger-fission-body-approved = Privatësia juaj ka vlerë. { -brand-short-name }-i tanimë i izolon, ose i kalon në bankëprovë, sajtet prej njëri tjetrit, çka e bën më të vështirë për dikë të vjedhë fjalëkalime, numra kartash krediti dhe të dhëna të tjera rezervat.
-cfr-doorhanger-fission-header = Izolim Sajti
-cfr-doorhanger-fission-primary-button = OK, e mora vesh
-    .accesskey = O
-cfr-doorhanger-fission-secondary-button = Mësoni më tepër
-    .accesskey = M
-
-## What's new: Cookies message
-
-## What's new: Media controls message
-
-## What's new: Search shortcuts
-
-## What's new: Cookies protection
-
-## What's new: Better bookmarking
-
-## What's new: Cross-site cookie tracking
-
 ## Full Video Support CFR message
 
 cfr-doorhanger-video-support-body = Videot në këtë sajt mund të mos luhen si duhet nën këtë version të { -brand-short-name }-it. Për mbulim të plotë të videove, përditësoni tani { -brand-short-name }-in.
 cfr-doorhanger-video-support-header = Që të luhet videoja, përditësoni { -brand-short-name }-in
 cfr-doorhanger-video-support-primary-button = Përditësojeni Tani
     .accesskey = P
+
+## Spotlight modal shared strings
+
+## VPN promotion dialog for public Wi-Fi users
+##
+## If a user is detected to be on a public Wi-Fi network, they are given a
+## bit of info about how to improve their privacy and then offered a button
+## to the Mozilla VPN page and a link to dismiss the dialog.
+
+# This header text can be explicitly wrapped.
+spotlight-public-wifi-vpn-header = Duket se po përdorni Wi-Fi publik
+spotlight-public-wifi-vpn-body = Që të fshihni vendndodhjen tuaj dhe veprimtarinë tuaj të shfletimit, shihni mundësinë e përdorimit të një Rrjeti Virtual Privat. Do të ndihmojë për t’ju mbajtur të mbrojtur teksa shfletoni në vende publike, bie fjala, aeroporte dhe kafe.
+spotlight-public-wifi-vpn-primary-button = Jini privat, me { -mozilla-vpn-brand-name }
+    .accesskey = J
+spotlight-public-wifi-vpn-link = Jo Tani
+    .accesskey = J
+
+## Total Cookie Protection Rollout
+
+## Emotive Continuous Onboarding
+
+spotlight-better-internet-header = Një internet më i mirë zë fill prej jush
+spotlight-better-internet-body = Kur përdorni { -brand-short-name }, votoni për një internet të hapët dhe të përdorshëm, që është më i mirë për këdo.
+spotlight-peace-mind-header = Mendojmë ne për ju
+spotlight-peace-mind-body = Çdo muaj, { -brand-short-name } bllokon mesatarisht 3 mijë gjurmues për përdorues. Ngaqë mes jush dhe internetit të mbarë s’duhet të ketë asgjë, veçanërisht kokëçarje privatësie, të tilla si gjurmuesit.
+spotlight-pin-primary-button =
+    { PLATFORM() ->
+        [macos] Mbaje në Panel
+       *[other] Fiksoje te paneli
+    }
+spotlight-pin-secondary-button = Jo tani
+
+## MR2022 Background Update Windows native toast notification strings.
+##
+## These strings will be displayed by the Windows operating system in
+## a native toast, like:
+##
+## <b>multi-line title</b>
+## multi-line text
+## <img>
+## [ primary button ] [ secondary button ]
+##
+## The button labels are fitted into narrow fixed-width buttons by
+## Windows and therefore must be as narrow as possible.
+
+mr2022-background-update-toast-title = { -brand-short-name } i ri. Më privat. Më pak gjurmues. Pa kompromise.
+mr2022-background-update-toast-text = Provojeni { -brand-short-name }-in më të ri që tani, të përditësuar me mbrojtjen tonë më të fuqishme se ndonjëherë kundër gjurmimit.
+
+# This button label will be fitted into a narrow fixed-width button by
+# Windows. Try to not exceed the width of the English text (compare it
+# using a variable font like Arial): the button can only fit 1-2
+# additional characters, exceeding characters will be truncated.
+mr2022-background-update-toast-primary-button-label = Hapeni { -brand-shorter-name }-in Që Tani
+
+# This button label will be fitted into a narrow fixed-width button by
+# Windows. Try to not exceed the width of the English text (compare it using a
+# variable font like Arial): the button can only fit 1-2 additional characters,
+# exceeding characters will be truncated.
+mr2022-background-update-toast-secondary-button-label = Kujtoma Më Vonë
+
+## Firefox View CFR
+
+firefoxview-cfr-primarybutton = Provojeni
+    .accesskey = P
+firefoxview-cfr-secondarybutton = Jo tani
+    .accesskey = J
+firefoxview-cfr-header-v2 = Vazhdoni pa humbur kohë atje ku e latë
+firefoxview-cfr-body-v2 = Rikthehuni te skeda të mbyllura së fundi, plus hidhuni rrjedhshëm sa në një pajisje në një tjetër, me { -firefoxview-brand-name }.
+
+## Firefox View Spotlight
+
+firefoxview-spotlight-promo-title = I thoni tungjatjeta { -firefoxview-brand-name }-it
+
+# “Poof” refers to the expression to convey when something or someone suddenly disappears, or in this case, reappears. For example, “Poof, it’s gone.”
+firefoxview-spotlight-promo-subtitle = E doni atë skedë të hapur në telefonin tuaj? Përlajeni. Ju duhet ai sajt që sapo vizituat? Paf, ja ku erdhi me { -firefoxview-brand-name }-in.
+firefoxview-spotlight-promo-primarybutton = Shihni se si funksionon
+firefoxview-spotlight-promo-secondarybutton = Anashkaloje
+
+## Colorways expiry reminder CFR
+
+colorways-cfr-primarybutton = Zgjidhnii ngjyrim
+    .accesskey = Z
+
+# "shades" refers to the different color options available to users in colorways.
+colorways-cfr-body = Ngjyroseni shfletuesin tuaj me nuancat ekskluzive të { -brand-short-name }-it të frymëzuara nga zëra që ndryshuan kulturë.
+colorways-cfr-header-28days = Ngjyrimi “Zëra të Pavarur”  skadon më 16 janar
+colorways-cfr-header-14days = Ngjyrimi “Zëra të Pavarur”  skadon pas dy javësh
+colorways-cfr-header-7days = Ngjyrimi “Zëra të Pavarur”  skadon pas këtë javë
+colorways-cfr-header-today = Ngjyrimi “Zëra të Pavarur”  skadon sot
+
+## Cookie Banner Handling CFR
+
+cfr-cbh-header = Të lejohet { -brand-short-name } të hedhë poshtë banderola cookie-sh?
+cfr-cbh-body = { -brand-short-name }-i mundet të hedhë poshtë automatikisht mjaft kërkesa banderolash për “cookies”.
+cfr-cbh-confirm-button = Hidh poshtë banderola për cookie-t
+    .accesskey = H
+cfr-cbh-dismiss-button = Jo tani
+    .accesskey = J
+
+## These strings are used in the Fox doodle Pin/set default spotlights
+
+july-jam-headline = Mendojmë ne për ju
+july-jam-body = Çdo muaj { -brand-short-name }-i bllokon mesatarisht mbi 3 mijë gjurmues për përdorues, duke ju dhënë përdorim të parrezik, të shpejtë të internetit të mbarë.
+july-jam-set-default-primary = Hapi lidhjet e mia me { -brand-short-name }
+
+## These strings are used in the Set Firefox as Default PDF Handler for Existing Users experiment
+
+set-default-pdf-handler-headline = <strong>PDF-të tuaja tanimë hapen në { -brand-short-name }.</strong> Përpunoni ose nënshkruani formularë drejt e në shfletuesin tuaj. Për ta ndryshuar, kërkoni për  “PDF” te rregullimet.
+set-default-pdf-handler-primary = E mora vesh
+
+## FxA sync CFR
+
+## Device Migration FxA Spotlight
+

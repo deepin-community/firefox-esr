@@ -5,9 +5,9 @@
 
 ## Strings used for device manager
 
-devmgr =
+devmgr-window =
     .title = Turvalaitteiden hallinta
-    .style = width: 67em; height: 32em;
+    .style = min-width: 67em; min-height: 32em;
 
 devmgr-devlist =
     .label = Turvallisuusmoduulit ja -laitteet
@@ -115,8 +115,6 @@ devinfo-label =
 
 devinfo-serialnum =
     .label = Sarjanumero
-
-fips-nonempty-password-required = FIPS-tila vaatii, että jokaiselle turvalaitteelle on asetettu pääsalasana. Aseta salasana ennen kuin yrität ottaa FIPS-tilaa käyttöön.
 
 fips-nonempty-primary-password-required = FIPS-tila vaatii, että jokaiselle turvalaitteelle on asetettu pääsalasana. Aseta salasana ennen kuin yrität ottaa FIPS-tilaa käyttöön.
 unable-to-toggle-fips = FIPS-tilan vaihto turvalaitteelle ei onnistu. On suositeltavaa sulkea ja käynnistää tämä ohjelma uudelleen.

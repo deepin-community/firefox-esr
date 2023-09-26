@@ -15,6 +15,9 @@ printui-sheets-count =
     }
 
 printui-page-range-all = Ronojel
+printui-page-range-current = Wakami
+printui-page-range-odd = Mek'ulaj
+printui-page-range-even = K'ulaj
 printui-page-range-custom = Ichinan
 printui-page-range-label = Taq ruxaq
 printui-page-range-picker =
@@ -58,11 +61,18 @@ printui-options = Taq cha'oj
 printui-headers-footers-checkbox = Titz'ajb'äl taq nab'ey chuqa' ruxe' rub'i' ruxaq
 printui-backgrounds-checkbox = Ketz'ajb'äx taq rupam
 
-printui-selection-checkbox = Titz'ajb'äx xa xe ri cha'oj
-
 ## The "Format" section, select a version of the website to print. Radio
 ## options to select between the original page, selected text only, or a version
 ## where the page is processed with "Reader View".
+
+# The section title.
+printui-source-label = B'anikil
+# Option for printing the original page.
+printui-source-radio = Qitzij
+# Option for printing just the content a user selected prior to printing.
+printui-selection-radio = Cha'onïk
+# Option for "simplifying" the page by printing the Reader View version.
+printui-simplify-page-radio = Ch'utinisan
 
 ##
 

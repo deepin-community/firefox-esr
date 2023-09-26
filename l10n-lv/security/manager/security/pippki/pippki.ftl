@@ -6,9 +6,6 @@ password-quality-meter = Paroles kvalitātes mērītājs
 
 ## Change Password dialog
 
-change-password-window =
-    .title = Mainīt galveno paroli
-
 # Variables:
 # $tokenName (String) - Security device of the change password dialog
 change-password-token = Drošības ierīce: { $tokenName }
@@ -16,23 +13,16 @@ change-password-old = Pašreizējā parole:
 change-password-new = Jaunā parole:
 change-password-reenter = Jaunā parole (vēlreiz):
 
-## Reset Password dialog
-
-reset-password-window =
-    .title = Atstatīt galveno paroli
-    .style = width: 40em
-
 ## Reset Primary Password dialog
 
 reset-password-button-label =
     .label = Atstatīt
-reset-password-text = Ja atstatīsiet galveno paroli, tiks aizmirstas visas saglabātās tīmekļa un e-pasta paroles, formu dati, personīgie sertifikāti un privātās atslēgas.  Vai esat pārliecināts, ka vēlaties atstatīt galveno paroli?
 
 ## Downloading cert dialog
 
-download-cert-window =
+download-cert-window2 =
     .title = Lejupielādē sertifikātus
-    .style = width: 46em
+    .style = min-width: 46em
 download-cert-message = Jums tiek vaicāts uzticēties jaunai Sertifikātu Autoritātei (CA).
 download-cert-trust-ssl =
     .label = Uzticēties šai CA tīmekļa vietņu identificēšanai.
@@ -64,7 +54,5 @@ set-password-reminder = Svarīgi: Ja aizmirsīsiet šo paroli, nevarēsiet atjau
 
 ## Protected Auth dialog
 
-protected-auth-window =
-    .title = Aizsargātas marķierierīces autentificēšana
-protected-auth-msg = Lūdzu autentificējiet marķierierīci. Autentificēšanas metode atkarīga no ierīces tipa.
-protected-auth-token = Marķierieīce:
+## Protected authentication alert
+

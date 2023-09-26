@@ -11,6 +11,12 @@ reload-tab =
 select-all-tabs =
     .label = Välj alla flikar
     .accesskey = V
+tab-context-play-tab =
+    .label = Spela flik
+    .accesskey = S
+tab-context-play-tabs =
+    .label = Spela flikar
+    .accesskey = p
 duplicate-tab =
     .label = Duplicera flik
     .accesskey = D
@@ -48,12 +54,9 @@ unpin-selected-tabs =
 bookmark-selected-tabs =
     .label = Bokmärk flikar…
     .accesskey = k
-bookmark-tab =
-    .label = Bokmärk flik
+tab-context-bookmark-tab =
+    .label = Bokmärk flik…
     .accesskey = B
-reopen-in-container =
-    .label = Återöppna i innehållsflik
-    .accesskey = i
 tab-context-open-in-new-container-tab =
     .label = Öppna i ny innehållsflik
     .accesskey = n
@@ -69,31 +72,9 @@ move-to-new-window =
 tab-context-close-multiple-tabs =
     .label = Stäng flera flikar
     .accesskey = f
-tab-context-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Ångra Stäng flik
-            [one] Ångra Stäng flik
-           *[other] Ångra Stäng flikar
-        }
-    .accesskey = n
-close-tab =
-    .label = Stäng flik
-    .accesskey = S
-close-tabs =
-    .label = Stäng flikar
-    .accesskey = S
-move-tabs =
-    .label = Flytta flikar
-    .accesskey = t
-move-tab =
-    .label = Flytta flik
-    .accesskey = t
 tab-context-share-url =
     .label = Dela
     .accesskey = D
-tab-context-share-more =
-    .label = Mer…
 
 ## Variables:
 ##  $tabCount (Number): the number of tabs that are affected by the action.
@@ -105,14 +86,6 @@ tab-context-reopen-closed-tabs =
            *[other] Öppna stängda flikar igen
         }
     .accesskey = p
-tab-context-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Stäng flik
-            [one] Stäng flik
-           *[other] Stäng flikar
-        }
-    .accesskey = S
 tab-context-close-n-tabs =
     .label =
         { $tabCount ->
@@ -128,3 +101,11 @@ tab-context-move-tabs =
            *[other] Flytta flikar
         }
     .accesskey = t
+
+tab-context-send-tabs-to-device =
+    .label =
+        { $tabCount ->
+            [one] Skicka flik till enhet
+           *[other] Skicka { $tabCount } flikar till enhet
+        }
+    .accesskey = n

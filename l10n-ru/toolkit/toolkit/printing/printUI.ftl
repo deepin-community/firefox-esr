@@ -16,6 +16,9 @@ printui-sheets-count =
     }
 
 printui-page-range-all = Все
+printui-page-range-current = Текущая
+printui-page-range-odd = Нечётные
+printui-page-range-even = Чётные
 printui-page-range-custom = Диапазон
 printui-page-range-label = Страницы
 printui-page-range-picker =
@@ -58,8 +61,6 @@ printui-two-sided-printing-short-edge = Переплет по короткой �
 printui-options = Настройки
 printui-headers-footers-checkbox = Печатать колонтитулы
 printui-backgrounds-checkbox = Печатать фон
-
-printui-selection-checkbox = Печатать только выделенную область
 
 ## The "Format" section, select a version of the website to print. Radio
 ## options to select between the original page, selected text only, or a version

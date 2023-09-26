@@ -2,12 +2,12 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-connection-window =
+connection-window2 =
     .title = Pengaturan Sambungan
     .style =
         { PLATFORM() ->
-            [macos] width: 44em
-           *[other] width: 49em
+            [macos] min-width: 44em
+           *[other] min-width: 49em
         }
 
 connection-close-key =
@@ -35,10 +35,6 @@ connection-proxy-http = Proksi HTTP
     .accesskey = k
 connection-proxy-http-port = Port
     .accesskey = P
-connection-proxy-http-sharing =
-    .label = Gunakan proksi ini untuk FTP dan HTTPS
-    .accesskey = F
-
 connection-proxy-https-sharing =
     .label = Juga gunakan proksi ini untuk HTTPS
     .accesskey = s
@@ -47,11 +43,6 @@ connection-proxy-https = Proksi HTTPS
     .accesskey = S
 connection-proxy-ssl-port = Port
     .accesskey = o
-
-connection-proxy-ftp = Proksi FTP
-    .accesskey = F
-connection-proxy-ftp-port = Port
-    .accesskey = r
 
 connection-proxy-socks = Host SOCKS
     .accesskey = C
@@ -69,9 +60,6 @@ connection-proxy-noproxy = Tanpa Proksi untuk
 
 connection-proxy-noproxy-desc = Contoh: .mozilla.org, .net.id, 192.168.1.0/24
 
-# Do not translate localhost, 127.0.0.1 and ::1.
-connection-proxy-noproxy-localhost-desc = Koneksi ke localhost, 127.0.0.1, dan :: 1 tidak pernah diproksi.
-
 # Do not translate "localhost", "127.0.0.1/8" and "::1". (You can translate "and".)
 connection-proxy-noproxy-localhost-desc-2 = Koneksi ke localhost, 127.0.0.1/8, dan ::1 tidak pernah diproksi.
 
@@ -88,16 +76,14 @@ connection-proxy-autologin =
     .accesskey = i
     .tooltip = Opsi ini akan mengautentikasi Anda tanpa pemberitahuan jika Anda telah menyimpan sandinya. Anda akan ditanya hanya jika proses autentikasinya gagal.
 
+connection-proxy-autologin-checkbox =
+    .label = Jangan tanyakan autentikasi jika sandinya disimpan
+    .accesskey = i
+    .tooltiptext = Opsi ini akan mengautentikasi Anda tanpa pemberitahuan jika Anda telah menyimpan sandinya. Anda akan ditanya hanya jika proses autentikasinya gagal.
+
 connection-proxy-socks-remote-dns =
     .label = DNS proksi saat menggunakan SOCKS v5
     .accesskey = d
-
-connection-dns-over-https =
-    .label = Aktifkan DNS lewat HTTPS
-    .accesskey = D
-
-connection-dns-over-https-url-resolver = Gunakan Penyedia
-    .accesskey = P
 
 # Variables:
 #   $name (String) - Display name or URL for the DNS over HTTPS provider

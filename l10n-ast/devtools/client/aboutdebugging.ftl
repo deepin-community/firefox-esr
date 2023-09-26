@@ -94,7 +94,7 @@ about-debugging-setup-connect-heading = Conexón d'un preséu
 about-debugging-setup-usb-title = USB
 
 # Explanatory text displayed in the Setup page when USB debugging is disabled
-about-debugging-setup-usb-disabled = Activar esto va baxar y amestar los componentes riquíos de depuración USB d'Android en { -brand-shorter-name }.
+about-debugging-setup-usb-disabled = Activar esto va baxar y amestar los componentes riquíos de depuración per USB d'Android en { -brand-shorter-name }.
 
 # Text of the button displayed in the USB section of the setup page when USB debugging is disabled.
 # Clicking on it will download components needed to debug USB Devices remotely.
@@ -247,10 +247,6 @@ about-debugging-worker-status-registering = Rexistrando
 # Displayed for service workers in runtime pages, to label the scope of a worker
 about-debugging-worker-scope =
     .label = Ámbitu
-
-# Displayed as name for the Main Process debug target in the Processes category. Only for
-# remote runtimes, if `devtools.aboutdebugging.process-debugging` is true.
-about-debugging-main-process-name = Procesu principal
 
 # Label text used for default state of details of message component.
 about-debugging-message-details-label = Detalles

@@ -5,9 +5,9 @@
 
 ## Strings used for device manager
 
-devmgr =
+devmgr-window =
     .title = Upravnik uređaja
-    .style = width: 67em; height: 32em;
+    .style = min-width: 67em; min-height: 32em;
 
 devmgr-devlist =
     .label = Sigurnosni moduli i uređaji
@@ -115,8 +115,6 @@ devinfo-label =
 
 devinfo-serialnum =
     .label = Serijski broj
-
-fips-nonempty-password-required = FIPS režim rada zahtijeva da podesite glavne lozinke za svaki od sigurnosnih uređaja. Molimo da postavite lozinke prije omogućavanja FIPS režima rada.
 
 unable-to-toggle-fips = Ne mogu promijeniti FIPS režim za sigurnosni uređaj. Preporučujemo da izađete iz aplikacije te je ponovo pokrenete.
 load-pk11-module-file-picker-title = Izaberite PKCS#11 drajver za učitavanje

@@ -11,17 +11,6 @@ navbar-tooltip-instruction =
 
 ## Back
 
-main-context-menu-back =
-    .tooltiptext = Tagasi üks leht
-    .aria-label = Tagasi
-    .accesskey = T
-
-navbar-tooltip-back =
-    .value = { main-context-menu-back.tooltiptext }
-
-toolbar-button-back =
-    .label = { main-context-menu-back.aria-label }
-
 # Variables
 #   $shortcut (String) - A keyboard shortcut for the Go Back command.
 main-context-menu-back-2 =
@@ -41,17 +30,6 @@ toolbar-button-back-2 =
     .label = { main-context-menu-back-2.aria-label }
 
 ## Forward
-
-main-context-menu-forward =
-    .tooltiptext = Edasi üks leht
-    .aria-label = Edasi
-    .accesskey = E
-
-navbar-tooltip-forward =
-    .value = { main-context-menu-forward.tooltiptext }
-
-toolbar-button-forward =
-    .label = { main-context-menu-forward.aria-label }
 
 # Variables
 #   $shortcut (String) - A keyboard shortcut for the Go Forward command.
@@ -106,40 +84,17 @@ toolbar-button-stop-reload =
 
 ## Firefox Account Button
 
+toolbar-button-fxaccount =
+    .label = { -fxaccount-brand-name }
+    .tooltiptext = { -fxaccount-brand-name }
+
 ## Save Page
 
 main-context-menu-page-save =
     .label = Salvesta veebileht kui…
     .accesskey = a
 
-toolbar-button-page-save =
-    .label = { main-context-menu-page-save.label }
-
 ## Simple menu items
-
-main-context-menu-bookmark-add =
-    .aria-label = Lisa see veebileht järjehoidjatesse
-    .accesskey = j
-    .tooltiptext = Lisa see leht järjehoidjatesse
-
-# Variables
-#   $shortcut (String) - A keyboard shortcut for the add bookmark command.
-main-context-menu-bookmark-add-with-shortcut =
-    .aria-label = Lisa see veebileht järjehoidjatesse
-    .accesskey = j
-    .tooltiptext = Lisa see leht järjehoidjatesse ({ $shortcut })
-
-main-context-menu-bookmark-change =
-    .aria-label = Muuda seda järjehoidjat
-    .accesskey = j
-    .tooltiptext = Muuda seda järjehoidjat
-
-# Variables
-#   $shortcut (String) - A keyboard shortcut for the edit bookmark command.
-main-context-menu-bookmark-change-with-shortcut =
-    .aria-label = Muuda seda järjehoidjat
-    .accesskey = j
-    .tooltiptext = Muuda seda järjehoidjat ({ $shortcut })
 
 main-context-menu-open-link =
     .label = Ava link
@@ -161,10 +116,6 @@ main-context-menu-open-link-new-private-window =
     .label = Ava link uues privaatses aknas
     .accesskey = k
 
-main-context-menu-bookmark-this-link =
-    .label = Lisa see link järjehoidjatesse
-    .accesskey = n
-
 main-context-menu-save-link =
     .label = Salvesta link kui…
     .accesskey = k
@@ -172,11 +123,6 @@ main-context-menu-save-link =
 main-context-menu-save-link-to-pocket =
     .label = Salvesta link { -pocket-brand-name }isse
     .accesskey = l
-
-## The access keys for "Copy Link Location" and "Copy Email Address"
-## should be the same if possible; the two context menu items
-## are mutually exclusive.
-
 
 ## The access keys for "Copy Link" and "Copy Email Address"
 ## should be the same if possible; the two context menu items
@@ -186,9 +132,13 @@ main-context-menu-copy-email =
     .label = Kopeeri e-posti aadress
     .accesskey = i
 
-main-context-menu-copy-link =
-    .label = Kopeeri lingi aadress
-    .accesskey = o
+main-context-menu-copy-phone =
+    .label = Kopeeri telefoninumber
+    .accesskey = K
+
+main-context-menu-copy-link-simple =
+    .label = Kopeeri link
+    .accesskey = K
 
 ## Media (video/audio) controls
 ##
@@ -214,31 +164,24 @@ main-context-menu-media-unmute =
     .label = Võta summutamine maha
     .accesskey = m
 
-main-context-menu-media-play-speed =
-    .label = Esitamise kiirus
-    .accesskey = k
-
-main-context-menu-media-play-speed-slow =
-    .label = Aegluubis (0.5×)
-    .accesskey = g
-
-main-context-menu-media-play-speed-normal =
-    .label = Tavaline
-    .accesskey = T
-
-main-context-menu-media-play-speed-fast =
-    .label = Kiirendatud (1.25×)
+main-context-menu-media-play-speed-2 =
+    .label = Kiirus
     .accesskey = i
 
-main-context-menu-media-play-speed-faster =
-    .label = Veel rohkem kiirendatud (1.5×)
-    .accesskey = e
+main-context-menu-media-play-speed-slow-2 =
+    .label = 0.5×
 
-# "Ludicrous" is a reference to the movie "Space Balls" and is meant
-# to say that this speed is very fast.
-main-context-menu-media-play-speed-fastest =
-    .label = Naeruväärselt kiire (2×)
-    .accesskey = N
+main-context-menu-media-play-speed-normal-2 =
+    .label = 1.0×
+
+main-context-menu-media-play-speed-fast-2 =
+    .label = 1.25×
+
+main-context-menu-media-play-speed-faster-2 =
+    .label = 1.5×
+
+main-context-menu-media-play-speed-fastest-2 =
+    .label = 2×
 
 main-context-menu-media-loop =
     .label = Kordamine
@@ -267,37 +210,37 @@ main-context-menu-media-video-leave-fullscreen =
 
 # This is used when right-clicking on a video in the
 # content area when the Picture-in-Picture feature is enabled.
-main-context-menu-media-pip =
-    .label = Pilt-pildis
-    .accesskey = P
+main-context-menu-media-watch-pip =
+    .label = Vaata pilt-pildis režiimis
+    .accesskey = V
 
 main-context-menu-image-reload =
     .label = Laadi pilt uuesti
     .accesskey = L
 
-main-context-menu-image-view =
-    .label = Vaata pilti
-    .accesskey = t
+main-context-menu-image-view-new-tab =
+    .label = Ava pilt uuel kaardil
+    .accesskey = A
 
-main-context-menu-video-view =
-    .label = Vaata videot
-    .accesskey = i
+main-context-menu-video-view-new-tab =
+    .label = Ava video uuel kaardil
+    .accesskey = A
 
 main-context-menu-image-copy =
     .label = Kopeeri pilt
     .accesskey = e
 
-main-context-menu-image-copy-location =
-    .label = Kopeeri pildi aadress
-    .accesskey = o
+main-context-menu-image-copy-link =
+    .label = Kopeeri pildi link
+    .accesskey = K
 
-main-context-menu-video-copy-location =
-    .label = Kopeeri video aadress
-    .accesskey = e
+main-context-menu-video-copy-link =
+    .label = Kopeeri video link
+    .accesskey = K
 
-main-context-menu-audio-copy-location =
-    .label = Kopeeri audio aadress
-    .accesskey = p
+main-context-menu-audio-copy-link =
+    .label = Kopeeri heli link
+    .accesskey = K
 
 main-context-menu-image-save-as =
     .label = Salvesta pilt kui…
@@ -307,8 +250,8 @@ main-context-menu-image-email =
     .label = Saada pilt e-postiga…
     .accesskey = d
 
-main-context-menu-image-set-as-background =
-    .label = Määra taustapildiks…
+main-context-menu-image-set-image-as-background =
+    .label = Määra pilt töölaua taustaks…
     .accesskey = M
 
 main-context-menu-image-info =
@@ -327,9 +270,9 @@ main-context-menu-audio-save-as =
     .label = Salvesta audio kui…
     .accesskey = a
 
-main-context-menu-video-image-save-as =
-    .label = Salvesta hetkvõte kui…
-    .accesskey = a
+main-context-menu-video-take-snapshot =
+    .label = Tee pilti…
+    .accesskey = T
 
 main-context-menu-video-email =
     .label = Saada video e-postiga…
@@ -339,14 +282,6 @@ main-context-menu-audio-email =
     .label = Saada audio e-postiga…
     .accesskey = u
 
-main-context-menu-plugin-play =
-    .label = Aktiveeri see plugin
-    .accesskey = u
-
-main-context-menu-plugin-hide =
-    .label = Peida see plugin
-    .accesskey = d
-
 main-context-menu-save-to-pocket =
     .label = Salvesta leht { -pocket-brand-name }isse
     .accesskey = k
@@ -355,16 +290,27 @@ main-context-menu-send-to-device =
     .label = Saada leht seadmesse
     .accesskey = h
 
-main-context-menu-view-background-image =
-    .label = Vaata taustapilti
-    .accesskey = s
-
 ## The access keys for "Use Saved Login" and "Use Saved Password"
 ## should be the same if possible; the two context menu items
 ## are mutually exclusive.
 
+main-context-menu-use-saved-login =
+    .label = Kasuta salvestatud kasutajakontot
+    .accesskey = u
+
+main-context-menu-use-saved-password =
+    .label = Kasuta salvestatud parooli
+    .accesskey = u
 
 ##
+
+main-context-menu-suggest-strong-password =
+    .label = Soovita tugevat parooli…
+    .accesskey = S
+
+main-context-menu-manage-logins2 =
+    .label = Halda kasutajakontosid
+    .accesskey = H
 
 main-context-menu-keyword =
     .label = Lisa võti sellele otsingule...
@@ -394,10 +340,6 @@ main-context-menu-frame-reload =
     .label = Laadi paneeli sisu uuesti
     .accesskey = L
 
-main-context-menu-frame-bookmark =
-    .label = Lisa see paneel järjehoidjatesse
-    .accesskey = e
-
 main-context-menu-frame-save-as =
     .label = Salvesta paneel kui…
     .accesskey = v
@@ -418,13 +360,17 @@ main-context-menu-view-selection-source =
     .label = Vaata valiku lähtekoodi
     .accesskey = e
 
+main-context-menu-take-screenshot =
+    .label = Tee ekraanipilt
+    .accesskey = T
+
+main-context-menu-take-frame-screenshot =
+    .label = Tee ekraanipilt
+    .accesskey = T
+
 main-context-menu-view-page-source =
     .label = Vaata veebilehe lähtekoodi
     .accesskey = t
-
-main-context-menu-view-page-info =
-    .label = Vaata veebilehe teavet
-    .accesskey = i
 
 main-context-menu-bidi-switch-text =
     .label = Muuda teksti suunda
@@ -434,9 +380,9 @@ main-context-menu-bidi-switch-page =
     .label = Muuda lehe suunda
     .accesskey = h
 
-main-context-menu-inspect-element =
-    .label = Inspekteeri elementi
-    .accesskey = n
+main-context-menu-inspect =
+    .label = Inspekteeri
+    .accesskey = I
 
 main-context-menu-inspect-a11y-properties =
     .label = Inspect Accessibility Properties
@@ -444,3 +390,13 @@ main-context-menu-inspect-a11y-properties =
 main-context-menu-eme-learn-more =
     .label = Rohkem teavet DRMi kohta…
     .accesskey = D
+
+# Variables
+#   $containerName (String): The name of the current container
+main-context-menu-open-link-in-container-tab =
+    .label = Ava link uuel kaardil konteineris { $containerName }
+    .accesskey = k
+
+main-context-menu-reveal-password =
+    .label = Näita parooli
+    .accesskey = N

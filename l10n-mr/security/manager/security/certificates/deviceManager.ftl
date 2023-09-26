@@ -5,9 +5,9 @@
 
 ## Strings used for device manager
 
-devmgr =
+devmgr-window =
     .title = साधन व्यवस्थापक
-    .style = width: 67em; height: 32em;
+    .style = min-width: 67em; min-height: 32em;
 
 devmgr-devlist =
     .label = सुरक्षा घटक व साधन
@@ -115,8 +115,6 @@ devinfo-label =
 
 devinfo-serialnum =
     .label = क्रमांक
-
-fips-nonempty-password-required = FIPS पध्दती आपले मुख्य पासवर्ड सुरक्षा साधनाकरीता निश्चित करण्यास सांगते. FIPS पध्दती कार्यान्वीत करण्यापूर्वी पासवर्ड कृपया निश्चित करण्याचा प्रयत्न करा.
 
 unable-to-toggle-fips = सुरक्षा साधनकरीता FIPS मोड बदलणे अशक्य करा. आपण बाहेर पडल्यावर ॲप्लिकेशन पुनःसुरू करणे शिफारसीय आहे.
 load-pk11-module-file-picker-title = दाखल करण्याकरीता PKCS#11 साधन ड्राइव्हर निवडा

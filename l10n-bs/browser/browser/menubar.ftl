@@ -43,15 +43,6 @@ menu-quit =
 menu-quit-mac =
     .label = Zatvori { -brand-shorter-name }
 
-# This menu-quit-button string is only used on Linux.
-menu-quit-button =
-    .label = { menu-quit.label }
-
-# This menu-quit-button-win string is only used on Windows.
-menu-quit-button-win =
-    .label = { menu-quit.label }
-    .tooltip = Zatvori { -brand-shorter-name }
-
 menu-about =
     .label = O { -brand-shorter-name }u
     .accesskey = O
@@ -81,9 +72,6 @@ menu-file-open-location =
 menu-file-open-file =
     .label = Otvori fajl…
     .accesskey = O
-menu-file-close =
-    .label = Zatvori
-    .accesskey = Z
 menu-file-close-window =
     .label = Zatvori prozor
     .accesskey = Z
@@ -95,9 +83,6 @@ menu-file-email-link =
     .accesskey = e
 menu-file-print-setup =
     .label = Podešavanje strane…
-    .accesskey = P
-menu-file-print-preview =
-    .label = Pregled prije štampe
     .accesskey = P
 menu-file-print =
     .label = Štampaj…
@@ -114,9 +99,6 @@ menu-file-go-offline =
 menu-edit =
     .label = Uredi
     .accesskey = e
-menu-edit-find-on =
-    .label = Pronađi na ovoj stranici…
-    .accesskey = P
 menu-edit-find-in-page =
     .label = Pronađi na stranici…
     .accesskey = F
@@ -135,9 +117,6 @@ menu-view =
 menu-view-toolbars-menu =
     .label = Trake sa alatima
     .accesskey = T
-menu-view-customize-toolbar =
-    .label = Prilagođavanje…
-    .accesskey = P
 menu-view-customize-toolbar2 =
     .label = Prilagodi alatnu traku…
     .accesskey = C
@@ -174,9 +153,6 @@ menu-view-page-style-no-style =
 menu-view-page-basic-style =
     .label = Osnovni stil stranice
     .accesskey = O
-menu-view-charset =
-    .label = Kodna stranica teksta
-    .accesskey = e
 
 ## These should match what Safari and other Apple applications
 ## use on macOS.
@@ -190,6 +166,17 @@ menu-view-exit-full-screen =
 menu-view-full-screen =
     .label = Prikaz preko cijelog ekrana
     .accesskey = c
+
+## These menu items may use the same accesskey.
+
+# This should match reader-view-enter-button in browser.ftl
+menu-view-enter-readerview =
+    .label = Uđi u prikaz za čitanje
+    .accesskey = R
+# This should match reader-view-close-button in browser.ftl
+menu-view-close-readerview =
+    .label = Zatvori prikaz za čitanje
+    .accesskey = R
 
 ##
 
@@ -225,14 +212,6 @@ menu-history-undo-window-menu =
 menu-bookmarks-menu =
     .label = Zabilješke
     .accesskey = b
-menu-bookmarks-show-all =
-    .label = Prikaži sve zabilješke
-menu-bookmark-this-page =
-    .label = Zabilježi ovu stranicu
-menu-bookmark-current-tab =
-    .label = Zabilježi trenutni tab
-menu-bookmark-edit =
-    .label = Uredi ovu Zabilješku
 menu-bookmarks-all-tabs =
     .label = Zabilježi sve tabove…
 menu-bookmarks-toolbar =
@@ -250,41 +229,18 @@ menu-tools =
 menu-tools-downloads =
     .label = Preuzimanja
     .accesskey = P
-menu-tools-addons =
-    .label = Add-oni
-    .accesskey = A
-menu-tools-fxa-sign-in =
-    .label = Prijava na { -brand-product-name }…
-    .accesskey = S
-menu-tools-turn-on-sync =
-    .label = Upali { -sync-brand-short-name }…
-    .accesskey = n
 menu-tools-sync-now =
     .label = Sinhronizuj sada
     .accesskey = S
 menu-tools-fxa-re-auth =
     .label = Ponovo se poveži na { -brand-product-name }…
     .accesskey = R
-menu-tools-web-developer =
-    .label = Web Developer
-    .accesskey = W
 menu-tools-page-source =
     .label = Izvorni kod stranice
     .accesskey = o
 menu-tools-page-info =
     .label = Podaci o strani
     .accesskey = i
-menu-preferences =
-    .label =
-        { PLATFORM() ->
-            [windows] Opcije
-           *[other] Postavke
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] O
-           *[other] P
-        }
 menu-tools-layout-debugger =
     .label = Debager layouta
     .accesskey = L
@@ -310,35 +266,11 @@ menu-window-bring-all-to-front =
 menu-help =
     .label = Pomoć
     .accesskey = P
-menu-help-product =
-    .label = { -brand-shorter-name } pomoć
-    .accesskey = H
-menu-help-show-tour =
-    .label = { -brand-shorter-name } vodič
-    .accesskey = o
-menu-help-import-from-another-browser =
-    .label = Uvoz iz drugog browsera…
-    .accesskey = I
-menu-help-keyboard-shortcuts =
-    .label = Shortcuti na tastaturi
-    .accesskey = o
-menu-help-troubleshooting-info =
-    .label = Informacije za rješavanje problema
-    .accesskey = I
 menu-get-help =
     .label = Pomoć
     .accesskey = H
 menu-help-report-site-issue =
     .label = Prijavite problem sa stranicom…
-menu-help-feedback-page =
-    .label = Pošalji povratnu informaciju…
-    .accesskey = P
-menu-help-safe-mode-without-addons =
-    .label = Restartuj sa onemogućenim add-onima…
-    .accesskey = R
-menu-help-safe-mode-with-addons =
-    .label = Restartuj sa omogućenim add-onima
-    .accesskey = R
 # Label of the Help menu item. Either this or
 # menu-help-notdeceptive is shown.
 menu-help-report-deceptive-site =

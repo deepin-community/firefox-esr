@@ -9,11 +9,6 @@ crashes-id = レポート ID
 crashes-send-date = 送信日時
 crashes-all-reports = すべてのクラッシュレポート
 crashes-no-config = このプログラムはクラッシュレポートを表示できるように設定されていません。
-extensions-title = 拡張機能
-extensions-name = アドオン名
-extensions-enabled = 有効
-extensions-version = バージョン
-extensions-id = ID
 support-addons-title = アドオン
 support-addons-name = アドオン名
 support-addons-type = 種類
@@ -75,6 +70,12 @@ app-basics-location-service-key-google = Google Location Service キー
 app-basics-safebrowsing-key-google = Google Safebrowsing キー
 app-basics-key-mozilla = Mozilla Location Service キー
 app-basics-safe-mode = セーフモード
+app-basics-memory-size = メモリーサイズ (RAM)
+app-basics-disk-available = 空きディスク領域
+# Variables:
+#   $value (number) - Amount of data being stored
+#   $unit (string) - The unit of data being stored (e.g. MB)
+app-basics-data-size = { $value } { $unit }
 show-dir-label =
     { PLATFORM() ->
         [macos] Finder に表示
@@ -104,11 +105,21 @@ graphics-gpu2-title = GPU #2
 graphics-decision-log-title = 決定ログ
 graphics-crash-guards-title = クラッシュガードが無効化した機能
 graphics-workarounds-title = 回避策
+graphics-device-pixel-ratios = ウィンドウデバイスのピクセル比
 # Windowing system in use on Linux (e.g. X11, Wayland).
 graphics-window-protocol = ウィンドウプロトコル
 # Desktop environment in use on Linux (e.g. GNOME, KDE, XFCE, etc).
 graphics-desktop-environment = デスクトップ環境
 place-database-title = Places データベース
+place-database-stats = 統計
+place-database-stats-show = 統計を表示
+place-database-stats-hide = 統計を隠す
+place-database-stats-entity = 実体
+place-database-stats-count = カウント
+place-database-stats-size-kib = サイズ (KiB)
+place-database-stats-size-perc = サイズ (%)
+place-database-stats-efficiency-perc = 効率 (%)
+place-database-stats-sequentiality-perc = 連続性 (%)
 place-database-integrity = 完全性
 place-database-verify-integrity = 完全性を検証
 a11y-title = アクセシビリティ
@@ -128,8 +139,6 @@ sandbox-sys-call-tid = TID
 sandbox-sys-call-proc-type = プロセスの種類
 sandbox-sys-call-number = Syscall
 sandbox-sys-call-args = 引数
-safe-mode-title = セーフモードを試す
-restart-in-safe-mode-label = アドオンを無効化して再起動...
 troubleshoot-mode-title = 問題の原因調査
 restart-in-troubleshoot-mode-label = トラブルシューティングモード...
 clear-startup-cache-title = 起動時キャッシュの消去を試行
@@ -156,9 +165,18 @@ media-device-format = 形式
 media-device-channels = チャンネル
 media-device-rate = レート
 media-device-latency = 遅延
-media-capabilities-title = メディア性能
+media-capabilities-title = メディア機能
+media-codec-support-info = コーデックサポート情報
 # List all the entries of the database.
 media-capabilities-enumerate = データベースを列挙
+
+## Codec support table
+
+media-codec-support-sw-decoding = ソフトウェアデコーディング
+media-codec-support-hw-decoding = ハードウェアデコーディング
+media-codec-support-codec-name = コーデック名
+media-codec-support-supported = 対応
+media-codec-support-unsupported = 未対応
 
 ##
 
@@ -253,10 +271,8 @@ webgl2-renderer = WebGL 2 ドライバーのレンダラー
 webgl2-version = WebGL 2 ドライバーのバージョン
 webgl2-driver-extensions = WebGL 2 ドライバーの拡張
 webgl2-extensions = WebGL 2 拡張
-blocklisted-bug = 既知の問題によりブロックリストに掲載されています
-# Variables
-# $bugNumber (string) - String of bug number from Bugzilla
-bug-link = Bug { $bugNumber }
+webgpu-default-adapter = WebGPU の既定のアダプター
+webgpu-fallback-adapter = WebGPU のフォールバックアダプター
 # Variables
 #   $bugNumber (string) - Bug number on Bugzilla
 support-blocklisted-bug = 既知の問題によりブロックリストに追加: <a data-l10n-name="bug-link">bug { $bugNumber }</a>
@@ -264,8 +280,6 @@ support-blocklisted-bug = 既知の問題によりブロックリストに追加
 # $failureCode (string) - String that can be searched in the source tree.
 unknown-failure = ブロックリストに掲載。失敗コード { $failureCode }
 d3d11layers-crash-guard = D3D11 コンポジター
-d3d11video-crash-guard = D3D11 動画デコーダー
-d3d9video-crash-guard = D3D9 動画デコーダー
 glcontext-crash-guard = OpenGL
 wmfvpxvideo-crash-guard = WMF VPX 動画デコーダー
 reset-on-next-restart = 次回起動時にリセット
@@ -288,6 +302,7 @@ can-sandbox-media = メディアプラグインのサンドボックス化
 content-sandbox-level = コンテンツプロセスのサンドボックスレベル
 effective-content-sandbox-level = 効果的なコンテンツプロセスのサンドボックスレベル
 content-win32k-lockdown-state = コンテンツプロセスの Win32k ロックダウン状態
+support-sandbox-gpu-level = GPU プロセスのサンドボックスレベル
 sandbox-proc-type-content = コンテンツ
 sandbox-proc-type-file = ファイルコンテンツ
 sandbox-proc-type-media-plugin = メディアプラグイン
@@ -305,14 +320,6 @@ launcher-process-status-unknown = 状態不明
 # $remoteWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
 multi-process-windows = { $remoteWindows }/{ $totalWindows }
-multi-process-status-0 = ユーザー設定により有効
-multi-process-status-1 = 既定で有効
-multi-process-status-2 = 無効
-multi-process-status-4 = アクセシビリティツールにより無効
-multi-process-status-6 = 未サポートのテキスト入力により無効
-multi-process-status-7 = アドオンにより無効
-multi-process-status-8 = 強制的に無効
-multi-process-status-unknown = 状態不明
 # Variables
 # $fissionWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
@@ -321,7 +328,7 @@ fission-status-experiment-control = 実験のため無効
 fission-status-experiment-treatment = 実験のため有効
 fission-status-disabled-by-e10s-env = 動作環境により無効
 fission-status-enabled-by-env = 動作環境により有効
-fission-status-disabled-by-safe-mode = セーフモードのため無効
+fission-status-disabled-by-env = 動作環境により無効
 fission-status-enabled-by-default = 既定で有効
 fission-status-disabled-by-default = 既定で無効
 fission-status-enabled-by-user-pref = ユーザーにより有効
@@ -364,7 +371,6 @@ support-remote-experiments-title = リモート機能の実験
 support-remote-experiments-name = 機能名
 support-remote-experiments-branch = 実験ブランチ
 support-remote-experiments-see-about-studies = 各実験を無効にする方法や、これらの今後の実験を { -brand-short-name } で無効にする方法を含め、詳しい情報は <a data-l10n-name="support-about-studies-link">about:studies</a> をご覧ください。
-
 support-remote-features-title = リモート機能
 support-remote-features-name = 機能名
 support-remote-features-status = 状態

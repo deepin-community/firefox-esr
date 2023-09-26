@@ -36,6 +36,7 @@ menu-application-touch-bar =
 menu-quit =
     .label = Изађи
     .accesskey = И
+
 # This menu-quit-mac string is only used on macOS.
 menu-quit-mac =
     .label =
@@ -45,19 +46,7 @@ menu-quit-mac =
             [neuter] { -brand-shorter-name(case: "gen") }
            *[other] програма { -brand-shorter-name }
         }
-# This menu-quit-button string is only used on Linux.
-menu-quit-button =
-    .label = { menu-quit.label }
-# This menu-quit-button-win string is only used on Windows.
-menu-quit-button-win =
-    .label = { menu-quit.label }
-    .tooltip =
-        Изађи из { -brand-shorter-name.gender ->
-            [masculine] { -brand-shorter-name(case: "gen") }
-            [feminine] { -brand-shorter-name(case: "gen") }
-            [neuter] { -brand-shorter-name(case: "gen") }
-           *[other] програма { -brand-shorter-name }
-        }
+
 menu-about =
     .label =
         О { -brand-shorter-name.gender ->
@@ -93,8 +82,16 @@ menu-file-open-location =
 menu-file-open-file =
     .label = Отвори датотеку…
     .accesskey = О
-menu-file-close =
-    .label = Затвори
+# Variables:
+#  $tabCount (Number): the number of tabs that are affected by the action.
+menu-file-close-tab =
+    .label =
+        { $tabCount ->
+            [1] Затвори језичак
+            [one] Затвори { $tabCount } језичак
+            [few] Затвори { $tabCount } језичка
+           *[other] Затвори { $tabCount } језичака
+        }
     .accesskey = C
 menu-file-close-window =
     .label = Затвори прозор
@@ -111,9 +108,6 @@ menu-file-share-url =
 menu-file-print-setup =
     .label = Подеси страницу…
     .accesskey = u
-menu-file-print-preview =
-    .label = Преглед пре штампања
-    .accesskey = П
 menu-file-print =
     .label = Одштампај…
     .accesskey = ш
@@ -129,9 +123,6 @@ menu-file-go-offline =
 menu-edit =
     .label = Уређивање
     .accesskey = У
-menu-edit-find-on =
-    .label = Пронађи на овој страници…
-    .accesskey = р
 menu-edit-find-in-page =
     .label = Пронађи на страници…
     .accesskey = р
@@ -150,9 +141,6 @@ menu-view =
 menu-view-toolbars-menu =
     .label = Траке са алаткама
     .accesskey = Т
-menu-view-customize-toolbar =
-    .label = Прилагоди…
-    .accesskey = П
 menu-view-customize-toolbar2 =
     .label = Прилагоди траку са алаткама…
     .accesskey = П
@@ -189,9 +177,6 @@ menu-view-page-style-no-style =
 menu-view-page-basic-style =
     .label = Основни стил
     .accesskey = О
-menu-view-charset =
-    .label = Кодни распоред
-    .accesskey = К
 menu-view-repair-text-encoding =
     .label = Исправи кодни распоред
     .accesskey = И
@@ -208,6 +193,17 @@ menu-view-exit-full-screen =
 menu-view-full-screen =
     .label = Преко целог екрана
     .accesskey = П
+
+## These menu items may use the same accesskey.
+
+# This should match reader-view-enter-button in browser.ftl
+menu-view-enter-readerview =
+    .label = Уђи у приказ читача
+    .accesskey = ч
+# This should match reader-view-close-button in browser.ftl
+menu-view-close-readerview =
+    .label = Затвори приказ читача
+    .accesskey = ч
 
 ##
 
@@ -237,24 +233,18 @@ menu-history-undo-menu =
     .label = Недавно затворене картице
 menu-history-undo-window-menu =
     .label = Недавно затворени прозори
-menu-history-reopen-all-tabs = Поново отвори све картице
-menu-history-reopen-all-windows = Поново отвори све прозоре
 
 ## Bookmarks Menu
 
 menu-bookmarks-menu =
     .label = Обележивачи
     .accesskey = б
-menu-bookmarks-show-all =
-    .label = Прикажи све обележиваче
-menu-bookmark-this-page =
-    .label = Забележи ову страницу
 menu-bookmarks-manage =
     .label = Управљај обележивачима
-menu-bookmark-current-tab =
-    .label = Обележи тренутну картицу
-menu-bookmark-edit =
-    .label = Уреди обележивач
+menu-bookmark-tab =
+    .label = Обележи тренутни језичак…
+menu-edit-bookmark =
+    .label = Уреди овај обележивач…
 menu-bookmarks-all-tabs =
     .label = Обележи све картице…
 menu-bookmarks-toolbar =
@@ -272,15 +262,6 @@ menu-tools =
 menu-tools-downloads =
     .label = Преузимања
     .accesskey = П
-menu-tools-addons =
-    .label = Додаци
-    .accesskey = A
-menu-tools-fxa-sign-in =
-    .label = Пријавите се у { -brand-product-name }…
-    .accesskey = П
-menu-tools-turn-on-sync =
-    .label = Укључи { -sync-brand-short-name(case: "acc") }
-    .accesskey = У
 menu-tools-addons-and-themes =
     .label = Додаци и теме
     .accesskey = Д
@@ -302,9 +283,6 @@ menu-tools-fxa-re-auth =
            *[other] програмом { -brand-product-name }
         }…
     .accesskey = П
-menu-tools-web-developer =
-    .label = Програмер
-    .accesskey = W
 menu-tools-browser-tools =
     .label = Алатке прегледача
     .accesskey = А
@@ -317,9 +295,6 @@ menu-tools-page-source =
 menu-tools-page-info =
     .label = Информације о страници
     .accesskey = И
-menu-preferences =
-    .label = Подешавања
-    .accesskey = ш
 menu-settings =
     .label = Подешавања
     .accesskey = ш
@@ -348,33 +323,6 @@ menu-window-bring-all-to-front =
 menu-help =
     .label = Помоћ
     .accesskey = П
-menu-help-product =
-    .label =
-        Помоћ за { -brand-shorter-name.gender ->
-            [masculine] { -brand-shorter-name(case: "acc") }
-            [feminine] { -brand-shorter-name(case: "acc") }
-            [neuter] { -brand-shorter-name(case: "acc") }
-           *[other] програм { -brand-shorter-name }
-        }
-    .accesskey = П
-menu-help-show-tour =
-    .label =
-        Водич кроз { -brand-shorter-name.gender ->
-            [masculine] { -brand-shorter-name(case: "acc") }
-            [feminine] { -brand-shorter-name(case: "acc") }
-            [neuter] { -brand-shorter-name(case: "acc") }
-           *[other] програм { -brand-shorter-name }
-        }
-    .accesskey = В
-menu-help-import-from-another-browser =
-    .label = Увези из другог прегледача…
-    .accesskey = У
-menu-help-keyboard-shortcuts =
-    .label = Тастерске пречице
-    .accesskey = Т
-menu-help-troubleshooting-info =
-    .label = Решавање проблема
-    .accesskey = Р
 menu-get-help =
     .label = Потражи помоћ
     .accesskey = П
@@ -383,21 +331,18 @@ menu-help-more-troubleshooting-info =
     .accesskey = В
 menu-help-report-site-issue =
     .label = Пријави проблем са сајтом…
-menu-help-feedback-page =
-    .label = Пошаљи повратне информације
-    .accesskey = ш
-menu-help-safe-mode-without-addons =
-    .label = Рестартуј са онемогућеним додацима
-    .accesskey = Р
-menu-help-safe-mode-with-addons =
-    .label = Рестартуј са омогућеним додацима
-    .accesskey = Р
+menu-help-share-ideas =
+    .label = Поделите идеје и повратне податке…
+    .accesskey = д
 menu-help-enter-troubleshoot-mode2 =
     .label = Режим за решавање проблема…
     .accesskey = Р
 menu-help-exit-troubleshoot-mode =
     .label = Искључи режим за решавање проблема
     .accesskey = р
+menu-help-switch-device =
+    .label = Пребацивање на нови уређај
+    .accesskey = н
 # Label of the Help menu item. Either this or
 # menu-help-notdeceptive is shown.
 menu-help-report-deceptive-site =

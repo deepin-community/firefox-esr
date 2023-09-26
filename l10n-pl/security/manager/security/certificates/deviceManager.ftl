@@ -5,9 +5,9 @@
 
 ## Strings used for device manager
 
-devmgr =
+devmgr-window =
     .title = Menedżer urządzeń
-    .style = width: 67em; height: 32em;
+    .style = min-width: 67em; min-height: 32em;
 
 devmgr-devlist =
     .label = Urządzenia i moduły zabezpieczające
@@ -115,8 +115,6 @@ devinfo-label =
 
 devinfo-serialnum =
     .label = Numer seryjny
-
-fips-nonempty-password-required = Tryb FIPS wymaga hasła głównego ustawionego dla każdego urządzenia zabezpieczającego. Ustaw hasło przed włączeniem trybu FIPS.
 
 fips-nonempty-primary-password-required = Tryb FIPS wymaga hasła głównego ustawionego dla każdego urządzenia zabezpieczającego. Ustaw hasło przed włączeniem trybu FIPS.
 unable-to-toggle-fips = Nie udało się zmienić trybu FIPS dla urządzenia bezpieczeństwa. Zaleca się zakończenie pracy i ponowne uruchomienie tego programu.

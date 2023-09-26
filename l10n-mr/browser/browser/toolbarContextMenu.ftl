@@ -38,9 +38,6 @@ toolbar-context-menu-report-extension =
 toolbar-context-menu-pin-to-overflow-menu =
     .label = ओव्हरफ्लो मेनूला पिन करा
     .accesskey = P
-toolbar-context-menu-auto-hide-downloads-button =
-    .label = टूलबारमध्ये स्वयं-लपवा
-    .accesskey = A
 toolbar-context-menu-remove-from-toolbar =
     .label = साधनपट्टीतून काढून टाका
     .accesskey = R
@@ -48,3 +45,6 @@ toolbar-context-menu-view-customize-toolbar =
     .label = मनपसंत करा…
     .accesskey = C
 
+toolbar-context-menu-menu-bar-cmd =
+    .toolbarname = मेनू पट्टी
+    .accesskey = M

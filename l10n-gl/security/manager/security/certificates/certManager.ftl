@@ -21,51 +21,14 @@ certmgr-tab-ca =
     .label = Entidades
 
 certmgr-mine = Ten certificados destas organizacións que o identifican
-certmgr-remembered = Estes certificados úsanse para identificalo a sitios web
+certmgr-remembered = Estes certificados úsanse para a súa identificación nos sitios web
 certmgr-people = Ten certificados arquivados que identifican a estas persoas
-certmgr-servers = Ten certificados arquivados que identifican a estes servidores
 certmgr-server = Estas entradas identifican excepcións de erros de certificado dos servidores
 certmgr-ca = Ten certificados arquivados que identifican a estas entidades de acreditación
 
-certmgr-detail-general-tab-title =
-    .label = Xeral
-    .accesskey = X
-
-certmgr-detail-pretty-print-tab-title =
-    .label = Detalles
-    .accesskey = D
-
-certmgr-pending-label =
-    .value = Verificando o certificado…
-
-certmgr-subject-label = Emitido a
-
-certmgr-issuer-label = Emitido por
-
-certmgr-period-of-validity = Período de validez
-
-certmgr-fingerprints = Pegadas dixitais
-
-certmgr-cert-detail =
-    .title = Detalles do certificado
-    .buttonlabelaccept = Pechar
-    .buttonaccesskeyaccept = P
-
-certmgr-cert-detail-commonname = Nome común (NC)
-
-certmgr-cert-detail-org = Organización (O)
-
-certmgr-cert-detail-orgunit = Unidade organizativa (UO)
-
-certmgr-cert-detail-serial-number = Número de serie
-
-certmgr-cert-detail-sha-256-fingerprint = Pegada dixital SHA-256
-
-certmgr-cert-detail-sha-1-fingerprint = Pegada dixital SHA1
-
-certmgr-edit-ca-cert =
+certmgr-edit-ca-cert2 =
     .title = Editar a configuración de confianza do certificado da AC
-    .style = width: 48em;
+    .style = min-width: 48em;
 
 certmgr-edit-cert-edit-trust = Editar a configuración de confianza:
 
@@ -75,9 +38,9 @@ certmgr-edit-cert-trust-ssl =
 certmgr-edit-cert-trust-email =
     .label = Este certificado identifica usuarios de correo.
 
-certmgr-delete-cert =
+certmgr-delete-cert2 =
     .title = Eliminar certificado
-    .style = width: 48em; height: 24em;
+    .style = min-width: 48em; min-height: 24em;
 
 certmgr-cert-host =
     .label = Servidor
@@ -88,18 +51,11 @@ certmgr-cert-name =
 certmgr-cert-server =
     .label = Servidor
 
-certmgr-override-lifetime =
-    .label = Duración
-
 certmgr-token-name =
     .label = Dispositivo de seguranza
 
-certmgr-begins-on = Comeza o
-
 certmgr-begins-label =
     .label = Comeza o
-
-certmgr-expires-on = Caduca o
 
 certmgr-expires-label =
     .label = Caduca o
@@ -109,6 +65,9 @@ certmgr-email =
 
 certmgr-serial =
     .label = Número de serie
+
+certmgr-fingerprint-sha-256 =
+    .label = Pegada dixital SHA-256
 
 certmgr-view =
     .label = Ver…
@@ -141,18 +100,6 @@ certmgr-backup-all =
 certmgr-restore =
     .label = Importar…
     .accesskey = I
-
-certmgr-details =
-    .value = Campos do certificado
-    .accesskey = o
-
-certmgr-fields =
-    .value = Valor do campo
-    .accesskey = V
-
-certmgr-hierarchy =
-    .value = Xerarquía do certificado
-    .accesskey = q
 
 certmgr-add-exception =
     .label = Engadir excepción…
@@ -216,12 +163,6 @@ delete-user-cert-confirm = Confirma que quere eliminar estes certificados?
 delete-user-cert-impact = Se elimina un dos seus certificados, xa non o poderá utilizar para se identificar.
 
 
-delete-ssl-cert-title =
-    .title = Eliminar as excepcións de certificado de servidor
-delete-ssl-cert-confirm = Confirma que quere eliminar estas excepcións de servidor?
-delete-ssl-cert-impact = Se elimina unha excepción de servidor restaurará as verificacións de seguranza habituais que requiren a utilización dun certificado válido.
-
-
 delete-ssl-override-title =
     .title = Eliminar excepción de certificado de servidor
 delete-ssl-override-confirm = Confirma que quere eliminar esta excepción de servidor?
@@ -245,52 +186,14 @@ delete-email-cert-impact = Se elimina o certificado de correo electrónico dunha
 cert-with-serial =
     .value = Certificado co número de serie: { $serialNumber }
 
-## Cert Viewer
-
-# Title used for the Certificate Viewer.
-#
-# Variables:
-#   $certificate : a string representative of the certificate being viewed.
-cert-viewer-title =
-    .title = Visor de certificados: «{ $certName }»
-
-not-present =
-    .value = <Non é parte do certificado>
-
-# Cert verification
-cert-verified = Este certificado está verificado para os seguintes usos:
-
-# Add usage
-verify-ssl-client =
-    .value = Certificado cliente SSL
-
-verify-ssl-server =
-    .value = Certificado servidor SSL
-
-verify-ssl-ca =
-    .value = Entidade de acreditación SSL
-
-verify-email-signer =
-    .value = Certificado de asinante de correo electrónico.
-
-verify-email-recip =
-    .value = Certificado de destinatario de correo electrónico.
-
-# Cert verification
-cert-not-verified-cert-revoked = Non foi posíbel verificar este certificado porque foi revogado.
-cert-not-verified-cert-expired = Non foi posíbel verificar este certificado porque caducou.
-cert-not-verified-cert-not-trusted = Non foi posíbel verificar este certificado porque non é de confianza.
-cert-not-verified-issuer-not-trusted = Non foi posíbel verificar este certificado porque o emisor non é de confianza.
-cert-not-verified-issuer-unknown = Non foi posíbel verificar este certificado porque se descoñece o emisor.
-cert-not-verified-ca-invalid = Non foi posíbel verificar este certificado porque o certificado da CA non é correcto.
-cert-not-verified_algorithm-disabled = Non foi posíbel verificar este certificado porque se asinou usando un algoritmo de asinamento que foi desactivado porque non é seguro.
-cert-not-verified-unknown = Non foi posíbel verificar este certificado por motivos descoñecidos.
-
 # Used to indicate that the user chose not to send a client authentication certificate to a server that requested one in a TLS handshake.
 send-no-client-certificate = Non enviar certificado de cliente
 
 # Used when no cert is stored for an override
 no-cert-stored-for-override = (Non almacenado)
+
+# When a certificate is unavailable (for example, it has been deleted or the token it exists on has been removed).
+certificate-not-available = (Non dispoñíbel)
 
 ## Used to show whether an override is temporary or permanent
 

@@ -23,6 +23,8 @@ profile-selection-delete-button =
     .label = প্রোফাইল মুছে ফেলা… (D)
     .accesskey = D
 
+profile-selection-conflict-message = { -brand-product-name } এর অন্য একটি অনুলিপি প্রোফাইলগুলিতে পরিবর্তন করেছে। আরও পরিবর্তন করার আগেই আপনি অবশ্যই { -brand-short-name } রিস্টার্ট করুন।
+
 ## Messages used in the profile manager
 
 profile-manager-description = আপনার ব্যবহৃত সেটিংসমূহ, পছন্দসমূহ ও অন্যান্য ব্যবহারকারী আইটেম সম্পর্কে { -brand-short-name } আপনার প্রোফাইলে তথ্য সংরক্ষণ করে।

@@ -2,12 +2,12 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-connection-window =
+connection-window2 =
     .title = Yhteysasetukset
     .style =
         { PLATFORM() ->
-            [macos] width: 44em
-           *[other] width: 49em
+            [macos] min-width: 44em
+           *[other] min-width: 49em
         }
 
 connection-close-key =
@@ -35,10 +35,6 @@ connection-proxy-http = HTTP-välityspalvelin
     .accesskey = H
 connection-proxy-http-port = Portti
     .accesskey = P
-connection-proxy-http-sharing =
-    .label = Käytä tätä välityspalvelinta myös FTP:lle ja HTTPS:lle
-    .accesskey = ä
-
 connection-proxy-https-sharing =
     .label = Käytä tätä välityspalvelinta myös HTTPS:lle
     .accesskey = S
@@ -47,11 +43,6 @@ connection-proxy-https = HTTPS-välityspalvelin
     .accesskey = H
 connection-proxy-ssl-port = Portti
     .accesskey = r
-
-connection-proxy-ftp = FTP-välityspalvelin
-    .accesskey = F
-connection-proxy-ftp-port = Portti
-    .accesskey = t
 
 connection-proxy-socks = SOCKS-palvelin
     .accesskey = C
@@ -69,9 +60,6 @@ connection-proxy-noproxy = Ei välitystä osoitteille
 
 connection-proxy-noproxy-desc = Esimerkiksi: 192.168.1.0/24, .mozilla.org, .fi
 
-# Do not translate localhost, 127.0.0.1 and ::1.
-connection-proxy-noproxy-localhost-desc = Yhteyksiä osoitteisiin localhost, 127.0.0.1 ja ::1 ei koskaan ohjata välityspalvelimen kautta.
-
 # Do not translate "localhost", "127.0.0.1/8" and "::1". (You can translate "and".)
 connection-proxy-noproxy-localhost-desc-2 = Yhteyksiä kohteisiin localhost, 127.0.0.1/8 ja ::1 ei koskaan ohjata välityspalvelimen kautta.
 
@@ -88,16 +76,14 @@ connection-proxy-autologin =
     .accesskey = Ä
     .tooltip = Kirjautuminen välityspalvelimelle tapahtuu automaattisesti jos salasana palvelimelle on tallennettu. Kirjautumistietoja kysytään jos automaattinen kirjautuminen epäonnistuu.
 
+connection-proxy-autologin-checkbox =
+    .label = Älä kysy kirjautumistietoja jos salasana on tallennettu
+    .accesskey = Ä
+    .tooltiptext = Kirjautuminen välityspalvelimelle tapahtuu automaattisesti jos salasana palvelimelle on tallennettu. Kirjautumistietoja kysytään jos automaattinen kirjautuminen epäonnistuu.
+
 connection-proxy-socks-remote-dns =
     .label = Käytä välityspalvelinta DNS:lle käytettäessä SOCKS v5:tä
     .accesskey = E
-
-connection-dns-over-https =
-    .label = Käytä DNS:ää HTTPS:n välityksellä
-    .accesskey = H
-
-connection-dns-over-https-url-resolver = Käytä palveluntarjoajaa
-    .accesskey = p
 
 # Variables:
 #   $name (String) - Display name or URL for the DNS over HTTPS provider

@@ -20,14 +20,6 @@ toolbar-context-menu-bookmark-selected-tabs =
 toolbar-context-menu-select-all-tabs =
     .label = Alle Tabs auswählen
     .accesskey = u
-toolbar-context-menu-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Geschlossenen Tab wiederherstellen
-           *[other] Geschlossene Tabs wiederherstellen
-        }
-    .accesskey = G
-
 toolbar-context-menu-reopen-closed-tabs =
     .label =
         { $tabCount ->
@@ -50,18 +42,18 @@ toolbar-context-menu-report-extension =
     .label = Erweiterung melden
     .accesskey = d
 
-# Can appear on the same context menu as menubarCmd ("Menu Bar") and
-# personalbarCmd ("Bookmarks Toolbar"), so they should have different
-# access keys.
+# Can appear on the same context menu as toolbar-context-menu-menu-bar-cmd
+# ("Menu Bar") and personalbarCmd ("Bookmarks Toolbar"), so they should
+# have different access keys.
 toolbar-context-menu-pin-to-overflow-menu =
     .label = In Überhangmenü verschieben
     .accesskey = b
-toolbar-context-menu-auto-hide-downloads-button =
-    .label = Automatisch aus Symbolleiste ausblenden
-    .accesskey = u
 toolbar-context-menu-auto-hide-downloads-button-2 =
     .label = Schaltfläche nur bei vorhandenen Downloads anzeigen
     .accesskey = D
+toolbar-context-menu-always-open-downloads-panel =
+    .label = Liste beim Download-Start anzeigen
+    .accesskey = a
 toolbar-context-menu-remove-from-toolbar =
     .label = Aus Symbolleiste entfernen
     .accesskey = e
@@ -71,6 +63,11 @@ toolbar-context-menu-view-customize-toolbar =
 toolbar-context-menu-view-customize-toolbar-2 =
     .label = Symbolleiste anpassen…
     .accesskey = S
+# This is only ever shown when toolbar-context-menu-pin-to-overflow-menu
+# is hidden, so they can share access keys.
+toolbar-context-menu-pin-to-toolbar =
+    .label = An Symbolleiste anheften
+    .accesskey = a
 
 toolbar-context-menu-bookmarks-toolbar-always-show-2 =
     .label = Immer anzeigen
@@ -85,3 +82,7 @@ toolbar-context-menu-bookmarks-toolbar-on-new-tab-2 =
 toolbar-context-menu-bookmarks-show-other-bookmarks =
     .label = Weitere Lesezeichen anzeigen
     .accesskey = W
+
+toolbar-context-menu-menu-bar-cmd =
+    .toolbarname = Menüleiste
+    .accesskey = M

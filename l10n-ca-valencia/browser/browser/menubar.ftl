@@ -43,15 +43,6 @@ menu-quit =
 menu-quit-mac =
     .label = Ix del { -brand-shorter-name }
 
-# This menu-quit-button string is only used on Linux.
-menu-quit-button =
-    .label = { menu-quit.label }
-
-# This menu-quit-button-win string is only used on Windows.
-menu-quit-button-win =
-    .label = { menu-quit.label }
-    .tooltip = Ix del { -brand-shorter-name }
-
 menu-about =
     .label = Quant al { -brand-shorter-name }
     .accesskey = Q
@@ -81,9 +72,16 @@ menu-file-open-location =
 menu-file-open-file =
     .label = Obri un fitxer…
     .accesskey = O
-menu-file-close =
-    .label = Tanca
-    .accesskey = c
+# Variables:
+#  $tabCount (Number): the number of tabs that are affected by the action.
+menu-file-close-tab =
+    .label =
+        { $tabCount ->
+            [1] Tanca les { $tabCount } pestanyes
+            [one] Tanca la pestanya
+           *[other] Tanca les { $tabCount } pestanyes
+        }
+    .accesskey = p
 menu-file-close-window =
     .label = Tanca la finestra
     .accesskey = f
@@ -93,12 +91,12 @@ menu-file-save-page =
 menu-file-email-link =
     .label = Envia l'enllaç per correu…
     .accesskey = E
+menu-file-share-url =
+    .label = Comparteix
+    .accesskey = C
 menu-file-print-setup =
     .label = Configuració de la pàgina…
     .accesskey = g
-menu-file-print-preview =
-    .label = Exemple d'impressió
-    .accesskey = l
 menu-file-print =
     .label = Imprimeix…
     .accesskey = p
@@ -114,9 +112,6 @@ menu-file-go-offline =
 menu-edit =
     .label = Edita
     .accesskey = E
-menu-edit-find-on =
-    .label = Cerca en esta pàgina…
-    .accesskey = r
 menu-edit-find-in-page =
     .label = Cerca a la pàgina…
     .accesskey = C
@@ -135,9 +130,6 @@ menu-view =
 menu-view-toolbars-menu =
     .label = Barres d'eines
     .accesskey = a
-menu-view-customize-toolbar =
-    .label = Personalitza…
-    .accesskey = P
 menu-view-customize-toolbar2 =
     .label = Personalitza la barra d'eines…
     .accesskey = P
@@ -174,9 +166,9 @@ menu-view-page-style-no-style =
 menu-view-page-basic-style =
     .label = Estil de pàgina bàsic
     .accesskey = b
-menu-view-charset =
-    .label = Codificació del text
-    .accesskey = C
+menu-view-repair-text-encoding =
+    .label = Repara la codificació del text
+    .accesskey = c
 
 ## These should match what Safari and other Apple applications
 ## use on macOS.
@@ -190,6 +182,17 @@ menu-view-exit-full-screen =
 menu-view-full-screen =
     .label = Pantalla completa
     .accesskey = P
+
+## These menu items may use the same accesskey.
+
+# This should match reader-view-enter-button in browser.ftl
+menu-view-enter-readerview =
+    .label = Entra a la vista de lectura
+    .accesskey = l
+# This should match reader-view-close-button in browser.ftl
+menu-view-close-readerview =
+    .label = Tanca la vista de lectura
+    .accesskey = l
 
 ##
 
@@ -220,22 +223,13 @@ menu-history-undo-menu =
 menu-history-undo-window-menu =
     .label = Finestres tancades recentment
 
-menu-history-reopen-all-tabs = Torna a obrir totes les pestanyes
-menu-history-reopen-all-windows = Torna a obrir totes les finestres
-
 ## Bookmarks Menu
 
 menu-bookmarks-menu =
     .label = Adreces d'interés
     .accesskey = r
-menu-bookmarks-show-all =
-    .label = Mostra totes les adreces d'interés
-menu-bookmark-this-page =
-    .label = Afig la pàgina a les adreces d'interés
-menu-bookmark-current-tab =
-    .label = Afig la pestanya actual a les adreces d'interés
-menu-bookmark-edit =
-    .label = Edita esta adreça d'interés
+menu-bookmarks-manage =
+    .label = Gestiona les adreces d'interés
 menu-bookmarks-all-tabs =
     .label = Afig-hi totes les pestanyes…
 menu-bookmarks-toolbar =
@@ -253,15 +247,6 @@ menu-tools =
 menu-tools-downloads =
     .label = Baixades
     .accesskey = d
-menu-tools-addons =
-    .label = Complements
-    .accesskey = m
-menu-tools-fxa-sign-in =
-    .label = Inicia la sessió al { -brand-product-name }…
-    .accesskey = F
-menu-tools-turn-on-sync =
-    .label = Activa el { -sync-brand-short-name }…
-    .accesskey = n
 menu-tools-addons-and-themes =
     .label = Complements i temes
     .accesskey = C
@@ -277,9 +262,6 @@ menu-tools-sync-now =
 menu-tools-fxa-re-auth =
     .label = Torna a connectar al { -brand-product-name }…
     .accesskey = T
-menu-tools-web-developer =
-    .label = Desenvolupador web
-    .accesskey = w
 menu-tools-browser-tools =
     .label = Eines del navegador
     .accesskey = E
@@ -292,17 +274,6 @@ menu-tools-page-source =
 menu-tools-page-info =
     .label = Informació de la pàgina
     .accesskey = I
-menu-preferences =
-    .label =
-        { PLATFORM() ->
-            [windows] Opcions
-           *[other] Preferències
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] O
-           *[other] n
-        }
 menu-settings =
     .label = Paràmetres
     .accesskey =
@@ -334,22 +305,7 @@ menu-window-bring-all-to-front =
 
 menu-help =
     .label = Ajuda
-    .accesskey = j
-menu-help-product =
-    .label = Ajuda del { -brand-shorter-name }
-    .accesskey = j
-menu-help-show-tour =
-    .label = Visita guiada del { -brand-shorter-name }
-    .accesskey = V
-menu-help-import-from-another-browser =
-    .label = Importa d'un altre navegador…
-    .accesskey = I
-menu-help-keyboard-shortcuts =
-    .label = Dreceres de teclat
-    .accesskey = D
-menu-help-troubleshooting-info =
-    .label = Informació de resolució de problemes
-    .accesskey = r
+    .accesskey = A
 menu-get-help =
     .label = Obteniu ajuda
     .accesskey = j
@@ -358,15 +314,6 @@ menu-help-more-troubleshooting-info =
     .accesskey = i
 menu-help-report-site-issue =
     .label = Informa d'un problema amb el lloc…
-menu-help-feedback-page =
-    .label = Envia comentaris…
-    .accesskey = E
-menu-help-safe-mode-without-addons =
-    .label = Reinicia amb els complements inhabilitats…
-    .accesskey = R
-menu-help-safe-mode-with-addons =
-    .label = Reinicia amb els complements habilitats
-    .accesskey = R
 menu-help-enter-troubleshoot-mode2 =
     .label = Mode de resolució de problemes…
     .accesskey = M

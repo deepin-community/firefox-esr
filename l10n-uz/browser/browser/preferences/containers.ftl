@@ -2,14 +2,9 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-containers-window-new =
+containers-window-new2 =
     .title = Yangi konteyner qo‘shish
-    .style = width: 45em
-# Variables
-#   $name (String) - Name of the container
-containers-window-update =
-    .title = { $name } konteyner parametrlari
-    .style = width: 45em
+    .style = min-width: 45em
 
 containers-window-close =
     .key = w
@@ -39,10 +34,6 @@ containers-icon-label = Belgi
 containers-color-label = Rangi
     .accesskey = o
     .style = { -containers-labels-style }
-
-containers-button-done =
-    .label = Tayyor
-    .accesskey = T
 
 containers-color-blue =
     .label = Ko‘k

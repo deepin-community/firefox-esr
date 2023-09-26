@@ -2,12 +2,12 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-connection-window =
+connection-window2 =
     .title = সংযোগের সেটিং
     .style =
         { PLATFORM() ->
-            [macos] width: 44em
-           *[other] width: 49em
+            [macos] min-width: 44em
+           *[other] min-width: 49em
         }
 
 connection-close-key =
@@ -36,19 +36,10 @@ connection-proxy-http = HTTP প্রক্সি
 connection-proxy-http-port = পোর্ট
     .accesskey = P
 
-connection-proxy-http-sharing =
-    .label = FTP ও HTTPS এর জন্যও এই প্রক্সি ব্যবহার করুন
-    .accesskey = s
-
 connection-proxy-https = HTTPS প্রক্সি
     .accesskey = H
 connection-proxy-ssl-port = পোর্ট
     .accesskey = o
-
-connection-proxy-ftp = FTP প্রক্সি
-    .accesskey = F
-connection-proxy-ftp-port = পোর্ট
-    .accesskey = r
 
 connection-proxy-socks = SOCKS হোস্ট
     .accesskey = C
@@ -66,9 +57,6 @@ connection-proxy-noproxy = কোনো প্রক্সি নেই
 
 connection-proxy-noproxy-desc = উদাহরণ: .mozilla.org, .net.nz, 192.168.1.0/24
 
-# Do not translate localhost, 127.0.0.1 and ::1.
-connection-proxy-noproxy-localhost-desc = localhost এ সংযোগ, 127.0.0.1, এবং ::1 কখনো প্রক্সি করা হয় নাই।
-
 connection-proxy-autotype =
     .label = স্বয়ংক্রিয় প্রক্সি কনফিগারেশন URL
     .accesskey = A
@@ -82,16 +70,14 @@ connection-proxy-autologin =
     .accesskey = i
     .tooltip = আপনি যখন তাদের জন্য পরিচয়পত্র সংরক্ষণ করেছেন তখন এই অপশনটি নীরবে প্রক্সি করতে অনুমোদিতো হয়েছে। প্রমাণীকরণ ব্যর্থ হলে আপনাকে অনুরোধ জানানো হবে।
 
+connection-proxy-autologin-checkbox =
+    .label = পাসওয়ার্ড সংরক্ষিত থাকলে অনুমোদনের জন্য অনুরোধ করা থেকে বিরত থাকুন i
+    .accesskey = i
+    .tooltiptext = আপনি যখন তাদের জন্য পরিচয়পত্র সংরক্ষণ করেছেন তখন এই অপশনটি নীরবে প্রক্সি করতে অনুমোদিতো হয়েছে। প্রমাণীকরণ ব্যর্থ হলে আপনাকে অনুরোধ জানানো হবে।
+
 connection-proxy-socks-remote-dns =
     .label = SOCKS v5 ব্যবহারের সময় Proxy DNS
     .accesskey = d
-
-connection-dns-over-https =
-    .label = HTTPS এর উপর DNS সক্রিয় করুন
-    .accesskey = b
-
-connection-dns-over-https-url-resolver = সরবরাহকারী ব্যবহার করুন
-    .accesskey = P
 
 # Variables:
 #   $name (String) - Display name or URL for the DNS over HTTPS provider

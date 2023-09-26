@@ -19,3 +19,20 @@ opensearch-error-download-desc = { -brand-short-name } không thể tải xuốn
 
 ##
 
+searchbar-submit =
+    .tooltiptext = Gửi tìm kiếm
+
+# This string is displayed in the search box when the input field is empty
+searchbar-input =
+    .placeholder = Tìm kiếm
+
+searchbar-icon =
+    .tooltiptext = Tìm kiếm
+
+## Infobar shown when search engine is removed and replaced.
+## Variables
+## $oldEngine (String) - the search engine to be removed.
+## $newEngine (String) - the search engine to replace the removed search engine.
+
+removed-search-engine-message = <strong>Công cụ tìm kiếm mặc định của bạn đã được thay đổi.</strong> { $oldEngine } không còn khả dụng làm công cụ tìm kiếm mặc định trong { -brand-short-name }. { $newEngine } hiện là công cụ tìm kiếm mặc định của bạn. Để thay đổi sang một công cụ tìm kiếm mặc định khác, hãy chuyển đến cài đặt. <label data-l10n-name="remove-search-engine-article">Tìm hiểu thêm</label>
+remove-search-engine-button = OK

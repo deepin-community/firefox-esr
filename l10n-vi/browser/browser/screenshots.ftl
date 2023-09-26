@@ -2,13 +2,12 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-screenshots-context-menu = Chụp ảnh màn hình
-
-screenshots-my-shots-button = Các ảnh chụp của tôi
-
 screenshot-toolbarbutton =
     .label = Ảnh chụp màn hình
     .tooltiptext = Tạo một ảnh chụp màn hình
+
+screenshot-shortcut =
+    .key = S
 
 screenshots-instructions = Kéo hoặc nhấp vào trang để chọn một khu vực. Nhấn ESC để hủy bỏ.
 screenshots-cancel-button = Hủy bỏ
@@ -18,6 +17,14 @@ screenshots-download-button = Tải xuống
 screenshots-download-button-tooltip = Tải về ảnh chụp màn hình
 screenshots-copy-button = Sao chép
 screenshots-copy-button-tooltip = Sao chép ảnh chụp màn hình vào bộ nhớ tạm
+screenshots-download-button-title =
+    .title = Tải xuống ảnh chụp màn hình
+screenshots-copy-button-title =
+    .title = Sao chép ảnh chụp màn hình vào khay nhớ tạm
+screenshots-cancel-button-title =
+    .title = Hủy bỏ
+screenshots-retry-button-title =
+    .title = Thử chụp ảnh màn hình lại
 
 screenshots-meta-key =
     { PLATFORM() ->
@@ -41,8 +48,6 @@ screenshots-login-error-details = Chúng tôi không thể lưu hình của bạ
 screenshots-unshootable-page-error-title = Chúng tôi không thể chụp màn hình trang này.
 screenshots-unshootable-page-error-details = Đây không phải là trang Web bình thường, bạn không thể chụp ảnh màn hình nó.
 
-screenshots-self-screenshot-error-title = Bạn không thể chụp một trang của { -screenshots-brand-name }!
-
 screenshots-empty-selection-error-title = Vùng chọn của bạn quá nhỏ
 
 screenshots-private-window-error-title = { -screenshots-brand-name } đã bị tắt trong chế độ duyệt web riêng tư
@@ -50,3 +55,6 @@ screenshots-private-window-error-details = Xin lỗi vì sự bất tiện này.
 
 screenshots-generic-error-title = Whoa! { -screenshots-brand-name } đã bị hoãn.
 screenshots-generic-error-details = Chúng tôi không chắc những gì vừa xảy ra. Thử lại hoặc chụp một trang khác?
+
+screenshots-too-large-error-title = Ảnh chụp màn hình của bạn đã bị cắt vì nó quá lớn
+screenshots-too-large-error-details = Thử chọn vùng có cạnh dài nhất nhỏ hơn 32.700 pixel hoặc tổng diện tích 124.900.000 pixel.

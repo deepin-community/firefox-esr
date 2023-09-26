@@ -2,18 +2,8 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-about-httpsonly-insecure-title = ਸੁਰੱਖਿਅਤ ਕਨੈਕਸ਼ਨ ਉਪਲੱਬਧ ਨਹੀਂ ਹੈ
-
-# Variables:
-#   $websiteUrl (String) - Url of the website that failed to load. Example: www.example.com
-about-httpsonly-insecure-explanation-unavailable = ਤੁਸੀਂ ਸਿਰਫ਼ HTTPS ਢੰਗ ਨਾਲ ਬਰਾਊਜ਼ਰ ਕਰ ਰਹੇ ਹੋ ਅਤੇ <em>{ $websiteUrl }</em> ਦਾ ਸੁਰੱਖਿਅਤ HTTPS ਵਰਜ਼ਨ ਮੌਜੂਦ ਨਹੀਂ ਹੈ।
-about-httpsonly-insecure-explanation-reasons = ਬਹੁਤੀ ਉਮੀਦ ਹੈ ਕਿ ਵੈੱਬਸਾਈਟ HTTPS ਲਈ ਸਹਾਇਕ ਨਹੀਂ ਹੈ, ਪਰ ਇਹ ਵੀ ਸੰਭਵ ਹੈ ਕਿ ਹਮਲਾਵਰ ਨੇ HTTPS ਵਰਜ਼ਨ ਉੱਤੇ ਰੋਕ ਲਾ ਰੱਖੀ ਹੋਵੇ।
-about-httpsonly-insecure-explanation-exception = ਹਾਲਾਂਕਿ ਸੁਰੱਖਿਆ ਦਾ ਖ਼ਤਰਾ ਹੈ ਤਾਂ ਘੱਟ, ਪਰ ਫੇਰ ਵੀ ਜੇ ਤੁਸੀਂ ਵੈੱਬਸਾਈਟ ਦੇ HTTP ਵਰਜ਼ਨ ਨੂੰ ਵਰਤਣ ਦਾ ਫ਼ੈਸਲਾ ਕਰ ਹੀ ਲਿਆ ਹੈ ਤਾਂ ਤੁਹਾਨੂੰ ਇਸ ਉੱਤੇ ਪਾਸਵਰਡ, ਈਮੇਲ ਜਾਂ ਕਰੈਡਿਟ ਕਾਰਡ ਦੇ ਵੇਰਵਿਆਂ ਵਰਗੀ ਕੋਈ ਵੀ ਸੰਵੇਦਨਸ਼ੀਲ ਜਾਣਕਾਰੀ ਨਹੀਂ ਦੇਣੀ ਚਾਹੀਦੀ ਹੈ।
-
-about-httpsonly-button-make-exception = ਖ਼ਤਰੇ ਨੂੰ ਮੰਨੋ ਅਤੇ ਸਾਈਟ ਨੂੰ ਖੋਲ੍ਹੋ
-
 about-httpsonly-title-alert = ਸਿਰਫ਼-HTTPS ਮੋਡ ਚੇਤਾਵਨੀ
-about-httpsonly-title-connection-not-available = ਸੁਰੱਖਿਅਤ ਕਨੈਕਸ਼ਨ ਉਪਲੱਬਧ ਨਹੀਂ ਹੈ
+about-httpsonly-title-site-not-available = ਸੁਰੱਖਿਅਤ ਸਾਈਟ ਉਪਲੱਬਧ ਨਹੀਂ ਹੈ
 
 # Variables:
 #   $websiteUrl (String) - Url of the website that failed to load. Example: www.example.com
@@ -34,6 +24,10 @@ about-httpsonly-link-learn-more = …ਹੋਰ ਜਾਣੋ
 ## Suggestion Box that only shows up if a secure connection to www can be established
 ## Variables:
 ##   $websiteUrl (String) - Url of the website that can be securely loded with these alternatives. Example: example.com
+
+## Suggestion Box that only shows up if a secure connection to www can be established
+## Variables:
+##   $websiteUrl (String) - Url of the website that can be securely loaded with these alternatives. Example: example.com
 
 about-httpsonly-suggestion-box-header = ਸੰਭਾਵਿਤ ਬਦਲ
 about-httpsonly-suggestion-box-www-text = <em>www.{ $websiteUrl }</em> ਦਾ ਸੁਰੱਖਿਅਤ ਵਰਜ਼ਨ ਹੈ। ਤੁਸੀਂ <em>{ $websiteUrl }</em> ਦੀ ਬਜਾਏ ਇਸ ਸਫ਼ੇ ਨੂੰ ਖੋਲ੍ਹ ਸਕਦੇ ਹੋ।

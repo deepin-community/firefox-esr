@@ -5,9 +5,9 @@
 
 ## Strings used for device manager
 
-devmgr =
+devmgr-window =
     .title = Správce bezpečnostních zařízení
-    .style = width: 67em; height: 32em;
+    .style = min-width: 67em; min-height: 32em;
 
 devmgr-devlist =
     .label = Bezpečnostní moduly a zařízení
@@ -115,8 +115,6 @@ devinfo-label =
 
 devinfo-serialnum =
     .label = Sériové číslo
-
-fips-nonempty-password-required = Režim FIPS vyžaduje, abyste měli nastavené hlavní heslo pro každé bezpečnostní zařízení. Prosím nastavte jej před povolením režimu FIPS.
 
 fips-nonempty-primary-password-required = Režim FIPS vyžaduje, abyste měli nastavené hlavní heslo pro každé bezpečnostní zařízení. Prosím nastavte jej před povolením režimu FIPS.
 unable-to-toggle-fips = Změna režimu FIPS pro bezpečnostní zařízení se nezdařila. Doporučujeme restartovat aplikaci.

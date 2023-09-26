@@ -2,13 +2,12 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-addons-window =
-    .title = Qoʻshimcha dasturlar boshqaruvchisi
-
 addons-page-title = Qoʻshimcha dasturlar boshqaruvchisi
 
-search-header-shortcut =
-    .key = f
+## Variables
+##   $domain - Domain name where add-ons are available (e.g. addons.mozilla.org)
+
+##
 
 list-empty-installed =
     .value = Ushbu turdagi oʻrnatilgan birorta ham qoʻshimcha dasturingiz yoʻq
@@ -25,48 +24,15 @@ list-empty-find-updates =
 list-empty-button =
     .label = Qoʻshimcha dasturlar haqida koʻproq oʻrganish
 
+help-button = Qoʻshimchalar boʻyicha yordam
+sidebar-help-button-title =
+    .title = Qoʻshimchalar boʻyicha yordam
+
 show-unsigned-extensions-button =
     .label = Ba’zi kengaytmalar tasdiqlanmadi
 
 show-all-extensions-button =
     .label = Barcha kengaytmalarni ko‘rsatish
-
-cmd-show-details =
-    .label = Koʻproq ma`lumotlarni koʻrsatish
-    .accesskey = k
-
-cmd-find-updates =
-    .label = Yangilanishlarni topish
-    .accesskey = t
-
-cmd-preferences =
-    .label =
-        { PLATFORM() ->
-            [windows] Moslamalar
-           *[other] Moslamalar
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] M
-           *[other] M
-        }
-
-cmd-enable-theme =
-    .label = Mavzu oʻrnatish
-    .accesskey = o
-
-cmd-disable-theme =
-    .label = Mavzu oʻrnatishni toʻxtatish
-    .accesskey = t
-
-cmd-install-addon =
-    .label = Oʻrnatish
-    .accesskey = O
-
-cmd-contribute =
-    .label = Hissa qoʻshish
-    .accesskey = H
-    .tooltiptext = Ushbu qoʻshimcha dasturni rivojlantirishga hissa qoʻshish
 
 detail-version =
     .label = Versiyasi
@@ -90,6 +56,13 @@ detail-update-automatic =
 detail-update-manual =
     .label = Oʻchirilgan
     .tooltiptext = Yangilanishlar avtomatik oʻrnatilmasin
+
+# Some add-ons may elect to not run in private windows by setting incognito: not_allowed in the manifest.  This
+# cannot be overridden by the user.
+detail-private-disallowed-label = Maxfiy oynalarda taqiqlangan
+
+# Some special add-ons are privileged, run in private windows automatically, and this permission can't be revoked
+detail-private-required-label = Maxfiy oynalarga kirishni talab qiladi
 
 detail-home =
     .label = Uy sahifasi
@@ -175,7 +148,6 @@ extensions-warning-update-security = Qoʻshimcha dasturlarni xavfsiz yangilash o
 extensions-warning-update-security-button = Yoqish
     .title = Qoʻshimcha dasturni xavfsiz yangilashni tekshirishni yoqish
 
-
 ## Strings connected to add-on updates
 
 addon-updates-check-for-updates = Yangilanishlar uchun tekshirish
@@ -242,8 +214,13 @@ discopane-notice-recommendations =
 
 ## Pending uninstall message bar
 
+
+## "sites with restrictions" (internally called "quarantined") are special domains
+## where add-ons are normally blocked for security reasons.
+
 ## This is the tooltip text for the recommended badges for an extension in about:addons. The
 ## badge is a small icon displayed next to an extension when it is recommended on AMO.
+
 
 ##
 
@@ -252,6 +229,33 @@ recommended-themes-heading = Tavsiya etilgan mavzular
 ## Page headings
 
 theme-heading = Mavzularni boshqarish
+locale-heading = Tillarni boshqarish
 
 addon-page-options-button =
     .title = Barcha qoʻshimcha dasturlar uchun asboblar
+
+## Detail notifications
+## Variables:
+##   $name (String): name of the add-on.
+
+## Detail notifications
+## Variables:
+##   $name (string) - Name of the add-on.
+
+# Variables:
+#   $version (String): application version.
+details-notification-incompatible = { $name }  - { -brand-short-name } { $version } bilan mos emas.
+
+details-notification-unsigned-and-disabled = { $name } qo‘shimcha dasturi { -brand-short-name } brauzerida foydalanish uchun tasdiqdan o‘tmadi, shuning uchun u o‘chirib qo‘yildi.
+details-notification-unsigned-and-disabled-link = Batafsil ma’lumot
+
+details-notification-unsigned = { $name } qo‘shimcha dasturi { -brand-short-name } brauzerida foydalanish uchun tasdiqdan o‘tmadi. Jarayonni ehtiyotkorlik bilan davom ettiring.
+details-notification-unsigned-link = Batafsil ma’lumot
+
+details-notification-blocked = { $name } xavfsizlik va ishonchlilik sabablariga koʻra oʻchirib qoʻyildi.
+details-notification-blocked-link = Koʻproq ma`lumot
+
+details-notification-softblocked = { $name } xavfsizlik va mustahkamlikka ta`sir qilishi aniqlangan.
+details-notification-softblocked-link = Koʻproq ma`lumot
+
+details-notification-gmp-pending = { $name } tezda o‘rnatiladi.

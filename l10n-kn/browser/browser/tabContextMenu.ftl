@@ -8,6 +8,9 @@ reload-tab =
 select-all-tabs =
     .label = ಎಲ್ಲಾ ಟ್ಯಾಬ್ಗಳನ್ನು ಆಯ್ಕೆಮಾಡಿ
     .accesskey = S
+tab-context-play-tab =
+    .label = ಹಾಳೆಯನ್ನು ಪ್ಲೆ ಮಾಡಿ
+    .accesskey = l
 duplicate-tab =
     .label = ತದ್ರೂಪು ಹಾಳೆ
     .accesskey = D
@@ -41,19 +44,6 @@ move-to-end =
 move-to-new-window =
     .label = ಹೊಸ Window ಗೆ ಜರುಗಿಸು
     .accesskey = W
-
-close-tab =
-    .label = ಟ್ಯಾಬ್‌ ಅನ್ನು ಮುಚ್ಚು
-    .accesskey = C
-close-tabs =
-    .label = ಟ್ಯಾಬ್ಗಳನ್ನು ಮುಚ್ಚಿ
-    .accesskey = S
-move-tabs =
-    .label = ಟ್ಯಾಬ್ಗಳನ್ನು ಸರಿಸಿ
-    .accesskey = v
-move-tab =
-    .label = ಟ್ಯಾಬ್ ಸರಿಸಿ
-    .accesskey = v
 
 ## Variables:
 ##  $tabCount (Number): the number of tabs that are affected by the action.

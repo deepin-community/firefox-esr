@@ -20,15 +20,6 @@ toolbar-context-menu-bookmark-selected-tabs =
 toolbar-context-menu-select-all-tabs =
     .label = Piliin ang lahat ng mga Tab
     .accesskey = S
-toolbar-context-menu-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Buksang Muli ang Isinarang Tab
-            [one] Buksang Muli ang Isinarang Tab
-           *[other] Buksang Muli ang mga Isinarang Tab
-        }
-    .accesskey = U
-
 toolbar-context-menu-reopen-closed-tabs =
     .label =
         { $tabCount ->
@@ -58,9 +49,6 @@ toolbar-context-menu-report-extension =
 toolbar-context-menu-pin-to-overflow-menu =
     .label = i-Pin sa Overflow Menu
     .accesskey = P
-toolbar-context-menu-auto-hide-downloads-button =
-    .label = Auto-Hide in Toolbar
-    .accesskey = A
 toolbar-context-menu-remove-from-toolbar =
     .label = Alisin sa Toolbar
     .accesskey = R
@@ -71,3 +59,6 @@ toolbar-context-menu-view-customize-toolbar-2 =
     .label = i-Customize ang Toolbar…
     .accesskey = C
 
+toolbar-context-menu-menu-bar-cmd =
+    .toolbarname = Menu Bar
+    .accesskey = M

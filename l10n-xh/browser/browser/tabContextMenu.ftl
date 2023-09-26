@@ -5,6 +5,9 @@
 reload-tab =
     .label = Phinda ulayishe ithebhu
     .accesskey = P
+tab-context-play-tab =
+    .label = Dlala iThebhu
+    .accesskey = l
 close-tabs-to-the-end =
     .label = Vala iithebhu ngaseKunene
     .accesskey = n
@@ -20,10 +23,6 @@ unpin-tab =
 move-to-new-window =
     .label = Yise kwifestile entsha
     .accesskey = f
-
-close-tab =
-    .label = Vala ithebhu
-    .accesskey = V
 
 ## Variables:
 ##  $tabCount (Number): the number of tabs that are affected by the action.

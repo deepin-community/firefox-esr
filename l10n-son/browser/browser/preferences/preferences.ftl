@@ -2,12 +2,6 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-pref-page-title =
-    { PLATFORM() ->
-        [windows] Suubarey
-       *[other] Ibaayey
-    }
-
 pane-general-title = Yamma
 category-general =
     .tooltiptext = { pane-general-title }
@@ -47,6 +41,17 @@ restart-later = Tunandi taaga nd'a too kayna
 ##   $name (String): name of the extension
 
 
+## Extension Control Notifications
+##
+## These strings are used to inform the user
+## about changes made by extensions to browser settings.
+##
+## <img data-l10n-name="icon"/> is going to be replaced by the extension icon.
+##
+## Variables:
+##   $name (string) - Name of the extension
+
+
 ## Preferences UI Search Results
 
 search-results-header = Ceeci duurawey
@@ -54,14 +59,6 @@ search-results-header = Ceeci duurawey
 ## General Section
 
 startup-header = Tunandi
-
-# { -brand-short-name } will be 'Firefox Developer Edition',
-# since this setting is only exposed in Firefox Developer Edition
-separate-profile-mode =
-    .label = Naŋ { -brand-short-name } nda Firefox ma dira cere bande
-use-firefox-sync = Dabari: Woo ga goy nda alhaali fayanteyaŋ. Goy nda { -sync-brand-short-name } ka bayhayey žemni gamey ra.
-get-started-not-logged-in = Huru { -sync-brand-short-name } ra…
-get-started-configured = { -sync-brand-short-name } ibaayey feeri
 
 always-check-default =
     .label = Guna waati kul wala { -brand-short-name } ti war tilasu ceecikaa
@@ -76,17 +73,9 @@ ctrl-tab-recently-used-order =
     .label = Ctrl+Tab willandey kanjey game goyyan kanandi koraw ra
     .accesskey = T
 
-warn-on-close-multiple-tabs =
-    .label = War yaamar waati kaŋ kanji booboyaŋ ga daaba
-    .accesskey = b
-
 warn-on-open-many-tabs =
     .label = War yaamar waati kaŋ kanji booboyaŋ ga feera, nd'i ga { -brand-short-name } gayandi
     .accesskey = d
-
-switch-links-to-new-tabs =
-    .label = Waati kaŋ ay ga dobu feeri kanji taaga ra, bere a ga dogoo ra
-    .accesskey = t
 
 show-tabs-in-taskbar =
     .label = Moo-daaru kanji cebe Windows goymaaboŋ ra
@@ -103,6 +92,10 @@ browser-containers-settings =
     .accesskey = n
 
 containers-disable-alert-title = Sun kanjey kul daabu?
+
+## Variables:
+##   $tabCount (number) - Number of tabs
+
 containers-disable-alert-desc =
     { $tabCount ->
         [one] Nda war na sun kanjey wii sohõ, { $tabCount } sun kanjoo ga daaba. Alhakiika kaŋ war ga baa ka sun kanjey wii?
@@ -114,6 +107,9 @@ containers-disable-alert-ok-button =
         [one] { $tabCount } sun kanjoo daabu
        *[other] { $tabCount } sun kanjey daabu
     }
+
+##
+
 containers-disable-alert-cancel-button = Naŋ diray ga
 
 containers-remove-alert-title = Sunoo woo kaa?
@@ -121,10 +117,7 @@ containers-remove-alert-title = Sunoo woo kaa?
 containers-remove-ok-button = Sunoo woo kaa
 containers-remove-cancel-button = Ma ši sunoo woo kaa
 
-
 ## General Section - Language & Appearance
-
-fonts-and-colors-header = Šigirawey nda noonawey
 
 default-font = Tilasu šigira
     .accesskey = T
@@ -134,10 +127,6 @@ default-font-size = Adadu
 advanced-fonts =
     .label = Jinehere…
     .accesskey = J
-
-colors-settings =
-    .label = Noonawey…
-    .accesskey = N
 
 choose-language-description = War šenni ibaayantaa suuba ka moɲey cebe
 
@@ -165,8 +154,7 @@ check-user-spelling =
 
 download-header = Zumandiyaney
 
-download-save-to =
-    .label = Tukey gaabu ga
+download-save-where = Tukey gaabu ga
     .accesskey = g
 
 download-choose-folder =
@@ -217,11 +205,6 @@ applications-manage-app =
     .label = Porogaram šilbayhayey…
 applications-always-ask =
     .label = Hãa waati kul
-applications-type-pdf = Portable Document Format (PDF)
-
-# Variables:
-#   $type (String) - the MIME type (e.g application/binary)
-applications-type-pdf-with-type = { applications-type-pdf } ({ $type })
 
 # Variables:
 #   $type-description (String) - Description of the type (e.g "Portable Document Format")
@@ -351,6 +334,11 @@ choose-bookmark =
 ## Variables:
 ##  $provider (String): Name of the corresponding content provider, e.g "Pocket".
 
+
+## Variables:
+##  $provider (string) - Name of the corresponding content provider, e.g "Pocket".
+
+
 ##
 
 
@@ -362,9 +350,8 @@ search-suggestions-option =
     .label = Ceeci honnandiyaney noo
     .accesskey = C
 
-search-suggestions-cant-show = Ceeci honnandiyaney ši cebe gorodoo zuu hunyaney ra zama war na { -brand-short-name } hanse a ma ši honga taariki kul.
 
-search-one-click-header = Cee-foo naaguyan ceecijinawey
+search-suggestions-cant-show = Ceeci honnandiyaney ši cebe gorodoo zuu hunyaney ra zama war na { -brand-short-name } hanse a ma ši honga taariki kul.
 
 search-choose-engine-column =
     .label = Ceecijinay
@@ -397,14 +384,14 @@ containers-add-button =
 containers-remove-button =
     .label = Kaa
 
-## Sync Section - Signed out
-
-
 ## Firefox Account - Signed out. Note that "Sync" and "Firefox Account" are now
 ## more discrete ("signed in" no longer means "and sync is connected").
 
+
+## Firefox account - Signed out. Note that "Sync" and "Firefox account" are now
+## more discrete ("signed in" no longer means "and sync is connected").
+
 sync-signedout-caption = War internetoo kanbe war bande
-sync-signedout-description = War doo-šilbawey, taariki, kanji, šennikufaley, tontoney nda ibaayey hangandi cere war jinawey kul ga.
 
 # This message contains two links and two icon images.
 #   `<img data-l10n-name="android-icon"/>` - Android logo icon
@@ -416,16 +403,21 @@ sync-signedout-description = War doo-šilbawey, taariki, kanji, šennikufaley, t
 # to your language, but should not be changed or translated.
 sync-mobile-promo = Firefox zumandi <img data-l10n-name="android-icon"/> <a data-l10n-name="android-link">Android</a> wala <img data-l10n-name="ios-icon"/> <a data-l10n-name="ios-link">iOS</a> ka hangandi nda war kanbe jinaa.
 
-## Sync Section - Signed in
-
-
 ## Firefox Account - Signed in
+
+
+## Firefox account - Signed in
 
 sync-profile-picture =
     .tooltiptext = Alhaali bii barmay
 
+## Variables
+## $email (string) - Email used for Firefox account
+
 sync-signedin-unverified = { $email } mana korosandi.
 sync-signedin-login-failure = War maa hantum ka ciya koyne { $email }
+
+##
 
 sync-sign-in =
     .label = Huru
@@ -463,10 +455,17 @@ sync-device-name-save =
     .label = Gaabu
     .accesskey = b
 
+## These strings are shown in a desktop notification after the
+## user requests we resend a verification email.
+
+sync-verification-sent-title = Tabatandiyan sanbandi
+# Variables:
+#   $email (String): Email address of user's Firefox account.
+sync-verification-sent-body = Tabatandiyan dobu sanbandi { $email } do.
+sync-verification-not-sent-title = Mana hin ka tabatandiyan sanba
+sync-verification-not-sent-body = Ir mana hin ka tabatandiyan bataga sanba sohõda, wa ceeci koyne waati foo.
+
 ## Privacy Section
-
-
-## Privacy Section - Forms
 
 
 ## Privacy Section - Logins and Passwords
@@ -478,18 +477,14 @@ forms-exceptions =
 forms-saved-logins =
     .label = Huruyan maa gaabuntey…
     .accesskey = m
-forms-master-pw-use =
-    .label = Takaddaɲaa šennikufal goyandi
-    .accesskey = g
 forms-master-pw-change =
     .label = Takaddaɲaa šennikufal barmay
     .accesskey = T
 
-forms-master-pw-fips-title = Sohõda war goo FIPS yaayi ra. FIPS ga takaddaɲaa šennikufal kaŋ ši koonu waažibandi.
-
 forms-master-pw-fips-desc = Šennikufal mana hin ka barmay mana
 
 ## OS Authentication dialog
+
 
 ## Privacy Section - History
 
@@ -535,6 +530,9 @@ history-clear-on-close-settings =
 ## Privacy Section - Site Data
 
 
+## Privacy Section - Cookie Banner Handling
+
+
 ## Privacy Section - Address Bar
 
 addressbar-locbar-bookmarks-option =
@@ -555,6 +553,10 @@ addressbar-suggestions-settings = Ibaa&ey barmay ceecijinay honnandiyaney se
 
 ##
 
+
+# The tcp-rollout strings are no longer used for the rollout but for tcp-by-default in the standard section
+
+
 ## Privacy Section - Tracking
 
 
@@ -565,10 +567,6 @@ permissions-notification = Bangandiyaney
 permissions-block-popups =
     .label = Biiboŋ bata zanfuney daabu
     .accesskey = B
-
-permissions-block-popups-exceptions =
-    .label = Hasarawey…
-    .accesskey = H
 
 permissions-addon-exceptions =
     .label = Hasarawey…
@@ -600,25 +598,18 @@ security-block-uncommon-software =
 
 certs-header = Tabatiyan-tiirawey
 
-certs-personal-label = Waati kaŋ feršikaw n'ay boŋ tabatiyan-tiiraa wiri
-
-certs-select-auto-option =
-    .label = Affoo suuba boŋse
-    .accesskey = S
-
-certs-select-ask-option =
-    .label = Hãa waati foo kul
-    .accesskey = A
-
 certs-enable-ocsp =
     .label = Hayyan OCSP zaabi feršikey ka sohõda tabatandi tiira booriyanoo cimandi.
     .accesskey = H
 
 ## Privacy Section - HTTPS-Only
 
+
+## DoH Section
+
+
 ## The following strings are used in the Download section of settings
 
 desktop-folder-name = Goytaabal
 downloads-folder-name = Zumandey
 choose-download-folder-title = Zumandi foolo suuba:
-

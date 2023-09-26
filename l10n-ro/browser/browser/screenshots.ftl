@@ -2,10 +2,6 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-screenshots-context-menu = Realizează o captură de ecran
-
-screenshots-my-shots-button = Capturile mele
-
 screenshot-toolbarbutton =
     .label = Captură de ecran
     .tooltiptext = Realizează o captură de ecran
@@ -41,8 +37,6 @@ screenshots-login-error-details = Nu am putut să salvăm captura ta deoarece es
 screenshots-unshootable-page-error-title = Nu putem realiza o captură de ecran a acestei pagini.
 screenshots-unshootable-page-error-details = Aceasta nu este o pagină web standard, deci nu poți realiza o captură de ecran a acesteia.
 
-screenshots-self-screenshot-error-title = Nu poți realiza o captură a paginii { -screenshots-brand-name }!
-
 screenshots-empty-selection-error-title = Selecția este prea mică
 
 screenshots-private-window-error-title = { -screenshots-brand-name } este dezactivat în modul de navigare privată
@@ -50,3 +44,4 @@ screenshots-private-window-error-details = Ne pare rău pentru inconveniență. 
 
 screenshots-generic-error-title = Aaah! { -screenshots-brand-name } a întâmpinat o eroare.
 screenshots-generic-error-details = Nu știm sigur ce s-a întâmplat. Ai vrea să încerci din nou sau realizezi o captură a altei pagini?
+

@@ -65,11 +65,6 @@ options-stylesheet-autocompletion-tooltip =
 # The heading
 options-screenshot-label = स्क्रीनशॉट वर्तन
 
-# Label for the checkbox that toggles screenshot to clipboard feature
-options-screenshot-clipboard-label = क्लिपबोर्ड वर स्क्रीनशॉट घ्या
-options-screenshot-clipboard-tooltip =
-    .title = स्क्रीनशॉट क्लिपबोर्ड वर साठवा
-
 # Label for the checkbox that toggles the camera shutter audio for screenshot tool
 options-screenshot-audio-label = कॅमेरा शटर चा ध्वनी चालवा
 options-screenshot-audio-tooltip =
@@ -131,8 +126,3 @@ options-context-triggers-page-refresh = * फक्त सध्याच्य�
 
 ##
 
-# The label for the checkbox that toggles the display of the platform data in the
-# Profiler i.e. devtools.profiler.ui.show-platform-data a boolean preference in about:config
-options-show-platform-data-label = Gecko प्लॅटफॉर्म माहिती दाखवा
-options-show-platform-data-tooltip =
-    .title = हा पर्याय सुरू केल्यास, JavaScript प्रोफाइलर रिपोर्ट्समध्ये खालील समाविष्ट होईल Gecko प्लॅटफॉर्म सिम्बल्स

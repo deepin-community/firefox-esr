@@ -23,6 +23,8 @@ profile-selection-delete-button =
     .label = Dilemel an aelad…
     .accesskey = D
 
+profile-selection-conflict-message = Un eilenn all eus { -brand-product-name } en deus kemmet an aeladoù. Dav eo deoc'h adloc'hañ { -brand-short-name } a-raok ober kemmoù all.
+
 ## Messages used in the profile manager
 
 profile-manager-description = { -brand-short-name } a vir stlennoù a-zivout hoc'h arventennoù, ho kwellvezioù hag ergorennoù an arveriaded all e-barzh hoc'h aelad deoc'h-c'hwi.

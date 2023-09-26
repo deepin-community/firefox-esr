@@ -2,17 +2,17 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-addons-window =
-    .title = Lalo med-ikome
-
 addons-page-title = Lalo med-ikome
 
 search-header =
     .placeholder = Yeny addons.mozilla.org
     .searchbuttonlabel = Yeny
 
-search-header-shortcut =
-    .key = f
+## Variables
+##   $domain - Domain name where add-ons are available (e.g. addons.mozilla.org)
+
+##
+
 
 list-empty-installed =
     .value = Pe itye ki med-ikome ma kit man ma kiketo
@@ -30,7 +30,6 @@ list-empty-button =
     .label = Nong ngec mapol ikom med-ikome
 
 help-button = Kony me Med-ikome
-
 sidebar-help-button-title =
     .title = Kony me Med-ikome
 
@@ -39,43 +38,6 @@ show-unsigned-extensions-button =
 
 show-all-extensions-button =
     .label = Nyut lamed weng
-
-cmd-show-details =
-    .label = Nyut Ngec Mukene
-    .accesskey = N
-
-cmd-find-updates =
-    .label = Nong ngec manyen
-    .accesskey = N
-
-cmd-preferences =
-    .label =
-        { PLATFORM() ->
-            [windows] Gin ayera
-           *[other] Ter
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] G
-           *[other] T
-        }
-
-cmd-enable-theme =
-    .label = Gin me aloka iye ma laol jo
-    .accesskey = G
-
-cmd-disable-theme =
-    .label = Juk Gin me aloka iye ma laol jo
-    .accesskey = G
-
-cmd-install-addon =
-    .label = Keti
-    .accesskey = K
-
-cmd-contribute =
-    .label = Jogi
-    .accesskey = J
-    .tooltiptext = Mi bot pi yubo med-ikome man
 
 detail-version =
     .label = Kite
@@ -211,7 +173,6 @@ extensions-warning-update-security = Ngiyo ber bedo pa ngec manyen me med-ikome 
 extensions-warning-update-security-button = Ye
     .title = Ye ngiyo ber bedo pa ngec mayen
 
-
 ## Strings connected to add-on updates
 
 addon-updates-check-for-updates = Rot pi ngec manyen
@@ -276,8 +237,12 @@ shortcuts-exists = { $addon } dong tye katic kwede
 ## Pending uninstall message bar
 
 
+## "sites with restrictions" (internally called "quarantined") are special domains
+## where add-ons are normally blocked for security reasons.
+
 ## This is the tooltip text for the recommended badges for an extension in about:addons. The
 ## badge is a small icon displayed next to an extension when it is recommended on AMO.
+
 
 ##
 
@@ -288,3 +253,29 @@ addons-heading-search-input =
 
 addon-page-options-button =
     .title = Gintic pi med-ikome weng
+
+## Detail notifications
+## Variables:
+##   $name (String): name of the add-on.
+
+## Detail notifications
+## Variables:
+##   $name (string) - Name of the add-on.
+
+# Variables:
+#   $version (String): application version.
+details-notification-incompatible = { $name } pe rwate kwede { -brand-short-name } { $version }.
+
+details-notification-unsigned-and-disabled = pe onongo kiromo moko ada pa { $name } me tic kwede i { -brand-short-name } kadong ki juko woko.
+details-notification-unsigned-and-disabled-link = Ngec mapol
+
+details-notification-unsigned = pe onongo kiromo moko ada pa { $name } me tic kwede i { -brand-short-name }. Mede ki diro.
+details-notification-unsigned-link = Ngec mapol
+
+details-notification-blocked = { $name } kityeko kwanyo pi kelo kop ikom gwok onyo bedo mot.
+details-notification-blocked-link = Ngec Mukene
+
+details-notification-softblocked = { $name } ngene pi kelo kop ikom gwok onyo bedo mot.
+details-notification-softblocked-link = Ngec Mukene
+
+details-notification-gmp-pending = { $name } bi kete ma cokcoki.

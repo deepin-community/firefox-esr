@@ -6,9 +6,6 @@ password-quality-meter = Wagwoord-gehaltemeter
 
 ## Change Password dialog
 
-change-password-window =
-    .title = Wysig meesterwagwoord
-
 # Variables:
 # $tokenName (String) - Security device of the change password dialog
 change-password-token = Sekuriteitstoestel: { $tokenName }
@@ -16,23 +13,16 @@ change-password-old = Huidige wagwoord:
 change-password-new = Nuwe wagwoord:
 change-password-reenter = Nuwe wagwoord (weer):
 
-## Reset Password dialog
-
-reset-password-window =
-    .title = Stel meesterwagwoord terug
-    .style = width: 40em
-
 ## Reset Primary Password dialog
 
 reset-password-button-label =
     .label = Stel terug
-reset-password-text = Indien u u meesterwagwoord terugstel, sal al u gestoorde web- en e-poswagwoorde, vormdata, persoonlike sertifikate en private sleutels vergeet word. Wil u definitief die meesterwagwoord teruglaai?
 
 ## Downloading cert dialog
 
-download-cert-window =
+download-cert-window2 =
     .title = Laai tans sertifikaat af
-    .style = width: 46em
+    .style = min-width: 46em
 download-cert-message = U is gevra om 'n nuwe sertifikaatowerheid (SO) te vertrou.
 download-cert-trust-ssl =
     .label = Vertrou hierdie SO om webwerwe te identifiseer.
@@ -64,7 +54,5 @@ set-password-reminder = Belangrik: Indien u u sertifikaat-rugsteunwagwoord verge
 
 ## Protected Auth dialog
 
-protected-auth-window =
-    .title = Beskermde tekenmagtiging
-protected-auth-msg = Verkry magtiging met die teken. Magtigingmetode hang af van die soort teken.
-protected-auth-token = Teken:
+## Protected authentication alert
+

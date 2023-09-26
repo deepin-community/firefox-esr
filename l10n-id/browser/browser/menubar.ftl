@@ -43,15 +43,6 @@ menu-quit =
 menu-quit-mac =
     .label = Keluar dari { -brand-shorter-name }
 
-# This menu-quit-button string is only used on Linux.
-menu-quit-button =
-    .label = { menu-quit.label }
-
-# This menu-quit-button-win string is only used on Windows.
-menu-quit-button-win =
-    .label = { menu-quit.label }
-    .tooltip = Keluar dari { -brand-shorter-name }
-
 menu-about =
     .label = Tentang { -brand-shorter-name }
     .accesskey = T
@@ -81,9 +72,15 @@ menu-file-open-location =
 menu-file-open-file =
     .label = Buka Berkas…
     .accesskey = B
-menu-file-close =
-    .label = Tutup
-    .accesskey = u
+# Variables:
+#  $tabCount (Number): the number of tabs that are affected by the action.
+menu-file-close-tab =
+    .label =
+        { $tabCount ->
+            [1] Tutup Tab
+           *[other] Tutup { $tabCount } Tab
+        }
+    .accesskey = T
 menu-file-close-window =
     .label = Tutup Jendela
     .accesskey = d
@@ -93,12 +90,12 @@ menu-file-save-page =
 menu-file-email-link =
     .label = Surelkan Tautan…
     .accesskey = K
+menu-file-share-url =
+    .label = Bagikan
+    .accesskey = B
 menu-file-print-setup =
     .label = Tata Laman…
     .accesskey = n
-menu-file-print-preview =
-    .label = Pratinjau Cetak
-    .accesskey = P
 menu-file-print =
     .label = Cetak…
     .accesskey = C
@@ -114,9 +111,6 @@ menu-file-go-offline =
 menu-edit =
     .label = Edit
     .accesskey = E
-menu-edit-find-on =
-    .label = Cari di Laman Ini…
-    .accesskey = C
 menu-edit-find-in-page =
     .label = Temukan di Laman…
     .accesskey = T
@@ -135,9 +129,6 @@ menu-view =
 menu-view-toolbars-menu =
     .label = Bilah Alat
     .accesskey = t
-menu-view-customize-toolbar =
-    .label = Ubahsuai…
-    .accesskey = U
 menu-view-customize-toolbar2 =
     .label = Ubahsuai Bilah Alat…
     .accesskey = U
@@ -174,10 +165,6 @@ menu-view-page-style-no-style =
 menu-view-page-basic-style =
     .label = Gaya Standar Laman
     .accesskey = S
-menu-view-charset =
-    .label = Pengodean Teks
-    .accesskey = o
-
 menu-view-repair-text-encoding =
     .label = Memperbaiki Pengodean Teks
     .accesskey = k
@@ -194,6 +181,17 @@ menu-view-exit-full-screen =
 menu-view-full-screen =
     .label = Layar Penuh
     .accesskey = P
+
+## These menu items may use the same accesskey.
+
+# This should match reader-view-enter-button in browser.ftl
+menu-view-enter-readerview =
+    .label = Masuk ke Tampilan Baca
+    .accesskey = B
+# This should match reader-view-close-button in browser.ftl
+menu-view-close-readerview =
+    .label = Tutup Tampilan Pembaca
+    .accesskey = T
 
 ##
 
@@ -224,24 +222,17 @@ menu-history-undo-menu =
 menu-history-undo-window-menu =
     .label = Jendela yang Baru Saja Ditutup
 
-menu-history-reopen-all-tabs = Buka Ulang Semua Tab
-menu-history-reopen-all-windows = Buka Ulang Semua Jendela
-
 ## Bookmarks Menu
 
 menu-bookmarks-menu =
     .label = Markah
     .accesskey = M
-menu-bookmarks-show-all =
-    .label = Tampilkan Semua Markah…
-menu-bookmark-this-page =
-    .label = Markahi Laman ini
 menu-bookmarks-manage =
     .label = Kelola Markah
-menu-bookmark-current-tab =
-    .label = Markahi Tab Saat Ini
-menu-bookmark-edit =
-    .label = Edit Markah Ini
+menu-bookmark-tab =
+    .label = Markahi Tab Saat Ini…
+menu-edit-bookmark =
+    .label = Ubah Markah Ini…
 menu-bookmarks-all-tabs =
     .label = Markahi Semua Tab…
 menu-bookmarks-toolbar =
@@ -259,15 +250,6 @@ menu-tools =
 menu-tools-downloads =
     .label = Unduhan
     .accesskey = U
-menu-tools-addons =
-    .label = Pengaya
-    .accesskey = P
-menu-tools-fxa-sign-in =
-    .label = Masuk ke { -brand-product-name }…
-    .accesskey = M
-menu-tools-turn-on-sync =
-    .label = Aktifkan { -sync-brand-short-name }…
-    .accesskey = A
 menu-tools-addons-and-themes =
     .label = Pengaya dan Tema
     .accesskey = P
@@ -283,9 +265,6 @@ menu-tools-sync-now =
 menu-tools-fxa-re-auth =
     .label = Sambungkan ulang ke { -brand-product-name }…
     .accesskey = S
-menu-tools-web-developer =
-    .label = Pengembang Web
-    .accesskey = W
 menu-tools-browser-tools =
     .label = Alat Peramban
     .accesskey = A
@@ -298,17 +277,6 @@ menu-tools-page-source =
 menu-tools-page-info =
     .label = Informasi Laman
     .accesskey = I
-menu-preferences =
-    .label =
-        { PLATFORM() ->
-            [windows] Pengaturan…
-           *[other] Pengaturan
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] g
-           *[other] g
-        }
 menu-settings =
     .label = Pengaturan
     .accesskey =
@@ -341,21 +309,6 @@ menu-window-bring-all-to-front =
 menu-help =
     .label = Bantuan
     .accesskey = n
-menu-help-product =
-    .label = Bantuan { -brand-shorter-name }
-    .accesskey = B
-menu-help-show-tour =
-    .label = Tur { -brand-shorter-name }
-    .accesskey = u
-menu-help-import-from-another-browser =
-    .label = Impor dari Peramban Lain…
-    .accesskey = I
-menu-help-keyboard-shortcuts =
-    .label = Pintasan Papan Ketik
-    .accesskey = K
-menu-help-troubleshooting-info =
-    .label = Informasi Pemecahan Masalah…
-    .accesskey = M
 menu-get-help =
     .label = Dapatkan Bantuan
     .accesskey = B
@@ -364,15 +317,9 @@ menu-help-more-troubleshooting-info =
     .accesskey = I
 menu-help-report-site-issue =
     .label = Laporkan Masalah Situs…
-menu-help-feedback-page =
-    .label = Kirim Saran…
-    .accesskey = S
-menu-help-safe-mode-without-addons =
-    .label = Mulai Ulang dengan Pengaya Dinonaktifkan…
-    .accesskey = n
-menu-help-safe-mode-with-addons =
-    .label = Mulai Ulang dengan Pengaya Diaktifkan
-    .accesskey = n
+menu-help-share-ideas =
+    .label = Bagikan Ide dan Umpan Balik
+    .accesskey = B
 menu-help-enter-troubleshoot-mode2 =
     .label = Mode Pemecahan Masalah…
     .accesskey = P

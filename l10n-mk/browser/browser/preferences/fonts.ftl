@@ -108,21 +108,9 @@ fonts-allow-own =
     .label = Дозволи страниците да изберат свои фонтови, наместо избраните подолу
     .accesskey = Д
 
-## Text Encodings
-##
-## Translate the encoding names as adjectives for an encoding, not as the name
-## of the language.
-
-fonts-languages-fallback-name-arabic =
-    .label = Арапски
-fonts-languages-fallback-name-baltic =
-    .label = Балтички
-fonts-languages-fallback-name-greek =
-    .label = Грчки
-fonts-languages-fallback-name-hebrew =
-    .label = Хебрејски
-
 # Variables:
 #   $name {string, "Arial"} - Name of the default font
 fonts-label-default =
     .label = Основно ({ $name })
+fonts-label-default-unnamed =
+    .label = Основно

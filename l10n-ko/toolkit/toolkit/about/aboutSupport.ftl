@@ -9,11 +9,6 @@ crashes-id = 보고 ID
 crashes-send-date = 전송됨
 crashes-all-reports = 모든 충돌 보고서
 crashes-no-config = 이 애플리케이션은 충돌 보고서를 표시하도록 설정되어 있지 않습니다.
-extensions-title = 확장 기능
-extensions-name = 이름
-extensions-enabled = 사용
-extensions-version = 버전
-extensions-id = ID
 support-addons-title = 부가 기능
 support-addons-name = 이름
 support-addons-type = 유형
@@ -77,6 +72,12 @@ app-basics-location-service-key-google = Google 위치 서비스 키
 app-basics-safebrowsing-key-google = Google Safebrowsing 키
 app-basics-key-mozilla = Mozilla 위치 서비스 키
 app-basics-safe-mode = 안전 모드
+app-basics-memory-size = 메모리 크기 (램)
+app-basics-disk-available = 사용 가능한 디스크 공간
+# Variables:
+#   $value (number) - Amount of data being stored
+#   $unit (string) - The unit of data being stored (e.g. MB)
+app-basics-data-size = { $value } { $unit }
 show-dir-label =
     { PLATFORM() ->
         [macos] Finder에서 보기
@@ -86,7 +87,7 @@ show-dir-label =
 environment-variables-title = 환경 변수
 environment-variables-name = 이름
 environment-variables-value = 값
-experimental-features-title = 실험적인 기능
+experimental-features-title = 실험 기능
 experimental-features-name = 이름
 experimental-features-value = 값
 modified-key-prefs-title = 중요한 변경된 환경 설정
@@ -106,11 +107,21 @@ graphics-gpu2-title = GPU #2
 graphics-decision-log-title = 판단 로그
 graphics-crash-guards-title = 크래시 보호 비활성화 기능
 graphics-workarounds-title = 임시방편
+graphics-device-pixel-ratios = 창 기기 픽셀 비율
 # Windowing system in use on Linux (e.g. X11, Wayland).
 graphics-window-protocol = 윈도우 프로토콜
 # Desktop environment in use on Linux (e.g. GNOME, KDE, XFCE, etc).
 graphics-desktop-environment = 데스크톱 환경
 place-database-title = 위치 데이터베이스
+place-database-stats = 통계
+place-database-stats-show = 통계 표시
+place-database-stats-hide = 통계 숨기기
+place-database-stats-entity = 엔터티
+place-database-stats-count = 수
+place-database-stats-size-kib = 크기 (KiB)
+place-database-stats-size-perc = 크기 (%)
+place-database-stats-efficiency-perc = 효율성 (%)
+place-database-stats-sequentiality-perc = 순차 (%)
 place-database-integrity = 무결성
 place-database-verify-integrity = 무결성 확인
 a11y-title = 접근성
@@ -130,8 +141,6 @@ sandbox-sys-call-tid = TID
 sandbox-sys-call-proc-type = 프로세스 타입
 sandbox-sys-call-number = 시스템 콜
 sandbox-sys-call-args = 인자
-safe-mode-title = 안전 모드 사용해 보기
-restart-in-safe-mode-label = 부가 기능을 끄고 다시 시작…
 troubleshoot-mode-title = 문제 진단
 restart-in-troubleshoot-mode-label = 문제 해결 모드…
 clear-startup-cache-title = 시작 캐시 지워 보기
@@ -159,8 +168,18 @@ media-device-channels = 채널
 media-device-rate = 레이트
 media-device-latency = 지연 시간
 media-capabilities-title = 미디어 기능
+media-codec-support-info = 코덱 지원 정보
 # List all the entries of the database.
 media-capabilities-enumerate = 데이터베이스 열거
+
+## Codec support table
+
+media-codec-support-sw-decoding = 소프트웨어 디코딩
+media-codec-support-hw-decoding = 하드웨어 디코딩
+media-codec-support-codec-name = 코덱 이름
+media-codec-support-supported = 지원됨
+media-codec-support-unsupported = 지원 안 됨
+media-codec-support-error = 코덱 지원 정보를 사용할 수 없습니다. 미디어 파일 재생 후 다시 시도하세요.
 
 ##
 
@@ -189,36 +208,6 @@ remote-debugging-url = URL
 
 ##
 
-support-third-party-modules-title = 제3자 모듈
-support-third-party-modules-module = 모듈 파일
-support-third-party-modules-version = 파일 버전
-support-third-party-modules-vendor = 공급업체 정보
-support-third-party-modules-occurrence = 발생 빈도
-support-third-party-modules-process = 프로세스 유형 및 ID
-support-third-party-modules-thread = 스레드
-support-third-party-modules-base = Imagebase 주소
-support-third-party-modules-uptime = 프로세스 작동 시간 (ms)
-support-third-party-modules-duration = 로드 시간 (ms)
-support-third-party-modules-status = 상태
-support-third-party-modules-status-loaded = 로드됨
-support-third-party-modules-status-blocked = 차단됨
-support-third-party-modules-status-redirected = 리디렉션됨
-support-third-party-modules-empty = 제3자 모듈이 로드되지 않았습니다.
-support-third-party-modules-no-value = (값 없음)
-support-third-party-modules-button-open =
-    .title = 파일 위치 열기…
-support-third-party-modules-expand =
-    .title = 자세한 정보 표시
-support-third-party-modules-collapse =
-    .title = 자세한 정보 접기
-support-third-party-modules-unsigned-icon =
-    .title = 이 모듈은 서명되지 않음
-support-third-party-modules-folder-icon =
-    .title = 파일 위치 열기…
-support-third-party-modules-down-icon =
-    .title = 자세한 정보 표시
-support-third-party-modules-up-icon =
-    .title = 자세한 정보 접기
 # Variables
 # $days (Integer) - Number of days of crashes to log
 report-crash-for-days = 지난 { $days }일간의 충돌 보고서
@@ -239,10 +228,10 @@ text-copied = 문자열을 클립보드에 복사함
 
 ## The verb "blocked" here refers to a graphics feature such as "Direct2D" or "OpenGL layers".
 
-blocked-driver = 그래픽 드라이버 버전이 지원하지 않기 때문에 그리기 지원을 차단하였습니다.
-blocked-gfx-card = 그래픽 카드 드라이버의 미해결 문제로 인해 그리기 지원을 차단하였습니다.
-blocked-os-version = 운영 체제 버전에서 지원하지 않기 때문에 그리기 지원을 차단하였습니다.
-blocked-mismatched-version = 레지스트리와 DLL간의 그래픽 드라이버 버전이 일치하지 않아서 차단하였습니다.
+blocked-driver = 그래픽 드라이버 버전이 지원하지 않기 때문에 그리기 지원을 차단했습니다.
+blocked-gfx-card = 그래픽 카드 드라이버의 미해결 문제로 인해 그리기 지원을 차단했습니다.
+blocked-os-version = 운영 체제 버전에서 지원하지 않기 때문에 그리기 지원을 차단했습니다.
+blocked-mismatched-version = 레지스트리와 DLL간의 그래픽 드라이버 버전이 일치하지 않아서 차단했습니다.
 # Variables
 # $driverVersion - The graphics driver version string
 try-newer-driver = 그래픽 드라이버는 그리기 지원이 차단되었습니다.  그래픽 드라이버를 버전 { $driverVersion } 이상으로 업데이트해 보세요.
@@ -253,7 +242,7 @@ compositing = 합성
 hardware-h264 = 하드웨어 H264 디코딩
 main-thread-no-omtc = 주 스레드, OMTC 아님
 yes = 예
-no = 아니오
+no = 아니요
 unknown = 알 수 없음
 virtual-monitor-disp = 가상 모니터 디스플레이
 
@@ -285,10 +274,8 @@ webgl2-renderer = WebGL2 드라이버 랜더러
 webgl2-version = WebGL 2 드라이버 버전
 webgl2-driver-extensions = WebGL 2 드라이버 확장 기능
 webgl2-extensions = WebGL 2 확장 기능
-blocklisted-bug = 알려진 문제로 인해 차단됨
-# Variables
-# $bugNumber (string) - String of bug number from Bugzilla
-bug-link = bug { $bugNumber }
+webgpu-default-adapter = WebGPU 기본 어댑터
+webgpu-fallback-adapter = WebGPU 폴백 어댑터
 # Variables
 #   $bugNumber (string) - Bug number on Bugzilla
 support-blocklisted-bug = 알려진 문제로 인해 차단됨: <a data-l10n-name="bug-link">bug { $bugNumber }</a>
@@ -296,14 +283,12 @@ support-blocklisted-bug = 알려진 문제로 인해 차단됨: <a data-l10n-nam
 # $failureCode (string) - String that can be searched in the source tree.
 unknown-failure = 차단됨; 실패 코드 { $failureCode }
 d3d11layers-crash-guard = D3D11 컴포지터
-d3d11video-crash-guard = D3D11 동영상 디코더
-d3d9video-crash-guard = D3D9 동영상 디코더
 glcontext-crash-guard = OpenGL
 wmfvpxvideo-crash-guard = WMF VPX 비디오 디코더
 reset-on-next-restart = 다음에 다시 시작할 때 초기화
 gpu-process-kill-button = GPU 프로세스 종료
 gpu-device-reset = 기기 초기화
-gpu-device-reset-button = 기기 초기화 시작
+gpu-device-reset-button = 기기 초기화 실행
 uses-tiling = 타일링 사용
 content-uses-tiling = 타일링(콘텐츠) 사용
 off-main-thread-paint-enabled = 오프 메인 스레드 페인팅 활성화됨
@@ -320,6 +305,7 @@ can-sandbox-media = 미디어 플러그인 샌드박싱
 content-sandbox-level = 콘텐츠 프로세스 샌드박스 수준
 effective-content-sandbox-level = 효과적인 콘텐츠 프로세스 샌드박스 수준
 content-win32k-lockdown-state = 콘텐츠 프로세스에 대한 Win32k 잠금 상태
+support-sandbox-gpu-level = GPU 프로세스 샌드박스 수준
 sandbox-proc-type-content = 내용
 sandbox-proc-type-file = 파일 내용
 sandbox-proc-type-media-plugin = 미디어 플러그인
@@ -337,14 +323,6 @@ launcher-process-status-unknown = 알 수 없는 상태
 # $remoteWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
 multi-process-windows = { $remoteWindows }/{ $totalWindows }
-multi-process-status-0 = 사용자에 의해 활성화됨
-multi-process-status-1 = 기본값에 의해 활성화됨
-multi-process-status-2 = 비활성화됨
-multi-process-status-4 = 접근성 도구에 의해 비활성화됨
-multi-process-status-6 = 지원되지 않는 텍스트 입력에 의해 비활성화됨
-multi-process-status-7 = 부가 기능에 의해 비활성화됨
-multi-process-status-8 = 강제로 비활성화됨
-multi-process-status-unknown = 알 수 없는 상태
 # Variables
 # $fissionWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
@@ -353,7 +331,7 @@ fission-status-experiment-control = 실험에 의해 비활성화됨
 fission-status-experiment-treatment = 실험에 의해 활성화됨
 fission-status-disabled-by-e10s-env = 환경에 의해 비활성화됨
 fission-status-enabled-by-env = 환경에 의해 활성화됨
-fission-status-disabled-by-safe-mode = 안전 모드에 의해 비활성화됨
+fission-status-disabled-by-env = 환경에 의해 비활성화됨
 fission-status-enabled-by-default = 기본값에 의해 활성화됨
 fission-status-disabled-by-default = 기본값에 의해 비활성화됨
 fission-status-enabled-by-user-pref = 사용자에 의해 활성화됨

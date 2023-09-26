@@ -76,7 +76,7 @@ struct CacheIRStubKey : public DefaultHasher<CacheIRStubKey> {
 
 struct BaselineCacheIRStubCodeMapGCPolicy {
   static bool traceWeak(JSTracer* trc, CacheIRStubKey*,
-                        WeakHeapPtrJitCode* value) {
+                        WeakHeapPtr<JitCode*>* value) {
     return TraceWeakEdge(trc, value, "traceWeak");
   }
 };
@@ -92,7 +92,7 @@ class JitZone {
 
   // Map CacheIRStubKey to shared JitCode objects.
   using BaselineCacheIRStubCodeMap =
-      GCHashMap<CacheIRStubKey, WeakHeapPtrJitCode, CacheIRStubKey,
+      GCHashMap<CacheIRStubKey, WeakHeapPtr<JitCode*>, CacheIRStubKey,
                 SystemAllocPolicy, BaselineCacheIRStubCodeMapGCPolicy>;
   BaselineCacheIRStubCodeMap baselineCacheIRStubCodes_;
 
@@ -102,7 +102,7 @@ class JitZone {
   // HashMap that maps scripts to compilations inlining those scripts.
   using InlinedScriptMap =
       GCHashMap<WeakHeapPtr<BaseScript*>, RecompileInfoVector,
-                MovableCellHasher<WeakHeapPtr<BaseScript*>>, SystemAllocPolicy>;
+                StableCellHasher<WeakHeapPtr<BaseScript*>>, SystemAllocPolicy>;
   InlinedScriptMap inlinedCompilations_;
 
   mozilla::Maybe<IonCompilationId> currentCompilationId_;

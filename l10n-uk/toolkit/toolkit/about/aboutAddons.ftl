@@ -2,19 +2,22 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-addons-window =
-    .title = Додатки
-
 addons-page-title = Додатки
 
 search-header =
     .placeholder = Пошук на addons.mozilla.org
     .searchbuttonlabel = Пошук
 
-search-header-shortcut =
-    .key = f
+## Variables
+##   $domain - Domain name where add-ons are available (e.g. addons.mozilla.org)
 
 list-empty-get-extensions-message = Отримати розширення й теми на <a data-l10n-name="get-extensions">{ $domain }</a>
+
+list-empty-get-dictionaries-message = Отримайте словники на <a data-l10n-name="get-extensions">{ $domain }</a>
+
+list-empty-get-language-packs-message = Отримайте мовні пакунки на <a data-l10n-name="get-extensions">{ $domain }</a>
+
+##
 
 list-empty-installed =
     .value = У вас не встановлено жодного додатка цього типу
@@ -35,18 +38,6 @@ help-button = Підтримка додатків
 sidebar-help-button-title =
     .title = Підтримка додатків
 
-preferences =
-    { PLATFORM() ->
-        [windows] Налаштування { -brand-short-name }
-       *[other] Налаштування { -brand-short-name }
-    }
-sidebar-preferences-button-title =
-    .title =
-        { PLATFORM() ->
-            [windows] Налаштування { -brand-short-name }
-           *[other] Налаштування { -brand-short-name }
-        }
-
 addons-settings-button = Налаштування { -brand-short-name }
 sidebar-settings-button-title =
     .title = Налаштування { -brand-short-name }
@@ -57,48 +48,14 @@ show-unsigned-extensions-button =
 show-all-extensions-button =
     .label = Показати всі розширення
 
-cmd-show-details =
-    .label = Показати більше інформації
-    .accesskey = і
-
-cmd-find-updates =
-    .label = Знайти оновлення
-    .accesskey = о
-
-cmd-preferences =
-    .label =
-        { PLATFORM() ->
-            [windows] Налаштування
-           *[other] Налаштування
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] Н
-           *[other] Н
-        }
-
-cmd-enable-theme =
-    .label = Вдягнути тему
-    .accesskey = В
-
-cmd-disable-theme =
-    .label = Зняти тему
-    .accesskey = З
-
-cmd-install-addon =
-    .label = Встановити
-    .accesskey = В
-
-cmd-contribute =
-    .label = Посприяти
-    .accesskey = П
-    .tooltiptext = Посприяти розвитку цього додатка
-
 detail-version =
     .label = Версія
 
 detail-last-updated =
     .label = Востаннє оновлено
+
+addon-detail-description-expand = Показати більше
+addon-detail-description-collapse = Показати менше
 
 detail-contributions-description = Розробник цього додатка просить вас посприяти його подальшому розвитку невеликим внеском.
 
@@ -184,7 +141,7 @@ addon-restart-now =
 disabled-unsigned-heading =
     .value = Деякі додатки були вимкнені
 
-disabled-unsigned-description = Наступні додатки не були перевірені для використання в { -brand-short-name }. Ви можете <label data-l10n-name="find-addons">знайти їм заміну</label> або запитати розрабника провести їх перевірку.
+disabled-unsigned-description = Вказані додатки не були перевірені для використання в { -brand-short-name }. Ви можете <label data-l10n-name="find-addons">знайти їм заміну</label> або попросити розробника виконати їх перевірку.
 
 disabled-unsigned-learn-more = Дізнайтесь більше про наші зусилля в забезпеченні збереження вашої безпеки в Інтернеті.
 
@@ -230,6 +187,13 @@ addon-category-available-updates-title =
 addon-category-recent-updates = Недавні оновлення
 addon-category-recent-updates-title =
     .title = Недавні оновлення
+addon-category-sitepermission = Дозволи сайтів
+addon-category-sitepermission-title =
+    .title = Дозволи сайтів
+# String displayed in about:addons in the Site Permissions section
+# Variables:
+#  $host (string) - DNS host name for which the webextension enables permissions
+addon-sitepermission-host = Дозволи сайту для { $host }
 
 ## These are global warnings
 
@@ -241,6 +205,8 @@ extensions-warning-update-security = Перевірка безпечного о�
 extensions-warning-update-security-button = Увімкнути
     .title = Увімкнути перевірку безпечного оновлення додатків
 
+extensions-warning-imported-addons = Завершіть встановлення розширень, які було імпортовано до { -brand-short-name }.
+extensions-warning-imported-addons-button = Встановити розширення
 
 ## Strings connected to add-on updates
 
@@ -279,8 +245,8 @@ addon-install-from-file = Встановити додаток з файлу…
     .accesskey = В
 addon-install-from-file-dialog-title = Виберіть додаток для встановлення
 addon-install-from-file-filter-name = Додатки
-addon-open-about-debugging = Зневадження додатків
-    .accesskey = З
+addon-open-about-debugging = Налагодження додатків
+    .accesskey = г
 
 ## Extension shortcut management
 
@@ -316,6 +282,8 @@ shortcuts-duplicate-warning-message = { $shortcut } використовуєть
 #   $addon (string) - Name of the add-on
 shortcuts-exists = Вже використовується додатком { $addon }
 
+# Variables:
+#   $numberToShow (number) - Number of other elements available to show
 shortcuts-card-expand-button =
     { $numberToShow ->
         [one] Показати ще { $numberToShow }
@@ -340,7 +308,7 @@ discopane-intro =
     Ось декілька <a data-l10n-name="learn-more-trigger">рекомендацій</a> від { -brand-product-name } для виняткової безпеки, швидкодії та функціональності.
 
 # Notice to make user aware that the recommendations are personalized.
-discopane-notice-recommendations = Деякі з цих рекомендацій персоналізовані. Вони базуються на ваших вже встановлених розширеннях, налаштуваннях профілю і статистики використання.
+discopane-notice-recommendations = Деякі з цих рекомендацій персоналізовані. Вони базуються на ваших вже встановлених розширеннях, налаштуваннях профілю і статистиці використання.
 discopane-notice-learn-more = Докладніше
 
 privacy-policy = Політика приватності
@@ -359,6 +327,7 @@ install-theme-button = Встановити тему
 # the detailed add-on view is opened, from where the add-on can be managed.
 manage-addon-button = Керувати
 find-more-addons = Знайти інші додатки
+find-more-themes = Знайти інші теми
 
 # This is a label for the button to open the "more options" menu, it is only
 # used for screen readers.
@@ -390,7 +359,7 @@ extension-enabled-heading = Увімкнено
 extension-disabled-heading = Вимкнено
 
 theme-enabled-heading = Увімкнено
-theme-disabled-heading = Вимкнено
+theme-disabled-heading2 = Збережені теми
 
 plugin-enabled-heading = Увімкнено
 plugin-disabled-heading = Вимкнено
@@ -401,7 +370,8 @@ dictionary-disabled-heading = Вимкнено
 locale-enabled-heading = Увімкнено
 locale-disabled-heading = Вимкнено
 
-ask-to-activate-button = Питати про активацію
+sitepermission-enabled-heading = Увімкнено
+sitepermission-disabled-heading = Вимкнено
 
 always-activate-button = Завжди активувати
 never-activate-button = Ніколи не активувати
@@ -451,6 +421,11 @@ addon-detail-updates-radio-off = Вимкнено
 addon-detail-update-check-label = Перевірити оновлення
 install-update-button = Оновити
 
+# aria-label associated to the updates row to help screen readers to announce the group
+# of input controls being entered.
+addon-detail-group-label-updates =
+    .aria-label = { addon-detail-updates-label }
+
 # This is the tooltip text for the private browsing badge in about:addons. The
 # badge is the private browsing icon included next to the extension's name.
 addon-badge-private-browsing-allowed2 =
@@ -460,13 +435,31 @@ addon-detail-private-browsing-help = Якщо дозволено, розшире
 addon-detail-private-browsing-allow = Дозволити
 addon-detail-private-browsing-disallow = Не дозволяти
 
+# aria-label associated to the private browsing row to help screen readers to announce the group
+# of input controls being entered.
+addon-detail-group-label-private-browsing =
+    .aria-label = { detail-private-browsing-label }
+
+## "sites with restrictions" (internally called "quarantined") are special domains
+## where add-ons are normally blocked for security reasons.
+
+# Used as a description for the option to allow or block an add-on on quarantined domains.
+addon-detail-quarantined-domains-label = Запускати на сайтах з обмеженнями
+# Used as help text part of the quarantined domains UI controls row.
+addon-detail-quarantined-domains-help = Якщо дозволено, розширення матиме доступ до сайтів, обмежених { -vendor-short-name }. Дозволяйте, лише якщо ви довіряєте цьому розширенню.
+# Used as label and tooltip text on the radio inputs associated to the quarantined domains UI controls.
+addon-detail-quarantined-domains-allow = Дозволити
+addon-detail-quarantined-domains-disallow = Не дозволяти
+# aria-label associated to the quarantined domains exempt row to help screen readers to announce the group.
+addon-detail-group-label-quarantined-domains =
+    .aria-label = { addon-detail-quarantined-domains-label }
+
 ## This is the tooltip text for the recommended badges for an extension in about:addons. The
 ## badge is a small icon displayed next to an extension when it is recommended on AMO.
 
 addon-badge-recommended2 =
     .title = { -brand-product-name } рекомендує лише розширення, що задовольняють наші стандарти безпеки та швидкодії
     .aria-label = { addon-badge-recommended2.title }
-
 # We hard code "Mozilla" in the string below because the extensions are built
 # by Mozilla and we don't want forks to display "by Fork".
 addon-badge-line3 =
@@ -485,13 +478,16 @@ release-notes-loading = Завантаження…
 release-notes-error = На жаль, під час завантаження приміток до випуску сталася помилка.
 
 addon-permissions-empty = Це розширення не потребує дозволів
-
 addon-permissions-required = Необхідні дозволи для роботи основних функцій:
-addon-permissions-optional = Необов’язкові дозволи для додаткових функцій:
+addon-permissions-optional = Необов'язкові дозволи для додаткових функцій:
 addon-permissions-learnmore = Докладніше про дозволи
 
 recommended-extensions-heading = Рекомендовані розширення
 recommended-themes-heading = Рекомендовані теми
+
+# Variables:
+#   $hostname (string) - Host where the permissions are granted
+addon-sitepermissions-required = Надає для <span data-l10n-name="hostname">{ $hostname }</span> такі можливості:
 
 # A recommendation for the Firefox Color theme shown at the bottom of the theme
 # list view. The "Firefox Color" name itself should not be translated.
@@ -505,6 +501,7 @@ plugin-heading = Керуйте своїми плагінами
 dictionary-heading = Керуйте своїми словниками
 locale-heading = Керуйте своїми мовами
 updates-heading = Керуйте своїми оновленнями
+sitepermission-heading = Керувати дозволами сайтів
 discover-heading = Персоналізуйте свій { -brand-short-name }
 shortcuts-heading = Керувати комбінаціями клавіш розширень
 
@@ -514,3 +511,31 @@ addons-heading-search-input =
 
 addon-page-options-button =
     .title = Інструменти для всіх додатків
+
+## Detail notifications
+## Variables:
+##   $name (String): name of the add-on.
+
+
+## Detail notifications
+## Variables:
+##   $name (string) - Name of the add-on.
+
+# Variables:
+#   $version (string) - Application version.
+details-notification-incompatible = { $name } несумісний з { -brand-short-name } { $version }.
+details-notification-incompatible-link = Докладніше
+
+details-notification-unsigned-and-disabled = Додаток { $name } не був перевірений для використання в { -brand-short-name } і був вимкнений.
+details-notification-unsigned-and-disabled-link = Докладніше
+
+details-notification-unsigned = Додаток { $name } не був перевірений для використання в { -brand-short-name }. Продовжуйте з обережністю.
+details-notification-unsigned-link = Докладніше
+
+details-notification-blocked = { $name } було вимкнено, у зв'язку з проблемами безпеки чи стабільності.
+details-notification-blocked-link = Докладніше
+
+details-notification-softblocked = В { $name } є відомі проблеми з безпекою та стабільністю.
+details-notification-softblocked-link = Докладніше
+
+details-notification-gmp-pending = { $name } незабаром буде встановлено.

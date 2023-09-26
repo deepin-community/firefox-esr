@@ -2,12 +2,12 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-connection-window =
+connection-window2 =
     .title = Միացման կարգավորումներ
     .style =
         { PLATFORM() ->
-            [macos] width: 44em
-           *[other] width: 49em
+            [macos] min-width: 44em
+           *[other] min-width: 49em
         }
 
 connection-close-key =
@@ -36,19 +36,10 @@ connection-proxy-http = HTTP պրոքսի
 connection-proxy-http-port = Պորտ
     .accesskey = Դ
 
-connection-proxy-http-sharing =
-    .label = Այս միջնորդը օգտագործեք նաև FTP-ի և HTTPS-ի համար
-    .accesskey = s
-
 connection-proxy-https = HTTPS միջնորդ
     .accesskey = H
 connection-proxy-ssl-port = Պորտ
     .accesskey = ա
-
-connection-proxy-ftp = FTP պրոքսի
-    .accesskey = F
-connection-proxy-ftp-port = Պորտ
-    .accesskey = ր
 
 connection-proxy-socks = SOCKS հոսթ
     .accesskey = C
@@ -66,9 +57,6 @@ connection-proxy-noproxy = Չկա պրոքսի
 
 connection-proxy-noproxy-desc = Օրինակ՝ .mozilla.org, .net.nz, 192.168.1.0/24
 
-# Do not translate localhost, 127.0.0.1 and ::1.
-connection-proxy-noproxy-localhost-desc = Միացումները տեղայինհանգույցին՝ 127.0.0.1 և ::1-ին, երբեք չեն վստահվում:
-
 connection-proxy-autotype =
     .label = Պրոքսիի ինքնաբար կազմաձևում URL
     .accesskey = A
@@ -82,16 +70,14 @@ connection-proxy-autologin =
     .accesskey = ր
     .tooltip = Այս ընտրանքը լռությամբ իսկորոշում է պրոքսիները, երբ պահպանում եք դրանց հավաստագրերը: Ձախողման դեպքում Ձեզ հարցում կկատարվի:
 
+connection-proxy-autologin-checkbox =
+    .label = Գաղտնաբառը պահելիս վավերացում չհարցնել
+    .accesskey = ր
+    .tooltiptext = Այս ընտրանքը լռությամբ իսկորոշում է պրոքսիները, երբ պահպանում եք դրանց հավաստագրերը: Ձախողման դեպքում Ձեզ հարցում կկատարվի:
+
 connection-proxy-socks-remote-dns =
     .label = Պրոքսի DNS՝ SOCKS v5 օգտագործելիս
     .accesskey = d
-
-connection-dns-over-https =
-    .label = Միացնել DNS-ը HTTPS-ով
-    .accesskey = b
-
-connection-dns-over-https-url-resolver = Օգտագործել մատակարար
-    .accesskey = P
 
 # Variables:
 #   $name (String) - Display name or URL for the DNS over HTTPS provider

@@ -35,19 +35,14 @@ menu-quit =
         }
     .accesskey =
         { PLATFORM() ->
-            [windows] k
-           *[other] k
+            [windows] U
+           *[other] U
         }
+
 # This menu-quit-mac string is only used on macOS.
 menu-quit-mac =
     .label = Ukončiť { -brand-shorter-name }
-# This menu-quit-button string is only used on Linux.
-menu-quit-button =
-    .label = { menu-quit.label }
-# This menu-quit-button-win string is only used on Windows.
-menu-quit-button-win =
-    .label = { menu-quit.label }
-    .tooltip = Ukončiť prehliadač { -brand-shorter-name }
+
 menu-about =
     .label = O aplikácii { -brand-shorter-name }
     .accesskey = O
@@ -77,8 +72,16 @@ menu-file-open-location =
 menu-file-open-file =
     .label = Otvoriť súbor…
     .accesskey = s
-menu-file-close =
-    .label = Zavrieť
+# Variables:
+#  $tabCount (Number): the number of tabs that are affected by the action.
+menu-file-close-tab =
+    .label =
+        { $tabCount ->
+            [1] Zavrieť kartu
+            [one] Zavrieť kartu
+            [few] Zavrieť { $tabCount } karty
+           *[other] Zavrieť { $tabCount } kariet
+        }
     .accesskey = Z
 menu-file-close-window =
     .label = Zavrieť okno
@@ -95,9 +98,6 @@ menu-file-share-url =
 menu-file-print-setup =
     .label = Nastavenie tlače…
     .accesskey = N
-menu-file-print-preview =
-    .label = Ukážka pred tlačou
-    .accesskey = e
 menu-file-print =
     .label = Tlačiť…
     .accesskey = T
@@ -113,9 +113,6 @@ menu-file-go-offline =
 menu-edit =
     .label = Upraviť
     .accesskey = U
-menu-edit-find-on =
-    .label = Hľadať na tejto stránke…
-    .accesskey = n
 menu-edit-find-in-page =
     .label = Hľadať na stránke…
     .accesskey = H
@@ -133,9 +130,6 @@ menu-view =
     .accesskey = Z
 menu-view-toolbars-menu =
     .label = Panely s nástrojmi
-    .accesskey = P
-menu-view-customize-toolbar =
-    .label = Prispôsobiť…
     .accesskey = P
 menu-view-customize-toolbar2 =
     .label = Upraviť panel nástrojov…
@@ -160,7 +154,7 @@ menu-view-full-zoom-reduce =
     .accesskey = V
 menu-view-full-zoom-actual-size =
     .label = Skutočná veľkosť
-    .accesskey = v
+    .accesskey = S
 menu-view-full-zoom-toggle =
     .label = Meniť iba veľkosť textu
     .accesskey = M
@@ -173,9 +167,6 @@ menu-view-page-style-no-style =
 menu-view-page-basic-style =
     .label = Základný štýl stránky
     .accesskey = Z
-menu-view-charset =
-    .label = Kódovanie textu
-    .accesskey = K
 menu-view-repair-text-encoding =
     .label = Opraviť kódovanie textu
     .accesskey = O
@@ -192,6 +183,17 @@ menu-view-exit-full-screen =
 menu-view-full-screen =
     .label = Na celú obrazovku
     .accesskey = c
+
+## These menu items may use the same accesskey.
+
+# This should match reader-view-enter-button in browser.ftl
+menu-view-enter-readerview =
+    .label = Zapnúť zobrazenie Čítačka
+    .accesskey = Z
+# This should match reader-view-close-button in browser.ftl
+menu-view-close-readerview =
+    .label = Zavrieť zobrazenie Čítačka
+    .accesskey = Z
 
 ##
 
@@ -221,24 +223,21 @@ menu-history-undo-menu =
     .label = Nedávno zatvorené karty
 menu-history-undo-window-menu =
     .label = Nedávno zatvorené okná
-menu-history-reopen-all-tabs = Obnoviť všetky karty
-menu-history-reopen-all-windows = Obnoviť všetky okná
 
 ## Bookmarks Menu
 
 menu-bookmarks-menu =
     .label = Záložky
     .accesskey = o
-menu-bookmarks-show-all =
-    .label = Zobraziť všetky záložky
-menu-bookmark-this-page =
-    .label = Pridať stránku medzi záložky
 menu-bookmarks-manage =
     .label = Spravovať záložky
-menu-bookmark-current-tab =
+menu-bookmark-tab =
     .label = Pridať túto kartu medzi záložky
-menu-bookmark-edit =
-    .label = Upraviť túto záložku
+menu-edit-bookmark =
+    .label = Upraviť túto záložku…
+# "Search" is a verb, as in "Search in bookmarks"
+menu-bookmarks-search =
+    .label = Hľadať v záložkách
 menu-bookmarks-all-tabs =
     .label = Pridať všetky karty medzi záložky…
 menu-bookmarks-toolbar =
@@ -256,15 +255,6 @@ menu-tools =
 menu-tools-downloads =
     .label = Správca sťahovania súborov
     .accesskey = S
-menu-tools-addons =
-    .label = Doplnky
-    .accesskey = D
-menu-tools-fxa-sign-in =
-    .label = Prihlásiť sa do aplikácie { -brand-product-name }…
-    .accesskey = i
-menu-tools-turn-on-sync =
-    .label = Zapnúť { -sync-brand-short-name }…
-    .accesskey = n
 menu-tools-addons-and-themes =
     .label = Doplnky a témy
     .accesskey = D
@@ -280,9 +270,6 @@ menu-tools-sync-now =
 menu-tools-fxa-re-auth =
     .label = Znovu pripojiť k aplikácii { -brand-product-name }…
     .accesskey = r
-menu-tools-web-developer =
-    .label = Webový vývojár
-    .accesskey = W
 menu-tools-browser-tools =
     .label = Nástroje prehliadača
     .accesskey = h
@@ -295,17 +282,6 @@ menu-tools-page-source =
 menu-tools-page-info =
     .label = Informácie o stránke
     .accesskey = I
-menu-preferences =
-    .label =
-        { PLATFORM() ->
-            [windows] Možnosti
-           *[other] Možnosti
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] M
-           *[other] M
-        }
 menu-settings =
     .label = Nastavenia
     .accesskey =
@@ -338,21 +314,6 @@ menu-window-bring-all-to-front =
 menu-help =
     .label = Pomocník
     .accesskey = P
-menu-help-product =
-    .label = Pomocník prehliadača { -brand-shorter-name }
-    .accesskey = P
-menu-help-show-tour =
-    .label = Prehliadka prehliadača { -brand-shorter-name }
-    .accesskey = h
-menu-help-import-from-another-browser =
-    .label = Importovať z iného prehliadača…
-    .accesskey = I
-menu-help-keyboard-shortcuts =
-    .label = Klávesové skratky
-    .accesskey = K
-menu-help-troubleshooting-info =
-    .label = Informácie pre riešenie problémov
-    .accesskey = m
 menu-get-help =
     .label = Získať pomoc
     .accesskey = Z
@@ -361,21 +322,18 @@ menu-help-more-troubleshooting-info =
     .accesskey = a
 menu-help-report-site-issue =
     .label = Nahlásiť problém so stránkou…
-menu-help-feedback-page =
-    .label = Odoslať spätnú väzbu…
+menu-help-share-ideas =
+    .label = Zdieľať nápady a spätnú väzbu…
     .accesskey = d
-menu-help-safe-mode-without-addons =
-    .label = Reštartovať a zakázať doplnky…
-    .accesskey = R
-menu-help-safe-mode-with-addons =
-    .label = Reštartovať a povoliť doplnky…
-    .accesskey = R
 menu-help-enter-troubleshoot-mode2 =
     .label = Režim riešenia problémov…
     .accesskey = R
 menu-help-exit-troubleshoot-mode =
     .label = Vypnúť režim riešenia problémov
     .accesskey = r
+menu-help-switch-device =
+    .label = Prechod na nové zariadenie
+    .accesskey = P
 # Label of the Help menu item. Either this or
 # menu-help-notdeceptive is shown.
 menu-help-report-deceptive-site =

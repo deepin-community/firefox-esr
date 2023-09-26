@@ -2,20 +2,14 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-containers-window-new =
+containers-window-new2 =
     .title = 새 컨테이너 추가
-    .style = width: 45em
+    .style = min-width: 45em
 # Variables
 #   $name (String) - Name of the container
-containers-window-update =
+containers-window-update-settings2 =
     .title = { $name } 컨테이너 설정
-    .style = width: 45em
-
-# Variables
-#   $name (String) - Name of the container
-containers-window-update-settings =
-    .title = { $name } 컨테이너 설정
-    .style = width: 45em
+    .style = min-width: 45em
 
 containers-window-close =
     .key = w
@@ -45,10 +39,6 @@ containers-icon-label = 아이콘
 containers-color-label = 색상
     .accesskey = o
     .style = { -containers-labels-style }
-
-containers-button-done =
-    .label = 완료
-    .accesskey = D
 
 containers-dialog =
     .buttonlabelaccept = 완료

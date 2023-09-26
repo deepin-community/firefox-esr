@@ -2,17 +2,6 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-bookmark-overlay-name =
-    .value = Nomi:
-    .accesskey = N
-
-bookmark-overlay-location =
-    .value = Manzili:
-    .accesskey = M
-
-bookmark-overlay-folder =
-    .value = Jild:
-
 bookmark-overlay-choose =
     .label = Tanlash
 
@@ -21,13 +10,15 @@ bookmark-overlay-folders-expander =
     .tooltiptextdown = { bookmark-overlay-folders-expander.tooltiptext }
     .tooltiptextup = Yashirish
 
+bookmark-overlay-folders-expander2 =
+    .tooltiptext = Barcha xatchoʻplar jildini koʻrsatish
+
+bookmark-overlay-folders-expander-hide =
+    .tooltiptext = Yashirish
+
 bookmark-overlay-new-folder-button =
     .label = Yangi jild
     .accesskey = j
-
-bookmark-overlay-tags =
-    .value = Teglar:
-    .accesskey = T
 
 bookmark-overlay-tags-empty-description =
     .placeholder = Teglarni vergul bilan ajratish
@@ -37,7 +28,9 @@ bookmark-overlay-tags-expander =
     .tooltiptextdown = { bookmark-overlay-tags-expander.tooltiptext }
     .tooltiptextup = Yashirish
 
-bookmark-overlay-keyword =
-    .value = Kalit soʻz:
-    .accesskey = K
+bookmark-overlay-tags-expander2 =
+    .tooltiptext = Barcha teglarni koʻrsatish
+
+bookmark-overlay-tags-expander-hide =
+    .tooltiptext = Yashirish
 

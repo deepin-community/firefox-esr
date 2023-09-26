@@ -34,6 +34,10 @@ text-action-paste =
     .label = Gludo
     .accesskey = G
 
+text-action-paste-no-formatting =
+    .label = Gludo heb Fformatio
+    .accesskey = F
+
 text-action-paste-shortcut =
     .key = V
 
@@ -50,3 +54,26 @@ text-action-select-all-shortcut =
 
 text-action-spell-no-suggestions =
     .label = (Dim Awgrymiadau Sillafu)
+
+text-action-spell-add-to-dictionary =
+    .label = Ychwanegu at y Geiriadur
+    .accesskey = G
+
+text-action-spell-undo-add-to-dictionary =
+    .label = Dadwneud Ychwanegu at y Geiriadur
+    .accesskey = D
+
+text-action-spell-check-toggle =
+    .label = Gwirio Sillafu
+    .accesskey = S
+
+text-action-spell-add-dictionaries =
+    .label = Ychwanegu Geiriaduron…
+    .accesskey = Y
+
+text-action-spell-dictionaries =
+    .label = Iaith
+    .accesskey = I
+
+text-action-search-text-box-clear =
+    .title = Clirio

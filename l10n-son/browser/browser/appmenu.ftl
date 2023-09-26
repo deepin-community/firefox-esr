@@ -5,17 +5,20 @@
 
 ## App Menu
 
-appmenuitem-customize-mode =
-    .label = Hanse war boŋ se…
-
-## Zoom Controls
-
 appmenuitem-new-tab =
     .label = Kanji taaga
 appmenuitem-new-window =
     .label = Zanfun taaga
 appmenuitem-new-private-window =
     .label = Sutura zanfun taaga
+appmenuitem-history =
+    .label = Taariki
+appmenuitem-print =
+    .label = Kar…
+appmenuitem-zoom =
+    .value = Bebbeerandi
+appmenuitem-help =
+    .label = Faaba
 
 ## Zoom and Fullscreen Controls
 
@@ -24,8 +27,15 @@ appmenuitem-fullscreen =
 
 ## Firefox Account toolbar button and Sync panel in App menu.
 
-fxa-toolbar-sync-now =
-    .label = Sync sohõ
+# This is shown beneath the name of a device when that device has no open tabs
+appmenu-remote-tabs-notabs = Kanji kul ši feeri
+
+# This is shown when Sync is configured but syncing tabs is disabled.
+appmenu-remote-tabs-tabsnotsyncing = Kanji hangandiyan tunandi ka dii kanjey maašeede jinay taney ga.
+
+# This is shown when Sync is configured but this appears to be the only device attached to
+# the account. We also show links to download Firefox for android/ios.
+appmenu-remote-tabs-noclients = Ga boona ka dii war jinay taney kanjey ne wala?
 
 appmenuitem-save-page =
     .label = Moɲoo gaabu sanda…
@@ -37,6 +47,17 @@ appmenuitem-save-page =
 ## performance profiles. To enable it go to profiler.firefox.com and click
 ## "Enable Profiler Menu Button".
 
+
+## Profiler presets
+## They are shown in the popup's select box.
+
+# Presets and their l10n IDs are defined in the file
+# devtools/client/performance-new/popup/background.jsm.js
+# Please take care that the same values are also defined in devtools' perftools.ftl.
+
+# Presets and their l10n IDs are defined in the file
+# devtools/client/performance-new/shared/background.jsm.js
+# Please take care that the same values are also defined in devtools' perftools.ftl.
 
 ## History panel
 
@@ -54,9 +75,6 @@ appmenu-recently-closed-windows =
 appmenu-about =
     .label = { -brand-shorter-name } ga
     .accesskey = a
-appmenu-help-feedback-page =
-    .label = Furari sanba…
-    .accesskey = s
 
 ## appmenu-help-enter-troubleshoot-mode and appmenu-help-exit-troubleshoot-mode
 ## are mutually exclusive, so it's possible to use the same accesskey for both.

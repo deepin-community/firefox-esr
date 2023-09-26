@@ -37,6 +37,7 @@ protections-panel-site-not-working-view =
 ## a tooltip explaining why these items were not blocked in the page.
 
 protections-panel-not-blocking-why-label = למה?
+protections-panel-not-blocking-why-etp-on-tooltip = חסימת רכיבים אלו עלולה לשבור אלמנטים באתרים מסוימים. ללא רכיבי מעקב, ייתכן שחלק מהכפתורים, הטפסים ושדות ההתחברות לא יפעלו.
 protections-panel-not-blocking-why-etp-off-tooltip = כל רכיבי המעקב באתר זה נטענו מכיוון שההגנות כבויות.
 
 ##
@@ -62,7 +63,6 @@ protections-panel-not-found-label = לא אותרו
 ##
 
 protections-panel-settings-label = הגדרות הגנה
-# This should match the "appmenuitem-protection-dashboard-title" string in browser/appmenu.ftl.
 protections-panel-protectionsdashboard-label = לוח הגנות
 
 ## In the Site Not Working? view, we suggest turning off protections if
@@ -77,6 +77,7 @@ protections-panel-site-not-working-view-issue-list-forms = טפסים
 protections-panel-site-not-working-view-issue-list-payments = תשלומים
 protections-panel-site-not-working-view-issue-list-comments = תגובות
 protections-panel-site-not-working-view-issue-list-videos = סרטוני וידאו
+protections-panel-site-not-working-view-issue-list-fonts = גופנים
 
 protections-panel-site-not-working-view-send-report = שליחת דיווח
 
@@ -88,6 +89,7 @@ protections-panel-fingerprinters = רכיבי זהות דיגיטלית אוספ
 protections-panel-tracking-content = אתרים עשויים לטעון פרסומות חיצוניות, סרטונים ותכנים אחרים עם קוד מעקב. חסימת תוכן מעקב יכולה לסייע לאתרים להיטען מהר יותר, אך יתכן שמספר כפתורים, טפסים ושדות התחברות לא יעבדו.
 protections-panel-social-media-trackers = רשתות חברתיות מציבות רכיבי מעקב באתרים אחרים כדי לעקוב אחר מה שהינך עושה ורואה ברשת. זה מאפשר לחברות המדיה החברתית ללמוד עליך מעבר למה שבחרת לשתף בפרופילי המדיה החברתית שלך.
 
+protections-panel-description-shim-allowed = החסימה של חלק מרכיבי המעקב המסומנים למטה בוטלה באופן חלקי בדף זה מכיוון שתיקשרת איתם.
 protections-panel-description-shim-allowed-learn-more = מידע נוסף
 
 protections-panel-content-blocking-manage-settings =
@@ -97,6 +99,7 @@ protections-panel-content-blocking-manage-settings =
 protections-panel-content-blocking-breakage-report-view =
     .title = דיווח על אתר שבור
 protections-panel-content-blocking-breakage-report-view-description = חסימת רכיבי מעקב מסויימים עשויה לגרום לתקלות במגוון אתרים. דיווח על הבעיות האלה מסייע בשיפור { -brand-short-name } לטובת הכלל. בדיווח זה יישלחו ל־Mozilla כתובת האתר ומידע על הגדרות הדפדפן שלך. <label data-l10n-name="learn-more">מידע נוסף</label>
+protections-panel-content-blocking-breakage-report-view-description2 = חסימת רכיבי מעקב מסויימים עשויה לגרום לתקלות במגוון אתרים. דיווח על הבעיות האלה מסייע בשיפור { -brand-short-name } לטובת הכלל. בדיווח זה יישלחו ל־{ -vendor-short-name } כתובת האתר ומידע על הגדרות הדפדפן שלך.
 protections-panel-content-blocking-breakage-report-view-collection-url = כתובת
 protections-panel-content-blocking-breakage-report-view-collection-url-label =
     .aria-label = כתובת
@@ -107,3 +110,6 @@ protections-panel-content-blocking-breakage-report-view-cancel =
     .label = ביטול
 protections-panel-content-blocking-breakage-report-view-send-report =
     .label = שליחת דיווח
+
+# Cookie Banner Handling
+

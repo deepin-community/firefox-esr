@@ -6,26 +6,23 @@ synced-tabs-sidebar-title = Dirica matino ma kiribo
 synced-tabs-sidebar-noclients-subtitle = Imito neno dirica matino ni ki i nyonyo mukene kany?
 synced-tabs-sidebar-unverified = Myero ki mok ada pa akaunt mamegi.
 synced-tabs-sidebar-notabs = Dirica matino pe ayaba
-synced-tabs-sidebar-openprefs = Yab ter me { -sync-brand-short-name }
 synced-tabs-sidebar-tabsnotsyncing = Cak ribo dirica matidi me neno nying dirica matino ki i nyonyo ni mukene.
 synced-tabs-sidebar-connect-another-device = Kub Nyonyo Mukene
 synced-tabs-sidebar-search =
     .placeholder = Yeny dirica matino ma ki ribo
+
+## Displayed in the Synced Tabs sidebar's context menu when right-clicking tabs
+## and/or devices in the list. The "Open" strings below should be translated
+## consistently with the equivalent strings for the bookmarks manager's context
+## menu. That menu is activated by right-clicking a bookmark in the Library
+## window. The bookmarks manager context's strings are located in places.ftl.
+
 synced-tabs-context-open =
     .label = Yab
     .accesskey = Y
-synced-tabs-context-open-in-new-tab =
-    .label = Yab i dirica matidi manyen
-    .accesskey = a
-synced-tabs-context-open-in-new-window =
-    .label = Yab i dirica manyen
-    .accesskey = m
-synced-tabs-context-open-in-new-private-window =
-    .label = Yab i dirica manyen me mung
-    .accesskey = m
-synced-tabs-context-bookmark-single-tab =
-    .label = Ket alama buk iye dirica matidi man…
-    .accesskey = K
+
+##
+
 synced-tabs-context-copy =
     .label = Lok
     .accesskey = L
@@ -38,5 +35,3 @@ synced-tabs-context-manage-devices =
 synced-tabs-context-sync-now =
     .label = Rib Kombedi
     .accesskey = R
-fxa-sign-in = Dony iyie { -sync-brand-short-name }
-turn-on-sync = Cak { -sync-brand-short-name }

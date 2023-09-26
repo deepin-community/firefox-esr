@@ -28,16 +28,6 @@ serviceworker-worker-unregister = Zrušit registraci
 serviceworker-worker-debug = Ladit
     .title = Ladit lze pouze běžící service workery
 
-# Text for the debug link displayed for an already started Service Worker, when we
-# are in multi e10s mode, which effectively disables this link.
-serviceworker-worker-debug-forbidden = Ladit
-    .title = Ladění service workerů je možné pouze při zakázaném multi e10s
-
-# Text for the start link displayed for a registered but not running Service Worker.
-# Clicking on the link will attempt to start the service worker.
-serviceworker-worker-start2 = Spustit
-    .title = Spouštět service workery je možné pouze při zakázaném multi e10s
-
 # Alt text for the image icon displayed inside a debug link for a service worker.
 serviceworker-worker-inspect-icon =
     .alt = Prozkoumat
@@ -48,13 +38,9 @@ serviceworker-worker-start3 = Spustit
 
 # Text displayed for the updated time of the service worker. The <time> element will
 # display the last update time of the service worker script.
+# Variables:
+#   $date (date) - Update date
 serviceworker-worker-updated = Aktualizace <time>{ DATETIME($date, day: "numeric", month: "numeric", year: "numeric", hour: "numeric", minute: "numeric", second: "numeric") }</time>
-
-# Text displayed next to the URL for the source of the service worker (e-g. "Source my/path/to/worker-js")
-serviceworker-worker-source = Zdroj
-
-# Text displayed next to the current status of the service worker.
-serviceworker-worker-status = Stav
 
 ## Service Worker status strings: all serviceworker-worker-status-* strings are also
 ## defined in aboutdebugging.properties and should be synchronized with them.
@@ -66,35 +52,29 @@ serviceworker-worker-status-running = Běžící
 # Service Worker status. A stopped service worker is registered but not currently active.
 serviceworker-worker-status-stopped = Zastavený
 
-# Text displayed when no service workers are visible for the current page. Clicking on the
-# link will open https://developer-mozilla-org/docs/Web/API/Service_Worker_API/Using_Service_Workers
-serviceworker-empty-intro = Pro zobrazení service workeru ho nejdřív musíte zaregistrovat. <a>Zjistit více</a>
-
-# Text displayed when there are no Service Workers to display for the current page,
-# introducing hints to debug Service Worker issues.
-serviceworker-empty-suggestions = Pokud má současná stránka obsahovat service worker, tady je pár tipů, co můžete zkusit
-
-# Suggestion to check for errors in the Console to investigate why a service worker is not
-# registered. Clicking on the link opens the webconsole.
-serviceworker-empty-suggestions-console = Podívejte se po chybách v konzoli. <a>Otevřít konzoli</a>
-
-# Suggestion to use the debugger to investigate why a service worker is not registered.
-# Clicking on the link will switch from the Application panel to the debugger.
-serviceworker-empty-suggestions-debugger = Projděte krok po kroku registraci vašeho service workeru a hledejte výjimky. <a>Otevřít debugger</a>
-
-# Suggestion to go to about:debugging in order to see Service Workers for all domains.
-# Clicking on the link will open about:debugging in a new tab.
-serviceworker-empty-suggestions-aboutdebugging = Podívejte se na service workery z ostatních domén. <a>Otevřít about:debugging</a>
+# Text displayed when no service workers are visible for the current page.
+serviceworker-empty-intro2 = Nenalezen žádný service worker
 
 # Link will open https://developer.mozilla.org/docs/Web/API/Service_Worker_API/Using_Service_Workers
 serviceworker-empty-intro-link = Zjistit více
+
+# Text displayed when there are no Service Workers to display for the current page,
+# introducing hints to debug Service Worker issues.
+# <a> and <span> are links that will open the webconsole and the debugger, respectively.
+serviceworker-empty-suggestions2 = Pokud by měla mít aktuální stránka skript typu worker, případné jeho chyby najdete v<a>Konzoli</a>, jeho registraci si můžete projít v <span>Debuggeru</span>.
+
+# Suggestion to go to about:debugging in order to see Service Workers for all domains.
+# Link will open about:debugging in a new tab.
+serviceworker-empty-suggestions-aboutdebugging2 = Zobrazit service workery z jiných domén
 
 # Header for the Manifest page when we have an actual manifest
 manifest-view-header = Manifest aplikace
 
 # Header for the Manifest page when there's no manifest to inspect
+manifest-empty-intro2 = Nenalezen žádný manifest webové aplikace
+
 # The link will open https://developer.mozilla.org/en-US/docs/Web/Manifest
-manifest-empty-intro = Pro kontrolu musíte vložit manifest aplikace. <a>Zjistit více</a>
+manifest-empty-intro-link = Zjistit, jak přidat manifest
 
 # Header for the Errors and Warnings section of Manifest inspection displayed in the application panel.
 manifest-item-warnings = Chyby a varování
@@ -120,7 +100,7 @@ manifest-loaded-error = Při načítání manifestu došlo k chybě:
 
 # Text displayed as an error when there has been a Firefox DevTools error while
 # trying to load the manifest
-manifest-loaded-devtools-error = Chyba ve Firefox DevTools
+manifest-loaded-devtools-error = Chyba v nástrojích pro vývojáře Firefoxu
 
 # Text displayed when the page has no manifest available
 manifest-non-existing = Nebyl nalezen žádný manifest k prozkoumání.
@@ -131,6 +111,8 @@ manifest-json-link-data-url = Manifest je součástí Data URL.
 
 # Text displayed at manifest icons to label their purpose, as declared
 # in the manifest.
+# Variables:
+#   $purpose (string) - Manifest purpose
 manifest-icon-purpose = Účel: <code>{ $purpose }</code>
 
 # Text displayed as the alt attribute for <img> tags showing the icons in the
@@ -139,8 +121,11 @@ manifest-icon-img =
     .alt = Ikona
 
 # Text displayed as the title attribute for <img> tags showing the icons in the
-# manifest. `$sizes` is a user-dependent string that has been parsed as a
-# space-separated list of `<width>x<height>` sizes or the keyword `any`.
+# manifest.
+# Variables:
+#   $sizes (string) - User-dependent string that has been parsed as a
+#                     space-separated list of `<width>x<height>` sizes or
+#                     the keyword `any`.
 manifest-icon-img-title = Ikona s velikostmi: { $sizes }
 
 # Text displayed as the title attribute for <img> tags showing the icons in the
@@ -166,4 +151,3 @@ icon-warning =
 icon-error =
     .alt = Ikona chyby
     .title = Chyba
-

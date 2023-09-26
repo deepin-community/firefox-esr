@@ -16,8 +16,8 @@ downloads-panel =
 # The style attribute has the width of the Downloads Panel expressed using
 # a CSS unit. The longest labels that should fit are usually those of
 # in-progress and blocked downloads.
-downloads-panel-list =
-    .style = width: 70ch
+downloads-panel-items =
+    .style = width: 35em
 
 downloads-cmd-pause =
     .label = Pausa
@@ -30,42 +30,65 @@ downloads-cmd-cancel =
 downloads-cmd-cancel-panel =
     .aria-label = Interrumper
 
-# This message is only displayed on Windows and Linux devices
-downloads-cmd-show-menuitem =
-    .label = Mussar l'ordinatur che cuntegna la datoteca
-    .accesskey = o
+downloads-cmd-show-menuitem-2 =
+    .label =
+        { PLATFORM() ->
+            [macos] Mussar en il Finder
+           *[other] Mussar en l'ordinatur
+        }
+    .accesskey = F
 
-# This message is only displayed on macOS devices
-downloads-cmd-show-menuitem-mac =
-    .label = Mussar en il finder
-    .accesskey = f
+## Displayed in the downloads context menu for files that can be opened.
+## Variables:
+##   $handler (String) - The name of the mime type's default file handler.
+##   Example: "Notepad", "Acrobat Reader DC", "7-Zip File Manager"
 
 downloads-cmd-use-system-default =
     .label = Avrir cun il program da standard
     .accesskey = v
+# This version is shown when the download's mime type has a valid file handler.
+downloads-cmd-use-system-default-named =
+    .label = Avrir en { $handler }
+    .accesskey = i
 
+# We can use the same accesskey as downloads-cmd-always-open-similar-files.
+# Both should not be visible in the downloads context menu at the same time.
 downloads-cmd-always-use-system-default =
     .label = Adina avrir cun il program da standard
     .accesskey = u
+# We can use the same accesskey as downloads-cmd-always-open-similar-files.
+# Both should not be visible in the downloads context menu at the same time.
+# This version is shown when the download's mime type has a valid file handler.
+downloads-cmd-always-use-system-default-named =
+    .label = Adina avrir en { $handler }
+    .accesskey = d
 
-downloads-cmd-show-button =
+##
+
+# We can use the same accesskey as downloads-cmd-always-use-system-default.
+# Both should not be visible in the downloads context menu at the same time.
+downloads-cmd-always-open-similar-files =
+    .label = Adina avrir datotecas sumegliantas
+    .accesskey = v
+
+downloads-cmd-show-button-2 =
     .tooltiptext =
         { PLATFORM() ->
-            [macos] Mussar en il finder
-           *[other] Mussar l'ordinatur che cuntegna la datoteca
+            [macos] Mussar en il Finder
+           *[other] Mussar en l'ordinatur
         }
 
-downloads-cmd-show-panel =
+downloads-cmd-show-panel-2 =
     .aria-label =
         { PLATFORM() ->
-            [macos] Mussar en il finder
-           *[other] Mussar l'ordinatur che cuntegna la datoteca
+            [macos] Mussar en il Finder
+           *[other] Mussar en l'ordinatur
         }
-downloads-cmd-show-description =
+downloads-cmd-show-description-2 =
     .value =
         { PLATFORM() ->
-            [macos] Mussar en il finder
-           *[other] Mussar l'ordinatur che cuntegna la datoteca
+            [macos] Mussar en il Finder
+           *[other] Mussar en l'ordinatur
         }
 
 downloads-cmd-show-downloads =
@@ -89,6 +112,9 @@ downloads-cmd-clear-list =
 downloads-cmd-clear-downloads =
     .label = Svidar la glista da telechargiadas
     .accesskey = D
+downloads-cmd-delete-file =
+    .label = Stizzar
+    .accesskey = S
 
 # This command is shown in the context menu when downloads are blocked.
 downloads-cmd-unblock =
@@ -138,11 +164,18 @@ downloads-open-file =
 ##   $seconds (number) - Amount of seconds left till the file opens.
 ##   $minutes (number) - Amount of minutes till the file opens.
 
-downloading-file-opens-in-hours-and-minutes = Vegn avert en { $hours }h { $minutes }m…
-downloading-file-opens-in-minutes = Vegn avert en { $minutes }m…
-downloading-file-opens-in-minutes-and-seconds = Vegn avert en { $minutes }m { $seconds }s…
-downloading-file-opens-in-seconds = Vegn avert en { $seconds }s…
-downloading-file-opens-in-some-time = Vegn avert uschespert che tut è cumplet…
+downloading-file-opens-in-hours-and-minutes-2 =
+    .value = Vegn avert en { $hours }h { $minutes }m…
+downloading-file-opens-in-minutes-2 =
+    .value = Vegn avert en { $minutes }m…
+downloading-file-opens-in-minutes-and-seconds-2 =
+    .value = Vegn avert en { $minutes }m { $seconds }s…
+downloading-file-opens-in-seconds-2 =
+    .value = Vegn avert en { $seconds }s…
+downloading-file-opens-in-some-time-2 =
+    .value = Vegn avert uschespert che tut è cumplet…
+downloading-file-click-to-open =
+    .value = Vegn avert uschespert che tut è cumplet
 
 ##
 
@@ -168,6 +201,21 @@ downloads-history =
 downloads-details =
     .title = Detagls davart la telechargiada
 
+## Displayed when a site attempts to automatically download many files.
+## Variables:
+##   $num (number) - Number of blocked downloads.
+##   $url (string) - The url of the suspicious site, stripped of http, https and www prefix.
+
+downloads-files-not-downloaded =
+    { $num ->
+        [one] Datoteca betg telechargiada.
+       *[other] { $num } datotecas betg telechargiadas.
+    }
+downloads-blocked-from-url = Bloccà telechargiadas da { $url }.
+downloads-blocked-download-detailed-info = { $url } ha empruvà da telechargiar automaticamain pliras datotecas. La website è eventualmain donnegiada u emprova da memorisar datotecas nungiavischadas sin tes apparat.
+
+##
+
 downloads-clear-downloads-button =
     .label = Svidar la glista da telechargiadas
     .tooltiptext = Stizza tut las telechargiadas cumplettadas, interruttas u sbagliadas da la glista da telechargiadas
@@ -180,3 +228,27 @@ downloads-list-empty =
 # This string is shown when there are no items in the Downloads Panel.
 downloads-panel-empty =
     .value = Naginas telechargiadas per questa sesida.
+
+# This is displayed in an item at the bottom of the Downloads Panel when there
+# are more downloads than can fit in the list in the panel.
+#   $count (number) - number of files being downloaded that are not shown in the
+#                     panel list.
+downloads-more-downloading =
+    { $count ->
+        [one] { $count } telechargiada da datotecas supplementara
+       *[other] { $count } telechargiadas da datotecas supplementaras
+    }
+
+## Download errors
+
+downloads-error-alert-title = Errur cun telechargiar
+# Variables:
+#   $extension (String): the name of the blocking extension.
+downloads-error-blocked-by = Impussibel da memorisar la telechargiada perquai ch'ella vegn bloccada da { $extension }.
+# Used when the name of the blocking extension is unavailable.
+downloads-error-extension = Impussibel da memorisar la telechargiada perquai ch'ella vegn bloccada dad ina extensiun.
+# Line breaks in this message are meaningful, and should be maintained.
+downloads-error-generic =
+    La telechargiada na po betg vegnir memorisada pervi d'ina errur nunenconuschenta.
+    
+    Emprova per plaschair anc ina giada.

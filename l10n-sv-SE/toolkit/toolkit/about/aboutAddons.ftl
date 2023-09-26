@@ -2,19 +2,22 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-addons-window =
-    .title = Tilläggshanterare
-
 addons-page-title = Tilläggshanterare
 
 search-header =
     .placeholder = Sök på addons.mozilla.org
     .searchbuttonlabel = Sök
 
-search-header-shortcut =
-    .key = f
+## Variables
+##   $domain - Domain name where add-ons are available (e.g. addons.mozilla.org)
 
-list-empty-get-extensions-message = Hämta tillägg och teman på <<a data-l10n-name="get-extensions">{ $domain }</a>
+list-empty-get-extensions-message = Hämta tillägg och teman på <a data-l10n-name="get-extensions">{ $domain }</a>
+
+list-empty-get-dictionaries-message = Hämta ordböcker på <a data-l10n-name="get-extensions">{ $domain }</a>
+
+list-empty-get-language-packs-message = Hämta språkpaket på <a data-l10n-name="get-extensions">{ $domain }</a>
+
+##
 
 list-empty-installed =
     .value = Du har inga tillägg av den här typen installerade
@@ -35,18 +38,6 @@ help-button = Support för tillägg
 sidebar-help-button-title =
     .title = Support för tillägg
 
-preferences =
-    { PLATFORM() ->
-        [windows] Inställningar för { -brand-short-name }
-       *[other] Inställningar för { -brand-short-name }
-    }
-sidebar-preferences-button-title =
-    .title =
-        { PLATFORM() ->
-            [windows] Inställningar för { -brand-short-name }
-           *[other] Inställningar för { -brand-short-name }
-        }
-
 addons-settings-button = { -brand-short-name }-inställningar
 sidebar-settings-button-title =
     .title = { -brand-short-name }-inställningar
@@ -57,48 +48,14 @@ show-unsigned-extensions-button =
 show-all-extensions-button =
     .label = Visa alla utökningar
 
-cmd-show-details =
-    .label = Visa mer information
-    .accesskey = V
-
-cmd-find-updates =
-    .label = Sök efter uppdateringar
-    .accesskey = S
-
-cmd-preferences =
-    .label =
-        { PLATFORM() ->
-            [windows] Inställningar
-           *[other] Inställningar
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] n
-           *[other] n
-        }
-
-cmd-enable-theme =
-    .label = Använd tema
-    .accesskey = ä
-
-cmd-disable-theme =
-    .label = Sluta använd tema
-    .accesskey = ä
-
-cmd-install-addon =
-    .label = Installera
-    .accesskey = I
-
-cmd-contribute =
-    .label = Bidra
-    .accesskey = B
-    .tooltiptext = Ge ett bidrag till utvecklingen av detta tillägg
-
 detail-version =
     .label = Version
 
 detail-last-updated =
     .label = Senast uppdaterad
+
+addon-detail-description-expand = Visa mer
+addon-detail-description-collapse = Visa mindre
 
 detail-contributions-description = Skaparen av det här tillägget ber dig om ett litet bidrag för att stödja den fortsatta utvecklingen.
 
@@ -127,7 +84,7 @@ detail-private-browsing-label = Kör i privata fönster
 # Some add-ons may elect to not run in private windows by setting incognito: not_allowed in the manifest.  This
 # cannot be overridden by the user.
 detail-private-disallowed-label = Ej tillåtet i privata fönster
-detail-private-disallowed-description2 = Tillägget körs inte när du surfar privat. <<a data-l10n-name="learn-more">Läs mer</a>
+detail-private-disallowed-description2 = Tillägget körs inte när du surfar privat. <a data-l10n-name="learn-more">Läs mer</a>
 
 # Some special add-ons are privileged, run in private windows automatically, and this permission can't be revoked
 detail-private-required-label = Kräver åtkomst till privata fönster
@@ -142,7 +99,7 @@ detail-private-browsing-off =
     .tooltiptext = Aktivera inte i privat surfning
 
 detail-home =
-    .label = Webbplats
+    .label = Startsida
 
 detail-home-value =
     .value = { detail-home.label }
@@ -225,6 +182,13 @@ addon-category-available-updates-title =
 addon-category-recent-updates = Senaste uppdateringar
 addon-category-recent-updates-title =
     .title = Senaste uppdateringar
+addon-category-sitepermission = Webbplatsbehörigheter
+addon-category-sitepermission-title =
+    .title = Webbplatsbehörigheter
+# String displayed in about:addons in the Site Permissions section
+# Variables:
+#  $host (string) - DNS host name for which the webextension enables permissions
+addon-sitepermission-host = Webbplatsbehörigheter för { $host }
 
 ## These are global warnings
 
@@ -236,6 +200,8 @@ extensions-warning-update-security = Säkerhetskontroll av tilläggsuppdateringa
 extensions-warning-update-security-button = Aktivera
     .title = Aktiverar säkerhetskontroll av tilläggsuppdateringar
 
+extensions-warning-imported-addons = Slutför installationen av tillägg som importerades till { -brand-short-name }.
+extensions-warning-imported-addons-button = Installera tillägg
 
 ## Strings connected to add-on updates
 
@@ -311,6 +277,8 @@ shortcuts-duplicate-warning-message = { $shortcut } används som genväg i mer �
 #   $addon (string) - Name of the add-on
 shortcuts-exists = Används redan av { $addon }
 
+# Variables:
+#   $numberToShow (number) - Number of other elements available to show
 shortcuts-card-expand-button =
     { $numberToShow ->
         [one] Visa { $numberToShow } mer
@@ -356,6 +324,7 @@ install-theme-button = Installera tema
 # the detailed add-on view is opened, from where the add-on can be managed.
 manage-addon-button = Hantera
 find-more-addons = Hitta fler tillägg
+find-more-themes = Hitta fler teman
 
 # This is a label for the button to open the "more options" menu, it is only
 # used for screen readers.
@@ -387,7 +356,7 @@ extension-enabled-heading = Aktiverad
 extension-disabled-heading = Inaktiverad
 
 theme-enabled-heading = Aktiverad
-theme-disabled-heading = Inaktiverad
+theme-disabled-heading2 = Sparade teman
 
 plugin-enabled-heading = Aktiverad
 plugin-disabled-heading = Inaktiverad
@@ -398,7 +367,8 @@ dictionary-disabled-heading = Inaktiverad
 locale-enabled-heading = Aktiverad
 locale-disabled-heading = Inaktiverad
 
-ask-to-activate-button = Fråga om aktivering
+sitepermission-enabled-heading = Aktiverad
+sitepermission-disabled-heading = Inaktiverad
 
 always-activate-button = Aktivera alltid
 never-activate-button = Aktivera aldrig
@@ -406,7 +376,7 @@ never-activate-button = Aktivera aldrig
 addon-detail-author-label = Utvecklare
 addon-detail-version-label = Version
 addon-detail-last-updated-label = Senast uppdaterad
-addon-detail-homepage-label = Hemsida
+addon-detail-homepage-label = Startsida
 addon-detail-rating-label = Betyg
 
 # Message for add-ons with a staged pending update.
@@ -447,6 +417,11 @@ addon-detail-updates-radio-off = Av
 addon-detail-update-check-label = Sök efter uppdateringar
 install-update-button = Uppdatera
 
+# aria-label associated to the updates row to help screen readers to announce the group
+# of input controls being entered.
+addon-detail-group-label-updates =
+    .aria-label = { addon-detail-updates-label }
+
 # This is the tooltip text for the private browsing badge in about:addons. The
 # badge is the private browsing icon included next to the extension's name.
 addon-badge-private-browsing-allowed2 =
@@ -456,13 +431,31 @@ addon-detail-private-browsing-help = När det är tillåtet kommer tillägget at
 addon-detail-private-browsing-allow = Tillåt
 addon-detail-private-browsing-disallow = Tillåt inte
 
+# aria-label associated to the private browsing row to help screen readers to announce the group
+# of input controls being entered.
+addon-detail-group-label-private-browsing =
+    .aria-label = { detail-private-browsing-label }
+
+## "sites with restrictions" (internally called "quarantined") are special domains
+## where add-ons are normally blocked for security reasons.
+
+# Used as a description for the option to allow or block an add-on on quarantined domains.
+addon-detail-quarantined-domains-label = Kör på webbplatser med begränsningar
+# Used as help text part of the quarantined domains UI controls row.
+addon-detail-quarantined-domains-help = När det är tillåtet kommer tillägget att ha åtkomst till webbplatser som begränsas av { -vendor-short-name }. Tillåt endast om du litar på det här tillägget.
+# Used as label and tooltip text on the radio inputs associated to the quarantined domains UI controls.
+addon-detail-quarantined-domains-allow = Tillåt
+addon-detail-quarantined-domains-disallow = Tillåt inte
+# aria-label associated to the quarantined domains exempt row to help screen readers to announce the group.
+addon-detail-group-label-quarantined-domains =
+    .aria-label = { addon-detail-quarantined-domains-label }
+
 ## This is the tooltip text for the recommended badges for an extension in about:addons. The
 ## badge is a small icon displayed next to an extension when it is recommended on AMO.
 
 addon-badge-recommended2 =
     .title = { -brand-product-name } rekommenderar endast tillägg som uppfyller våra standarder för säkerhet och prestanda
     .aria-label = { addon-badge-recommended2.title }
-
 # We hard code "Mozilla" in the string below because the extensions are built
 # by Mozilla and we don't want forks to display "by Fork".
 addon-badge-line3 =
@@ -481,13 +474,16 @@ release-notes-loading = Laddar…
 release-notes-error = Tyvärr, men det gick inte att läsa in versionsfakta.
 
 addon-permissions-empty = Detta tillägg kräver inga behörigheter
-
 addon-permissions-required = Nödvändiga behörigheter för kärnfunktionalitet:
 addon-permissions-optional = Valfria behörigheter för extra funktionalitet:
 addon-permissions-learnmore = Läs mer om behörigheter
 
 recommended-extensions-heading = Rekommenderade tillägg
 recommended-themes-heading = Rekommenderade teman
+
+# Variables:
+#   $hostname (string) - Host where the permissions are granted
+addon-sitepermissions-required = Ger följande funktioner till <span data-l10n-name="hostname">{ $hostname }</span>:
 
 # A recommendation for the Firefox Color theme shown at the bottom of the theme
 # list view. The "Firefox Color" name itself should not be translated.
@@ -501,6 +497,7 @@ plugin-heading = Hantera dina insticksmoduler
 dictionary-heading = Hantera dina ordlistor
 locale-heading = Hantera dina språk
 updates-heading = Hantera dina uppdateringar
+sitepermission-heading = Hantera dina webbplatsbehörigheter
 discover-heading = Anpassa { -brand-short-name }
 shortcuts-heading = Hantera genvägar för tillägg
 
@@ -510,3 +507,31 @@ addons-heading-search-input =
 
 addon-page-options-button =
     .title = Verktyg för alla tillägg
+
+## Detail notifications
+## Variables:
+##   $name (String): name of the add-on.
+
+
+## Detail notifications
+## Variables:
+##   $name (string) - Name of the add-on.
+
+# Variables:
+#   $version (string) - Application version.
+details-notification-incompatible = { $name } är inkompatibelt med { -brand-short-name } { $version }.
+details-notification-incompatible-link = Mer information
+
+details-notification-unsigned-and-disabled = { $name } kunde inte verifieras för användning i { -brand-short-name } och har inaktiverats.
+details-notification-unsigned-and-disabled-link = Mer information
+
+details-notification-unsigned = { $name } kunde inte verifieras för användning i { -brand-short-name }. Fortsätt med försiktighet.
+details-notification-unsigned-link = Mer information
+
+details-notification-blocked = { $name } har inaktiverats av säkerhets- eller stabilitetsskäl.
+details-notification-blocked-link = Mer information
+
+details-notification-softblocked = { $name } har kända säkerhets- eller stabilitetsproblem.
+details-notification-softblocked-link = Mer information
+
+details-notification-gmp-pending = { $name } kommer att installeras inom kort.

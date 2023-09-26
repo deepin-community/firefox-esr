@@ -2,13 +2,12 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-screenshots-context-menu = Acquisisci schermata
-
-screenshots-my-shots-button = Le mie immagini
-
 screenshot-toolbarbutton =
   .label = Acquisisci schermata
   .tooltiptext = Acquisisci schermata
+
+screenshot-shortcut =
+  .key = S
 
 screenshots-instructions = Trascina o fai clic su una pagina per selezionare un’area della pagina. Premi ESC per annullare.
 screenshots-cancel-button = Annulla
@@ -18,6 +17,14 @@ screenshots-download-button = Scarica
 screenshots-download-button-tooltip = Scarica screenshot
 screenshots-copy-button = Copia
 screenshots-copy-button-tooltip = Copia lo screenshot negli appunti
+screenshots-download-button-title =
+  .title = Scarica screenshot
+screenshots-copy-button-title =
+  .title = Copia lo screenshot negli appunti
+screenshots-cancel-button-title =
+  .title = Annulla
+screenshots-retry-button-title =
+  .title = Riprova cattura
 
 screenshots-meta-key =
     { PLATFORM() ->
@@ -41,8 +48,6 @@ screenshots-login-error-details = Non è stato possibile salvare l’immagine in
 screenshots-unshootable-page-error-title = Non è possibile acquisire una schermata di questa pagina.
 screenshots-unshootable-page-error-details = Non è possibile acquisire una schermata in quanto non si tratta di una normale pagina web.
 
-screenshots-self-screenshot-error-title = Non è possibile acquisire una schermata di una pagina di { -screenshots-brand-name }
-
 screenshots-empty-selection-error-title = L’area selezionata è troppo piccola
 
 screenshots-private-window-error-title = { -screenshots-brand-name } è disattivato in navigazione anonima.
@@ -50,3 +55,6 @@ screenshots-private-window-error-details = Ci dispiace per l’inconveniente. St
 
 screenshots-generic-error-title = Wow! { -screenshots-brand-name } è andato in tilt
 screenshots-generic-error-details = Non sappiamo che cosa sia successo. Riprova, magari con una pagina diversa.
+
+screenshots-too-large-error-title = Lo screenshot è stato ritagliato in quanto troppo grande
+screenshots-too-large-error-details = Selezionare un’area inferiore a 32.700 pixel nel lato più lungo, o con una superficie complessiva inferiore a 124.900.000 pixel.

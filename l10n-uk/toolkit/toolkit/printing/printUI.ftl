@@ -15,7 +15,10 @@ printui-sheets-count =
        *[many] { $sheetCount } аркушів паперу
     }
 
-printui-page-range-all = Всі
+printui-page-range-all = Усі
+printui-page-range-current = Поточний
+printui-page-range-odd = Непарні
+printui-page-range-even = Парні
 printui-page-range-custom = Вибірково
 printui-page-range-label = Сторінки
 printui-page-range-picker =
@@ -58,8 +61,6 @@ printui-two-sided-printing-short-edge = Перевернути на коротк
 printui-options = Параметри
 printui-headers-footers-checkbox = Друкувати колонтитули
 printui-backgrounds-checkbox = Друкувати тло
-
-printui-selection-checkbox = Друкувати тільки вибране
 
 ## The "Format" section, select a version of the website to print. Radio
 ## options to select between the original page, selected text only, or a version

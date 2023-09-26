@@ -2,13 +2,13 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-addons-window =
-    .title = UMphathi wezongezelelo
-
 addons-page-title = UMphathi wezongezelelo
 
-search-header-shortcut =
-    .key = f
+## Variables
+##   $domain - Domain name where add-ons are available (e.g. addons.mozilla.org)
+
+##
+
 
 list-empty-installed =
     .value = Akunazo izongezelelo zolu didi ezifakelweyo
@@ -30,43 +30,6 @@ show-unsigned-extensions-button =
 
 show-all-extensions-button =
     .label = Bonisa zonke izandiso
-
-cmd-show-details =
-    .label = Bonisa inkcazelo engaphezulu
-    .accesskey = B
-
-cmd-find-updates =
-    .label = Fumana iZihlaziyi
-    .accesskey = F
-
-cmd-preferences =
-    .label =
-        { PLATFORM() ->
-            [windows] Ekunokukhethwa kuko
-           *[other] Izikhethwa
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] E
-           *[other] I
-        }
-
-cmd-enable-theme =
-    .label = Umxholo wokuguga
-    .accesskey = w
-
-cmd-disable-theme =
-    .label = Nqumamisa umxholo wokuguga
-    .accesskey = w
-
-cmd-install-addon =
-    .label = Fakela
-    .accesskey = F
-
-cmd-contribute =
-    .label = Yenza igalelo
-    .accesskey = Y
-    .tooltiptext = Yenza igalelo kuphuhliso lwesi songezelelo
 
 detail-version =
     .label = Uguqulelo
@@ -178,7 +141,6 @@ extensions-warning-update-security = Uhlaziyo lwesongezelelo sokukhangela ukhuse
 extensions-warning-update-security-button = Vumela
     .title = Vumela uhlaziyo lwesongezelelo sokukhangela ukhuseleko
 
-
 ## Strings connected to add-on updates
 
 addon-updates-check-for-updates = Khangela iZihlaziyi
@@ -231,8 +193,12 @@ addon-open-about-debugging = Khuphaibhagi Kwizongezelelo
 ## Pending uninstall message bar
 
 
+## "sites with restrictions" (internally called "quarantined") are special domains
+## where add-ons are normally blocked for security reasons.
+
 ## This is the tooltip text for the recommended badges for an extension in about:addons. The
 ## badge is a small icon displayed next to an extension when it is recommended on AMO.
+
 
 ##
 
@@ -240,3 +206,29 @@ addon-open-about-debugging = Khuphaibhagi Kwizongezelelo
 
 addon-page-options-button =
     .title = Izixhobo zazo zonke izongezelelo
+
+## Detail notifications
+## Variables:
+##   $name (String): name of the add-on.
+
+## Detail notifications
+## Variables:
+##   $name (string) - Name of the add-on.
+
+# Variables:
+#   $version (String): application version.
+details-notification-incompatible = I-{ $name } ihambelana kunye ne-{ -brand-short-name } ne-{ $version }.
+
+details-notification-unsigned-and-disabled = { $name } ayinakuqinisekiswa ukusetyenziselwa kwi-{ -brand-short-name } yaye yenziwe ayasebenza.
+details-notification-unsigned-and-disabled-link = Inkcazelo Engakumbi
+
+details-notification-unsigned = { $name } ayinakuqinisekiswa ukusetyenziselwa kwi-{ -brand-short-name }. Qhubeka ngesilumkiso.
+details-notification-unsigned-link = Inkcazelo Engakumbi
+
+details-notification-blocked = I-{ $name } iqhwalelisiwe ngesizathu sokhuseleko nozinzo.
+details-notification-blocked-link = Ulwazi Olungaphaya Kolunikiweyo
+
+details-notification-softblocked = I-{ $name } yaziwa ngokubangela ingxaki yokhuseleko neyozinzo.
+details-notification-softblocked-link = Ulwazi Olungaphaya Kolunikiweyo
+
+details-notification-gmp-pending = { $name } iza kufakelwa kwangoku.

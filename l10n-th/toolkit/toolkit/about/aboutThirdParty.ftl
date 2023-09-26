@@ -10,9 +10,6 @@ third-party-intro =
     โมดูลใด ๆ ที่ไม่ได้ลงลายเซ็นโดย Microsoft หรือ
     { -vendor-short-name } ถือเป็นโมดูลของบุคคลที่สาม
 
-third-party-header-module-list = รายการโมดูล
-third-party-header-loading-events = กำลังโหลดกิจกรรม
-
 third-party-message-empty = ไม่พบโมดูลของบุคคลที่สาม
 third-party-message-no-duration = ไม่ได้บันทึก
 
@@ -35,21 +32,47 @@ third-party-tag-shellex = ส่วนขยายของ Shell
     .title = โมดูลชนิดนี้จะถูกโหลดเมื่อคุณเปิดกล่องโต้ตอบไฟล์ของระบบ
 third-party-tag-background = เบื้องหลัง
     .title = โมดูลนี้ไม่ปิดกั้นแอปพลิเคชันเพราะถูกโหลดในเบื้องหลัง
-third-party-unsigned-icon =
+third-party-icon-unsigned =
     .title = โมดูลนี้ไม่มีการลงลายเซ็น
-third-party-warning-icon =
-    .title = { -brand-short-name } ขัดข้องในรหัสจากโมดูลนี้
+    .alt = โมดูลนี้ไม่มีการลงลายเซ็น
+third-party-icon-warning =
+    .title = { -brand-short-name } ขัดข้องในโค้ดจากโมดูลนี้
+    .alt = { -brand-short-name } ขัดข้องในโค้ดจากโมดูลนี้
 
 third-party-status-loaded = โหลดแล้ว
 third-party-status-blocked = ถูกปิดกั้น
 third-party-status-redirected = ถูกเปลี่ยนเส้นทาง
 
 third-party-button-copy-to-clipboard = คัดลอกข้อมูลดิบไปยังคลิปบอร์ด
+third-party-loading-data =
+    .alt = กำลังโหลดข้อมูลระบบ…
+    .title = กำลังโหลดข้อมูลระบบ…
 third-party-button-reload = โหลดใหม่ด้วยข้อมูลระบบ
     .title = โหลดใหม่ด้วยข้อมูลระบบ
 third-party-button-open =
     .title = เปิดตำแหน่งที่ตั้งไฟล์…
+third-party-button-to-block =
+    .title = ปิดกั้นโมดูลนี้
+    .aria-label = ปิดกั้นโมดูลนี้
+third-party-button-to-unblock =
+    .title = ขณะนี้ถูกปิดกั้นอยู่ คลิกเพื่อเลิกปิดกั้น
+    .aria-label = ขณะนี้ถูกปิดกั้นอยู่ คลิกเพื่อเลิกปิดกั้น
+third-party-button-to-unblock-disabled =
+    .title =
+        ขณะนี้ถูกทำเครื่องหมายว่าปิดกั้นอยู่ แม้ว่ารายการปิดกั้นจะถูกปิดใช้งานในการเรียกใช้
+        { -brand-short-name } ครั้งนี้ก็ตาม คลิกเพื่อเลิกปิดกั้น
+    .aria-label =
+        ขณะนี้ถูกทำเครื่องหมายว่าปิดกั้นอยู่ แม้ว่ารายการปิดกั้นจะถูกปิดใช้งานในการเรียกใช้
+        { -brand-short-name } ครั้งนี้ก็ตาม คลิกเพื่อเลิกปิดกั้น
 third-party-button-expand =
     .title = แสดงข้อมูลโดยละเอียด
 third-party-button-collapse =
     .title = ยุบข้อมูลโดยละเอียด
+third-party-blocking-requires-restart = หากต้องการบล็อกโมดูลของบุคคลที่สาม { -brand-short-name } ต้องเริ่มการทำงานใหม่
+third-party-should-restart-title = เริ่มการทำงาน { -brand-short-name } ใหม่
+third-party-restart-now = เริ่มการทำงานใหม่ตอนนี้
+third-party-restart-later = เริ่มการทำงานใหม่ภายหลัง
+
+third-party-blocked-by-builtin =
+    .title = ถูกปิดกั้นโดย { -brand-short-name }
+    .alt = ถูกปิดกั้นโดย { -brand-short-name }

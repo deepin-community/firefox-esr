@@ -2,12 +2,12 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-connection-window =
+connection-window2 =
     .title = הגדרות חיבור
     .style =
         { PLATFORM() ->
-            [macos] width: 44em
-           *[other] width: 49em
+            [macos] min-width: 44em
+           *[other] min-width: 49em
         }
 
 connection-close-key =
@@ -35,10 +35,6 @@ connection-proxy-http = שרת מתווך HTTP‏
     .accesskey = H
 connection-proxy-http-port = שער
     .accesskey = ש
-connection-proxy-http-sharing =
-    .label = שימוש בשרת מתווך זה גם עבור FTP ו־HTTPS
-    .accesskey = ש
-
 connection-proxy-https-sharing =
     .label = שימוש בשרת מתווך זה גם עבור HTTPS
     .accesskey = ש
@@ -47,11 +43,6 @@ connection-proxy-https = שרת מתווך HTTPS
     .accesskey = S
 connection-proxy-ssl-port = שער
     .accesskey = ע
-
-connection-proxy-ftp = שרת מתווך FTP
-    .accesskey = F
-connection-proxy-ftp-port = שער
-    .accesskey = ר
 
 connection-proxy-socks = שרת מארח SOCKS
     .accesskey = C
@@ -69,9 +60,6 @@ connection-proxy-noproxy = אין צורך בשרת מתווך עבור
 
 connection-proxy-noproxy-desc = דוגמה: mozilla.org.,‏ net.nz, 192.168.1.0/24
 
-# Do not translate localhost, 127.0.0.1 and ::1.
-connection-proxy-noproxy-localhost-desc = חיבורים אל localhost,‏ 127.0.0.1 ואל ‎::1 לעולם לא יועברו דרך מתווך.
-
 # Do not translate "localhost", "127.0.0.1/8" and "::1". (You can translate "and".)
 connection-proxy-noproxy-localhost-desc-2 = חיבורים אל localhost,‏ 127.0.0.1/8 ואל ‎::1 לעולם לא יועברו דרך מתווך.
 
@@ -88,16 +76,14 @@ connection-proxy-autologin =
     .accesskey = ס
     .tooltip = אפשרות זו מבצעת הזדהות שקטה מול שרתים מתווכים כאשר נשמרו פרטי ההתחברות עבורם. בקשת ההזדהות תופיע אם האימות נכשל.
 
+connection-proxy-autologin-checkbox =
+    .label = לא לבקש ססמת הזדהות אם נשמרה הססמה
+    .accesskey = ס
+    .tooltiptext = אפשרות זו מבצעת הזדהות שקטה מול שרתים מתווכים כאשר נשמרו פרטי ההתחברות עבורם. בקשת ההזדהות תופיע אם האימות נכשל.
+
 connection-proxy-socks-remote-dns =
     .label = שימוש ב־DNS דרך מתווך בעת שימוש ב־SOCKS v5
     .accesskey = מ
-
-connection-dns-over-https =
-    .label = הפעלת DNS על גבי HTTPS
-    .accesskey = פ
-
-connection-dns-over-https-url-resolver = שימוש בספק
-    .accesskey = ש
 
 # Variables:
 #   $name (String) - Display name or URL for the DNS over HTTPS provider

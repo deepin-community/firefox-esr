@@ -2,9 +2,9 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-clear-site-data-window =
+clear-site-data-window2 =
     .title = Dicht Data
-    .style = width: 35em
+    .style = min-width: 35em
 
 clear-site-data-description = Dichtin aw cookies and site data stored by { -brand-short-name } micht sign ye oot o wabsites and remuive affline wab content. Dichtin cache data willnae affect yer logins.
 
@@ -50,14 +50,6 @@ clear-site-data-cache-empty =
     .accesskey = W
 
 clear-site-data-cache-info = Will need wabsites tae load images and data aince mair
-
-clear-site-data-cancel =
-    .label = Stap
-    .accesskey = S
-
-clear-site-data-clear =
-    .label = Dicht
-    .accesskey = D
 
 clear-site-data-dialog =
     .buttonlabelaccept = Dicht

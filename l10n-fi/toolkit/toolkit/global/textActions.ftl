@@ -34,6 +34,10 @@ text-action-paste =
     .label = Liitä
     .accesskey = i
 
+text-action-paste-no-formatting =
+    .label = Liitä ilman muotoilua
+    .accesskey = i
+
 text-action-paste-shortcut =
     .key = V
 
@@ -50,3 +54,26 @@ text-action-select-all-shortcut =
 
 text-action-spell-no-suggestions =
     .label = Ei oikeinkirjoituksen ehdotuksia
+
+text-action-spell-add-to-dictionary =
+    .label = Lisää sanastoon
+    .accesskey = L
+
+text-action-spell-undo-add-to-dictionary =
+    .label = Kumoa sanastoon lisääminen
+    .accesskey = K
+
+text-action-spell-check-toggle =
+    .label = Oikolue
+    .accesskey = O
+
+text-action-spell-add-dictionaries =
+    .label = Lisää sanastoja…
+    .accesskey = ä
+
+text-action-spell-dictionaries =
+    .label = Kielet
+    .accesskey = K
+
+text-action-search-text-box-clear =
+    .title = Tyhjennä

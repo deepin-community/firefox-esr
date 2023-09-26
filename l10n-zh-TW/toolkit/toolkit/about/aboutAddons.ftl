@@ -2,19 +2,22 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-addons-window =
-    .title = 附加元件管理員
-
 addons-page-title = 附加元件管理員
 
 search-header =
     .placeholder = 在 addons.mozilla.org 搜尋
     .searchbuttonlabel = 搜尋
 
-search-header-shortcut =
-    .key = f
+## Variables
+##   $domain - Domain name where add-ons are available (e.g. addons.mozilla.org)
 
 list-empty-get-extensions-message = 到 <a data-l10n-name="get-extensions">{ $domain }</a> 安裝擴充套件與佈景主題
+
+list-empty-get-dictionaries-message = 到 <a data-l10n-name="get-extensions">{ $domain }</a> 安裝字典
+
+list-empty-get-language-packs-message = 到 <a data-l10n-name="get-extensions">{ $domain }</a> 安裝語言套件
+
+##
 
 list-empty-installed =
     .value = 您並未安裝任何此類型的附加元件
@@ -35,18 +38,6 @@ help-button = 附加元件支援
 sidebar-help-button-title =
     .title = 附加元件支援
 
-preferences =
-    { PLATFORM() ->
-        [windows] { -brand-short-name } 選項
-       *[other] { -brand-short-name } 偏好設定
-    }
-sidebar-preferences-button-title =
-    .title =
-        { PLATFORM() ->
-            [windows] { -brand-short-name } 選項
-           *[other] { -brand-short-name } 偏好設定
-        }
-
 addons-settings-button = { -brand-short-name } 選項
 sidebar-settings-button-title =
     .title = { -brand-short-name } 選項
@@ -57,48 +48,14 @@ show-unsigned-extensions-button =
 show-all-extensions-button =
     .label = 顯示所有擴充套件
 
-cmd-show-details =
-    .label = 顯示更多資訊
-    .accesskey = S
-
-cmd-find-updates =
-    .label = 尋找更新
-    .accesskey = F
-
-cmd-preferences =
-    .label =
-        { PLATFORM() ->
-            [windows] 選項
-           *[other] 偏好設定
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] O
-           *[other] P
-        }
-
-cmd-enable-theme =
-    .label = 套用佈景主題
-    .accesskey = W
-
-cmd-disable-theme =
-    .label = 停用佈景主題
-    .accesskey = W
-
-cmd-install-addon =
-    .label = 安裝
-    .accesskey = I
-
-cmd-contribute =
-    .label = 贊助
-    .accesskey = C
-    .tooltiptext = 贊助這個元件的開發
-
 detail-version =
     .label = 版本
 
 detail-last-updated =
     .label = 最近更新時間
+
+addon-detail-description-expand = 顯示更多
+addon-detail-description-collapse = 顯示較少
 
 detail-contributions-description = 這個元件的開發者希望您透過小小的捐獻協助其後續開發。
 
@@ -225,6 +182,13 @@ addon-category-available-updates-title =
 addon-category-recent-updates = 最近的更新
 addon-category-recent-updates-title =
     .title = 最近的更新
+addon-category-sitepermission = 網站權限
+addon-category-sitepermission-title =
+    .title = 網站權限
+# String displayed in about:addons in the Site Permissions section
+# Variables:
+#  $host (string) - DNS host name for which the webextension enables permissions
+addon-sitepermission-host = { $host } 的網站權限
 
 ## These are global warnings
 
@@ -236,6 +200,8 @@ extensions-warning-update-security = 已停止檢查附加元件安全性，更�
 extensions-warning-update-security-button = 開啟
     .title = 開啟附加元件更新安全性檢查
 
+extensions-warning-imported-addons = 請完成已匯入 { -brand-short-name } 的擴充套件的安裝步驟。
+extensions-warning-imported-addons-button = 安裝擴充套件
 
 ## Strings connected to add-on updates
 
@@ -311,6 +277,8 @@ shortcuts-duplicate-warning-message = 有超過一種情況使用 { $shortcut } 
 #   $addon (string) - Name of the add-on
 shortcuts-exists = 已由 { $addon } 使用
 
+# Variables:
+#   $numberToShow (number) - Number of other elements available to show
 shortcuts-card-expand-button =
     { $numberToShow ->
        *[other] 顯示另外 { $numberToShow } 個
@@ -347,6 +315,7 @@ install-theme-button = 安裝佈景主題
 # the detailed add-on view is opened, from where the add-on can be managed.
 manage-addon-button = 管理
 find-more-addons = 看更多附加元件！
+find-more-themes = 尋找更多佈景主題
 
 # This is a label for the button to open the "more options" menu, it is only
 # used for screen readers.
@@ -378,7 +347,7 @@ extension-enabled-heading = 啟用
 extension-disabled-heading = 停用
 
 theme-enabled-heading = 啟用
-theme-disabled-heading = 停用
+theme-disabled-heading2 = 儲存的佈景主題
 
 plugin-enabled-heading = 啟用
 plugin-disabled-heading = 停用
@@ -389,7 +358,8 @@ dictionary-disabled-heading = 停用
 locale-enabled-heading = 啟用
 locale-disabled-heading = 停用
 
-ask-to-activate-button = 啟用時詢問
+sitepermission-enabled-heading = 啟用
+sitepermission-disabled-heading = 停用
 
 always-activate-button = 總是啟用
 never-activate-button = 永不啟用
@@ -437,6 +407,11 @@ addon-detail-updates-radio-off = 關閉
 addon-detail-update-check-label = 檢查更新
 install-update-button = 更新
 
+# aria-label associated to the updates row to help screen readers to announce the group
+# of input controls being entered.
+addon-detail-group-label-updates =
+    .aria-label = { addon-detail-updates-label }
+
 # This is the tooltip text for the private browsing badge in about:addons. The
 # badge is the private browsing icon included next to the extension's name.
 addon-badge-private-browsing-allowed2 =
@@ -446,13 +421,31 @@ addon-detail-private-browsing-help = 允許後，您在隱私瀏覽模式上網�
 addon-detail-private-browsing-allow = 允許
 addon-detail-private-browsing-disallow = 不允許
 
+# aria-label associated to the private browsing row to help screen readers to announce the group
+# of input controls being entered.
+addon-detail-group-label-private-browsing =
+    .aria-label = { detail-private-browsing-label }
+
+## "sites with restrictions" (internally called "quarantined") are special domains
+## where add-ons are normally blocked for security reasons.
+
+# Used as a description for the option to allow or block an add-on on quarantined domains.
+addon-detail-quarantined-domains-label = 可於受限網站運作
+# Used as help text part of the quarantined domains UI controls row.
+addon-detail-quarantined-domains-help = 允許後，擴充套件將能夠存取受 { -vendor-short-name } 限制的網站。請只有在信任此擴充套件時岑允許。
+# Used as label and tooltip text on the radio inputs associated to the quarantined domains UI controls.
+addon-detail-quarantined-domains-allow = 允許
+addon-detail-quarantined-domains-disallow = 不允許
+# aria-label associated to the quarantined domains exempt row to help screen readers to announce the group.
+addon-detail-group-label-quarantined-domains =
+    .aria-label = { addon-detail-quarantined-domains-label }
+
 ## This is the tooltip text for the recommended badges for an extension in about:addons. The
 ## badge is a small icon displayed next to an extension when it is recommended on AMO.
 
 addon-badge-recommended2 =
     .title = { -brand-product-name } 僅推薦符合我們的安全性與效能標準的擴充套件
     .aria-label = { addon-badge-recommended2.title }
-
 # We hard code "Mozilla" in the string below because the extensions are built
 # by Mozilla and we don't want forks to display "by Fork".
 addon-badge-line3 =
@@ -471,13 +464,16 @@ release-notes-loading = 載入中…
 release-notes-error = 抱歉，載入發行公告時發生錯誤。
 
 addon-permissions-empty = 此擴充套件並未要求任何權限
-
 addon-permissions-required = 核心功能需要下列權限:
 addon-permissions-optional = 選用功能需要下列權限:
 addon-permissions-learnmore = 了解權限的更多資訊
 
 recommended-extensions-heading = 推薦的擴充套件
 recommended-themes-heading = 推薦的佈景主題
+
+# Variables:
+#   $hostname (string) - Host where the permissions are granted
+addon-sitepermissions-required = 讓 <span data-l10n-name="hostname">{ $hostname }</span> 有下列權限:
 
 # A recommendation for the Firefox Color theme shown at the bottom of the theme
 # list view. The "Firefox Color" name itself should not be translated.
@@ -491,6 +487,7 @@ plugin-heading = 管理您的外掛程式
 dictionary-heading = 管理您的字典
 locale-heading = 管理您的語言套件
 updates-heading = 管理您的更新
+sitepermission-heading = 管理網站權限
 discover-heading = 個人化您的 { -brand-short-name }
 shortcuts-heading = 管理擴充套件快速鍵
 
@@ -500,3 +497,31 @@ addons-heading-search-input =
 
 addon-page-options-button =
     .title = 所有附加元件的工具
+
+## Detail notifications
+## Variables:
+##   $name (String): name of the add-on.
+
+
+## Detail notifications
+## Variables:
+##   $name (string) - Name of the add-on.
+
+# Variables:
+#   $version (string) - Application version.
+details-notification-incompatible = { $name } 與 { -brand-short-name } { $version } 不相容。
+details-notification-incompatible-link = 更多資訊
+
+details-notification-unsigned-and-disabled = 無法驗證 { $name } 於 { -brand-short-name } 使用，已被停用。
+details-notification-unsigned-and-disabled-link = 更多資訊
+
+details-notification-unsigned = 無法驗證 { $name } 於 { -brand-short-name } 使用，若要使用請小心。
+details-notification-unsigned-link = 更多資訊
+
+details-notification-blocked = 因為安全性或穩定性因素，{ $name } 已被停用。
+details-notification-blocked-link = 更多資訊
+
+details-notification-softblocked = 已知 { $name } 會造成安全性或穩定性問題。
+details-notification-softblocked-link = 更多資訊
+
+details-notification-gmp-pending = 即將安裝 { $name }。

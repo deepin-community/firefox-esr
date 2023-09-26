@@ -5,9 +5,9 @@
 
 ## Strings used for device manager
 
-devmgr =
+devmgr-window =
     .title = Менеджер пристроїв
-    .style = width: 67em; height: 32em;
+    .style = min-width: 67em; min-height: 32em;
 
 devmgr-devlist =
     .label = Модулі і пристрої захисту
@@ -115,8 +115,6 @@ devinfo-label =
 
 devinfo-serialnum =
     .label = Серійний номер
-
-fips-nonempty-password-required = Для роботи в режимі відповідності FIPS потрібно вказати головний пароль для кожного пристрою захисту. Вкажіть ці паролі до перемикання в цей режим.
 
 fips-nonempty-primary-password-required = Для роботи в режимі відповідності FIPS потрібно вказати головний пароль для кожного пристрою захисту. Вкажіть ці паролі до перемикання в цей режим.
 unable-to-toggle-fips = Неможливо змінити режим FIPS для пристрою захисту. Рекомендується вийти і перезапустити програму.

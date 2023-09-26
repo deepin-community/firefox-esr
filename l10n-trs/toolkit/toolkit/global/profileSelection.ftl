@@ -23,6 +23,8 @@ profile-selection-delete-button =
     .label = Nadure' perfil…
     .accesskey = D
 
+profile-selection-conflict-message = A'ngô ñadu'ua { -brand-product-name } nadunâ sa hua riña perfîl. Dunayi'ì nakà { -brand-short-name } hiàj nïn' gàchin nadunat doj sa huaa.
+
 ## Messages used in the profile manager
 
 profile-manager-description = { -brand-short-name } nachra sà’ nuguan’ huā rayi’î nej sa nagi’iát, sa nihià’ ruhuât, nī a’ngô nej sa nadunât riña perfil nikājt.

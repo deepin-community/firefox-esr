@@ -6,9 +6,6 @@ password-quality-meter = Merilnik kakovosti gesla
 
 ## Change Password dialog
 
-change-password-window =
-    .title = Spreminjanje glavnega gesla
-
 change-device-password-window =
     .title = Spremeni geslo
 
@@ -18,12 +15,6 @@ change-password-token = Varnostna naprava: { $tokenName }
 change-password-old = Trenutno geslo:
 change-password-new = Novo geslo:
 change-password-reenter = Novo geslo (ponovno):
-
-## Reset Password dialog
-
-reset-password-window =
-    .title = Ponastavitev glavnega gesla
-    .style = width: 40em
 
 pippki-failed-pw-change = Gesla ni bilo mogoče spremeniti.
 pippki-incorrect-pw = Vneseno geslo je napačno. Poskusite znova.
@@ -37,13 +28,11 @@ pippki-pw-change2empty-in-fips-mode = Trenutno ste v načinu FIPS. FIPS zahteva 
 
 ## Reset Primary Password dialog
 
-reset-primary-password-window =
+reset-primary-password-window2 =
     .title = Ponastavi glavno geslo
-    .style = width: 40em
+    .style = min-width: 40em
 reset-password-button-label =
     .label = Ponastavi
-reset-password-text = Če ponastavite glavno geslo, bodo vsi vaši osebni podatki pozabljeni (shranjena spletna in e-poštna gesla, podatki o obrazcih, osebna digitalna potrdila in zasebni ključi). Ste prepričani, da želite ponastaviti svoje glavno geslo?
-
 reset-primary-password-text = Če ponastavite glavno geslo, bodo vsi vaši osebni podatki pozabljeni (shranjena spletna in e-poštna gesla, osebna digitalna potrdila in zasebni ključi). Ste prepričani, da želite ponastaviti svoje glavno geslo?
 
 pippki-reset-password-confirmation-title = Ponastavi glavno geslo
@@ -51,9 +40,9 @@ pippki-reset-password-confirmation-message = Vaše glavno geslo je bilo ponastav
 
 ## Downloading cert dialog
 
-download-cert-window =
+download-cert-window2 =
     .title = Prenašanje digitalnega potrdila
-    .style = width: 46em
+    .style = min-width: 46em
 download-cert-message = Ali zaupate novemu overitelju?
 download-cert-trust-ssl =
     .label = Overitelju zaupaj identifikacijo spletnih strani.
@@ -85,7 +74,5 @@ set-password-reminder = Pomembno: Če pozabite geslo varnostne kopije digitalneg
 
 ## Protected Auth dialog
 
-protected-auth-window =
-    .title = Prijava v zaščiteno figuro
-protected-auth-msg = Prosim, prijavite se v figuro. Metoda overovitve je odvisna od vrste vaše figure.
-protected-auth-token = Figura:
+## Protected authentication alert
+

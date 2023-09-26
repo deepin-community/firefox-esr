@@ -2,17 +2,6 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-bookmark-overlay-name =
-    .value = 名稱:
-    .accesskey = N
-
-bookmark-overlay-location =
-    .value = 網址:
-    .accesskey = L
-
-bookmark-overlay-folder =
-    .value = 資料夾:
-
 bookmark-overlay-name-2 =
     .value = 名稱
     .accesskey = N
@@ -35,13 +24,15 @@ bookmark-overlay-folders-expander =
     .tooltiptextdown = { bookmark-overlay-folders-expander.tooltiptext }
     .tooltiptextup = 隱藏
 
+bookmark-overlay-folders-expander2 =
+    .tooltiptext = 顯示所有書籤資料夾
+
+bookmark-overlay-folders-expander-hide =
+    .tooltiptext = 隱藏
+
 bookmark-overlay-new-folder-button =
     .label = 新增資料夾
     .accesskey = o
-
-bookmark-overlay-tags =
-    .value = 標籤:
-    .accesskey = T
 
 bookmark-overlay-tags-2 =
     .value = 標籤
@@ -55,9 +46,11 @@ bookmark-overlay-tags-expander =
     .tooltiptextdown = { bookmark-overlay-tags-expander.tooltiptext }
     .tooltiptextup = 隱藏
 
-bookmark-overlay-keyword =
-    .value = 關鍵字:
-    .accesskey = K
+bookmark-overlay-tags-expander2 =
+    .tooltiptext = 顯示所有標籤
+
+bookmark-overlay-tags-expander-hide =
+    .tooltiptext = 隱藏
 
 bookmark-overlay-keyword-2 =
     .value = 關鍵字

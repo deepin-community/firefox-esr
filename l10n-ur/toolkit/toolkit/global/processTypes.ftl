@@ -9,8 +9,6 @@
 
 process-type-web = ویب مواد
 
-process-type-browser = اہم
-
 # process used to run privileged about pages,
 # such as about:home
 process-type-privilegedabout = امتیاز شدہ کے بارے میں
@@ -23,10 +21,6 @@ process-type-extension = ایکسٹینشن
 
 # process used to open file:// URLs
 process-type-file = مقامی فائل
-
-# process used to isolate webpages that requested special
-# permission to allocate large amounts of memory
-process-type-weblargeallocation = بٹی تخصیص
 
 ##
 ## Localization for Gecko process types defined in GeckoProcessTypes.h

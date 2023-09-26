@@ -41,6 +41,17 @@ options-collapse-attrs-label = Truncar atributos DOM
 options-collapse-attrs-tooltip =
     .title = Truncar atributos longos no inspetor
 
+# The label for the checkbox option to enable the "drag to update" feature
+options-inspector-draggable-properties-label = Clique e arraste para editar valores de tamanho
+options-inspector-draggable-properties-tooltip =
+    .title = Clique e arraste para editar valores de tamanho na visão de regras do inspetor.
+
+# The label for the checkbox option to enable simplified highlighting on page elements
+# within the inspector for users who enabled prefers-reduced-motion = reduce
+options-inspector-simplified-highlighters-label = Usar destaques mais simples com prefers-reduced-motion
+options-inspector-simplified-highlighters-tooltip =
+    .title = Ativa destaques simplificados quando prefers-reduced-motion está ativado. Desenha linhas em vez de retângulos preenchidos em torno de elementos realçados para evitar efeitos piscantes.
+
 ## "Default Color Unit" options for the Inspector
 
 options-default-color-unit-label = Unidade de cor padrão
@@ -48,6 +59,7 @@ options-default-color-unit-authored = Conforme o autor
 options-default-color-unit-hex = Hex
 options-default-color-unit-hsl = HSL(A)
 options-default-color-unit-rgb = RGB(A)
+options-default-color-unit-hwb = HWB
 options-default-color-unit-name = Nomes de cor
 
 ## Style Editor section
@@ -66,12 +78,7 @@ options-stylesheet-autocompletion-tooltip =
 options-screenshot-label = Comportamento da captura de tela
 
 # Label for the checkbox that toggles screenshot to clipboard feature
-options-screenshot-clipboard-label = Capturar tela para área de transferência
-options-screenshot-clipboard-tooltip =
-    .title = Copiar capturas de tela diretamente para a área de transferência
-
-# Label for the checkbox that toggles screenshot to clipboard feature
-options-screenshot-clipboard-only-label = Capturar tela para apenas para a área de transferência
+options-screenshot-clipboard-only-label = Capturar tela apenas para área de transferência
 options-screenshot-clipboard-tooltip2 =
     .title = Salva a captura de tela diretamente na área de transferência
 
@@ -123,6 +130,16 @@ options-enable-remote-label = Ativar depuração remota
 options-enable-remote-tooltip2 =
     .title = Permitir debugar remotamente esta instância do navegador
 
+# The label for checkbox that enables F12 as a shortcut to open DevTools
+options-enable-f12-label = Usar a tecla F12 para abrir ou fechar as ferramentas de desenvolvimento
+options-enable-f12-tooltip =
+    .title = Ativar esta opção vincula a tecla F12 a abrir ou fechar a caixa de ferramentas de desenvolvimento
+
+# The label for checkbox that toggles custom formatters for objects
+options-enable-custom-formatters-label = Ativar formatadores personalizados
+options-enable-custom-formatters-tooltip =
+    .title = Ativar esta opção permite que sites definam formatadores personalizados de objetos DOM
+
 # The label for checkbox that toggles the service workers testing over HTTP on or off.
 options-enable-service-workers-http-label = Ativar Service Workers sobre HTTP (quando as ferramentas estão abertas)
 options-enable-service-workers-http-tooltip =
@@ -135,9 +152,3 @@ options-source-maps-tooltip =
 
 # The message shown for settings that trigger page reload
 options-context-triggers-page-refresh = * somente na sessão atual, a página é recarregada
-
-# The label for the checkbox that toggles the display of the platform data in the
-# Profiler i.e. devtools.profiler.ui.show-platform-data a boolean preference in about:config
-options-show-platform-data-label = Exibir dados da plataforma Gecko
-options-show-platform-data-tooltip =
-    .title = Incluir símbolos da plataforma Gecko em relatórios do profiler JavaScript

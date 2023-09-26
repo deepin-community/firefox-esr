@@ -2,17 +2,6 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-bookmark-overlay-name =
-    .value = Όνομα:
-    .accesskey = ν
-
-bookmark-overlay-location =
-    .value = Τοποθεσία:
-    .accesskey = θ
-
-bookmark-overlay-folder =
-    .value = Φάκελος:
-
 bookmark-overlay-name-2 =
     .value = Όνομα
     .accesskey = Ό
@@ -31,17 +20,19 @@ bookmark-overlay-choose =
     .label = Επιλογή…
 
 bookmark-overlay-folders-expander =
-    .tooltiptext = Προβολή όλων των φακέλων σελιδοδεικτών
+    .tooltiptext = Εμφάνιση όλων των φακέλων σελιδοδεικτών
     .tooltiptextdown = { bookmark-overlay-folders-expander.tooltiptext }
     .tooltiptextup = Απόκρυψη
+
+bookmark-overlay-folders-expander2 =
+    .tooltiptext = Εμφάνιση όλων των φακέλων σελιδοδεικτών
+
+bookmark-overlay-folders-expander-hide =
+    .tooltiptext = Απόκρυψη
 
 bookmark-overlay-new-folder-button =
     .label = Νέος φάκελος
     .accesskey = ο
-
-bookmark-overlay-tags =
-    .value = Ετικέτες:
-    .accesskey = τ
 
 bookmark-overlay-tags-2 =
     .value = Ετικέτες
@@ -51,13 +42,15 @@ bookmark-overlay-tags-empty-description =
     .placeholder = Διαχωρίστε τις ετικέτες με κόμματα
 
 bookmark-overlay-tags-expander =
-    .tooltiptext = Προβολή όλων των ετικετών
+    .tooltiptext = Εμφάνιση όλων των ετικετών
     .tooltiptextdown = { bookmark-overlay-tags-expander.tooltiptext }
     .tooltiptextup = Απόκρυψη
 
-bookmark-overlay-keyword =
-    .value = Λέξη-κλειδί:
-    .accesskey = κ
+bookmark-overlay-tags-expander2 =
+    .tooltiptext = Εμφάνιση όλων των ετικετών
+
+bookmark-overlay-tags-expander-hide =
+    .tooltiptext = Απόκρυψη
 
 bookmark-overlay-keyword-2 =
     .value = Λέξη-κλειδί

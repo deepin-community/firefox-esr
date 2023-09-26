@@ -7,33 +7,38 @@
 
 cfr-doorhanger-extension-heading = Προτεινόμενη επέκταση
 cfr-doorhanger-feature-heading = Προτεινόμενη λειτουργία
-cfr-doorhanger-pintab-heading = Δοκιμάστε αυτό: Καρφίτσωμα καρτέλας
 
 ##
 
 cfr-doorhanger-extension-sumo-link =
     .tooltiptext = Γιατί το βλέπω αυτό
+
 cfr-doorhanger-extension-cancel-button = Όχι τώρα
     .accesskey = χ
+
 cfr-doorhanger-extension-ok-button = Προσθήκη τώρα
     .accesskey = σ
-cfr-doorhanger-pintab-ok-button = Καρφίτσωμα καρτέλας
-    .accesskey = Κ
+
 cfr-doorhanger-extension-manage-settings-button = Διαχείριση ρυθμίσεων προτάσεων
     .accesskey = Δ
+
 cfr-doorhanger-extension-never-show-recommendation = Να μην εμφανίζεται αυτή η πρόταση
     .accesskey = Ν
+
 cfr-doorhanger-extension-learn-more-link = Μάθετε περισσότερα
+
 # This string is used on a new line below the add-on name
 # Variables:
 #   $name (String) - Add-on author name
 cfr-doorhanger-extension-author = από { $name }
+
 # This is a notification displayed in the address bar.
 # When clicked it opens a panel with a message for the user.
 cfr-doorhanger-extension-notification = Πρόταση
 cfr-doorhanger-extension-notification2 = Πρόταση
     .tooltiptext = Πρόταση επέκτασης
     .a11y-announcement = Διαθέσιμη πρόταση επέκτασης
+
 # This is a notification displayed in the address bar.
 # When clicked it opens a panel with a message for the user.
 cfr-doorhanger-feature-notification = Πρόταση
@@ -59,15 +64,6 @@ cfr-doorhanger-extension-total-users =
         [one] { $total } χρήστης
        *[other] { $total } χρήστες
     }
-cfr-doorhanger-pintab-description = Αποκτήστε εύκολη πρόσβαση σε ιστοτόπους συχνής χρήσης. Διατηρήστε ανοικτούς τους ιστοτόπους σε μια καρτέλα (ακόμη κι όταν κάνετε επανεκκίνηση).
-
-## These messages are steps on how to use the feature and are shown together.
-
-cfr-doorhanger-pintab-step1 = <b>Κάντε δεξί κλικ</b> στην καρτέλα που θέλετε να καρφιτσώσετε.
-cfr-doorhanger-pintab-step2 = Επιλέξτε το <b>Καρφίτσωμα καρτέλας</b> από το μενού.
-cfr-doorhanger-pintab-step3 = Αν ενημερωθεί αυτός ο ιστότοπος, θα δείτε μια μπλε κουκκίδα στην καρφιτσωμένη καρτέλα.
-cfr-doorhanger-pintab-animation-pause = Παύση
-cfr-doorhanger-pintab-animation-resume = Συνέχιση
 
 ## Firefox Accounts Message
 
@@ -89,125 +85,15 @@ cfr-protections-panel-link-text = Μάθετε περισσότερα
 # This string is used by screen readers to offer a text based alternative for
 # the notification icon
 cfr-badge-reader-label-newfeature = Νέο χαρακτηριστικό:
+
 cfr-whatsnew-button =
     .label = Τι νέο υπάρχει
     .tooltiptext = Τι νέο υπάρχει
-cfr-whatsnew-panel-header = Τι νέο υπάρχει
+
 cfr-whatsnew-release-notes-link-text = Διαβάστε τις σημειώσεις έκδοσης
-cfr-whatsnew-fx70-title = Το { -brand-short-name } μάχεται σκληρά για το απόρρητό σας
-cfr-whatsnew-fx70-body =
-    Η τελευταία ενημέρωση βελτιώνει την προστασία από καταγραφή και κάνει τη
-    δημιουργία ασφαλών κωδικών πρόσβασης πιο εύκολη από ποτέ για κάθε ιστότοπο.
-cfr-whatsnew-tracking-protect-title = Προστατεύστε τον εαυτό σας από ιχνηλάτες
-cfr-whatsnew-tracking-protect-body =
-    Το { -brand-short-name } αποκλείει πολλούς κοινούς ιχνηλάτες κοινωνικών δικτύων και μεταξύ ιστοτόπων που
-    καταγράφουν τη δραστηριότητά σας στο διαδίκτυο.
-cfr-whatsnew-tracking-protect-link-text = Προβολή της αναφοράς σας
-# This string is displayed before a large numeral that indicates the total
-# number of tracking elements blocked. Don’t add $blockedCount to your
-# localization, because it would result in the number showing twice.
-cfr-whatsnew-tracking-blocked-title =
-    { $blockedCount ->
-        [one] Αποκλεισμένος ιχνηλάτης
-       *[other] Αποκλεισμένοι ιχνηλάτες
-    }
-cfr-whatsnew-tracking-blocked-subtitle = Από τις { DATETIME($earliestDate, month: "long", year: "numeric") }
-cfr-whatsnew-tracking-blocked-link-text = Προβολή αναφοράς
-cfr-whatsnew-lockwise-backup-title = Δημιουργήστε αντίγραφα ασφαλείας των κωδικών πρόσβασής σας
-cfr-whatsnew-lockwise-backup-body = Δημιουργήστε ασφαλείς κωδικούς πρόσβασης, διαθέσιμους από όλες τις συσκευές σας.
-cfr-whatsnew-lockwise-backup-link-text = Ενεργοποίηση των αντιγράφων ασφαλείας
-cfr-whatsnew-lockwise-take-title = Πάρτε τους κωδικούς σας μαζί σας
-cfr-whatsnew-lockwise-take-body =
-    Η εφαρμογή { -lockwise-brand-short-name } για κινητές συσκευές σας επιτρέπει ασφαλή πρόσβαση
-    στα αντίγραφα ασφαλείας των κωδικών πρόσβασης σας από οπουδήποτε.
-cfr-whatsnew-lockwise-take-link-text = Λήψη εφαρμογής
-
-## Search Bar
-
-cfr-whatsnew-searchbar-title = Πληκτρολογήστε λιγότερο, βρείτε περισσότερα με τη γραμμή διευθύνσεων
-cfr-whatsnew-searchbar-body-topsites = Τώρα, απλώς επιλέξτε τη γραμμή διευθύνσεων και θα εμφανιστεί ένα πλαίσιο με συνδέσμους για τους κορυφαίους ιστοτόπους σας.
-cfr-whatsnew-searchbar-icon-alt-text = Εικονίδιο μεγεθυντικού φακού
-
-## Picture-in-Picture
-
-cfr-whatsnew-pip-header = Παρακολουθήστε βίντεο κατά την περιήγηση
-cfr-whatsnew-pip-body = Η εικόνα-εντός-εικόνας εμφανίζει το βίντεο σε αναδυόμενο παράθυρο, ώστε να μπορείτε να το παρακολουθείτε ενώ εργάζεστε σε άλλες καρτέλες.
-cfr-whatsnew-pip-cta = Μάθετε περισσότερα
-
-## Permission Prompt
-
-cfr-whatsnew-permission-prompt-header = Λιγότερα ενοχλητικά αναδυόμενα παράθυρα
-cfr-whatsnew-permission-prompt-body = Το { -brand-shorter-name } αποκλείει πλέον τα αυτόματα αιτήματα εμφάνισης αναδυόμενων μηνυμάτων από ιστοτόπους.
-cfr-whatsnew-permission-prompt-cta = Μάθετε περισσότερα
-
-## Fingerprinter Counter
-
-# This string is displayed before a large numeral that indicates the total
-# number of tracking elements blocked. Don’t add $fingerprinterCount to your
-# localization, because it would result in the number showing twice.
-cfr-whatsnew-fingerprinter-counter-header =
-    { $fingerprinterCount ->
-        [one] Αποκλείστηκε fingerprinter
-       *[other] Αποκλείστηκαν fingerprinters
-    }
-cfr-whatsnew-fingerprinter-counter-body = Το { -brand-shorter-name } αποκλείει πολλά fingerprinters που συλλέγουν κρυφά πληροφορίες σχετικά με τη συσκευή και τη δραστηριότητά σας για να δημιουργήσουν ένα διαφημιστικό προφίλ για εσάς.
-# Message variation when fingerprinters count is less than 10
-cfr-whatsnew-fingerprinter-counter-header-alt = Fingerprinters
-cfr-whatsnew-fingerprinter-counter-body-alt = Το { -brand-shorter-name } μπορεί να αποκλείσει πολλά fingerprinters που συλλέγουν κρυφά πληροφορίες σχετικά με τη συσκευή και τη δραστηριότητά σας για να δημιουργήσουν ένα διαφημιστικό προφίλ για εσάς.
-
-## Bookmark Sync
-
-cfr-doorhanger-sync-bookmarks-header = Λάβετε αυτόν τον σελιδοδείκτη στο τηλέφωνό σας
-cfr-doorhanger-sync-bookmarks-body = Πάρτε τους σελιδοδείκτες, τους κωδικούς πρόσβασης, το ιστορικό σας και πολλά άλλα, σε όποια συσκευή έχετε συνδεθεί στο { -brand-product-name }.
-cfr-doorhanger-sync-bookmarks-ok-button = Ενεργοποίηση { -sync-brand-short-name }
-    .accesskey = Ε
-
-## Login Sync
-
-cfr-doorhanger-sync-logins-header = Δεν θα χάσετε ποτέ ξανά κωδικό πρόσβασης
-cfr-doorhanger-sync-logins-body = Αποθηκεύστε και συγχρονίστε με ασφάλεια τους κωδικούς πρόσβασής σας σε όλες τις συσκευές σας.
-cfr-doorhanger-sync-logins-ok-button = Ενεργοποίηση { -sync-brand-short-name }
-    .accesskey = Ε
-
-## Send Tab
-
-cfr-doorhanger-send-tab-header = Διαβάστε το εν κινήσει
-cfr-doorhanger-send-tab-recipe-header = Πάρτε αυτή τη συνταγή στην κουζίνα
-cfr-doorhanger-send-tab-body = Η Αποστολή καρτέλας σάς επιτρέπει να μοιραστείτε εύκολα αυτόν τον σύνδεσμο με το τηλέφωνό σας ή οπουδήποτε έχετε συνδεθεί στο { -brand-product-name }.
-cfr-doorhanger-send-tab-ok-button = Δοκιμάστε την καρτέλα "Αποστολή"
-    .accesskey = Δ
-
-## Firefox Send
-
-cfr-doorhanger-firefox-send-header = Μοιραστείτε αυτό το PDF με ασφάλεια
-cfr-doorhanger-firefox-send-body = Προστατεύστε τα ευαίσθητα έγγραφά σας από αδιάκριτα μάτια με διατερματική κρυπτογράφηση και έναν σύνδεσμο που εξαφανίζεται όταν τελειώσετε.
-cfr-doorhanger-firefox-send-ok-button = Δοκιμή του { -send-brand-name }
-    .accesskey = Δ
-
-## Social Tracking Protection
-
-cfr-doorhanger-socialtracking-ok-button = Προβολή προστασίας
-    .accesskey = Π
-cfr-doorhanger-socialtracking-close-button = Κλείσιμο
-    .accesskey = Κ
-cfr-doorhanger-socialtracking-dont-show-again = Να μην εμφανιστούν ξανά τέτοια μηνύματα
-    .accesskey = Ν
-cfr-doorhanger-socialtracking-heading = Το { -brand-short-name } εμπόδισε την καταγραφή σας από ένα κοινωνικό δίκτυο
-cfr-doorhanger-socialtracking-description = Η ιδιωτηκότητα σας έχει σημασία. Το { -brand-short-name } αποκλείει πλέον τους συνηθισμένους ιχνηλάτες κοινωνικών δικτύων, περιορίζοντας πόσα δεδομένα συλλέγουν για το τι κάνετε στο διαδίκτυο.
-cfr-doorhanger-fingerprinters-heading = Το { -brand-short-name } απέκλεισε ένα fingerprinter σε αυτή τη σελίδα
-cfr-doorhanger-fingerprinters-description = Το απόρρητό σας έχει σημασία. Το { -brand-short-name } αποκλείει πλέον τα fingerprinters, τα οποία συλλέγουν προσωπικές πληροφορίες σχετικά με τη συσκευή σας για να σας παρακολουθούν.
-cfr-doorhanger-cryptominers-heading = Το { -brand-short-name } απέκλεισε ένα cryptominer σε αυτή τη σελίδα
-cfr-doorhanger-cryptominers-description = Το απόρρητό σας έχει σημασία. Το { -brand-short-name } αποκλείει πλέον τα cryptominers, τα οποία χρησιμοποιούν την υπολογιστική ισχύ του συστήματός σας για να εξορύξουν ψηφιακό χρήμα.
 
 ## Enhanced Tracking Protection Milestones
 
-# Variables:
-#   $blockedCount (Number) - The total count of blocked trackers. This number will always be greater than 1.
-#   $date (String) - The date we began recording the count of blocked trackers
-cfr-doorhanger-milestone-heading =
-    { $blockedCount ->
-       *[other] Το { -brand-short-name } απέκλεισε πάνω από <b>{ $blockedCount }</b> ιχνηλάτες από τις { $date }!
-    }
 # Variables:
 #   $blockedCount (Number) - The total count of blocked trackers. This number will always be greater than 1.
 #   $date (Datetime) - The date we began recording the count of blocked trackers
@@ -217,39 +103,6 @@ cfr-doorhanger-milestone-heading2 =
     }
 cfr-doorhanger-milestone-ok-button = Προβολή όλων
     .accesskey = Π
-
-## What’s New Panel Content for Firefox 76
-
-
-## Lockwise message
-
-cfr-whatsnew-lockwise-header = Δημιουργήστε εύκολα ασφαλείς κωδικούς πρόσβασης
-cfr-whatsnew-lockwise-body = Είναι δύσκολο να σκεφτεί κανείς μοναδικούς, ασφαλείς κωδικούς πρόσβασης για κάθε λογαριασμό. Κατά τη δημιουργία κωδικών πρόσβασης, επιλέξτε το πεδίο κωδικού πρόσβασης για να χρησιμοποιήσετε έναν ασφαλή κωδικό πρόσβασης που δημιουργείται από το { -brand-shorter-name }.
-cfr-whatsnew-lockwise-icon-alt = εικονίδιο { -lockwise-brand-short-name }
-
-## Vulnerable Passwords message
-
-cfr-whatsnew-passwords-header = Λάβετε ειδοποιήσεις για ευάλωτους κωδικούς πρόσβασης
-cfr-whatsnew-passwords-body = Οι hacker γνωρίζουν ότι οι χρήστες χρησιμοποιούν τους ίδιους κωδικούς πρόσβασης. Αν χρησιμοποιείτε τον ίδιο κωδικό πρόσβασης σε πολλαπλούς ιστοτόπους και παραβιαστεί ένας από αυτούς, θα δείτε μια ειδοποίηση στο { -lockwise-brand-short-name } για να αλλάξετε τον κωδικό πρόσβασής σας σε αυτούς τους ιστοτόπους.
-cfr-whatsnew-passwords-icon-alt = Εικονίδιο ευάλωτου κωδικού πρόσβασης
-
-## Picture-in-Picture fullscreen message
-
-cfr-whatsnew-pip-fullscreen-header = Επέκταση εικόνας-εντός-εικόνας σε πλήρη οθόνη
-cfr-whatsnew-pip-fullscreen-body = Όταν προβάλλετε βίντεο σε αναδυόμενο παράθυρο, μπορείτε πλέον να κάνετε διπλό κλικ σε αυτό το παράθυρο για να μεταβείτε σε πλήρη οθόνη.
-cfr-whatsnew-pip-fullscreen-icon-alt = Εικονίδιο «Εικόνα εντός εικόνας»
-
-## Protections Dashboard message
-
-cfr-whatsnew-protections-header = Μέθοδοι προστασίες με μια ματιά
-cfr-whatsnew-protections-body = Ο πίνακας προστασίας περιλαμβάνει περιληπτικές αναφορές σχετικά με τις παραβιάσεις δεδομένων και τη διαχείριση κωδικών πρόσβασης. Μπορείτε πλέον να παρακολουθείτε πόσες διαρροές έχετε επιλύσει και να βλέπετε αν κάποιος από τους αποθηκευμένους κωδικούς πρόσβασής σας έχει εκτεθεί σε παραβίαση δεδομένων.
-cfr-whatsnew-protections-cta-link = Προβολή πίνακα προστασίας
-cfr-whatsnew-protections-icon-alt = Εικονίδιο ασπίδας
-
-## Better PDF message
-
-cfr-whatsnew-better-pdf-header = Καλύτερη εμπειρία PDF
-cfr-whatsnew-better-pdf-body = Τα έγγραφα PDF πλέον ανοίγουν απευθείας στο { -brand-short-name } για ακόμα πιο βολική εργασία.
 cfr-doorhanger-milestone-close-button = Κλείσιμο
     .accesskey = Κ
 
@@ -264,16 +117,141 @@ cfr-doorhanger-doh-secondary-button = Απενεργοποίηση
 
 ## Fission Experiment Message
 
-cfr-doorhanger-fission-body-approved = Το απόρρητό σας έχει σημασία. Το { -brand-short-name } πλέον απομονώνει, ή βάζει σε sandbox, κάθε ιστότοπο, κάνοντας πιο δύσκολη την πρόσβαση των hacker για υποκλοπή κωδικών πρόσβασης, αριθμών πιστωτικών καρτών και άλλων ευαίσθητων πληροφοριών.
-cfr-doorhanger-fission-header = Απομόνωση ιστοτόπου
-cfr-doorhanger-fission-primary-button = Το κατάλαβα
-    .accesskey = Τ
-cfr-doorhanger-fission-secondary-button = Μάθετε περισσότερα
-    .accesskey = Μ
-
 ## Full Video Support CFR message
 
-cfr-doorhanger-video-support-body = Τα βίντεο αυτού του ιστοτόπου ενδέχεται να μην αναπαράγονται σωστά σε αυτή την έκδοση του { -brand-short-name }. Για πλήρη υποστήριξη βίντεο, ενημερώστε το { -brand-short-name } τώρα.
+cfr-doorhanger-video-support-body = Τα βίντεο αυτού του ιστοτόπου ενδέχεται να μην αναπαράγονται σωστά σε αυτήν την έκδοση του { -brand-short-name }. Για πλήρη υποστήριξη βίντεο, ενημερώστε το { -brand-short-name } τώρα.
 cfr-doorhanger-video-support-header = Ενημερώστε το { -brand-short-name } για αναπαραγωγή του βίντεο
 cfr-doorhanger-video-support-primary-button = Ενημέρωση τώρα
     .accesskey = Ε
+
+## Spotlight modal shared strings
+
+## VPN promotion dialog for public Wi-Fi users
+##
+## If a user is detected to be on a public Wi-Fi network, they are given a
+## bit of info about how to improve their privacy and then offered a button
+## to the Mozilla VPN page and a link to dismiss the dialog.
+
+# This header text can be explicitly wrapped.
+spotlight-public-wifi-vpn-header = Φαίνεται πως χρησιμοποιείτε δημόσιο Wi-Fi
+spotlight-public-wifi-vpn-body = Για να αποκρύψετε την τοποθεσία και τη διαδικτυακή σας δραστηριότητα, δοκιμάστε ένα VPN. Θα σας προστατεύει κατά την περιήγηση από δημόσια μέρη, όπως αεροδρόμια και καφετέριες.
+spotlight-public-wifi-vpn-primary-button = Προστατέψτε το απόρρητό σας με το { -mozilla-vpn-brand-name }
+    .accesskey = Π
+spotlight-public-wifi-vpn-link = Όχι τώρα
+    .accesskey = Ό
+
+## Total Cookie Protection Rollout
+
+## Emotive Continuous Onboarding
+
+spotlight-better-internet-header = Ένα καλύτερο διαδίκτυο ξεκινά από εσάς
+spotlight-better-internet-body = Όταν χρησιμοποιείτε το { -brand-short-name }, υποστηρίζετε ένα ανοικτό και προσβάσιμο διαδίκτυο που είναι καλύτερο για όλους.
+spotlight-peace-mind-header = Πάντα στο πλευρό σας
+spotlight-peace-mind-body = Κάθε μήνα, το { -brand-short-name } αποκλείει κατά μέσο όρο πάνω από 3.000 ιχνηλάτες ανά χρήστη. Επειδή τίποτα, ειδικά πολέμιοι του απορρήτου όπως οι ιχνηλάτες, δεν θα έπρεπε να στέκεται ανάμεσα σε εσάς και στο καλό διαδίκτυο.
+spotlight-pin-primary-button =
+    { PLATFORM() ->
+        [macos] Διατήρηση στο Dock
+       *[other] Καρφίτσωμα στη γραμμή εργασιών
+    }
+spotlight-pin-secondary-button = Όχι τώρα
+
+## MR2022 Background Update Windows native toast notification strings.
+##
+## These strings will be displayed by the Windows operating system in
+## a native toast, like:
+##
+## <b>multi-line title</b>
+## multi-line text
+## <img>
+## [ primary button ] [ secondary button ]
+##
+## The button labels are fitted into narrow fixed-width buttons by
+## Windows and therefore must be as narrow as possible.
+
+mr2022-background-update-toast-title = Νέο { -brand-short-name }. Πιο ιδιωτικό. Λιγότεροι ιχνηλάτες. Χωρίς συμβιβασμούς.
+mr2022-background-update-toast-text = Δοκιμάστε το νεότερο { -brand-short-name } τώρα, αναβαθμισμένο με την ισχυρότερη προστασία κατά της καταγραφής μέχρι σήμερα.
+
+# This button label will be fitted into a narrow fixed-width button by
+# Windows. Try to not exceed the width of the English text (compare it
+# using a variable font like Arial): the button can only fit 1-2
+# additional characters, exceeding characters will be truncated.
+mr2022-background-update-toast-primary-button-label = Άνοιγμα του { -brand-shorter-name } τώρα
+
+# This button label will be fitted into a narrow fixed-width button by
+# Windows. Try to not exceed the width of the English text (compare it using a
+# variable font like Arial): the button can only fit 1-2 additional characters,
+# exceeding characters will be truncated.
+mr2022-background-update-toast-secondary-button-label = Υπενθύμιση αργότερα
+
+## Firefox View CFR
+
+firefoxview-cfr-primarybutton = Δοκιμή
+    .accesskey = Δ
+firefoxview-cfr-secondarybutton = Όχι τώρα
+    .accesskey = χ
+firefoxview-cfr-header-v2 = Συνεχίστε γρήγορα από εκεί που σταματήσατε
+firefoxview-cfr-body-v2 = Βρείτε ξανά τις καρτέλες που έκλεισαν πρόσφατα και κάντε απρόσκοπτη εναλλαγή μεταξύ συσκευών με την { -firefoxview-brand-name }.
+
+## Firefox View Spotlight
+
+firefoxview-spotlight-promo-title = Πείτε «γεια» στην { -firefoxview-brand-name }
+
+# “Poof” refers to the expression to convey when something or someone suddenly disappears, or in this case, reappears. For example, “Poof, it’s gone.”
+firefoxview-spotlight-promo-subtitle = Θέλετε αυτήν την ανοικτή καρτέλα στο τηλέφωνό σας; Αρπάξτε την. Χρειάζεστε αυτόν τον ιστότοπο που μόλις επισκεφτήκατε; Πουφ, επέστρεψε με την { -firefoxview-brand-name }.
+firefoxview-spotlight-promo-primarybutton = Δείτε πώς λειτουργεί
+firefoxview-spotlight-promo-secondarybutton = Παράλειψη
+
+## Colorways expiry reminder CFR
+
+colorways-cfr-primarybutton = Επιλογή χρωματικού συνδυασμού
+    .accesskey = Ε
+
+# "shades" refers to the different color options available to users in colorways.
+colorways-cfr-body = Δώστε χρώμα στο πρόγραμμα περιήγησής σας με τις αποκλειστικές αποχρώσεις του { -brand-short-name }, εμπνευσμένες από φωνές που άλλαξαν τον πολιτισμό.
+colorways-cfr-header-28days = Οι χρωματικοί συνδυασμοί «Ανεξάρτητες φωνές» λήγουν στις 16 Ιανουαρίου
+colorways-cfr-header-14days = Οι χρωματικοί συνδυασμοί «Ανεξάρτητες φωνές» λήγουν σε δύο εβδομάδες
+colorways-cfr-header-7days = Οι χρωματικοί συνδυασμοί «Ανεξάρτητες φωνές» λήγουν αυτήν την εβδομάδα
+colorways-cfr-header-today = Οι χρωματικοί συνδυασμοί «Ανεξάρτητες φωνές» λήγουν σήμερα
+
+## Cookie Banner Handling CFR
+
+cfr-cbh-header = Να επιτρέπεται στο { -brand-short-name } η απόρριψη των μηνυμάτων για cookies;
+cfr-cbh-body = Το { -brand-short-name } μπορεί να απορρίψει αυτόματα πολλά μηνύματα αιτημάτων για cookies.
+cfr-cbh-confirm-button = Απόρριψη μηνυμάτων για cookies
+    .accesskey = Α
+cfr-cbh-dismiss-button = Όχι τώρα
+    .accesskey = χ
+
+## These strings are used in the Fox doodle Pin/set default spotlights
+
+july-jam-headline = Πάντα στο πλευρό σας
+july-jam-body = Κάθε μήνα, το { -brand-short-name } αποκλείει κατά μέσο όρο 3.000+ ιχνηλάτες ανά χρήστη, παρέχοντάς σας ασφαλή και γρήγορη πρόσβαση στο διαδίκτυο.
+july-jam-set-default-primary = Άνοιγμα συνδέσμων με το { -brand-short-name }
+fox-doodle-pin-headline = Καλώς ορίσατε και πάλι
+
+# “indie” is short for the term “independent”.
+# In this instance, free from outside influence or control.
+fox-doodle-pin-body = Ακολουθεί μια γρήγορη υπενθύμιση ότι μπορείτε να έχετε το αγαπημένο σας, ανεξάρτητο πρόγραμμα περιήγησης μόνο ένα κλικ μακριά.
+fox-doodle-pin-primary = Άνοιγμα συνδέσμων με το { -brand-short-name }
+fox-doodle-pin-secondary = Όχι τώρα
+
+## These strings are used in the Set Firefox as Default PDF Handler for Existing Users experiment
+
+set-default-pdf-handler-headline = <strong>Τα PDF σας ανοίγουν πλέον στο { -brand-short-name }.</strong> Επεξεργαστείτε ή υπογράψτε φόρμες απευθείας από το πρόγραμμα περιήγησής σας. Για αλλαγή, αναζητήστε «PDF» στις ρυθμίσεις.
+set-default-pdf-handler-primary = Το κατάλαβα
+
+## FxA sync CFR
+
+fxa-sync-cfr-header = Νέα συσκευή στο μέλλον;
+fxa-sync-cfr-body = Βεβαιωθείτε ότι οι πιο πρόσφατοι σελιδοδείκτες, οι κωδικοί πρόσβασης και οι καρτέλες σας έρχονται μαζί σας κάθε φορά που ανοίγετε ένα νέο πρόγραμμα περιήγησης { -brand-product-name }.
+fxa-sync-cfr-primary = Μάθετε περισσότερα
+    .accesskey = Μ
+fxa-sync-cfr-secondary = Υπενθύμιση αργότερα
+    .accesskey = Υ
+
+## Device Migration FxA Spotlight
+
+device-migration-fxa-spotlight-header = Χρησιμοποιείτε παλαιότερη συσκευή;
+device-migration-fxa-spotlight-body = Δημιουργήστε αντίγραφα ασφαλείας των δεδομένων σας για να βεβαιωθείτε ότι δεν θα χάσετε σημαντικές πληροφορίες, όπως σελιδοδείκτες και κωδικούς πρόσβασης — ειδικά εάν μεταβείτε σε μια νέα συσκευή.
+device-migration-fxa-spotlight-primary-button = Δημιουργία αντιγράφων ασφαλείας δεδομένων
+device-migration-fxa-spotlight-link = Υπενθύμιση αργότερα

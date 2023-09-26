@@ -11,6 +11,7 @@
 # Placeholder text for tag input
 pocket-panel-saved-add-tags =
     .placeholder = စာအမှတ်များ ထည့်ပါ
+
 pocket-panel-saved-error-generic = { -pocket-brand-name } သို့ သိမ်းရန်ကြိုးစားရာတွင် ပြဿနာတစ်ခု တွေ့ရှိခဲ့သည်။
 pocket-panel-saved-error-tag-length = စာမှတ်များ၏ စာလုံးရေကန့်သတ်ချက်သည် ၂၅ လုံးဖြစ်သည်
 pocket-panel-saved-error-only-links = လင်ခ့်များကိုသာ သိမ်းထားနိုင်သည်
@@ -24,7 +25,6 @@ pocket-panel-saved-save-tags = သိမ်းရန်
 pocket-panel-saved-saving-tags = သိမ်းဆည်းနေသည်…
 pocket-panel-saved-suggested-tags = အကြံပေးထားသော စာတိုများ
 pocket-panel-saved-tags-saved = စာမှတ်များ ထည့်ပြီး
-pocket-panel-signup-view-list = စာရင်းကို ကြည့်ရန်
 
 ## about:pocket-signup panel
 
@@ -40,3 +40,13 @@ pocket-panel-signup-tagline-story-two = မည်သည့် ကိရိယာ
 
 ## about:pocket-home panel
 
+pocket-panel-home-explore-more = ရှာဖွေစူးစမ်းပါ။
+
+## Pocket panel header component
+
+pocket-panel-header-sign-in = ၀င်ပါ
+
+## Pocket panel buttons
+
+pocket-panel-button-show-all = အားလုံးကို ပြပါ
+pocket-panel-button-remove = ဖယ်ရှားပါ

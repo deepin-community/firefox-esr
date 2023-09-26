@@ -2,12 +2,12 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-connection-window =
+connection-window2 =
     .title = Konexio-ezarpenak
     .style =
         { PLATFORM() ->
-            [macos] width: 44em
-           *[other] width: 49em
+            [macos] min-width: 44em
+           *[other] min-width: 49em
         }
 
 connection-close-key =
@@ -35,19 +35,14 @@ connection-proxy-http = HTTP proxy-a
     .accesskey = H
 connection-proxy-http-port = Ataka
     .accesskey = t
-connection-proxy-http-sharing =
-    .label = Erabili proxy hau FTP eta HTTPS protokoloentzat ere bai
-    .accesskey = E
+connection-proxy-https-sharing =
+    .label = Erabili proxy hau HTTPS protokoloarentzat ere bai
+    .accesskey = r
 
 connection-proxy-https = HTTP proxy-a
     .accesskey = H
 connection-proxy-ssl-port = Ataka
     .accesskey = a
-
-connection-proxy-ftp = FTP proxy-a
-    .accesskey = F
-connection-proxy-ftp-port = Ataka
-    .accesskey = k
 
 connection-proxy-socks = SOCKS ostalaria
     .accesskey = C
@@ -65,9 +60,6 @@ connection-proxy-noproxy = Proxy-rik ez hauentzat
 
 connection-proxy-noproxy-desc = Adibidez: .mozilla.org, .net.nz, 192.168.1.0/24
 
-# Do not translate localhost, 127.0.0.1 and ::1.
-connection-proxy-noproxy-localhost-desc = localhost, 127.0.0.1 eta ::1 helbideetarako konexioak inoiz ez dira proxy bidez egiten.
-
 # Do not translate "localhost", "127.0.0.1/8" and "::1". (You can translate "and".)
 connection-proxy-noproxy-localhost-desc-2 = localhost, 127.0.0.1/8 eta ::1 helbideetarako konexioak inoiz ez dira proxy bidez egiten.
 
@@ -84,16 +76,14 @@ connection-proxy-autologin =
     .accesskey = i
     .tooltip = Aukera honek proxy-etarako autentifikazioa isilean burutzen du hauentzat kredentzialak gorde dituzunean. Autentifikazioak huts egiten badu, eskatu egingo zaizu.
 
+connection-proxy-autologin-checkbox =
+    .label = Ez eskatu autentifikaziorik pasahitza gordeta badago
+    .accesskey = i
+    .tooltiptext = Aukera honek proxy-etarako autentifikazioa isilean burutzen du hauentzat kredentzialak gorde dituzunean. Autentifikazioak huts egiten badu, eskatu egingo zaizu.
+
 connection-proxy-socks-remote-dns =
     .label = Bideratu DNSa proxy bidez SOCKS v5 erabiltzean
     .accesskey = d
-
-connection-dns-over-https =
-    .label = Gaitu HTTPS gaineko DNSa
-    .accesskey = G
-
-connection-dns-over-https-url-resolver = Erabili hornitzailea
-    .accesskey = h
 
 # Variables:
 #   $name (String) - Display name or URL for the DNS over HTTPS provider

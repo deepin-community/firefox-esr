@@ -9,11 +9,6 @@ crashes-id = Jelentésazonosító
 crashes-send-date = Elküldve
 crashes-all-reports = Minden hibajelentés
 crashes-no-config = Ez az alkalmazás nincs a hibajelentések megjelenítésére beállítva.
-extensions-title = Kiegészítők
-extensions-name = Név
-extensions-enabled = Engedélyezve
-extensions-version = Verzió
-extensions-id = Azonosító
 support-addons-title = Kiegészítők
 support-addons-name = Név
 support-addons-type = Típus
@@ -77,6 +72,12 @@ app-basics-location-service-key-google = Google helymeghatározási szolgáltat�
 app-basics-safebrowsing-key-google = Google Safebrowsing kulcs
 app-basics-key-mozilla = Mozilla helymeghatározási szolgáltatás kulcs
 app-basics-safe-mode = Csökkentett mód
+app-basics-memory-size = Memória mérete (RAM)
+app-basics-disk-available = Szabad lemezterület
+# Variables:
+#   $value (number) - Amount of data being stored
+#   $unit (string) - The unit of data being stored (e.g. MB)
+app-basics-data-size = { $value } { $unit }
 show-dir-label =
     { PLATFORM() ->
         [macos] Megjelenítés a Finderben
@@ -106,11 +107,21 @@ graphics-gpu2-title = 2. GPU
 graphics-decision-log-title = Döntésnapló
 graphics-crash-guards-title = Összeomlásvédelem által letiltott funkciók
 graphics-workarounds-title = Kerülő eljárások
+graphics-device-pixel-ratios = Ablakeszköz képpontarányai
 # Windowing system in use on Linux (e.g. X11, Wayland).
 graphics-window-protocol = Ablakprotokoll
 # Desktop environment in use on Linux (e.g. GNOME, KDE, XFCE, etc).
 graphics-desktop-environment = Asztali környezet
 place-database-title = Helyek adatbázisa
+place-database-stats = Statisztika
+place-database-stats-show = Statisztika megjelenítése
+place-database-stats-hide = Statisztika elrejtése
+place-database-stats-entity = Entitás
+place-database-stats-count = Darabszám
+place-database-stats-size-kib = Méret (KiB)
+place-database-stats-size-perc = Méret (%)
+place-database-stats-efficiency-perc = Hatékonyság (%)
+place-database-stats-sequentiality-perc = Sorozatosság (%)
 place-database-integrity = Sértetlenség
 place-database-verify-integrity = Sértetlenség ellenőrzése
 a11y-title = Kisegítő lehetőségek
@@ -130,13 +141,11 @@ sandbox-sys-call-tid = TID
 sandbox-sys-call-proc-type = Folyamattípus
 sandbox-sys-call-number = Rendszerhívás
 sandbox-sys-call-args = Argumentumok
-safe-mode-title = Biztonságos mód kipróbálása
-restart-in-safe-mode-label = Újraindítás letiltott kiegészítőkkel…
 troubleshoot-mode-title = Problémák diagnosztizálása
 restart-in-troubleshoot-mode-label = Hibaelhárítási mód…
 clear-startup-cache-title = Próbálja meg üríteni az indítási gyorsítótárat
 clear-startup-cache-label = Indítási gyorsítótár törlése…
-startup-cache-dialog-title2 = Újraindítja a { -brand-short-name }ot az indítási gyorsítótár törléséhez?
+startup-cache-dialog-title2 = Újraindítja a { -brand-short-name(case: "accusative") } az indítási gyorsítótár törléséhez?
 startup-cache-dialog-body2 = Ez nem módosítja a beállításait, és nem távolít el kiegészítőket.
 restart-button-label = Újraindítás
 
@@ -159,8 +168,18 @@ media-device-channels = Csatornák
 media-device-rate = Sebesség
 media-device-latency = Késleltetés
 media-capabilities-title = Médiafunkciók
+media-codec-support-info = Kodektámogatási információk
 # List all the entries of the database.
 media-capabilities-enumerate = Adatbázis felsorolása
+
+## Codec support table
+
+media-codec-support-sw-decoding = Szoftveres dekódolás
+media-codec-support-hw-decoding = Hardveres dekódolás
+media-codec-support-codec-name = Kodeknév
+media-codec-support-supported = Támogatott
+media-codec-support-unsupported = Nem támogatott
+media-codec-support-error = A kodek támogatási információi nem érhetőek el. Próbálja újra egy médiafájl lejátszása után.
 
 ##
 
@@ -189,36 +208,6 @@ remote-debugging-url = URL
 
 ##
 
-support-third-party-modules-title = Harmadik féltől származó modulok
-support-third-party-modules-module = Modulfájl
-support-third-party-modules-version = Fájlverzió
-support-third-party-modules-vendor = Szállítói információk
-support-third-party-modules-occurrence = Előfordulás
-support-third-party-modules-process = Folyamattípus és azonosító
-support-third-party-modules-thread = Szál
-support-third-party-modules-base = Imagebase cím
-support-third-party-modules-uptime = Folyamat üzemideje (ms)
-support-third-party-modules-duration = Betöltés időtartama (ms)
-support-third-party-modules-status = Állapot
-support-third-party-modules-status-loaded = Betöltött
-support-third-party-modules-status-blocked = Blokkolt
-support-third-party-modules-status-redirected = Átirányított
-support-third-party-modules-empty = Nincs harmadik féltől származó modul betöltve.
-support-third-party-modules-no-value = (Nincs érték)
-support-third-party-modules-button-open =
-    .title = A fájl helyének megnyitása…
-support-third-party-modules-expand =
-    .title = Részletes információk megjelenítése
-support-third-party-modules-collapse =
-    .title = Részletes információk összecsukása
-support-third-party-modules-unsigned-icon =
-    .title = Ez a modul nincs aláírva
-support-third-party-modules-folder-icon =
-    .title = A fájl helyének megnyitása…
-support-third-party-modules-down-icon =
-    .title = Részletes információk megjelenítése
-support-third-party-modules-up-icon =
-    .title = Részletes információk összecsukása
 # Variables
 # $days (Integer) - Number of days of crashes to log
 report-crash-for-days =
@@ -305,10 +294,8 @@ webgl2-renderer = WebGL 2 illesztőprogram megjelenítő
 webgl2-version = WebGL 2 illesztőprogram verzió
 webgl2-driver-extensions = WebGL 2 illesztőprogram kiterjesztései
 webgl2-extensions = WebGL 2 kiterjesztések
-blocklisted-bug = Ismert problémák miatt blokkolva
-# Variables
-# $bugNumber (string) - String of bug number from Bugzilla
-bug-link = { $bugNumber } számú hiba
+webgpu-default-adapter = WebGPU alapértelmezett adaptere
+webgpu-fallback-adapter = WebGPU tartalék adaptere
 # Variables
 #   $bugNumber (string) - Bug number on Bugzilla
 support-blocklisted-bug = Ismert problémák miatt blokkolva: <a data-l10n-name="bug-link">{ $bugNumber }. hiba</a>
@@ -316,8 +303,6 @@ support-blocklisted-bug = Ismert problémák miatt blokkolva: <a data-l10n-name=
 # $failureCode (string) - String that can be searched in the source tree.
 unknown-failure = Blokkolva, hibakód: { $failureCode }
 d3d11layers-crash-guard = D3D11 kompozitáló
-d3d11video-crash-guard = D3D11 videodekóder
-d3d9video-crash-guard = D3D9 videodekóder
 glcontext-crash-guard = OpenGL
 wmfvpxvideo-crash-guard = WMF VPX videodekóder
 reset-on-next-restart = Újraindításkor alaphelyzetbe
@@ -340,6 +325,7 @@ can-sandbox-media = Médiabővítmény sandboxing
 content-sandbox-level = Tartalomfolyamat sandboxing szintje
 effective-content-sandbox-level = Tartalomfolyamat tényleges sandboxing szintje
 content-win32k-lockdown-state = Win32k zárolási állapot a tartalmi folyamathoz
+support-sandbox-gpu-level = GPU-folyamat sandboxing szintje
 sandbox-proc-type-content = tartalom
 sandbox-proc-type-file = fájltartalom
 sandbox-proc-type-media-plugin = médiabővítmény
@@ -357,14 +343,6 @@ launcher-process-status-unknown = Ismeretlen állapot
 # $remoteWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
 multi-process-windows = { $remoteWindows }/{ $totalWindows }
-multi-process-status-0 = A felhasználó engedélyezte
-multi-process-status-1 = Alapértelmezésben engedélyezve
-multi-process-status-2 = Tiltva
-multi-process-status-4 = Akadálymentesítési eszközök letiltották
-multi-process-status-6 = A nem támogatott szövegbevitel letiltotta
-multi-process-status-7 = Kiegészítők letiltották
-multi-process-status-8 = Kikapcsolása kényszerítve
-multi-process-status-unknown = Ismeretlen állapot
 # Variables
 # $fissionWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
@@ -373,7 +351,7 @@ fission-status-experiment-control = Kísérlet által letiltva
 fission-status-experiment-treatment = Kísérlet által engedélyezve
 fission-status-disabled-by-e10s-env = Környezet által letiltva
 fission-status-enabled-by-env = Környezet által engedélyezve
-fission-status-disabled-by-safe-mode = Csökkentett mód miatt letiltva
+fission-status-disabled-by-env = Környezet által letiltva
 fission-status-enabled-by-default = Alapértelmezésben engedélyezve
 fission-status-disabled-by-default = Alapértelmezésben tiltva
 fission-status-enabled-by-user-pref = A felhasználó által engedélyezve

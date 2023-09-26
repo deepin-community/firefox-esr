@@ -19,3 +19,20 @@ opensearch-error-download-desc = { -brand-short-name } kunde inte hämta sökmod
 
 ##
 
+searchbar-submit =
+    .tooltiptext = Skicka sökning
+
+# This string is displayed in the search box when the input field is empty
+searchbar-input =
+    .placeholder = Sök
+
+searchbar-icon =
+    .tooltiptext = Sök
+
+## Infobar shown when search engine is removed and replaced.
+## Variables
+## $oldEngine (String) - the search engine to be removed.
+## $newEngine (String) - the search engine to replace the removed search engine.
+
+removed-search-engine-message = <strong>Din standardsökmotor har ändrats.</strong> { $oldEngine } är inte längre tillgänglig som standardsökmotor i { -brand-short-name }. { $newEngine } är nu din standardsökmotor. För att byta till en annan standardsökmotor, gå till inställningar. <label data-l10n-name="remove-search-engine-article">Läs mer</label>
+remove-search-engine-button = Ok

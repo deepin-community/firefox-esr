@@ -10,13 +10,8 @@ page-subtitle =
 crashes-title = Звіти про збої
 crashes-id = ID звіту
 crashes-send-date = Надіслано
-crashes-all-reports = Всі звіти про збої
+crashes-all-reports = Усі звіти про збої
 crashes-no-config = Ця програма не була налаштована показувати звіти про збої.
-extensions-title = Розширення
-extensions-name = Назва
-extensions-enabled = Увімкнено
-extensions-version = Версія
-extensions-id = ID
 support-addons-title = Додатки
 support-addons-name = Назва
 support-addons-type = Тип
@@ -66,7 +61,7 @@ app-basics-os-theme = Тема ОС
 # Rosetta is Apple's translation process to run apps containing x86_64
 # instructions on Apple Silicon. This should remain in English.
 app-basics-rosetta = Перекладено Rosetta
-app-basics-memory-use = Використання пам’яті
+app-basics-memory-use = Використання пам'яті
 app-basics-performance = Швидкодія
 app-basics-service-workers = Зареєстровані Service Workers
 app-basics-third-party = Сторонні модулі
@@ -80,6 +75,12 @@ app-basics-location-service-key-google = Ключ служби Google Location
 app-basics-safebrowsing-key-google = Ключ Google Safebrowsing
 app-basics-key-mozilla = Ключ Служби визначення розташування від Mozilla
 app-basics-safe-mode = Безпечний режим
+app-basics-memory-size = Обсяг пам'яті (RAM)
+app-basics-disk-available = Доступний простір на диску
+# Variables:
+#   $value (number) - Amount of data being stored
+#   $unit (string) - The unit of data being stored (e.g. MB)
+app-basics-data-size = { $value } { $unit }
 show-dir-label =
     { PLATFORM() ->
         [macos] Показати у Finder
@@ -109,11 +110,21 @@ graphics-gpu2-title = GPU #2
 graphics-decision-log-title = Журнал рішень
 graphics-crash-guards-title = Можливості, вимкнені захистом від збоїв
 graphics-workarounds-title = Способи обходу
+graphics-device-pixel-ratios = Піксельне співвідношення вікна пристрою
 # Windowing system in use on Linux (e.g. X11, Wayland).
 graphics-window-protocol = Віконний протокол
 # Desktop environment in use on Linux (e.g. GNOME, KDE, XFCE, etc).
 graphics-desktop-environment = Середовище робочого столу
 place-database-title = База даних Places
+place-database-stats = Статистика
+place-database-stats-show = Показати статистику
+place-database-stats-hide = Приховати статистику
+place-database-stats-entity = Об'єкт
+place-database-stats-count = Кількість
+place-database-stats-size-kib = Розмір (КіБ)
+place-database-stats-size-perc = Розмір (%)
+place-database-stats-efficiency-perc = Ефективність (%)
+place-database-stats-sequentiality-perc = Послідовність (%)
 place-database-integrity = Цілісність
 place-database-verify-integrity = Перевірити цілісність
 a11y-title = Доступність
@@ -133,8 +144,6 @@ sandbox-sys-call-tid = TID
 sandbox-sys-call-proc-type = Тип процесу
 sandbox-sys-call-number = Системний виклик
 sandbox-sys-call-args = Аргументи
-safe-mode-title = Спробувати безпечний режим
-restart-in-safe-mode-label = Перезапустити з вимкненими додатками…
 troubleshoot-mode-title = Визначення проблем
 restart-in-troubleshoot-mode-label = Режим усунення проблем…
 clear-startup-cache-title = Спробуйте очистити кеш запуску
@@ -162,8 +171,18 @@ media-device-channels = Канали
 media-device-rate = Частота
 media-device-latency = Затримка
 media-capabilities-title = Медіа-можливості
+media-codec-support-info = Інформація про підтримку кодеків
 # List all the entries of the database.
 media-capabilities-enumerate = Перерахувати базу даних
+
+## Codec support table
+
+media-codec-support-sw-decoding = Програмне декодування
+media-codec-support-hw-decoding = Апаратне декодування
+media-codec-support-codec-name = Назва кодека
+media-codec-support-supported = Підтримується
+media-codec-support-unsupported = Не підтримується
+media-codec-support-error = Інформація про підтримку кодеків недоступна. Повторіть спробу після відтворення медіафайлу.
 
 ##
 
@@ -186,42 +205,12 @@ intl-regional-prefs = Регіональні налаштування
 ##
 ## See also https://firefox-source-docs.mozilla.org/remote/
 
-remote-debugging-title = Віддалене зневадження (Протокол Chromium)
+remote-debugging-title = Віддалене налагодження (Протокол Chromium)
 remote-debugging-accepting-connections = Вхідні з'єднання
 remote-debugging-url = URL
 
 ##
 
-support-third-party-modules-title = Сторонні модулі
-support-third-party-modules-module = Файл модуля
-support-third-party-modules-version = Версія файлу
-support-third-party-modules-vendor = Інформація про постачальника
-support-third-party-modules-occurrence = Повторення
-support-third-party-modules-process = Тип процесу та ID
-support-third-party-modules-thread = Гілка
-support-third-party-modules-base = Адреса бази зображень
-support-third-party-modules-uptime = Час роботи процесу (мс)
-support-third-party-modules-duration = Тривалість завантаження (мс)
-support-third-party-modules-status = Стан
-support-third-party-modules-status-loaded = Завантажено
-support-third-party-modules-status-blocked = Заблоковано
-support-third-party-modules-status-redirected = Перенаправлено
-support-third-party-modules-empty = Не завантажено сторонніх модулів.
-support-third-party-modules-no-value = (Немає значення)
-support-third-party-modules-button-open =
-    .title = Відкрити розташування файлу…
-support-third-party-modules-expand =
-    .title = Показати подробиці
-support-third-party-modules-collapse =
-    .title = Згорнути подробиці
-support-third-party-modules-unsigned-icon =
-    .title = Цей модуль не підписаний
-support-third-party-modules-folder-icon =
-    .title = Відкрити розташування файлу…
-support-third-party-modules-down-icon =
-    .title = Показати подробиці
-support-third-party-modules-up-icon =
-    .title = Згорнути подробиці
 # Variables
 # $days (Integer) - Number of days of crashes to log
 report-crash-for-days =
@@ -258,9 +247,9 @@ crashes-time-days =
 # $reports (integer) - Number of pending reports
 pending-reports =
     { $reports ->
-        [one] Всі звіти про збої (за вказаний проміжок часу, включно з { $reports }, що очікує надсилання)
-        [few] Всі звіти про збої (за вказаний проміжок часу, включно з { $reports }, що очікує надсилання)
-       *[many] Всі звіти про збої (за вказаний проміжок часу, включно з { $reports }, що очікують надсилання)
+        [one] Усі звіти про збої (за вказаний проміжок часу, включно з { $reports }, що очікує надсилання)
+        [few] Усі звіти про збої (за вказаний проміжок часу, включно з { $reports }, що очікує надсилання)
+       *[many] Усі звіти про збої (за вказаний проміжок часу, включно з { $reports }, що очікують надсилання)
     }
 raw-data-copied = Необроблені дані скопійовано в буфер
 text-copied = Текст скопійовано в буфер
@@ -268,7 +257,7 @@ text-copied = Текст скопійовано в буфер
 ## The verb "blocked" here refers to a graphics feature such as "Direct2D" or "OpenGL layers".
 
 blocked-driver = Заблоковано для вашої версії графічного драйвера.
-blocked-gfx-card = Заблоковано для вашої відеоплати через нерозв’язані проблеми з драйвером.
+blocked-gfx-card = Заблоковано для вашого графічного процесора через нерозв'язані проблеми з драйвером.
 blocked-os-version = Заблоковано для вашої версії операційної системи.
 blocked-mismatched-version = Заблоковано через невідповідність версії вашого графічного драйвера в реєстрі та DLL.
 # Variables
@@ -313,10 +302,8 @@ webgl2-renderer = Засіб візуалізації WebGL2
 webgl2-version = WebGL 2 - Версія драйвера
 webgl2-driver-extensions = WebGL 2 - Розширення драйвера
 webgl2-extensions = WebGL 2 - Розширення
-blocklisted-bug = Заблоковано через відомі проблеми
-# Variables
-# $bugNumber (string) - String of bug number from Bugzilla
-bug-link = вада { $bugNumber }
+webgpu-default-adapter = Стандартний адаптер WebGPU
+webgpu-fallback-adapter = Запасний адаптер WebGPU
 # Variables
 #   $bugNumber (string) - Bug number on Bugzilla
 support-blocklisted-bug = Заблоковано, у зв'язку з відомими проблемами: <a data-l10n-name="bug-link">звіт { $bugNumber }</a>
@@ -324,8 +311,6 @@ support-blocklisted-bug = Заблоковано, у зв'язку з відом
 # $failureCode (string) - String that can be searched in the source tree.
 unknown-failure = Заблоковано; код помилки { $failureCode }
 d3d11layers-crash-guard = Композитор D3D11
-d3d11video-crash-guard = Відео декодер D3D11
-d3d9video-crash-guard = Відео декодер D3D9
 glcontext-crash-guard = OpenGL
 wmfvpxvideo-crash-guard = Відео декодер WMF VPX
 reset-on-next-restart = Скинути за наступного перезапуску
@@ -348,6 +333,7 @@ can-sandbox-media = Пісочниця для плагіна медіа
 content-sandbox-level = Рівень пісочниці процесів вмісту
 effective-content-sandbox-level = Ефективний рівень ізоляції процесу вмісту
 content-win32k-lockdown-state = Стан блокування Win32k для процесу вмісту
+support-sandbox-gpu-level = Рівень пісочниці процесів ГП
 sandbox-proc-type-content = вміст
 sandbox-proc-type-file = вміст файлу
 sandbox-proc-type-media-plugin = медіаплагін
@@ -365,14 +351,6 @@ launcher-process-status-unknown = Невідомий стан
 # $remoteWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
 multi-process-windows = { $remoteWindows }/{ $totalWindows }
-multi-process-status-0 = Увімкнено користувачем
-multi-process-status-1 = Типово увімкнено
-multi-process-status-2 = Вимкнено
-multi-process-status-4 = Вимкнено інструментами доступності
-multi-process-status-6 = Вимкнено через непідтримуване введення тексту
-multi-process-status-7 = Вимкнено додатками
-multi-process-status-8 = Примусово вимкнені
-multi-process-status-unknown = Невідомий стан
 # Variables
 # $fissionWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
@@ -381,7 +359,7 @@ fission-status-experiment-control = Вимкнено експериментом
 fission-status-experiment-treatment = Увімкнено експериментом
 fission-status-disabled-by-e10s-env = Вимкнено середовищем
 fission-status-enabled-by-env = Увімкнено середовищем
-fission-status-disabled-by-safe-mode = Вимкнено безпечним режимом
+fission-status-disabled-by-env = Вимкнено середовищем
 fission-status-enabled-by-default = Увімкнено типово
 fission-status-disabled-by-default = Вимкнено типово
 fission-status-enabled-by-user-pref = Увімкнено користувачем

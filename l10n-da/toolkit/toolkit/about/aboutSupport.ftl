@@ -12,11 +12,6 @@ crashes-id = Rapport-ID
 crashes-send-date = Sendt
 crashes-all-reports = Alle fejlrapporter
 crashes-no-config = Dette program er ikke konfigureret til at vise fejlrapporter.
-extensions-title = Udvidelser
-extensions-name = Navn
-extensions-enabled = Aktiveret
-extensions-version = Version
-extensions-id = ID
 support-addons-title = Tilføjelser
 support-addons-name = Navn
 support-addons-type = Type
@@ -80,6 +75,12 @@ app-basics-location-service-key-google = Google Location Service-nøgle
 app-basics-safebrowsing-key-google = Google Safebrowsing-nøgle
 app-basics-key-mozilla = Mozilla Location Service-nøgle
 app-basics-safe-mode = Fejlsikret tilstand
+app-basics-memory-size = Hukommelsesstørrelse (RAM)
+app-basics-disk-available = Ledig diskplads
+# Variables:
+#   $value (number) - Amount of data being stored
+#   $unit (string) - The unit of data being stored (e.g. MB)
+app-basics-data-size = { $value } { $unit }
 show-dir-label =
     { PLATFORM() ->
         [macos] Vis i Finder
@@ -109,11 +110,21 @@ graphics-gpu2-title = GPU #2
 graphics-decision-log-title = Beslutnings-log
 graphics-crash-guards-title = Funktioner deaktiveret af Crash guard
 graphics-workarounds-title = Løsninger
+graphics-device-pixel-ratios = Vinduets enheds-pixelforhold (Device Pixel Ratios)
 # Windowing system in use on Linux (e.g. X11, Wayland).
 graphics-window-protocol = Protokol for vinduer
 # Desktop environment in use on Linux (e.g. GNOME, KDE, XFCE, etc).
 graphics-desktop-environment = Skrivebordsmiljø
 place-database-title = Databasen Places
+place-database-stats = Statistik
+place-database-stats-show = Vis statistik
+place-database-stats-hide = Skjul statistik
+place-database-stats-entity = Entitet
+place-database-stats-count = Antal
+place-database-stats-size-kib = Størrelse (KiB)
+place-database-stats-size-perc = Størrelse (%)
+place-database-stats-efficiency-perc = Effektivitet (%)
+place-database-stats-sequentiality-perc = Sekventialitet (%)
 place-database-integrity = Integritet
 place-database-verify-integrity = Bekræft integritet
 a11y-title = Tilgængelighed
@@ -133,8 +144,6 @@ sandbox-sys-call-tid = TID
 sandbox-sys-call-proc-type = Procestype
 sandbox-sys-call-number = Syscall
 sandbox-sys-call-args = Argumenter
-safe-mode-title = Prøv fejlsikret tilstand
-restart-in-safe-mode-label = Genstart med tilføjelser deaktiveret…
 troubleshoot-mode-title = Diagnosticer problemer
 restart-in-troubleshoot-mode-label = Fejlsøgnings-tilstand…
 clear-startup-cache-title = Prøv at rydde opstarts-cachen
@@ -162,8 +171,18 @@ media-device-channels = Kanaler
 media-device-rate = Rate
 media-device-latency = Latenstid
 media-capabilities-title = Media-evner
+media-codec-support-info = Information om codec-support
 # List all the entries of the database.
 media-capabilities-enumerate = Vis database-poster
+
+## Codec support table
+
+media-codec-support-sw-decoding = Software-afkodning
+media-codec-support-hw-decoding = Hardware-afkodning
+media-codec-support-codec-name = Codec-navn
+media-codec-support-supported = Understøttet
+media-codec-support-unsupported = Ikke understøttet
+media-codec-support-error = Information om understøttelse af codec er ikke tilgængelig. Afspil en mediefil og prøv igen.
 
 ##
 
@@ -192,36 +211,6 @@ remote-debugging-url = URL
 
 ##
 
-support-third-party-modules-title = Tredjeparts-moduler
-support-third-party-modules-module = Modulfil
-support-third-party-modules-version = Filversion
-support-third-party-modules-vendor = Information om leverandør
-support-third-party-modules-occurrence = Forekomster
-support-third-party-modules-process = Proces-type og -ID
-support-third-party-modules-thread = Tråd
-support-third-party-modules-base = Imagebase-adresse
-support-third-party-modules-uptime = Oppetid for proces (ms)
-support-third-party-modules-duration = Indlæsningstid (ms)
-support-third-party-modules-status = Status
-support-third-party-modules-status-loaded = Indlæst
-support-third-party-modules-status-blocked = Blokeret
-support-third-party-modules-status-redirected = Omdirigeret
-support-third-party-modules-empty = Ingen tredjeparts-moduler blev indlæst.
-support-third-party-modules-no-value = (Ingen værdi)
-support-third-party-modules-button-open =
-    .title = Åbn filplacering…
-support-third-party-modules-expand =
-    .title = Vis detaljeret information
-support-third-party-modules-collapse =
-    .title = Skjul detaljeret information
-support-third-party-modules-unsigned-icon =
-    .title = Dette modul er ikke signeret
-support-third-party-modules-folder-icon =
-    .title = Åbn filplacering…
-support-third-party-modules-down-icon =
-    .title = Vis detaljeret information
-support-third-party-modules-up-icon =
-    .title = Skjul detaljeret information
 # Variables
 # $days (Integer) - Number of days of crashes to log
 report-crash-for-days =
@@ -308,10 +297,8 @@ webgl2-renderer = WebGL2-rendering
 webgl2-version = WebGL 2 Driver-version
 webgl2-driver-extensions = WebGL 2 Driver-udvidelser
 webgl2-extensions = WebGL 2-udvidelser
-blocklisted-bug = Blokeret på grund af kendte problemer
-# Variables
-# $bugNumber (string) - String of bug number from Bugzilla
-bug-link = bug { $bugNumber }
+webgpu-default-adapter = Standard-adapter for WebGPU
+webgpu-fallback-adapter = Reserve-adapter for WebGPU
 # Variables
 #   $bugNumber (string) - Bug number on Bugzilla
 support-blocklisted-bug = Blokeret på grund af kendte problemer: <a data-l10n-name="bug-link">bug { $bugNumber }</a>
@@ -319,8 +306,6 @@ support-blocklisted-bug = Blokeret på grund af kendte problemer: <a data-l10n-n
 # $failureCode (string) - String that can be searched in the source tree.
 unknown-failure = Blokeret; fejlkode { $failureCode }
 d3d11layers-crash-guard = D3D11-kompositoren
-d3d11video-crash-guard = D3D11-videodekoder
-d3d9video-crash-guard = D3D9-videodekoder
 glcontext-crash-guard = OpenGL
 wmfvpxvideo-crash-guard = WMF VPX-videodekoder
 reset-on-next-restart = Nulstil ved næste genstart
@@ -343,6 +328,7 @@ can-sandbox-media = Sandboxning af medie-plugin
 content-sandbox-level = Content Process Sandbox Level
 effective-content-sandbox-level = Effective Content Process Sandbox Level
 content-win32k-lockdown-state = Win32k Lockdown State for indholdsproces
+support-sandbox-gpu-level = GPU Process Sandbox Level
 sandbox-proc-type-content = indhold
 sandbox-proc-type-file = fil-indhold
 sandbox-proc-type-media-plugin = medie-plugin
@@ -360,14 +346,6 @@ launcher-process-status-unknown = Ukendt status
 # $remoteWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
 multi-process-windows = { $remoteWindows }/{ $totalWindows }
-multi-process-status-0 = Aktiveret af bruger
-multi-process-status-1 = Aktiveret som standard
-multi-process-status-2 = Deaktiveret
-multi-process-status-4 = Deaktiveret af tilgængelighedsværktøjer
-multi-process-status-6 = Deaktiveret på grund af ikke-understøttet indsætning af tekst
-multi-process-status-7 = Deaktiveret af tilføjelser
-multi-process-status-8 = Gennemtving deaktivering
-multi-process-status-unknown = Ukendt status
 # Variables
 # $fissionWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
@@ -376,7 +354,7 @@ fission-status-experiment-control = Deaktiveret af et eksperiment
 fission-status-experiment-treatment = Aktiveret af et eksperiment
 fission-status-disabled-by-e10s-env = Deaktiveret af miljøet
 fission-status-enabled-by-env = Aktiveret af miljøet
-fission-status-disabled-by-safe-mode = Deaktiveret af fejlsikker tilstand
+fission-status-disabled-by-env = Deaktiveret af miljøet
 fission-status-enabled-by-default = Aktiveret som standard
 fission-status-disabled-by-default = Deaktiveret som standard
 fission-status-enabled-by-user-pref = Aktiveret af bruger
