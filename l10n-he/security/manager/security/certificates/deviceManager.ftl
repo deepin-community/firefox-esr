@@ -5,9 +5,9 @@
 
 ## Strings used for device manager
 
-devmgr =
+devmgr-window =
     .title = מנהל התקנים
-    .style = width: 67em; height: 32em;
+    .style = min-width: 67em; min-height: 32em;
 
 devmgr-devlist =
     .label = מודולי והתקני אבטחה
@@ -115,8 +115,6 @@ devinfo-label =
 
 devinfo-serialnum =
     .label = מספר סידורי
-
-fips-nonempty-password-required = מצב FIPS דורש שתהיה לך ססמה ראשית עבור כל התקן אבטחה. נא להגדיר ססמה לפני ניסיון הפעלת מצב FIPS.
 
 fips-nonempty-primary-password-required = מצב FIPS דורש שתהיה לך ססמה ראשית עבור כל התקן אבטחה. נא להגדיר ססמה לפני ניסיון הפעלת מצב FIPS.
 unable-to-toggle-fips = לא ניתן לשנות את מצב ה־FIPS עבור התקן האבטחה. מומלץ לצאת ולהפעיל יישום זה מחדש.

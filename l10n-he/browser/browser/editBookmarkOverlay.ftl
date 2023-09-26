@@ -2,17 +2,6 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-bookmark-overlay-name =
-    .value = שם:
-    .accesskey = ש
-
-bookmark-overlay-location =
-    .value = כתובת:
-    .accesskey = כ
-
-bookmark-overlay-folder =
-    .value = תיקייה:
-
 bookmark-overlay-name-2 =
     .value = שם
     .accesskey = ש
@@ -35,13 +24,15 @@ bookmark-overlay-folders-expander =
     .tooltiptextdown = { bookmark-overlay-folders-expander.tooltiptext }
     .tooltiptextup = הסתרה
 
+bookmark-overlay-folders-expander2 =
+    .tooltiptext = הצגת כל תיקיות הסימניות
+
+bookmark-overlay-folders-expander-hide =
+    .tooltiptext = הסתרה
+
 bookmark-overlay-new-folder-button =
     .label = תיקייה חדשה
     .accesskey = ת
-
-bookmark-overlay-tags =
-    .value = תגיות:
-    .accesskey = ג
 
 bookmark-overlay-tags-2 =
     .value = תגיות
@@ -55,9 +46,11 @@ bookmark-overlay-tags-expander =
     .tooltiptextdown = { bookmark-overlay-tags-expander.tooltiptext }
     .tooltiptextup = הסתרה
 
-bookmark-overlay-keyword =
-    .value = מילת מפתח:
-    .accesskey = מ
+bookmark-overlay-tags-expander2 =
+    .tooltiptext = הצגת כל התגיות
+
+bookmark-overlay-tags-expander-hide =
+    .tooltiptext = הסתרה
 
 bookmark-overlay-keyword-2 =
     .value = מילת מפתח

@@ -6,9 +6,6 @@ password-quality-meter = Mjerač kvaliteta lozinke
 
 ## Change Password dialog
 
-change-password-window =
-    .title = Promijeni glavnu lozinku
-
 # Variables:
 # $tokenName (String) - Security device of the change password dialog
 change-password-token = Sigurnosni uređaj: { $tokenName }
@@ -16,23 +13,16 @@ change-password-old = Trenutna lozinka:
 change-password-new = Nova lozinka:
 change-password-reenter = Nova lozinka (ponovo):
 
-## Reset Password dialog
-
-reset-password-window =
-    .title = Resetuj glavnu lozinku
-    .style = width: 40em
-
 ## Reset Primary Password dialog
 
 reset-password-button-label =
     .label = Resetuj
-reset-password-text = Ako resetujete vašu glavnu lozinku, sve pohranjene web i e-mail lozinke, podaci iz formulara, lični certifikati i privatni ključevi će biti izbrisani. Jeste li sigurni da želite resetovati vašu glavnu lozinku?
 
 ## Downloading cert dialog
 
-download-cert-window =
+download-cert-window2 =
     .title = Preuzimam certifikate
-    .style = width: 46em
+    .style = min-width: 46em
 download-cert-message = Upitani ste da li vjerujete novom Certifikacijskom Autoritetu (CA).
 download-cert-trust-ssl =
     .label = Vjeruj ovom CA da identifikuje web stranice.
@@ -64,7 +54,5 @@ set-password-reminder = Važno: Ukoliko zaboravite lozinku backupa certifikata, 
 
 ## Protected Auth dialog
 
-protected-auth-window =
-    .title = Zaštitite znak za ovjeru vjerodostojnosti
-protected-auth-msg = Molimo vas da izvršite ovjeru vjerodostojnosti znaka. Metoda ovjere vjerodostojnosti znaka ovisi o tipu vašeg znaka.
-protected-auth-token = Žeton:
+## Protected authentication alert
+

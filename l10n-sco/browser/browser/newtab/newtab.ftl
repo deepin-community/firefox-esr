@@ -8,9 +8,6 @@
 newtab-page-title = New Tab
 newtab-settings-button =
     .title = Mak yer New Tab page yer ain
-newtab-personalize-button-label = Personalise
-    .title = Personalise new tab
-    .aria-label = Personalise new tab
 newtab-personalize-icon-label =
     .title = Personalise new tab
     .aria-label = Personalise new tab
@@ -23,7 +20,7 @@ newtab-personalize-dialog-label =
 newtab-search-box-search-button =
     .title = Sairch
     .aria-label = Sairch
-newtab-search-box-search-the-web-text = Sairch the Wab
+
 # Variables
 #  $engine (String): the name of the user's default search engine
 newtab-search-box-handoff-text = Sairch wi { $engine } or inpit address
@@ -38,10 +35,7 @@ newtab-search-box-handoff-input-no-engine =
     .placeholder = Sairch or inpit address
     .title = Sairch or inpit address
     .aria-label = Sairch or inpit address
-newtab-search-box-search-the-web-input =
-    .placeholder = Sairch the Wab
-    .title = Sairch the Wab
-    .aria-label = Sairch the Wab
+
 newtab-search-box-text = Sairch the wab
 newtab-search-box-input =
     .placeholder = Sairch the wab
@@ -50,17 +44,18 @@ newtab-search-box-input =
 ## Top Sites - General form dialog.
 
 newtab-topsites-add-search-engine-header = Eik On Airt-oot Engine
-newtab-topsites-add-topsites-header = New Tap Site
 newtab-topsites-add-shortcut-header = New Shortcut
 newtab-topsites-edit-topsites-header = Edit Tap Site
 newtab-topsites-edit-shortcut-header = Edit Shortcut
 newtab-topsites-title-label = Title
 newtab-topsites-title-input =
     .placeholder = Inpit a title
+
 newtab-topsites-url-label = URL
 newtab-topsites-url-input =
     .placeholder = Type or paste a URL
 newtab-topsites-url-validation = Suithfest URL needit
+
 newtab-topsites-image-url-label = Custom Image URL
 newtab-topsites-use-image-link = Yaise an image o yer ain...
 newtab-topsites-image-validation = Image couldnae load. Try anither URL.
@@ -89,10 +84,12 @@ newtab-topsite-sponsored = Sponsored
 newtab-menu-section-tooltip =
     .title = Open menu
     .aria-label = Open menu
+
 # Tooltip for dismiss button
 newtab-dismiss-button-tooltip =
     .title = Remuive
     .aria-label = Remuive
+
 # This tooltip is for the context menu of Pocket cards or Topsites
 # Variables:
 #  $title (String): The label or hostname of the site. This is for screen readers when the context menu button is focused/active.
@@ -165,14 +162,22 @@ newtab-label-removed-bookmark = Buikmerk remuived
 newtab-label-recommended = Trendin
 newtab-label-saved = Saved tae { -pocket-brand-name }
 newtab-label-download = Doonloadit
+
 # This string is used in the story cards to indicate sponsored content
 # Variables:
 #  $sponsorOrSource (String): This is the name of a company or their domain
 newtab-label-sponsored = { $sponsorOrSource } · Sponsored
+
 # This string is used at the bottom of story cards to indicate sponsored content
 # Variables:
 #  $sponsor (String): This is the name of a sponsor
 newtab-label-sponsored-by = Sponsored by { $sponsor }
+
+# This string is used under the image of story cards to indicate source and time to read
+# Variables:
+#  $source (String): This is the name of a company or their domain
+#  $timeToRead (Number): This is the estimated number of minutes to read this story
+newtab-label-source-read-time = { $source } · { $timeToRead } min
 
 ## Section Menu: These strings are displayed in the section context menu and are
 ## meant as a call to action for the given section.
@@ -198,7 +203,6 @@ newtab-section-expand-section-label =
 ## Section Headers.
 
 newtab-section-header-topsites = Tap Sites
-newtab-section-header-highlights = Highlichts
 newtab-section-header-recent-activity = Recent activity
 # Variables:
 #  $provider (String): Name of the corresponding content provider.
@@ -206,7 +210,8 @@ newtab-section-header-pocket = Recommendit by { $provider }
 
 ## Empty Section States: These show when there are no more items in a section. Ex. When there are no more Pocket story recommendations, in the space where there would have been stories, this is shown instead.
 
-newtab-empty-section-highlights = Stairt stravaigin, and we'll shaw some o the smashin airticles, videos, and ither pages ye've recently veesitit or buikmerkt here.
+newtab-empty-section-highlights = Stert stravaigin, and we'll shaw some o the smashin airticles, videos, and ither pages ye've recently veesitit or buikmerkt here.
+
 # Ex. When there are no more Pocket story recommendations, in the space where there would have been stories, this is shown instead.
 # Variables:
 #  $provider (String): Name of the content provider for this section, e.g "Pocket".
@@ -229,6 +234,12 @@ newtab-pocket-more-recommendations = Mair Recommendations
 newtab-pocket-learn-more = Lairn mair
 newtab-pocket-cta-button = Get { -pocket-brand-name }
 newtab-pocket-cta-text = Save the stories ye're intae wi { -pocket-brand-name }, and nourish yer mind wi some wunnerfu reads.
+newtab-pocket-pocket-firefox-family = { -pocket-brand-name } is pairt o the { -brand-product-name } faimily
+
+## Pocket Final Card Section.
+## This is for the final card in the Pocket grid.
+
+## Pocket content onboarding experience dialog and modal for new users seeing the Pocket section for the first time, shown as the first item in the Pocket section.
 
 ## Error Fallback Content.
 ## This message and suggested action link are shown in each section of UI that fails to render.
@@ -252,10 +263,4 @@ newtab-custom-pocket-sponsored = Sponsored stories
 newtab-custom-recent-title = Recent activity
 newtab-custom-recent-subtitle = A walin o recent sites and content
 newtab-custom-close-button = Sneck
-# For the "Snippets" feature traditionally on about:home.
-# Alternative translation options: "Small Note" or something that
-# expresses the idea of "a small message, shortened from something else,
-# and non-essential but also not entirely trivial and useless.
-newtab-custom-snippets-title = Bitties
-newtab-custom-snippets-subtitle = Tips and news fae { -vendor-short-name } and { -brand-product-name }
 newtab-custom-settings = Manage mair settins

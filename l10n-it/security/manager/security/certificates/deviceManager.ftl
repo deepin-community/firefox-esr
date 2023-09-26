@@ -5,9 +5,9 @@
 
 ## Strings used for device manager
 
-devmgr =
+devmgr-window =
     .title = Gestione dispositivi
-    .style = width: 70em; height: 33em;
+    .style = min-width: 70em; min-height: 33em;
 
 devmgr-devlist =
     .label = Moduli e dispositivi di sicurezza
@@ -115,8 +115,6 @@ devinfo-label =
 
 devinfo-serialnum =
     .label = Numero seriale
-
-fips-nonempty-password-required = La modalità FIPS richiede l’impostazione di una password principale per ciascun dispositivo di sicurezza. Impostare le password prima di attivare la modalità FIPS.
 
 fips-nonempty-primary-password-required = La modalità FIPS richiede l’impostazione di una password principale per ciascun dispositivo di sicurezza. Impostare le password prima di attivare la modalità FIPS.
 unable-to-toggle-fips = Non è possibile cambiare la modalità FIPS per il dispositivo di sicurezza. Si consiglia di uscire e riavviare l’applicazione.

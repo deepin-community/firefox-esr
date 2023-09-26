@@ -39,15 +39,6 @@ menu-quit =
 menu-quit-mac =
     .label = છોડી દો { -brand-shorter-name }
 
-# This menu-quit-button string is only used on Linux.
-menu-quit-button =
-    .label = { menu-quit.label }
-
-# This menu-quit-button-win string is only used on Windows.
-menu-quit-button-win =
-    .label = { menu-quit.label }
-    .tooltip = બહાર નીકળો { -brand-shorter-name }
-
 menu-about =
     .label = { -brand-shorter-name } વિશે
     .accesskey = A
@@ -77,9 +68,6 @@ menu-file-open-location =
 menu-file-open-file =
     .label = ફાઈલ ખોલો...
     .accesskey = O
-menu-file-close =
-    .label = બંધ કરો
-    .accesskey = C
 menu-file-close-window =
     .label = વિન્ડો બંધ કરો
     .accesskey = d
@@ -92,9 +80,6 @@ menu-file-email-link =
 menu-file-print-setup =
     .label = પાનાં સુયોજન...
     .accesskey = u
-menu-file-print-preview =
-    .label = છાપન પૂર્વદર્શન
-    .accesskey = v
 menu-file-print =
     .label = છાપો...
     .accesskey = P
@@ -110,9 +95,6 @@ menu-file-go-offline =
 menu-edit =
     .label = ફેરફાર
     .accesskey = E
-menu-edit-find-on =
-    .label = આ પાનાંમાં શોધો...
-    .accesskey = F
 menu-edit-find-again =
     .label = ફરી શોધો
     .accesskey = g
@@ -128,9 +110,6 @@ menu-view =
 menu-view-toolbars-menu =
     .label = સાધનપટ્ટીઓ
     .accesskey = T
-menu-view-customize-toolbar =
-    .label = વૈવિધ્યપૂર્ણ બનાવો...
-    .accesskey = C
 menu-view-sidebar =
     .label = બાજુપટ્ટી
     .accesskey = e
@@ -161,9 +140,6 @@ menu-view-page-style-no-style =
 menu-view-page-basic-style =
     .label = મૂળભૂત પાનાં શૈલી
     .accesskey = B
-menu-view-charset =
-    .label = લખાણ એનકોડીંગ
-    .accesskey = c
 
 ## These should match what Safari and other Apple applications
 ## use on macOS.
@@ -177,6 +153,17 @@ menu-view-exit-full-screen =
 menu-view-full-screen =
     .label = પૂર્ણ સ્ક્રીન
     .accesskey = F
+
+## These menu items may use the same accesskey.
+
+# This should match reader-view-enter-button in browser.ftl
+menu-view-enter-readerview =
+    .label = રીડર દૃશ્ય દાખલ કરો
+    .accesskey = R
+# This should match reader-view-close-button in browser.ftl
+menu-view-close-readerview =
+    .label = રીડર દૃશ્ય બંધ કરો
+    .accesskey = R
 
 ##
 
@@ -212,12 +199,6 @@ menu-history-undo-window-menu =
 menu-bookmarks-menu =
     .label = બુકમાર્ક્સ
     .accesskey = B
-menu-bookmarks-show-all =
-    .label = બધા બુકમાર્ક્સને બતાવો
-menu-bookmark-this-page =
-    .label = આ પાનાંને બુકમાર્ક કરો
-menu-bookmark-edit =
-    .label = આ બુકમાર્કમાં ફેરફાર કરો
 menu-bookmarks-all-tabs =
     .label = બધા ટૅબ્સને બુકમાર્ક કરો…
 menu-bookmarks-toolbar =
@@ -235,32 +216,15 @@ menu-tools =
 menu-tools-downloads =
     .label = ડાઉનલોડ
     .accesskey = D
-menu-tools-addons =
-    .label = એડ-ઓન
-    .accesskey = A
 menu-tools-sync-now =
     .label = હમણાં સમન્વયિત કરો
     .accesskey = S
-menu-tools-web-developer =
-    .label = વેબ ડેવલપર
-    .accesskey = W
 menu-tools-page-source =
     .label = પાનાં સ્રોત
     .accesskey = o
 menu-tools-page-info =
     .label = પાનાં જાણકારી
     .accesskey = I
-menu-preferences =
-    .label =
-        { PLATFORM() ->
-            [windows] વિકલ્પો
-           *[other] પસંદગીઓ
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] O
-           *[other] n
-        }
 menu-tools-layout-debugger =
     .label = લેઆઉટ ડિબગર
     .accesskey = L
@@ -278,15 +242,6 @@ menu-window-bring-all-to-front =
 # NOTE: For Engineers, any additions or changes to Help menu strings should
 # also be reflected in the related strings in appmenu.ftl. Those strings, by
 # convention, will have the same ID as these, but prefixed with "app".
-# Example: appmenu-help-product
-#
-# These strings are duplicated to allow for different casing depending on
-# where the strings appear.
-
-
-# NOTE: For Engineers, any additions or changes to Help menu strings should
-# also be reflected in the related strings in appmenu.ftl. Those strings, by
-# convention, will have the same ID as these, but prefixed with "app".
 # Example: appmenu-get-help
 #
 # These strings are duplicated to allow for different casing depending on
@@ -295,29 +250,8 @@ menu-window-bring-all-to-front =
 menu-help =
     .label = મદદ
     .accesskey = H
-menu-help-product =
-    .label = { -brand-shorter-name } મદત
-    .accesskey = H
-menu-help-show-tour =
-    .label = { -brand-shorter-name } શોધ
-    .accesskey = o
-menu-help-keyboard-shortcuts =
-    .label = કીબોર્ડ શૉર્ટકટ્સ
-    .accesskey = K
-menu-help-troubleshooting-info =
-    .label = મુશ્કેલીનિવારણ જાણકારી
-    .accesskey = T
 menu-help-report-site-issue =
     .label = સાઇટ સમસ્યાનો અહેવાલ આપો…
-menu-help-feedback-page =
-    .label = પ્રતિસાદને ઉમેરો…
-    .accesskey = S
-menu-help-safe-mode-without-addons =
-    .label = નિષ્ક્રિય થયેલ ઍડ-ઑન સાથે પુન:શરૂ કરો…
-    .accesskey = R
-menu-help-safe-mode-with-addons =
-    .label = અડ-ઓન્સ સક્ષમ કારી અને પુનઃ પ્રારંભ કરો
-    .accesskey = R
 # Label of the Help menu item. Either this or
 # menu-help-notdeceptive is shown.
 menu-help-report-deceptive-site =

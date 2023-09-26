@@ -20,16 +20,6 @@ toolbar-context-menu-bookmark-selected-tabs =
 toolbar-context-menu-select-all-tabs =
     .label = Vybrat všechny panely
     .accesskey = a
-toolbar-context-menu-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Obnovit zavřený panel
-            [one] Obnovit zavřený panel
-            [few] Obnovit zavřené panely
-           *[other] Obnovit zavřené panely
-        }
-    .accesskey = t
-
 toolbar-context-menu-reopen-closed-tabs =
     .label =
         { $tabCount ->
@@ -54,18 +44,18 @@ toolbar-context-menu-report-extension =
     .label = Nahlásit rozšíření
     .accesskey = N
 
-# Can appear on the same context menu as menubarCmd ("Menu Bar") and
-# personalbarCmd ("Bookmarks Toolbar"), so they should have different
-# access keys.
+# Can appear on the same context menu as toolbar-context-menu-menu-bar-cmd
+# ("Menu Bar") and personalbarCmd ("Bookmarks Toolbar"), so they should
+# have different access keys.
 toolbar-context-menu-pin-to-overflow-menu =
     .label = Přesunout do rozšiřující nabídky
     .accesskey = P
-toolbar-context-menu-auto-hide-downloads-button =
-    .label = Automaticky skrývat
-    .accesskey = A
 toolbar-context-menu-auto-hide-downloads-button-2 =
     .label = Skrýt, pokud je prázdné
     .accesskey = p
+toolbar-context-menu-always-open-downloads-panel =
+    .label = Zobrazit podrobnosti při zahájení stahování
+    .accesskey = s
 toolbar-context-menu-remove-from-toolbar =
     .label = Odebrat z lišty
     .accesskey = d
@@ -75,6 +65,11 @@ toolbar-context-menu-view-customize-toolbar =
 toolbar-context-menu-view-customize-toolbar-2 =
     .label = Nastavení tlačítek a lišt…
     .accesskey = v
+# This is only ever shown when toolbar-context-menu-pin-to-overflow-menu
+# is hidden, so they can share access keys.
+toolbar-context-menu-pin-to-toolbar =
+    .label = Připnout na lištu
+    .accesskey = l
 
 toolbar-context-menu-bookmarks-toolbar-always-show-2 =
     .label = Vždy zobrazit
@@ -89,3 +84,7 @@ toolbar-context-menu-bookmarks-toolbar-on-new-tab-2 =
 toolbar-context-menu-bookmarks-show-other-bookmarks =
     .label = Zobrazit ostatní záložky
     .accesskey = o
+
+toolbar-context-menu-menu-bar-cmd =
+    .toolbarname = Hlavní nabídka
+    .accesskey = H

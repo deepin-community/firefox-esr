@@ -6,7 +6,7 @@ window-minimize-command =
     .label = Minimizoje
 
 window-zoom-command =
-    .label = Zoom
+    .label = Zmadhim/Zvogëlim
 
 window-new-shortcut =
     .key = N
@@ -148,16 +148,6 @@ bookmark-this-page-shortcut =
 # Verify what shortcut for that operation
 # are recommended by the Human Interface Guidelines
 # of each platform for your locale.
-bookmark-show-all-shortcut =
-    .key =
-        { PLATFORM() ->
-            [linux] o
-           *[other] b
-        }
-
-# Verify what shortcut for that operation
-# are recommended by the Human Interface Guidelines
-# of each platform for your locale.
 bookmark-show-library-shortcut =
     .key = O
 
@@ -179,12 +169,6 @@ bookmark-show-toolbar-shortcut =
 
 full-zoom-reduce-shortcut =
     .key = -
-
-# If in keyboard layouts popular for your locale you need to use the shift key
-# to access the original shortcuts, the following shortcuts can be used.
-# Otherwise their values should remain empty.
-full-zoom-reduce-shortcut-alt =
-    .key = { "" }
 
 full-zoom-reduce-shortcut-alt-a =
     .key = _

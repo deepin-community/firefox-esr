@@ -2,22 +2,22 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-sanitize-prefs =
+sanitize-prefs2 =
     .title = Taq ajowab'äl richin nijosq'ïx ri natab'äl
-    .style = width: 34em
+    .style = min-width: 34em
 
 sanitize-prefs-style =
     .style = width: 17em
 
-dialog-title =
+sanitize-dialog-title =
     .title = Tiyuj K'ak'a' Natab'äl
-    .style = width: 34em
+    .style = min-width: 34em
 
 # When "Time range to clear" is set to "Everything", this message is used for the
 # title instead of dialog-title.
-dialog-title-everything =
+sanitize-dialog-title-everything =
     .title = Tiyuj Ronojel Natab'äl
-    .style = width: 34em
+    .style = min-width: 34em
 
 clear-data-settings-label = Toq xtitz'apïx, { -brand-short-name } k'o ta chi ruyonil nuyüj ronojel
 
@@ -78,9 +78,9 @@ item-form-search-history =
 
 data-section-label = Taq tzij
 
-item-site-preferences =
-    .label = Taq rajowaxïk ruxaq k'amaya'l
-    .accesskey = k
+item-site-settings =
+    .label = Runuk'ulem ruxaq
+    .accesskey = x
 
 item-offline-apps =
     .label = Taq rutzij ruxaq k'amaya'l majun nok pa k'amaya'l

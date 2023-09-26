@@ -4,7 +4,7 @@
 
 # Variables:
 #   $count (Number) - Number of tracking events blocked.
-graph-week-summary = この 1 週間で { $count } 個のトラッカーをブロックしました
+graph-week-summary = この 1 週間で { -brand-short-name } が { $count } 個のトラッカーをブロックしました
 
 # Variables:
 #   $count (Number) - Number of tracking events blocked.
@@ -53,7 +53,7 @@ fingerprinter-tab-title = フィンガープリント採取
 fingerprinter-tab-content = フィンガープリント採取はブラウザーとコンピューターから設定を集め、あなたのデジタル指紋を作成します。このデジタル指紋を使うと、様々なウェブサイトにまたがってあなたを追跡することができます。<a data-l10n-name="learn-more-link">詳細</a>
 
 cryptominer-tab-title = 暗号通貨マイニング
-cryptominer-tab-content = 暗号通貨マイニングは仮想通貨の採掘のために、あなたのシステムの計算リソースを利用します。暗号通貨マイニングスクリプトはあなたのバッテリーを消費し、コンピューターを遅くさせ、電気代を増やさせる可能性があります。<a data-l10n-name="learn-more-link">詳細</a>
+cryptominer-tab-content = 暗号通貨マイニングは仮想通貨の採掘のために、あなたのシステムの計算リソースを利用します。暗号通貨マイニングスクリプトは端末のバッテリーを消費し、コンピューターを遅くさせ、電気代を高くする可能性があります。<a data-l10n-name="learn-more-link">詳細</a>
 
 protections-close-button2 =
     .aria-label = 閉じる
@@ -64,16 +64,13 @@ mobile-app-card-content = モバイルブラウザー組み込みの保護機能
 mobile-app-links = <a data-l10n-name="android-mobile-inline-link">Android 版</a>および <a data-l10n-name="ios-mobile-inline-link">iOS 版</a> { -brand-product-name } ブラウザー
 
 lockwise-title = 二度とパスワードを忘れないように
-lockwise-title-logged-in2 = パスワード管理
-lockwise-header-content = { -lockwise-brand-name } はあなたのパスワードを安全にブラウザーに保存します。
+passwords-title-logged-in = パスワード管理
+passwords-header-content = { -brand-product-name } はあなたのパスワードを安全にブラウザーに保存します。
 lockwise-header-content-logged-in = パスワードを安全に保存して、ご使用のすべての端末と共有しましょう。
-protection-report-save-passwords-button = パスワードを保存
-  .title = { -lockwise-brand-short-name } にパスワードを保存
-protection-report-manage-passwords-button = パスワードを管理
-  .title = { -lockwise-brand-short-name } でパスワードを管理
-lockwise-mobile-app-title = どこでもパスワードが使える
-lockwise-no-logins-card-content = { -brand-short-name } に保存したパスワードを他の端末でも利用できます。
-lockwise-app-links = <a data-l10n-name="lockwise-android-inline-link">Android 版</a>および <a data-l10n-name="lockwise-ios-inline-link">iOS 版</a> { -lockwise-brand-name }
+protection-report-passwords-save-passwords-button = パスワードを保存
+  .title = パスワードを保存
+protection-report-passwords-manage-passwords-button = パスワードを管理
+  .title = パスワードを管理
 
 # Variables:
 # $count (Number) - Number of passwords exposed in data breaches.
@@ -85,9 +82,6 @@ lockwise-scanned-text-breached-logins = { $count } 個のパスワードが漏�
 # $count (Number) - Number of passwords stored in Lockwise.
 lockwise-scanned-text-no-breached-logins = パスワードは安全に保存されています。
 lockwise-how-it-works-link = 仕組みについて
-
-turn-on-sync = { -sync-brand-short-name } をオンにする...
-    .title = 同期の設定に移動
 
 monitor-title = データ漏洩に注意を
 monitor-link = 仕組みについて

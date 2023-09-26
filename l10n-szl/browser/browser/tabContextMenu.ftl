@@ -2,12 +2,21 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
+tab-context-new-tab =
+    .label = Nowo karta
+    .accesskey = w
 reload-tab =
     .label = Przeladuj karta
     .accesskey = P
 select-all-tabs =
     .label = Ôbier wszyskie karty
     .accesskey = W
+tab-context-play-tab =
+    .label = Puść karta
+    .accesskey = p
+tab-context-play-tabs =
+    .label = Puść karty
+    .accesskey = y
 duplicate-tab =
     .label = Tupluj karta
     .accesskey = T
@@ -17,12 +26,12 @@ duplicate-tabs =
 # The following string is displayed on a menuitem that will close the tabs from the start of the tabstrip to the currently targeted tab (excluding the currently targeted and any other selected tabs).
 # In left-to-right languages this should use "Left" and in right-to-left languages this should use "Right".
 close-tabs-to-the-start =
-    .label = Zawrzij lewe karty
+    .label = Zawrzij karty z lewyj
     .accesskey = Z
 # The following string is displayed on a menuitem that will close the tabs from the end of the tabstrip to the currently targeted tab (excluding the currently targeted and any other selected tabs).
 # In left-to-right languages this should use "Right" and in right-to-left languages this should use "Left".
 close-tabs-to-the-end =
-    .label = Zawrzij prawe karty
+    .label = Zawrzij karty z prawyj
     .accesskey = i
 close-other-tabs =
     .label = Zawrzij inksze karty
@@ -45,61 +54,44 @@ unpin-selected-tabs =
 bookmark-selected-tabs =
     .label = Przidej karty do zokłodek…
     .accesskey = Z
-bookmark-tab =
-    .label = Przidej karta do zokłodek
-    .accesskey = Z
-reopen-in-container =
-    .label = Ôdewrzij w kōntynerowyj karcie
+tab-context-open-in-new-container-tab =
+    .label = Ôtwōrz we nowyj kōntynerowyj karcie
     .accesskey = e
 move-to-start =
     .label = Przeniyś na poczōntek
     .accesskey = C
 move-to-end =
     .label = Przeniyś na kōniec
-    .accesskey = s
+    .accesskey = n
 move-to-new-window =
-    .label = Dej do nowego ôkna
+    .label = Przeniyś do nowego ôkna
     .accesskey = O
 tab-context-close-multiple-tabs =
-    .label = Ôbier mocka kart
-    .accesskey = M
-tab-context-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Wrōć zawarte karty
-            [one] Wrōć zawarto karta
-            [few] Wrōć zawarte karty
-           *[many] Wrōć zawarte karty
-        }
-    .accesskey = W
-close-tab =
-    .label = Zawrzij karta
-    .accesskey = Z
-close-tabs =
-    .label = Zawrzij karty
-    .accesskey = Z
-move-tabs =
-    .label = Przeniyś karty
-    .accesskey = n
-move-tab =
-    .label = Przeniyś karta
-    .accesskey = n
+    .label = Zawrzij wiyncyj kart
+    .accesskey = w
 tab-context-share-url =
     .label = Udostympnij
     .accesskey = U
-tab-context-share-more =
-    .label = Wiyncyj…
 
 ## Variables:
 ##  $tabCount (Number): the number of tabs that are affected by the action.
 
-tab-context-close-tabs =
+tab-context-reopen-closed-tabs =
     .label =
         { $tabCount ->
-            [1] Zawrzij karty
-            [one] Zawrzij karta
-            [few] Zawrzij karty
-           *[many] Zawrzij karty
+            [1] Ôtwōrz nazod zawarto karta
+            [one] Ôtwōrz nazod zawarto karta
+            [few] Ôtwōrz nazod zawarte karty
+           *[many] Ôtwōrz nazod zawarte karty
+        }
+    .accesskey = o
+tab-context-close-n-tabs =
+    .label =
+        { $tabCount ->
+            [1] Zawrzij karta
+            [one] Zawrzij { $tabCount } karta
+            [few] Zawrzij { $tabCount } karty
+           *[many] Zawrzij { $tabCount } kart
         }
     .accesskey = Z
 tab-context-move-tabs =
@@ -111,3 +103,12 @@ tab-context-move-tabs =
            *[many] Przeniyś karty
         }
     .accesskey = P
+
+tab-context-send-tabs-to-device =
+    .label =
+        { $tabCount ->
+            [one] Poślij karta na maszina
+            [few] Poślij { $tabCount } katy na maszina
+           *[many] Poślij { $tabCount } kart na maszina
+        }
+    .accesskey = n

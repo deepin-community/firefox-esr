@@ -6,26 +6,23 @@ synced-tabs-sidebar-title = સમન્વિત કરેલા ટૅબ્�
 synced-tabs-sidebar-noclients-subtitle = અહીં અન્ય ઉપકરણોથી તમારા ટેબ્સ જોવા માંગો છો?
 synced-tabs-sidebar-unverified = તમારા એકાઉન્ટને ચકાસવાની જરૂર છે.
 synced-tabs-sidebar-notabs = કોઈ ટૅબ્સ ખુલ્લા નથી
-synced-tabs-sidebar-openprefs = ખોલો { -sync-brand-short-name } પસંદગીઓ
 synced-tabs-sidebar-tabsnotsyncing = તમારા અન્ય ઉપકરણોમાંથી ટેબ્સની સૂચિ જોવા માટે ટેબ સમન્વયન ચાલુ કરો.
 synced-tabs-sidebar-connect-another-device = બીજા ઉપકરણ સાથે જોડાણ કરો
 synced-tabs-sidebar-search =
     .placeholder = સમન્વયિત ટેબ્સ શોધો
+
+## Displayed in the Synced Tabs sidebar's context menu when right-clicking tabs
+## and/or devices in the list. The "Open" strings below should be translated
+## consistently with the equivalent strings for the bookmarks manager's context
+## menu. That menu is activated by right-clicking a bookmark in the Library
+## window. The bookmarks manager context's strings are located in places.ftl.
+
 synced-tabs-context-open =
     .label = ખોલો
     .accesskey = O
-synced-tabs-context-open-in-new-tab =
-    .label = નવી ટૅબમાં ખોલો
-    .accesskey = w
-synced-tabs-context-open-in-new-window =
-    .label = નવી વિન્ડોમાં ખોલો
-    .accesskey = N
-synced-tabs-context-open-in-new-private-window =
-    .label = નવી ખાનગી વિન્ડોમાં ખોલો
-    .accesskey = P
-synced-tabs-context-bookmark-single-tab =
-    .label = આ ટૅબને બુકમાર્ક કરો…
-    .accesskey = B
+
+##
+
 synced-tabs-context-copy =
     .label = નકલ કરો
     .accesskey = C
@@ -38,4 +35,3 @@ synced-tabs-context-manage-devices =
 synced-tabs-context-sync-now =
     .label = હમણાં સમન્વયિત કરો
     .accesskey = S
-fxa-sign-in = { -sync-brand-short-name } માં પ્રવેશો

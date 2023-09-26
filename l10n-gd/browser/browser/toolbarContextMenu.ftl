@@ -20,17 +20,8 @@ toolbar-context-menu-bookmark-selected-tabs =
 toolbar-context-menu-select-all-tabs =
     .label = Tagh gach taba
     .accesskey = S
-toolbar-context-menu-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Neo-dhèan dùnadh an taba
-            [one] Neo-dhèan dùnadh nan tabaichean
-            [two] Neo-dhèan dùnadh nan tabaichean
-            [few] Neo-dhèan dùnadh nan tabaichean
-           *[other] Neo-dhèan dùnadh nan tabaichean
-        }
-    .accesskey = N
-
+# Variables
+#   $tabCount (number) - Number of tabs
 toolbar-context-menu-reopen-closed-tabs =
     .label =
         { $tabCount ->
@@ -56,18 +47,18 @@ toolbar-context-menu-report-extension =
     .label = Dèan aithris air an leudachan
     .accesskey = a
 
-# Can appear on the same context menu as menubarCmd ("Menu Bar") and
-# personalbarCmd ("Bookmarks Toolbar"), so they should have different
-# access keys.
+# Can appear on the same context menu as toolbar-context-menu-menu-bar-cmd
+# ("Menu Bar") and personalbarCmd ("Bookmarks Toolbar"), so they should
+# have different access keys.
 toolbar-context-menu-pin-to-overflow-menu =
     .label = Prìnich ris a’ chlàr-taice taosgaidh
     .accesskey = P
-toolbar-context-menu-auto-hide-downloads-button =
-    .label = Falaich gu fèin-obrachail air bàr nan inneal
-    .accesskey = A
 toolbar-context-menu-auto-hide-downloads-button-2 =
     .label = Falaich am putan nuair a bhios e falamh
     .accesskey = h
+toolbar-context-menu-always-open-downloads-panel =
+    .label = Seall a’ phanail nuair a thòisicheas an luchdadh a-nuas
+    .accesskey = S
 toolbar-context-menu-remove-from-toolbar =
     .label = Thoir air falbh on bhàr-inneal
     .accesskey = r
@@ -77,6 +68,11 @@ toolbar-context-menu-view-customize-toolbar =
 toolbar-context-menu-view-customize-toolbar-2 =
     .label = Gnàthaich am bàr-inneal…
     .accesskey = c
+# This is only ever shown when toolbar-context-menu-pin-to-overflow-menu
+# is hidden, so they can share access keys.
+toolbar-context-menu-pin-to-toolbar =
+    .label = Prìnich ris a’ bhàr-inneal
+    .accesskey = P
 
 toolbar-context-menu-bookmarks-toolbar-always-show-2 =
     .label = Seall an-còmhnaidh
@@ -91,3 +87,7 @@ toolbar-context-menu-bookmarks-toolbar-on-new-tab-2 =
 toolbar-context-menu-bookmarks-show-other-bookmarks =
     .label = Seall na comharran-lìn eile
     .accesskey = h
+
+toolbar-context-menu-menu-bar-cmd =
+    .toolbarname = Bàr a' chlàir-thaice
+    .accesskey = B

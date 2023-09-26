@@ -2,13 +2,12 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-screenshots-context-menu = 截图
-
-screenshots-my-shots-button = 我的截图
-
 screenshot-toolbarbutton =
     .label = 截图
     .tooltiptext = 一键截图
+
+screenshot-shortcut =
+    .key = S
 
 screenshots-instructions = 在此页上拖拽或单击选择截图区域。按 ESC 键取消截图。
 screenshots-cancel-button = 取消
@@ -18,6 +17,14 @@ screenshots-download-button = 保存
 screenshots-download-button-tooltip = 保存截图
 screenshots-copy-button = 复制
 screenshots-copy-button-tooltip = 复制截图到剪贴板
+screenshots-download-button-title =
+    .title = 保存截图
+screenshots-copy-button-title =
+    .title = 复制截图到剪贴板
+screenshots-cancel-button-title =
+    .title = 取消
+screenshots-retry-button-title =
+    .title = 重新截图
 
 screenshots-meta-key =
     { PLATFORM() ->
@@ -41,8 +48,6 @@ screenshots-login-error-details = { -screenshots-brand-name } 服务遇到问题
 screenshots-unshootable-page-error-title = 我们无法截图此页面。
 screenshots-unshootable-page-error-details = 这不是一个标准的网页，所以无法截图。
 
-screenshots-self-screenshot-error-title = 您不能截取 { -screenshots-brand-name } 的页面！
-
 screenshots-empty-selection-error-title = 您选择的范围太小
 
 screenshots-private-window-error-title = 隐私浏览模式下 { -screenshots-brand-name } 已被禁用
@@ -50,3 +55,6 @@ screenshots-private-window-error-details = 很抱歉因此带来的不便。我�
 
 screenshots-generic-error-title = 哎呀，{ -screenshots-brand-name } 遇到问题。
 screenshots-generic-error-details = 我们不确定发生了什么。您可以再试一次或者试试另一个页面。
+
+screenshots-too-large-error-title = 您的屏幕截图因太大而被裁剪
+screenshots-too-large-error-details = 请选择长边小于 32,700 像素或总面积小于 124,900,000 像素的区域。

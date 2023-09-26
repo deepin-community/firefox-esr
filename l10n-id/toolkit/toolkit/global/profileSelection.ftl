@@ -23,6 +23,8 @@ profile-selection-delete-button =
     .label = Hapus Profil…
     .accesskey = H
 
+profile-selection-conflict-message = Salinan lain dari { -brand-product-name } telah membuat perubahan pada profil. Anda harus memulai ulang { -brand-short-name } sebelum membuat lebih banyak perubahan.
+
 ## Messages used in the profile manager
 
 profile-manager-description = { -brand-short-name } menyimpan informasi tentang pengaturan dan data lainnya di profil Anda.

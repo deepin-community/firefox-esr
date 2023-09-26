@@ -65,11 +65,6 @@ options-stylesheet-autocompletion-tooltip =
 # The heading
 options-screenshot-label = رفتار تصویر‌گرفتن از صفحه
 
-# Label for the checkbox that toggles screenshot to clipboard feature
-options-screenshot-clipboard-label = تصویر صفحه به clipboard
-options-screenshot-clipboard-tooltip =
-    .title = ذخیره‌سازی تصاویر صفحه مستقیما در clipboard
-
 # Label for the checkbox that toggles the camera shutter audio for screenshot tool
 options-screenshot-audio-label = پخش صدای شاتر دوربین
 options-screenshot-audio-tooltip =
@@ -131,8 +126,3 @@ options-context-triggers-page-refresh = تنها نشست فعلی، صفحه ر
 
 ##
 
-# The label for the checkbox that toggles the display of the platform data in the
-# Profiler i.e. devtools.profiler.ui.show-platform-data a boolean preference in about:config
-options-show-platform-data-label = نمایش اطلاعات بستر Gecko
-options-show-platform-data-tooltip =
-    .title = اگر شما این گزینه را فعال کنید نمایه JavaScript گزارش هایی شامل نماد های سکو Gecko گزارش خواهد کرد

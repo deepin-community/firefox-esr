@@ -19,3 +19,20 @@ opensearch-error-download-desc = { -brand-short-name } לא יכל להוריד 
 
 ##
 
+searchbar-submit =
+    .tooltiptext = שליחת החיפוש
+
+# This string is displayed in the search box when the input field is empty
+searchbar-input =
+    .placeholder = חיפוש
+
+searchbar-icon =
+    .tooltiptext = חיפוש
+
+## Infobar shown when search engine is removed and replaced.
+## Variables
+## $oldEngine (String) - the search engine to be removed.
+## $newEngine (String) - the search engine to replace the removed search engine.
+
+removed-search-engine-message = <strong>מנוע החיפוש ברירת המחדל שלך השתנה.</strong> { $oldEngine } אינו זמין יותר כמנוע חיפוש ברירת מחדל ב־{ -brand-short-name }. ‏{ $newEngine } הוא כעת מנוע החיפוש ברירת המחדל שלך. על מנת לשנות אותו למנוע חיפוש ברירת מחדל אחר, יש לעבור להגדרות. <label data-l10n-name="remove-search-engine-article">מידע נוסף</label>
+remove-search-engine-button = אישור

@@ -9,8 +9,14 @@ reload-tab =
     .label = Абнавіць картку
     .accesskey = А
 select-all-tabs =
-    .label = Выбраць усе карткі
+    .label = Вылучыць усе карткі
     .accesskey = ы
+tab-context-play-tab =
+    .label = Прайграць картку
+    .accesskey = П
+tab-context-play-tabs =
+    .label = Прайграць карткі
+    .accesskey = р
 duplicate-tab =
     .label = Дубляваць картку
     .accesskey = Д
@@ -48,12 +54,9 @@ unpin-selected-tabs =
 bookmark-selected-tabs =
     .label = Закладкі на карткі…
     .accesskey = л
-bookmark-tab =
-    .label = Дадаць закладку на картку
-    .accesskey = ь
-reopen-in-container =
-    .label = Пераадкрыць у кантэйнеры
-    .accesskey = у
+tab-context-bookmark-tab =
+    .label = Зрабіць закладку на картку…
+    .accesskey = і
 tab-context-open-in-new-container-tab =
     .label = Адкрыць у новай картцы ў кантэйнеры
     .accesskey = у
@@ -69,32 +72,9 @@ move-to-new-window =
 tab-context-close-multiple-tabs =
     .label = Закрыць некалькі картак
     .accesskey = ь
-tab-context-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Адмяніць закрыццё карткі
-            [one] Адмяніць закрыццё карткі
-            [few] Адмяніць закрыццё картак
-           *[many] Адмяніць закрыццё картак
-        }
-    .accesskey = я
-close-tab =
-    .label = Закрыць картку
-    .accesskey = З
-close-tabs =
-    .label = Закрыць карткі
-    .accesskey = З
-move-tabs =
-    .label = Перамясціць карткі
-    .accesskey = м
-move-tab =
-    .label = Перамясціць картку
-    .accesskey = м
 tab-context-share-url =
     .label = Падзяліцца
     .accesskey = П
-tab-context-share-more =
-    .label = Больш…
 
 ## Variables:
 ##  $tabCount (Number): the number of tabs that are affected by the action.
@@ -102,21 +82,12 @@ tab-context-share-more =
 tab-context-reopen-closed-tabs =
     .label =
         { $tabCount ->
-            [1] Перааадкрыць закрытыя карткі
-            [one] Перааадкрыць закрытую картку
-            [few] Перааадкрыць закрытыя карткі
-           *[many] Перааадкрыць закрытыя карткі
+            [1] Пераадкрыць закрытую картку
+            [one] Пераадкрыць закрытую картку
+            [few] Пераадкрыць закрытыя карткі
+           *[many] Пераадкрыць закрытыя карткі
         }
     .accesskey = з
-tab-context-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Закрыць картку
-            [one] Закрыць картку
-            [few] Закрыць карткі
-           *[many] Закрыць карткі
-        }
-    .accesskey = З
 tab-context-close-n-tabs =
     .label =
         { $tabCount ->
@@ -135,3 +106,12 @@ tab-context-move-tabs =
            *[many] Перамясціць карткі
         }
     .accesskey = м
+
+tab-context-send-tabs-to-device =
+    .label =
+        { $tabCount ->
+            [one] Даслаць картку на прыладу
+            [few] Даслаць { $tabCount } карткі на прыладу
+           *[many] Даслаць { $tabCount } картак на прыладу
+        }
+    .accesskey = т

@@ -2,16 +2,19 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-bookmark-overlay-name =
-    .value = Անվանումը.
+bookmark-overlay-name-2 =
+    .value = Անուն
     .accesskey = N
 
-bookmark-overlay-location =
-    .value = Հասցեն.
-    .accesskey = L
+bookmark-overlay-url =
+    .value = URL
+    .accesskey = U
 
-bookmark-overlay-folder =
-    .value = Թղթապանակը`
+# Location refers to the position of the bookmark within the browser's
+# bookmarks, not to its URL or address.
+bookmark-overlay-location-2 =
+    .value = Տեղադրություն
+    .accesskey = L
 
 bookmark-overlay-choose =
     .label = Ընտրել…
@@ -21,12 +24,18 @@ bookmark-overlay-folders-expander =
     .tooltiptextdown = { bookmark-overlay-folders-expander.tooltiptext }
     .tooltiptextup = Թաքցնել
 
+bookmark-overlay-folders-expander2 =
+    .tooltiptext = Ցուցադրել էջանիշերի բոլոր թղթապանակները
+
+bookmark-overlay-folders-expander-hide =
+    .tooltiptext = Թաքցնել
+
 bookmark-overlay-new-folder-button =
     .label = Նոր թղթապանակ
     .accesskey = o
 
-bookmark-overlay-tags =
-    .value = Նշիչներ`
+bookmark-overlay-tags-2 =
+    .value = Պիտակներ
     .accesskey = T
 
 bookmark-overlay-tags-empty-description =
@@ -37,7 +46,13 @@ bookmark-overlay-tags-expander =
     .tooltiptextdown = { bookmark-overlay-tags-expander.tooltiptext }
     .tooltiptextup = Թաքցնել
 
-bookmark-overlay-keyword =
-    .value = Կարճ անուն`
+bookmark-overlay-tags-expander2 =
+    .tooltiptext = Ցուցադրել բոլոր կցապիտակները
+
+bookmark-overlay-tags-expander-hide =
+    .tooltiptext = Թաքցնել
+
+bookmark-overlay-keyword-2 =
+    .value = Հիմնաբառ
     .accesskey = K
 

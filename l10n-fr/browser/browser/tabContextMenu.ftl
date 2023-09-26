@@ -11,6 +11,12 @@ reload-tab =
 select-all-tabs =
     .label = Sélectionner tous les onglets
     .accesskey = S
+tab-context-play-tab =
+    .label = Lancer la lecture
+    .accesskey = L
+tab-context-play-tabs =
+    .label = Lancer la lecture
+    .accesskey = L
 duplicate-tab =
     .label = Dupliquer l’onglet
     .accesskey = D
@@ -48,12 +54,9 @@ unpin-selected-tabs =
 bookmark-selected-tabs =
     .label = Marquer ces onglets…
     .accesskey = u
-bookmark-tab =
-    .label = Ajouter l’onglet aux marque-pages
-    .accesskey = M
-reopen-in-container =
-    .label = Rouvrir dans un onglet conteneur
-    .accesskey = O
+tab-context-bookmark-tab =
+    .label = Ajouter aux marque-pages…
+    .accesskey = m
 tab-context-open-in-new-container-tab =
     .label = Ouvrir dans un nouvel onglet conteneur
     .accesskey = e
@@ -69,30 +72,9 @@ move-to-new-window =
 tab-context-close-multiple-tabs =
     .label = Fermer plusieurs onglets
     .accesskey = l
-tab-context-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [one] Annuler la fermeture de l’onglet
-           *[other] Annuler la fermeture des onglets
-        }
-    .accesskey = n
-close-tab =
-    .label = Fermer l’onglet
-    .accesskey = F
-close-tabs =
-    .label = Fermer les onglets
-    .accesskey = S
-move-tabs =
-    .label = Déplacer les onglets
-    .accesskey = D
-move-tab =
-    .label = Déplacer l’onglet
-    .accesskey = D
 tab-context-share-url =
     .label = Partager
     .accesskey = P
-tab-context-share-more =
-    .label = Plus…
 
 ## Variables:
 ##  $tabCount (Number): the number of tabs that are affected by the action.
@@ -105,13 +87,6 @@ tab-context-reopen-closed-tabs =
            *[other] Rouvrir les onglets fermés
         }
     .accesskey = o
-tab-context-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Fermer l’onglet
-           *[other] Fermer les onglets
-        }
-    .accesskey = F
 tab-context-close-n-tabs =
     .label =
         { $tabCount ->
@@ -127,3 +102,11 @@ tab-context-move-tabs =
            *[other] Déplacer les onglets
         }
     .accesskey = c
+
+tab-context-send-tabs-to-device =
+    .label =
+        { $tabCount ->
+            [one] Envoyer l’onglet à un appareil
+           *[other] Envoyer { $tabCount } onglets à un appareil
+        }
+    .accesskey = v

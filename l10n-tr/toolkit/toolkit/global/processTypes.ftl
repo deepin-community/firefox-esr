@@ -9,8 +9,6 @@
 
 process-type-web = Web içeriği
 
-process-type-browser = Ana
-
 # process used to run privileged about pages,
 # such as about:home
 process-type-privilegedabout = Ayrıcalıklı about
@@ -24,13 +22,13 @@ process-type-extension = Uzantı
 # process used to open file:// URLs
 process-type-file = Yerel dosya
 
-# process used to isolate webpages that requested special
-# permission to allocate large amounts of memory
-process-type-weblargeallocation = Büyük tahsis
-
 # process used to isolate a webpage from other web pages
 # to improve security
 process-type-webisolated = İzole web içeriği
+
+# process used to isolate a ServiceWorker to improve
+# performance
+process-type-webserviceworker = İzole service worker
 
 # process preallocated; may change to other types
 process-type-prealloc = Önceden ayrılmış
@@ -51,6 +49,9 @@ process-type-socket = Soket
 
 # process used to decode media
 process-type-rdd = RDD
+
+# process used to run some IPC actor in their own sandbox
+process-type-utility = Korumalı IPC aktörü
 
 ##
 ## Other

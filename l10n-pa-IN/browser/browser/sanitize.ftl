@@ -2,22 +2,22 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-sanitize-prefs =
+sanitize-prefs2 =
     .title = ਅਤੀਤ ਨੂੰ ਸਾਫ਼ ਕਰਨ ਲਈ ਸੈਟਿੰਗ
-    .style = width: 34em
+    .style = min-width: 34em
 
 sanitize-prefs-style =
     .style = width: 17em
 
-dialog-title =
+sanitize-dialog-title =
     .title = ਤਾਜ਼ੇ ਅਤੀਤ ਨੂੰ ਸਾਫ਼ ਕਰੋ
-    .style = width: 34em
+    .style = min-width: 34em
 
 # When "Time range to clear" is set to "Everything", this message is used for the
 # title instead of dialog-title.
-dialog-title-everything =
+sanitize-dialog-title-everything =
     .title = ਸਭ ਅਤੀਤ ਨੂੰ ਸਾਫ਼ ਕਰੋ
-    .style = width: 34em
+    .style = min-width: 34em
 
 clear-data-settings-label = ਜਦੋਂ ਬੰਦ ਹੁੰਦਾ ਹੈ ਤਾਂ { -brand-short-name } ਆਪਣੇ-ਆਪ ਸਭ ਸਾਫ਼ ਕਰਦਾ ਹੈ
 
@@ -78,8 +78,8 @@ item-form-search-history =
 
 data-section-label = ਮਿਤੀ
 
-item-site-preferences =
-    .label = ਸਾਈਟ ਪਸੰਦ
+item-site-settings =
+    .label = ਸਾਈਟ ਦੀਆਂ ਸੈਟਿੰਗਾਂ
     .accesskey = S
 
 item-offline-apps =

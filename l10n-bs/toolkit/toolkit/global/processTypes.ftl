@@ -9,8 +9,6 @@
 
 process-type-web = Web sadržaj
 
-process-type-browser = Glavno
-
 # process used to run privileged about pages,
 # such as about:home
 process-type-privilegedabout = Privilegovane About
@@ -23,10 +21,6 @@ process-type-extension = Ekstenzija
 
 # process used to open file:// URLs
 process-type-file = Lokalni fajl
-
-# process used to isolate webpages that requested special
-# permission to allocate large amounts of memory
-process-type-weblargeallocation = Velika alokacija
 
 # process used to isolate a webpage from other web pages
 # to improve security

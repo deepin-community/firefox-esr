@@ -66,8 +66,8 @@ options-stylesheet-autocompletion-tooltip =
 options-screenshot-label = Comportament de la captura de pantalla
 
 # Label for the checkbox that toggles screenshot to clipboard feature
-options-screenshot-clipboard-label = Captura de pantalla al porta-retalls
-options-screenshot-clipboard-tooltip =
+options-screenshot-clipboard-only-label = Desa la captura de pantalla només al porta-retalls
+options-screenshot-clipboard-tooltip2 =
     .title = Desa la captura de pantalla directament al porta-retalls
 
 # Label for the checkbox that toggles the camera shutter audio for screenshot tool
@@ -95,7 +95,7 @@ options-sourceeditor-keybinding-default-label = Per defecte
 
 ## Advanced section
 
-# The heading
+# The heading (this item is also used in perftools.ftl)
 options-context-advanced-settings = Paràmetres avançats
 
 # The label for the checkbox that toggles the HTTP cache on or off
@@ -131,8 +131,3 @@ options-source-maps-tooltip =
 # The message shown for settings that trigger page reload
 options-context-triggers-page-refresh = * Només la sessió actual, recarrega la pàgina
 
-# The label for the checkbox that toggles the display of the platform data in the
-# Profiler i.e. devtools.profiler.ui.show-platform-data a boolean preference in about:config
-options-show-platform-data-label = Mostra dades de la plataforma Gecko
-options-show-platform-data-tooltip =
-    .title = Si activeu aquesta opció, els informes de l'Analitzador de JavaScript inclouran els símbols de la plataforma Gecko

@@ -20,14 +20,6 @@ toolbar-context-menu-bookmark-selected-tabs =
 toolbar-context-menu-select-all-tabs =
     .label = Pilih Semua Tab
     .accesskey = a
-toolbar-context-menu-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Urungkan Menutup Tab
-           *[other] Urungkan Menutup Tab
-        }
-    .accesskey = U
-
 toolbar-context-menu-reopen-closed-tabs =
     .label =
         { $tabCount ->
@@ -50,18 +42,18 @@ toolbar-context-menu-report-extension =
     .label = Laporkan Ekstensi
     .accesskey = o
 
-# Can appear on the same context menu as menubarCmd ("Menu Bar") and
-# personalbarCmd ("Bookmarks Toolbar"), so they should have different
-# access keys.
+# Can appear on the same context menu as toolbar-context-menu-menu-bar-cmd
+# ("Menu Bar") and personalbarCmd ("Bookmarks Toolbar"), so they should
+# have different access keys.
 toolbar-context-menu-pin-to-overflow-menu =
     .label = Letakkan di Menu Luapan
     .accesskey = P
-toolbar-context-menu-auto-hide-downloads-button =
-    .label = Sembunyi-Otomatis di Bilah Alat
-    .accesskey = A
 toolbar-context-menu-auto-hide-downloads-button-2 =
     .label = Sembunyikan Tombol Jika Kosong
     .accesskey = K
+toolbar-context-menu-always-open-downloads-panel =
+    .label = Tampilkan Panel Saat Unduhan Dimulai
+    .accesskey = T
 toolbar-context-menu-remove-from-toolbar =
     .label = Hapus dari Bilah Alat
     .accesskey = H
@@ -71,6 +63,11 @@ toolbar-context-menu-view-customize-toolbar =
 toolbar-context-menu-view-customize-toolbar-2 =
     .label = Ubahsuai Bilah Alat…
     .accesskey = U
+# This is only ever shown when toolbar-context-menu-pin-to-overflow-menu
+# is hidden, so they can share access keys.
+toolbar-context-menu-pin-to-toolbar =
+    .label = Sematkan ke Bilah Alat
+    .accesskey = S
 
 toolbar-context-menu-bookmarks-toolbar-always-show-2 =
     .label = Selalu Tampilkan
@@ -85,3 +82,7 @@ toolbar-context-menu-bookmarks-toolbar-on-new-tab-2 =
 toolbar-context-menu-bookmarks-show-other-bookmarks =
     .label = Tampilkan Markah Lain
     .accesskey = T
+
+toolbar-context-menu-menu-bar-cmd =
+    .toolbarname = Bilah Menu
+    .accesskey = M

@@ -6,9 +6,6 @@ password-quality-meter = Kvalitetsmätare för lösenord
 
 ## Change Password dialog
 
-change-password-window =
-    .title = Ändra huvudlösenord
-
 change-device-password-window =
     .title = Ändra lösenord
 
@@ -18,12 +15,6 @@ change-password-token = Säkerhetsenhet: { $tokenName }
 change-password-old = Nuvarande lösenord:
 change-password-new = Nytt lösenord:
 change-password-reenter = Nytt lösenord (bekräftas):
-
-## Reset Password dialog
-
-reset-password-window =
-    .title = Ta bort huvudlösenord
-    .style = width: 40em
 
 pippki-failed-pw-change = Det går inte att ändra lösenord.
 pippki-incorrect-pw = Du angav inte rätt lösenord. Var god försök igen.
@@ -37,13 +28,11 @@ pippki-pw-change2empty-in-fips-mode = Du är för närvarande i FIPS-läge. FIPS
 
 ## Reset Primary Password dialog
 
-reset-primary-password-window =
+reset-primary-password-window2 =
     .title = Återställ huvudlösenord
-    .style = width: 40em
+    .style = min-width: 40em
 reset-password-button-label =
     .label = Ta bort
-reset-password-text = Om du tar bort ditt huvudlösenord kommer alla dina lagrade webb- och e-postlösenord, formulärdata, personliga certifikat och hemliga nycklar att tas bort. Är du säker på att du vill ta bort ditt huvudlösenord?
-
 reset-primary-password-text = Om du återställer ditt huvudlösenord kommer alla dina lagrade webb- och e-postlösenord, personliga certifikat och privata nycklar att glömmas. Är du säker på att du vill återställa ditt huvudlösenord?
 
 pippki-reset-password-confirmation-title = Återställ huvudlösenord
@@ -51,9 +40,9 @@ pippki-reset-password-confirmation-message = Ditt huvudlösenord har återställ
 
 ## Downloading cert dialog
 
-download-cert-window =
+download-cert-window2 =
     .title = Hämtar certifikat
-    .style = width: 46em
+    .style = min-width: 46em
 download-cert-message = En ny Certifikatutfärdare(CA) vill ha ditt godkännande.
 download-cert-trust-ssl =
     .label = Lita på denna CA för identifiering av webbplatser.
@@ -85,7 +74,8 @@ set-password-reminder = Viktigt: Om du glömmer detta lösenord kommer du inte a
 
 ## Protected Auth dialog
 
-protected-auth-window =
-    .title = Skyddad informationsbärarautentisering
-protected-auth-msg = Var god autentisera till informationsbäraren. Autentiseringsmetoden beror på informationsbärarens typ.
-protected-auth-token = Informationsbärare:
+## Protected authentication alert
+
+# Variables:
+# $tokenName (String) - The name of the token to authenticate to (for example, "OS Client Cert Token (Modern)")
+protected-auth-alert = Vänligen autentisera till token "{ $tokenName }". Hur man gör det beror på token (till exempel genom att använda en fingeravtrycksläsare eller ange en kod med en knappsats).

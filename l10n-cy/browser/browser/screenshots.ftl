@@ -2,22 +2,29 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-screenshots-context-menu = Cymryd Llun Sgrin Screenshot
-
-screenshots-my-shots-button = Fy Lluniau Sgrin
-
 screenshot-toolbarbutton =
-    .label = Ciplun
-    .tooltiptext = Cymryd ciplun
+    .label = Llun Sgrin
+    .tooltiptext = Cymryd llun sgrin
 
-screenshots-instructions = Llusgwch neu glicio ar y dudalen i ddewis adran. Pwyso ESC i ddiddymu.
+screenshot-shortcut =
+    .key = S
+
+screenshots-instructions = Llusgwch neu glicio ar y dudalen i ddewis ardal. Pwyso ESC i ddiddymu.
 screenshots-cancel-button = Diddymu
 screenshots-save-visible-button = Cadw'r gweladwy
 screenshots-save-page-button = Cadw tudalen lawn
-screenshots-download-button = Llwytho i Lawr
+screenshots-download-button = Llwytho i lawr
 screenshots-download-button-tooltip = Llwytho i lawr llun sgrin
 screenshots-copy-button = Copïo
 screenshots-copy-button-tooltip = Copïo llun sgrin i'r clipfwrdd
+screenshots-download-button-title =
+    .title = Llwytho i lawr llun sgrin
+screenshots-copy-button-title =
+    .title = Copïo llun sgrin i'r clipfwrdd
+screenshots-cancel-button-title =
+    .title = Diddymu
+screenshots-retry-button-title =
+    .title = Cymryd sgrin llun eto
 
 screenshots-meta-key =
     { PLATFORM() ->
@@ -41,8 +48,6 @@ screenshots-login-error-details = Nid oedd modd i ni gadw eich llun gan fod yna 
 screenshots-unshootable-page-error-title = Nid oes modd tynnu llun sgrin o'r dudalen.
 screenshots-unshootable-page-error-details = Nid yw hwn yn dudalen Gwe safonol, felly does dim modd tynnu llun sgrin ohono.
 
-screenshots-self-screenshot-error-title = Nid oes modd cymryd llun o dudalen lluniau sgrin { -screenshots-brand-name }!
-
 screenshots-empty-selection-error-title = Mae eich dewis yn rhy fach
 
 screenshots-private-window-error-title = Mae { -screenshots-brand-name } wedi ei analluogi yn y Modd Pori Preifat
@@ -50,3 +55,6 @@ screenshots-private-window-error-details = Ymddiheuriadau am yr anhwylustod. Ryd
 
 screenshots-generic-error-title = Www! Mae { -screenshots-brand-name } wedi mynd yn hurt.
 screenshots-generic-error-details = Nid ydym yn gwybod beth sydd wedi ddigwydd. Ceisiwch eto neu dynnu llun o dudalen wahanol?
+
+screenshots-too-large-error-title = Cafodd eich llun sgrin ei docio am ei fod yn rhy fawr
+screenshots-too-large-error-details = Ceisiwch ddewis ardal sy'n llai na 32,700 picsel ar ei ochr hiraf neu gyfanswm arwynebedd o 124,900,000 picsel.

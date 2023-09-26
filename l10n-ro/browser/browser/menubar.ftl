@@ -43,15 +43,6 @@ menu-quit =
 menu-quit-mac =
     .label = Ieși din { -brand-shorter-name }
 
-# This menu-quit-button string is only used on Linux.
-menu-quit-button =
-    .label = { menu-quit.label }
-
-# This menu-quit-button-win string is only used on Windows.
-menu-quit-button-win =
-    .label = { menu-quit.label }
-    .tooltip = Ieși din { -brand-shorter-name }
-
 menu-about =
     .label = Despre { -brand-shorter-name }
     .accesskey = A
@@ -81,9 +72,6 @@ menu-file-open-location =
 menu-file-open-file =
     .label = Deschide un fișier…
     .accesskey = O
-menu-file-close =
-    .label = Închide
-    .accesskey = C
 menu-file-close-window =
     .label = Închide fereastra
     .accesskey = d
@@ -96,9 +84,6 @@ menu-file-email-link =
 menu-file-print-setup =
     .label = Aranjare în pagină…
     .accesskey = u
-menu-file-print-preview =
-    .label = Previzualizează pentru tipărire
-    .accesskey = v
 menu-file-print =
     .label = Tipărește…
     .accesskey = P
@@ -114,9 +99,6 @@ menu-file-go-offline =
 menu-edit =
     .label = Editare
     .accesskey = E
-menu-edit-find-on =
-    .label = Caută în pagină…
-    .accesskey = F
 menu-edit-find-in-page =
     .label = Caută în pagină…
     .accesskey = F
@@ -135,9 +117,6 @@ menu-view =
 menu-view-toolbars-menu =
     .label = Bare de instrumente
     .accesskey = T
-menu-view-customize-toolbar =
-    .label = Personalizează…
-    .accesskey = C
 menu-view-customize-toolbar2 =
     .label = Personalizează bara de instrumente…
     .accesskey = C
@@ -174,10 +153,6 @@ menu-view-page-style-no-style =
 menu-view-page-basic-style =
     .label = Stilul de bază al paginii
     .accesskey = b
-menu-view-charset =
-    .label = Codare de text
-    .accesskey = C
-
 menu-view-repair-text-encoding =
     .label = Repară codarea de text
     .accesskey = c
@@ -194,6 +169,17 @@ menu-view-exit-full-screen =
 menu-view-full-screen =
     .label = Ecran complet
     .accesskey = F
+
+## These menu items may use the same accesskey.
+
+# This should match reader-view-enter-button in browser.ftl
+menu-view-enter-readerview =
+    .label = Intră în modul de lectură
+    .accesskey = R
+# This should match reader-view-close-button in browser.ftl
+menu-view-close-readerview =
+    .label = Închide modul de lectură
+    .accesskey = R
 
 ##
 
@@ -224,24 +210,15 @@ menu-history-undo-menu =
 menu-history-undo-window-menu =
     .label = Ferestre închise recent
 
-menu-history-reopen-all-tabs = Redeschide toate filele
-menu-history-reopen-all-windows = Redeschise toate ferestrele
-
 ## Bookmarks Menu
 
 menu-bookmarks-menu =
     .label = Marcaje
     .accesskey = B
-menu-bookmarks-show-all =
-    .label = Afișează toate marcajele
-menu-bookmark-this-page =
-    .label = Marchează pagina
 menu-bookmarks-manage =
     .label = Gestionează marcajele
-menu-bookmark-current-tab =
-    .label = Marchează fila actuală
-menu-bookmark-edit =
-    .label = Editează acest marcaj
+menu-bookmark-tab =
+    .label = Marchează fila actuală…
 menu-bookmarks-all-tabs =
     .label = Marchează toate filele…
 menu-bookmarks-toolbar =
@@ -259,15 +236,6 @@ menu-tools =
 menu-tools-downloads =
     .label = Descărcări
     .accesskey = D
-menu-tools-addons =
-    .label = Suplimente
-    .accesskey = A
-menu-tools-fxa-sign-in =
-    .label = Intră în contul { -brand-product-name }…
-    .accesskey = g
-menu-tools-turn-on-sync =
-    .label = Activează { -sync-brand-short-name }…
-    .accesskey = n
 menu-tools-addons-and-themes =
     .label = Suplimente și teme
     .accesskey = A
@@ -283,9 +251,6 @@ menu-tools-sync-now =
 menu-tools-fxa-re-auth =
     .label = Reconectare la { -brand-product-name }…
     .accesskey = R
-menu-tools-web-developer =
-    .label = Dezvoltator web
-    .accesskey = W
 menu-tools-browser-tools =
     .label = Uneltele browserului
     .accesskey = B
@@ -298,17 +263,6 @@ menu-tools-page-source =
 menu-tools-page-info =
     .label = Informații despre pagină
     .accesskey = I
-menu-preferences =
-    .label =
-        { PLATFORM() ->
-            [windows] Opțiuni
-           *[other] Preferințe
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] O
-           *[other] n
-        }
 menu-settings =
     .label = Setări
     .accesskey =
@@ -341,21 +295,6 @@ menu-window-bring-all-to-front =
 menu-help =
     .label = Ajutor
     .accesskey = H
-menu-help-product =
-    .label = Ajutor { -brand-shorter-name }
-    .accesskey = H
-menu-help-show-tour =
-    .label = Tur { -brand-shorter-name }
-    .accesskey = o
-menu-help-import-from-another-browser =
-    .label = Importă din alt browser…
-    .accesskey = I
-menu-help-keyboard-shortcuts =
-    .label = Comenzi rapide din tastatură
-    .accesskey = K
-menu-help-troubleshooting-info =
-    .label = Informații pentru depanare
-    .accesskey = T
 menu-get-help =
     .label = Obține ajutor
     .accesskey = H
@@ -364,21 +303,18 @@ menu-help-more-troubleshooting-info =
     .accesskey = T
 menu-help-report-site-issue =
     .label = Raportează problemă cu site-ul…
-menu-help-feedback-page =
-    .label = Trimite feedback…
+menu-help-share-ideas =
+    .label = Împărtășește idei și feedbackuri…
     .accesskey = S
-menu-help-safe-mode-without-addons =
-    .label = Repornește cu suplimentele dezactivate…
-    .accesskey = R
-menu-help-safe-mode-with-addons =
-    .label = Repornește cu suplimentele activate
-    .accesskey = R
 menu-help-enter-troubleshoot-mode2 =
     .label = Mod de depanare…
     .accesskey = M
 menu-help-exit-troubleshoot-mode =
     .label = Oprește modul de depanare
     .accesskey = M
+menu-help-switch-device =
+    .label = Comutarea pe un dispozitiv nou
+    .accesskey = N
 # Label of the Help menu item. Either this or
 # menu-help-notdeceptive is shown.
 menu-help-report-deceptive-site =

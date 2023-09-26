@@ -10,11 +10,6 @@ crashes-id = ID izvještaja
 crashes-send-date = Poslano
 crashes-all-reports = Svi izvještaji o rušenju
 crashes-no-config = Ovaj program nije podešen da prikazuje izvještaje o rušenju.
-extensions-title = Proširenja
-extensions-name = Naziv
-extensions-enabled = Aktivirano
-extensions-version = Verzija
-extensions-id = ID
 support-addons-title = Dodaci
 support-addons-name = Naziv
 support-addons-type = Vrsta
@@ -60,6 +55,7 @@ app-basics-enabled-plugins = Aktivirani priključci
 app-basics-build-config = Konfiguracija gradnje
 app-basics-user-agent = Korisnički agent
 app-basics-os = OS
+app-basics-os-theme = Tema OS-a
 # Rosetta is Apple's translation process to run apps containing x86_64
 # instructions on Apple Silicon. This should remain in English.
 app-basics-rosetta = Prevedeno Rosettom
@@ -75,6 +71,7 @@ app-basics-location-service-key-google = Google ključ za usluge lokacije
 app-basics-safebrowsing-key-google = Google ključ za sigurno pregledavanje
 app-basics-key-mozilla = Mozilla ključ za usluge lokacije
 app-basics-safe-mode = Siguran način rada
+
 show-dir-label =
     { PLATFORM() ->
         [macos] Prikaži u Finderu
@@ -128,9 +125,6 @@ sandbox-sys-call-tid = TID
 sandbox-sys-call-proc-type = Vrsta procesa
 sandbox-sys-call-number = Poziv sustava
 sandbox-sys-call-args = Argumenti
-safe-mode-title = Pokušaj siguran način rada
-restart-in-safe-mode-label = Ponovo pokreni s isključenim dodacima …
-
 troubleshoot-mode-title = Dijagnosticiranje problema
 restart-in-troubleshoot-mode-label = Način rada za rješavanje problema…
 clear-startup-cache-title = Pokušaj poništiti predmemoriju pokretanja
@@ -160,6 +154,8 @@ media-capabilities-title = Mogućnosti medija
 # List all the entries of the database.
 media-capabilities-enumerate = Popis unosa baze podataka
 
+## Codec support table
+
 ##
 
 intl-title = Internacionalizacija i lokalizacija
@@ -186,26 +182,6 @@ remote-debugging-accepting-connections = Prihvaćanje veza
 remote-debugging-url = URL
 
 ##
-
-support-third-party-modules-module = Datoteka modula
-support-third-party-modules-version = Verzija datoteke
-support-third-party-modules-process = Vrsta procesa i ID
-support-third-party-modules-uptime = Vrijeme rada procesa (ms)
-support-third-party-modules-no-value = (bez vrijednosti)
-support-third-party-modules-button-open =
-    .title = Otvori lokaciju datoteke…
-support-third-party-modules-expand =
-    .title = Prikaži detaljne informacije
-support-third-party-modules-collapse =
-    .title = Sakrij detaljne informacije
-support-third-party-modules-unsigned-icon =
-    .title = Ovaj modul nije potpisan
-support-third-party-modules-folder-icon =
-    .title = Otvori lokaciju datoteke…
-support-third-party-modules-down-icon =
-    .title = Prikaži detaljne informacije
-support-third-party-modules-up-icon =
-    .title = Sakrij detaljne informacije
 
 # Variables
 # $days (Integer) - Number of days of crashes to log
@@ -306,19 +282,12 @@ webgl2-renderer = Iscrtavač upravljačkog programa WebGL 2
 webgl2-version = Verzija upravljačkog programa WebGL 2
 webgl2-driver-extensions = Dodaci upravljačkog programa WebGL 2
 webgl2-extensions = WebGL 2 dodaci
-blocklisted-bug = Blokiran zbog poznatih problema
-
-# Variables
-# $bugNumber (string) - String of bug number from Bugzilla
-bug-link = greška { $bugNumber }
 
 # Variables
 # $failureCode (string) - String that can be searched in the source tree.
 unknown-failure = Blokiran; kȏd neuspjeha { $failureCode }
 
 d3d11layers-crash-guard = D3D11 kompozitor
-d3d11video-crash-guard = D3D11 video dekoder
-d3d9video-crash-guard = D3D9 video dekoder
 glcontext-crash-guard = OpenGL
 wmfvpxvideo-crash-guard = WMF VPX video dekoder
 
@@ -363,21 +332,11 @@ launcher-process-status-unknown = Nepoznato stanje
 # $remoteWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
 multi-process-windows = { $remoteWindows }/{ $totalWindows }
-multi-process-status-0 = Aktivirano od korisnika
-multi-process-status-1 = Standardno aktivirano
-multi-process-status-2 = Onemogućeno
-multi-process-status-4 = Deaktivirano od alata za pristupačnost
-multi-process-status-6 = Onemogućio nepodržani unos teksta
-multi-process-status-7 = Onemogućili dodaci
-multi-process-status-8 = Prisilno onemogućeno
-multi-process-status-unknown = Nepoznato stanje
-
 fission-status-experiment-control = Onemogućio eksperiment
 fission-status-experiment-treatment = Omogućio eksperiment
 fission-status-disabled-by-e10s-env = Onemogućilo okruženje
 fission-status-enabled-by-env = Omogućilo okruženje
-fission-status-disabled-by-safe-mode = Onemogućio sigurnosni način rada
-fission-status-enabled-by-default = Omogućeno prema zadanim postavkama
+fission-status-enabled-by-default = Standardno aktivirano
 fission-status-disabled-by-default = Onemogućeno prema zadanim postavkama
 fission-status-enabled-by-user-pref = Omogućio korisnik
 fission-status-disabled-by-user-pref = Onemogućio korisnik

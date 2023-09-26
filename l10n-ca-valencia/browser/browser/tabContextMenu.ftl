@@ -2,12 +2,21 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
+tab-context-new-tab =
+    .label = Pestanya nova
+    .accesskey = n
 reload-tab =
     .label = Torna a carregar la pestanya
     .accesskey = r
 select-all-tabs =
     .label = Selecciona totes les pestanyes
     .accesskey = t
+tab-context-play-tab =
+    .label = Reprodueix la pestanya
+    .accesskey = x
+tab-context-play-tabs =
+    .label = Reprodueix les pestanyes
+    .accesskey = x
 duplicate-tab =
     .label = Duplica la pestanya
     .accesskey = D
@@ -45,12 +54,9 @@ unpin-selected-tabs =
 bookmark-selected-tabs =
     .label = Afig les pestanyes a les adreces d'interés…
     .accesskey = A
-bookmark-tab =
-    .label = Afig la pestanya a les adreces d'interés
-    .accesskey = A
-reopen-in-container =
-    .label = Torna a obrir en un contenidor
-    .accesskey = e
+tab-context-open-in-new-container-tab =
+    .label = Obri en una pestanya de contenidor nova
+    .accesskey = b
 move-to-start =
     .label = Mou al principi
     .accesskey = p
@@ -63,30 +69,9 @@ move-to-new-window =
 tab-context-close-multiple-tabs =
     .label = Tanca diverses pestanyes
     .accesskey = a
-tab-context-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Desfés el tancament de la pestanya
-           *[other] Desfés el tancament de les pestanyes
-        }
-    .accesskey = f
-close-tab =
-    .label = Tanca la pestanya
-    .accesskey = c
-close-tabs =
-    .label = Tanca les pestanyes
-    .accesskey = c
-move-tabs =
-    .label = Mou les pestanyes
-    .accesskey = u
-move-tab =
-    .label = Mou la pestanya
-    .accesskey = u
 tab-context-share-url =
     .label = Comparteix
     .accesskey = x
-tab-context-share-more =
-    .label = Més…
 
 ## Variables:
 ##  $tabCount (Number): the number of tabs that are affected by the action.
@@ -98,11 +83,11 @@ tab-context-reopen-closed-tabs =
            *[other] Torna a obrir les pestanyes tancades
         }
     .accesskey = o
-tab-context-close-tabs =
+tab-context-close-n-tabs =
     .label =
         { $tabCount ->
             [1] Tanca la pestanya
-           *[other] Tanca les pestanyes
+           *[other] Tanca { $tabCount } pestanyes
         }
     .accesskey = c
 tab-context-move-tabs =
@@ -112,3 +97,11 @@ tab-context-move-tabs =
            *[other] Mou les pestanyes
         }
     .accesskey = M
+
+tab-context-send-tabs-to-device =
+    .label =
+        { $tabCount ->
+            [one] Envia la pestanya a un dispositiu
+           *[other] Envia { $tabCount } pestanyes a un dispositiu
+        }
+    .accesskey = n

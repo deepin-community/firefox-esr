@@ -11,20 +11,14 @@ site-data-search-textbox =
 
 site-data-column-host =
     .label = Мрежно место
+site-data-column-cookies =
+    .label = Колачиња
 site-data-column-storage =
     .label = Складиште
 
 site-data-remove-selected =
     .label = Отстрани избрани
     .accesskey = р
-
-site-data-button-cancel =
-    .label = Откажи
-    .accesskey = Ц
-
-site-data-button-save =
-    .label = Зачувај промени
-    .accesskey = а
 
 ## Removing
 

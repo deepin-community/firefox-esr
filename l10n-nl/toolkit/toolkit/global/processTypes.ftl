@@ -9,8 +9,6 @@
 
 process-type-web = Webinhoud
 
-process-type-browser = Hoofd
-
 # process used to run privileged about pages,
 # such as about:home
 process-type-privilegedabout = Over Met privileges
@@ -24,13 +22,13 @@ process-type-extension = Extensie
 # process used to open file:// URLs
 process-type-file = Lokaal bestand
 
-# process used to isolate webpages that requested special
-# permission to allocate large amounts of memory
-process-type-weblargeallocation = Grote toewijzing
-
 # process used to isolate a webpage from other web pages
 # to improve security
 process-type-webisolated = Geïsoleerde webinhoud
+
+# process used to isolate a ServiceWorker to improve
+# performance
+process-type-webserviceworker = Geïsoleerde serviceworker
 
 # process preallocated; may change to other types
 process-type-prealloc = Vooraf toegewezen
@@ -51,6 +49,9 @@ process-type-socket = Socket
 
 # process used to decode media
 process-type-rdd = RDD
+
+# process used to run some IPC actor in their own sandbox
+process-type-utility = Gesandboxte IPC Actor
 
 ##
 ## Other

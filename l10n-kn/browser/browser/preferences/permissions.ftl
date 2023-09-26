@@ -2,9 +2,9 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-permissions-window =
+permissions-window2 =
     .title = ವಿನಾಯಿತಿಗಳು
-    .style = width: 45em
+    .style = min-width: 45em
 
 permissions-close-key =
     .key = w
@@ -38,14 +38,6 @@ permissions-remove-all =
     .label = ಎಲ್ಲಾ ಜಾಲತಾಣಗಳನ್ನು ತೆಗೆದು ಹಾಕು
     .accesskey = e
 
-permissions-button-cancel =
-    .label = ರದ್ದುಮಾಡು
-    .accesskey = C
-
-permissions-button-ok =
-    .label = ಬದಲಾವಣೆಗಳನ್ನು ಉಳಿಸು
-    .accesskey = S
-
 permissions-searchbox =
     .placeholder = ಜಾಲತಾಣವನ್ನು ಹುಡುಕು
 
@@ -70,10 +62,12 @@ permissions-invalid-uri-label = ದಯವಿಟ್ಟು ಒಂದು ಮಾನ�
 
 ## Exceptions - Tracking Protection
 
+
 ## Exceptions - Cookies
 
 
 ## Exceptions - HTTPS-Only Mode
+
 
 ## Exceptions - Pop-ups
 
@@ -81,17 +75,16 @@ permissions-exceptions-popup-desc = ಯಾವ ಜಾಲತಾಣಗಳು ಪು
 
 ## Exceptions - Saved Logins
 
-permissions-exceptions-saved-logins-window =
+permissions-exceptions-saved-logins-window2 =
     .title = ವಿನಾಯಿತಿಗಳು - ಉಳಿಸಿದ ಲಾಗಿನ್‍ಗಳು
-    .style = { permissions-window.style }
+    .style = { permissions-window2.style }
 
 ## Exceptions - Add-ons
 
 permissions-exceptions-addons-desc = ಯಾವ ಜಾಲತಾಣಗಳು ಆಡ್-ಆನ್‌ಗಳನ್ನು ಅನುಸ್ಥಾಪಿಸಲು ಅನುಮತಿ ಇದೆ ಎಂದು ನೀವು ಸೂಚಿಸಬಹುದು. ನೀವು ಅನುಮತಿಸಲು ಬಯಸುವ ತಾಣದ ನಿಖರವಾದ ವಿಳಾಸವನ್ನು ನಮೂದಿಸಿ ನಂತರ ಅನುಮತಿಸು ಅನ್ನು ಕ್ಲಿಕ್ಕಿಸಿ.
 
-## Exceptions - Autoplay Media
-
 ## Site Permissions - Autoplay
+
 
 ## Site Permissions - Notifications
 
@@ -101,14 +94,20 @@ permissions-exceptions-addons-desc = ಯಾವ ಜಾಲತಾಣಗಳು ಆ�
 
 ## Site Permissions - Virtual Reality
 
+
 ## Site Permissions - Camera
 
-permissions-site-camera-window =
+permissions-site-camera-window2 =
     .title = ಕ್ಯಾಮರ ಅನುಮತಿ - ಸಿದ್ಧತೆಗಳು
-    .style = { permissions-window.style }
+    .style = { permissions-window2.style }
 
 ## Site Permissions - Microphone
 
-permissions-site-microphone-window =
+permissions-site-microphone-window2 =
     .title = ಮೈಕ್ರೋಫೋನ್ ಅನುಮತಿ - ಸಿದ್ಧತೆಗಳು
-    .style = { permissions-window.style }
+    .style = { permissions-window2.style }
+
+## Site Permissions - Speaker
+##
+## "Speaker" refers to an audio output device.
+

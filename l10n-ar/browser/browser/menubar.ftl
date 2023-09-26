@@ -38,16 +38,11 @@ menu-quit =
             [windows] خ
            *[other] غ
         }
+
 # This menu-quit-mac string is only used on macOS.
 menu-quit-mac =
     .label = أغلق { -brand-shorter-name }
-# This menu-quit-button string is only used on Linux.
-menu-quit-button =
-    .label = { menu-quit.label }
-# This menu-quit-button-win string is only used on Windows.
-menu-quit-button-win =
-    .label = { menu-quit.label }
-    .tooltip = أغلق { -brand-shorter-name }
+
 menu-about =
     .label = عن { -brand-shorter-name }
     .accesskey = ع
@@ -77,8 +72,19 @@ menu-file-open-location =
 menu-file-open-file =
     .label = افتح ملفًا…
     .accesskey = ف
-menu-file-close =
-    .label = أغلق
+# Variables:
+#  $tabCount (Number): the number of tabs that are affected by the action.
+menu-file-close-tab =
+    .label =
+        { $tabCount ->
+            [1] أغلِق اللسان
+            [zero] أغلِق اللسان
+            [one] أغلِق اللسان
+            [two] أغلِق اللسانين
+            [few] أغلِق { $tabCount } ألسنة
+            [many] أغلِق { $tabCount } لسانًا
+           *[other] أغلِق { $tabCount } لسان
+        }
     .accesskey = غ
 menu-file-close-window =
     .label = أغلق النافذة
@@ -89,12 +95,12 @@ menu-file-save-page =
 menu-file-email-link =
     .label = أرسل الرابط بالبريد…
     .accesskey = س
+menu-file-share-url =
+    .label = شارِك
+    .accesskey = ش
 menu-file-print-setup =
     .label = إعداد الصفحة…
     .accesskey = ع
-menu-file-print-preview =
-    .label = معاينة الطباعة
-    .accesskey = ط
 menu-file-print =
     .label = اطبع…
     .accesskey = ط
@@ -110,9 +116,6 @@ menu-file-go-offline =
 menu-edit =
     .label = حرّر
     .accesskey = ح
-menu-edit-find-on =
-    .label = ابحث في هذه الصفحة…
-    .accesskey = ب
 menu-edit-find-in-page =
     .label = ابحث في الصفحة…
     .accesskey = ح
@@ -131,9 +134,6 @@ menu-view =
 menu-view-toolbars-menu =
     .label = أشرطة الأدوات
     .accesskey = ش
-menu-view-customize-toolbar =
-    .label = خصّص…
-    .accesskey = ص
 menu-view-customize-toolbar2 =
     .label = خصّص شريط الأدوات…
     .accesskey = خ
@@ -170,9 +170,9 @@ menu-view-page-style-no-style =
 menu-view-page-basic-style =
     .label = طراز صفحة بسيط
     .accesskey = ص
-menu-view-charset =
-    .label = ترميز النص
-    .accesskey = ر
+menu-view-repair-text-encoding =
+    .label = أصلِح ترميز النص
+    .accesskey = ت
 
 ## These should match what Safari and other Apple applications
 ## use on macOS.
@@ -186,6 +186,17 @@ menu-view-exit-full-screen =
 menu-view-full-screen =
     .label = ملء الشاشة
     .accesskey = ش
+
+## These menu items may use the same accesskey.
+
+# This should match reader-view-enter-button in browser.ftl
+menu-view-enter-readerview =
+    .label = ادخل منظور القارئ
+    .accesskey = ظ
+# This should match reader-view-close-button in browser.ftl
+menu-view-close-readerview =
+    .label = أغلق منظور القارئ
+    .accesskey = غ
 
 ##
 
@@ -215,24 +226,14 @@ menu-history-undo-menu =
     .label = الألسنة المُغلقة مؤخرًا
 menu-history-undo-window-menu =
     .label = النوافذ المغلقة مؤخرًا
-menu-history-reopen-all-tabs = أعِد فتح كل الألسنة
-menu-history-reopen-all-windows = أعِد فتح كل النوافذ
 
 ## Bookmarks Menu
 
 menu-bookmarks-menu =
     .label = علامات
     .accesskey = ع
-menu-bookmarks-show-all =
-    .label = أظهِر كل العلامات
-menu-bookmark-this-page =
-    .label = علّم هذه الصفحة
 menu-bookmarks-manage =
     .label = أدِر العلامات
-menu-bookmark-current-tab =
-    .label = علّم اللسان الحالي
-menu-bookmark-edit =
-    .label = حرّر هذه العلامة
 menu-bookmarks-all-tabs =
     .label = علّم كل الألسنة…
 menu-bookmarks-toolbar =
@@ -250,15 +251,6 @@ menu-tools =
 menu-tools-downloads =
     .label = التنزيلات
     .accesskey = ز
-menu-tools-addons =
-    .label = الإضافات
-    .accesskey = ض
-menu-tools-fxa-sign-in =
-    .label = لِج إلى { -brand-product-name }…
-    .accesskey = ل
-menu-tools-turn-on-sync =
-    .label = فعّل { -sync-brand-short-name }…
-    .accesskey = ف
 menu-tools-addons-and-themes =
     .label = الإضافات والسمات
     .accesskey = ض
@@ -274,9 +266,6 @@ menu-tools-sync-now =
 menu-tools-fxa-re-auth =
     .label = أعِد الاتصال بِ‍ { -brand-product-name }…
     .accesskey = ع
-menu-tools-web-developer =
-    .label = مطوّري الوب
-    .accesskey = و
 menu-tools-browser-tools =
     .label = أدوات المتصفّح
     .accesskey = ص
@@ -289,17 +278,6 @@ menu-tools-page-source =
 menu-tools-page-info =
     .label = معلومات الصفحة
     .accesskey = م
-menu-preferences =
-    .label =
-        { PLATFORM() ->
-            [windows] خيارات
-           *[other] التفضيلات
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] خ
-           *[other] ف
-        }
 menu-settings =
     .label = الإعدادات
     .accesskey =
@@ -332,21 +310,6 @@ menu-window-bring-all-to-front =
 menu-help =
     .label = مساعدة
     .accesskey = س
-menu-help-product =
-    .label = مساعدة { -brand-shorter-name }
-    .accesskey = س
-menu-help-show-tour =
-    .label = جولة في { -brand-shorter-name }
-    .accesskey = ل
-menu-help-import-from-another-browser =
-    .label = استورِد من متصفح آخر…
-    .accesskey = س
-menu-help-keyboard-shortcuts =
-    .label = اختصارات لوحة المفاتيح
-    .accesskey = خ
-menu-help-troubleshooting-info =
-    .label = معلومات مواجهة الأعطال
-    .accesskey = ط
 menu-get-help =
     .label = احصل على مُساعدة
     .accesskey = ح
@@ -355,15 +318,6 @@ menu-help-more-troubleshooting-info =
     .accesskey = ط
 menu-help-report-site-issue =
     .label = أبلغ عن مشكلة بالموقع…
-menu-help-feedback-page =
-    .label = أرسِل تعليقًا…
-    .accesskey = ر
-menu-help-safe-mode-without-addons =
-    .label = أعِد التشغيل مع تعطيل الإضافات…
-    .accesskey = ش
-menu-help-safe-mode-with-addons =
-    .label = أعِد التشغيل مع تفعيل الإضافات
-    .accesskey = ش
 menu-help-enter-troubleshoot-mode2 =
     .label = وضع مواجهة الأعطال
     .accesskey = ه

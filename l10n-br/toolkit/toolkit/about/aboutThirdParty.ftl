@@ -10,9 +10,6 @@ third-party-intro =
     { -brand-short-name }. Pep mollad ha n'eo ket bet sinet gant Microsoft pe
     { -vendor-short-name } a vez graet trede-mollad anezhañ.
 
-third-party-header-module-list = Listenn ar molladoù
-third-party-header-loading-events = O kargañ an darvoudoù
-
 third-party-message-empty = Tamm trede-mollad ebet a zo bet kavet.
 third-party-message-no-duration = N'eo ket enrollet
 
@@ -37,10 +34,6 @@ third-party-tag-background = Drekleur
     .title =
         Ar mollad-mañ n'en deus ket stanket an arload peogwir eo bet karget 
         en drekleur.
-third-party-unsigned-icon =
-    .title = N'eo ket sinet ar mollad-mañ
-third-party-warning-icon =
-    .title = { -brand-short-name } a zo chomet sac'het e-barzh kod ar mollad-mañ.
 
 third-party-status-loaded = Karget
 third-party-status-blocked = Stanket
@@ -55,3 +48,4 @@ third-party-button-expand =
     .title = Diskouez an titouroù dre ar munud
 third-party-button-collapse =
     .title = Kuzhat an titouroù dre ar munud
+

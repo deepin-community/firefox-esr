@@ -2,9 +2,9 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-clear-site-data-window =
+clear-site-data-window2 =
     .title = Borrar datos
-    .style = width: 35em
+    .style = min-width: 35em
 
 clear-site-data-description = Limpiar las cookies y los datos de sitios almacenados por { -brand-short-name } puede ocasionar que se cierren tus sesiones activas y eliminar el contenido web sin conexión. Limpiar los datos de caché no afectará tus sesiones activas.
 
@@ -50,14 +50,6 @@ clear-site-data-cache-empty =
     .accesskey = W
 
 clear-site-data-cache-info = Se requerirá que los sitios web recarguen imágenes y datos
-
-clear-site-data-cancel =
-    .label = Cancelar
-    .accesskey = C
-
-clear-site-data-clear =
-    .label = Limpiar
-    .accesskey = l
 
 clear-site-data-dialog =
     .buttonlabelaccept = Limpiar

@@ -2,19 +2,22 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-addons-window =
-    .title = Менаџер додатака
-
 addons-page-title = Менаџер додатака
 
 search-header =
     .placeholder = Претражите addons.mozilla.org
     .searchbuttonlabel = Претражи
 
-search-header-shortcut =
-    .key = f
+## Variables
+##   $domain - Domain name where add-ons are available (e.g. addons.mozilla.org)
 
 list-empty-get-extensions-message = Преузмите додатке и теме на <a data-l10n-name="get-extensions">{ $domain }</a>
+
+list-empty-get-dictionaries-message = Преузмите речнике на <a data-l10n-name="get-extensions">{ $domain }</a>
+
+list-empty-get-language-packs-message = Преузмите језичке пакете на <a data-l10n-name="get-extensions">{ $domain }</a>
+
+##
 
 list-empty-installed =
     .value = Нисте инсталирали ниједан додатак ове врсте
@@ -34,22 +37,6 @@ list-empty-button =
 help-button = Помоћ
 sidebar-help-button-title =
     .title = Помоћ
-
-preferences =
-    Подешавања { -brand-short-name.gender ->
-        [masculine] { -brand-short-name(case: "gen") }
-        [feminine] { -brand-short-name(case: "gen") }
-        [neuter] { -brand-short-name(case: "gen") }
-       *[other] програма { -brand-short-name }
-    }
-sidebar-preferences-button-title =
-    .title =
-        Подешавања { -brand-short-name.gender ->
-            [masculine] { -brand-short-name(case: "gen") }
-            [feminine] { -brand-short-name(case: "gen") }
-            [neuter] { -brand-short-name(case: "gen") }
-           *[other] програма { -brand-short-name }
-        }
 
 addons-settings-button =
     Подешавања { -brand-short-name.gender ->
@@ -73,40 +60,14 @@ show-unsigned-extensions-button =
 show-all-extensions-button =
     .label = Прикажи све додатке
 
-cmd-show-details =
-    .label = Прикажи више информација
-    .accesskey = в
-
-cmd-find-updates =
-    .label = Нађи ажурирања
-    .accesskey = Н
-
-cmd-preferences =
-    .label = Подешавања
-    .accesskey = П
-
-cmd-enable-theme =
-    .label = Укључи тему
-    .accesskey = У
-
-cmd-disable-theme =
-    .label = Искључи тему
-    .accesskey = И
-
-cmd-install-addon =
-    .label = Постави
-    .accesskey = П
-
-cmd-contribute =
-    .label = Донирај
-    .accesskey = Д
-    .tooltiptext = Дајте прилог аутору овог додатка
-
 detail-version =
     .label = Верзија
 
 detail-last-updated =
     .label = Последње ажурирање
+
+addon-detail-description-expand = Прикажи више
+addon-detail-description-collapse = Прикажи мање
 
 detail-contributions-description = Програмер овог додатка моли да подржите његов непрекидан развој, тако што ћете дати мали допринос.
 
@@ -175,7 +136,7 @@ detail-rating =
     .value = Оцена
 
 addon-restart-now =
-    .label = Рестартуј
+    .label = Поново покрени сада
 
 disabled-unsigned-heading =
     .value = Неки додаци су онемогућени
@@ -228,6 +189,13 @@ addon-category-available-updates-title =
 addon-category-recent-updates = Недавна ажурирања
 addon-category-recent-updates-title =
     .title = Недавна ажурирања
+addon-category-sitepermission = Дозволе странице
+addon-category-sitepermission-title =
+    .title = Дозволе странице
+# String displayed in about:addons in the Site Permissions section
+# Variables:
+#  $host (string) - DNS host name for which the webextension enables permissions
+addon-sitepermission-host = Дозволе за сајт за { $host }
 
 ## These are global warnings
 
@@ -238,7 +206,6 @@ extensions-warning-check-compatibility-button = Укључи
 extensions-warning-update-security = Безбедносна провера додатака је искључена. Неисправни додаци могу да наруше безбедност система.
 extensions-warning-update-security-button = Омогући
     .title = Омогући проверавање безбедности додатка
-
 
 ## Strings connected to add-on updates
 
@@ -314,6 +281,8 @@ shortcuts-duplicate-warning-message = { $shortcut } се користи као �
 #   $addon (string) - Name of the add-on
 shortcuts-exists = { $addon } је већ у употреби
 
+# Variables:
+#   $numberToShow (number) - Number of other elements available to show
 shortcuts-card-expand-button =
     { $numberToShow ->
         [one] Прикажи { $numberToShow } више
@@ -352,6 +321,7 @@ install-theme-button = Инсталирај тему
 # the detailed add-on view is opened, from where the add-on can be managed.
 manage-addon-button = Управљај
 find-more-addons = Пронађи више додатака
+find-more-themes = Нађите више тема
 
 # This is a label for the button to open the "more options" menu, it is only
 # used for screen readers.
@@ -379,7 +349,7 @@ extension-enabled-heading = Омогућени
 extension-disabled-heading = Онемогућени
 
 theme-enabled-heading = Омогућене
-theme-disabled-heading = Онемогућене
+theme-disabled-heading2 = Сачуване теме
 
 plugin-enabled-heading = Омогућене
 plugin-disabled-heading = Онемогућене
@@ -390,7 +360,8 @@ dictionary-disabled-heading = Онемогућени
 locale-enabled-heading = Омогућени
 locale-disabled-heading = Онемогућени
 
-ask-to-activate-button = Питај за активирање
+sitepermission-enabled-heading = Омогућено
+sitepermission-disabled-heading = Онемогућено
 
 always-activate-button = Увек активирај
 never-activate-button = Никад не активирај
@@ -449,13 +420,15 @@ addon-detail-private-browsing-help = Ако дозволите, додатак �
 addon-detail-private-browsing-allow = Дозволи
 addon-detail-private-browsing-disallow = Блокирај
 
+## "sites with restrictions" (internally called "quarantined") are special domains
+## where add-ons are normally blocked for security reasons.
+
 ## This is the tooltip text for the recommended badges for an extension in about:addons. The
 ## badge is a small icon displayed next to an extension when it is recommended on AMO.
 
 addon-badge-recommended2 =
     .title = { -brand-product-name } препоручује само додатке који задовољавају наше стандарде безбедности и перформанси
     .aria-label = { addon-badge-recommended2.title }
-
 # We hard code "Mozilla" in the string below because the extensions are built
 # by Mozilla and we don't want forks to display "by Fork".
 addon-badge-line3 =
@@ -474,13 +447,16 @@ release-notes-loading = Учитава се...
 release-notes-error = Нажалост, дошло је до грешке при учитавању напомена о издању.
 
 addon-permissions-empty = Овај додатак не захтева никакве дозволе
-
 addon-permissions-required = Потребне дозволе за основну функционалност:
 addon-permissions-optional = Додатне дозволе за додатну функционалност:
 addon-permissions-learnmore = Сазнајте више о дозволама
 
 recommended-extensions-heading = Препоручени додаци
 recommended-themes-heading = Препоручене теме
+
+# Variables:
+#   $hostname (string) - Host where the permissions are granted
+addon-sitepermissions-required = Пружа <span data-l10n-name="hostname">{ $hostname }</span> следеће могућности:
 
 # A recommendation for the Firefox Color theme shown at the bottom of the theme
 # list view. The "Firefox Color" name itself should not be translated.
@@ -494,6 +470,7 @@ plugin-heading = Управљајте додатним компонентама
 dictionary-heading = Управљајте речницима
 locale-heading = Управљајте језицима
 updates-heading = Управљајте ажурирањима
+sitepermission-heading = Управљајте дозволама странице
 discover-heading = Прилагодите { -brand-short-name(case: "acc") }
 shortcuts-heading = Управљајте пречицама додатака
 
@@ -503,3 +480,31 @@ addons-heading-search-input =
 
 addon-page-options-button =
     .title = Алатке за све додатке
+
+## Detail notifications
+## Variables:
+##   $name (String): name of the add-on.
+
+
+## Detail notifications
+## Variables:
+##   $name (string) - Name of the add-on.
+
+# Variables:
+#   $version (string) - Application version.
+details-notification-incompatible = { $name } није сагласан са { -brand-short-name } { $version }.
+details-notification-incompatible-link = Више информација
+
+details-notification-unsigned-and-disabled = { $name } није могао бити потврђен за коришћење у { -brand-short-name }-у и онемогућен је.
+details-notification-unsigned-and-disabled-link = Више информација
+
+details-notification-unsigned = { $name } није могао бити потврђен за коришћење у { -brand-short-name }-у. Наставите са опрезом.
+details-notification-unsigned-link = Више информација
+
+details-notification-blocked = { $name } је онемогућен због проблема са безбедношћу или стабилношћу.
+details-notification-blocked-link = Више информација
+
+details-notification-softblocked = Познато је да { $name } проузрокује проблеме са безбедношћу или стабилношћу.
+details-notification-softblocked-link = Више информација
+
+details-notification-gmp-pending = { $name } ће ускоро бити инсталиран.

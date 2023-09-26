@@ -34,6 +34,10 @@ text-action-paste =
     .label = Տեղադրել
     .accesskey = Տ
 
+text-action-paste-no-formatting =
+    .label = Տեղադրել առանց ձևաչափման
+    .accesskey = m
+
 text-action-paste-shortcut =
     .key = V
 
@@ -48,3 +52,25 @@ text-action-select-all =
 text-action-select-all-shortcut =
     .key = A
 
+text-action-spell-add-to-dictionary =
+    .label = Ավելացնել բառարանում
+    .accesskey = o
+
+text-action-spell-undo-add-to-dictionary =
+    .label = Հետարկել ավելացնել բառարանում
+    .accesskey = n
+
+text-action-spell-check-toggle =
+    .label = Ստուգել ուղղագրությունը
+    .accesskey = g
+
+text-action-spell-add-dictionaries =
+    .label = Ավելացնել բառարաններ...
+    .accesskey = A
+
+text-action-spell-dictionaries =
+    .label = Լեզուներ
+    .accesskey = L
+
+text-action-search-text-box-clear =
+    .title = Մաքրել

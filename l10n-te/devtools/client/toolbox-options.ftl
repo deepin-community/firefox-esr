@@ -65,11 +65,6 @@ options-stylesheet-autocompletion-tooltip =
 # The heading
 options-screenshot-label = తెరపట్టు ప్రవర్తన
 
-# Label for the checkbox that toggles screenshot to clipboard feature
-options-screenshot-clipboard-label = క్లిప్‌బోర్డు లోనికి తీయి
-options-screenshot-clipboard-tooltip =
-    .title = తెరపట్టుని నేరుగా క్లిప్‌బోర్డులో భద్రపరుస్తుంది
-
 # Label for the checkbox that toggles the camera shutter audio for screenshot tool
 options-screenshot-audio-label = కామెరా యొక్క షట్టర్ ధ్వనిని ప్లే చేయండి
 options-screenshot-audio-tooltip =
@@ -129,8 +124,3 @@ options-context-triggers-page-refresh = * ప్రస్తుత సెషన�
 
 ##
 
-# The label for the checkbox that toggles the display of the platform data in the
-# Profiler i.e. devtools.profiler.ui.show-platform-data a boolean preference in about:config
-options-show-platform-data-label = గెకో ప్లాట్‌ఫాం దత్తాంశం చూపు
-options-show-platform-data-tooltip =
-    .title = మీరు ఈ ఎంపిక చేతనం చేస్తే జావాస్క్రిప్ట్ ప్రొఫైలర్ అనునదిగెకో ప్లాట్‌ఫాం చిహ్నాలు నివేదించును

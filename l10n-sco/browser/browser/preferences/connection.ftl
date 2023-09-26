@@ -2,12 +2,12 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-connection-window =
+connection-window2 =
     .title = Connection Settins
     .style =
         { PLATFORM() ->
-            [macos] width: 44em
-           *[other] width: 49em
+            [macos] min-width: 44em
+           *[other] min-width: 49em
         }
 
 connection-close-key =
@@ -35,10 +35,6 @@ connection-proxy-http = HTTP Proxy
     .accesskey = x
 connection-proxy-http-port = Port
     .accesskey = P
-connection-proxy-http-sharing =
-    .label = Yaise this proxy for FTP and HTTPS forby
-    .accesskey = s
-
 connection-proxy-https-sharing =
     .label = Yaise this proxy for FTP and HTTPS forby
     .accesskey = s
@@ -47,11 +43,6 @@ connection-proxy-https = HTTPS Proxy
     .accesskey = H
 connection-proxy-ssl-port = Port
     .accesskey = o
-
-connection-proxy-ftp = FTP Proxy
-    .accesskey = F
-connection-proxy-ftp-port = Port
-    .accesskey = r
 
 connection-proxy-socks = SOCKS Host
     .accesskey = C
@@ -69,9 +60,6 @@ connection-proxy-noproxy = Nae proxy fur
 
 connection-proxy-noproxy-desc = Exemple: .mozilla.org, .net.nz, 192.168.1.0/24
 
-# Do not translate localhost, 127.0.0.1 and ::1.
-connection-proxy-noproxy-localhost-desc = Connections tae localhost, 127.0.0.1, and ::1 are nivver proxied.
-
 # Do not translate "localhost", "127.0.0.1/8" and "::1". (You can translate "and".)
 connection-proxy-noproxy-localhost-desc-2 = Connections tae localhost, 127.0.0.1/8, and ::1 are nivver proxied.
 
@@ -88,16 +76,14 @@ connection-proxy-autologin =
     .accesskey = i
     .tooltip = This option silently authenticates ye tae proxies when ye hae saved credentials fur them. Ye'll be promptit if authentication misgaes.
 
+connection-proxy-autologin-checkbox =
+    .label = Dinnae speir fur authentication if passwird is saved
+    .accesskey = i
+    .tooltiptext = This option silently authenticates ye tae proxies when ye hae saved credentials fur them. Ye'll be promptit if authentication misgaes.
+
 connection-proxy-socks-remote-dns =
     .label = Proxy DNS when yaisin SOCKS v5
     .accesskey = D
-
-connection-dns-over-https =
-    .label = Enable DNS ower HTTPS
-    .accesskey = b
-
-connection-dns-over-https-url-resolver = Yaise Provider
-    .accesskey = P
 
 # Variables:
 #   $name (String) - Display name or URL for the DNS over HTTPS provider

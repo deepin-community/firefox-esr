@@ -23,6 +23,8 @@ profile-selection-delete-button =
     .label = Usuń profil…
     .accesskey = U
 
+profile-selection-conflict-message = Inna kopia programu { -brand-product-name } wprowadziła zmiany w profilach. Przed wprowadzeniem dalszych zmian należy ponownie uruchomić program { -brand-short-name }.
+
 ## Messages used in the profile manager
 
 profile-manager-description = { -brand-short-name } przechowuje informacje o ustawieniach i preferencjach użytkownika w profilu.

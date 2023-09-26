@@ -48,3 +48,9 @@ text-action-select-all =
 text-action-select-all-shortcut =
     .key = A
 
+text-action-spell-check-toggle =
+    .label = Проверка на правописа
+    .accesskey = П
+
+text-action-search-text-box-clear =
+    .title = Изчистване

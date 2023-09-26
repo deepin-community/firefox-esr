@@ -46,7 +46,7 @@ protections-panel-no-trackers-found = На этой странице не обн
 
 protections-panel-content-blocking-tracking-protection = Отслеживающее содержимое
 
-protections-panel-content-blocking-socialblock = Трекеры социальных сетей
+protections-panel-content-blocking-socialblock = Трекеры соцсетей
 protections-panel-content-blocking-cryptominers-label = Криптомайнеры
 protections-panel-content-blocking-fingerprinters-label = Сборщики цифровых отпечатков
 
@@ -63,7 +63,6 @@ protections-panel-not-found-label = Ничего не найдено
 ##
 
 protections-panel-settings-label = Настройки защиты
-# This should match the "appmenuitem-protection-dashboard-title" string in browser/appmenu.ftl.
 protections-panel-protectionsdashboard-label = Панель состояния защиты
 
 ## In the Site Not Working? view, we suggest turning off protections if
@@ -78,6 +77,7 @@ protections-panel-site-not-working-view-issue-list-forms = Формами
 protections-panel-site-not-working-view-issue-list-payments = Совершением платежей
 protections-panel-site-not-working-view-issue-list-comments = Написанием комментариев
 protections-panel-site-not-working-view-issue-list-videos = Просмотром видео
+protections-panel-site-not-working-view-issue-list-fonts = Шрифтами
 
 protections-panel-site-not-working-view-send-report = Отправьте сообщение
 
@@ -101,6 +101,7 @@ protections-panel-content-blocking-manage-settings =
 protections-panel-content-blocking-breakage-report-view =
     .title = Сообщить о неработающем сайте
 protections-panel-content-blocking-breakage-report-view-description = Блокировка некоторых трекеров может вызывать проблемы с некоторыми веб-сайтами. Сообщая о таких проблемах, вы помогаете сделать { -brand-short-name } лучше для всех и каждого. При отправке сообщения в Mozilla будет отправлен адрес сайта, а также информация о настройках вашего браузера. <label data-l10n-name="learn-more">Подробнее</label>
+protections-panel-content-blocking-breakage-report-view-description2 = Блокировка некоторых трекеров может вызывать проблемы с некоторыми веб-сайтами. Сообщая о таких проблемах, вы помогаете сделать { -brand-short-name } лучше для всех и каждого. При отправке сообщения в { -vendor-short-name } будет отправлен адрес сайта, а также информация о настройках вашего браузера.
 protections-panel-content-blocking-breakage-report-view-collection-url = Адрес страницы
 protections-panel-content-blocking-breakage-report-view-collection-url-label =
     .aria-label = Адрес страницы
@@ -111,3 +112,22 @@ protections-panel-content-blocking-breakage-report-view-cancel =
     .label = Отмена
 protections-panel-content-blocking-breakage-report-view-send-report =
     .label = Отправить сообщение
+
+# Cookie Banner Handling
+
+protections-panel-cookie-banner-handling-header = Снижение числа уведомлений о куках
+protections-panel-cookie-banner-handling-enabled = Включено для этого сайта
+protections-panel-cookie-banner-handling-disabled = Отключено для этого сайта
+protections-panel-cookie-banner-handling-undetected = В настоящее время сайт не поддерживается
+
+protections-panel-cookie-banner-view-title =
+    .title = Снижение числа уведомлений о куках
+# Variables
+#  $host (String): the hostname of the site that is being displayed.
+protections-panel-cookie-banner-view-turn-off-for-site = Отключить снижение числа уведомлений о куках для { $host }?
+protections-panel-cookie-banner-view-turn-on-for-site = Включить снижение числа уведомлений о куках для этого сайта?
+protections-panel-cookie-banner-view-cookie-clear-warning = { -brand-short-name } удалит куки этого сайта и обновит страницу. Удаление всех кук может привести к выходу из учётных записей или опустошению корзин с покупками.
+protections-panel-cookie-banner-view-turn-on-description = { -brand-short-name } пытается автоматически отклонить все запросы кук на поддерживаемых сайтах.
+protections-panel-cookie-banner-view-cancel = Отмена
+protections-panel-cookie-banner-view-turn-off = Отключить
+protections-panel-cookie-banner-view-turn-on = Включить

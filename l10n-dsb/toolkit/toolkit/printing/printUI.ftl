@@ -17,6 +17,9 @@ printui-sheets-count =
     }
 
 printui-page-range-all = Wšykne
+printui-page-range-current = Aktualny
+printui-page-range-odd = Njerowny
+printui-page-range-even = Rowny
 printui-page-range-custom = Swójski
 printui-page-range-label = Boki
 printui-page-range-picker =
@@ -59,8 +62,6 @@ printui-two-sided-printing-short-edge = Na krotkej kšomje wjerśeś
 printui-options = Nastajenja
 printui-headers-footers-checkbox = Głowy a nogi śišćaś
 printui-backgrounds-checkbox = Slězyny śišćaś
-
-printui-selection-checkbox = Jano wuběrk śišćas
 
 ## The "Format" section, select a version of the website to print. Radio
 ## options to select between the original page, selected text only, or a version

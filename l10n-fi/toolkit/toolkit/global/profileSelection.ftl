@@ -23,6 +23,8 @@ profile-selection-delete-button =
     .label = Poista profiili…
     .accesskey = o
 
+profile-selection-conflict-message = Toinen { -brand-product-name }-kopio on tehnyt muutoksia profiileihin. { -brand-short-name } täytyy käynnistää uudestaan ennen lisämuutosten tekemistä.
+
 ## Messages used in the profile manager
 
 profile-manager-description = { -brand-short-name } säilyttää asetuksesi ja muut tiedot käyttäjäprofiilissasi.

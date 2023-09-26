@@ -2,13 +2,12 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-screenshots-context-menu = Tag et skærmbillede
-
-screenshots-my-shots-button = Mine skærmbilleder
-
 screenshot-toolbarbutton =
     .label = Skærmbillede
     .tooltiptext = Tag et skærmbillede
+
+screenshot-shortcut =
+    .key = S
 
 screenshots-instructions = Træk eller klik på siden for at vælge et område. Tryk på ESC for at fortryde.
 screenshots-cancel-button = Fortryd
@@ -18,6 +17,14 @@ screenshots-download-button = Hent
 screenshots-download-button-tooltip = Hent skærmbillede
 screenshots-copy-button = Kopier
 screenshots-copy-button-tooltip = Kopier skærmbillede til udklipsholder
+screenshots-download-button-title =
+    .title = Hent skærmbillede
+screenshots-copy-button-title =
+    .title = Kopier skærmbillede til udklipsholderen
+screenshots-cancel-button-title =
+    .title = Fortryd
+screenshots-retry-button-title =
+    .title = Prøv at tage skærmbillede igen
 
 screenshots-meta-key =
     { PLATFORM() ->
@@ -41,8 +48,6 @@ screenshots-login-error-details = Vi kunne ikke gemme dit skærmbillede, fordi d
 screenshots-unshootable-page-error-title = Vi kan ikke tage et skærmbillede af denne side.
 screenshots-unshootable-page-error-details = Dette er ikke en almindelig webside, så du kan ikke tage skærmbilleder af den.
 
-screenshots-self-screenshot-error-title = Du kan ikke tage skærmbilleder af en side i { -screenshots-brand-name }.
-
 screenshots-empty-selection-error-title = Din markering er for lille
 
 screenshots-private-window-error-title = { -screenshots-brand-name } er deaktiveret i privat browsing-tilstand
@@ -50,3 +55,6 @@ screenshots-private-window-error-details = Vi beklager ulejligheden. Vi arbejder
 
 screenshots-generic-error-title = Hov! Noget gik helt galt med { -screenshots-brand-name }.
 screenshots-generic-error-details = Vi er ikke sikre på, hvad der lige skete. Vil du prøve igen - eller vil du tage et skærmbillede af en anden side?
+
+screenshots-too-large-error-title = Dit skærmbillede blev beskåret, fordi det var for stort
+screenshots-too-large-error-details = Prøv at vælge et område, der er mindre end 32.700 pixels på den bredeste led eller der har et sammenlagt areal under 124.900.000 pixels.

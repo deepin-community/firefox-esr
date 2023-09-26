@@ -14,6 +14,9 @@ printui-sheets-count =
     }
 
 printui-page-range-all = 全部
+printui-page-range-current = 目前
+printui-page-range-odd = 單數頁
+printui-page-range-even = 雙數頁
 printui-page-range-custom = 自訂
 printui-page-range-label = 頁面
 printui-page-range-picker =
@@ -56,8 +59,6 @@ printui-two-sided-printing-short-edge = 短邊翻轉
 printui-options = 選項
 printui-headers-footers-checkbox = 列印頁首與頁尾
 printui-backgrounds-checkbox = 列印背景
-
-printui-selection-checkbox = 只印選取範圍
 
 ## The "Format" section, select a version of the website to print. Radio
 ## options to select between the original page, selected text only, or a version

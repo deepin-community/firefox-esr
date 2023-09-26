@@ -48,6 +48,7 @@ options-default-color-unit-authored = Achi'el nik'oxïk
 options-default-color-unit-hex = Kiwa winäq
 options-default-color-unit-hsl = HSL(A)
 options-default-color-unit-rgb = RGB(A)
+options-default-color-unit-hwb = HWB
 options-default-color-unit-name = Rub'i' ri b'onil
 
 ## Style Editor section
@@ -64,11 +65,6 @@ options-stylesheet-autocompletion-tooltip =
 
 # The heading
 options-screenshot-label = Rub'anikil ri chapoj ruwa
-
-# Label for the checkbox that toggles screenshot to clipboard feature
-options-screenshot-clipboard-label = Chapoj ruwa pa yakwuj
-options-screenshot-clipboard-tooltip =
-    .title = Tayaka' ri chapoj ruwa jumul pa yakwuj
 
 # Label for the checkbox that toggles screenshot to clipboard feature
 options-screenshot-clipboard-only-label = Xa xe chapoj ruwa pa yakwuj
@@ -135,9 +131,3 @@ options-source-maps-tooltip =
 
 # The message shown for settings that trigger page reload
 options-context-triggers-page-refresh = * Xa xe re moloj wakami chanin, tasamajib'ej ri ruxaq
-
-# The label for the checkbox that toggles the display of the platform data in the
-# Profiler i.e. devtools.profiler.ui.show-platform-data a boolean preference in about:config
-options-show-platform-data-label = Tik'ut pe ri kinuk'uche'el taq tzij richin Gecko
-options-show-platform-data-tooltip =
-    .title = We natzïj re cha'oj re', ri taq rutzijol tz'etöy q'ijul richin JavaScript xtutz'aqatisaj Taq rutz'ib' runuk'uche'el richin Gecko

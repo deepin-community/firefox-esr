@@ -5,9 +5,9 @@
 
 ## Strings used for device manager
 
-devmgr =
+devmgr-window =
     .title = Device Manager
-    .style = width: 67em; height: 32em;
+    .style = min-width: 67em; min-height: 32em;
 
 devmgr-devlist =
     .label = Siccarness Modules and Devices
@@ -115,8 +115,6 @@ devinfo-label =
 
 devinfo-serialnum =
     .label = Serial Nummer
-
-fips-nonempty-password-required = FIPS mode needs ye tae hae a Maister Passwird set fur ilka siccarness device. Gonnae set the passwird afore ettlin tae enable FIPS mode.
 
 fips-nonempty-primary-password-required = FIPS mode needs ye tae hae a Primary Passwird set fur ilka siccarness device. Gonnae set the passwird afore ettlin tae enable FIPS mode.
 unable-to-toggle-fips = No able tae chynge the FIPS mode fur the siccarness device. It;s recommendit that ye ootgang fae this application and restert it.

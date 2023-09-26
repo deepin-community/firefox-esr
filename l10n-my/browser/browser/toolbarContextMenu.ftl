@@ -19,9 +19,6 @@ toolbar-context-menu-remove-extension =
 toolbar-context-menu-pin-to-overflow-menu =
     .label = ပိုလျှံမီနူးတွင် တွယ်ချိတ်ပါ
     .accesskey = P
-toolbar-context-menu-auto-hide-downloads-button =
-    .label = ကိရိယာဘားတန်းကို အလိုအလျောက် ဖျောက်ပါ
-    .accesskey = A
 toolbar-context-menu-remove-from-toolbar =
     .label = ကိရိယာအတန်းမှ ဖယ်ရှားပါ
     .accesskey = R
@@ -29,3 +26,6 @@ toolbar-context-menu-view-customize-toolbar =
     .label = စိတ်ကြိုက်ပြင်ဆင်ရန်…
     .accesskey = C
 
+toolbar-context-menu-menu-bar-cmd =
+    .toolbarname = မီနူးအတန်း
+    .accesskey = M

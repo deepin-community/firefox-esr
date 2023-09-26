@@ -11,17 +11,6 @@ navbar-tooltip-instruction =
 
 ## Back
 
-main-context-menu-back =
-    .tooltiptext = Vanni inderê de 'na pagina
-    .aria-label = Inderê
-    .accesskey = B
-
-navbar-tooltip-back =
-    .value = { main-context-menu-back.tooltiptext }
-
-toolbar-button-back =
-    .label = { main-context-menu-back.aria-label }
-
 # Variables
 #   $shortcut (String) - A keyboard shortcut for the Go Back command.
 main-context-menu-back-2 =
@@ -41,17 +30,6 @@ toolbar-button-back-2 =
     .label = { main-context-menu-back-2.aria-label }
 
 ## Forward
-
-main-context-menu-forward =
-    .tooltiptext = Vanni avanti de 'na pagina
-    .aria-label = Avanti
-    .accesskey = F
-
-navbar-tooltip-forward =
-    .value = { main-context-menu-forward.tooltiptext }
-
-toolbar-button-forward =
-    .label = { main-context-menu-forward.aria-label }
 
 # Variables
 #   $shortcut (String) - A keyboard shortcut for the Go Forward command.
@@ -106,40 +84,14 @@ toolbar-button-stop-reload =
 
 ## Firefox Account Button
 
+
 ## Save Page
 
 main-context-menu-page-save =
     .label = Sarva pagina co-o nomme…
     .accesskey = P
 
-toolbar-button-page-save =
-    .label = { main-context-menu-page-save.label }
-
 ## Simple menu items
-
-main-context-menu-bookmark-add =
-    .aria-label = Azonzi questa pagina a-i segnalibbri
-    .accesskey = n
-    .tooltiptext = Azonzi ai segnalibri
-
-# Variables
-#   $shortcut (String) - A keyboard shortcut for the add bookmark command.
-main-context-menu-bookmark-add-with-shortcut =
-    .aria-label = Azonzi questa pagina a-i segnalibbri
-    .accesskey = n
-    .tooltiptext = Azonzi ai segnalibri ({ $shortcut })
-
-main-context-menu-bookmark-change =
-    .aria-label = Cangia segnalibbro
-    .accesskey = n
-    .tooltiptext = Cangia sto segnalibbro
-
-# Variables
-#   $shortcut (String) - A keyboard shortcut for the edit bookmark command.
-main-context-menu-bookmark-change-with-shortcut =
-    .aria-label = Cangia segnalibbro
-    .accesskey = n
-    .tooltiptext = Cangia sto segnalibbro ({ $shortcut })
 
 main-context-menu-open-link =
     .label = Arvi colegamento
@@ -161,10 +113,6 @@ main-context-menu-open-link-new-private-window =
     .label = Arvi inte 'n neuvo barcon privòu
     .accesskey = k
 
-main-context-menu-bookmark-this-link =
-    .label = Azonzi questo colegamento a-i segnalibbri
-    .accesskey = l
-
 main-context-menu-save-link =
     .label = Sarva destinaçion co-o nomme…
     .accesskey = S
@@ -172,11 +120,6 @@ main-context-menu-save-link =
 main-context-menu-save-link-to-pocket =
     .label = Sarva colegamento in { -pocket-brand-name }
     .accesskey = o
-
-## The access keys for "Copy Link Location" and "Copy Email Address"
-## should be the same if possible; the two context menu items
-## are mutually exclusive.
-
 
 ## The access keys for "Copy Link" and "Copy Email Address"
 ## should be the same if possible; the two context menu items
@@ -186,9 +129,9 @@ main-context-menu-copy-email =
     .label = Còpia indirisso de pòsta
     .accesskey = e
 
-main-context-menu-copy-link =
-    .label = Còpia indirisso
-    .accesskey = a
+main-context-menu-copy-link-simple =
+    .label = Còpia colegamento
+    .accesskey = l
 
 ## Media (video/audio) controls
 ##
@@ -214,31 +157,24 @@ main-context-menu-media-unmute =
     .label = Fanni sentî
     .accesskey = F
 
-main-context-menu-media-play-speed =
+main-context-menu-media-play-speed-2 =
     .label = Velocitæ
-    .accesskey = o
-
-main-context-menu-media-play-speed-slow =
-    .label = Lento (0.5×)
-    .accesskey = L
-
-main-context-menu-media-play-speed-normal =
-    .label = Normale
-    .accesskey = N
-
-main-context-menu-media-play-speed-fast =
-    .label = Veloce (1.25×)
     .accesskey = V
 
-main-context-menu-media-play-speed-faster =
-    .label = Ciù veloce (1.5×)
-    .accesskey = e
+main-context-menu-media-play-speed-slow-2 =
+    .label = 0.5×
 
-# "Ludicrous" is a reference to the movie "Space Balls" and is meant
-# to say that this speed is very fast.
-main-context-menu-media-play-speed-fastest =
-    .label = Belin che veloce (2×)
-    .accesskey = B
+main-context-menu-media-play-speed-normal-2 =
+    .label = 1.0×
+
+main-context-menu-media-play-speed-fast-2 =
+    .label = 1.25×
+
+main-context-menu-media-play-speed-faster-2 =
+    .label = 1.5×
+
+main-context-menu-media-play-speed-fastest-2 =
+    .label = 2×
 
 main-context-menu-media-loop =
     .label = Ripeti
@@ -267,36 +203,36 @@ main-context-menu-media-video-leave-fullscreen =
 
 # This is used when right-clicking on a video in the
 # content area when the Picture-in-Picture feature is enabled.
-main-context-menu-media-pip =
-    .label = Picture-in-Picture
+main-context-menu-media-watch-pip =
+    .label = Amia in Picture-in-Picture
     .accesskey = u
 
 main-context-menu-image-reload =
     .label = Recarega inmagine
     .accesskey = R
 
-main-context-menu-image-view =
-    .label = Fanni vedde inmagine
+main-context-menu-image-view-new-tab =
+    .label = Apri inmagine in nuevo feuggio
     .accesskey = i
 
-main-context-menu-video-view =
-    .label = Fanni vedde videò
+main-context-menu-video-view-new-tab =
+    .label = Arvi video in neuvo feuggio
     .accesskey = i
 
 main-context-menu-image-copy =
     .label = Còpia inmagine
     .accesskey = C
 
-main-context-menu-image-copy-location =
-    .label = Còpia indirisso inmagine
+main-context-menu-image-copy-link =
+    .label = Còpia colegamento inmagine
     .accesskey = o
 
-main-context-menu-video-copy-location =
-    .label = Còpia indirisso do videò
+main-context-menu-video-copy-link =
+    .label = Copia colegamento video
     .accesskey = o
 
-main-context-menu-audio-copy-location =
-    .label = Còpia indirisso do son
+main-context-menu-audio-copy-link =
+    .label = Copia colegamento aodio
     .accesskey = o
 
 main-context-menu-image-save-as =
@@ -307,9 +243,13 @@ main-context-menu-image-email =
     .label = Manda inmagine pe email…
     .accesskey = n
 
-main-context-menu-image-set-as-background =
+main-context-menu-image-set-image-as-background =
     .label = Inpòsta comme sfondo da scrivania…
-    .accesskey = s
+    .accesskey = I
+
+main-context-menu-image-copy-text =
+    .label = Copia testo da inmagine
+    .accesskey = C
 
 main-context-menu-image-info =
     .label = Fanni vedde e informaçioin da inmagine
@@ -327,9 +267,9 @@ main-context-menu-audio-save-as =
     .label = Sarva son co-o nomme…
     .accesskey = v
 
-main-context-menu-video-image-save-as =
-    .label = Sarva l'inmagine comme…
-    .accesskey = S
+main-context-menu-video-take-snapshot =
+    .label = Fanni föto do schermo…
+    .accesskey = F
 
 main-context-menu-video-email =
     .label = Manda video pe email…
@@ -339,14 +279,6 @@ main-context-menu-audio-email =
     .label = Manda son pe email…
     .accesskey = s
 
-main-context-menu-plugin-play =
-    .label = Ativa sto plugin
-    .accesskey = l
-
-main-context-menu-plugin-hide =
-    .label = Ascondi sto plugin
-    .accesskey = n
-
 main-context-menu-save-to-pocket =
     .label = Sarva pagina in { -pocket-brand-name }
     .accesskey = k
@@ -355,16 +287,31 @@ main-context-menu-send-to-device =
     .label = Manda Pagina a-o Dispoxitivo
     .accesskey = D
 
-main-context-menu-view-background-image =
-    .label = Fanni vedde inmagine de sfondo
-    .accesskey = F
-
 ## The access keys for "Use Saved Login" and "Use Saved Password"
 ## should be the same if possible; the two context menu items
 ## are mutually exclusive.
 
+main-context-menu-use-saved-login =
+    .label = Acessi sarvæ
+    .accesskey = c
+
+main-context-menu-use-saved-password =
+    .label = Paròlle segrete sarvæ
+    .accesskey = ò
 
 ##
+
+main-context-menu-use-relay-mask =
+    .label = Deuvia alias de pòsta { -relay-brand-short-name }
+    .accesskey = D
+
+main-context-menu-suggest-strong-password =
+    .label = Conseggia paròlla segreta fòrte
+    .accesskey = s
+
+main-context-menu-manage-logins2 =
+    .label = Gestion acessi
+    .accesskey = G
 
 main-context-menu-keyword =
     .label = Azonzi 'na paròlla ciave pe questa riçerca…
@@ -394,8 +341,8 @@ main-context-menu-frame-reload =
     .label = Recarega o riquaddro
     .accesskey = R
 
-main-context-menu-frame-bookmark =
-    .label = Azonzi sto riquaddro a-i segnalibbri
+main-context-menu-frame-add-bookmark =
+    .label = Azonzi riquaddro a-i segnalibbri
     .accesskey = A
 
 main-context-menu-frame-save-as =
@@ -414,17 +361,25 @@ main-context-menu-frame-view-info =
     .label = Fanni vedde e informaçioin do riquaddro
     .accesskey = i
 
+main-context-menu-print-selection-2 =
+    .label = Stanpa Seleçion…
+    .accesskey = p
+
 main-context-menu-view-selection-source =
     .label = Fanni vedde sorgente da parte seleçionâ
     .accesskey = s
 
+main-context-menu-take-screenshot =
+    .label = Fanni föto do schermo
+    .accesskey = F
+
+main-context-menu-take-frame-screenshot =
+    .label = Fanni föto do schermo
+    .accesskey = o
+
 main-context-menu-view-page-source =
     .label = Fanni vedde sorgente da pagina
     .accesskey = v
-
-main-context-menu-view-page-info =
-    .label = Fanni vedde e informaçioin da pagina
-    .accesskey = i
 
 main-context-menu-bidi-switch-text =
     .label = Cangia a direçion do testo
@@ -434,9 +389,9 @@ main-context-menu-bidi-switch-page =
     .label = Cangia a direçion da pagina
     .accesskey = d
 
-main-context-menu-inspect-element =
-    .label = Ispeçionn-a elemento
-    .accesskey = Q
+main-context-menu-inspect =
+    .label = Inspeçionn-a
+    .accesskey = p
 
 main-context-menu-inspect-a11y-properties =
     .label = Ispeçionn-a propietæ de acesibilitæ
@@ -444,3 +399,7 @@ main-context-menu-inspect-a11y-properties =
 main-context-menu-eme-learn-more =
     .label = Atre informaçioin un sce DRM…
     .accesskey = D
+
+main-context-menu-reveal-password =
+    .label = Mostra paròlla segreta
+    .accesskey = M

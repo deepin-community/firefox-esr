@@ -16,17 +16,9 @@ newtab-search-box-search-button =
     .title = ရှာ
     .aria-label = ရှာ
 
-newtab-search-box-search-the-web-text = ဝဘ်တွင် ရှာဖွေပါ
-
-newtab-search-box-search-the-web-input =
-    .placeholder = ဝဘ်တွင် ရှာဖွေပါ
-    .title = ဝဘ်တွင် ရှာဖွေပါ
-    .aria-label = ဝဘ်တွင် ရှာဖွေပါ
-
 ## Top Sites - General form dialog.
 
 newtab-topsites-add-search-engine-header = ရှာဖွေရေးအင်ဂျင် ထည့်ပါ
-newtab-topsites-add-topsites-header = ထိပ်တန်းဆိုက် အသစ်
 newtab-topsites-edit-topsites-header = ထိပ်တန်းဆိုက်ကို တည်းဖြတ်ရန်
 newtab-topsites-title-label = ခေါင်းစဉ်
 newtab-topsites-title-input =
@@ -56,6 +48,7 @@ newtab-confirm-delete-history-p1 = ယခုစာမျက်နှာနှင
 newtab-confirm-delete-history-p2 = ယခုလုပ်ဆောင်မှုသည် နောက်ပြန်ဆုတ်၍မရသော လုပ်ဆောင်မှု ဖြစ်သည်။
 
 ## Top Sites - Sponsored label
+
 
 ## Context Menu - Action Tooltips.
 
@@ -87,9 +80,9 @@ newtab-menu-delete-pocket = { -pocket-brand-name } မှ ပယ်ဖျက်�
 ##
 
 # Bookmark is a noun in this case, "Remove bookmark".
-newtab-menu-remove-bookmark = စာအမှတ်အားဖယ်ပါ
+newtab-menu-remove-bookmark = စာမှတ် ဖယ်ရန်
 # Bookmark is a verb here.
-newtab-menu-bookmark = စာအမှတ်
+newtab-menu-bookmark = စာမှတ်
 
 ## Context Menu - Downloaded Menu. "Download" in these cases is not a verb,
 ## it is a noun. As in, "Copy the link that belongs to this downloaded item".
@@ -109,9 +102,8 @@ newtab-menu-open-file = ဖိုင်ကိုဖွင့်ပါ
 ## the page is bookmarked, or is currently open on another device.
 
 newtab-label-visited = သွားလည်ခဲ့သော
-newtab-label-bookmarked = စာအမှတ်မှတ်ထားသော
+newtab-label-bookmarked = စာမှတ် မှတ်ထားပြီး
 newtab-label-removed-bookmark = စာမှတ်ကို ဖျက်ပြီး
-newtab-label-recommended = လူကြိုက်များနေသော
 newtab-label-download = ဆွဲချခဲ့သည်
 
 ## Section Menu: These strings are displayed in the section context menu and are
@@ -132,7 +124,6 @@ newtab-section-menu-privacy-notice = ကိုယ်ရေးကာကွယ်�
 ## Section Headers.
 
 newtab-section-header-topsites = အများဆုံးသုံးဆိုက်များ
-newtab-section-header-highlights = ဦးစားပေးအကြောင်းအရာများ
 # Variables:
 #  $provider (String): Name of the corresponding content provider.
 newtab-section-header-pocket = { $provider } က အကြံပြုထားသည်
@@ -149,6 +140,12 @@ newtab-section-header-pocket = { $provider } က အကြံပြုထား�
 newtab-pocket-read-more = လူကြိုက်များခေါင်းစဉ်များ
 newtab-pocket-more-recommendations = ပိုများသောအကြံပြုချက်များ
 newtab-pocket-cta-button = { -pocket-brand-name } ကို ရယူပါ
+
+## Pocket Final Card Section.
+## This is for the final card in the Pocket grid.
+
+
+## Pocket content onboarding experience dialog and modal for new users seeing the Pocket section for the first time, shown as the first item in the Pocket section.
 
 ## Error Fallback Content.
 ## This message and suggested action link are shown in each section of UI that fails to render.

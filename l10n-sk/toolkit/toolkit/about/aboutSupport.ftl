@@ -12,11 +12,6 @@ crashes-id = Identifikátor správy
 crashes-send-date = Dátum odoslania
 crashes-all-reports = Všetky správy o zlyhaní
 crashes-no-config = Táto aplikácia nepodporuje zobrazenie správ o zlyhaní.
-extensions-title = Rozšírenia
-extensions-name = Názov
-extensions-enabled = Povolené
-extensions-version = Verzia
-extensions-id = ID
 support-addons-title = Doplnky
 support-addons-name = Názov
 support-addons-type = Typ
@@ -80,6 +75,12 @@ app-basics-location-service-key-google = Kľúč služby Google Location Service
 app-basics-safebrowsing-key-google = Kľúč služby Google Safebrowsing
 app-basics-key-mozilla = Kľúč Mozilla Location Service
 app-basics-safe-mode = Núdzový režim
+app-basics-memory-size = Veľkosť pamäte (RAM)
+app-basics-disk-available = Dostupné miesto na disku
+# Variables:
+#   $value (number) - Amount of data being stored
+#   $unit (string) - The unit of data being stored (e.g. MB)
+app-basics-data-size = { $value } { $unit }
 show-dir-label =
     { PLATFORM() ->
         [macos] Zobraziť vo Finderi
@@ -109,11 +110,21 @@ graphics-gpu2-title = GPU #2
 graphics-decision-log-title = Protokol rozhodovania
 graphics-crash-guards-title = Zakázať funkcie Crash Guard
 graphics-workarounds-title = Možné riešenia
+graphics-device-pixel-ratios = Pomery Window Device Pixel Ratios
 # Windowing system in use on Linux (e.g. X11, Wayland).
 graphics-window-protocol = Protokol zobrazovania okien
 # Desktop environment in use on Linux (e.g. GNOME, KDE, XFCE, etc).
 graphics-desktop-environment = Desktopové prostredie
 place-database-title = Databáza umiestnení
+place-database-stats = Štatistika
+place-database-stats-show = Zobraziť štatistiky
+place-database-stats-hide = Skryť štatistiky
+place-database-stats-entity = Entita
+place-database-stats-count = Počet
+place-database-stats-size-kib = Veľkosť (kB)
+place-database-stats-size-perc = Veľkosť (%)
+place-database-stats-efficiency-perc = Efektivita (%)
+place-database-stats-sequentiality-perc = Následnosť (%)
 place-database-integrity = Integrita
 place-database-verify-integrity = Skontrolovať integritu
 a11y-title = Zjednodušenie ovládania
@@ -133,8 +144,6 @@ sandbox-sys-call-tid = TID
 sandbox-sys-call-proc-type = Typ procesu
 sandbox-sys-call-number = Systémové volanie
 sandbox-sys-call-args = Argumenty
-safe-mode-title = Vyskúšajte núdzový režim
-restart-in-safe-mode-label = Reštartovať a zakázať doplnky…
 troubleshoot-mode-title = Diagnostika problémov
 restart-in-troubleshoot-mode-label = Režim riešenia problémov…
 clear-startup-cache-title = Skúste vyčistiť vyrovnávaciu pamäť spustenia
@@ -162,8 +171,18 @@ media-device-channels = Kanále
 media-device-rate = Miera
 media-device-latency = Oneskorenie
 media-capabilities-title = Podpora médií
+media-codec-support-info = Informácie o podpore kodekov
 # List all the entries of the database.
 media-capabilities-enumerate = Vypísanie databázy
+
+## Codec support table
+
+media-codec-support-sw-decoding = Softvérové dekódovanie
+media-codec-support-hw-decoding = Hardvérové dekódovanie
+media-codec-support-codec-name = Názov kodeku
+media-codec-support-supported = Podporované
+media-codec-support-unsupported = Nepodporované
+media-codec-support-error = Informácie o podpore kodeku nie sú k dispozícii. Skúste to znova po prehratí mediálneho súboru.
 
 ##
 
@@ -283,10 +302,8 @@ webgl2-renderer = Ovládač pre zobrazovanie WebGL 2
 webgl2-version = Verzia ovládača WebGL 2
 webgl2-driver-extensions = Rozšírenia ovládača WebGL 2
 webgl2-extensions = Rozšírenia WebGL 2
-blocklisted-bug = Zablokované kvôli známej chybe
-# Variables
-# $bugNumber (string) - String of bug number from Bugzilla
-bug-link = bug { $bugNumber }
+webgpu-default-adapter = Predvolený adaptér WebGPU
+webgpu-fallback-adapter = Záložný adaptér WebGPU
 # Variables
 #   $bugNumber (string) - Bug number on Bugzilla
 support-blocklisted-bug = Zablokované kvôli známym problémom: <a data-l10n-name="bug-link">bug { $bugNumber }</a>
@@ -294,8 +311,6 @@ support-blocklisted-bug = Zablokované kvôli známym problémom: <a data-l10n-n
 # $failureCode (string) - String that can be searched in the source tree.
 unknown-failure = Zablokované; chybový kód { $failureCode }
 d3d11layers-crash-guard = D3D11 Compositor
-d3d11video-crash-guard = D3D11 Video dekodér
-d3d9video-crash-guard = D3D9 Video dekodér
 glcontext-crash-guard = OpenGL
 wmfvpxvideo-crash-guard = WMF VPX video dekodér
 reset-on-next-restart = Obnoviť pri nasledujúcom reštarte
@@ -318,6 +333,7 @@ can-sandbox-media = Sandboxing zásuvných modulov médií
 content-sandbox-level = Úroveň sandboxu procesu s obsahom
 effective-content-sandbox-level = Účinná úroveň sandboxu procesu s obsahom
 content-win32k-lockdown-state = Stav zákazu používania Win32k pre procesy s obsahom
+support-sandbox-gpu-level = Úroveň sandboxu procesu GPU
 sandbox-proc-type-content = obsah
 sandbox-proc-type-file = obsah súboru
 sandbox-proc-type-media-plugin = zásuvný modul médií
@@ -335,14 +351,6 @@ launcher-process-status-unknown = Neznámy stav
 # $remoteWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
 multi-process-windows = { $remoteWindows }/{ $totalWindows }
-multi-process-status-0 = Povolené používateľom
-multi-process-status-1 = Predvolene povolené
-multi-process-status-2 = Zakázané
-multi-process-status-4 = Zakázané nástrojmi na zjednodušenie ovládania
-multi-process-status-6 = Zakázané nepodporovaným textovým vstupom
-multi-process-status-7 = Zakázané doplnkami
-multi-process-status-8 = Vynútene zakázané
-multi-process-status-unknown = Neznámy stav
 # Variables
 # $fissionWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
@@ -351,7 +359,7 @@ fission-status-experiment-control = Zakázané experimentom
 fission-status-experiment-treatment = Povolené experimentom
 fission-status-disabled-by-e10s-env = Zakázané prostredím
 fission-status-enabled-by-env = Povolené prostredím
-fission-status-disabled-by-safe-mode = Zakázané v núdzovom režime
+fission-status-disabled-by-env = Zakázané prostredím
 fission-status-enabled-by-default = Povolené v núdzovom režime
 fission-status-disabled-by-default = Predvolene zakázané
 fission-status-enabled-by-user-pref = Povolené používateľom

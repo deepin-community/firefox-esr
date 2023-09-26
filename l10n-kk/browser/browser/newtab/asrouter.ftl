@@ -7,33 +7,38 @@
 
 cfr-doorhanger-extension-heading = Ұсынылатын кеңейту
 cfr-doorhanger-feature-heading = Ұсынылатын мүмкіндік
-cfr-doorhanger-pintab-heading = Осыны көріңіз: Бетті бекіту
 
 ##
 
 cfr-doorhanger-extension-sumo-link =
     .tooltiptext = Мен бұны неге көріп отырмын
+
 cfr-doorhanger-extension-cancel-button = Қазір емес
     .accesskey = м
+
 cfr-doorhanger-extension-ok-button = Қазір қосу
     .accesskey = а
-cfr-doorhanger-pintab-ok-button = Бұл бетті бекіту
-    .accesskey = б
+
 cfr-doorhanger-extension-manage-settings-button = Ұсыныстар параметрлерін басқару
     .accesskey = б
+
 cfr-doorhanger-extension-never-show-recommendation = Бұл ұсынысты маған көрсетпеу
     .accesskey = к
+
 cfr-doorhanger-extension-learn-more-link = Көбірек білу
+
 # This string is used on a new line below the add-on name
 # Variables:
 #   $name (String) - Add-on author name
 cfr-doorhanger-extension-author = { $name } шығарған
+
 # This is a notification displayed in the address bar.
 # When clicked it opens a panel with a message for the user.
 cfr-doorhanger-extension-notification = Ұсыныс
 cfr-doorhanger-extension-notification2 = Ұсыныс
     .tooltiptext = Кеңейту ұсынысы
     .a11y-announcement = Кеңейту ұсынысы қолжетімді
+
 # This is a notification displayed in the address bar.
 # When clicked it opens a panel with a message for the user.
 cfr-doorhanger-feature-notification = Ұсыныс
@@ -57,15 +62,6 @@ cfr-doorhanger-extension-total-users =
     { $total ->
        *[other] { $total } пайдаланушы
     }
-cfr-doorhanger-pintab-description = Жиі қолданатын сайттарыңызға ыңғайлы қатынаңыз. Сайттарды бетте ашық ұстаңыз (қайта қосылсаңыз да).
-
-## These messages are steps on how to use the feature and are shown together.
-
-cfr-doorhanger-pintab-step1 = Бекіткіңіз келетін бетке <b>оң жақпен шертіңіз</b>.
-cfr-doorhanger-pintab-step2 = Мәзірден <b>Бетті бекітуді</b> таңдаңыз.
-cfr-doorhanger-pintab-step3 = Сайтта жаңарту болса, бекітілген бетте көк нүктені көретін боласыз.
-cfr-doorhanger-pintab-animation-pause = Аялдату
-cfr-doorhanger-pintab-animation-resume = Жалғастыру
 
 ## Firefox Accounts Message
 
@@ -87,123 +83,15 @@ cfr-protections-panel-link-text = Көбірек білу
 # This string is used by screen readers to offer a text based alternative for
 # the notification icon
 cfr-badge-reader-label-newfeature = Жаңа мүмкіндік:
+
 cfr-whatsnew-button =
     .label = Не жаңалық
     .tooltiptext = Не жаңалық
-cfr-whatsnew-panel-header = Не жаңалық
+
 cfr-whatsnew-release-notes-link-text = Шығарылым ескертпесін оқу
-cfr-whatsnew-fx70-title = { -brand-short-name } сіздің жекелігіңіз үшін енді күштірек күреседі
-cfr-whatsnew-fx70-body =
-    Соңғы жаңарту Бақылаудан Қорғанысты жақсартып, әр сайт үшін
-    күштірек парольдерді жасауды оңайырақ қылады.
-cfr-whatsnew-tracking-protect-title = Өзіңізді трекерлерден қорғаңыз
-cfr-whatsnew-tracking-protect-body =
-    { -brand-short-name } желіде сіздің соңыңыздан еретін көптеген әлеуметтік
-    және сайтаралық трекерлерді бұғаттайды.
-cfr-whatsnew-tracking-protect-link-text = Есепті қарау
-# This string is displayed before a large numeral that indicates the total
-# number of tracking elements blocked. Don’t add $blockedCount to your
-# localization, because it would result in the number showing twice.
-cfr-whatsnew-tracking-blocked-title =
-    { $blockedCount ->
-       *[other] Блокталған трекерлер
-    }
-cfr-whatsnew-tracking-blocked-subtitle = { DATETIME($earliestDate, month: "long", year: "numeric") } бастап
-cfr-whatsnew-tracking-blocked-link-text = Есептемені қарау
-cfr-whatsnew-lockwise-backup-title = Парольдеріңіздің қор көшірмесін жасаңыз
-cfr-whatsnew-lockwise-backup-body = Қайда кірсеңіз де. қолдана алатын қауіпсіз парольдерді жасаңыз.
-cfr-whatsnew-lockwise-backup-link-text = Қор көшірмелерді іске қосу
-cfr-whatsnew-lockwise-take-title = Парольдіріңізді өзіңізбен бірге ұстаңыз
-cfr-whatsnew-lockwise-take-body =
-    { -lockwise-brand-short-name } мобильді қолданбасы әр жерден сіздің қор
-    көшірмедегі парольдерге қауіпсіз қатынауды мүмкін етеді.
-cfr-whatsnew-lockwise-take-link-text = Қолданбаны алу
-
-## Search Bar
-
-cfr-whatsnew-searchbar-title = Адрестік жолақ көмегімен азырақ теріп, көбірек табыңыз.
-cfr-whatsnew-searchbar-body-topsites = Енді адрестік жолағын таңдасаңыз, ол топ сайттарыңыз бар сілтемелермен кеңейеді.
-cfr-whatsnew-searchbar-icon-alt-text = Үлкейту әйнегі таңбашасы
-
-## Picture-in-Picture
-
-cfr-whatsnew-pip-header = Шолу кезінде видеоларды қараңыз
-cfr-whatsnew-pip-body = Суреттегі сурет режимі видеоны қалқымалы терезеде көрсетеді, оның көмегімен сіз басқа беттерде жасаған кезде де қарай аласыз.
-cfr-whatsnew-pip-cta = Көбірек білу
-
-## Permission Prompt
-
-cfr-whatsnew-permission-prompt-header = Сайттардың мазаны алатын азырақ қалқымалы хабарламалар.
-cfr-whatsnew-permission-prompt-body = { -brand-shorter-name } енді сізге автоматты түрде қалқымалы хабарламаларды жіберуді сұрайтын сайттарды бұғаттайды.
-cfr-whatsnew-permission-prompt-cta = Көбірек білу
-
-## Fingerprinter Counter
-
-# This string is displayed before a large numeral that indicates the total
-# number of tracking elements blocked. Don’t add $fingerprinterCount to your
-# localization, because it would result in the number showing twice.
-cfr-whatsnew-fingerprinter-counter-header =
-    { $fingerprinterCount ->
-       *[other] Цифрлық баспаны жинаушы бұғатталды
-    }
-cfr-whatsnew-fingerprinter-counter-body = { -brand-shorter-name } сіздің жарнамалық профиліңізді жасау мақсатында, құрылғыңыз және әрекеттеріңіз туралы ақпаратты жасырын жинайтын цифрлық баспаны жинаушылардың көбін бұғаттайды.
-# Message variation when fingerprinters count is less than 10
-cfr-whatsnew-fingerprinter-counter-header-alt = Баспаны жинаушылар
-cfr-whatsnew-fingerprinter-counter-body-alt = { -brand-shorter-name } сіздің жарнамалық профиліңізді жасау мақсатында, құрылғыңыз және әрекеттеріңіз туралы ақпаратты жасырын жинайтын цифрлық баспаны жинаушыларды бұғаттай алады.
-
-## Bookmark Sync
-
-cfr-doorhanger-sync-bookmarks-header = Бұл бетбелгіні өз телефоныңызға алыңыз
-cfr-doorhanger-sync-bookmarks-body = Сіз { -brand-product-name } ішінде кірген барлық жерде бетбелгілер, парольдер, шолу тарихы және т.б. өзіңізбен бірге ұстаңыз.
-cfr-doorhanger-sync-bookmarks-ok-button = { -sync-brand-short-name } іске қосу
-    .accesskey = с
-
-## Login Sync
-
-cfr-doorhanger-sync-logins-header = Парольдерді енді ешқашан ұмытпаңыз
-cfr-doorhanger-sync-logins-body = Парольдерді қауіпсіз түрде сақтаңыз және құрылғыларыңыз арасында синхрондаңыз.
-cfr-doorhanger-sync-logins-ok-button = { -sync-brand-short-name } іске қосу
-    .accesskey = с
-
-## Send Tab
-
-cfr-doorhanger-send-tab-header = Мұны жолда оқыңыз
-cfr-doorhanger-send-tab-recipe-header = Бұл рецептті ас үйге апарыңыз
-cfr-doorhanger-send-tab-body = Беттерді жіберу мүмкіндігі арқылы бұл сілтемені телефоныңызға немесе сіз { -brand-product-name } ішіне кірген кез келген құрылғыға оңай жібере аласыз.
-cfr-doorhanger-send-tab-ok-button = Бетті жіберуді қолданып көріңіз
-    .accesskey = т
-
-## Firefox Send
-
-cfr-doorhanger-firefox-send-header = Бұл PDF файлымен қауіпсіз түрде бөлісіңіз
-cfr-doorhanger-firefox-send-body = Құпия құжаттарыңызбен бөтен көзден тыс, толық шифрлеумен және дайын болғаннан кейін өшірілетін сілтеме арқылы бөлісіңіз.
-cfr-doorhanger-firefox-send-ok-button = { -send-brand-name } қолданып көріңіз
-    .accesskey = п
-
-## Social Tracking Protection
-
-cfr-doorhanger-socialtracking-ok-button = Қорғанысты қарау
-    .accesskey = р
-cfr-doorhanger-socialtracking-close-button = Жабу
-    .accesskey = Ж
-cfr-doorhanger-socialtracking-dont-show-again = Енді осындай хабарламаларды көрсетпеу
-    .accesskey = д
-cfr-doorhanger-socialtracking-heading = { -brand-short-name } әлеуметтік желіні сізді осында бақылаудан блоктады
-cfr-doorhanger-socialtracking-description = Жекелігіңіз маңызды. { -brand-short-name } енді әлеуметтік желілер трекерлерін бұғаттап, оларға сіз туралы қанша мәліметті жинай алатынын шектейді.
-cfr-doorhanger-fingerprinters-heading = { -brand-short-name } бұл бетте цифрлық баспаны жинаушыны бұғаттады
-cfr-doorhanger-fingerprinters-description = Жекелігіңіз маңызды. { -brand-short-name } енді цифрлық баспаны жинаушыларды бұғаттап, олар болса, сізді бақылау мақсатында сізді бірегей түрде анықтайтын ақпаратты жинайды.
-cfr-doorhanger-cryptominers-heading = { -brand-short-name } бұл бетте криптомайнерді бұғаттады
-cfr-doorhanger-cryptominers-description = Жекелігіңіз маңызды. { -brand-short-name } енді сіздің компьютеріңіздің қуатын цифрлық валютаны табу үшін қолданатын криптомайнерлерді бұғаттайды.
 
 ## Enhanced Tracking Protection Milestones
 
-# Variables:
-#   $blockedCount (Number) - The total count of blocked trackers. This number will always be greater than 1.
-#   $date (String) - The date we began recording the count of blocked trackers
-cfr-doorhanger-milestone-heading =
-    { $blockedCount ->
-       *[other] { -brand-short-name } { $date } <b>{ $blockedCount }</b> шамасынан көп трекерді бұғаттаған!
-    }
 # Variables:
 #   $blockedCount (Number) - The total count of blocked trackers. This number will always be greater than 1.
 #   $date (Datetime) - The date we began recording the count of blocked trackers
@@ -213,39 +101,6 @@ cfr-doorhanger-milestone-heading2 =
     }
 cfr-doorhanger-milestone-ok-button = Барлығын қарау
     .accesskey = р
-
-## What’s New Panel Content for Firefox 76
-
-
-## Lockwise message
-
-cfr-whatsnew-lockwise-header = Қауіпсіз парольдерді оңай жасау
-cfr-whatsnew-lockwise-body = Әр тіркелгі үшін бірегей, қауіпсіз парольді ойлап табу оңай емес. Парольді жасау кезінде, { -brand-shorter-name } ұсынатын қауіпсіз, генерацияланған парольді қолдану үшін, пароль өрісін таңдаңыз.
-cfr-whatsnew-lockwise-icon-alt = { -lockwise-brand-short-name } таңбашасы
-
-## Vulnerable Passwords message
-
-cfr-whatsnew-passwords-header = Осал парольдер жөнінде ескертулерді алыңыз
-cfr-whatsnew-passwords-body = Хакерлер адамдардың бірдей парольдерді қайта қолданатынын біледі. Егер сіз бір парольді бірнеше сайтта қолданған болсаңыз және сол сайттардың бірінде деректер бұзылған болса, сол сайттардағы паролін өзгерту туралы { -lockwise-brand-short-name } ескертуін көресіз.
-cfr-whatsnew-passwords-icon-alt = Осал паролі кілтінің белгісі
-
-## Picture-in-Picture fullscreen message
-
-cfr-whatsnew-pip-fullscreen-header = Суреттегі суретті толық экранға шығарыңыз
-cfr-whatsnew-pip-fullscreen-body = Видеоны қалқымалы терезеге бөліп жібергеннен кейін, оны енді қос шерту арқылы толық экран режиміне ауыстыруға болады.
-cfr-whatsnew-pip-fullscreen-icon-alt = Суреттегі сурет таңбашасы
-
-## Protections Dashboard message
-
-cfr-whatsnew-protections-header = Қорғаныс көрінісі
-cfr-whatsnew-protections-body = Қорғаныс панелінде деректерді бұзу және парольдерді басқару туралы жиынтық есептері бар. Енді сіз қанша деректер бұзушылығын шешкеніңізді және сақталған парольдеріңіздің қайсысы болса да, деректер бұзушылықтарда ашылғаны туралы ақпаратты бақылай аласыз.
-cfr-whatsnew-protections-cta-link = Қорғаныс панелін қарау
-cfr-whatsnew-protections-icon-alt = Қалқан таңбашасы
-
-## Better PDF message
-
-cfr-whatsnew-better-pdf-header = PDF-пен жақсырақ жұмыс
-cfr-whatsnew-better-pdf-body = PDF құжаттары енді тікелей { -brand-short-name } ішінде ашылып, жұмыс үрдісіңізді жеңілдетеді.
 cfr-doorhanger-milestone-close-button = Жабу
     .accesskey = Ж
 
@@ -260,16 +115,141 @@ cfr-doorhanger-doh-secondary-button = Сөндіру
 
 ## Fission Experiment Message
 
-cfr-doorhanger-fission-body-approved = Сіздің жекелігіңіз маңызды. { -brand-short-name } енді веб-сайттарды бір-бірінен оқшаулайды (құмсалғышта), нәтижесінде хакерлерге парольдер, несие карта нөмірлері және басқа да сезімтал ақпаратты ұрлау қиындау болады.
-cfr-doorhanger-fission-header = Сайтты оқшаулау
-cfr-doorhanger-fission-primary-button = Жақсы, түсіндім
-    .accesskey = а
-cfr-doorhanger-fission-secondary-button = Көбірек білу
-    .accesskey = л
-
 ## Full Video Support CFR message
 
 cfr-doorhanger-video-support-body = Бұл сайттағы видеолар { -brand-short-name } нұсқасында дұрыс ойнамауы мүмкін. Видеоны толық қолдау үшін { -brand-short-name } қазір жаңартыңыз.
 cfr-doorhanger-video-support-header = Видеоны ойнату үшін { -brand-short-name } жаңарту
 cfr-doorhanger-video-support-primary-button = Қазір жаңарту
     .accesskey = у
+
+## Spotlight modal shared strings
+
+## VPN promotion dialog for public Wi-Fi users
+##
+## If a user is detected to be on a public Wi-Fi network, they are given a
+## bit of info about how to improve their privacy and then offered a button
+## to the Mozilla VPN page and a link to dismiss the dialog.
+
+# This header text can be explicitly wrapped.
+spotlight-public-wifi-vpn-header = Жалпыға ортақ Wi-Fi қолданып жатқан сияқтысыз
+spotlight-public-wifi-vpn-body = Орналасқан жеріңізді және шолу әрекетін жасыру үшін виртуалды жеке желіні қарастырыңыз. Бұл әуежайлар мен кофеханалар сияқты қоғамдық орындардан шолу кезінде сізді қорғауға көмектеседі.
+spotlight-public-wifi-vpn-primary-button = { -mozilla-vpn-brand-name } көмегімен жекелікті сақтаңыз
+    .accesskey = с
+spotlight-public-wifi-vpn-link = Қазір емес
+    .accesskey = м
+
+## Total Cookie Protection Rollout
+
+## Emotive Continuous Onboarding
+
+spotlight-better-internet-header = Жақсырақ интернет сізден басталады
+spotlight-better-internet-body = { -brand-short-name } пайдаланған кезде сіз әркім үшін қолайлы, ашық және қолжетімді интернетке дауыс бересіз.
+spotlight-peace-mind-header = Сіз үшін қамқорлықпен
+spotlight-peace-mind-body = Ай сайын { -brand-short-name } бір пайдаланушыға орта есеппен 3000-нан астам трекерді блоктайды. Өйткені сіз бен жақсы интернет арасында ешнәрсе, әсіресе трекерлер сияқты жеке өмірге қатысты кедергілер тұрмауы керек.
+spotlight-pin-primary-button =
+    { PLATFORM() ->
+        [macos] Dock ішіне қосу
+       *[other] Тапсырмалар панеліне бекіту
+    }
+spotlight-pin-secondary-button = Қазір емес
+
+## MR2022 Background Update Windows native toast notification strings.
+##
+## These strings will be displayed by the Windows operating system in
+## a native toast, like:
+##
+## <b>multi-line title</b>
+## multi-line text
+## <img>
+## [ primary button ] [ secondary button ]
+##
+## The button labels are fitted into narrow fixed-width buttons by
+## Windows and therefore must be as narrow as possible.
+
+mr2022-background-update-toast-title = Жаңа{ -brand-short-name }. Неғұрлым жеке. Азырақ трекерлер. Компромисстері жоқ.
+mr2022-background-update-toast-text = Ең жаңа { -brand-short-name } нұсқасын қазір қолданып көріңіз, ол біздің бақылауға қарсы ең күшті қорғаныспен жаңартылды.
+
+# This button label will be fitted into a narrow fixed-width button by
+# Windows. Try to not exceed the width of the English text (compare it
+# using a variable font like Arial): the button can only fit 1-2
+# additional characters, exceeding characters will be truncated.
+mr2022-background-update-toast-primary-button-label = { -brand-shorter-name } қазір ашу
+
+# This button label will be fitted into a narrow fixed-width button by
+# Windows. Try to not exceed the width of the English text (compare it using a
+# variable font like Arial): the button can only fit 1-2 additional characters,
+# exceeding characters will be truncated.
+mr2022-background-update-toast-secondary-button-label = Кейінірек еске салу
+
+## Firefox View CFR
+
+firefoxview-cfr-primarybutton = Қолданып көріңіз
+    .accesskey = н
+firefoxview-cfr-secondarybutton = Қазір емес
+    .accesskey = е
+firefoxview-cfr-header-v2 = Тоқтаған жерден жылдам жалғастырыңыз
+firefoxview-cfr-body-v2 = Жақында жабылған беттерді қайтарып алыңыз, сонымен қатар { -firefoxview-brand-name } көмегімен құрылғылар арасында кедергісіз өтіңіз.
+
+## Firefox View Spotlight
+
+firefoxview-spotlight-promo-title = { -firefoxview-brand-name } өнімін қарсы алыңыз
+
+# “Poof” refers to the expression to convey when something or someone suddenly disappears, or in this case, reappears. For example, “Poof, it’s gone.”
+firefoxview-spotlight-promo-subtitle = Телефоныңыздағы ашық бетті қалайсыз ба? Оны алыңыз. Сізге жаңа ғана кірген сайт керек пе? Ол { -firefoxview-brand-name } арқылы қайта оралды.
+firefoxview-spotlight-promo-primarybutton = Бұл қалай жұмыс жасайтынын қарау
+firefoxview-spotlight-promo-secondarybutton = Аттап кету
+
+## Colorways expiry reminder CFR
+
+colorways-cfr-primarybutton = Түстер схемасын таңдау
+    .accesskey = т
+
+# "shades" refers to the different color options available to users in colorways.
+colorways-cfr-body = Браузеріңізді мәдениетті өзгерткен дауыстардан шабыттандырылған { -brand-short-name } эксклюзивті реңктермен бояңыз.
+colorways-cfr-header-28days = Тәуелсіз дауыстар түстер схемаларының мерзімі 16 қаңтарда аяқталады
+colorways-cfr-header-14days = Тәуелсіз дауыстар түстер схемаларының мерзімі екі аптадан кейін аяқталады
+colorways-cfr-header-7days = Тәуелсіз дауыстар түстер схемаларының мерзімі осы аптада аяқталады
+colorways-cfr-header-today = Тәуелсіз дауыстар түстер схемаларының мерзімі бүгін аяқталады
+
+## Cookie Banner Handling CFR
+
+cfr-cbh-header = { -brand-short-name } үшін cookie баннерлерін елемеу рұқсатын бересіз бе?
+cfr-cbh-body = { -brand-short-name } көптеген cookie баннер сұрауларын автоматты түрде қабылдамау әрекетін жасай алады.
+cfr-cbh-confirm-button = Cookie баннерлерін елемеу
+    .accesskey = р
+cfr-cbh-dismiss-button = Қазір емес
+    .accesskey = м
+
+## These strings are used in the Fox doodle Pin/set default spotlights
+
+july-jam-headline = Сіз үшін қамқорлықпен
+july-jam-body = Ай сайын { -brand-short-name } бір пайдаланушыға орташа есеппен 3000+ трекерді блоктайды, бұл сізге жақсы интернетке қауіпсіз және жылдам қол жеткізуге мүмкіндік береді.
+july-jam-set-default-primary = Менің сілтемелерімді { -brand-short-name } арқылы ашу
+fox-doodle-pin-headline = Қайта қош келдіңіз
+
+# “indie” is short for the term “independent”.
+# In this instance, free from outside influence or control.
+fox-doodle-pin-body = Таңдаулы тәуелсіз браузеріңізді қасыңызда ұстауға болатынын еске саламыз.
+fox-doodle-pin-primary = Менің сілтемелерімді { -brand-short-name } арқылы ашу
+fox-doodle-pin-secondary = Қазір емес
+
+## These strings are used in the Set Firefox as Default PDF Handler for Existing Users experiment
+
+set-default-pdf-handler-headline = <strong>PDF файлдарыңыз енді { -brand-short-name } ішінде ашылады.</strong> Формаларды тікелей браузерде өңдеңіз немесе қол қойыңыз. Өзгерту үшін параметрлерден "PDF" іздеңіз.
+set-default-pdf-handler-primary = Түсіндім
+
+## FxA sync CFR
+
+fxa-sync-cfr-header = Болашақта жаңа құрылғыңыз бола ма?
+fxa-sync-cfr-body = Жаңа { -brand-product-name } браузерін ашқанда, соңғы бетбелгілер, парольдер және беттер сізбен бірге болатынына көз жеткізіңіз.
+fxa-sync-cfr-primary = Көбірек білу
+    .accesskey = л
+fxa-sync-cfr-secondary = Кейінірек еске салу
+    .accesskey = р
+
+## Device Migration FxA Spotlight
+
+device-migration-fxa-spotlight-header = Ескі құрылғыны пайдаланып жатырсыз ба?
+device-migration-fxa-spotlight-body = Бетбелгілер мен парольдер сияқты маңызды ақпаратты жоғалтпау үшін деректердің сақтық көшірмесін жасаңыз, әсіресе жаңа құрылғыға ауыссаңыз.
+device-migration-fxa-spotlight-primary-button = Деректерімнің сақтық көшірмесін қалай жасауға болады
+device-migration-fxa-spotlight-link = Кейінірек еске салу

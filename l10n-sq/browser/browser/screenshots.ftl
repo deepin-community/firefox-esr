@@ -2,13 +2,12 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-screenshots-context-menu = Bëni një Foto
-
-screenshots-my-shots-button = Shkrepjet e Mia
-
 screenshot-toolbarbutton =
     .label = Foto ekrani
     .tooltiptext = Bëni një foto ekrani
+
+screenshot-shortcut =
+    .key = S
 
 screenshots-instructions = Tërhiqni kursorin ose klikoni te faqja që të përzgjidhni një zonë. Shtypni ESC që të anulohet.
 screenshots-cancel-button = Anuloje
@@ -18,6 +17,14 @@ screenshots-download-button = Shkarkoje
 screenshots-download-button-tooltip = Shkarkojeni foton e ekranit
 screenshots-copy-button = Kopjoje
 screenshots-copy-button-tooltip = Kopjojeni foton e ekranit te e papastra
+screenshots-download-button-title =
+    .title = Shkarkojeni foton e ekranit
+screenshots-copy-button-title =
+    .title = Kopjojeni foton e ekranit te e papastra
+screenshots-cancel-button-title =
+    .title = Anuloje
+screenshots-retry-button-title =
+    .title = Riprovo fotografim ekrani
 
 screenshots-meta-key =
     { PLATFORM() ->
@@ -41,8 +48,6 @@ screenshots-login-error-details = S’e ruajtëm dot foton tuaj, ngaqë pati nj�
 screenshots-unshootable-page-error-title = S’bëjmë dot foto të kësaj faqeje.
 screenshots-unshootable-page-error-details = Kjo s’është një faqe Web standarde, ndaj s’mund të bëni një foto ekrani të saj.
 
-screenshots-self-screenshot-error-title = S’mund të bëni foto të një faqeje të { -screenshots-brand-name }-it!
-
 screenshots-empty-selection-error-title = Përzgjedhja juaj është shumë e vogël
 
 screenshots-private-window-error-title = { -screenshots-brand-name } çaktivizohet nën Mënyrën Shfletim Privat
@@ -50,3 +55,6 @@ screenshots-private-window-error-details = Na ndjeni për mungesën. Po punojmë
 
 screenshots-generic-error-title = Yhaaa! { -screenshots-brand-name } shkalloi.
 screenshots-generic-error-details = S’jemi të sigurt se ç’ndodhi. Ju prish punë të bëni një foto të një faqeje tjetër?
+
+screenshots-too-large-error-title = Fotoja juaj e ekrani u qeth, ngaqë qe shumë e madhe
+screenshots-too-large-error-details = Provoni të përzgjidhni një rajon që është më i vogël se 32700 piksela në anën e vet më të gjatë, ose 124900000 piksela sipërfaqe gjithsej.

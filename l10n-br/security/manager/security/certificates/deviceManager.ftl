@@ -5,9 +5,9 @@
 
 ## Strings used for device manager
 
-devmgr =
+devmgr-window =
     .title = Ardoer trevnad
-    .style = width: 67em; height: 32em;
+    .style = min-width: 67em; min-height: 32em;
 
 devmgr-devlist =
     .label = Molladoù ha trevnadoù diogelroez
@@ -115,8 +115,6 @@ devinfo-label =
 
 devinfo-serialnum =
     .label = Steudriñv
-
-fips-nonempty-password-required = Azgoulennet eo gant ar mod FIPS ma vo ur ger-tremen mestr ganeoc'h, kefluniet evit an holl drevnadoù diogelroez. Kefluniañ ar ger-tremen kent klask gweredekaat ar mod FIPS.
 
 fips-nonempty-primary-password-required = Azgoulennet eo gant ar mod FIPS ma vo ur ger-tremen pennañ ganeoc’h, kefluniet evit an holl drevnadoù diogelroez. Kefluniañ ar ger-tremen kent klask gweredekaat ar mod FIPS.
 unable-to-toggle-fips = N'haller ket kemmañ ar mod FIPS evit an trevnad diogelroez. Erbedet eo kuitaat hag adloc'hañ an arload-mañ.

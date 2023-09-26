@@ -23,6 +23,8 @@ profile-selection-delete-button =
     .label = Ta bort profil…
     .accesskey = T
 
+profile-selection-conflict-message = En annan kopia av { -brand-product-name } har gjort ändringar i profiler. Du måste starta om { -brand-short-name } innan du gör fler ändringar.
+
 ## Messages used in the profile manager
 
 profile-manager-description = { -brand-short-name } lagrar information om dina inställningar, bokmärken, e-post och annan användarinformation i din användarprofil.

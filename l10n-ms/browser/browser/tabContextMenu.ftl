@@ -8,6 +8,12 @@ reload-tab =
 select-all-tabs =
     .label = Pilih Semua Tab
     .accesskey = S
+tab-context-play-tab =
+    .label = Mainkan Tab
+    .accesskey = M
+tab-context-play-tabs =
+    .label = Mainkan Tab
+    .accesskey = n
 duplicate-tab =
     .label = Duplikasi Tab
     .accesskey = D
@@ -38,12 +44,6 @@ unpin-selected-tabs =
 bookmark-selected-tabs =
     .label = Tandabuku Tab…
     .accesskey = k
-bookmark-tab =
-    .label = Tab Tandabuku
-    .accesskey = T
-reopen-in-container =
-    .label = Buka semula dalam Penyimpan
-    .accesskey = k
 move-to-start =
     .label = Pindah ke Permulaan
     .accesskey = P
@@ -54,19 +54,9 @@ move-to-new-window =
     .label = Pindah ke Tetingkap Baru
     .accesskey = T
 
-close-tab =
-    .label = Tutup Tab
-    .accesskey = b
-close-tabs =
-    .label = Tutup Tab
-    .accesskey = T
-move-tabs =
-    .label = Pindah Tab
-    .accesskey = d
-move-tab =
-    .label = Pindah Tab
-    .accesskey = d
-
 ## Variables:
 ##  $tabCount (Number): the number of tabs that are affected by the action.
 
+tab-context-send-tabs-to-device =
+    .label = Hantar { $tabCount } Tab ke Peranti
+    .accesskey = n

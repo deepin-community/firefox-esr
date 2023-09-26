@@ -5,9 +5,9 @@
 
 ## Strings used for device manager
 
-devmgr =
+devmgr-window =
     .title = 裝置管理員
-    .style = width: 67em; height: 32em;
+    .style = min-width: 67em; min-height: 32em;
 
 devmgr-devlist =
     .label = 安全模組與裝置
@@ -115,8 +115,6 @@ devinfo-label =
 
 devinfo-serialnum =
     .label = 序號
-
-fips-nonempty-password-required = FIPS 模式需要設定主控密碼。請先設定主控密碼。
 
 fips-nonempty-primary-password-required = FIPS 模式需要為每個安全性裝置都設定密碼。請先設定密碼再嘗試開啟 FIPS 模式。
 unable-to-toggle-fips = 無法修改安全裝置的 FIPS 模式。建議您重新啟動此應用程式。

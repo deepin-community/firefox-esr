@@ -19,3 +19,18 @@ opensearch-error-download-desc = { -brand-short-name } nu ga'ue naninj sa ruguñ
 
 ##
 
+searchbar-submit =
+    .tooltiptext = Ga'nin' ga'anj sa nana'ui'
+
+# This string is displayed in the search box when the input field is empty
+searchbar-input =
+    .placeholder = Nanà'uì'
+
+searchbar-icon =
+    .tooltiptext = Nanà'uì'
+
+## Infobar shown when search engine is removed and replaced.
+## Variables
+## $oldEngine (String) - the search engine to be removed.
+## $newEngine (String) - the search engine to replace the removed search engine.
+

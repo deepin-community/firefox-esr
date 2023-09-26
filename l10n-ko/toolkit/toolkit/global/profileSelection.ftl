@@ -23,6 +23,8 @@ profile-selection-delete-button =
     .label = 프로필 삭제…
     .accesskey = D
 
+profile-selection-conflict-message = { -brand-product-name }의 다른 복사본이 프로필을 변경했습니다. 더 변경하기 전에 { -brand-short-name }를 다시 시작해야 합니다.
+
 ## Messages used in the profile manager
 
 profile-manager-description = { -brand-short-name }는 사용자 설정 및 기타 사용자 항목에 대한 정보를 사용자 프로필에 저장합니다.

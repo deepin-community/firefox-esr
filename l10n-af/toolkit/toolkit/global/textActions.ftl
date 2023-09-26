@@ -45,3 +45,5 @@ text-action-select-all =
 text-action-select-all-shortcut =
     .key = A
 
+text-action-search-text-box-clear =
+    .title = Maak skoon

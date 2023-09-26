@@ -32,7 +32,7 @@ protection-report-page-summary = { -brand-short-name }(e)k zure pribatutasuna ba
 # This message shows when at least some protections are turned on, we are more assertive compared to the message above, Firefox is actively protecting you.
 protection-report-page-summary-default = Nabigatu ahala zure pribatutasuna babesten du { -brand-short-name }(e)k. Babesen laburpen pertsonalizatua da hau eta lineako segurtasunaren kontrola hartzeko tresnak ere baditu.
 
-protection-report-settings-link = Kudeatu zure pribatutasun eta segurtasun ezartpenak
+protection-report-settings-link = Kudeatu zure pribatutasun- eta segurtasun-ezarpenak
 
 etp-card-title-always = Jarraipenaren babes hobetua: Beti aktibo
 etp-card-title-custom-not-blocking = Jarraipenaren babes hobetua: Itzalita
@@ -65,22 +65,20 @@ cryptominer-tab-content = Kriptomeatzariek zure sistemaren konputazio-ahalmena e
 protections-close-button2 =
     .aria-label = Itxi
     .title = Itxi
-  
+
 mobile-app-title = Blokeatu publizitatearen jarraipen-elementuak gailu gehiagotan
 mobile-app-card-content = Erabili mugikorreko nabigatzailea publizitatearen jarraipen-elementuen babesarekin
 mobile-app-links = { -brand-product-name } nabigatzailea <a data-l10n-name="android-mobile-inline-link">Android</a> eta <a data-l10n-name="ios-mobile-inline-link">iOS</a> plataformetarako
 
 lockwise-title = Ez ahaztu sekula pasahitzik berriro
-lockwise-title-logged-in2 = Pasahitzen kudeaketa
-lockwise-header-content = { -lockwise-brand-name }(e)k zure pasahitzak nabigatzailean gordetzen ditu modu seguruan.
+passwords-title-logged-in = Kudeatu zure pasahitzak
+passwords-header-content = { -brand-product-name }(e)k zure pasahitzak nabigatzailean gordetzen ditu modu seguruan.
 lockwise-header-content-logged-in = Gorde eta sinkronizatu zure pasahitzak modu seguruan zure gailu guztietara.
-protection-report-save-passwords-button = Gorde pasahitzak
-    .title = Gorde pasahitzak { -lockwise-brand-short-name }(e)n
-protection-report-manage-passwords-button = Kudeatu pasahitzak
-    .title = Kudeatu pasahitzak { -lockwise-brand-short-name }(e)n
-lockwise-mobile-app-title = Eraman pasahitzak alboan
-lockwise-no-logins-card-content = Erabili { -brand-short-name }(e)n gordetako pasahitzak edozein gailutan.
-lockwise-app-links = <a data-l10n-name="lockwise-android-inline-link">Android</a> and <a data-l10n-name="lockwise-ios-inline-link">iOS</a>erako { -lockwise-brand-name }
+protection-report-passwords-save-passwords-button = Gorde pasahitzak
+    .title = Gorde pasahitzak
+protection-report-passwords-manage-passwords-button = Kudeatu pasahitzak
+    .title = Kudeatu pasahitzak
+
 
 # Variables:
 # $count (Number) - Number of passwords exposed in data breaches.
@@ -100,9 +98,6 @@ lockwise-scanned-text-no-breached-logins =
        *[other] Zure pasahitzak modu seguruan gorde dira.
     }
 lockwise-how-it-works-link = Nola dabilen
-
-turn-on-sync = Aktibatu { -sync-brand-short-name }…
-    .title = Joan sinkronizatzeko hobespenetara
 
 monitor-title = Erne ibili datuen inguruko urratzeekin
 monitor-link = Nola dabilen

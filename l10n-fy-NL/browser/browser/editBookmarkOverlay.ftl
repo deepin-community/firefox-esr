@@ -2,17 +2,6 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-bookmark-overlay-name =
-    .value = Namme:
-    .accesskey = N
-
-bookmark-overlay-location =
-    .value = Lokaasje:
-    .accesskey = L
-
-bookmark-overlay-folder =
-    .value = Map:
-
 bookmark-overlay-name-2 =
     .value = Namme
     .accesskey = N
@@ -35,29 +24,33 @@ bookmark-overlay-folders-expander =
     .tooltiptextdown = { bookmark-overlay-folders-expander.tooltiptext }
     .tooltiptextup = Ferbergje
 
+bookmark-overlay-folders-expander2 =
+    .tooltiptext = Alle blêdwizermappen toane
+
+bookmark-overlay-folders-expander-hide =
+    .tooltiptext = Ferbergje
+
 bookmark-overlay-new-folder-button =
     .label = Nije map
     .accesskey = a
-
-bookmark-overlay-tags =
-    .value = Labels
-    .accesskey = L
 
 bookmark-overlay-tags-2 =
     .value = Labels
     .accesskey = a
 
 bookmark-overlay-tags-empty-description =
-    .placeholder = Labels skiede troch komma's.
+    .placeholder = Labels skiede troch komma’s.
 
 bookmark-overlay-tags-expander =
     .tooltiptext = Alle labels toane
     .tooltiptextdown = { bookmark-overlay-tags-expander.tooltiptext }
     .tooltiptextup = Ferbergje
 
-bookmark-overlay-keyword =
-    .value = Kaaiwurd:
-    .accesskey = K
+bookmark-overlay-tags-expander2 =
+    .tooltiptext = Alle labels toane
+
+bookmark-overlay-tags-expander-hide =
+    .tooltiptext = Ferbergje
 
 bookmark-overlay-keyword-2 =
     .value = Kaaiwurd

@@ -6,9 +6,6 @@ password-quality-meter = Ɓetirɗe moƴƴugol finnde
 
 ## Change Password dialog
 
-change-password-window =
-    .title = Waylu Finnde Baabaare
-
 # Variables:
 # $tokenName (String) - Security device of the change password dialog
 change-password-token = Kaɓirɗi Kisal: { $tokenName }
@@ -16,23 +13,16 @@ change-password-old = Finnde woodnde:
 change-password-new = Finnde hesere:
 change-password-reenter = Finnde hesere (goɗngol):
 
-## Reset Password dialog
-
-reset-password-window =
-    .title = Finnde maa waklitaama
-    .style = width: 40em
-
 ## Reset Primary Password dialog
 
 reset-password-button-label =
     .label = Firlit
-reset-password-text = So a waklitii finnde maa baabaare, finndeeji maa geese e iimeel, porme keɓe, seedamfaaje keeriiɗe, e kele suturo maa njejjite. Aɗa yenanaa yiɗde waklitde finnde baabaare maa?
 
 ## Downloading cert dialog
 
-download-cert-window =
+download-cert-window2 =
     .title = Aawto Seedamfaagu
-    .style = width: 46em
+    .style = min-width: 46em
 download-cert-message = A naamnaama yo a hoolo Kohowo Seedamfaagu keso (CA).
 download-cert-trust-ssl =
     .label = Hoolo oo CA e keftingol lowe geese.
@@ -64,7 +54,5 @@ set-password-reminder = Teeŋtuɗum: So a hettii finnde dannditol  seedamfaagua,
 
 ## Protected Auth dialog
 
-protected-auth-window =
-    .title = Goongɗitingol Token Cuuraaɗo
-protected-auth-msg = Tiiɗno goongɗitin to token oo. Feere oongɗitingol fawii ko e fannu token maa.
-protected-auth-token = Token:
+## Protected authentication alert
+

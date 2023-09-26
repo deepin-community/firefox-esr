@@ -6,9 +6,6 @@ password-quality-meter = စကားဝှက် အရည်အသွေးပ
 
 ## Change Password dialog
 
-change-password-window =
-    .title = ပင်ရင်း စကားဝှက်ကို ပြောင်းလဲပါ
-
 # Variables:
 # $tokenName (String) - Security device of the change password dialog
 change-password-token = လုံခြုံရေး ကိရိယာ: { $tokenName }
@@ -16,23 +13,16 @@ change-password-old = လက်ရှိ စကားဝှက် -
 change-password-new = စကားဝှက် အသစ် -
 change-password-reenter = စကားဝှက် အသစ် (ပြန်ရေးပါ) -
 
-## Reset Password dialog
-
-reset-password-window =
-    .title = ပင်မ စကားဝှက်ကို ပြန်ချိန်ပါ
-    .style = width: 40em
-
 ## Reset Primary Password dialog
 
 reset-password-button-label =
     .label = ပြန်ချိန်တယ်
-reset-password-text = သင့်ရဲ့ ပင်မ စကားဝှက်ကို သင်ပြန်ချိန်ထားရင်၊ သင့်ရဲ့ ကွန်ရက်နဲ့ အီးမေးလ် စကားဝှက်များ၊ ဖြည့်စွတ် ပုံစံ၊ တကိုယ်ရေ လက်မှတ်များနဲ့၊ သီးသန့် သော့ချက်များ အားလုံးကို မေ့ပျောက်ခံရလိမ့်မယ်။ သင့်ရဲ့ ပင်မ စကားဝှက်ကို ပြန်ချိန်ဖို့ သေချာသလား။
 
 ## Downloading cert dialog
 
-download-cert-window =
+download-cert-window2 =
     .title = လက်မှတ် ဆွဲချနေတယ်
-    .style = width: 46em
+    .style = min-width: 46em
 download-cert-message = လက်မှတ် အာဏာပိုင် (CA) သစ်တခုကို စိတ်ချဖို့ သင့်ကို တောင်းဆိုခဲ့တယ်။
 download-cert-trust-ssl =
     .label = ဝဘ်ဆိုက်များကို ခွဲခြားသိရှိနိုင်ရန် ယခု CA ကို သုံးမည်။
@@ -64,7 +54,5 @@ set-password-reminder = Important: If you forget your certificate backup passwor
 
 ## Protected Auth dialog
 
-protected-auth-window =
-    .title = ကာကွယ်ထားတဲ့ အမှတ်အသား အတည်ပြုမှု
-protected-auth-msg = အမှတ်အသားကို အတည်ပြုပါ။ အတည်ပြုမှု နည်းလမ်းဟာ သင့်ရဲ့ အမှတ်အသား အမျိုးအစားပေါ်မှာ မူတည်တယ်။
-protected-auth-token = အမှတ်အသား -
+## Protected authentication alert
+

@@ -6,9 +6,6 @@ password-quality-meter = ឧបករណ៍​​វាស់​​​គុណ�
 
 ## Change Password dialog
 
-change-password-window =
-    .title = ផ្លាស់ប្ដូរ​ពាក្យ​សម្ងាត់​មេ
-
 # Variables:
 # $tokenName (String) - Security device of the change password dialog
 change-password-token = ឧបករណ៍​សុវត្ថិភាព: { $tokenName }
@@ -16,23 +13,16 @@ change-password-old = ពាក្យ​សម្ងាត់​បច្ចុ�
 change-password-new = ពាក្យ​សម្ងាត់​ថ្មី ៖
 change-password-reenter = ពាក្យ​សម្ងាត់​ថ្មី (ម្តង​ទៀត) ៖
 
-## Reset Password dialog
-
-reset-password-window =
-    .title = កំណត់​ពាក្យ​សម្ងាត់​មេ​ឡើង​​វិញ
-    .style = width: 40em
-
 ## Reset Primary Password dialog
 
 reset-password-button-label =
     .label = កំណត់​ឡើង​វិញ
-reset-password-text = ប្រសិន​បើ​អ្នក​កំណត់​ពាក្យ​សម្ងាត់​មេ​របស់​អ្នក​ឡើង​វិញ ពាក្យសម្ងាត់​បណ្ដាញ និង​អ៊ីមែល​ ទិន្នន័យ​ទ្រង់ទ្រាយ វិញ្ញាបនបត្រ​ផ្ទាល់ខ្លួន​ និង​សោ​ឯកជន​ទាំងអស់​របស់​អ្នក នឹង​ត្រូវ​បាន​បំភ្លេច​ចោល​ ។ តើ​អ្នក​ពិត​ជា​ចង់​កំណត់​ពាក្យ​សម្ងាត់​មេ​របស់​អ្នក​ឡើង​វិញ​ឬ ?
 
 ## Downloading cert dialog
 
-download-cert-window =
+download-cert-window2 =
     .title = កំពុង​ទាញ​យក​វិញ្ញាបនបត្រ
-    .style = width: 46em
+    .style = min-width: 46em
 download-cert-message = អ្នក​ត្រូវ​បាន​ស្នើ​ឲ្យ​ជឿ​ទុកចិត្ត​លើ​​អាជ្ញាធរ​​វិញ្ញាបនបត្រ​ (CA) ថ្មី ។
 download-cert-trust-ssl =
     .label = ទុកចិត្ត​លើ CA នេះ​ដើម្បី​កំណត់​អត្តសញ្ញាណ​តំបន់បណ្ដាញ ។
@@ -64,7 +54,5 @@ set-password-reminder = សំខាន់ ៖ ប្រសិនបើ​អ�
 
 ## Protected Auth dialog
 
-protected-auth-window =
-    .title = បាន​ការពារ​ការ​ផ្ទៀងផ្ទាត់​ភាព​ត្រឹមត្រូវ​របស់​ថូខឹន
-protected-auth-msg = សូម​ផ្ទៀងផ្ទាត់​ភាព​ត្រឹមត្រូវ​ចំពោះ​ថូខឹន ។ វិធីសាស្ត្រ​ផ្ទៀងផ្ទាត់​ភាព​ត្រឹមត្រូវ​ផ្អែក​លើ​ប្រភេទ​នៃ​ថូខឹន​របស់​អ្នក ។
-protected-auth-token = ថូខឹន ៖
+## Protected authentication alert
+

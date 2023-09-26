@@ -34,6 +34,10 @@ text-action-paste =
     .label = ਚੇਪੋ
     .accesskey = P
 
+text-action-paste-no-formatting =
+    .label = ਬਿਨਾਂ ਕਿਸੇ ਫਾਰਮੈਟ ਦੇ ਚੇਪੋ
+    .accesskey = m
+
 text-action-paste-shortcut =
     .key = V
 
@@ -48,3 +52,28 @@ text-action-select-all =
 text-action-select-all-shortcut =
     .key = A
 
+text-action-spell-no-suggestions =
+    .label = ਕੋਈ ਸਪੈਲਿੰਗ ਸੁਝਾਅ ਨਹੀਂ ਹਨ
+
+text-action-spell-add-to-dictionary =
+    .label = ਡਿਕਸ਼ਨਰੀ ਵਿੱਚ ਜੋੜੋ
+    .accesskey = o
+
+text-action-spell-undo-add-to-dictionary =
+    .label = ਡਿਕਸ਼ਨਰੀ ਵਿੱਚ ਜੋੜੇ ਨੂੰ ਹਟਾਓ
+    .accesskey = n
+
+text-action-spell-check-toggle =
+    .label = ਸ਼ਬਦ-ਜੋੜ ਜਾਂਚ ਕਰੋ
+    .accesskey = g
+
+text-action-spell-add-dictionaries =
+    .label = …ਡਿਕਸ਼ਨਰੀਆਂ ਜੋੜੋ
+    .accesskey = A
+
+text-action-spell-dictionaries =
+    .label = ਭਾਸ਼ਾਵਾਂ
+    .accesskey = L
+
+text-action-search-text-box-clear =
+    .title = ਸਾਫ਼ ਕਰੋ

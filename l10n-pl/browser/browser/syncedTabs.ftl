@@ -7,26 +7,43 @@ synced-tabs-sidebar-noclients-subtitle = Czy wyświetlić tutaj listę kart otwa
 synced-tabs-sidebar-intro = Wyświetl listę kart z innych urządzeń.
 synced-tabs-sidebar-unverified = Konto musi zostać zweryfikowane.
 synced-tabs-sidebar-notabs = Brak otwartych kart
-synced-tabs-sidebar-openprefs = Otwórz ustawienia { -sync-brand-short-name(case: "gen", capitalization: "lower") }
 synced-tabs-sidebar-open-settings = Otwórz ustawienia synchronizacji
 synced-tabs-sidebar-tabsnotsyncing = Włącz synchronizację kart, aby wyświetlić ich listę z innych urządzeń.
 synced-tabs-sidebar-connect-another-device = Połącz inne urządzenie
 synced-tabs-sidebar-search =
     .placeholder = Szukaj w kartach z innych urządzeń
+
+## Displayed in the Synced Tabs sidebar's context menu when right-clicking tabs
+## and/or devices in the list. The "Open" strings below should be translated
+## consistently with the equivalent strings for the bookmarks manager's context
+## menu. That menu is activated by right-clicking a bookmark in the Library
+## window. The bookmarks manager context's strings are located in places.ftl.
+
 synced-tabs-context-open =
     .label = Otwórz
     .accesskey = O
-synced-tabs-context-open-in-new-tab =
+synced-tabs-context-open-in-tab =
     .label = Otwórz w nowej karcie
     .accesskey = n
-synced-tabs-context-open-in-new-window =
+synced-tabs-context-open-in-container-tab =
+    .label = Otwórz w nowej karcie z kontekstem
+    .accesskey = k
+synced-tabs-context-open-in-window =
     .label = Otwórz w nowym oknie
     .accesskey = e
-synced-tabs-context-open-in-new-private-window =
+synced-tabs-context-open-in-private-window =
     .label = Otwórz w nowym oknie prywatnym
     .accesskey = z
-synced-tabs-context-bookmark-single-tab =
-    .label = Dodaj zakładkę do tej karty…
+
+##
+
+# Displayed in the Synced Tabs sidebar's context menu when right-clicking tabs
+# and/or devices in the list. This string is for a menuitem equivalent to one in
+# the tab context menu (activated by right-clicking a tab in the tabstrip). That
+# string is located in tabContextMenu.ftl. So, this string should be translated
+# consistently with the "Bookmark Tab…" string there.
+synced-tabs-context-bookmark =
+    .label = Dodaj zakładkę do karty…
     .accesskey = D
 synced-tabs-context-copy =
     .label = Kopiuj
@@ -40,7 +57,5 @@ synced-tabs-context-manage-devices =
 synced-tabs-context-sync-now =
     .label = Synchronizuj teraz
     .accesskey = S
-fxa-sign-in = Zaloguj się do { -sync-brand-short-name(case: "gen", capitalization: "lower") }
-turn-on-sync = Włącz { -sync-brand-short-name(case: "acc", capitalization: "lower") }
 synced-tabs-fxa-sign-in = Zaloguj się do synchronizacji
 synced-tabs-turn-on-sync = Włącz synchronizację

@@ -2,17 +2,6 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-bookmark-overlay-name =
-    .value = Nome
-    .accesskey = N
-
-bookmark-overlay-location =
-    .value = Allugamientu:
-    .accesskey = D
-
-bookmark-overlay-folder =
-    .value = Carpeta:
-
 bookmark-overlay-name-2 =
     .value = Nome
     .accesskey = N
@@ -35,13 +24,15 @@ bookmark-overlay-folders-expander =
     .tooltiptextdown = { bookmark-overlay-folders-expander.tooltiptext }
     .tooltiptextup = Anubrir
 
+bookmark-overlay-folders-expander2 =
+    .tooltiptext = Amosar toles carpetes de los marcadores
+
+bookmark-overlay-folders-expander-hide =
+    .tooltiptext = Anubrir
+
 bookmark-overlay-new-folder-button =
     .label = Carpeta nueva
     .accesskey = n
-
-bookmark-overlay-tags =
-    .value = Etiquetes:
-    .accesskey = E
 
 bookmark-overlay-tags-2 =
     .value = Etiquetes
@@ -55,9 +46,11 @@ bookmark-overlay-tags-expander =
     .tooltiptextdown = { bookmark-overlay-tags-expander.tooltiptext }
     .tooltiptextup = Anubrir
 
-bookmark-overlay-keyword =
-    .value = Pallabra clave:
-    .accesskey = P
+bookmark-overlay-tags-expander2 =
+    .tooltiptext = Amosar toles etiquetes
+
+bookmark-overlay-tags-expander-hide =
+    .tooltiptext = Anubrir
 
 bookmark-overlay-keyword-2 =
     .value = Pallabra clave

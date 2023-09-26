@@ -2,17 +2,6 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-bookmark-overlay-name =
-    .value = Назив:
-    .accesskey = Н
-
-bookmark-overlay-location =
-    .value = Адреса:
-    .accesskey = А
-
-bookmark-overlay-folder =
-    .value = Фасцикла:
-
 bookmark-overlay-name-2 =
     .value = Назив
     .accesskey = Н
@@ -35,13 +24,15 @@ bookmark-overlay-folders-expander =
     .tooltiptextdown = { bookmark-overlay-folders-expander.tooltiptext }
     .tooltiptextup = Сакриј
 
+bookmark-overlay-folders-expander2 =
+    .tooltiptext = Прикажи све фасцикле са обележивачима
+
+bookmark-overlay-folders-expander-hide =
+    .tooltiptext = Сакриј
+
 bookmark-overlay-new-folder-button =
     .label = Нова фасцикла
     .accesskey = ф
-
-bookmark-overlay-tags =
-    .value = Ознаке:
-    .accesskey = T
 
 bookmark-overlay-tags-2 =
     .value = Ознаке
@@ -55,9 +46,11 @@ bookmark-overlay-tags-expander =
     .tooltiptextdown = { bookmark-overlay-tags-expander.tooltiptext }
     .tooltiptextup = Сакриј
 
-bookmark-overlay-keyword =
-    .value = Кључна реч:
-    .accesskey = K
+bookmark-overlay-tags-expander2 =
+    .tooltiptext = Прикажи све ознаке
+
+bookmark-overlay-tags-expander-hide =
+    .tooltiptext = Сакриј
 
 bookmark-overlay-keyword-2 =
     .value = Кључна реч

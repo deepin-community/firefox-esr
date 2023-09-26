@@ -23,49 +23,12 @@ certmgr-tab-ca =
 certmgr-mine = Sie haben Zertifikate dieser Organisationen, die Sie identifizieren:
 certmgr-remembered = Folgende Zertifikate werden verwendet, um Sie gegenüber Websites zu identifizieren:
 certmgr-people = Sie haben Zertifikate gespeichert, die diese Personen identifizieren:
-certmgr-servers = Sie haben Zertifikate gespeichert, die diese Server identifizieren:
 certmgr-server = Diese Einträge identifizieren Ausnahmeregeln für Fehler von Serverzertifikaten
 certmgr-ca = Sie haben Zertifikate gespeichert, die diese Zertifizierungsstellen identifizieren:
 
-certmgr-detail-general-tab-title =
-    .label = Allgemein
-    .accesskey = A
-
-certmgr-detail-pretty-print-tab-title =
-    .label = Details
-    .accesskey = D
-
-certmgr-pending-label =
-    .value = Das Zertifikat wird derzeit verifiziert…
-
-certmgr-subject-label = Ausgestellt für
-
-certmgr-issuer-label = Ausgestellt von
-
-certmgr-period-of-validity = Gültigkeitsdauer
-
-certmgr-fingerprints = Fingerabdrücke
-
-certmgr-cert-detail =
-    .title = Zertifikats-Detail
-    .buttonlabelaccept = Schließen
-    .buttonaccesskeyaccept = c
-
-certmgr-cert-detail-commonname = Allgemeiner Name (CN)
-
-certmgr-cert-detail-org = Organisation (O)
-
-certmgr-cert-detail-orgunit = Organisationseinheit (OU)
-
-certmgr-cert-detail-serial-number = Seriennummer
-
-certmgr-cert-detail-sha-256-fingerprint = SHA-256-Fingerabdruck
-
-certmgr-cert-detail-sha-1-fingerprint = SHA1-Fingerabdruck
-
-certmgr-edit-ca-cert =
+certmgr-edit-ca-cert2 =
     .title = CA-Zertifikat-Vertrauenseinstellungen bearbeiten
-    .style = width: 48em;
+    .style = min-width: 48em;
 
 certmgr-edit-cert-edit-trust = Vertrauenseinstellungen bearbeiten
 
@@ -75,9 +38,9 @@ certmgr-edit-cert-trust-ssl =
 certmgr-edit-cert-trust-email =
     .label = Dieses Zertifikat kann Mail-Benutzer identifizieren.
 
-certmgr-delete-cert =
+certmgr-delete-cert2 =
     .title = Zertifikat löschen
-    .style = width: 48em; height: 24em;
+    .style = min-width: 48em; min-height: 24em;
 
 certmgr-cert-host =
     .label = Host
@@ -88,18 +51,11 @@ certmgr-cert-name =
 certmgr-cert-server =
     .label = Server
 
-certmgr-override-lifetime =
-    .label = Lebenszeit
-
 certmgr-token-name =
     .label = Kryptographie-Modul
 
-certmgr-begins-on = Beginnt mit
-
 certmgr-begins-label =
     .label = Beginnt mit
-
-certmgr-expires-on = Gültig bis
 
 certmgr-expires-label =
     .label = Gültig bis
@@ -109,6 +65,9 @@ certmgr-email =
 
 certmgr-serial =
     .label = Seriennummer
+
+certmgr-fingerprint-sha-256 =
+    .label = SHA-256-Fingerabdruck
 
 certmgr-view =
     .label = Ansehen…
@@ -141,18 +100,6 @@ certmgr-backup-all =
 certmgr-restore =
     .label = Importieren…
     .accesskey = I
-
-certmgr-details =
-    .value = Zertifikats-Layout
-    .accesskey = Z
-
-certmgr-fields =
-    .value = Feld-Wert
-    .accesskey = F
-
-certmgr-hierarchy =
-    .value = Zertifikatshierarchie
-    .accesskey = h
 
 certmgr-add-exception =
     .label = Ausnahme hinzufügen…
@@ -216,12 +163,6 @@ delete-user-cert-confirm = Sollen diese Zertifikate wirklich gelöscht werden?
 delete-user-cert-impact = Wenn Sie eines Ihrer eigenen Zertifikate löschen, können Sie es nicht mehr verwenden, um sich zu identifizieren.
 
 
-delete-ssl-cert-title =
-    .title = Server-Zertifikat-Ausnahmeregeln löschen
-delete-ssl-cert-confirm = Sollen diese Server-Ausnahmeregeln wirklich gelöscht werden?
-delete-ssl-cert-impact = Wenn Sie eine Server-Ausnahmeregel löschen, werden die normalen Sicherheitsüberprüfungen für diesen Server wiederhergestellt und er muss ein gültiges Zertifikat vorweisen.
-
-
 delete-ssl-override-title =
     .title = Ausnahmeregel für Serverzertifikat löschen
 delete-ssl-override-confirm = Soll diese Ausnahmeregel für Server wirklich gelöscht werden?
@@ -244,47 +185,6 @@ delete-email-cert-impact = Wenn Sie das E-Mail-Zertifikat einer Person löschen,
 #   $serialNumber : the serial number of the cert in AA:BB:CC hex format.
 cert-with-serial =
     .value = Zertifikat mit Seriennummer: { $serialNumber }
-
-## Cert Viewer
-
-# Title used for the Certificate Viewer.
-#
-# Variables:
-#   $certificate : a string representative of the certificate being viewed.
-cert-viewer-title =
-    .title = Zertifikat-Ansicht: "{ $certName }"
-
-not-present =
-    .value = <kein Teil des Zertifikats>
-
-# Cert verification
-cert-verified = Dieses Zertifikat wurde für die folgenden Verwendungen verifiziert:
-
-# Add usage
-verify-ssl-client =
-    .value = SSL-Client-Zertifikat
-
-verify-ssl-server =
-    .value = SSL-Server-Zertifikat
-
-verify-ssl-ca =
-    .value = SSL-Zertifizierungsstelle
-
-verify-email-signer =
-    .value = E-Mail-Unterzeichner-Zertifikat
-
-verify-email-recip =
-    .value = E-Mail-Empfänger-Zertifikat
-
-# Cert verification
-cert-not-verified-cert-revoked = Dieses Zertifikat konnte nicht verifiziert werden, da es widerrufen wurde.
-cert-not-verified-cert-expired = Dieses Zertifikat konnte nicht verifiziert werden, da es abgelaufen ist.
-cert-not-verified-cert-not-trusted = Dieses Zertifikat konnte nicht verifiziert werden, da ihm nicht vertraut wird.
-cert-not-verified-issuer-not-trusted = Dieses Zertifikat konnte nicht verifiziert werden, da dem Aussteller nicht vertraut wird.
-cert-not-verified-issuer-unknown = Dieses Zertifikat konnte nicht verifiziert werden, da der Aussteller unbekannt ist.
-cert-not-verified-ca-invalid = Dieses Zertifikat konnte nicht verifiziert werden, da das CA-Zertifikat ungültig ist.
-cert-not-verified_algorithm-disabled = Das Zertifikat konnte nicht verifiziert werden, weil es mit einem Signatur-Algorithmus signiert wurde, der deaktiviert wurde, weil er nicht sicher ist.
-cert-not-verified-unknown = Dieses Zertifikat konnte aus unbekannten Gründen nicht verifiziert werden.
 
 # Used to indicate that the user chose not to send a client authentication certificate to a server that requested one in a TLS handshake.
 send-no-client-certificate = Kein Client-Zertifikat senden

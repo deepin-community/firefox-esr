@@ -2,10 +2,6 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-screenshots-context-menu = ایک سکرین شاٹ لیں
-
-screenshots-my-shots-button = میری شاٹس
-
 screenshot-toolbarbutton =
     .label = اسکرین شاٹ
     .tooltiptext = اسکرین شاٹ لیں
@@ -40,11 +36,10 @@ screenshots-login-error-details = ہم آُپ کی شاٹ محفوظ نہیں ک
 screenshots-unshootable-page-error-title = ہم اس صفحہ کی اسکرین شاٹ نہیں کر سکتے۔
 screenshots-unshootable-page-error-details = یہ ایک میعاری صفحہ نہہیں، تو آپ اسکی اسکرین شاٹ نہیں لے سکتے۔
 
-screenshots-self-screenshot-error-title = آپ { -screenshots-brand-name } صفحے! کی ایک شاٹ نہیں لے سکت
-
 screenshots-empty-selection-error-title = آپ کا انتخاب بہت چھوٹا ہے
 
 screenshots-private-window-error-title = { -screenshots-brand-name } نجی برائوزنگ موڈ مییں نااہل بنایا گیا ہے
 
 screenshots-generic-error-title = لاجواب! { -screenshots-brand-name } بہت مشہور ہو گیا۔
 screenshots-generic-error-details = ہمیں یقین نہیں کہ کیا ہوا تھا۔ خیال رکھ کر پھر کوشش کریں یا بھر مختلف صفحہ کی تصویرلیں؟
+

@@ -2,12 +2,12 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-connection-window =
+connection-window2 =
     .title = Iɣewwaṛen n tuqqna
     .style =
         { PLATFORM() ->
-            [macos] width: 44em
-           *[other] width: 49em
+            [macos] min-width: 44em
+           *[other] min-width: 49em
         }
 
 connection-close-key =
@@ -35,10 +35,6 @@ connection-proxy-http = Apṛuksi HTTP
     .accesskey = q
 connection-proxy-http-port = Tabburt
     .accesskey = P
-connection-proxy-http-sharing =
-    .label = Seqdec daɣen apṛuksi-a i FTP akked HTTPS
-    .accesskey = s
-
 connection-proxy-https-sharing =
     .label = Seqdec daɣen apṛuksi-a i HTTPS
     .accesskey = S
@@ -47,11 +43,6 @@ connection-proxy-https = Apṛuksi HTTP
     .accesskey = P
 connection-proxy-ssl-port = Tabburt
     .accesskey = o
-
-connection-proxy-ftp = Apṛuksi FTP
-    .accesskey = S
-connection-proxy-ftp-port = Tabburt
-    .accesskey = r
 
 connection-proxy-socks = Asenneftaɣ SOCKS
     .accesskey = C
@@ -69,9 +60,6 @@ connection-proxy-noproxy = Ulac apṛuksi i
 
 connection-proxy-noproxy-desc = Amedya: .mozilla.org, .net.nz, 192.168.1.0/24
 
-# Do not translate localhost, 127.0.0.1 and ::1.
-connection-proxy-noproxy-localhost-desc = Tuqqniwin ɣer localhost, 127.0.0.1 ou ::1 urǧin ad ɛeddint s upṛuksi.
-
 # Do not translate "localhost", "127.0.0.1/8" and "::1". (You can translate "and".)
 connection-proxy-noproxy-localhost-desc-2 = Tuqqniwin ɣer usenneftaɣ adigan, 127.0.0.1/8, akked ::1 urǧin ad ɛeddint s upṛuksi.
 
@@ -88,16 +76,14 @@ connection-proxy-autologin =
     .accesskey = k
     .tooltip = Aɣewwaṛ-a ad k-isesteb s wudem awurman deg iqeddacen n apruksi, anda awal uffir yekles. Ticki asesteb ur yeddi ara, ad k-d-nessuter awal uffir.
 
+connection-proxy-autologin-checkbox =
+    .label = Ur sutur ara asesteb ma yella awal uffir yettwakles
+    .accesskey = k
+    .tooltiptext = Aɣewwaṛ-a ad k-isesteb s wudem awurman deg iqeddacen n apruksi, anda awal uffir yekles. Ticki asesteb ur yeddi ara, ad k-d-nessuter awal uffir.
+
 connection-proxy-socks-remote-dns =
     .label = Apṛuksi DNS ticki SOCKS v5 yettwaseqdec
     .accesskey = d
-
-connection-dns-over-https =
-    .label = Rmed DNS Deg HTTPS
-    .accesskey = H
-
-connection-dns-over-https-url-resolver = Seqdec asaǧǧaw
-    .accesskey = S
 
 # Variables:
 #   $name (String) - Display name or URL for the DNS over HTTPS provider

@@ -32,3 +32,6 @@ toolbar-context-menu-view-customize-toolbar =
     .label = ប្ដូរ​តាម​តម្រូវ​ការ…
     .accesskey = C
 
+toolbar-context-menu-menu-bar-cmd =
+    .toolbarname = របារ​ម៉ឺនុយ
+    .accesskey = M

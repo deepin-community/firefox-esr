@@ -7,7 +7,6 @@
 
 cfr-doorhanger-extension-heading = Chilab'en K'amal
 cfr-doorhanger-feature-heading = Chilab'en Samaj
-cfr-doorhanger-pintab-heading = Tatojtob'ej rere': Pin Tab
 
 ##
 
@@ -18,8 +17,6 @@ cfr-doorhanger-extension-cancel-button = Wakami Mani
     .accesskey = M
 
 cfr-doorhanger-extension-ok-button = Titz'aqatisäx Wakami
-    .accesskey = T
-cfr-doorhanger-pintab-ok-button = Tinak'ab'äx Re Ruwi' Re'
     .accesskey = T
 
 cfr-doorhanger-extension-manage-settings-button = Kenuk'samajïx taq Kinuk'ulem Chilab'enïk
@@ -68,18 +65,6 @@ cfr-doorhanger-extension-total-users =
        *[other] { $total } okisanela'
     }
 
-cfr-doorhanger-pintab-description = Katok anin pa ri ruxaq ak'amaya'l yalan nawokisaj. Ke'ajaqa' kan ri taq ruxaq k'amaya'l pa jun ruwi' (achi'el toq natikirisaj).
-
-## These messages are steps on how to use the feature and are shown together.
-
-cfr-doorhanger-pintab-step1 = <b>Ajkiq'a'-pitz'oj</b> pa ri ruwi' nawajo' nanak'ab'a'.
-cfr-doorhanger-pintab-step2 = Ticha' <b>Nak'oj Ruwi'</b> pa ri k'utsamaj.
-cfr-doorhanger-pintab-step3 = We k'o jun ruk'exoj ri ruxaq k'amaya'l, xtatz'ët jun xar chuq' pa ri ruwi' nak'ab'an.
-
-cfr-doorhanger-pintab-animation-pause = Tiq'at
-cfr-doorhanger-pintab-animation-resume = Titikïr chik el
-
-
 ## Firefox Accounts Message
 
 cfr-doorhanger-bookmark-fxa-header = Xab'akuchi' Ke'axima' ri taq ayaketal.
@@ -105,133 +90,9 @@ cfr-whatsnew-button =
     .label = K'ak'a' Rutzijol
     .tooltiptext = K'ak'a' Rutzijol
 
-cfr-whatsnew-panel-header = Achike natzijoj
-
 cfr-whatsnew-release-notes-link-text = Tasik'ij ri k'ak'a' rutzijol
 
-cfr-whatsnew-fx70-title = { -brand-short-name } wakami nuya' rejqalem ri awichinanem
-cfr-whatsnew-fx70-body =
-    Ri ruk'isib'äl k'exoj nrutzilaj ri Chajinïk chuwäch Ojqanem chuqa' nub'än
-    chi man k'ayew ta ye'atz'ük ütz ewan taq tzij kichin ri taq ruxaq.
-
-cfr-whatsnew-tracking-protect-title = Tachajij awi' chi kiwäch ri ojqanela'
-cfr-whatsnew-tracking-protect-body =
-    { -brand-short-name } ke'aqata' k'ïy winäq ojqanela' chuqa' xoch'in taq ruxaq ri
-    nikitzeqelb'ej ri asamaj pa k'amab'ey.
-cfr-whatsnew-tracking-protect-link-text = Tatz'eta' ri Atzijol.
-
-# This string is displayed before a large numeral that indicates the total
-# number of tracking elements blocked. Don’t add $blockedCount to your
-# localization, because it would result in the number showing twice.
-cfr-whatsnew-tracking-blocked-title =
-    { $blockedCount ->
-        [one] Q'aton ojqanel
-       *[other] Eq'aton ojqanela'
-    }
-cfr-whatsnew-tracking-blocked-subtitle = Pa { DATETIME($earliestDate, month: "long", year: "numeric") }
-cfr-whatsnew-tracking-blocked-link-text = Titz'et ri Rutzijol
-
-cfr-whatsnew-lockwise-backup-title = Ke'awachib'ej ri ewan taq atzij
-cfr-whatsnew-lockwise-backup-body = Wakami yatikïr ye'atz'ük ütz ewan taq tzij, achoq kik'in yatikïr yatok xab'akuchi nawajo.
-cfr-whatsnew-lockwise-backup-link-text = Ketzij jikomal taq wachib'enïk
-
-cfr-whatsnew-lockwise-take-title = Ke'ak'waj ri ewan taq atzij awik'in
-cfr-whatsnew-lockwise-take-body =
-    Ri { -lockwise-brand-short-name } oyonib'äl chokoy nuya' q'ij chawe ütz yatok pa ri
-    jikomal taq kiwachib'enik ewan atzij xab'akuchi.
-cfr-whatsnew-lockwise-take-link-text = Tak'ulu' ri chokoy
-
-## Search Bar
-
-cfr-whatsnew-searchbar-title = Katz'ib'an jub'a', tawila' k'ïy rik'in ri rukajtz'ik ochochib'äl
-cfr-whatsnew-searchbar-body-topsites = Wakami xa xe tacha' ri rukajtz'ik ochochib'äl richin nirik'itäj jun kajtz'ik rik'in riruximik kik'in nima'q taq ruxaq.
-
-## Search bar
-
-cfr-whatsnew-searchbar-icon-alt-text = Ruwachib'al tzub'äl
-
-## Picture-in-Picture
-
-cfr-whatsnew-pip-header = Ke'atz'eta' silowäch toq atokinäq pa k'amaya'l
-cfr-whatsnew-pip-body = Ri Picture-in-picture nuk'üt ri silowäch pa jun wachin tzuwäch richin yatikïr natz'ët toq yasamäj pa jun chik ruwi'.
-cfr-whatsnew-pip-cta = Tetamäx ch'aqa' chik
-
-## Permission Prompt
-
-cfr-whatsnew-permission-prompt-header = Nitz taq pop-ups itzel taq ruxaq
-cfr-whatsnew-permission-prompt-body = { -brand-shorter-name } wakami yeruq'ät taq ruxaq richin chi man pa kiyonil tikik'utuj nikitäq jun elenel rutzijol chawe.
-cfr-whatsnew-permission-prompt-cta = Tetamäx ch'aqa' chik
-
-## Fingerprinter Counter
-
-# This string is displayed before a large numeral that indicates the total
-# number of tracking elements blocked. Don’t add $fingerprinterCount to your
-# localization, because it would result in the number showing twice.
-cfr-whatsnew-fingerprinter-counter-header =
-    { $fingerprinterCount ->
-        [one] Xq'at b'anöy ruwi' q'ab'aj
-       *[other] Xeq'at b'anöy ruwi' q'ab'aj
-    }
-cfr-whatsnew-fingerprinter-counter-body = { -brand-shorter-name } yeruq'ät k'ïy taq fingerprinter, ri yekimöl pan ewäl ri retamab'al awokisab'al chuqa' taq b'anoj richin ninuk' jun ruwäch ab'i' chi rij eltzijol.
-
-# Message variation when fingerprinters count is less than 10
-cfr-whatsnew-fingerprinter-counter-header-alt = Fingerprinters
-cfr-whatsnew-fingerprinter-counter-body-alt = { -brand-shorter-name } nitikïr yeruq'ät taq fingerprinter, ri yekimöl pan ewäl ri retamab'al awokisab'al chuqa' taq b'anoj richin ninuk' jun ruwäch ab'i' chi rij eltzijol.
-
-## Bookmark Sync
-
-cfr-doorhanger-sync-bookmarks-header = Taya' re yaketal re' pan awoyonib'al
-cfr-doorhanger-sync-bookmarks-body = Ke'ak'waj ri taq ayaketal, ewan atzij, natab'äl chuqa' ch'aqa' chik pa xab'achike k'ojlib'äl akuchi' natikirisaj molojri'ïl pa { -brand-product-name }.
-cfr-doorhanger-sync-bookmarks-ok-button = Titzij { -sync-brand-short-name }
-    .accesskey = i
-
-## Login Sync
-
-cfr-doorhanger-sync-logins-header = Man Tasäch chik jun Ewan Tzij
-cfr-doorhanger-sync-logins-body = Ütz ke'ayaka' ri ewan taq atzij chuqa' ke'axima' pa ronojel awokisab'al.
-cfr-doorhanger-sync-logins-ok-button = Titzij { -sync-brand-short-name }
-    .accesskey = T
-
-## Send Tab
-
-cfr-doorhanger-send-tab-header = Tisik'ïx re re' pa b'enam
-cfr-doorhanger-send-tab-recipe-header = Tik'wäx re retal rikil pa rute' q'aq'
-cfr-doorhanger-send-tab-body = Send Tab anin nuya' q'ij chawe nakomonij re ximöy tzij re' pan awoyonib'al o xab'akuchi' k'ojlib'äl akuchi' natikirisaj molojri'ïl pa { -brand-product-name }.
-cfr-doorhanger-send-tab-ok-button = Tatojtob'ej Send Tab
-    .accesskey = t
-
-## Firefox Send
-
-cfr-doorhanger-firefox-send-header = Ütz tikomonïx re PDF re'
-cfr-doorhanger-firefox-send-body = Ke'akolo' ri nïm taq awuj chuwäch itzel kitz'etik winaqi' rik'in chijun ewan rusik'ixik chuqa' rik'in jun ximonel, ri nisach el toq nik'is.
-cfr-doorhanger-firefox-send-ok-button = Titojtob'ëx { -send-brand-name }
-    .accesskey = t
-
-## Social Tracking Protection
-
-cfr-doorhanger-socialtracking-ok-button = Ketz'et taq chajinem
-    .accesskey = h
-cfr-doorhanger-socialtracking-close-button = Titz'apïx
-    .accesskey = t
-cfr-doorhanger-socialtracking-dont-show-again = Man kek'ut chik pe taq rutzijol achi'el re'
-    .accesskey = M
-cfr-doorhanger-socialtracking-heading = { -brand-short-name } xuq'ät chi jun aj winäq k'amab'ey yatrojqaj wawe'
-cfr-doorhanger-socialtracking-description = K'atzinel ri awichinanem. { -brand-short-name } wakami yeruq'ät ri kojqanela' aj winäq k'amab'ey, nuq'ät runimilem tzij yetikïr nikimöl chi rij ri nasamajij pa k'amab'ey.
-cfr-doorhanger-fingerprinters-heading = { -brand-short-name } xuq'ät jun tz'etöy retal ruwi' q'ab'aj pa re ruxaq re'
-cfr-doorhanger-fingerprinters-description = Nïm ri awichinanem. { -brand-short-name } wakami yeruq'ät ri tz'etöy retal ruwi' q'ab'aj, ri yekimöl kich'akulal retamab'al retal winäq chi rij ri rokisab'al richin nrojqaj.
-cfr-doorhanger-cryptominers-heading = { -brand-short-name } xuq'ät jun ajkriptomin pa re ruxaq re'
-cfr-doorhanger-cryptominers-description = Nïm ri awichinanem. { -brand-short-name } wakami yeruq'ät ri ajkriptomin, nikokisaj ruchuqa' rukematz'ib'il aq'inoj richin nrelesaj kematz'ib'il pwäq.
-
 ## Enhanced Tracking Protection Milestones
-
-# Variables:
-#   $blockedCount (Number) - The total count of blocked trackers. This number will always be greater than 1.
-#   $date (String) - The date we began recording the count of blocked trackers
-cfr-doorhanger-milestone-heading =
-    { $blockedCount ->
-        [one] ¡{ -brand-short-name } xeruq'ät k'ïy <b>{ $blockedCount }</b> taq ojqanela' pa { $date }!
-       *[other] ¡{ -brand-short-name } xeruq'ät k'ïy <b>{ $blockedCount }</b> taq ojqanela' pa { $date }!
-    }
 
 # Variables:
 #   $blockedCount (Number) - The total count of blocked trackers. This number will always be greater than 1.
@@ -243,45 +104,8 @@ cfr-doorhanger-milestone-heading2 =
     }
 cfr-doorhanger-milestone-ok-button = Titzet Ronojel
     .accesskey = t
-
-## What’s New Panel Content for Firefox 76
-
-
-## Lockwise message
-
-cfr-whatsnew-lockwise-header = Ke'atz'uku' aninäq jikïl ewan taq tzij
-cfr-whatsnew-lockwise-body = K'ayew nich'ob' xa jun chuqa' jikïl ewan kitzij jujun rub'i' taqoya'l. Toq nitz'uk jun ewan tzij, tacha' ri ruk'ojlem ewan tzij richin nokisäx jun jikïl ewan tzij tz'ukun ruma { -brand-shorter-name }.
-cfr-whatsnew-lockwise-icon-alt = { -lockwise-brand-short-name } wachib'äl
-
-## Vulnerable Passwords message
-
-cfr-whatsnew-passwords-header = Tak'ulu' rutzijol kik'ayewal tz'ilanel ewan taq tzij
-cfr-whatsnew-passwords-body = Ri ajjak ketaman chi ri winaqi' yekokisaj chik jub'ey ri ewan tzij. We xawokisaj jun ewan tzij pa jalajöj taq ruxaq k'amaya'l chuqa' we jun chi ke ri ruxaq k'amaya'l ri' nitz'iläx ri taq rutzij, xtatz'ët jun rutzijol k'ayewal pa { -lockwise-brand-short-name } richin najäl ri ewan atzij pa ri ruxaq k'amaya'l ri'.
-cfr-whatsnew-passwords-icon-alt = Ruwachib'al tz'ilanel ewan tzij
-
-## Picture-in-Picture fullscreen message
-
-cfr-whatsnew-pip-fullscreen-header = Tik'wäx ri picture-in-picture pa tz'aqät ruwäch
-cfr-whatsnew-pip-fullscreen-body = Toq nak'waj jun silowäch pa jun xik'anel tzuwäch, yatikïr chik naya' ka'i' pitz'oj pa ruwi' ri tzuwäch richin nitz'aqatisäx rutzub'al.
-cfr-whatsnew-pip-fullscreen-icon-alt = Ruwachib'al Picture-in-picture
-
-## Protections Dashboard message
-
-cfr-whatsnew-protections-header = Taq chajinïk wakami
-cfr-whatsnew-protections-body = Ri rupas chajinïk eruk'wan ko'öl taq kitzijol kitz'ilanem tzij chuqa' kinuk'samajixik ewan taq tzij. Wakami yatikïr natz'ët jarupe' taq tz'ilanem xesol richin natz'ët we jun chi ke ri ewan taq atzij ayakon xtz'iläx pa jun tz'ilanem tzij.
-cfr-whatsnew-protections-cta-link = Titz'et Kipas Chajinïk
-cfr-whatsnew-protections-icon-alt = Ruwachib'al Pokob'
-
-## Better PDF message
-
-cfr-whatsnew-better-pdf-header = Jeb'ël etamab'äl chi rij PDF
-cfr-whatsnew-better-pdf-body = Wakami ri aj PDF taq wuj jumul yejaq pa { -brand-short-name }, akuchi' k'o apon pan aq'a' ronojel ri asamaj.
-
 cfr-doorhanger-milestone-close-button = Titz'apïx
     .accesskey = t
-
-## What’s New Panel Content for Firefox 76
-## Protections Dashboard message
 
 ## DOH Message
 
@@ -294,28 +118,130 @@ cfr-doorhanger-doh-secondary-button = Tichup
 
 ## Fission Experiment Message
 
-cfr-doorhanger-fission-body-approved = K'o rejqalem ri awichinanem. { -brand-short-name } wakami yerujech'uj, kikojol taq ajk'amaya'l ruxaq, ri nub'än chi ri eleq'om taq kematz'ib'il nikeleq'aj ewan taq tzij, rajilab'al rutarjeta' kre'ito' chuqa' jun chik awetamab'al.
-cfr-doorhanger-fission-header = Rujech'unïk Ruxaq
-cfr-doorhanger-fission-primary-button = ÜTZ, Wetaman chik
-    .accesskey = Ü
-cfr-doorhanger-fission-secondary-button = Tetamäx ch'aqa' chik
-    .accesskey = e
-
-## What's new: Cookies message
-
-## What's new: Media controls message
-
-## What's new: Search shortcuts
-
-## What's new: Cookies protection
-
-## What's new: Better bookmarking
-
-## What's new: Cross-site cookie tracking
-
 ## Full Video Support CFR message
 
 cfr-doorhanger-video-support-body = Rik'in jub'a' man xketzije' ta pa rub'eyal ri taq silowäch pa re ruxaq re' rik'in re ruwäch { -brand-short-name }{ -brand-short-name }. Richin nik'ul tz'aqät ruk'amoj silowäch, tak'exa' { -brand-short-name } wakani.
 cfr-doorhanger-video-support-header = Tak'exa' { -brand-short-name } richin natzïj ri silowäch
 cfr-doorhanger-video-support-primary-button = Tik'ex Wakami
     .accesskey = T
+
+## Spotlight modal shared strings
+
+## VPN promotion dialog for public Wi-Fi users
+##
+## If a user is detected to be on a public Wi-Fi network, they are given a
+## bit of info about how to improve their privacy and then offered a button
+## to the Mozilla VPN page and a link to dismiss the dialog.
+
+# This header text can be explicitly wrapped.
+spotlight-public-wifi-vpn-header = Achi'el nawokisaj jun ajwinäq Wi-Fi k'amaya'l
+spotlight-public-wifi-vpn-body = Tewäx ri k'ojlib'äl chuqa' ri  rusamajixik okem pa k'amaya'l, tawokisaj jun kematz'ib'il ichinan k'amab'ey. Xkaruto' richin yachajïx toq yatok pa k'amaya'l pa winaqil taq k'ojlib'äl achi'el xik'ab'äl chuqa' kik'ojlib'al kape'.
+spotlight-public-wifi-vpn-primary-button = Tachajij ri awichinanem rik'in { -mozilla-vpn-brand-name }
+    .accesskey = h
+spotlight-public-wifi-vpn-link = Wakami Mani
+    .accesskey = M
+
+## Total Cookie Protection Rollout
+
+## Emotive Continuous Onboarding
+
+spotlight-better-internet-header = Jun utziläj k'amaya'l nitikïr awik'in
+spotlight-better-internet-body = Toq nokisäx { -brand-short-name } ütz nikitz'ët ri jaqäl, okel k'amaya'l, ri yalan ütz chi qe qonojel.
+spotlight-peace-mind-header = Röj yatqachajij
+spotlight-peace-mind-body = Ik' ik' { -brand-short-name } yeruq'ät jub'a' chi re ri 3,000 ojqanela' chi kijujunal okisanel. Ruma majun k'o chin ninaqo ri awichinanem achi'el ri ojqanela', ri man ta nikiju' ki' chi ikojol rat chuqa' ri k'amaya'l.
+spotlight-pin-primary-button =
+    { PLATFORM() ->
+        [macos] Tik'oje' pa Dock
+       *[other] Titz'ajb'äx pa ri rukajtz'ik samajib'äl
+    }
+spotlight-pin-secondary-button = Wakami mani
+
+## MR2022 Background Update Windows native toast notification strings.
+##
+## These strings will be displayed by the Windows operating system in
+## a native toast, like:
+##
+## <b>multi-line title</b>
+## multi-line text
+## <img>
+## [ primary button ] [ secondary button ]
+##
+## The button labels are fitted into narrow fixed-width buttons by
+## Windows and therefore must be as narrow as possible.
+
+mr2022-background-update-toast-title = K'ak'a' { -brand-short-name }. Yalan ichinan. Jub'a' ojqanela'. Majun rojqan.
+mr2022-background-update-toast-text = Tatojtob'ej ri k'ak'a' { -brand-short-name }, k'exon rik'in ri nïm chajixïk chuwäch ojqanem k'o wakami.
+
+# This button label will be fitted into a narrow fixed-width button by
+# Windows. Try to not exceed the width of the English text (compare it
+# using a variable font like Arial): the button can only fit 1-2
+# additional characters, exceeding characters will be truncated.
+mr2022-background-update-toast-primary-button-label = Tijaq { -brand-shorter-name } wakami
+
+# This button label will be fitted into a narrow fixed-width button by
+# Windows. Try to not exceed the width of the English text (compare it using a
+# variable font like Arial): the button can only fit 1-2 additional characters,
+# exceeding characters will be truncated.
+mr2022-background-update-toast-secondary-button-label = Tinatäx pe Chwe pa Jumej
+
+## Firefox View CFR
+
+firefoxview-cfr-primarybutton = Tatojtob'ej
+    .accesskey = t
+firefoxview-cfr-secondarybutton = Wakami mani
+    .accesskey = n
+firefoxview-cfr-header-v2 = Tasamajij el akuchi' xya' wi kan
+firefoxview-cfr-body-v2 = Kekakolo' ri tz'apin taq ruwi' chuqa' katok chi kipam ri okisaxel pa { -firefoxview-brand-name }.
+
+## Firefox View Spotlight
+
+firefoxview-spotlight-promo-title = Taq'ejelaj { -firefoxview-brand-name }
+
+# “Poof” refers to the expression to convey when something or someone suddenly disappears, or in this case, reappears. For example, “Poof, it’s gone.”
+firefoxview-spotlight-promo-subtitle = ¿La nawajo' ri jaqon ruwi' pan awoyonib'al? Tachapa'. ¿La nik'atzin ri ruxaq k'a b'a' tatz'ët? Xtzolin rik'in { -firefoxview-brand-name }.
+firefoxview-spotlight-promo-primarybutton = Tatz'eta' rub'eyal nisamäj
+firefoxview-spotlight-promo-secondarybutton = Tik'o'
+
+## Colorways expiry reminder CFR
+
+colorways-cfr-primarybutton = Ticha' tunun b'onil
+    .accesskey = c
+
+colorways-cfr-header-28days = Ri rub'onil Independent Voice xtik'is ruq'ijul ri 16 ruq'ij nab'ey ik'
+colorways-cfr-header-14days = Ri rub'onil Independent Voice xtik'is ruq'ijul pa ka'i' wuqq'ij
+colorways-cfr-header-7days = Ri rub'onil Independent Voice xtik'is ruq'ijul re wuqq'ij re'
+colorways-cfr-header-today = Ri rub'onil Independent Voice xtik'is ruq'ijul wakami
+
+## Cookie Banner Handling CFR
+
+cfr-cbh-header = ¿La niya' q'ij chi ri { -brand-short-name } keruxutuj kitzijol taq kuki?
+cfr-cbh-body = { -brand-short-name } nitikïr yeruxutuj pa ruyonil k\'ïy kik\'utuxik taq kuki.
+cfr-cbh-confirm-button = Kexutüx kitzijol kuki
+    .accesskey = x
+cfr-cbh-dismiss-button = Wakami mani
+    .accesskey = n
+
+## These strings are used in the Fox doodle Pin/set default spotlights
+
+july-jam-headline = Röj yatqachajij
+july-jam-set-default-primary = Kejaq taq nuximöy rik'in { -brand-short-name }
+fox-doodle-pin-headline = Ütz apetik jumul chik
+
+fox-doodle-pin-primary = Kejaq taq nuximöy rik'in { -brand-short-name }
+fox-doodle-pin-secondary = Wakami mani
+
+## These strings are used in the Set Firefox as Default PDF Handler for Existing Users experiment
+
+set-default-pdf-handler-primary = Xik'o pa nuwi'
+
+## FxA sync CFR
+
+fxa-sync-cfr-primary = Tetamäx ch'aqa' chik
+    .accesskey = t
+fxa-sync-cfr-secondary = Tinatäx pe chwe
+    .accesskey = n
+
+## Device Migration FxA Spotlight
+
+device-migration-fxa-spotlight-header = ¿La nokisäx jun rij okisaxel?
+device-migration-fxa-spotlight-link = Tinatäx pe chwe

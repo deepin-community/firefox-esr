@@ -8,6 +8,8 @@
 
 # Page Title strings
 
+# Page title (ie tab title) for the Setup page
+about-debugging-page-title-setup-page = Отстраняване на грешки - Настройка
 
 # Sidebar strings
 
@@ -54,10 +56,6 @@ about-debugging-sidebar-item-connect-button-connection-not-responding = Връз
 
 # Text displayed as connection error in sidebar item when the connection has timed out.
 about-debugging-sidebar-item-connect-button-connection-timeout = Изтече времето за свързване
-
-# Temporary text displayed in sidebar items representing remote runtimes after
-# successfully connecting to them. Temporary UI, do not localize.
-about-debugging-sidebar-item-connected-label = Свързан
 
 # Text displayed in sidebar items for remote devices where a compatible browser (eg
 # Firefox) has not been detected yet. Typically, Android phones connected via USB with
@@ -110,6 +108,10 @@ about-debugging-setup-usb-status-updating = Обновяване...
 # USB section step by step guide
 about-debugging-setup-usb-step-plug-device = Свържете устройството с Android към компютъра.
 
+# Text shown in the USB section of the setup page with a link to troubleshoot connection errors.
+# The link goes to https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html#connecting-to-a-remote-device
+about-debugging-setup-usb-troubleshoot = Имате проблеми при свързване към устройство през USB? <a>Отстраняване на неизправности</a>
+
 # Network section of the Setup page
 about-debugging-setup-network =
     .title = Местоположение в мрежата
@@ -157,12 +159,12 @@ about-debugging-runtime-processes =
     .name = Процеси
 
 # This string is displayed in the runtime page if the current configuration of the
-# target runtime is incompatible with service workers. "Learn more" points to MDN.
-# https://developer.mozilla.org/en-US/docs/Tools/about%3Adebugging#Service_workers_not_compatible
+# target runtime is incompatible with service workers. "Learn more" points to:
+# https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html#service-workers-not-compatible
 about-debugging-runtime-service-workers-not-compatible = Настройките на вашия браузър са несъвместими със сервизните обслужващи процеси. <a>Научете повече</a>
 
 # This string is displayed in the runtime page if the remote browser version is too old.
-# "Troubleshooting" link points to https://developer.mozilla.org/docs/Tools/about:debugging#Troubleshooting
+# "Troubleshooting" link points to https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/
 # { $runtimeVersion } is the version of the remote browser (for instance "67.0a1")
 # { $minVersion } is the minimum version that is compatible with the current Firefox instance (same format)
 about-debugging-browser-version-too-old = Свързаният браузър е стара версия ({ $runtimeVersion }). Минимално поддържаната версия е ({ $minVersion }). Настройките по-долу не се поддържат и могат да доведат до неуспех на DevTools. Моля, актуализирайте свързания браузър. <a>Отстраняване</a>
@@ -231,12 +233,32 @@ about-debugging-extension-location =
 about-debugging-extension-id =
     .label = Идентификатор
 
+# This string is displayed as a label of the button that starts a service worker.
+about-debugging-worker-action-start2 = Старт
+    .disabledTitle = Стартирането на service workers временно е забранено за мултипроцеси { -brand-shorter-name }
+
+# Displayed for service workers in runtime pages that are currently running (service
+# worker instance is active).
+about-debugging-worker-status-running = Работещ
+
+# Displayed for service workers in runtime pages that are registered but stopped.
+about-debugging-worker-status-stopped = Спрян
+
 # Displayed for service workers in runtime pages that are registering.
 about-debugging-worker-status-registering = Регистриране
 
-# Displayed as name for the Main Process debug target in the Processes category. Only for
-# remote runtimes, if `devtools.aboutdebugging.process-debugging` is true.
-about-debugging-main-process-name = Основен процес
+# Displayed for service workers in runtime pages, to label the scope of a worker
+about-debugging-worker-scope =
+    .label = Обхват
+
+# Displayed for service workers in runtime pages, to label the push service endpoint (url)
+# of a worker
+about-debugging-worker-push-service =
+    .label = Услуга на Push
+
+# Displayed as title of the inspect button for zombie tabs (e.g. tabs loaded via a session restore).
+about-debugging-zombie-tab-inspect-action-disabled =
+    .title = Разделът не е напълно зареден и не може да бъде проверен
 
 # Alt text used for the close icon of message component (warnings, errors and notifications).
 about-debugging-message-close-icon =

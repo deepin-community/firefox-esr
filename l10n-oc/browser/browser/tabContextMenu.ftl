@@ -11,6 +11,12 @@ reload-tab =
 select-all-tabs =
     .label = Seleccionar totes los onglets
     .accesskey = S
+tab-context-play-tab =
+    .label = Legir l'onglet
+    .accesskey = l
+tab-context-play-tabs =
+    .label = Lançar la lectura
+    .accesskey = l
 duplicate-tab =
     .label = Duplicar l'onglet
     .accesskey = D
@@ -48,12 +54,9 @@ unpin-selected-tabs =
 bookmark-selected-tabs =
     .label = Marcar aquestes onglets…
     .accesskey = c
-bookmark-tab =
-    .label = Apondre l’onglet als marcapaginas
-    .accesskey = m
-reopen-in-container =
-    .label = Tornar dobrir dins un onglet isolat
-    .accesskey = d
+tab-context-bookmark-tab =
+    .label = Apondre als marcapaginas…
+    .accesskey = A
 tab-context-open-in-new-container-tab =
     .label = Dobrir dins un onglet isolat
     .accesskey = D
@@ -69,31 +72,9 @@ move-to-new-window =
 tab-context-close-multiple-tabs =
     .label = Tampar mantun onglet
     .accesskey = T
-tab-context-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Anullar la tampadura d’onglets
-            [one] Anullar la tampadura de l’onglet
-           *[other] Anullar la tampadura dels onglet
-        }
-    .accesskey = A
-close-tab =
-    .label = Tampar l'onglet
-    .accesskey = T
-close-tabs =
-    .label = Tampar los onglets
-    .accesskey = T
-move-tabs =
-    .label = Desplaçar los onglets
-    .accesskey = p
-move-tab =
-    .label = Desplaçar l’onglet
-    .accesskey = p
 tab-context-share-url =
     .label = Partejar
     .accesskey = P
-tab-context-share-more =
-    .label = Mai…
 
 ## Variables:
 ##  $tabCount (Number): the number of tabs that are affected by the action.
@@ -106,14 +87,6 @@ tab-context-reopen-closed-tabs =
            *[other] Tornar dobrir los onglets tampats
         }
     .accesskey = t
-tab-context-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Tampar l’onglet
-            [one] Tampar l’onglet
-           *[other] Tampar los onglets
-        }
-    .accesskey = T
 tab-context-close-n-tabs =
     .label =
         { $tabCount ->
@@ -130,3 +103,11 @@ tab-context-move-tabs =
            *[other] Desplaçar los onglets
         }
     .accesskey = D
+
+tab-context-send-tabs-to-device =
+    .label =
+        { $tabCount ->
+            [one] Enviar l’onglet a un periferic
+           *[other] Enviar { $tabCount } onglets al periferic
+        }
+    .accesskey = n

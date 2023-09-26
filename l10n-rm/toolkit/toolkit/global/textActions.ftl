@@ -34,6 +34,10 @@ text-action-paste =
     .label = Encollar
     .accesskey = E
 
+text-action-paste-no-formatting =
+    .label = Encollar senza formataziuns
+    .accesskey = l
+
 text-action-paste-shortcut =
     .key = V
 
@@ -50,3 +54,26 @@ text-action-select-all-shortcut =
 
 text-action-spell-no-suggestions =
     .label = Naginas propostas ortograficas
+
+text-action-spell-add-to-dictionary =
+    .label = Agiuntar al dicziunari
+    .accesskey = i
+
+text-action-spell-undo-add-to-dictionary =
+    .label = Revocar l'agiuntar al dicziunari
+    .accesskey = n
+
+text-action-spell-check-toggle =
+    .label = Controllar l'ortografia
+    .accesskey = g
+
+text-action-spell-add-dictionaries =
+    .label = Agiuntar dicziunaris…
+    .accesskey = A
+
+text-action-spell-dictionaries =
+    .label = Linguas
+    .accesskey = L
+
+text-action-search-text-box-clear =
+    .title = Svidar

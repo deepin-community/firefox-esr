@@ -9,28 +9,6 @@ do-not-track-option-default-content-blocking-known =
 do-not-track-option-always =
     .label = Selalu
 
-pref-page-title =
-    { PLATFORM() ->
-        [windows] Pengaturan
-       *[other] Pengaturan
-    }
-
-# This is used to determine the width of the search field in about:preferences,
-# in order to make the entire placeholder string visible
-#
-# Please keep the placeholder string short to avoid truncation.
-#
-# Notice: The value of the `.style` attribute is a CSS string, and the `width`
-# is the name of the CSS property. It is intended only to adjust the element's width.
-# Do not translate.
-search-input-box =
-    .style = width: 15.4em
-    .placeholder =
-        { PLATFORM() ->
-            [windows] Temukan di Pengaturan
-           *[other] Temukan di Pengaturan
-        }
-
 settings-page-title = Pengaturan
 
 # This is used to determine the width of the search field in about:preferences,
@@ -65,10 +43,6 @@ category-search =
 pane-privacy-title = Privasi & Keamanan
 category-privacy =
     .tooltiptext = { pane-privacy-title }
-
-pane-sync-title2 = { -sync-brand-short-name }
-category-sync2 =
-    .tooltiptext = { pane-sync-title2 }
 
 pane-sync-title3 = Sinkronisasi
 category-sync3 =
@@ -113,37 +87,36 @@ restart-later = Mulai Ulang Nanti
 ## Variables:
 ##   $name (String): name of the extension
 
-# This string is shown to notify the user that their home page
-# is being controlled by an extension.
-extension-controlled-homepage-override = Ekstensi <img data-l10n-name="icon"/> { $name } mengendalikan laman beranda Anda.
 
-# This string is shown to notify the user that their new tab page
-# is being controlled by an extension.
-extension-controlled-new-tab-url = Ekstensi <img data-l10n-name="icon"/> { $name } mengendalikan laman Tab Baru Anda.
+## Extension Control Notifications
+##
+## These strings are used to inform the user
+## about changes made by extensions to browser settings.
+##
+## <img data-l10n-name="icon"/> is going to be replaced by the extension icon.
+##
+## Variables:
+##   $name (string) - Name of the extension
 
 # This string is shown to notify the user that the password manager setting
 # is being controlled by an extension
-extension-controlled-password-saving = Ekstensi <img data-l10n-name="icon"/> { $name } mengendalikan setelan ini.
+extension-controlling-password-saving = <img data-l10n-name="icon"/><strong>{ $name }</strong> mengendalikan setelan ini.
 
 # This string is shown to notify the user that their notifications permission
 # is being controlled by an extension.
-extension-controlled-web-notifications = Sebuah ekstensi bernama <img data-l10n-name="icon"/> { $name } mengendalikan setelan ini.
-
-# This string is shown to notify the user that the default search engine
-# is being controlled by an extension.
-extension-controlled-default-search = Ekstensi <img data-l10n-name="icon"/> { $name } telah menyetel mesin pencari baku Anda.
+extension-controlling-web-notifications = <img data-l10n-name="icon"/><strong>{ $name }</strong> mengendalikan setelan ini.
 
 # This string is shown to notify the user that Container Tabs
 # are being enabled by an extension.
-extension-controlled-privacy-containers = Ekstensi <img data-l10n-name="icon"/> { $name } membutuhkan Tab Kontainer.
+extension-controlling-privacy-containers = <img data-l10n-name="icon"/><strong>{ $name }</strong> membutuhkan Tab Kontainer.
 
 # This string is shown to notify the user that their content blocking "All Detected Trackers"
 # preferences are being controlled by an extension.
-extension-controlled-websites-content-blocking-all-trackers = Ekstensi <img data-l10n-name="icon"/> { $name } mengontrol setelan ini.
+extension-controlling-websites-content-blocking-all-trackers = <img data-l10n-name="icon"/><strong>{ $name }</strong> mengendalikan setelan ini.
 
 # This string is shown to notify the user that their proxy configuration preferences
 # are being controlled by an extension.
-extension-controlled-proxy-config = Ekstensi <img data-l10n-name="icon"/> { $name } mengendalikan cara { -brand-short-name } tersambung ke internet.
+extension-controlling-proxy-config = <img data-l10n-name ="icon"/> <strong>{ $name }</strong> mengendalikan cara { -brand-short-name } terhubung ke Internet.
 
 # This string is shown after the user disables an extension to notify the user
 # how to enable an extension that they disabled.
@@ -157,13 +130,6 @@ extension-controlled-enable = Untuk mengaktifkan ekstensi buka Pengaya <img data
 search-results-header = Hasil Pencarian
 
 # `<span data-l10n-name="query"></span>` will be replaced by the search term.
-search-results-empty-message =
-    { PLATFORM() ->
-        [windows] Maaf! Tidak ada hasil di Preferensi untuk “<span data-l10n-name="query"></span>”.
-       *[other] Maaf! Tidak ada hasil di Preferensi untuk “<span data-l10n-name="query"></span>”.
-    }
-
-# `<span data-l10n-name="query"></span>` will be replaced by the search term.
 search-results-empty-message2 = Maaf! Tidak ada hasil di Pengaturan untuk “<span data-l10n-name="query"></span>”.
 
 search-results-help-link = Butuh bantuan? Kunjungi <a data-l10n-name="url">Dukungan { -brand-short-name }</a>
@@ -171,14 +137,6 @@ search-results-help-link = Butuh bantuan? Kunjungi <a data-l10n-name="url">Dukun
 ## General Section
 
 startup-header = Memulai
-
-# { -brand-short-name } will be 'Firefox Developer Edition',
-# since this setting is only exposed in Firefox Developer Edition
-separate-profile-mode =
-    .label = Izinkan { -brand-short-name } dan Firefox untuk dijalankan pada saat yang bersamaan
-use-firefox-sync = Kiat: Fitur ini menggunakan data profil yang berbeda. Gunakan fitur { -sync-brand-short-name } untuk berbagi data antar-profil tersebut.
-get-started-not-logged-in = Masuk ke { -sync-brand-short-name }…
-get-started-configured = Buka preferensi { -sync-brand-short-name }
 
 always-check-default =
     .label = Selalu periksa apakah { -brand-short-name } adalah peramban baku Anda
@@ -191,9 +149,9 @@ set-as-my-default-browser =
     .label = Jadikan Baku…
     .accesskey = U
 
-startup-restore-previous-session =
-    .label = Pulihkan sesi sebelumnya
-    .accesskey = P
+startup-restore-windows-and-tabs =
+    .label = Buka jendela dan tab sebelumnya
+    .accesskey = s
 
 startup-restore-warn-on-quit =
     .label = Memperingatkan Anda saat keluar dari peramban
@@ -211,17 +169,22 @@ open-new-link-as-tabs =
     .label = Buka tautan di tab, bukan di jendela baru
     .accesskey = t
 
-warn-on-close-multiple-tabs =
-    .label = Ingatkan ketika menutup banyak tab sekaligus
-    .accesskey = m
+confirm-on-close-multiple-tabs =
+    .label = Konfirmasi sebelum menutup banyak tab
+    .accesskey = K
+
+# This string is used for the confirm before quitting preference.
+# Variables:
+#   $quitKey (String) - the quit keyboard shortcut, and formatted
+#                       in the same manner as it would appear,
+#                       for example, in the File menu.
+confirm-on-quit-with-key =
+    .label = Konfirmasi sebelum keluar dengan { $quitKey }
+    .accesskey = f
 
 warn-on-open-many-tabs =
     .label = Ingatkan bahwa ketika membuka banyak tab mungkin akan memperlambat { -brand-short-name }
     .accesskey = l
-
-switch-links-to-new-tabs =
-    .label = Saat membuka tautan di sebuah tab baru, langsung pindah ke tab tersebut
-    .accesskey = h
 
 switch-to-new-tabs =
     .label = Saat Anda membuka suatu tautan, gambar, atau media di tab baru, seketika beralih ke sana
@@ -242,9 +205,16 @@ browser-containers-settings =
     .accesskey = E
 
 containers-disable-alert-title = Tutup Semua Kontainer Tab?
+
+## Variables:
+##   $tabCount (number) - Number of tabs
+
 containers-disable-alert-desc = Jika Anda menonaktifkan Tab Kontainer sekarang, { $tabCount } tab kontainer akan ditutup. Yakin ingin menonaktifkan Tab Kontainer?
 
 containers-disable-alert-ok-button = Tutup { $tabCount } Tab Kontainer
+
+##
+
 containers-disable-alert-cancel-button = Tetap aktifkan
 
 containers-remove-alert-title = Hapus Kontainer Ini?
@@ -256,12 +226,51 @@ containers-remove-alert-msg = Jika Anda menghapus Kontainer ini sekarang, { $cou
 containers-remove-ok-button = Hapus Kontainer ini
 containers-remove-cancel-button = Jangan hapus Kontainer ini
 
-
 ## General Section - Language & Appearance
 
 language-and-appearance-header = Bahasa dan Tampilan
 
-fonts-and-colors-header = Huruf & Warna
+preferences-web-appearance-header = Tampilan situs web
+
+preferences-web-appearance-description = Beberapa situs web menyesuaikan skema warnanya berdasarkan preferensi Anda. Pilih skema warna mana yang ingin Anda gunakan untuk situs tersebut.
+
+preferences-web-appearance-choice-auto = Otomatis
+preferences-web-appearance-choice-light = Terang
+preferences-web-appearance-choice-dark = Gelap
+
+preferences-web-appearance-choice-tooltip-auto =
+    .title = Ubah latar belakang situs dan konten secara otomatis berdasarkan pengaturan sistem dan tema { -brand-short-name }.
+preferences-web-appearance-choice-tooltip-light =
+    .title = Gunakan tampilan terang untuk latar belakang dan konten situs web.
+preferences-web-appearance-choice-tooltip-dark =
+    .title = Gunakan tampilan gelap untuk latar belakang dan konten situs web.
+
+preferences-web-appearance-choice-input-auto =
+    .aria-description = { preferences-web-appearance-choice-tooltip-auto.title }
+
+preferences-web-appearance-choice-input-light =
+    .aria-description = { preferences-web-appearance-choice-tooltip-light.title }
+
+preferences-web-appearance-choice-input-dark =
+    .aria-description = { preferences-web-appearance-choice-tooltip-dark.title }
+
+# This can appear when using windows HCM or "Override colors: always" without
+# system colors.
+preferences-web-appearance-override-warning = Pilihan warna Anda mengesampingkan tampilan situs web. <a data-l10n-name="colors-link">Kelola warna</a>
+
+# This message contains one link. It can be moved within the sentence as needed
+# to adapt to your language, but should not be changed.
+preferences-web-appearance-footer = Kelola tema { -brand-short-name } di <a data-l10n-name="themes-link">Ekstensi & Tema</a>
+
+preferences-colors-header = Warna
+
+preferences-colors-description = Timpa warna baku { -brand-short-name } untuk teks, latar belakang situs web, dan tautan.
+
+preferences-colors-manage-button =
+    .label = Kelola Warna…
+    .accesskey = W
+
+preferences-fonts-header = Fon
 
 default-font = Fon baku
     .accesskey = F
@@ -271,10 +280,6 @@ default-font-size = Ukuran
 advanced-fonts =
     .label = Lebih lanjut…
     .accesskey = L
-
-colors-settings =
-    .label = Warna…
-    .accesskey = W
 
 # Zoom is a noun, and the message is used as header for a group of options
 preferences-zoom-header = Perbesaran
@@ -308,6 +313,8 @@ translate-web-pages =
     .label = Penerjemahan isi web
     .accesskey = n
 
+fx-translate-web-pages = { -translations-brand-name }
+
 # The <img> element is replaced by the logo of the provider
 # used to provide machine translations for web pages.
 translate-attribution = Terjemahan oleh <img data-l10n-name="logo"/>
@@ -331,8 +338,7 @@ files-and-applications-title = Berkas dan Aplikasi
 
 download-header = Unduhan
 
-download-save-to =
-    .label = Simpan berkas di
+download-save-where = Simpan berkas di
     .accesskey = S
 
 download-choose-folder =
@@ -398,11 +404,6 @@ applications-manage-app =
     .label = Detail Aplikasi…
 applications-always-ask =
     .label = Tanyakan selalu
-applications-type-pdf = Format Dokumen Portabel (Portable Document Format - PDF)
-
-# Variables:
-#   $type (String) - the MIME type (e.g application/binary)
-applications-type-pdf-with-type = { applications-type-pdf } ({ $type })
 
 # Variables:
 #   $type-description (String) - Description of the type (e.g "Portable Document Format")
@@ -451,6 +452,16 @@ applications-use-os-default-label =
 
 ##
 
+applications-handle-new-file-types-description = Apa yang sebaiknya { -brand-short-name } lakukan dengan berkas lainnya?
+
+applications-save-for-new-types =
+    .label = Simpan berkas
+    .accesskey = S
+
+applications-ask-before-handling =
+    .label = Tanyakan apakah akan membuka atau menyimpan berkas
+    .accesskey = a
+
 drm-content-header = Konten Digital Rights Management (DRM)
 
 play-drm-content =
@@ -493,16 +504,9 @@ update-application-use-service =
     .label = Gunakan layanan latar belakang untuk memasang pemutakhiran
     .accesskey = l
 
-update-setting-write-failure-title = Gagal menyimpan preferensi Pemutakhiran
-
-# Variables:
-#   $path (String) - Path to the configuration file
-# The newlines between the main text and the line containing the path is
-# intentional so the path is easier to identify.
-update-setting-write-failure-message =
-    { -brand-short-name } mengalami kesalahan dan tidak menyimpan perubahan ini. Perhatikan bahwa pengaturan preferensi pembaruan ini memerlukan izin untuk menulis ke file di bawah ini. Anda atau administrator sistem mungkin dapat menyelesaikan kesalahan dengan memberikan kontrol penuh grup Pengguna ke file ini.
-    
-    Tidak dapat menulis ke file: { $path }
+update-application-suppress-prompts =
+    .label = Tampilkan lebih sedikit permintaan pemberitahuan pembaruan
+    .accesskey = u
 
 update-setting-write-failure-title2 = Gagal menyimpan pengaturan Pemutakhiran
 
@@ -562,6 +566,10 @@ browsing-use-autoscroll =
 browsing-use-smooth-scrolling =
     .label = Geser dengan mulus
     .accesskey = m
+
+browsing-gtk-use-non-overlay-scrollbars =
+    .label = Selalu tampilkan bilah gulir
+    .accesskey = g
 
 browsing-use-onscreen-keyboard =
     .label = Tampilkan papan ketik sentuh saat diperlukan
@@ -624,10 +632,8 @@ home-restore-defaults =
     .label = Pulihkan Bawaan
     .accesskey = B
 
-# "Firefox" should be treated as a brand and kept in English,
-# while "Home" and "(Default)" can be localized.
-home-mode-choice-default =
-    .label = Beranda Firefox (Baku)
+home-mode-choice-default-fx =
+    .label = { -firefox-home-brand-name } (Baku)
 
 home-mode-choice-custom =
     .label = URL Ubahsuai…
@@ -656,17 +662,11 @@ choose-bookmark =
 
 ## Home Section - Firefox Home Content Customization
 
-home-prefs-content-header = Konten Beranda Firefox
-home-prefs-content-description = Pilih konten yang ingin Anda tampilkan dalam Beranda Firefox.
+home-prefs-content-header2 = Konten { -firefox-home-brand-name }
+home-prefs-content-description2 = Pilih konten yang diinginkan untuk tampil di layar { -firefox-home-brand-name } Anda.
 
 home-prefs-search-header =
     .label = Pencarian Web
-home-prefs-topsites-header =
-    .label = Situs Teratas
-home-prefs-topsites-description = Situs yang sering Anda kunjungi
-
-home-prefs-topsites-by-option-sponsored =
-    .label = Situs Teratas yang Disponsori
 home-prefs-shortcuts-header =
     .label = Pintasan
 home-prefs-shortcuts-description = Situs yang Anda simpan atau kunjungi
@@ -676,9 +676,12 @@ home-prefs-shortcuts-by-option-sponsored =
 ## Variables:
 ##  $provider (String): Name of the corresponding content provider, e.g "Pocket".
 
+
+## Variables:
+##  $provider (string) - Name of the corresponding content provider, e.g "Pocket".
+
 home-prefs-recommended-by-header =
     .label = Disarankan oleh { $provider }
-home-prefs-recommended-by-description-update = Konten luar biasa dari seluruh web, dikuratori oleh { $provider }
 home-prefs-recommended-by-description-new = Konten luar biasa yang dikelola oleh { $provider }, bagian dari keluarga { -brand-product-name }
 
 ##
@@ -686,10 +689,9 @@ home-prefs-recommended-by-description-new = Konten luar biasa yang dikelola oleh
 home-prefs-recommended-by-learn-more = Panduan
 home-prefs-recommended-by-option-sponsored-stories =
     .label = Konten Sponsor
+home-prefs-recommended-by-option-recent-saves =
+    .label = Tampilkan Simpanan Terbaru
 
-home-prefs-highlights-header =
-    .label = Sorotan
-home-prefs-highlights-description = Sejumlah situs yang Anda simpan atau kunjungi
 home-prefs-highlights-option-visited-pages =
     .label = Laman yang Dikunjungi
 home-prefs-highlights-options-bookmarks =
@@ -709,7 +711,6 @@ home-prefs-recent-activity-description = Pilihan situs dan konten terbaru
 # and non-essential but also not entirely trivial and useless.
 home-prefs-snippets-header =
     .label = Catatan Kecil
-home-prefs-snippets-description = Pembaruan dari { -vendor-short-name } dan { -brand-product-name }
 
 home-prefs-snippets-description-new = Kiat dan berita dari { -vendor-short-name } dan { -brand-product-name }
 
@@ -742,6 +743,14 @@ search-show-suggestions-url-bar-option =
     .label = Tampilkan saran pencarian di hasil bilah alamat
     .accesskey = l
 
+
+# With this option enabled, on the search results page
+# the URL will be replaced by the search terms in the address bar
+# when using the current default search engine.
+search-show-search-term-option =
+    .label = Tampilkan istilah penelusuran alih-alih URL di halaman hasil mesin pencarian baku
+
+
 # This string describes what the user will observe when the system
 # prioritizes search suggestions over browsing history in the results
 # that extend down from the address bar. In the original English string,
@@ -753,13 +762,9 @@ search-show-suggestions-above-history-option =
 search-show-suggestions-private-windows =
     .label = Tampilkan saran pencarian di Jendela Pribadi
 
-suggestions-addressbar-settings-generic = Ubah preferensi untuk saran bilah alamat lainnya
-
 suggestions-addressbar-settings-generic2 = Ubah pengaturan untuk saran bilah alamat lainnya
 
 search-suggestions-cant-show = Saran pencarian tidak akan ditampilkan di hasil bilah lokasi karena Anda telah mengatur { -brand-short-name } agar tidak mengingat riwayat.
-
-search-one-click-header = Mesin pencari sekali klik
 
 search-one-click-header2 = Pintasan Pencarian
 
@@ -777,7 +782,6 @@ search-restore-default =
 search-remove-engine =
     .label = Hapus
     .accesskey = H
-
 search-add-engine =
     .label = Tambah
     .accesskey = a
@@ -794,13 +798,6 @@ search-keyword-warning-bookmark = Anda telah memilih kata kunci yang sama dengan
 
 ## Containers Section
 
-containers-back-button =
-    .aria-label =
-        { PLATFORM() ->
-            [windows] Kembali ke Pengaturan
-           *[other] Kembali ke Pengaturan
-        }
-
 containers-back-button2 =
     .aria-label = Kembali ke Pengaturan
 containers-header = Tab Kontainer
@@ -812,9 +809,6 @@ containers-new-tab-check =
     .label = Pilih kontainer untuk setiap tab baru
     .accesskey = k
 
-containers-preferences-button =
-    .label = Pengaturan
-
 containers-settings-button =
     .label = Pengaturan
 containers-remove-button =
@@ -823,13 +817,11 @@ containers-remove-button =
 ## Firefox Account - Signed out. Note that "Sync" and "Firefox Account" are now
 ## more discrete ("signed in" no longer means "and sync is connected").
 
+
+## Firefox account - Signed out. Note that "Sync" and "Firefox account" are now
+## more discrete ("signed in" no longer means "and sync is connected").
+
 sync-signedout-caption = Bawalah Web bersama Anda
-sync-signedout-description = Sinkronkan markah, riwayat, tab, sandi, pengaya, dan pengaturan di berbagai peranti Anda.
-
-sync-signedout-account-signin2 =
-    .label = Masuk ke { -sync-brand-short-name }…
-    .accesskey = M
-
 sync-signedout-description2 = Sinkronkan markah, riwayat, tab, sandi, pengaya, dan pengaturan di berbagai perangkat Anda.
 
 sync-signedout-account-signin3 =
@@ -848,6 +840,9 @@ sync-mobile-promo = Unduh Firefox untuk <img data-l10n-name="android-icon"/> <a 
 
 ## Firefox Account - Signed in
 
+
+## Firefox account - Signed in
+
 sync-profile-picture =
     .tooltiptext = Ubah gambar profil
 
@@ -858,8 +853,13 @@ sync-sign-out =
 sync-manage-account = Kelola Akun
     .accesskey = o
 
+## Variables
+## $email (string) - Email used for Firefox account
+
 sync-signedin-unverified = { $email } tidak dapat diverifikasi.
 sync-signedin-login-failure = Mohon masuk untuk menyambungkan ulang { $email }
+
+##
 
 sync-resend-verification =
     .label = Kirim Ulang Verifikasi
@@ -879,12 +879,6 @@ prefs-syncing-on = Sinkronisasi: AKTIF
 
 prefs-syncing-off = Sinkronisasi: NONAKTIF
 
-prefs-sync-setup =
-    .label = Siapkan { -sync-brand-short-name }…
-    .accesskey = S
-
-prefs-sync-offer-setup-label = Sinkronkan markah, riwayat, tab, sandi, pengaya, dan preferensi di semua perangkat Anda.
-
 prefs-sync-turn-on-syncing =
     .label = Aktifkan sinkronisasi…
     .accesskey = A
@@ -896,9 +890,14 @@ prefs-sync-now =
     .accesskeynotsyncing = S
     .labelsyncing = Menyinkronkan…
 
-## The list of things currently syncing.
+prefs-sync-now-button =
+    .label = Sinkronkan Sekarang
+    .accesskey = S
 
-sync-currently-syncing-heading = Anda sedang menyinkronkan item ini:
+prefs-syncing-button =
+    .label = Menyinkronkan…
+
+## The list of things currently syncing.
 
 sync-currently-syncing-bookmarks = Markah
 sync-currently-syncing-history = Riwayat
@@ -907,12 +906,6 @@ sync-currently-syncing-logins-passwords = Info masuk dan sandi
 sync-currently-syncing-addresses = Alamat
 sync-currently-syncing-creditcards = Kartu kredit
 sync-currently-syncing-addons = Pengaya
-sync-currently-syncing-prefs =
-    { PLATFORM() ->
-        [windows] Pengaturan
-       *[other] Preferensi
-    }
-
 sync-currently-syncing-settings = Pengaturan
 
 sync-change-options =
@@ -921,9 +914,9 @@ sync-change-options =
 
 ## The "Choose what to sync" dialog.
 
-sync-choose-what-to-sync-dialog =
+sync-choose-what-to-sync-dialog3 =
     .title = Pilih yang Akan Disinkronkan
-    .style = width: 36em; min-height: 35em;
+    .style = min-width: 36em;
     .buttonlabelaccept = Simpan Perubahan
     .buttonaccesskeyaccept = S
     .buttonlabelextra2 = Putuskan…
@@ -962,15 +955,6 @@ sync-engine-addons =
     .tooltiptext = Ekstensi dan tema untuk Firefox desktop
     .accesskey = y
 
-sync-engine-prefs =
-    .label =
-        { PLATFORM() ->
-            [windows] Pengaturan
-           *[other] Pengaturan
-        }
-    .tooltiptext = Setelan Umum, Privasi, dan Keamanan yang Anda ubah
-    .accesskey = P
-
 sync-engine-settings =
     .label = Pengaturan
     .tooltiptext = Pengaturan Umum, Privasi, dan Keamanan yang Anda ubah
@@ -993,6 +977,16 @@ sync-device-name-save =
     .accesskey = S
 
 sync-connect-another-device = Hubungkan perangkat lain
+
+## These strings are shown in a desktop notification after the
+## user requests we resend a verification email.
+
+sync-verification-sent-title = Verifikasi Dikirim
+# Variables:
+#   $email (String): Email address of user's Firefox account.
+sync-verification-sent-body = Sebuah tautan verifikasi telah dikirim ke { $email }.
+sync-verification-not-sent-title = Gagal Mengirim Verifikasi
+sync-verification-not-sent-body = Kami tidak dapat mengirimkan email verifikasi saat ini, coba lagi nanti.
 
 ## Privacy Section
 
@@ -1018,6 +1012,7 @@ forms-breach-alerts =
     .label = Tampilkan peringatan tentang kata sandi untuk situs web yang diretas
     .accesskey = w
 forms-breach-alerts-learn-more-link = Pelajari lebih lanjut
+relay-integration-learn-more-link = Pelajari lebih lanjut
 
 # Checkbox which controls filling saved logins into fields automatically when they appear, in some cases without user interaction.
 forms-fill-logins-and-passwords =
@@ -1026,9 +1021,6 @@ forms-fill-logins-and-passwords =
 forms-saved-logins =
     .label = Info Masuk Tersimpan…
     .accesskey = I
-forms-master-pw-use =
-    .label = Gunakan sandi utama
-    .accesskey = m
 forms-primary-pw-use =
     .label = Gunakan Sandi Utama
     .accesskey = S
@@ -1039,8 +1031,6 @@ forms-primary-pw-learn-more-link = Pelajari lebih lanjut
 forms-master-pw-change =
     .label = Ubah Sandi Utama…
     .accesskey = U
-
-forms-master-pw-fips-title = Anda sedang dalam mode FIPS. Mode ini mewajibkan Sandi Utama harus diisi.
 forms-primary-pw-change =
     .label = Ubah Sandi Utama…
     .accesskey = U
@@ -1051,17 +1041,12 @@ forms-primary-pw-former-name = { "" }
 
 forms-primary-pw-fips-title = Anda sedang dalam mode FIPS. Mode ini mewajibkan Sandi Utama harus diisi.
 forms-master-pw-fips-desc = Sandi Gagal Diubah
+forms-windows-sso =
+    .label = Izinkan sistem masuk tunggal Windows untuk akun Microsoft, kantor, dan sekolah
+forms-windows-sso-learn-more-link = Pelajari lebih lanjut
+forms-windows-sso-desc = Kelola akun di pengaturan perangkat Anda
 
 ## OS Authentication dialog
-
-# This message can be seen by trying to add a Master Password.
-master-password-os-auth-dialog-message-win = Untuk membuat Kata Sandi Utama, masukkan kredensial info masuk Windows Anda. Hal ini membantu melindungi keamanan akun Anda.
-
-# This message can be seen by trying to add a Master Password.
-# The macOS strings are preceded by the operating system with "Firefox is trying to "
-# and includes subtitle of "Enter password for the user "xxx" to allow this." These
-# notes are only valid for English. Please test in your locale.
-master-password-os-auth-dialog-message-macosx = membuat Kata Sandi Utama.
 
 # This message can be seen by trying to add a Primary Password.
 primary-password-os-auth-dialog-message-win = Untuk membuat Sandi Utama, masukkan kredensial info masuk Windows Anda. Hal ini membantu melindungi keamanan akun Anda.
@@ -1157,18 +1142,14 @@ sitedata-block-desc = Tipe yang diblokir
 
 sitedata-option-block-cross-site-trackers =
     .label = Pelacak lintas situs
-sitedata-option-block-cross-site-and-social-media-trackers =
-    .label = Pelacak lintas situs dan media sosial
-sitedata-option-block-cross-site-tracking-cookies-including-social-media =
-    .label = Kuki pelacak lintas situs — juga termasuk kuki media sosial
-sitedata-option-block-cross-site-cookies-including-social-media =
-    .label = Kuki lintas situs — juga termasuk kuki media sosial
-sitedata-option-block-cross-site-and-social-media-trackers-plus-isolate =
-    .label = Pelacak media sosial dan lintas situs, dan mengisolasi kuki tersisa
+sitedata-option-block-cross-site-tracking-cookies =
+    .label = Kuki pelacak lintas situs
+sitedata-option-block-cross-site-cookies =
+    .label = Kuki pelacak lintas situs dan mengisolasi kuki lintas situs lainnya
 sitedata-option-block-unvisited =
     .label = Kuki dari situs yang tidak dikunjungi
-sitedata-option-block-all-third-party =
-    .label = Semua kuki pihak ketiga (dapat menyebabkan kerusakan situs)
+sitedata-option-block-all-cross-site-cookies =
+    .label = Semua kuki lintas-situs (mungkin menyebabkan situs tidak berfungsi)
 sitedata-option-block-all =
     .label = Semua kuki (akan menyebabkan kerusakan situs)
 
@@ -1180,13 +1161,12 @@ sitedata-settings =
     .label = Kelola Data
     .accesskey = K
 
-sitedata-cookies-permissions =
-    .label = Kelola Izin…
-    .accesskey = K
-
 sitedata-cookies-exceptions =
     .label = Kelola Pengecualian…
     .accesskey = K
+
+## Privacy Section - Cookie Banner Handling
+
 
 ## Privacy Section - Address Bar
 
@@ -1210,12 +1190,16 @@ addressbar-locbar-shortcuts-option =
 addressbar-locbar-topsites-option =
     .label = Situs teratas
     .accesskey = T
-
 addressbar-locbar-engines-option =
     .label = Mesin pencari
     .accesskey = p
+addressbar-locbar-quickactions-option =
+    .label = Tindakan cepat
+    .accesskey = T
 
 addressbar-suggestions-settings = Ubah pengaturan untuk saran mesin pencari
+
+addressbar-quickactions-learn-more = Pelajari lebih lanjut
 
 ## Privacy Section - Content Blocking
 
@@ -1246,11 +1230,10 @@ enhanced-tracking-protection-setting-custom =
 content-blocking-etp-standard-desc = Seimbang untuk perlindungan dan kinerja. Halaman akan dimuat secara normal.
 content-blocking-etp-strict-desc = Perlindungan yang lebih kuat, tetapi dapat menyebabkan beberapa situs atau konten rusak.
 content-blocking-etp-custom-desc = Pilih pelacak dan skrip yang akan diblokir.
-
 content-blocking-etp-blocking-desc = { -brand-short-name } memblokir yang berikut:
 
 content-blocking-private-windows = Melacak konten di Jendela Pribadi
-content-blocking-cross-site-cookies-in-all-windows = Kuki lintas situs di semua jendela (termasuk kuki pelacakan)
+content-blocking-cross-site-cookies-in-all-windows2 = Kuki lintas situs di semua jendela
 content-blocking-cross-site-tracking-cookies = Kuki pelacakan lintas situs
 content-blocking-all-cross-site-cookies-private-windows = Kuki lintas situs di Jendela Pribadi
 content-blocking-cross-site-tracking-cookies-plus-isolate = Kuki pelacak lintas situs, dan isolasi kuki tersisa
@@ -1258,12 +1241,19 @@ content-blocking-social-media-trackers = Pelacak media sosial
 content-blocking-all-cookies = Semua kuki
 content-blocking-unvisited-cookies = Kuki dari situs yang belum dikunjungi
 content-blocking-all-windows-tracking-content = Melacak konten di seluruh jendela
-content-blocking-all-third-party-cookies = Semua kuki pihak ketiga
+content-blocking-all-cross-site-cookies = Semua kuki lintas situs
 content-blocking-cryptominers = Penambang Kripto
 content-blocking-fingerprinters = Pelacak Sidik
 
+# The tcp-rollout strings are no longer used for the rollout but for tcp-by-default in the standard section
+
+# "Contains" here means "isolates", "limits".
+content-blocking-etp-standard-tcp-rollout-description = Perlindungan Kuki total membelenggu kuki situs tempat Anda berada, sehingga pelacak tidak dapat menggunakannya untuk mengikuti Anda antar-situs.
+content-blocking-etp-standard-tcp-rollout-learn-more = Pelajari lebih lanjut
+
+content-blocking-etp-standard-tcp-title = Mencakup Perlindungan Kuki Total, fitur privasi kami paling kuat yang pernah ada
+
 content-blocking-warning-title = Perhatian!
-content-blocking-and-isolating-etp-warning-description = Memblokir pelacak dan mengisolasi kuki dapat memengaruhi fungsionalitas beberapa situs. Muat ulang laman dengan pelacak untuk memuat semua konten.
 content-blocking-and-isolating-etp-warning-description-2 = Pengaturan ini mungkin menyebabkan beberapa situs web tidak menampilkan konten atau bekerja dengan baik. Jika situs rusak, Anda mungkin ingin menonaktifkan perlindungan pelacakan untuk situs tersebut untuk memuat semua konten.
 content-blocking-warning-learn-how = Pelajari caranya
 
@@ -1351,9 +1341,12 @@ permissions-block-popups =
     .label = Blokir jendela pop-up
     .accesskey = B
 
-permissions-block-popups-exceptions =
+# "popup" is a misspelling that is more popular than the correct spelling of
+# "pop-up" so it's included as a search keyword, not displayed in the UI.
+permissions-block-popups-exceptions-button =
     .label = Pengecualian…
-    .accesskey = e
+    .accesskey = P
+    .searchkeywords = popups
 
 permissions-addon-install-warning =
     .label = Ingatkan ketika situs web mencoba memasang pengaya
@@ -1362,12 +1355,6 @@ permissions-addon-install-warning =
 permissions-addon-exceptions =
     .label = Pengecualian…
     .accesskey = P
-
-permissions-a11y-privacy-checkbox =
-    .label = Cegah layanan aksesibilitas dari mengakses peramban Anda
-    .accesskey = a
-
-permissions-a11y-privacy-link = Pelajari lebih lanjut
 
 ## Privacy Section - Data Collection
 
@@ -1396,13 +1383,18 @@ addon-recommendations-link = Pelajari lebih lanjut
 # or builds with no Telemetry support available.
 collection-health-report-disabled = Pelaporan data dinonaktifkan untuk konfigurasi build ini
 
-collection-backlogged-crash-reports =
-    .label = Izinkan { -brand-short-name } mengirim tumpukan laporan kerusakan atas nama Anda
-    .accesskey = r
-collection-backlogged-crash-reports-link = Pelajari Lebih Lanjut
-
 collection-backlogged-crash-reports-with-link = Izinkan { -brand-short-name } mengirim laporan kerusakan sebelumnya atas nama Anda <a data-l10n-name="crash-reports-link">Pelajari lebih lanjut</a>
     .accesskey = l
+
+privacy-segmentation-section-header = Fitur baru yang meningkatkan penjelajahan Anda
+
+privacy-segmentation-section-description = Saat kami menawarkan fitur yang menggunakan data Anda untuk memberi Anda pengalaman yang lebih pribadi:
+
+privacy-segmentation-radio-off =
+    .label = Gunakan rekomendasi { -brand-product-name }
+
+privacy-segmentation-radio-on =
+    .label = Tampilkan informasi rinci
 
 ## Privacy Section - Security
 ##
@@ -1430,16 +1422,6 @@ security-block-uncommon-software =
 
 certs-header = Sertifikat
 
-certs-personal-label = Saat server meminta sertifikat pribadi Anda
-
-certs-select-auto-option =
-    .label = Pilih satu secara otomatis
-    .accesskey = s
-
-certs-select-ask-option =
-    .label = Tanyakan setiap saat
-    .accesskey = T
-
 certs-enable-ocsp =
     .label = Kueri server penjawab OCSP untuk mengonfirmasikan validitas sertifikat
     .accesskey = v
@@ -1451,34 +1433,6 @@ certs-view =
 certs-devices =
     .label = Peranti Keamanan…
     .accesskey = P
-
-space-alert-learn-more-button =
-    .label = Pelajari Lebih Lanjut
-    .accesskey = P
-
-space-alert-over-5gb-pref-button =
-    .label =
-        { PLATFORM() ->
-            [windows] Buka Pengaturan
-           *[other] Buka Pengaturan
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] B
-           *[other] B
-        }
-
-space-alert-over-5gb-message =
-    { PLATFORM() ->
-        [windows] { -brand-short-name } kehabisan ruang disk. Konten situs web mungkin tidak dapat tampil secara tepat. Anda dapat membersihkan data tersimpan dalam Pengaturan > Privasi & Keamanan > Kuki dan Data Situs.
-       *[other] { -brand-short-name } kehabisan ruang disk. Konten situs web mungkin tidak dapat tampil secara tepat. Anda dapat membersihkan data tersimpan dalam Pengaturan > Privasi & Keamanan > Kuki dan Data Situs.
-    }
-
-space-alert-under-5gb-ok-button =
-    .label = Oke, Beres
-    .accesskey = K
-
-space-alert-under-5gb-message = { -brand-short-name } kehabisan ruang disk. Konten situs barangkali tidak dapat ditampilkan dengan tepat. Kunjungi “Pelajari Lebih Lanjut” untuk mengoptimalkan penggunaan disk Anda untuk pengalaman penjelajahan yang lebih baik.
 
 space-alert-over-5gb-settings-button =
     .label = Buka Pengaturan
@@ -1505,13 +1459,11 @@ httpsonly-radio-enabled-pbm =
 httpsonly-radio-disabled =
     .label = Jangan aktifkan Mode Hanya HTTPS
 
+## DoH Section
+
+
 ## The following strings are used in the Download section of settings
 
 desktop-folder-name = Desktop
 downloads-folder-name = Unduhan
 choose-download-folder-title = Pilih Folder Unduhan:
-
-# Variables:
-#   $service-name (String) - Name of a cloud storage provider like Dropbox, Google Drive, etc...
-save-files-to-cloud-storage =
-    .label = Simpan berkas ke { $service-name }

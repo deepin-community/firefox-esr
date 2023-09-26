@@ -5,9 +5,9 @@
 
 ## Strings used for device manager
 
-devmgr =
+devmgr-window =
     .title = Zastojnik rědow
-    .style = width: 67em; height: 32em;
+    .style = min-width: 67em; min-height: 32em;
 
 devmgr-devlist =
     .label = Wěstotne module a rědy
@@ -35,8 +35,8 @@ devmgr-button-load =
     .accesskey = Z
 
 devmgr-button-unload =
-    .label = Wótpóraś
-    .accesskey = t
+    .label = Wuwólniś
+    .accesskey = u
 
 devmgr-button-enable-fips =
     .label = FIPS zmóžniś
@@ -115,8 +115,6 @@ devinfo-label =
 
 devinfo-serialnum =
     .label = Serijowy numer
-
-fips-nonempty-password-required = Modus FIPS se pomina, až nastajaśo głowne gronidło za kuždy wěstotny rěd. Pšosym nastajśo gronidło, pjerwjej až wopytajośo, modus FIPS zmóžniś.
 
 fips-nonempty-primary-password-required = Modus FIPS se pomina, až nastajaśo głowne gronidło za kuždy wěstotny rěd. Pšosym nastajśo gronidło, pjerwjej až wopytajośo, modus FIPS zmóžniś.
 unable-to-toggle-fips = Njejo móžno, FIPS-modus za wěstotny rěd změniś. Pśiraźujo se, až kóńcyśo toś to nałozenje a startujośo jo znowego.

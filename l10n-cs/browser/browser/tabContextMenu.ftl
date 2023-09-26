@@ -11,6 +11,12 @@ reload-tab =
 select-all-tabs =
     .label = Vybrat všechny panely
     .accesskey = a
+tab-context-play-tab =
+    .label = Spustit v panelu přehrávání
+    .accesskey = p
+tab-context-play-tabs =
+    .label = Spustit v panelech přehrávání
+    .accesskey = p
 duplicate-tab =
     .label = Duplikovat panel
     .accesskey = D
@@ -48,12 +54,9 @@ unpin-selected-tabs =
 bookmark-selected-tabs =
     .label = Přidat panely do záložek…
     .accesskey = P
-bookmark-tab =
-    .label = Přidat panel do záložek
+tab-context-bookmark-tab =
+    .label = Přidat panel do záložek…
     .accesskey = P
-reopen-in-container =
-    .label = Otevřít v kontejnerovém panelu
-    .accesskey = e
 tab-context-open-in-new-container-tab =
     .label = Otevřít v novém kontejnerovém panelu
     .accesskey = e
@@ -69,32 +72,9 @@ move-to-new-window =
 tab-context-close-multiple-tabs =
     .label = Zavřít několik panelů
     .accesskey = k
-tab-context-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Obnovit zavřený panel
-            [one] Obnovit zavřený panel
-            [few] Obnovit zavřené panely
-           *[other] Obnovit zavřené panely
-        }
-    .accesskey = t
-close-tab =
-    .label = Zavřít panel
-    .accesskey = Z
-close-tabs =
-    .label = Zavřít panely
-    .accesskey = Z
-move-tabs =
-    .label = Přesunout panely
-    .accesskey = s
-move-tab =
-    .label = Přesunout panel
-    .accesskey = s
 tab-context-share-url =
     .label = Sdílet
     .accesskey = S
-tab-context-share-more =
-    .label = Další…
 
 ## Variables:
 ##  $tabCount (Number): the number of tabs that are affected by the action.
@@ -108,14 +88,6 @@ tab-context-reopen-closed-tabs =
            *[other] Obnovit zavřené panely
         }
     .accesskey = b
-tab-context-close-tabs =
-    .label =
-        Zavřít { $tabCount ->
-            [one] panel
-            [few] { $tabCount } panely
-           *[other] { $tabCount } panelů
-        }
-    .accesskey = Z
 tab-context-close-n-tabs =
     .label =
         { $tabCount ->
@@ -133,3 +105,12 @@ tab-context-move-tabs =
            *[other] { $tabCount } panelů
         }
     .accesskey = s
+
+tab-context-send-tabs-to-device =
+    .label =
+        { $tabCount ->
+            [one] Poslat panel do zařízení
+            [few] Poslat { $tabCount } panely do zařízení
+           *[other] Poslat { $tabCount } panelů do zařízení
+        }
+    .accesskey = n

@@ -31,6 +31,9 @@ inactive-css-not-for-internal-table-elements = Το <strong>{ $property }</stron
 inactive-css-not-for-internal-table-elements-except-table-cells = Το <strong>{ $property }</strong> δεν επηρεάζει τα εσωτερικά στοιχεία πίνακα, εκτός από τα κελιά πίνακα.
 inactive-css-not-table = Το <strong>{ $property }</strong> δεν έχει επίδραση σε αυτό το στοιχείο, αφού δεν είναι πίνακας.
 inactive-scroll-padding-when-not-scroll-container = Το <strong>{ $property }</strong> δεν έχει επίδραση σε αυτό το στοιχείο, αφού δεν κάνει κύλιση.
+inactive-css-border-image = Το <strong>{ $property }</strong> δεν έχει καμία επίδραση σε αυτό το στοιχείο, επειδή δεν μπορεί να εφαρμοστεί σε εσωτερικά στοιχεία πίνακα όπου το <strong>border-collapse</strong> έχει οριστεί σε <strong>collapse</strong>, στο στοιχείο γονικού πίνακα.
+inactive-css-ruby-element = Το <strong>{ $property }</strong> δεν έχει καμία επίδραση σε αυτό το στοιχείο, επειδή είναι στοιχείο ruby. Το μέγεθός του καθορίζεται από το μέγεθος γραμματοσειράς του κειμένου ruby.
+inactive-css-highlight-pseudo-elements-not-supported = Το <strong>{ $property }</strong> δεν υποστηρίζεται στα ψευδοστοιχεία επισήμανσης.
 
 ## In the Rule View when a CSS property cannot be successfully applied we display
 ## an icon. When this icon is hovered this message is displayed to explain how
@@ -38,7 +41,6 @@ inactive-scroll-padding-when-not-scroll-container = Το <strong>{ $property }</
 
 inactive-css-not-grid-or-flex-container-fix = Δοκιμάστε να προσθέσετε το <strong>display:grid</strong> ή το <strong>display:flex</strong>. { learn-more }
 inactive-css-not-grid-or-flex-container-or-multicol-container-fix = Δοκιμάστε να προσθέσετε το <strong>display:grid</strong>, το <strong>display:flex</strong> ή το <strong>columns:2</strong>. { learn-more }
-inactive-css-not-grid-or-flex-item-fix-2 = Δοκιμάστε να προσθέσετε το <strong>display:grid</strong>, το <strong>display:flex</strong>, το <strong>display:inline-grid</strong>, ή το <strong>display:inline-flex</strong>. { learn-more }
 inactive-css-not-grid-or-flex-item-fix-3 = Δοκιμάστε να προσθέσετε το <strong>display:grid</strong>, το <strong>display:flex</strong>, το <strong>display:inline-grid</strong> ή το <strong>display:inline-flex</strong> στο γονικό στοιχείο. { learn-more }
 inactive-css-not-grid-item-fix-2 = Δοκιμάστε να προσθέσετε το <strong>display:grid</strong> ή το <strong>display:inline-grid</strong> στο γονικό στοιχείο. { learn-more }
 inactive-css-not-grid-container-fix = Δοκιμάστε να προσθέσετε το <strong>display:grid</strong> ή το <strong>display:inline-grid</strong>. { learn-more }
@@ -54,6 +56,8 @@ inactive-css-not-for-internal-table-elements-fix = Δοκιμάστε να ορ�
 inactive-css-not-for-internal-table-elements-except-table-cells-fix = Δοκιμάστε να ορίσετε την ιδιότητα <strong>display</strong> του σε κάτι άλλο εκτός από <strong>table-column</strong>, <strong>table-row</strong>, <strong>table-column-group</strong>, <strong>table-row-group</strong>, ή <strong>table-footer-group</strong>. { learn-more }
 inactive-css-not-table-fix = Δοκιμάστε να προσθέσετε το <strong>display:table</strong> ή το <strong>display:inline-table</strong>. { learn-more }
 inactive-scroll-padding-when-not-scroll-container-fix = Δοκιμάστε να προσθέσετε το <strong>overflow:auto</strong>, το <strong>overflow:scroll</strong>, ή το <strong>overflow:hidden</strong>. { learn-more }
+inactive-css-border-image-fix = Στο στοιχείο γονικού πίνακα, καταργήστε την ιδιότητα ή αλλάξτε την τιμή του <strong>border-collapse</strong> σε μια τιμή εκτός της <strong>collapse</strong>. { learn-more }
+inactive-css-ruby-element-fix = Δοκιμάστε να αλλάξετε το <strong>font-size</strong> του κειμένου ruby. { learn-more }
 
 ## In the Rule View when a CSS property may have compatibility issues with other browsers
 ## we display an icon. When this icon is hovered this message is displayed to explain why

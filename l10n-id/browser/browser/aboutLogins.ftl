@@ -5,22 +5,14 @@
 
 about-logins-page-title = Info Masuk dan Kata Sandi
 
-# "Google Play" and "App Store" are both branding and should not be translated
-
-login-app-promo-title = Bawa kata sandi Anda ke mana saja
-login-app-promo-subtitle = Dapatkan aplikasi gratis { -lockwise-brand-name }
-login-app-promo-android =
-    .alt = Dapatkan di Google Play
-login-app-promo-apple =
-    .alt = Unduh di App Store
-
-login-filter =
+about-logins-login-filter =
     .placeholder = Cari Info Masuk
+    .key = F
 
-create-login-button = Buat Info Masuk Baru
+create-new-login-button =
+    .title = Buat info masuk baru
 
 fxaccounts-sign-in-text = Dapatkan kata sandi Anda di perangkat lain
-fxaccounts-sign-in-button = Masuk ke { -sync-brand-short-name }
 fxaccounts-sign-in-sync-button = Masuk untuk sinkronisasi
 fxaccounts-avatar-button =
     .title = Kelola akun
@@ -40,20 +32,26 @@ menu-menuitem-preferences =
        *[other] Pengaturan
     }
 about-logins-menu-menuitem-help = Bantuan
-menu-menuitem-android-app = { -lockwise-brand-short-name } untuk Android
-menu-menuitem-iphone-app = { -lockwise-brand-short-name } untuk iPhone dan iPad
 
 ## Login List
 
 login-list =
     .aria-label = Info masuk yang cocok dengan permintaan pencarian
+# Variables
+#   $count (number) - Number of logins
 login-list-count =
     { $count ->
        *[other] { $count } info masuk
     }
+# Variables
+#   $count (number) - Number of filtered logins
+#   $total (number) - Total number of logins
+login-list-filtered-count = { $count } dari { $total } info masuk
 login-list-sort-label-text = Urutkan berdasarkan:
 login-list-name-option = Nama (A-Z)
 login-list-name-reverse-option = Nama (Z-A)
+login-list-username-option = Nama Pengguna (A-Z)
+login-list-username-reverse-option = Nama Pengguna (Z-A)
 about-logins-login-list-alerts-option = Peringatan
 login-list-last-changed-option = Terakhir Diubah
 login-list-last-used-option = Terakhir Digunakan
@@ -68,22 +66,22 @@ about-logins-list-item-breach-icon =
     .title = Situs web yang dibobol
 about-logins-list-item-vulnerable-password-icon =
     .title = Sandi rentan
+about-logins-list-section-breach = Situs web yang dibobol
+about-logins-list-section-vulnerable = Sandi rentan
+about-logins-list-section-nothing = Tidak ada peringatan
+about-logins-list-section-today = Hari Ini
+about-logins-list-section-yesterday = Kemarin
+about-logins-list-section-week = 7 hari terakhir
 
 ## Introduction screen
-
-login-intro-heading = Mencari info masuk Anda yang tersimpan? Siapkan { -sync-brand-short-name }.
 
 about-logins-login-intro-heading-logged-out2 = Mencari info masuk Anda yang simpan? Aktifkan sinkronisasi atau mengimpornya.
 about-logins-login-intro-heading-logged-in = Info masuk yang disinkronkan tidak ditemukan.
 login-intro-description = Jika Anda menyimpan info masuk Anda di { -brand-product-name } pada perangkat lain, berikut cara mendapatkannya di sini:
-login-intro-instruction-fxa = Buat atau masuk ke { -fxaccount-brand-name } Anda pada perangkat tempat info masuk Anda tersimpan
-login-intro-instruction-fxa-settings = Pastikan Anda telah memilih kotak centang Info Masuk pada Pengaturan { -sync-brand-short-name }
-about-logins-intro-instruction-help = Kunjungi <a data-l10n-name="help-link">Bantuan { -lockwise-brand-short-name }</a> untuk bantuan lebih lanjut
 login-intro-instructions-fxa = Buat atau masuk ke { -fxaccount-brand-name } Anda pada perangkat tempat info masuk Anda tersimpan
 login-intro-instructions-fxa-settings = Buka Pengaturan > Sinkronisasi > Aktifkan sinkronisasi… Centang Info masuk dan sandi.
-login-intro-instructions-fxa-help = Kunjungi <a data-l10n-name="help-link">Bantuan { -lockwise-brand-short-name }</a> untuk bantuan lebih lanjut.
-about-logins-intro-import = Jika info masuk Anda tersimpan dalam peramban lain, Anda dapat <a data-l10n-name="import-link">mengimpor data tersebut ke { -lockwise-brand-short-name }</a>
-
+login-intro-instructions-fxa-passwords-help = Kunjungi <a data-l10n-name="passwords-help-link">dukungan sandi</a> untuk bantuan lebih lanjut.
+about-logins-intro-browser-only-import = Jika info masuk Anda disimpan di browser lain, Anda dapat <a data-l10n-name="import-link">mengimpornya ke { -brand-product-name }</a>
 about-logins-intro-import2 = Jika info masuk Anda tersimpan di luar { -brand-product-name }, Anda bisa <a data-l10n-name="import-browser-link">mengimpornya dari peramban lain</a> atau <a data-l10n-name="import-file-link">mengimpornya dari berkas</a>.
 
 ## Login
@@ -108,9 +106,17 @@ login-item-copied-password-button-text = Tersalin!
 login-item-save-changes-button = Simpan Perubahan
 login-item-save-new-button = Simpan
 login-item-cancel-button = Batal
-login-item-time-changed = Terakhir diubah: { DATETIME($timeChanged, day: "numeric", month: "long", year: "numeric") }
-login-item-time-created = Dibuat: { DATETIME($timeCreated, day: "numeric", month: "long", year: "numeric") }
-login-item-time-used = Terakhir digunakan: { DATETIME($timeUsed, day: "numeric", month: "long", year: "numeric") }
+
+## The date is displayed in a timeline showing the password evolution.
+## A label is displayed under the date to describe the type of change.
+## (e.g. updated, created, etc.)
+
+# Variables
+#   $datetime (date) - Event date
+login-item-timeline-point-date = { DATETIME($datetime, day: "numeric", month: "short", year: "numeric") }
+login-item-timeline-action-created = Dibuat
+login-item-timeline-action-updated = Diperbarui
+login-item-timeline-action-used = Digunakan
 
 ## OS Authentication dialog
 
@@ -138,10 +144,6 @@ about-logins-copy-password-os-auth-dialog-message-win = Untuk menyalin kata sand
 # On MacOS, only provide the reason that account verification is needed. Do not put a complete sentence here.
 about-logins-copy-password-os-auth-dialog-message-macosx = menyalin kata sandi tersimpan.
 
-## Master Password notification
-
-master-password-notification-message = Masukkan kata sandi utama Anda untuk melihat info masuk dan kata sandi yang disimpan
-
 # This message can be seen when attempting to export a password in about:logins on Windows.
 about-logins-export-password-os-auth-dialog-message-win = Untuk mengekspor info masuk Anda, silakan masukkan kredensial info masuk Windows Anda. Ini akan membantu mengamankan akun Anda.
 # This message can be seen when attempting to export a password in about:logins
@@ -155,24 +157,6 @@ master-password-reload-button =
     .label = Masuk
     .accesskey = M
 
-## Password Sync notification
-
-enable-password-sync-notification-message =
-    { PLATFORM() ->
-        [windows] Ingin mendapatkan info masuk Anda di mana saja menggunakan { -brand-product-name }? Buka Pengaturan { -sync-brand-short-name } dan pilih kotak centang Info Masuk.
-       *[other] Ingin mendapatkan info masuk Anda di mana saja menggunakan { -brand-product-name }? Buka Pengaturan { -sync-brand-short-name } dan pilih kotak centang Info Masuk.
-    }
-enable-password-sync-preferences-button =
-    .label =
-        { PLATFORM() ->
-            [windows] Kunjungi Pengaturan { -sync-brand-short-name }
-           *[other] Kunjungi Pengaturan { -sync-brand-short-name }
-        }
-    .accesskey = K
-about-logins-enable-password-sync-dont-ask-again-button =
-    .label = Jangan tanyakan lagi
-    .accesskey = J
-
 ## Dialogs
 
 confirmation-dialog-cancel-button = Batal
@@ -182,6 +166,9 @@ confirmation-dialog-dismiss-button =
 about-logins-confirm-remove-dialog-title = Hapus info masuk ini?
 confirm-delete-dialog-message = Tindakan ini tidak dapat diurungkan.
 about-logins-confirm-remove-dialog-confirm-button = Hapus
+
+## Variables
+##   $count (number) - Number of items
 
 about-logins-confirm-remove-all-dialog-confirm-button-label =
     { $count ->
@@ -193,7 +180,7 @@ about-logins-confirm-remove-all-dialog-checkbox-label = Ya, hapus log masuk ini
 
 about-logins-confirm-remove-all-dialog-title =
     { $count ->
-       *[other] Hapus seluruh { $count } log masuk?
+       *[other] Hapus seluruh { $count } info masuk?
     }
 about-logins-confirm-remove-all-dialog-message =
     { $count ->
@@ -210,6 +197,8 @@ about-logins-confirm-remove-all-sync-dialog-message =
         [1] Ini akan menghapus info masuk yang Anda simpan ke { -brand-short-name } di semua perangkat yang disinkronkan ke { -fxaccount-brand-name } Anda. Ini juga akan menghapus peringatan pembobolan yang muncul di sini. Anda tidak akan dapat mengurungkan tindakan ini.
        *[other] Ini akan menghapus info masuk yang Anda simpan ke { -brand-short-name } di semua perangkat yang disinkronkan ke { -fxaccount-brand-name } Anda. Ini juga akan menghapus peringatan pembobolan yang muncul di sini. Anda tidak akan dapat mengurungkan tindakan ini.
     }
+
+##
 
 about-logins-confirm-export-dialog-title = Ekspor info masuk dan sandi
 about-logins-confirm-export-dialog-message = Kata sandi Anda akan disimpan sebagai teks biasa yang bisa dibaca (contoh: P@sw0rd) sehingga siapa pun yang dapat membuka berkas yang Anda ekspor akan bisa membacanya.
@@ -230,7 +219,6 @@ about-logins-breach-alert-date = Pembobolan ini terjadi pada { DATETIME($date, d
 # Variables:
 #   $hostname (String) - The hostname of the website associated with the login, e.g. "example.com"
 about-logins-breach-alert-link = Buka { $hostname }
-about-logins-breach-alert-learn-more-link = Pelajari lebih lanjut
 
 ## Vulnerable Password notification
 
@@ -251,7 +239,6 @@ about-logins-error-message-duplicate-login-with-link = Entri info masuk { $login
 
 # This is a generic error message.
 about-logins-error-message-default = Terjadi kesalahan saat mencoba menyimpan kata sandi ini.
-
 
 ## Login Export Dialog
 

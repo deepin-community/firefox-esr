@@ -12,7 +12,6 @@
   visibility: hidden;
 }
 
-@media (-moz-proton) {
 dialog {
   padding: 16px calc(16px - 4px);
 }
@@ -41,7 +40,7 @@ label, description {
 /* Parent selector to win on specificity against common.css */
 #rememberContainer > .toggle-container-with-text {
   align-items: baseline;
-  color: var(--in-content-deemphasized-text);
+  color: var(--text-color-deemphasized);
 }
 
 .toggle-container-with-text > html|input[type="checkbox"] {
@@ -53,5 +52,4 @@ label, description {
 #rememberContainer:not([hidden]) {
   /* Ensure we don't get sized to the smallest child when the checkbox text wraps. */
   display: block;
-}
 }

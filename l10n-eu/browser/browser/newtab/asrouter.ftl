@@ -7,7 +7,6 @@
 
 cfr-doorhanger-extension-heading = Gomendatutako hedapena
 cfr-doorhanger-feature-heading = Gomendatutako eginbidea
-cfr-doorhanger-pintab-heading = Probatu hau: ainguratu fitxa
 
 ##
 
@@ -17,8 +16,6 @@ cfr-doorhanger-extension-cancel-button = Une honetan ez
     .accesskey = n
 cfr-doorhanger-extension-ok-button = Gehitu orain
     .accesskey = G
-cfr-doorhanger-pintab-ok-button = Ainguratu fitxa hau
-    .accesskey = A
 cfr-doorhanger-extension-manage-settings-button = Kudeatu gomendioen ezarpenak
     .accesskey = K
 cfr-doorhanger-extension-never-show-recommendation = Ez erakutsi gomendio hau
@@ -31,11 +28,13 @@ cfr-doorhanger-extension-author = egilea: { $name }
 # This is a notification displayed in the address bar.
 # When clicked it opens a panel with a message for the user.
 cfr-doorhanger-extension-notification = Gomendioa
+# .a11y-announcement is extracted in JS and announced via A11y.announce.
 cfr-doorhanger-extension-notification2 = Gomendioa
     .tooltiptext = Hedapenaren gomendioa
     .a11y-announcement = Hedapenaren gomendioa erabilgarri dago
 # This is a notification displayed in the address bar.
 # When clicked it opens a panel with a message for the user.
+# .a11y-announcement is extracted in JS and announced via A11y.announce.
 cfr-doorhanger-feature-notification = Gomendioa
     .tooltiptext = Eginbidearen gomendioa
     .a11y-announcement = Eginbidearen gomendioa erabilgarri dago
@@ -59,15 +58,6 @@ cfr-doorhanger-extension-total-users =
         [one] erabiltzaile bat
        *[other] { $total } erabiltzaile
     }
-cfr-doorhanger-pintab-description = Eskuratu gehien erabilitako guneetarako sarbide azkarra. Mantendu guneak zabalik fitxa batean (berrabiarazita ere bai).
-
-## These messages are steps on how to use the feature and are shown together.
-
-cfr-doorhanger-pintab-step1 = Egin <b>eskuin-klika</b> ainguratu nahi duzun fitxan.
-cfr-doorhanger-pintab-step2 = Hautatu <b>Ainguratu fitxa</b> menu-aukera.
-cfr-doorhanger-pintab-step3 = Gunea eguneratzen bada, puntu urdin bat ikusiko duzu ainguratutako fitxan.
-cfr-doorhanger-pintab-animation-pause = Pausatu
-cfr-doorhanger-pintab-animation-resume = Berrekin
 
 ## Firefox Accounts Message
 
@@ -92,117 +82,10 @@ cfr-badge-reader-label-newfeature = Eginbide berria:
 cfr-whatsnew-button =
     .label = Nobedadeak
     .tooltiptext = Nobedadeak
-cfr-whatsnew-panel-header = Nobedadeak
 cfr-whatsnew-release-notes-link-text = Irakurri bertsio-oharrak
-cfr-whatsnew-fx70-title = { -brand-short-name }(e)k zure pribatutasunarengatik gogorrago egiten du borrokan orain
-cfr-whatsnew-fx70-body = Azken eguneraketak jarraipenaren babesaren eginbidea hobetzen du eta inoiz baino gehiago errazten du gune bakoitzerako pasahitzak sortzea.
-cfr-whatsnew-tracking-protect-title = Babestu zure burua jarraipen-elementuetatik
-cfr-whatsnew-tracking-protect-body = Zure jarraipena egiten duten sare sozialetako eta guneen arteko ohiko elementuak blokeatzen ditu orain { -brand-short-name }(e)k.
-cfr-whatsnew-tracking-protect-link-text = Ikusi zure txostena
-# This string is displayed before a large numeral that indicates the total
-# number of tracking elements blocked. Don’t add $blockedCount to your
-# localization, because it would result in the number showing twice.
-cfr-whatsnew-tracking-blocked-title =
-    { $blockedCount ->
-        [one] Blokeatutako elementua
-       *[other] Blokeatutako elementuak
-    }
-cfr-whatsnew-tracking-blocked-subtitle = Data honetatik: { DATETIME($earliestDate, month: "long", year: "numeric") }
-cfr-whatsnew-tracking-blocked-link-text = Ikusi txostena
-cfr-whatsnew-lockwise-backup-title = Egin zure pasahitzen babeskopia
-cfr-whatsnew-lockwise-backup-body = Sortu saioa hasi behar duzun toki orotan atzi ditzakezun pasahitz seguruak.
-cfr-whatsnew-lockwise-backup-link-text = Aktibatu babeskopiak
-cfr-whatsnew-lockwise-take-title = Eraman pasahitzak zurekin
-cfr-whatsnew-lockwise-take-body = { -lockwise-brand-short-name } mugikorrerako aplikazioarekin babeskopian dituzun pasahitzak edonondik atzitu ahal izango dituzu.
-cfr-whatsnew-lockwise-take-link-text = Eskuratu aplikazioa
-
-## Search Bar
-
-cfr-whatsnew-searchbar-title = Idatzi gutxiago eta aurkitu gehiago helbide-barra erabiliz
-cfr-whatsnew-searchbar-body-topsites = Orain, hautatu helbide-barra eta kutxa bat hedatuko da zure zure gune erabilienetarako loturekin.
-cfr-whatsnew-searchbar-icon-alt-text = Luparen ikonoa
-
-## Picture-in-Picture
-
-cfr-whatsnew-pip-header = Ikusi bideoak nabigatu ahala
-cfr-whatsnew-pip-body = Bideoa beste leiho batean erabiliz, bideoa leiho mugikor batera mugitzen denez, beste fitxetan lan egin bitartean bideoa ikusten jarrai dezakezu.
-cfr-whatsnew-pip-cta = Argibide gehiago
-
-## Permission Prompt
-
-cfr-whatsnew-permission-prompt-header = Guneetako popup gogaikarri gutxiago
-cfr-whatsnew-permission-prompt-body = { -brand-shorter-name }(e)k guneak blokeatuko ditu orain, zuri popup mezuak bidaltzea automatikoki ez galdetzeko
-cfr-whatsnew-permission-prompt-cta = Argibide gehiago
-
-## Fingerprinter Counter
-
-# This string is displayed before a large numeral that indicates the total
-# number of tracking elements blocked. Don’t add $fingerprinterCount to your
-# localization, because it would result in the number showing twice.
-cfr-whatsnew-fingerprinter-counter-header =
-    { $fingerprinterCount ->
-        [one] Hatz-marka bidezko jarraipena blokeatuta
-       *[other] Hatz-marka bidezko jarraipena blokeatuta
-    }
-cfr-whatsnew-fingerprinter-counter-body = Zuri buruzko iragarki-profila sortzeko asmoz zure gailuaren eta zure ekintzei buruzko informazioa sekretupean biltzen dituzten hatz-marka bidezko jarraipen-elementuak blokeatzen ditu { -brand-shorter-name }(e)k.
-# Message variation when fingerprinters count is less than 10
-cfr-whatsnew-fingerprinter-counter-header-alt = Hatz-marka bidezko jarraipena
-cfr-whatsnew-fingerprinter-counter-body-alt = Zuri buruzko iragarki-profila sortzeko asmoz zure gailuaren eta zure ekintzei buruzko informazioa sekretupean biltzen dituzten hatz-marka bidezko jarraipen-elementuak blokea ditzake { -brand-shorter-name }(e)k.
-
-## Bookmark Sync
-
-cfr-doorhanger-sync-bookmarks-header = Eskuratu laster-marka hau zure telefonoan
-cfr-doorhanger-sync-bookmarks-body = Eraman zure laster-markak, pasahitzak, historia eta gehiago { -brand-product-name }(e)n saioa hasita duzun toki orotara.
-cfr-doorhanger-sync-bookmarks-ok-button = Aktibatu { -sync-brand-short-name }
-    .accesskey = A
-
-## Login Sync
-
-cfr-doorhanger-sync-logins-header = Ez galdu sekula pasahitzik berriro
-cfr-doorhanger-sync-logins-body = Gorde eta sinkronizatu zure pasahitzak modu seguruan zure gailu guztietara.
-cfr-doorhanger-sync-logins-ok-button = Aktibatu { -sync-brand-short-name }
-    .accesskey = A
-
-## Send Tab
-
-cfr-doorhanger-send-tab-header = Irakurri hau edonon
-cfr-doorhanger-send-tab-recipe-header = Eraman errezeta hau sukaldera
-cfr-doorhanger-send-tab-body = Fitxa bidaltzeko aukeraren bitartez lotura hau zure telefonoarekin edo { -brand-product-name }(e)n saioa hasita duzun gailu ororekin parteka dezakezu modu errazean.
-cfr-doorhanger-send-tab-ok-button = Probatu fitxa bidaltzeko aukera
-    .accesskey = P
-
-## Firefox Send
-
-cfr-doorhanger-firefox-send-header = Partekatu PDF hau modu seguruan
-cfr-doorhanger-firefox-send-body = Mantendu zure dokumentu sentikorrak kuxkuxeroengandik seguru muturretik muturrerako zifraketarekin eta erabili ondoren desagertzen den lotura batekin.
-cfr-doorhanger-firefox-send-ok-button = Probatu { -send-brand-name }
-    .accesskey = P
-
-## Social Tracking Protection
-
-cfr-doorhanger-socialtracking-ok-button = Ikusi babesak
-    .accesskey = k
-cfr-doorhanger-socialtracking-close-button = Itxi
-    .accesskey = x
-cfr-doorhanger-socialtracking-dont-show-again = Ez erakutsi honelako mezu gehiago
-    .accesskey = z
-cfr-doorhanger-socialtracking-heading = Sare sozial batek zure jarraipena egitea eragotzi du { -brand-short-name }(e)k
-cfr-doorhanger-socialtracking-description = Garrantzitsua da zure pribatutasuna. Sare sozialetako ohiko jarraipen-elementuak blokeatzen ditu orain { -brand-short-name }(e)k, zure lineako jarduerari buruz bil ditzaketen datuak mugatuz.
-cfr-doorhanger-fingerprinters-heading = { -brand-short-name }-ek hatz-marka bidezko jarraipena blokeatu du orri honetan
-cfr-doorhanger-fingerprinters-description = Garrantzitsua da zure pribatutasuna. Hatz-marka bidezko jarraipena blokeatzen du orain { -brand-short-name }(e)k, zeinak zure gailuari buruzko identifikazio bakarreko datuak biltzen dituen zure jarraipena egiteko.
-cfr-doorhanger-cryptominers-heading = { -brand-short-name }-ek kriptomeatzari bat blokeatu du orri honetan
-cfr-doorhanger-cryptominers-description = Garrantzitsua da zure pribatutasuna. Kriptomeatzariak blokeatzen ditu orain { -brand-short-name }(e)k, zeinak zure sistemaren konputazio-ahalmena erabiltzen duten diru digitala ustiatzeko.
 
 ## Enhanced Tracking Protection Milestones
 
-# Variables:
-#   $blockedCount (Number) - The total count of blocked trackers. This number will always be greater than 1.
-#   $date (String) - The date we began recording the count of blocked trackers
-cfr-doorhanger-milestone-heading =
-    { $blockedCount ->
-        [one] { -brand-short-name }(e)k <b>{ $blockedCount }</b> jarraipen-elementu baino gehiago blokeatu ditu data honetatik aurrera: { $date }
-       *[other] { -brand-short-name }(e)k <b>{ $blockedCount }</b> jarraipen-elementu baino gehiago blokeatu ditu data honetatik aurrera: { $date }
-    }
 # Variables:
 #   $blockedCount (Number) - The total count of blocked trackers. This number will always be greater than 1.
 #   $date (Datetime) - The date we began recording the count of blocked trackers
@@ -212,39 +95,6 @@ cfr-doorhanger-milestone-heading2 =
     }
 cfr-doorhanger-milestone-ok-button = Ikusi guztiak
     .accesskey = I
-
-## What’s New Panel Content for Firefox 76
-
-
-## Lockwise message
-
-cfr-whatsnew-lockwise-header = Sortu erraz pasahitz seguruak
-cfr-whatsnew-lockwise-body = Zaila da kontu bakoitzerako pasahitz seguru eta bakarrak erabiltzea. Pasahitz bat sortzean, hautatu pasahitz eremua { -brand-shorter-name }(e)k sortutako pasahitz segurua erabiltzeko.
-cfr-whatsnew-lockwise-icon-alt = { -lockwise-brand-short-name } ikonoa
-
-## Vulnerable Passwords message
-
-cfr-whatsnew-passwords-header = Jaso babesik gabeko pasahitzei buruzko abisuak
-cfr-whatsnew-passwords-body = Hackerrek badakite jendeak pasahitz berdinak berrerabiltzen dituztela. Hainbat gunetan pasahitz berdina erabili eta gune horietakoren bat datu-urratze batean balego, abisua ikusiko duzu { -lockwise-brand-short-name }(e)n gune horietako zure pasahitza alda dezazun.
-cfr-whatsnew-passwords-icon-alt = Babesik gabeko pasahitzaren giltzaren ikonoa
-
-## Picture-in-Picture fullscreen message
-
-cfr-whatsnew-pip-fullscreen-header = Bideoa beste leiho batean pantaila osoan ikusteko aukera
-cfr-whatsnew-pip-fullscreen-body = Bideo bat leiho mugikor batera eramatean, orain klik bikoitzarekin pantaila osora ere eraman dezakezu.
-cfr-whatsnew-pip-fullscreen-icon-alt = Bideoa beste leiho batean eginbideko ikonoa
-
-## Protections Dashboard message
-
-cfr-whatsnew-protections-header = Babesak laburrean
-cfr-whatsnew-protections-body = Babesen panelak datu-urratzeen eta pasahitz-kudeaketaren inguruko laburpen-txostenak ditu. Ebatzi dituzun urratzeen jarraipena egin dezakezu orain eta gordetako zure pasahitzen bat datu-urratzeren batean agerian utzi den ikusi.
-cfr-whatsnew-protections-cta-link = Ikusi babesen arbela
-cfr-whatsnew-protections-icon-alt = Babesaren ikonoa
-
-## Better PDF message
-
-cfr-whatsnew-better-pdf-header = PDF esperientzia hobetua
-cfr-whatsnew-better-pdf-body = PDF dokumentuak orain zuzenean { -brand-short-name }(e)n irekitzen dira, zure lan egiteko modua erraztuz.
 cfr-doorhanger-milestone-close-button = Itxi
     .accesskey = x
 
@@ -257,16 +107,127 @@ cfr-doorhanger-doh-primary-button-2 = Ados
 cfr-doorhanger-doh-secondary-button = Desgaitu
     .accesskey = D
 
-## Fission Experiment Message
-
-cfr-doorhanger-fission-body-approved = Zure pribatutasuna garrantzitsua da. { -brand-short-name }(e)k webguneak bata bestearengandik isolatzen ditu eta horrela zailagoa da pasahitzak, kreditu-txartel zenbakiak eta bestelako kontuzko informazioa ostea.
-cfr-doorhanger-fission-header = Guneen isolazioa
-cfr-doorhanger-fission-primary-button = Ados, ulertuta
-    .accesskey = A
-cfr-doorhanger-fission-secondary-button = Argibide gehiago
-    .accesskey = A
-
 ## Full Video Support CFR message
 
+cfr-doorhanger-video-support-body = Gune honetako bideoak agian ez dira ondo erreproduzituko { -brand-short-name } bertsio honetan. Bideo-euskarri osorako, eguneratu { -brand-short-name } orain.
+cfr-doorhanger-video-support-header = Eguneratu { -brand-short-name } bideoa erreproduzitzeko
 cfr-doorhanger-video-support-primary-button = Eguneratu orain
     .accesskey = E
+
+## VPN promotion dialog for public Wi-Fi users
+##
+## If a user is detected to be on a public Wi-Fi network, they are given a
+## bit of info about how to improve their privacy and then offered a button
+## to the Mozilla VPN page and a link to dismiss the dialog.
+
+# This header text can be explicitly wrapped.
+spotlight-public-wifi-vpn-header = Badirudi Wi-Fi publikoa darabilzula
+spotlight-public-wifi-vpn-body = Zure kokapena eta nabigazio-jarduera ezkutatzeko, aintzat hartu sare pribatu birtuala (VPN) erabiltzea. Aireportu edo kafetegien tankerako gune publikoetan nabigatzean babestuta mantentzen lagunduko dizu.
+spotlight-public-wifi-vpn-primary-button = Mantendu pribatu { -mozilla-vpn-brand-name } erabiliz
+    .accesskey = M
+spotlight-public-wifi-vpn-link = Une honetan ez
+    .accesskey = z
+
+## Emotive Continuous Onboarding
+
+spotlight-better-internet-header = Internet hobea zurekin hasten da
+spotlight-better-internet-body = { -brand-short-name } erabiltzean, denontzat hobea den Internet ireki eta atzigarri baten alde egiten duzu bozka.
+spotlight-peace-mind-header = Babesean zaitugu
+spotlight-peace-mind-body = Hilero, { -brand-short-name }(e)k 3000 jarraipen-elementu baino gehiago blokeatzen ditu erabiltzaileko batez bestean. Izan ere ezerk ez bailuke zure eta Internet onaren artean egon behar — bereziki pribatutasunaren oztopo diren jarraipen-elementuak.
+spotlight-pin-primary-button =
+    { PLATFORM() ->
+        [macos] Mantendu Dock-ean
+       *[other] Ainguratu ataza-barran
+    }
+spotlight-pin-secondary-button = Une honetan ez
+
+## MR2022 Background Update Windows native toast notification strings.
+##
+## These strings will be displayed by the Windows operating system in
+## a native toast, like:
+##
+## <b>multi-line title</b>
+## multi-line text
+## <img>
+## [ primary button ] [ secondary button ]
+##
+## The button labels are fitted into narrow fixed-width buttons by
+## Windows and therefore must be as narrow as possible.
+
+mr2022-background-update-toast-title = { -brand-short-name } berria. Pribatuagoa. Jarraipen-elementu gutxiago. Konpromisorik ez.
+mr2022-background-update-toast-text = Probatu orain { -brand-short-name } berriena, jarraipen-elementuei aurka egiteko inoizko babesik indartsuenarekin eguneratua.
+# This button label will be fitted into a narrow fixed-width button by
+# Windows. Try to not exceed the width of the English text (compare it
+# using a variable font like Arial): the button can only fit 1-2
+# additional characters, exceeding characters will be truncated.
+mr2022-background-update-toast-primary-button-label = Ireki { -brand-shorter-name } orain
+# This button label will be fitted into a narrow fixed-width button by
+# Windows. Try to not exceed the width of the English text (compare it using a
+# variable font like Arial): the button can only fit 1-2 additional characters,
+# exceeding characters will be truncated.
+mr2022-background-update-toast-secondary-button-label = Gogora iezadazu geroago
+
+## Firefox View CFR
+
+firefoxview-cfr-primarybutton = Probatu
+    .accesskey = t
+firefoxview-cfr-secondarybutton = Une honetan ez
+    .accesskey = z
+firefoxview-cfr-header-v2 = Jarraitu utzi zenuen tokitik
+firefoxview-cfr-body-v2 = Berreskuratu itxitako azken fitxak eta aldatu di-da batean gailuen artean { -firefoxview-brand-name } erabiliz.
+
+## Firefox View Spotlight
+
+firefoxview-spotlight-promo-title = Esan kaixo { -firefoxview-brand-name }ri.
+# “Poof” refers to the expression to convey when something or someone suddenly disappears, or in this case, reappears. For example, “Poof, it’s gone.”
+firefoxview-spotlight-promo-subtitle = Telefonoan irekita daukazun fitxa hori nahi duzu? Har ezazu. Oraintxe bisitatu duzun gune hori behar duzu? Lasai, bueltan da { -firefoxview-brand-name }rekin.
+firefoxview-spotlight-promo-primarybutton = Ikusi nola dabilen
+firefoxview-spotlight-promo-secondarybutton = Saltatu
+
+## Colorways expiry reminder CFR
+
+colorways-cfr-primarybutton = Aukeratu kolore-konbinazioa
+    .accesskey = k
+# "shades" refers to the different color options available to users in colorways.
+colorways-cfr-body = Eman kolorea zure nabigatzaileari { -brand-short-name } kultura aldatu zuten ahotsek inspiratutako itzaldura esklusiboekin.
+colorways-cfr-header-28days = Ahots independenteen kolore-konbinazioak urtarrilaren 16an iraungiko dira
+colorways-cfr-header-14days = Ahots independenteen kolore-konbinazioak bi aste barru iraungiko dira
+colorways-cfr-header-7days = Ahots independenteen kolore-konbinazioak aste honetan iraungiko dira
+colorways-cfr-header-today = Ahots independenteen kolore-konbinazioak gaur iraungiko dira
+
+## Cookie Banner Handling CFR
+
+cfr-cbh-header = Baimendu { -brand-short-name }(r)i cookie iragarki-bandak ukatzea?
+cfr-cbh-body = { -brand-short-name }(e)k automatikoki uka ditzake cookie iragarki-bandetako eskaerak.
+cfr-cbh-confirm-button = Ukatu cookie iragarki-bandak
+    .accesskey = k
+cfr-cbh-dismiss-button = Une honetan ez
+    .accesskey = n
+
+## These strings are used in the Fox doodle Pin/set default spotlights
+
+july-jam-headline = Babesean zaitugu
+july-jam-body = Hilero, { -brand-short-name }(e)k batez beste 3.000 jarraipen-elementu blokeatzen ditu erabiltzaileko, internet onerako sarbide seguru eta azkarra emanez.
+july-jam-set-default-primary = Ireki nire loturak { -brand-short-name } erabiliz
+fox-doodle-pin-headline = Ongi etorri berriro
+# “indie” is short for the term “independent”.
+# In this instance, free from outside influence or control.
+fox-doodle-pin-body = Hona hemen abisua gogorarazteko zure nabigatzaile independente gogokoena klik bakarrera manten dezakezula.
+fox-doodle-pin-primary = Ireki nire loturak { -brand-short-name } erabiliz
+fox-doodle-pin-secondary = Une honetan ez
+
+## These strings are used in the Set Firefox as Default PDF Handler for Existing Users experiment
+
+set-default-pdf-handler-headline = <strong>Zure PDFak orain { -brand-short-name }(e)n irekitzen dira.</strong> Editatu edo sinatu inprimakiak zuzenean nabigatzailetik. Aldatzeko, bilatu "PDF" ezarpenetan.
+set-default-pdf-handler-primary = Ulertuta
+
+## FxA sync CFR
+
+fxa-sync-cfr-primary = Argibide gehiago
+    .accesskey = A
+fxa-sync-cfr-secondary = Gogora iezadazu geroago
+    .accesskey = G
+
+## Device Migration FxA Spotlight
+
+device-migration-fxa-spotlight-link = Gogora iezadazu geroago

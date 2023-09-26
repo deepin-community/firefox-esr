@@ -2,17 +2,6 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-bookmark-overlay-name =
-    .value = Naam:
-    .accesskey = N
-
-bookmark-overlay-location =
-    .value = Locatie:
-    .accesskey = L
-
-bookmark-overlay-folder =
-    .value = Map:
-
 bookmark-overlay-name-2 =
     .value = Naam
     .accesskey = N
@@ -35,13 +24,15 @@ bookmark-overlay-folders-expander =
     .tooltiptextdown = { bookmark-overlay-folders-expander.tooltiptext }
     .tooltiptextup = Verbergen
 
+bookmark-overlay-folders-expander2 =
+    .tooltiptext = Alle bladwijzermappen tonen
+
+bookmark-overlay-folders-expander-hide =
+    .tooltiptext = Verbergen
+
 bookmark-overlay-new-folder-button =
     .label = Nieuwe map
     .accesskey = m
-
-bookmark-overlay-tags =
-    .value = Labels:
-    .accesskey = a
 
 bookmark-overlay-tags-2 =
     .value = Labels
@@ -55,9 +46,11 @@ bookmark-overlay-tags-expander =
     .tooltiptextdown = { bookmark-overlay-tags-expander.tooltiptext }
     .tooltiptextup = Verbergen
 
-bookmark-overlay-keyword =
-    .value = Sleutelwoord:
-    .accesskey = S
+bookmark-overlay-tags-expander2 =
+    .tooltiptext = Alle labels tonen
+
+bookmark-overlay-tags-expander-hide =
+    .tooltiptext = Verbergen
 
 bookmark-overlay-keyword-2 =
     .value = Sleutelwoord

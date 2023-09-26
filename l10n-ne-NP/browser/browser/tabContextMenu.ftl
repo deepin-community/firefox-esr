@@ -5,6 +5,9 @@
 reload-tab =
     .label = ट्याब पुनः लोड गर्नुहोस्
     .accesskey = R
+tab-context-play-tab =
+    .label = प्ले ट्याब
+    .accesskey = I
 duplicate-tab =
     .label = नक्कली ट्याब
     .accesskey = D
@@ -23,10 +26,6 @@ unpin-tab =
 move-to-new-window =
     .label = नयाँ सञ्झ्यालमा सार्नुहोस्
     .accesskey = W
-
-close-tab =
-    .label = ट्याब बन्द गर्नुहोस्
-    .accesskey = C
 
 ## Variables:
 ##  $tabCount (Number): the number of tabs that are affected by the action.

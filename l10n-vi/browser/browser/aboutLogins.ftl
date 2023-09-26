@@ -3,21 +3,16 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 # NOTE: New strings should use the about-logins- prefix.
 
-about-logins-page-title = Đăng nhập & mật khẩu
+about-logins-page-title = Thông tin đăng nhập & mật khẩu
 
-# "Google Play" and "App Store" are both branding and should not be translated
-
-login-app-promo-title = Mang mật khẩu của bạn đi khắp mọi nơi
-login-app-promo-subtitle = Tải ứng dụng { -lockwise-brand-name } miễn phí
-login-app-promo-android =
-    .alt = Tải xuống trên Google Play
-login-app-promo-apple =
-    .alt = Tải xuống trên App Store
-login-filter =
+about-logins-login-filter =
     .placeholder = Tìm kiếm thông tin đăng nhập
-create-login-button = Tạo đăng nhập mới
+    .key = F
+
+create-new-login-button =
+    .title = Tạo thông tin đăng nhập mới
+
 fxaccounts-sign-in-text = Nhận mật khẩu của bạn trên các thiết bị khác của bạn
-fxaccounts-sign-in-button = Đăng nhập vào { -sync-brand-short-name }
 fxaccounts-sign-in-sync-button = Đăng nhập vào đồng bộ hóa
 fxaccounts-avatar-button =
     .title = Quản lý tài khoản
@@ -37,17 +32,21 @@ menu-menuitem-preferences =
        *[other] Tùy chỉnh
     }
 about-logins-menu-menuitem-help = Trợ giúp
-menu-menuitem-android-app = { -lockwise-brand-short-name } dành cho Android
-menu-menuitem-iphone-app = { -lockwise-brand-short-name } dành cho iPhone và iPad
 
 ## Login List
 
 login-list =
-    .aria-label = Đăng nhập phù hợp với truy vấn tìm kiếm
+    .aria-label = Thông tin đăng nhập phù hợp với truy vấn tìm kiếm
+# Variables
+#   $count (number) - Number of logins
 login-list-count =
     { $count ->
        *[other] { $count } thông tin đăng nhập
     }
+# Variables
+#   $count (number) - Number of filtered logins
+#   $total (number) - Total number of logins
+login-list-filtered-count = { $count }/{ $total } thông tin đăng nhập
 login-list-sort-label-text = Sắp xếp theo:
 login-list-name-option = Tên (A-Z)
 login-list-name-reverse-option = Tên (Z-A)
@@ -76,22 +75,18 @@ about-logins-list-section-week = 7 ngày trước
 
 ## Introduction screen
 
-login-intro-heading = Đang tìm kiếm thông tin đăng nhập đã lưu của bạn? Thiết lập { -sync-brand-short-name }.
 about-logins-login-intro-heading-logged-out2 = Tìm kiếm thông tin đăng nhập đã lưu của bạn? Bật đồng bộ hóa hoặc nhập chúng.
 about-logins-login-intro-heading-logged-in = Không tìm thấy thông tin đăng nhập được đồng bộ hóa.
 login-intro-description = Nếu bạn đã lưu thông tin đăng nhập của mình vào { -brand-product-name } trên một thiết bị khác, thì đây là cách để có được chúng ở đây:
-login-intro-instruction-fxa = Tạo hoặc đăng nhập vào { -fxaccount-brand-name } trên thiết bị nơi đăng nhập của bạn được lưu
-login-intro-instruction-fxa-settings = Đảm bảo rằng bạn đã chọn hộp kiểm Đăng nhập trong Cài đặt { -sync-brand-short-name }
-about-logins-intro-instruction-help = Truy cập <a data-l10n-name="help-link">hỗ trợ của { -lockwise-brand-short-name }</a> để được trợ giúp thêm
 login-intro-instructions-fxa = Tạo hoặc đăng nhập vào { -fxaccount-brand-name } của bạn trên thiết bị lưu thông tin đăng nhập của bạn.
-login-intro-instructions-fxa-settings = Đi đến Cài đặt > Đồng bộ hóa > Bật đồng bộ hóa… Chọn hộp kiểm Đăng nhập và mật khẩu.
-login-intro-instructions-fxa-help = Truy cập <a data-l10n-name="help-link">hỗ trợ của { -lockwise-brand-short-name }</a> để được trợ giúp.
-about-logins-intro-import = Nếu thông tin đăng nhập của bạn được lưu trong một trình duyệt khác, bạn có thể <a data-l10n-name="import-link"> nhập chúng vào { -lockwise-brand-short-name }</a>
+login-intro-instructions-fxa-settings = Đi đến Cài đặt > Đồng bộ hóa > Bật đồng bộ hóa… Chọn hộp kiểm Thông tin đăng nhập và mật khẩu.
+login-intro-instructions-fxa-passwords-help = Truy cập <a data-l10n-name="passwords-help-link">hỗ trợ mật khẩu</a> để được trợ giúp thêm.
+about-logins-intro-browser-only-import = Nếu thông tin đăng nhập của bạn được lưu trong một trình duyệt khác, bạn có thể <a data-l10n-name="import-link">nhập chúng vào { -brand-product-name }</a>
 about-logins-intro-import2 = Nếu thông tin đăng nhập của bạn được lưu bên ngoài { -brand-product-name }, bạn có thể <a data-l10n-name="import-browser-link">nhập chúng từ trình duyệt khác</a> hoặc <a data-l10n-name="import-file-link">từ một tập tin</a>
 
 ## Login
 
-login-item-new-login-title = Tạo đăng nhập mới
+login-item-new-login-title = Tạo thông tin đăng nhập mới
 login-item-edit-button = Chỉnh sửa
 about-logins-login-item-remove-button = Xóa
 login-item-origin-label = Địa chỉ trang web
@@ -105,15 +100,23 @@ login-item-copy-username-button-text = Sao chép
 login-item-copied-username-button-text = Đã sao chép!
 login-item-password-label = Mật khẩu
 login-item-password-reveal-checkbox =
-    .aria-label = Hiện mật khẩu
+    .aria-label = Hiển thị mật khẩu
 login-item-copy-password-button-text = Sao chép
 login-item-copied-password-button-text = Đã sao chép!
 login-item-save-changes-button = Lưu thay đổi
 login-item-save-new-button = Lưu
 login-item-cancel-button = Hủy bỏ
-login-item-time-changed = Sửa đổi lần cuối: { DATETIME($timeChanged, day: "numeric", month: "long", year: "numeric") }
-login-item-time-created = Được tạo: { DATETIME($timeCreated, day: "numeric", month: "long", year: "numeric") }
-login-item-time-used = Lần sử dụng cuối: { DATETIME($timeUsed, day: "numeric", month: "long", year: "numeric") }
+
+## The date is displayed in a timeline showing the password evolution.
+## A label is displayed under the date to describe the type of change.
+## (e.g. updated, created, etc.)
+
+# Variables
+#   $datetime (date) - Event date
+login-item-timeline-point-date = { DATETIME($datetime, day: "numeric", month: "short", year: "numeric") }
+login-item-timeline-action-created = Đã tạo
+login-item-timeline-action-updated = Đã cập nhật
+login-item-timeline-action-used = Được sử dụng
 
 ## OS Authentication dialog
 
@@ -128,20 +131,19 @@ about-logins-edit-login-os-auth-dialog-message-win = Để chỉnh sửa thông 
 # This message can be seen when attempting to edit a login in about:logins
 # On MacOS, only provide the reason that account verification is needed. Do not put a complete sentence here.
 about-logins-edit-login-os-auth-dialog-message-macosx = chỉnh sửa thông tin đăng nhập đã lưu
+
 # This message can be seen when attempting to reveal a password in about:logins on Windows.
 about-logins-reveal-password-os-auth-dialog-message-win = Để xem mật khẩu của bạn, nhập thông tin đăng nhập Windows của bạn. Điều này giúp bảo vệ tính bảo mật của tài khoản của bạn.
 # This message can be seen when attempting to reveal a password in about:logins
 # On MacOS, only provide the reason that account verification is needed. Do not put a complete sentence here.
 about-logins-reveal-password-os-auth-dialog-message-macosx = hiển thị mật khẩu đã lưu
+
 # This message can be seen when attempting to copy a password in about:logins on Windows.
 about-logins-copy-password-os-auth-dialog-message-win = Để sao chép mật khẩu của bạn, hãy nhập thông tin đăng nhập Windows của bạn. Điều này giúp bảo vệ tính bảo mật của tài khoản của bạn.
 # This message can be seen when attempting to copy a password in about:logins
 # On MacOS, only provide the reason that account verification is needed. Do not put a complete sentence here.
 about-logins-copy-password-os-auth-dialog-message-macosx = sao chép mật khẩu đã lưu
 
-## Master Password notification
-
-master-password-notification-message = Vui lòng nhập mật khẩu chính của bạn để xem thông tin đăng nhập và mật khẩu đã lưu
 # This message can be seen when attempting to export a password in about:logins on Windows.
 about-logins-export-password-os-auth-dialog-message-win = Để xuất ra thông tin đăng nhập của bạn, hãy nhập thông tin đăng nhập Windows của bạn. Điều này giúp bảo mật tài khoản của bạn.
 # This message can be seen when attempting to export a password in about:logins
@@ -155,42 +157,31 @@ master-password-reload-button =
     .label = Đăng nhập
     .accesskey = L
 
-## Password Sync notification
-
-enable-password-sync-notification-message =
-    { PLATFORM() ->
-        [windows] Muốn có thông tin đăng nhập của bạn ở mọi nơi bạn sử dụng { -brand-product-name }? Chuyển đến tùy chọn { -sync-brand-short-name } của bạn và chọn hộp kiểm Đăng nhập.
-       *[other] Muốn có thông tin đăng nhập của bạn ở mọi nơi bạn sử dụng { -brand-product-name }? Chuyển đến tùy chỉnh { -sync-brand-short-name } của bạn và chọn hộp kiểm Đăng nhập.
-    }
-enable-password-sync-preferences-button =
-    .label =
-        { PLATFORM() ->
-            [windows] Truy cập tùy chọn { -sync-brand-short-name }
-           *[other] Truy cập tùy chỉnh { -sync-brand-short-name }
-        }
-    .accesskey = V
-about-logins-enable-password-sync-dont-ask-again-button =
-    .label = Đừng hỏi lại tôi nữa.
-    .accesskey = D
-
 ## Dialogs
 
 confirmation-dialog-cancel-button = Hủy bỏ
 confirmation-dialog-dismiss-button =
     .title = Hủy bỏ
+
 about-logins-confirm-remove-dialog-title = Xoá thông tin đăng nhập này?
 confirm-delete-dialog-message = Thao tác này không thể hoàn tác được.
 about-logins-confirm-remove-dialog-confirm-button = Xóa
+
+## Variables
+##   $count (number) - Number of items
+
 about-logins-confirm-remove-all-dialog-confirm-button-label =
     { $count ->
         [1] Xóa
        *[other] Xóa tất cả
     }
+
 about-logins-confirm-remove-all-dialog-checkbox-label =
     { $count ->
         [1] Có, xóa thông tin đăng nhập này
        *[other] Có, xóa các thông tin đăng nhập này
     }
+
 about-logins-confirm-remove-all-dialog-title =
     { $count ->
        *[other] Xóa tất cả { $count } thông tin đăng nhập?
@@ -200,6 +191,7 @@ about-logins-confirm-remove-all-dialog-message =
         [1] Thao tác này sẽ xóa thông tin đăng nhập bạn đã lưu vào { -brand-short-name } và mọi cảnh báo rò rỉ xuất hiện ở đây. Bạn sẽ không thể hoàn tác hành động này.
        *[other] Thao tác này sẽ xóa các thông tin đăng nhập bạn đã lưu vào { -brand-short-name } và mọi cảnh báo rò rỉ xuất hiện ở đây. Bạn sẽ không thể hoàn tác hành động này.
     }
+
 about-logins-confirm-remove-all-sync-dialog-title =
     { $count ->
        *[other] Xóa tất cả { $count } thông tin đăng nhập khỏi tất cả các thiết bị?
@@ -209,24 +201,28 @@ about-logins-confirm-remove-all-sync-dialog-message =
         [1] Thao tác này sẽ xóa thông tin đăng nhập bạn đã lưu vào { -brand-short-name } trên tất cả các thiết bị được đồng bộ hóa với { -fxaccount-brand-name } của bạn. Thao tác này cũng sẽ xóa các cảnh báo rò rỉ xuất hiện ở đây. Bạn sẽ không thể hoàn tác hành động này.
        *[other] Thao tác này sẽ xóa tất cả các thông tin đăng nhập bạn đã lưu vào { -brand-short-name } trên tất cả các thiết bị được đồng bộ hóa với { -fxaccount-brand-name } của bạn. Thao tác này cũng sẽ xóa các cảnh báo rò rỉ xuất hiện ở đây. Bạn sẽ không thể hoàn tác hành động này.
     }
+
+##
+
 about-logins-confirm-export-dialog-title = Xuất thông tin đăng nhập và mật khẩu
 about-logins-confirm-export-dialog-message = Mật khẩu của bạn sẽ được lưu dưới dạng văn bản có thể đọc được (ví dụ: BadP@ssw0rd) để bất kỳ ai có thể mở tập tin được xuất đều có thể xem chúng.
 about-logins-confirm-export-dialog-confirm-button = Xuất…
+
 about-logins-alert-import-title = Hoàn thành nhập
 about-logins-alert-import-message = Xem tóm tắt chi tiết nhập
+
 confirm-discard-changes-dialog-title = Hủy bỏ những thay đổi chưa lưu?
 confirm-discard-changes-dialog-message = Tất cả các thay đổi chưa được lưu sẽ bị mất.
 confirm-discard-changes-dialog-confirm-button = Loại bỏ
 
 ## Breach Alert notification
 
-about-logins-breach-alert-title = Vi phạm trang web
+about-logins-breach-alert-title = Trang web rò rỉ dữ liệu
 breach-alert-text = Mật khẩu đã bị rò rỉ hoặc đánh cắp từ trang web này kể từ lần cuối bạn cập nhật thông tin đăng nhập. Thay đổi mật khẩu của bạn để bảo vệ tài khoản của bạn.
-about-logins-breach-alert-date = Vi phạm này xảy ra vào { DATETIME($date, day: "numeric", month: "long", year: "numeric") }
+about-logins-breach-alert-date = Rò rỉ này xảy ra vào { DATETIME($date, day: "numeric", month: "long", year: "numeric") }
 # Variables:
 #   $hostname (String) - The hostname of the website associated with the login, e.g. "example.com"
 about-logins-breach-alert-link = Đi đến { $hostname }
-about-logins-breach-alert-learn-more-link = Tìm hiểu thêm
 
 ## Vulnerable Password notification
 
@@ -244,6 +240,7 @@ about-logins-vulnerable-alert-learn-more-link = Tìm hiểu thêm
 # Variables:
 #   $loginTitle (String) - The title of the website associated with the login.
 about-logins-error-message-duplicate-login-with-link = Một mục nhập cho { $loginTitle } với tên người dùng đã tồn tại. <a data-l10n-name="duplicate-link">Chuyển đến giá trị hiện có?</a>
+
 # This is a generic error message.
 about-logins-error-message-default = Đã xảy ra lỗi trong khi cố gắng lưu mật khẩu này.
 
@@ -292,10 +289,12 @@ about-logins-import-dialog-items-added =
     { $count ->
        *[other] <span>Đã thêm thông tin đăng nhập mới:</span> <span data-l10n-name="count">{ $count }</span>
     }
+
 about-logins-import-dialog-items-modified =
     { $count ->
        *[other] <span>Đã cập nhật thông tin đăng nhập đã có:</span> <span data-l10n-name="count">{ $count }</span>
     }
+
 about-logins-import-dialog-items-no-change =
     { $count ->
        *[other] <span>Tìm thấy thông tin đăng nhập bị trùng:</span> <span data-l10n-name="count">{ $count }</span> <span data-l10n-name="meta">(không nhập)</span>
@@ -305,6 +304,7 @@ about-logins-import-dialog-items-error =
        *[other] <span>Lỗi:</span> <span data-l10n-name="count">{ $count }</span> <span data-l10n-name="meta">(không nhập)</span>
     }
 about-logins-import-dialog-done = Xong
+
 about-logins-import-dialog-error-title = Lỗi khi nhập
 about-logins-import-dialog-error-conflicting-values-title = Nhiều giá trị xung đột cho một thông tin đăng nhập
 about-logins-import-dialog-error-conflicting-values-description = Ví dụ: nhiều tên người dùng, mật khẩu, URL, v.v. cho một thông tin đăng nhập.
@@ -318,8 +318,10 @@ about-logins-import-dialog-error-no-logins-imported = Không có thông tin đă
 about-logins-import-dialog-error-learn-more = Tìm hiểu thêm
 about-logins-import-dialog-error-try-import-again = Thử nhập lần nữa...
 about-logins-import-dialog-error-cancel = Hủy bỏ
+
 about-logins-import-report-title = Tóm tắt nhập
 about-logins-import-report-description = Thông tin đăng nhập và mật khẩu được nhập vào { -brand-short-name }.
+
 #
 # Variables:
 #  $number (number) - The number of the row

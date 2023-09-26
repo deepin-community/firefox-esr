@@ -38,16 +38,11 @@ menu-quit =
             [windows] خ
            *[other] ت
         }
+
 # This menu-quit-mac string is only used on macOS.
 menu-quit-mac =
     .label = ترک { -brand-shorter-name }
-# This menu-quit-button string is only used on Linux.
-menu-quit-button =
-    .label = { menu-quit.label }
-# This menu-quit-button-win string is only used on Windows.
-menu-quit-button-win =
-    .label = { menu-quit.label }
-    .tooltip = خروج از { -brand-shorter-name }
+
 menu-about =
     .label = دربارهٔ { -brand-shorter-name }
     .accesskey = د
@@ -77,15 +72,21 @@ menu-file-open-location =
 menu-file-open-file =
     .label = بازکردن پرونده…
     .accesskey = ب
-menu-file-close =
-    .label = بستن
-    .accesskey = س
+# Variables:
+#  $tabCount (Number): the number of tabs that are affected by the action.
+menu-file-close-tab =
+    .label =
+        { $tabCount ->
+            [1] بستن زبانه
+           *[other] بستن { $tabCount } زبانه
+        }
+    .accesskey = ب
 menu-file-close-window =
     .label = بستن پنجره
     .accesskey = پ
 menu-file-save-page =
-    .label = ذخیرهٔ صفحه به نام…
-    .accesskey = ص
+    .label = ذخیرهٔ صفحه به عنوان…
+    .accesskey = ع
 menu-file-email-link =
     .label = ایمیل کردن پیوند...
     .accesskey = ا
@@ -95,9 +96,6 @@ menu-file-share-url =
 menu-file-print-setup =
     .label = تنظیم صفحه…
     .accesskey = ت
-menu-file-print-preview =
-    .label = پیش‌نمایش چاپ
-    .accesskey = پ
 menu-file-print =
     .label = چاپ...
     .accesskey = چ
@@ -113,9 +111,6 @@ menu-file-go-offline =
 menu-edit =
     .label = ویرایش
     .accesskey = و
-menu-edit-find-on =
-    .label = پیدا کردن در این صفحه…
-    .accesskey = پ
 menu-edit-find-in-page =
     .label = پیدا کردن در صفحه…
     .accesskey = F
@@ -134,9 +129,6 @@ menu-view =
 menu-view-toolbars-menu =
     .label = نوار ابزار
     .accesskey = ن
-menu-view-customize-toolbar =
-    .label = سفارشی‌سازی…
-    .accesskey = س
 menu-view-customize-toolbar2 =
     .label = سفارشی‌سازی نوار ابزار…
     .accesskey = C
@@ -173,9 +165,6 @@ menu-view-page-style-no-style =
 menu-view-page-basic-style =
     .label = سبک ابتدایی صفحه
     .accesskey = ب
-menu-view-charset =
-    .label = کدگذاری متن
-    .accesskey = گ
 menu-view-repair-text-encoding =
     .label = تعمیر رمزگذاری متن
     .accesskey = ت
@@ -192,6 +181,17 @@ menu-view-exit-full-screen =
 menu-view-full-screen =
     .label = تمام‌صفحه
     .accesskey = ت
+
+## These menu items may use the same accesskey.
+
+# This should match reader-view-enter-button in browser.ftl
+menu-view-enter-readerview =
+    .label = ورود به نمای‌ مطالعه
+    .accesskey = R
+# This should match reader-view-close-button in browser.ftl
+menu-view-close-readerview =
+    .label = بستن نمای مطالعه
+    .accesskey = R
 
 ##
 
@@ -214,31 +214,25 @@ menu-history-clear-recent-history =
 menu-history-synced-tabs =
     .label = زبانه‌های همگام‌سازی شده
 menu-history-restore-last-session =
-    .label = بازآوری نشست قبلی
+    .label = بازیابی نشست قبلی
 menu-history-hidden-tabs =
     .label = زبانه‌های مخفی
 menu-history-undo-menu =
     .label = زبانه‌های تازه بسته شده
 menu-history-undo-window-menu =
     .label = پنجره‌های تازه بسته شده
-menu-history-reopen-all-tabs = بازآوری همهٔ زبانه‌ها
-menu-history-reopen-all-windows = بازآوری همهٔ پنجره‌ها
 
 ## Bookmarks Menu
 
 menu-bookmarks-menu =
     .label = نشانک‌ها
     .accesskey = ن
-menu-bookmarks-show-all =
-    .label = نمایش همهٔ نشانک‌ها
-menu-bookmark-this-page =
-    .label = نشانک‌گذاری این صفحه
 menu-bookmarks-manage =
     .label = مدیریت نشانک‌ها
-menu-bookmark-current-tab =
-    .label = نشانک‌گذاری زبانهٔ فعلی
-menu-bookmark-edit =
-    .label = ویرایش این نشانک
+menu-bookmark-tab =
+    .label = نشانک‌گذاری زبانهٔ کنونی…
+menu-edit-bookmark =
+    .label = ویرایش این نشانک…
 menu-bookmarks-all-tabs =
     .label = نشانک‌گذاری تمامی زبانه‌ها…
 menu-bookmarks-toolbar =
@@ -256,15 +250,6 @@ menu-tools =
 menu-tools-downloads =
     .label = بارگیری‌ها
     .accesskey = ب
-menu-tools-addons =
-    .label = افزودنی‌ها
-    .accesskey = ا
-menu-tools-fxa-sign-in =
-    .label = ورود به { -brand-product-name }ٕ‍ٕ…
-    .accesskey = g
-menu-tools-turn-on-sync =
-    .label = روشن کردن { -sync-brand-short-name } ...
-    .accesskey = n
 menu-tools-addons-and-themes =
     .label = افزونه‌ها و تم‌ها
     .accesskey = ا
@@ -280,9 +265,6 @@ menu-tools-sync-now =
 menu-tools-fxa-re-auth =
     .label = اتصال مجدد به { -brand-product-name }…
     .accesskey = R
-menu-tools-web-developer =
-    .label = توسعه‌دهنده وب
-    .accesskey = و
 menu-tools-browser-tools =
     .label = ابزارهای مرورگر
     .accesskey = ب
@@ -295,17 +277,6 @@ menu-tools-page-source =
 menu-tools-page-info =
     .label = اطلاعات صفحه
     .accesskey = ا
-menu-preferences =
-    .label =
-        { PLATFORM() ->
-            [windows] گزینه‌ها
-           *[other] ترجیحات
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] گ
-           *[other] ت
-        }
 menu-settings =
     .label = تنظیمات
     .accesskey =
@@ -338,21 +309,6 @@ menu-window-bring-all-to-front =
 menu-help =
     .label = راهنما
     .accesskey = H
-menu-help-product =
-    .label = راهنمای { -brand-shorter-name }
-    .accesskey = H
-menu-help-show-tour =
-    .label = تور معرفی { -brand-shorter-name }
-    .accesskey = o
-menu-help-import-from-another-browser =
-    .label = درون‌ریزی از مرورگری دیگر… (I)
-    .accesskey = I
-menu-help-keyboard-shortcuts =
-    .label = میانبرهای صفحه کلید
-    .accesskey = K
-menu-help-troubleshooting-info =
-    .label = اطلاعات رفع اشکال
-    .accesskey = T
 menu-get-help =
     .label = دریافت کمک
     .accesskey = H
@@ -361,21 +317,18 @@ menu-help-more-troubleshooting-info =
     .accesskey = ب
 menu-help-report-site-issue =
     .label = مشکل سایت را گزارش کنید…
-menu-help-feedback-page =
-    .label = ارسال نظر…
-    .accesskey = ن
-menu-help-safe-mode-without-addons =
-    .label = راه‌اندازی مجدد به همراه غیرفعال کردن افزودنی‌ها…
-    .accesskey = R
-menu-help-safe-mode-with-addons =
-    .label = راه‌اندازی مجدد به همراه غیرفعال کردن افزودنی‌ها
-    .accesskey = R
+menu-help-share-ideas =
+    .label = همرسانی ایده‌ها و بازخوردها…
+    .accesskey = س
 menu-help-enter-troubleshoot-mode2 =
     .label = حالت عیب‌یابی…
     .accesskey = ح
 menu-help-exit-troubleshoot-mode =
     .label = خاموش کردن حالت عیب‌یابی
     .accesskey = M
+menu-help-switch-device =
+    .label = تعویض به افزاره‌ای جدید
+    .accesskey = ت
 # Label of the Help menu item. Either this or
 # menu-help-notdeceptive is shown.
 menu-help-report-deceptive-site =

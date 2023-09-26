@@ -16,6 +16,9 @@ printui-sheets-count =
     }
 
 printui-page-range-all = Všetky
+printui-page-range-current = Aktuálna
+printui-page-range-odd = Nepárne
+printui-page-range-even = Párne
 printui-page-range-custom = Vlastné
 printui-page-range-label = Strany
 printui-page-range-picker =
@@ -58,8 +61,6 @@ printui-two-sided-printing-short-edge = Preklopiť na kratšom okraji
 printui-options = Možnosti
 printui-headers-footers-checkbox = Vytlačiť hlavičku a pätu
 printui-backgrounds-checkbox = Vytlačiť pozadie
-
-printui-selection-checkbox = Vytlačiť len výber
 
 ## The "Format" section, select a version of the website to print. Radio
 ## options to select between the original page, selected text only, or a version

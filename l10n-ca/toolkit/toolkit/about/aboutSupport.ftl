@@ -10,11 +10,6 @@ crashes-id = Identificador de l'informe
 crashes-send-date = Data d'enviament
 crashes-all-reports = Tots els informes de fallada
 crashes-no-config = Aquesta aplicació no està configurada per visualitzar els informes de fallada.
-extensions-title = Extensions
-extensions-name = Nom
-extensions-enabled = Habilitada
-extensions-version = Versió
-extensions-id = ID
 support-addons-title = Complements
 support-addons-name = Nom
 support-addons-type = Tipus
@@ -60,12 +55,14 @@ app-basics-enabled-plugins = Connectors habilitats
 app-basics-build-config = Configuració de la versió
 app-basics-user-agent = Agent d'usuari
 app-basics-os = Sistema operatiu
+app-basics-os-theme = Tema del sistema operatiu
 # Rosetta is Apple's translation process to run apps containing x86_64
 # instructions on Apple Silicon. This should remain in English.
 app-basics-rosetta = Traduït per Rosetta
 app-basics-memory-use = Utilització de la memòria
 app-basics-performance = Rendiment
 app-basics-service-workers = Processos de treball de servei registrats
+app-basics-third-party = Mòduls de tercers
 app-basics-profiles = Perfils
 app-basics-launcher-process-status = Procés d'inici
 app-basics-multi-process-support = Finestres multiprocés
@@ -76,6 +73,14 @@ app-basics-location-service-key-google = Clau del servei d'ubicació de Google
 app-basics-safebrowsing-key-google = Clau del servei de navegació segura Google Safebrowsing
 app-basics-key-mozilla = Clau del servei d'ubicació de Mozilla
 app-basics-safe-mode = Mode segur
+app-basics-memory-size = Mida de la memòria (RAM)
+app-basics-disk-available = Espai de disc disponible
+
+# Variables:
+#   $value (number) - Amount of data being stored
+#   $unit (string) - The unit of data being stored (e.g. MB)
+app-basics-data-size = { $value } { $unit }
+
 show-dir-label =
     { PLATFORM() ->
         [macos] Mostra-ho en el Finder
@@ -129,12 +134,12 @@ sandbox-sys-call-tid = TID
 sandbox-sys-call-proc-type = Tipus de procés
 sandbox-sys-call-number = Crida del sistema
 sandbox-sys-call-args = Arguments
-safe-mode-title = Proveu el mode segur
-restart-in-safe-mode-label = Reinicia amb els complements inhabilitats…
-
+troubleshoot-mode-title = Diagnostica problemes
 restart-in-troubleshoot-mode-label = Mode de resolució de problemes…
 clear-startup-cache-title = Proveu d'esborrar la memòria cau d'inici
 clear-startup-cache-label = Esborra la memòria cau d'inici…
+startup-cache-dialog-title2 = Voleu reiniciar el { -brand-short-name } per esborrar la memòria cau d'inici?
+startup-cache-dialog-body2 = Això no canviarà cap paràmetre ni eliminarà cap extensió.
 restart-button-label = Reinicia
 
 ## Media titles
@@ -156,6 +161,10 @@ media-device-channels = Canals
 media-device-rate = Freqüència
 media-device-latency = Latència
 media-capabilities-title = Capacitats multimèdia
+# List all the entries of the database.
+media-capabilities-enumerate = Enumera la base de dades
+
+## Codec support table
 
 ##
 
@@ -178,23 +187,11 @@ intl-regional-prefs = Preferències regionals
 ##
 ## See also https://firefox-source-docs.mozilla.org/remote/
 
+remote-debugging-title = Depuració remota (protocol Chromium)
+remote-debugging-accepting-connections = S'estan acceptant connexions
 remote-debugging-url = URL
 
 ##
-
-support-third-party-modules-title = Mòduls de tercers
-support-third-party-modules-module = Fitxer de mòdul
-support-third-party-modules-version = Versió del fitxer
-support-third-party-modules-vendor = Informació del proveïdor
-support-third-party-modules-status = Estat
-support-third-party-modules-status-loaded = Carregat
-support-third-party-modules-status-blocked = Blocat
-support-third-party-modules-status-redirected = Redirigit
-support-third-party-modules-no-value = (Cap valor)
-support-third-party-modules-button-open =
-    .title = Obre la ubicació del fitxer…
-support-third-party-modules-folder-icon =
-    .title = Obre la ubicació del fitxer…
 
 # Variables
 # $days (Integer) - Number of days of crashes to log
@@ -282,20 +279,14 @@ gpu-driver-date = Data del controlador
 gpu-active = Activa
 webgl1-extensions = Extensions WebGL 1
 webgl2-extensions = Extensions WebGL 2
-blocklisted-bug = És a la llista de bloquejos per problemes coneguts
-
-# Variables
-# $bugNumber (string) - String of bug number from Bugzilla
-bug-link = error { $bugNumber }
 
 # Variables
 # $failureCode (string) - String that can be searched in the source tree.
 unknown-failure = És a la llista de bloquejos; codi d'error { $failureCode }
 
 d3d11layers-crash-guard = Compositor D3D11
-d3d11video-crash-guard = Descodificador de vídeo D3D11
-d3d9video-crash-guard = Descodificador de vídeo D3D9
 glcontext-crash-guard = OpenGL
+wmfvpxvideo-crash-guard = Descodificador de vídeo WMF VPX
 
 reset-on-next-restart = Reinicialitza als valors per defecte en el proper reinici
 gpu-process-kill-button = Finalitza el procés de GPU
@@ -313,6 +304,7 @@ content-sandbox-level = Nivell de l'entorn de proves de processos de contingut
 effective-content-sandbox-level = Nivell de l'entorn de proves de processos de contingut efectiu
 sandbox-proc-type-content = contingut
 sandbox-proc-type-media-plugin = connector multimèdia
+sandbox-proc-type-data-decoder = descodificador de dades
 
 startup-cache-title = Memòria cau d'inici
 
@@ -324,15 +316,6 @@ launcher-process-status-unknown = Estat desconegut
 # $remoteWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
 multi-process-windows = { $remoteWindows }/{ $totalWindows }
-multi-process-status-0 = Activat per l'usuari
-multi-process-status-1 = Activat per defecte
-multi-process-status-2 = Desactivat
-multi-process-status-4 = Inhabilitat per les eines d'accessibilitat
-multi-process-status-6 = Inhabilitat perquè l'entrada de text és incompatible
-multi-process-status-7 = Inhabilitat per part dels complements
-multi-process-status-8 = Inhabilitat de forma forçada
-multi-process-status-unknown = Estat desconegut
-
 # Variables
 # $fissionWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
@@ -341,14 +324,13 @@ fission-status-experiment-control = Desactivat per un experiment
 fission-status-experiment-treatment = Activat per un experiment
 fission-status-disabled-by-e10s-env = Desactivat per l'entorn
 fission-status-enabled-by-env = Activat per l'entorn
-fission-status-disabled-by-safe-mode = Desactivat pel mode segur
 fission-status-enabled-by-default = Activat per defecte
 fission-status-disabled-by-default = Desactivat per defecte
 fission-status-enabled-by-user-pref = Activat per l'usuari
 fission-status-disabled-by-user-pref = Desactivat per l'usuari
 fission-status-disabled-by-e10s-other = E10s desactivat
 
-async-pan-zoom = Pan/Zoom asíncrons
+async-pan-zoom = Desplaçament/zoom asíncrons
 apz-none = cap
 wheel-enabled = entrada amb roda activada
 touch-enabled = entrada tàctil activada

@@ -28,16 +28,6 @@ serviceworker-worker-unregister = Prekliči registracijo
 serviceworker-worker-debug = Razhroščevanje
     .title = Možno je zgolj razhroščevanje Service Workerjev, ki se izvajajo
 
-# Text for the debug link displayed for an already started Service Worker, when we
-# are in multi e10s mode, which effectively disables this link.
-serviceworker-worker-debug-forbidden = Razhroščevanje
-    .title = Razhroščevanje service workerjev je možno samo, če je omogočen multi e10s
-
-# Text for the start link displayed for a registered but not running Service Worker.
-# Clicking on the link will attempt to start the service worker.
-serviceworker-worker-start2 = Začni
-    .title = Razhroščevanje service workerjev je možno samo, če je omogočen multi e10s
-
 # Alt text for the image icon displayed inside a debug link for a service worker.
 serviceworker-worker-inspect-icon =
     .alt = Preglej
@@ -48,13 +38,9 @@ serviceworker-worker-start3 = Zaženi
 
 # Text displayed for the updated time of the service worker. The <time> element will
 # display the last update time of the service worker script.
+# Variables:
+#   $date (date) - Update date
 serviceworker-worker-updated = Posodobljeno <time>{ DATETIME($date, month: "long", year: "numeric", day: "numeric", hour: "numeric", minute: "numeric", second: "numeric") }</time>
-
-# Text displayed next to the URL for the source of the service worker (e-g. "Source my/path/to/worker-js")
-serviceworker-worker-source = Pot
-
-# Text displayed next to the current status of the service worker.
-serviceworker-worker-status = Stanje
 
 ## Service Worker status strings: all serviceworker-worker-status-* strings are also
 ## defined in aboutdebugging.properties and should be synchronized with them.
@@ -66,35 +52,26 @@ serviceworker-worker-status-running = Se izvaja
 # Service Worker status. A stopped service worker is registered but not currently active.
 serviceworker-worker-status-stopped = Ustavljeno
 
-# Text displayed when no service workers are visible for the current page. Clicking on the
-# link will open https://developer-mozilla-org/docs/Web/API/Service_Worker_API/Using_Service_Workers
-serviceworker-empty-intro = Za pregledovanje Service Workerja ga morate registrirati. <a>Več o tem</a>
-
-# Text displayed when there are no Service Workers to display for the current page,
-# introducing hints to debug Service Worker issues.
-serviceworker-empty-suggestions = Če bi trenutna stran morala imeti Service Worker, lahko poskusite naslednje
-
-# Suggestion to check for errors in the Console to investigate why a service worker is not
-# registered. Clicking on the link opens the webconsole.
-serviceworker-empty-suggestions-console = Poiščite napake v konzoli. <a>Odpri konzolo</a>
-
-# Suggestion to use the debugger to investigate why a service worker is not registered.
-# Clicking on the link will switch from the Application panel to the debugger.
-serviceworker-empty-suggestions-debugger = Prestopite registracijo Service Workerja in poiščite izjeme. <a>Odpri razhroščevalnik</a>
-
-# Suggestion to go to about:debugging in order to see Service Workers for all domains.
-# Clicking on the link will open about:debugging in a new tab.
-serviceworker-empty-suggestions-aboutdebugging = Preglejte Service Workerje iz ostalih domen. <a>Odpri about:debugging</a>
+# Text displayed when no service workers are visible for the current page.
+serviceworker-empty-intro2 = Ni najdenih Service Workerjev
 
 # Link will open https://developer.mozilla.org/docs/Web/API/Service_Worker_API/Using_Service_Workers
 serviceworker-empty-intro-link = Več o tem
+
+# Text displayed when there are no Service Workers to display for the current page,
+# introducing hints to debug Service Worker issues.
+# <a> and <span> are links that will open the webconsole and the debugger, respectively.
+serviceworker-empty-suggestions2 = Če bi trenutna stran morala imeti service worker, lahko preverite v <a>konzoli</a>, ali obstajajo napake, ali pa se sprehodite skozi registracijo service workerja v <span>razhroščevalniku</span>.
+
+# Suggestion to go to about:debugging in order to see Service Workers for all domains.
+# Link will open about:debugging in a new tab.
+serviceworker-empty-suggestions-aboutdebugging2 = Prikaži Service Workerje z drugih domen
 
 # Header for the Manifest page when we have an actual manifest
 manifest-view-header = Manifest aplikacije
 
 # Header for the Manifest page when there's no manifest to inspect
-# The link will open https://developer.mozilla.org/en-US/docs/Web/Manifest
-manifest-empty-intro = Za pregledovanje Manifesta morate dodati spletno aplikacijo. <a>Več o tem</a>
+manifest-empty-intro2 = Ni zaznanega manifesta za spletne aplikacije
 
 # The link will open https://developer.mozilla.org/en-US/docs/Web/Manifest
 manifest-empty-intro-link = Naučite se, kako dodati manifest
@@ -134,6 +111,8 @@ manifest-json-link-data-url = Manifest je vdelan v podatkovni URL.
 
 # Text displayed at manifest icons to label their purpose, as declared
 # in the manifest.
+# Variables:
+#   $purpose (string) - Manifest purpose
 manifest-icon-purpose = Namen: <code>{ $purpose }</code>
 
 # Text displayed as the alt attribute for <img> tags showing the icons in the
@@ -142,8 +121,11 @@ manifest-icon-img =
     .alt = Ikona
 
 # Text displayed as the title attribute for <img> tags showing the icons in the
-# manifest. `$sizes` is a user-dependent string that has been parsed as a
-# space-separated list of `<width>x<height>` sizes or the keyword `any`.
+# manifest.
+# Variables:
+#   $sizes (string) - User-dependent string that has been parsed as a
+#                     space-separated list of `<width>x<height>` sizes or
+#                     the keyword `any`.
 manifest-icon-img-title = Ikona z velikostmi: { $sizes }
 
 # Text displayed as the title attribute for <img> tags showing the icons in the
@@ -169,4 +151,3 @@ icon-warning =
 icon-error =
     .alt = Ikona napake
     .title = Napaka
-

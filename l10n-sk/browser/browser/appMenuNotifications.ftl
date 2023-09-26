@@ -2,50 +2,15 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-appmenu-update-available =
-    .label = K dispozícii je nová aktualizácia prehliadača { -brand-shorter-name }.
-    .buttonlabel = Stiahnuť aktualizáciu
-    .buttonaccesskey = S
-    .secondarybuttonlabel = Teraz nie
-    .secondarybuttonaccesskey = n
-appmenu-update-available-message = Aktualizujte si svoj { -brand-shorter-name } a získajte najnovšie vylepšenia rýchlosti a súkromia.
-appmenu-update-manual =
-    .label = Aplikácii { -brand-shorter-name } sa nepodarilo nainštalovať najnovšiu verziu.
-    .buttonlabel = Stiahnuť { -brand-shorter-name }
-    .buttonaccesskey = S
-    .secondarybuttonlabel = Teraz nie
-    .secondarybuttonaccesskey = n
-appmenu-update-manual-message = Stiahnite si novú verziu aplikácie { -brand-shorter-name } a my vám pomôžeme ju nainštalovať.
-appmenu-update-whats-new =
-    .value = Pozrite sa, čo je nové.
-appmenu-update-unsupported =
-    .label = Aplikácia { -brand-shorter-name } nemôže nainštalovať najnovšiu verziu.
-    .buttonlabel = Ďalšie informácie
-    .buttonaccesskey = i
-    .secondarybuttonlabel = Zavrieť
-    .secondarybuttonaccesskey = Z
-appmenu-update-unsupported-message = Najnovšia verzia aplikácie { -brand-shorter-name } nie je vo vašom systéme podporovaná.
-appmenu-update-restart =
-    .label = Reštartovať a aktualizovať aplikáciu { -brand-shorter-name }.
-    .buttonlabel = Reštartovať a obnoviť
-    .buttonaccesskey = R
-    .secondarybuttonlabel = Teraz nie
-    .secondarybuttonaccesskey = n
-appmenu-update-restart-message = Po rýchlom reštarte obnoví { -brand-shorter-name } všetky vaše otvorené karty okná, ktoré nie sú otvorené v súkromnom prehliadaní.
-appmenu-addon-private-browsing-installed =
-    .buttonlabel = Ok, rozumiem
-    .buttonaccesskey = O
-appmenu-addon-post-install-message = Spravujte svoje doplnky kliknutím na <image data-l10n-name='addon-install-icon'></image> v ponuke <image data-l10n-name='addon-menu-icon'></image>.
-
 appmenu-update-available2 =
-    .label = Je dostupná aktualizácia
+    .label = K dispozícii je aktualizácia
     .buttonlabel = Stiahnuť
     .buttonaccesskey = S
     .secondarybuttonlabel = Zrušiť
     .secondarybuttonaccesskey = Z
 appmenu-update-available-message2 = Stiahnuť najnovšiu verziu aplikácie { -brand-shorter-name }.
 appmenu-update-manual2 =
-    .label = Je dostupná aktualizácia
+    .label = K dispozícii je aktualizácia
     .buttonlabel = Stiahnuť
     .buttonaccesskey = S
     .secondarybuttonlabel = Zrušiť
@@ -59,7 +24,7 @@ appmenu-update-unsupported2 =
     .secondarybuttonaccesskey = O
 appmenu-update-unsupported-message2 = Váš operačný systém nie je kompatibilný s najnovšou verziou prehliadača { -brand-shorter-name }.
 appmenu-update-restart2 =
-    .label = Dostupná aktualizácia
+    .label = K dispozícii je aktualizácia
     .buttonlabel = Aktualizovať a reštartovať
     .buttonaccesskey = A
     .secondarybuttonlabel = Odmietnuť
@@ -80,19 +45,6 @@ appmenu-addon-post-install-message3 = Spravujte svoje doplnky a témy prostredn�
 appmenu-addon-post-install-incognito-checkbox =
     .label = Povoliť toto rozšírenie v súkromných oknách
     .accesskey = P
-    
-appmenu-new-tab-controlled =
-    .label = Vaša stránka novej karty bola zmenená.
-    .buttonlabel = Zachovať zmeny
-    .buttonaccesskey = Z
-    .secondarybuttonlabel = Zakázať rozšírenie
-    .secondarybuttonaccesskey = Z
-appmenu-homepage-controlled =
-    .label = Vaša domovská stránka bola zmenená.
-    .buttonlabel = Zachovať zmeny
-    .buttonaccesskey = Z
-    .secondarybuttonlabel = Zakázať rozšírenie
-    .secondarybuttonaccesskey = Z
 
 appmenu-new-tab-controlled-changes =
     .label = Vaša stránka novej karty bola zmenená.

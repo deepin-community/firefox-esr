@@ -16,8 +16,8 @@ downloads-panel =
 # The style attribute has the width of the Downloads Panel expressed using
 # a CSS unit. The longest labels that should fit are usually those of
 # in-progress and blocked downloads.
-downloads-panel-list =
-    .style = width: 70ch
+downloads-panel-items =
+    .style = width: 35em
 
 downloads-cmd-pause =
     .label = Pause
@@ -30,43 +30,22 @@ downloads-cmd-cancel =
 downloads-cmd-cancel-panel =
     .aria-label = Stap
 
-# This message is only displayed on Windows and Linux devices
-downloads-cmd-show-menuitem =
-    .label = Open Conteenin Folder
-    .accesskey = F
-
-# This message is only displayed on macOS devices
-downloads-cmd-show-menuitem-mac =
-    .label = Kythe In Finder
-    .accesskey = F
+## Displayed in the downloads context menu for files that can be opened.
+## Variables:
+##   $handler (String) - The name of the mime type's default file handler.
+##   Example: "Notepad", "Acrobat Reader DC", "7-Zip File Manager"
 
 downloads-cmd-use-system-default =
     .label = Open In System Viewer
     .accesskey = V
 
+# We can use the same accesskey as downloads-cmd-always-open-similar-files.
+# Both should not be visible in the downloads context menu at the same time.
 downloads-cmd-always-use-system-default =
     .label = Ayeweys Open In System Viewer
     .accesskey = w
 
-downloads-cmd-show-button =
-    .tooltiptext =
-        { PLATFORM() ->
-            [macos] Kythe In Finder
-           *[other] Open Conteenin Folder
-        }
-
-downloads-cmd-show-panel =
-    .aria-label =
-        { PLATFORM() ->
-            [macos] Kythe In Finder
-           *[other] Open Conteenin Folder
-        }
-downloads-cmd-show-description =
-    .value =
-        { PLATFORM() ->
-            [macos] Kythe In Finder
-           *[other] Open Conteenin Folder
-        }
+##
 
 downloads-cmd-show-downloads =
     .label = Kythe Doonloads Folder
@@ -138,11 +117,18 @@ downloads-open-file =
 ##   $seconds (number) - Amount of seconds left till the file opens.
 ##   $minutes (number) - Amount of minutes till the file opens.
 
-downloading-file-opens-in-hours-and-minutes = Openin in { $hours }o { $minutes }m…
-downloading-file-opens-in-minutes = Openin in { $minutes }m…
-downloading-file-opens-in-minutes-and-seconds = Openin in { $minutes }m { $seconds }s…
-downloading-file-opens-in-seconds = Openin in { $seconds }s…
-downloading-file-opens-in-some-time = Openin wance feenisht…
+downloading-file-opens-in-hours-and-minutes-2 =
+    .value = Openin in { $hours }o { $minutes }m…
+downloading-file-opens-in-minutes-2 =
+    .value = Openin in { $minutes }m…
+downloading-file-opens-in-minutes-and-seconds-2 =
+    .value = Openin in { $minutes }m { $seconds }s…
+downloading-file-opens-in-seconds-2 =
+    .value = Openin in { $seconds }s…
+downloading-file-opens-in-some-time-2 =
+    .value = Openin wance feenisht…
+downloading-file-click-to-open =
+    .value = Open wance feenisht
 
 ##
 
@@ -168,6 +154,14 @@ downloads-history =
 downloads-details =
     .title = Doonload Details
 
+## Displayed when a site attempts to automatically download many files.
+## Variables:
+##   $num (number) - Number of blocked downloads.
+##   $url (string) - The url of the suspicious site, stripped of http, https and www prefix.
+
+
+##
+
 downloads-clear-downloads-button =
     .label = Dicht Doonloads
     .tooltiptext = Dichts feenisht, stapped and misgaed doonloads
@@ -180,3 +174,17 @@ downloads-list-empty =
 # This string is shown when there are no items in the Downloads Panel.
 downloads-panel-empty =
     .value = Nae doonloads for this session.
+
+## Download errors
+
+downloads-error-alert-title = Doonload Mishanter
+# Variables:
+#   $extension (String): the name of the blocking extension.
+downloads-error-blocked-by = The doonload cannae be saved acause it's blockit by { $extension }.
+# Used when the name of the blocking extension is unavailable.
+downloads-error-extension = The doonload cannae be saved acause it's blockit by an extension.
+# Line breaks in this message are meaningful, and should be maintained.
+downloads-error-generic =
+    The doonload cannae be saved acause an unkent error tuik place.
+    
+    Gie it anither shot.

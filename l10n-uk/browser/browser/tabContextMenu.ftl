@@ -11,6 +11,12 @@ reload-tab =
 select-all-tabs =
     .label = Обрати всі вкладки
     .accesskey = О
+tab-context-play-tab =
+    .label = Відтворити вкладку
+    .accesskey = т
+tab-context-play-tabs =
+    .label = Відтворити вкладки
+    .accesskey = т
 duplicate-tab =
     .label = Дублювати вкладку
     .accesskey = ю
@@ -46,14 +52,11 @@ unpin-selected-tabs =
     .label = Відкріпити вкладки
     .accesskey = В
 bookmark-selected-tabs =
-    .label = Закласти вкладки…
+    .label = Додати закладки вкладок…
     .accesskey = к
-bookmark-tab =
-    .label = Закласти вкладку
-    .accesskey = л
-reopen-in-container =
-    .label = Відкрити в контейнері
-    .accesskey = й
+tab-context-bookmark-tab =
+    .label = Додати вкладку до закладок
+    .accesskey = и
 tab-context-open-in-new-container-tab =
     .label = Відкрити в новій вкладці контейнера
     .accesskey = й
@@ -69,31 +72,9 @@ move-to-new-window =
 tab-context-close-multiple-tabs =
     .label = Закрити кілька вкладок
     .accesskey = к
-tab-context-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [one] Відновити закриту вкладку
-            [few] Відновити { $tabCount } закриті вкладки
-           *[many] Відновити { $tabCount } закритих вкладок
-        }
-    .accesskey = В
-close-tab =
-    .label = Закрити вкладку
-    .accesskey = к
-close-tabs =
-    .label = Закрити вкладки
-    .accesskey = к
-move-tabs =
-    .label = Перемістити вкладки
-    .accesskey = м
-move-tab =
-    .label = Перемістити вкладку
-    .accesskey = м
 tab-context-share-url =
     .label = Поділитися
     .accesskey = я
-tab-context-share-more =
-    .label = Більше…
 
 ## Variables:
 ##  $tabCount (Number): the number of tabs that are affected by the action.
@@ -106,14 +87,6 @@ tab-context-reopen-closed-tabs =
            *[many] Відновити { $tabCount } закритих вкладок
         }
     .accesskey = і
-tab-context-close-tabs =
-    .label =
-        { $tabCount ->
-            [one] Закрити вкладку
-            [few] Закрити { $tabCount } вкладки
-           *[many] Закрити { $tabCount } вкладок
-        }
-    .accesskey = а
 tab-context-close-n-tabs =
     .label =
         { $tabCount ->
@@ -130,3 +103,12 @@ tab-context-move-tabs =
            *[many] Перемістити { $tabCount } вкладок
         }
     .accesskey = м
+
+tab-context-send-tabs-to-device =
+    .label =
+        { $tabCount ->
+            [one] Надіслати вкладку на пристрій
+            [few] Надіслати { $tabCount } вкладки на пристрій
+           *[many] Надіслати { $tabCount } вкладок на пристрій
+        }
+    .accesskey = с

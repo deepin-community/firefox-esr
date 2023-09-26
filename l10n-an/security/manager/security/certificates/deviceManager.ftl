@@ -5,9 +5,9 @@
 
 ## Strings used for device manager
 
-devmgr =
+devmgr-window =
     .title = Chestor de dispositivos
-    .style = width: 67em; height: 32em;
+    .style = min-width: 67em; min-height: 32em;
 
 devmgr-devlist =
     .label = Modulos y dispositivos de seguranza
@@ -115,8 +115,6 @@ devinfo-label =
 
 devinfo-serialnum =
     .label = Numero de serie
-
-fips-nonempty-password-required = O modo FIPS requiere que tienga una clau mayestra establida ta cada dispositivo de seguranza. Estableixca a clau antes de tractar d'activar o modo FIPS.
 
 unable-to-toggle-fips = No s'ha puesto cambiar o modo FIPS d'o dispositivo de seguranza. Se recomienda que salga y reinicie ista aplicación.
 load-pk11-module-file-picker-title = Trigue un driver de dispositivo PKCS#11 a cargar

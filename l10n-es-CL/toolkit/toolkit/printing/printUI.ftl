@@ -15,6 +15,9 @@ printui-sheets-count =
     }
 
 printui-page-range-all = Todo
+printui-page-range-current = Actual
+printui-page-range-odd = Impar
+printui-page-range-even = Par
 printui-page-range-custom = Personalizado
 printui-page-range-label = Páginas
 printui-page-range-picker =
@@ -57,8 +60,6 @@ printui-two-sided-printing-short-edge = Dar la vuelta por el borde corto
 printui-options = Opciones
 printui-headers-footers-checkbox = Imprimir cabeceras y pies de página
 printui-backgrounds-checkbox = Imprimir fondos
-
-printui-selection-checkbox = Imprimir solo la selección
 
 ## The "Format" section, select a version of the website to print. Radio
 ## options to select between the original page, selected text only, or a version

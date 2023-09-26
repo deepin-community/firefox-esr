@@ -11,17 +11,6 @@ navbar-tooltip-instruction =
 
 ## Back
 
-main-context-menu-back =
-    .tooltiptext = Gå en side tilbage
-    .aria-label = Tilbage
-    .accesskey = T
-
-navbar-tooltip-back =
-    .value = { main-context-menu-back.tooltiptext }
-
-toolbar-button-back =
-    .label = { main-context-menu-back.aria-label }
-
 # Variables
 #   $shortcut (String) - A keyboard shortcut for the Go Back command.
 main-context-menu-back-2 =
@@ -41,17 +30,6 @@ toolbar-button-back-2 =
     .label = { main-context-menu-back-2.aria-label }
 
 ## Forward
-
-main-context-menu-forward =
-    .tooltiptext = Gå en side fremad
-    .aria-label = Fremad
-    .accesskey = F
-
-navbar-tooltip-forward =
-    .value = { main-context-menu-forward.tooltiptext }
-
-toolbar-button-forward =
-    .label = { main-context-menu-forward.aria-label }
 
 # Variables
 #   $shortcut (String) - A keyboard shortcut for the Go Forward command.
@@ -114,50 +92,47 @@ toolbar-button-fxaccount =
 
 main-context-menu-page-save =
     .label = Gem side som…
-    .accesskey = m
-
-toolbar-button-page-save =
-    .label = { main-context-menu-page-save.label }
+    .accesskey = e
 
 ## Simple menu items
 
-main-context-menu-bookmark-add =
-    .aria-label = Bogmærk denne side
+main-context-menu-bookmark-page =
+    .aria-label = Bogmærk side…
     .accesskey = m
-    .tooltiptext = Bogmærk denne side
+    .tooltiptext = Bogmærk side
 
 # This menuitem is only visible on macOS
-# Cannot be shown at the same time as main-context-menu-bookmark-edit-mac,
+# Cannot be shown at the same time as main-context-menu-edit-bookmark-mac,
 # so should probably have the same access key if possible.
-main-context-menu-bookmark-add-mac =
-    .label = Bogmærk side
-    .accesskey = d
+main-context-menu-bookmark-page-mac =
+    .label = Bogmærk side…
+    .accesskey = m
 
 # This menuitem is only visible on macOS
-# Cannot be shown at the same time as main-context-menu-bookmark-add-mac,
+# Cannot be shown at the same time as main-context-menu-bookmark-page-mac,
 # so should probably have the same access key if possible.
-main-context-menu-bookmark-edit-mac =
-    .label = Rediger bogmærke
-    .accesskey = d
+main-context-menu-edit-bookmark-mac =
+    .label = Rediger bogmærke…
+    .accesskey = m
 
 # Variables
 #   $shortcut (String) - A keyboard shortcut for the add bookmark command.
-main-context-menu-bookmark-add-with-shortcut =
-    .aria-label = Bogmærk denne side
+main-context-menu-bookmark-page-with-shortcut =
+    .aria-label = Bogmærk side…
     .accesskey = m
-    .tooltiptext = Bogmærk denne side ({ $shortcut })
+    .tooltiptext = Bogmærk side ({ $shortcut })
 
-main-context-menu-bookmark-change =
-    .aria-label = Rediger bogmærke
+main-context-menu-edit-bookmark =
+    .aria-label = Rediger bogmærke…
     .accesskey = m
-    .tooltiptext = Rediger dette bogmærke
+    .tooltiptext = Rediger bogmærke
 
 # Variables
 #   $shortcut (String) - A keyboard shortcut for the edit bookmark command.
-main-context-menu-bookmark-change-with-shortcut =
-    .aria-label = Rediger bogmærke
+main-context-menu-edit-bookmark-with-shortcut =
+    .aria-label = Rediger bogmærke…
     .accesskey = m
-    .tooltiptext = Rediger dette bogmærke ({ $shortcut })
+    .tooltiptext = Rediger bogmærke ({ $shortcut })
 
 main-context-menu-open-link =
     .label = Åbn link
@@ -179,12 +154,8 @@ main-context-menu-open-link-new-private-window =
     .label = Åbn link i nyt privat vindue
     .accesskey = p
 
-main-context-menu-bookmark-this-link =
-    .label = Bogmærk dette link
-    .accesskey = B
-
-main-context-menu-bookmark-link =
-    .label = Gem bogmærke for linket
+main-context-menu-bookmark-link-2 =
+    .label = Gem bogmærke for linket…
     .accesskey = b
 
 main-context-menu-save-link =
@@ -195,11 +166,6 @@ main-context-menu-save-link-to-pocket =
     .label = Gem link til { -pocket-brand-name }
     .accesskey = o
 
-## The access keys for "Copy Link Location" and "Copy Email Address"
-## should be the same if possible; the two context menu items
-## are mutually exclusive.
-
-
 ## The access keys for "Copy Link" and "Copy Email Address"
 ## should be the same if possible; the two context menu items
 ## are mutually exclusive.
@@ -208,8 +174,8 @@ main-context-menu-copy-email =
     .label = Kopier mailadresse
     .accesskey = K
 
-main-context-menu-copy-link =
-    .label = Kopier linkadresse
+main-context-menu-copy-phone =
+    .label = Kopier telefonnummer
     .accesskey = K
 
 main-context-menu-copy-link-simple =
@@ -239,32 +205,6 @@ main-context-menu-media-mute =
 main-context-menu-media-unmute =
     .label = Slå lyd til
     .accesskey = S
-
-main-context-menu-media-play-speed =
-    .label = Afspilningshastighed
-    .accesskey = h
-
-main-context-menu-media-play-speed-slow =
-    .label = Langsom (0.5×)
-    .accesskey = L
-
-main-context-menu-media-play-speed-normal =
-    .label = Normal
-    .accesskey = N
-
-main-context-menu-media-play-speed-fast =
-    .label = Hurtig (1.25×)
-    .accesskey = H
-
-main-context-menu-media-play-speed-faster =
-    .label = Hurtigere (1.5×)
-    .accesskey = e
-
-# "Ludicrous" is a reference to the movie "Space Balls" and is meant
-# to say that this speed is very fast.
-main-context-menu-media-play-speed-fastest =
-    .label = Latterlig (2×)
-    .accesskey = t
 
 main-context-menu-media-play-speed-2 =
     .label = Hastighed
@@ -312,12 +252,6 @@ main-context-menu-media-video-leave-fullscreen =
 
 # This is used when right-clicking on a video in the
 # content area when the Picture-in-Picture feature is enabled.
-main-context-menu-media-pip =
-    .label = Billede-i-billede
-    .accesskey = e
-
-# This is used when right-clicking on a video in the
-# content area when the Picture-in-Picture feature is enabled.
 main-context-menu-media-watch-pip =
     .label = Se billede-i-billede
     .accesskey = e
@@ -325,14 +259,6 @@ main-context-menu-media-watch-pip =
 main-context-menu-image-reload =
     .label = Genindlæs billede
     .accesskey = G
-
-main-context-menu-image-view =
-    .label = Vis billede
-    .accesskey = V
-
-main-context-menu-video-view =
-    .label = Vis video
-    .accesskey = V
 
 main-context-menu-image-view-new-tab =
     .label = Åbn billede i nyt faneblad
@@ -345,18 +271,6 @@ main-context-menu-video-view-new-tab =
 main-context-menu-image-copy =
     .label = Kopier billede
     .accesskey = o
-
-main-context-menu-image-copy-location =
-    .label = Kopier billedadresse
-    .accesskey = K
-
-main-context-menu-video-copy-location =
-    .label = Kopier videoadresse
-    .accesskey = K
-
-main-context-menu-audio-copy-location =
-    .label = Kopier lydadresse
-    .accesskey = K
 
 main-context-menu-image-copy-link =
     .label = Kopier link til billede
@@ -378,13 +292,13 @@ main-context-menu-image-email =
     .label = Send billede…
     .accesskey = S
 
-main-context-menu-image-set-as-background =
-    .label = Brug som skrivebordsbaggrund…
-    .accesskey = B
-
 main-context-menu-image-set-image-as-background =
     .label = Brug billede som skrivebordsbaggrund…
     .accesskey = b
+
+main-context-menu-image-copy-text =
+    .label = Kopier tekst fra billede
+    .accesskey = t
 
 main-context-menu-image-info =
     .label = Vis billededoplysninger
@@ -402,10 +316,6 @@ main-context-menu-audio-save-as =
     .label = Gem lyd som…
     .accesskey = G
 
-main-context-menu-video-image-save-as =
-    .label = Gem snapshot som…
-    .accesskey = S
-
 main-context-menu-video-take-snapshot =
     .label = Tag snapshot…
     .accesskey = T
@@ -418,14 +328,6 @@ main-context-menu-audio-email =
     .label = Send lyd…
     .accesskey = S
 
-main-context-menu-plugin-play =
-    .label = Aktiver dette plugin
-    .accesskey = A
-
-main-context-menu-plugin-hide =
-    .label = Skjul dette plugin
-    .accesskey = p
-
 main-context-menu-save-to-pocket =
     .label = Gem side til { -pocket-brand-name }
     .accesskey = o
@@ -433,14 +335,6 @@ main-context-menu-save-to-pocket =
 main-context-menu-send-to-device =
     .label = Send side til enhed
     .accesskey = h
-
-main-context-menu-view-background-image =
-    .label = Vis baggrundsbillede
-    .accesskey = V
-
-main-context-menu-generate-new-password =
-    .label = Brug genereret afgangskode…
-    .accesskey = g
 
 ## The access keys for "Use Saved Login" and "Use Saved Password"
 ## should be the same if possible; the two context menu items
@@ -455,6 +349,10 @@ main-context-menu-use-saved-password =
     .accesskey = B
 
 ##
+
+main-context-menu-use-relay-mask =
+    .label = Brug { -relay-brand-short-name }-mail-maske
+    .accesskey = m
 
 main-context-menu-suggest-strong-password =
     .label = Foreslå sikker adgangskode…
@@ -492,9 +390,9 @@ main-context-menu-frame-reload =
     .label = Genindlæs ramme
     .accesskey = G
 
-main-context-menu-frame-bookmark =
-    .label = Bogmærk denne ramme
-    .accesskey = B
+main-context-menu-frame-add-bookmark =
+    .label = Gem bogmærke til ramme…
+    .accesskey = m
 
 main-context-menu-frame-save-as =
     .label = Gem ramme som…
@@ -512,8 +410,8 @@ main-context-menu-frame-view-info =
     .label = Vis rammeoplysninger
     .accesskey = o
 
-main-context-menu-print-selection =
-    .label = Udskriv markering
+main-context-menu-print-selection-2 =
+    .label = Udskriv markering…
     .accesskey = U
 
 main-context-menu-view-selection-source =
@@ -532,10 +430,6 @@ main-context-menu-view-page-source =
     .label = Vis sidens kildekode
     .accesskey = k
 
-main-context-menu-view-page-info =
-    .label = Vis sideoplysninger
-    .accesskey = o
-
 main-context-menu-bidi-switch-text =
     .label = Skift tekstretning
     .accesskey = t
@@ -543,10 +437,6 @@ main-context-menu-bidi-switch-text =
 main-context-menu-bidi-switch-page =
     .label = Skift sideretning
     .accesskey = g
-
-main-context-menu-inspect-element =
-    .label = Inspicer element
-    .accesskey = n
 
 main-context-menu-inspect =
     .label = Inspicer
@@ -558,3 +448,13 @@ main-context-menu-inspect-a11y-properties =
 main-context-menu-eme-learn-more =
     .label = Læs mere om DRM…
     .accesskey = æ
+
+# Variables
+#   $containerName (String): The name of the current container
+main-context-menu-open-link-in-container-tab =
+    .label = Åbn link i et nyt { $containerName }-faneblad
+    .accesskey = k
+
+main-context-menu-reveal-password =
+    .label = Vis adgangskode
+    .accesskey = a

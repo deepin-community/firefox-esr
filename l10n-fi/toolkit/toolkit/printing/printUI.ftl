@@ -15,6 +15,9 @@ printui-sheets-count =
     }
 
 printui-page-range-all = Kaikki
+printui-page-range-current = Nykyinen
+printui-page-range-odd = Parittomat
+printui-page-range-even = Parilliset
 printui-page-range-custom = Mukautettu
 printui-page-range-label = Sivut
 printui-page-range-picker =
@@ -57,8 +60,6 @@ printui-two-sided-printing-short-edge = Käännä lyhyen reunan ympäri
 printui-options = Valinnat
 printui-headers-footers-checkbox = Tulosta ylä- ja alatunnisteet
 printui-backgrounds-checkbox = Tulosta taustat
-
-printui-selection-checkbox = Tulosta vain valinta
 
 ## The "Format" section, select a version of the website to print. Radio
 ## options to select between the original page, selected text only, or a version

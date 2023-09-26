@@ -41,13 +41,6 @@ menu-quit =
 # This menu-quit-mac string is only used on macOS.
 menu-quit-mac =
     .label = Gadael { -brand-shorter-name }
-# This menu-quit-button string is only used on Linux.
-menu-quit-button =
-    .label = { menu-quit.label }
-# This menu-quit-button-win string is only used on Windows.
-menu-quit-button-win =
-    .label = { menu-quit.label }
-    .tooltip = Gadael { -brand-shorter-name }
 menu-about =
     .label = Ynghylch { -brand-shorter-name }
     .accesskey = n
@@ -77,8 +70,19 @@ menu-file-open-location =
 menu-file-open-file =
     .label = Agor Ffeil…
     .accesskey = F
-menu-file-close =
-    .label = Cau
+# Variables:
+#  $tabCount (Number): the number of tabs that are affected by the action.
+menu-file-close-tab =
+    .label =
+        { $tabCount ->
+            [1] Cau Tab
+            [zero] Cau { $tabCount } Tabiau
+            [one] Cau { $tabCount } Tab
+            [two] Cau { $tabCount } Dab
+            [few] Cau { $tabCount } Tab
+            [many] Cau { $tabCount } Thab
+           *[other] Cau { $tabCount } Tab
+        }
     .accesskey = C
 menu-file-close-window =
     .label = Cau Ffenestr
@@ -95,9 +99,6 @@ menu-file-share-url =
 menu-file-print-setup =
     .label = Gosodiad Tudalen…
     .accesskey = o
-menu-file-print-preview =
-    .label = Rhagolwg Argraffu
-    .accesskey = R
 menu-file-print =
     .label = Argraffu…
     .accesskey = A
@@ -113,9 +114,6 @@ menu-file-go-offline =
 menu-edit =
     .label = Golygu
     .accesskey = G
-menu-edit-find-on =
-    .label = Canfod ar y Dudalen…
-    .accesskey = a
 menu-edit-find-in-page =
     .label = Canfod ar y Dudalen…
     .accesskey = D
@@ -134,9 +132,6 @@ menu-view =
 menu-view-toolbars-menu =
     .label = Barrau Offer
     .accesskey = B
-menu-view-customize-toolbar =
-    .label = Cyfaddasu…
-    .accesskey = y
 menu-view-customize-toolbar2 =
     .label = Cyfaddasu'r Bar Offer…
     .accesskey = B
@@ -173,9 +168,6 @@ menu-view-page-style-no-style =
 menu-view-page-basic-style =
     .label = Arddull Tudalen Sylfaenol
     .accesskey = S
-menu-view-charset =
-    .label = Amgodiad Testun
-    .accesskey = T
 menu-view-repair-text-encoding =
     .label = Trwsio Amgodio Testun
     .accesskey = T
@@ -187,11 +179,22 @@ menu-view-enter-full-screen =
     .label = Mynd i Sgrin Lawn
     .accesskey = S
 menu-view-exit-full-screen =
-    .label = Gadael Sgrin Lawn
+    .label = Gadael y Sgrin Lawn
     .accesskey = L
 menu-view-full-screen =
     .label = Sgrin Lawn
     .accesskey = S
+
+## These menu items may use the same accesskey.
+
+# This should match reader-view-enter-button in browser.ftl
+menu-view-enter-readerview =
+    .label = Mynd i'r Golwg Darllen
+    .accesskey = D
+# This should match reader-view-close-button in browser.ftl
+menu-view-close-readerview =
+    .label = Cau'r Golwg Darllen
+    .accesskey = D
 
 ##
 
@@ -218,27 +221,24 @@ menu-history-restore-last-session =
 menu-history-hidden-tabs =
     .label = Tabiau Cudd
 menu-history-undo-menu =
-    .label = Tabiau Wedi eu Cau'n Ddiweddar
+    .label = Tabiau Wedi'u Cau'n Ddiweddar
 menu-history-undo-window-menu =
     .label = Ffenestri wedi eu Cau yn Ddiweddar
-menu-history-reopen-all-tabs = Ailagor Pob Tab
-menu-history-reopen-all-windows = Ailagor Pob Ffenestr
 
 ## Bookmarks Menu
 
 menu-bookmarks-menu =
     .label = Nodau Tudalen
     .accesskey = T
-menu-bookmarks-show-all =
-    .label = Dangos Pob Nod Tudalen
-menu-bookmark-this-page =
-    .label = Gosod Nod Tudalen i'r Dudalen
 menu-bookmarks-manage =
     .label = Rheoli Nodau Tudalen
-menu-bookmark-current-tab =
-    .label = Gosod Nod Tudalen i'r Tab Cyfredol
-menu-bookmark-edit =
-    .label = Golygu'r Nod Tudalen
+menu-bookmark-tab =
+    .label = Gosod Nod Tudalen i'r Tab Cyfredol…
+menu-edit-bookmark =
+    .label = Golygu'r Nod Tudalen…
+# "Search" is a verb, as in "Search in bookmarks"
+menu-bookmarks-search =
+    .label = Chwilio'r Nodau Tudalen
 menu-bookmarks-all-tabs =
     .label = Nod Tudalen i Bob Tab…
 menu-bookmarks-toolbar =
@@ -254,17 +254,8 @@ menu-tools =
     .label = Offer
     .accesskey = f
 menu-tools-downloads =
-    .label = Llwytho i Lawr
+    .label = Llwythi i lawr
     .accesskey = L
-menu-tools-addons =
-    .label = Ychwanegion
-    .accesskey = Y
-menu-tools-fxa-sign-in =
-    .label = Mewngofnodi i { -brand-product-name }…
-    .accesskey = M
-menu-tools-turn-on-sync =
-    .label = Cychwyn { -sync-brand-short-name }…
-    .accesskey = C
 menu-tools-addons-and-themes =
     .label = Ychwanegion a Themâu
     .accesskey = Y
@@ -280,9 +271,6 @@ menu-tools-sync-now =
 menu-tools-fxa-re-auth =
     .label = Ailgysylltu â { -brand-product-name }…
     .accesskey = A
-menu-tools-web-developer =
-    .label = Datblygwr Gwe
-    .accesskey = D
 menu-tools-browser-tools =
     .label = Offer Porwr
     .accesskey = O
@@ -295,17 +283,6 @@ menu-tools-page-source =
 menu-tools-page-info =
     .label = Gwybodaeth am y Dudalen
     .accesskey = w
-menu-preferences =
-    .label =
-        { PLATFORM() ->
-            [windows] Opsiynau
-           *[other] Dewisiadau
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] O
-           *[other] w
-        }
 menu-settings =
     .label = Gosodiadau
     .accesskey =
@@ -338,21 +315,6 @@ menu-window-bring-all-to-front =
 menu-help =
     .label = Cymorth
     .accesskey = C
-menu-help-product =
-    .label = Cymorth { -brand-shorter-name }
-    .accesskey = m
-menu-help-show-tour =
-    .label = Cyflwyno { -brand-shorter-name }
-    .accesskey = C
-menu-help-import-from-another-browser =
-    .label = Mewnforio o Borwr arall ...
-    .accesskey = M
-menu-help-keyboard-shortcuts =
-    .label = Llwybrau Byr Bysellfwrdd
-    .accesskey = B
-menu-help-troubleshooting-info =
-    .label = Gwybodaeth am Ddatrys Problemau
-    .accesskey = G
 menu-get-help =
     .label = Derbyn Cymorth
     .accesskey = D
@@ -361,21 +323,18 @@ menu-help-more-troubleshooting-info =
     .accesskey = R
 menu-help-report-site-issue =
     .label = Adrodd ar Fater Gwefan…
-menu-help-feedback-page =
-    .label = Cyflwyno Adborth…
-    .accesskey = A
-menu-help-safe-mode-without-addons =
-    .label = Ailgychwyn gydag Ychwanegion wedi eu Hanalluogi…
-    .accesskey = A
-menu-help-safe-mode-with-addons =
-    .label = Ailgychwyn gydag Ychwanegion wedi eu Hanalluogi
-    .accesskey = A
+menu-help-share-ideas =
+    .label = Rhannwch Syniadau ac Adborth…
+    .accesskey = R
 menu-help-enter-troubleshoot-mode2 =
     .label = Y Modd Datrys Problemau…
     .accesskey = M
 menu-help-exit-troubleshoot-mode =
     .label = Diffodd y Modd Dartrys Problemau
     .accesskey = D
+menu-help-switch-device =
+    .label = Newid i Ddyfais Newydd
+    .accesskey = N
 # Label of the Help menu item. Either this or
 # menu-help-notdeceptive is shown.
 menu-help-report-deceptive-site =

@@ -15,6 +15,8 @@ printui-sheets-count =
     }
 
 printui-page-range-all = Tot
+printui-page-range-odd = Senar
+printui-page-range-even = Parell
 printui-page-range-custom = Personalitzat
 printui-page-range-label = Pàgines
 printui-page-range-picker =
@@ -58,11 +60,18 @@ printui-options = Opcions
 printui-headers-footers-checkbox = Imprimeix capçaleres i peus de pàgina
 printui-backgrounds-checkbox = Imprimeix els fons
 
-printui-selection-checkbox = Imprimeix només la selecció
-
 ## The "Format" section, select a version of the website to print. Radio
 ## options to select between the original page, selected text only, or a version
 ## where the page is processed with "Reader View".
+
+# The section title.
+printui-source-label = Format
+# Option for printing the original page.
+printui-source-radio = Original
+# Option for printing just the content a user selected prior to printing.
+printui-selection-radio = Selecció
+# Option for "simplifying" the page by printing the Reader View version.
+printui-simplify-page-radio = Simplificat
 
 ##
 

@@ -48,6 +48,7 @@ options-default-color-unit-authored = Ինչպես հեղինակ
 options-default-color-unit-hex = Hex
 options-default-color-unit-hsl = HSL(A)
 options-default-color-unit-rgb = RGB(A)
+options-default-color-unit-hwb = HWB
 options-default-color-unit-name = Գույնի անունը
 
 ## Style Editor section
@@ -64,11 +65,6 @@ options-stylesheet-autocompletion-tooltip =
 
 # The heading
 options-screenshot-label = Էկրանի հանույթի պահվածք
-
-# Label for the checkbox that toggles screenshot to clipboard feature
-options-screenshot-clipboard-label = Էկրանի կորզումը սեղմատախտակում
-options-screenshot-clipboard-tooltip =
-    .title = Պահպանում է էկրանի կորզումը ուղղակիորեն սեղմատախտակում
 
 # Label for the checkbox that toggles the camera shutter audio for screenshot tool
 options-screenshot-audio-label = Նվագարկել խցիկի փակման ձայնը
@@ -95,7 +91,7 @@ options-sourceeditor-keybinding-default-label = Լռելյայն
 
 ## Advanced section
 
-# The heading
+# The heading (this item is also used in perftools.ftl)
 options-context-advanced-settings = Լրացուցիչ կարգավորումներ
 
 # The label for the checkbox that toggles the HTTP cache on or off
@@ -130,9 +126,3 @@ options-source-maps-tooltip =
 
 # The message shown for settings that trigger page reload
 options-context-triggers-page-refresh = * Միայն ընթացիկ շրջանը, վերաբացում է էջը
-
-# The label for the checkbox that toggles the display of the platform data in the
-# Profiler i.e. devtools.profiler.ui.show-platform-data a boolean preference in about:config
-options-show-platform-data-label = Ցուցադրել Gecko հարթակի տվյալները
-options-show-platform-data-tooltip =
-    .title = Եթե միացնեք այս ընտրանքը, ապա JavaScript-ի Հատկագրի զեկույցները կներառվեն: Gecko հարթակի նշանները

@@ -9,7 +9,7 @@ profile-selection-button-accept =
     .label = Nis { -brand-short-name }-in
 
 profile-selection-button-cancel =
-    .label = Dilni
+    .label = Dalje
 
 profile-selection-new-button =
     .label = Krijoni Profil…
@@ -23,9 +23,11 @@ profile-selection-delete-button =
     .label = Fshini Profil…
     .accesskey = F
 
+profile-selection-conflict-message = Një tjetër kopje e { -brand-product-name }-it ka bërë ndryshime te profile. Duhet të rinisni { -brand-short-name }-in, përpara se të bëni ndryshime të tjera.
+
 ## Messages used in the profile manager
 
-profile-manager-description = { -brand-short-name }-i ruan të dhëna rreth rregullimeve tuaj, parapëlqimeve, dhe të tjerë objekte përdoruesi te profili juaj i përdoruesit.
+profile-manager-description = { -brand-short-name }-i ruan të dhëna rreth rregullimeve tuaj, parapëlqimeve dhe të tjerë objekte përdoruesi te profili juaj i përdoruesit.
 
 profile-manager-work-offline =
     .label = Puno jashtë linje

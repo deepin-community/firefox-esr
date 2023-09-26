@@ -11,17 +11,6 @@ navbar-tooltip-instruction =
 
 ## Back
 
-main-context-menu-back =
-    .tooltiptext = Vés una pàgina arrere
-    .aria-label = Arrere
-    .accesskey = r
-
-navbar-tooltip-back =
-    .value = { main-context-menu-back.tooltiptext }
-
-toolbar-button-back =
-    .label = { main-context-menu-back.aria-label }
-
 # Variables
 #   $shortcut (String) - A keyboard shortcut for the Go Back command.
 main-context-menu-back-2 =
@@ -41,17 +30,6 @@ toolbar-button-back-2 =
     .label = { main-context-menu-back-2.aria-label }
 
 ## Forward
-
-main-context-menu-forward =
-    .tooltiptext = Vés una pàgina avant
-    .aria-label = Avant
-    .accesskey = t
-
-navbar-tooltip-forward =
-    .value = { main-context-menu-forward.tooltiptext }
-
-toolbar-button-forward =
-    .label = { main-context-menu-forward.aria-label }
 
 # Variables
 #   $shortcut (String) - A keyboard shortcut for the Go Forward command.
@@ -116,48 +94,7 @@ main-context-menu-page-save =
     .label = Anomena i guarda la pàgina…
     .accesskey = d
 
-toolbar-button-page-save =
-    .label = { main-context-menu-page-save.label }
-
 ## Simple menu items
-
-main-context-menu-bookmark-add =
-    .aria-label = Afig la pàgina a les adreces d'interés
-    .accesskey = d
-    .tooltiptext = Afig la pàgina a les adreces d'interés
-
-# This menuitem is only visible on macOS
-# Cannot be shown at the same time as main-context-menu-bookmark-edit-mac,
-# so should probably have the same access key if possible.
-main-context-menu-bookmark-add-mac =
-    .label = Afig la pàgina a les adreces d'interés
-    .accesskey = A
-
-# This menuitem is only visible on macOS
-# Cannot be shown at the same time as main-context-menu-bookmark-add-mac,
-# so should probably have the same access key if possible.
-main-context-menu-bookmark-edit-mac =
-    .label = Edita l'adreça d'interés
-    .accesskey = E
-
-# Variables
-#   $shortcut (String) - A keyboard shortcut for the add bookmark command.
-main-context-menu-bookmark-add-with-shortcut =
-    .aria-label = Afig la pàgina a les adreces d'interés
-    .accesskey = d
-    .tooltiptext = Afig la pàgina a les adreces d'interés ({ $shortcut })
-
-main-context-menu-bookmark-change =
-    .aria-label = Edita esta adreça d'interés
-    .accesskey = d
-    .tooltiptext = Edita l'adreça d'interés
-
-# Variables
-#   $shortcut (String) - A keyboard shortcut for the edit bookmark command.
-main-context-menu-bookmark-change-with-shortcut =
-    .aria-label = Edita esta adreça d'interés
-    .accesskey = d
-    .tooltiptext = Edita l'adreça d'interés ({ $shortcut })
 
 main-context-menu-open-link =
     .label = Obri l'enllaç
@@ -179,26 +116,13 @@ main-context-menu-open-link-new-private-window =
     .label = Obri l'enllaç en una finestra privada nova
     .accesskey = p
 
-main-context-menu-bookmark-this-link =
-    .label = Afig l'enllaç a les adreces d'interés
-    .accesskey = l
-
-main-context-menu-bookmark-link =
-    .label = Afig l'enllaç a les adreces d'interés
-    .accesskey = e
-
 main-context-menu-save-link =
     .label = Anomena i guarda el contingut de l'enllaç…
     .accesskey = g
 
 main-context-menu-save-link-to-pocket =
     .label = Guarda l'enllaç al { -pocket-brand-name }
-    .accesskey = o
-
-## The access keys for "Copy Link Location" and "Copy Email Address"
-## should be the same if possible; the two context menu items
-## are mutually exclusive.
-
+    .accesskey = l
 
 ## The access keys for "Copy Link" and "Copy Email Address"
 ## should be the same if possible; the two context menu items
@@ -207,10 +131,6 @@ main-context-menu-save-link-to-pocket =
 main-context-menu-copy-email =
     .label = Copia l'adreça electrònica
     .accesskey = e
-
-main-context-menu-copy-link =
-    .label = Copia la ubicació de l'enllaç
-    .accesskey = u
 
 main-context-menu-copy-link-simple =
     .label = Copia l'enllaç
@@ -238,33 +158,7 @@ main-context-menu-media-mute =
 
 main-context-menu-media-unmute =
     .label = No silencies
-    .accesskey = N
-
-main-context-menu-media-play-speed =
-    .label = Velocitat de reproducció
-    .accesskey = l
-
-main-context-menu-media-play-speed-slow =
-    .label = Lent (0,5x)
-    .accesskey = L
-
-main-context-menu-media-play-speed-normal =
-    .label = Normal
-    .accesskey = N
-
-main-context-menu-media-play-speed-fast =
-    .label = Ràpid (1,25x)
-    .accesskey = R
-
-main-context-menu-media-play-speed-faster =
-    .label = Més ràpid (1,5x)
     .accesskey = s
-
-# "Ludicrous" is a reference to the movie "Space Balls" and is meant
-# to say that this speed is very fast.
-main-context-menu-media-play-speed-fastest =
-    .label = Màxima velocitat (×2)
-    .accesskey = M
 
 main-context-menu-media-play-speed-2 =
     .label = Velocitat
@@ -312,12 +206,6 @@ main-context-menu-media-video-leave-fullscreen =
 
 # This is used when right-clicking on a video in the
 # content area when the Picture-in-Picture feature is enabled.
-main-context-menu-media-pip =
-    .label = Imatge sobre imatge
-    .accesskey = I
-
-# This is used when right-clicking on a video in the
-# content area when the Picture-in-Picture feature is enabled.
 main-context-menu-media-watch-pip =
     .label = Mostra en mode d'Imatge sobre Imatge
     .accesskey = I
@@ -325,14 +213,6 @@ main-context-menu-media-watch-pip =
 main-context-menu-image-reload =
     .label = Recarrega la imatge
     .accesskey = R
-
-main-context-menu-image-view =
-    .label = Visualitza la imatge
-    .accesskey = i
-
-main-context-menu-video-view =
-    .label = Visualitza el vídeo
-    .accesskey = i
 
 main-context-menu-image-view-new-tab =
     .label = Obri la imatge en una pestanya nova
@@ -345,18 +225,6 @@ main-context-menu-video-view-new-tab =
 main-context-menu-image-copy =
     .label = Copia la imatge
     .accesskey = m
-
-main-context-menu-image-copy-location =
-    .label = Copia la ubicació de la imatge
-    .accesskey = o
-
-main-context-menu-video-copy-location =
-    .label = Copia la ubicació del vídeo
-    .accesskey = o
-
-main-context-menu-audio-copy-location =
-    .label = Copia la ubicació de l'àudio
-    .accesskey = o
 
 main-context-menu-image-copy-link =
     .label = Copia l'enllaç de la imatge
@@ -378,10 +246,6 @@ main-context-menu-image-email =
     .label = Envia la imatge per correu…
     .accesskey = a
 
-main-context-menu-image-set-as-background =
-    .label = Defineix com a fons d'escriptori…
-    .accesskey = D
-
 main-context-menu-image-set-image-as-background =
     .label = Defineix la imatge com a fons d'escriptori…
     .accesskey = D
@@ -402,10 +266,6 @@ main-context-menu-audio-save-as =
     .label = Anomena i guarda l'àudio…
     .accesskey = u
 
-main-context-menu-video-image-save-as =
-    .label = Anomena i guarda una instantània…
-    .accesskey = g
-
 main-context-menu-video-take-snapshot =
     .label = Fes una instantània…
     .accesskey = F
@@ -418,14 +278,6 @@ main-context-menu-audio-email =
     .label = Envia l'àudio per correu…
     .accesskey = a
 
-main-context-menu-plugin-play =
-    .label = Activa este connector
-    .accesskey = c
-
-main-context-menu-plugin-hide =
-    .label = Amaga este connector
-    .accesskey = m
-
 main-context-menu-save-to-pocket =
     .label = Guarda la pàgina al { -pocket-brand-name }
     .accesskey = k
@@ -433,14 +285,6 @@ main-context-menu-save-to-pocket =
 main-context-menu-send-to-device =
     .label = Envia la pàgina al dispositiu
     .accesskey = d
-
-main-context-menu-view-background-image =
-    .label = Visualitza la imatge de fons
-    .accesskey = n
-
-main-context-menu-generate-new-password =
-    .label = Utilitza una contrasenya generada…
-    .accesskey = g
 
 ## The access keys for "Use Saved Login" and "Use Saved Password"
 ## should be the same if possible; the two context menu items
@@ -492,10 +336,6 @@ main-context-menu-frame-reload =
     .label = Actualitza el marc
     .accesskey = z
 
-main-context-menu-frame-bookmark =
-    .label = Afig el marc a les adreces d'interés
-    .accesskey = m
-
 main-context-menu-frame-save-as =
     .label = Anomena i guarda el marc…
     .accesskey = m
@@ -512,10 +352,6 @@ main-context-menu-frame-view-info =
     .label = Informació del marc
     .accesskey = I
 
-main-context-menu-print-selection =
-    .label = Imprimeix la selecció
-    .accesskey = r
-
 main-context-menu-view-selection-source =
     .label = Codi font de la selecció
     .accesskey = e
@@ -524,13 +360,13 @@ main-context-menu-take-screenshot =
     .label = Fes una captura de pantalla
     .accesskey = F
 
+main-context-menu-take-frame-screenshot =
+    .label = Fes una captura de pantalla
+    .accesskey = F
+
 main-context-menu-view-page-source =
     .label = Codi font de la pàgina
     .accesskey = f
-
-main-context-menu-view-page-info =
-    .label = Informació de la pàgina
-    .accesskey = I
 
 main-context-menu-bidi-switch-text =
     .label = Canvia la direcció del text
@@ -539,10 +375,6 @@ main-context-menu-bidi-switch-text =
 main-context-menu-bidi-switch-page =
     .label = Canvia la direcció de la pàgina
     .accesskey = g
-
-main-context-menu-inspect-element =
-    .label = Inspecciona l'element
-    .accesskey = I
 
 main-context-menu-inspect =
     .label = Inspecciona
@@ -554,3 +386,10 @@ main-context-menu-inspect-a11y-properties =
 main-context-menu-eme-learn-more =
     .label = Més informació sobre DRM…
     .accesskey = D
+
+# Variables
+#   $containerName (String): The name of the current container
+main-context-menu-open-link-in-container-tab =
+    .label = Obri l'enllaç en una pestanya nova de { $containerName }
+    .accesskey = O
+

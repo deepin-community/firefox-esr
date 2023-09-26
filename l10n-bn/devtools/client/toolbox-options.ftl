@@ -65,11 +65,6 @@ options-stylesheet-autocompletion-tooltip =
 # The heading
 options-screenshot-label = স্ক্রিনশটের আচরণ
 
-# Label for the checkbox that toggles screenshot to clipboard feature
-options-screenshot-clipboard-label = স্ক্রিনশট ক্লিপবোর্ডে পাঠাও
-options-screenshot-clipboard-tooltip =
-    .title = স্ক্রিনশটটি সরাসরি ক্লিপবোর্ডে সংরক্ষণ কর
-
 # Label for the checkbox that toggles the camera shutter audio for screenshot tool
 options-screenshot-audio-label = ক্যামেরা সাটার শব্দ চালাও
 options-screenshot-audio-tooltip =
@@ -131,8 +126,3 @@ options-context-triggers-page-refresh = *কেবল বর্তমান স�
 
 ##
 
-# The label for the checkbox that toggles the display of the platform data in the
-# Profiler i.e. devtools.profiler.ui.show-platform-data a boolean preference in about:config
-options-show-platform-data-label = গেকো প্ল্যাটফর্ম ডাটা দেখান
-options-show-platform-data-tooltip =
-    .title = যদি আপনি এই অপশন সক্রিয় করেন তবে জাভাস্ক্রিপ্ট প্রোফাইলার গেকো প্লাটফর্ম চিহ্নে অর্ন্তভূক্ত রাখবে

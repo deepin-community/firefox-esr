@@ -41,13 +41,6 @@ menu-quit =
 # This menu-quit-mac string is only used on macOS.
 menu-quit-mac =
     .label = { -brand-shorter-name } skóńcyś
-# This menu-quit-button string is only used on Linux.
-menu-quit-button =
-    .label = { menu-quit.label }
-# This menu-quit-button-win string is only used on Windows.
-menu-quit-button-win =
-    .label = { menu-quit.label }
-    .tooltip = { -brand-shorter-name } skóńcyś
 menu-about =
     .label = Wó { -brand-shorter-name }
     .accesskey = W
@@ -77,9 +70,18 @@ menu-file-open-location =
 menu-file-open-file =
     .label = Dataju wócyniś…
     .accesskey = D
-menu-file-close =
-    .label = Zacyniś
-    .accesskey = Z
+# Variables:
+#  $tabCount (Number): the number of tabs that are affected by the action.
+menu-file-close-tab =
+    .label =
+        { $tabCount ->
+            [1] { $tabCount } rejtarik zacyniś
+            [one] { $tabCount } rejtarik zacyniś
+            [two] { $tabCount } rejtarika zacyniś
+            [few] { $tabCount } rejtariki zacyniś
+           *[other] { $tabCount } rejtarikow zacyniś
+        }
+    .accesskey = r
 menu-file-close-window =
     .label = Wokno zacyniś
     .accesskey = z
@@ -95,9 +97,6 @@ menu-file-share-url =
 menu-file-print-setup =
     .label = Bok zarědowaś…
     .accesskey = B
-menu-file-print-preview =
-    .label = Śišćaŕski pśeglěd
-    .accesskey = l
 menu-file-print =
     .label = Śišćaś…
     .accesskey = i
@@ -113,9 +112,6 @@ menu-file-go-offline =
 menu-edit =
     .label = Wobźěłaś
     .accesskey = b
-menu-edit-find-on =
-    .label = Na toś tom boku pytaś…
-    .accesskey = t
 menu-edit-find-in-page =
     .label = Na boku pytaś…
     .accesskey = b
@@ -134,9 +130,6 @@ menu-view =
 menu-view-toolbars-menu =
     .label = Symbolowe rědki
     .accesskey = S
-menu-view-customize-toolbar =
-    .label = Pśiměriś…
-    .accesskey = m
 menu-view-customize-toolbar2 =
     .label = Symbolowu rědku pśiměriś…
     .accesskey = S
@@ -173,9 +166,6 @@ menu-view-page-style-no-style =
 menu-view-page-basic-style =
     .label = Zakładny stil boka
     .accesskey = k
-menu-view-charset =
-    .label = Tekstowe koděrowanje
-    .accesskey = d
 menu-view-repair-text-encoding =
     .label = Tekstowe koděrowanje reparěrowaś
     .accesskey = d
@@ -192,6 +182,17 @@ menu-view-exit-full-screen =
 menu-view-full-screen =
     .label = Połna wobrazowka
     .accesskey = P
+
+## These menu items may use the same accesskey.
+
+# This should match reader-view-enter-button in browser.ftl
+menu-view-enter-readerview =
+    .label = Do cytańskego naglěda stupiś
+    .accesskey = c
+# This should match reader-view-close-button in browser.ftl
+menu-view-close-readerview =
+    .label = Cytański naglěd zacyniś
+    .accesskey = z
 
 ##
 
@@ -221,24 +222,21 @@ menu-history-undo-menu =
     .label = Rowno zacynjone rejtariki
 menu-history-undo-window-menu =
     .label = Rowno zacynjone wokna
-menu-history-reopen-all-tabs = Wšykne rejtariki znowego wócyniś
-menu-history-reopen-all-windows = Wšykne wokna znowego wócyniś
 
 ## Bookmarks Menu
 
 menu-bookmarks-menu =
     .label = Cytańske znamjenja
     .accesskey = C
-menu-bookmarks-show-all =
-    .label = Wše cytańske znamjenja pokazaś
-menu-bookmark-this-page =
-    .label = Toś ten bok ako cytańske znamje składowaś
 menu-bookmarks-manage =
     .label = Cytańske znamjenja zastojaś
-menu-bookmark-current-tab =
-    .label = Aktualny rejtarik ako cytańske znamje składowaś
-menu-bookmark-edit =
-    .label = Toś to cytańske znamje wobźěłaś
+menu-bookmark-tab =
+    .label = Aktualny rejtarik ako cytańske znamje składowaś …
+menu-edit-bookmark =
+    .label = Toś to cytańske znamje wobźěłaś …
+# "Search" is a verb, as in "Search in bookmarks"
+menu-bookmarks-search =
+    .label = Cytańske znamjenja pśepytaś
 menu-bookmarks-all-tabs =
     .label = Wšykne rejtariki ako cytańske znamjenja…
 menu-bookmarks-toolbar =
@@ -256,15 +254,6 @@ menu-tools =
 menu-tools-downloads =
     .label = Ześěgnjenja
     .accesskey = Z
-menu-tools-addons =
-    .label = Dodanki
-    .accesskey = D
-menu-tools-fxa-sign-in =
-    .label = Pla { -brand-product-name } pśizjawiś…
-    .accesskey = a
-menu-tools-turn-on-sync =
-    .label = { -sync-brand-short-name } zmóžniś
-    .accesskey = m
 menu-tools-addons-and-themes =
     .label = Dodanki a drastwy
     .accesskey = D
@@ -280,9 +269,6 @@ menu-tools-sync-now =
 menu-tools-fxa-re-auth =
     .label = Zasej z { -brand-product-name } zwězaś…
     .accesskey = Z
-menu-tools-web-developer =
-    .label = Webwuwijaŕ
-    .accesskey = W
 menu-tools-browser-tools =
     .label = Rědy wobglědowaka
     .accesskey = R
@@ -295,17 +281,6 @@ menu-tools-page-source =
 menu-tools-page-info =
     .label = Info wó boku
     .accesskey = I
-menu-preferences =
-    .label =
-        { PLATFORM() ->
-            [windows] Nastajenja
-           *[other] Nastajenja
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] N
-           *[other] N
-        }
 menu-settings =
     .label = Nastajenja
     .accesskey =
@@ -338,21 +313,6 @@ menu-window-bring-all-to-front =
 menu-help =
     .label = Pomoc
     .accesskey = P
-menu-help-product =
-    .label = { -brand-shorter-name } - Pomoc
-    .accesskey = m
-menu-help-show-tour =
-    .label = { -brand-shorter-name } - Tura
-    .accesskey = T
-menu-help-import-from-another-browser =
-    .label = Z drugego wobglědowaka importěrowaś…
-    .accesskey = d
-menu-help-keyboard-shortcuts =
-    .label = Tastowe skrotconki
-    .accesskey = T
-menu-help-troubleshooting-info =
-    .label = Informacije za rozwězowanje problemow
-    .accesskey = I
 menu-get-help =
     .label = Pomoc wobstaraś
     .accesskey = P
@@ -361,21 +321,18 @@ menu-help-more-troubleshooting-info =
     .accesskey = I
 menu-help-report-site-issue =
     .label = Sedłowy problem k wěsći daś…
-menu-help-feedback-page =
-    .label = Pósudk pósłaś…
-    .accesskey = P
-menu-help-safe-mode-without-addons =
-    .label = Ze znjemóžnjonymi dodankami znowego startowaś…
-    .accesskey = Z
-menu-help-safe-mode-with-addons =
-    .label = Ze zmóžnjonymi dodankami znowego startowaś
-    .accesskey = Z
+menu-help-share-ideas =
+    .label = Ideje a měnjenja źěliś …
+    .accesskey = I
 menu-help-enter-troubleshoot-mode2 =
     .label = Modus za rozwězowanje problemow…
     .accesskey = M
 menu-help-exit-troubleshoot-mode =
     .label = Modus za rozwězowanje problemow znjemóžniś
     .accesskey = M
+menu-help-switch-device =
+    .label = K nowemu rědoju pśejś
+    .accesskey = n
 # Label of the Help menu item. Either this or
 # menu-help-notdeceptive is shown.
 menu-help-report-deceptive-site =

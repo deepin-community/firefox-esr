@@ -41,6 +41,11 @@ options-collapse-attrs-label = Troncar los atributs DOM
 options-collapse-attrs-tooltip =
     .title = Troncar los atributs longs a l'inspector
 
+# The label for the checkbox option to enable the "drag to update" feature
+options-inspector-draggable-properties-label = Clicatz e fasètz lisar per modificar las valors de la talha
+options-inspector-draggable-properties-tooltip =
+    .title = Clicatz e fasètz lisar per modificar las valors de la talha dins la vista de l’inspector de règlas.
+
 ## "Default Color Unit" options for the Inspector
 
 options-default-color-unit-label = Unitat per defaut per las colors
@@ -48,6 +53,7 @@ options-default-color-unit-authored = coma d'origina
 options-default-color-unit-hex = Exa
 options-default-color-unit-hsl = HSL(A)
 options-default-color-unit-rgb = RVB(A)
+options-default-color-unit-hwb = HWB
 options-default-color-unit-name = Noms de colors
 
 ## Style Editor section
@@ -64,11 +70,6 @@ options-stylesheet-autocompletion-tooltip =
 
 # The heading
 options-screenshot-label = Compòrtament per las capturas d’ecran
-
-# Label for the checkbox that toggles screenshot to clipboard feature
-options-screenshot-clipboard-label = Captura d'ecran cap al pòrtapapièr
-options-screenshot-clipboard-tooltip =
-    .title = Servar la captura d'ecran dirèctament al pòrtapapièr
 
 # Label for the checkbox that toggles screenshot to clipboard feature
 options-screenshot-clipboard-only-label = Captura d'ecran cap al quichapapièrs sonque
@@ -111,7 +112,7 @@ options-disable-http-cache-tooltip =
 # The label for checkbox that toggles JavaScript on or off
 options-disable-javascript-label = Activar JavaScript *
 options-disable-javascript-tooltip =
-    .title = Activar aquesta opcion desactivarà JavaScript per l'onglet corrent. Aqueste paramètre serà doblidat a la tampadura de l'onglet o de la bóstia d'aisinas.
+    .title = Activar aquesta opcion desactivarà JavaScript per l'onglet corrent. Aqueste paramètre serà oblidat a la tampadura de l'onglet o de la bóstia d'aisinas.
 
 # The label for checkbox that toggles chrome debugging, i.e. the devtools.chrome.enabled preference
 options-enable-chrome-label = Activar lo desbogatge del chrome del navegador e dels moduls
@@ -122,6 +123,11 @@ options-enable-chrome-tooltip =
 options-enable-remote-label = Activar lo desbugatge distant
 options-enable-remote-tooltip2 =
     .title = L’activacion d’aquesta opcion permetrà de desbogar aquesta instància del navegador a distància
+
+# The label for checkbox that toggles custom formatters for objects
+options-enable-custom-formatters-label = Activar los formators personalizats
+options-enable-custom-formatters-tooltip =
+    .title = Activar aquesta opcion permet als sites de definir de formatadors personalizats pels objèctes DOM.
 
 # The label for checkbox that toggles the service workers testing over HTTP on or off.
 options-enable-service-workers-http-label = Activar los trabalhdors de servici via HTTP (quand la bóstia d'aisinas es dobèrta)
@@ -135,9 +141,3 @@ options-source-maps-tooltip =
 
 # The message shown for settings that trigger page reload
 options-context-triggers-page-refresh = * Per aquesta session, recarga la pagina
-
-# The label for the checkbox that toggles the display of the platform data in the
-# Profiler i.e. devtools.profiler.ui.show-platform-data a boolean preference in about:config
-options-show-platform-data-label = Afichar las donadas de la plataforma Gecko
-options-show-platform-data-tooltip =
-    .title = S’activatz aquesta opcion, los rapòrts del perfilaire JavaScript incluràn los simbòls de la plataforma Gecko

@@ -2,17 +2,15 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-clear-site-data-window =
+clear-site-data-window2 =
     .title = Vymazat data
-    .style = width: 35em
+    .style = min-width: 35em
 
 clear-site-data-description =
-    Po vymazání všech cookies a dat stránek uložených { -brand-short-name.gender ->
-        [masculine] ve { -brand-short-name(case: "loc") }
-        [feminine] v { -brand-short-name(case: "loc") }
-        [neuter] v { -brand-short-name(case: "loc") }
-       *[other] v aplikaci { -brand-short-name }
-    } může dojít k vašemu odhlášení z webových stránek a odstranění offline uloženého webového obsahu. Vymazání mezipaměti vaše přihlášení neovlivní.
+    { -brand-short-name.case-status ->
+        [with-cases] Po vymazání všech cookies a dat stránek uložených ve { -brand-short-name(case: "loc") } může dojít k vašemu odhlášení z webových stránek a odstranění offline uloženého webového obsahu. Vymazání mezipaměti vaše přihlášení neovlivní.
+       *[no-cases] Po vymazání všech cookies a dat stránek uložených v aplikaci { -brand-short-name } může dojít k vašemu odhlášení z webových stránek a odstranění offline uloženého webového obsahu. Vymazání mezipaměti vaše přihlášení neovlivní.
+    }
 
 clear-site-data-close-key =
     .key = w
@@ -56,14 +54,6 @@ clear-site-data-cache-empty =
     .accesskey = w
 
 clear-site-data-cache-info = Po vymazání bude potřeba znovu načíst obrázky a data z webových stránek
-
-clear-site-data-cancel =
-    .label = Zrušit
-    .accesskey = Z
-
-clear-site-data-clear =
-    .label = Vymazat
-    .accesskey = V
 
 clear-site-data-dialog =
     .buttonlabelaccept = Vymazat

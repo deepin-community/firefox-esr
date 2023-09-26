@@ -7,7 +7,6 @@
 
 cfr-doorhanger-extension-heading = Leudachan a mholamaid
 cfr-doorhanger-feature-heading = Gleus a mholamaid
-cfr-doorhanger-pintab-heading = Feuch seo: Prìnich an taba
 
 ##
 
@@ -19,8 +18,6 @@ cfr-doorhanger-extension-cancel-button = Chan ann an-dràsta
 
 cfr-doorhanger-extension-ok-button = Cuir ris an-dràsta
     .accesskey = C
-cfr-doorhanger-pintab-ok-button = Prìnich an taba seo
-    .accesskey = P
 
 cfr-doorhanger-extension-manage-settings-button = Stiùirich roghainnean nam molaidhean
     .accesskey = m
@@ -72,18 +69,6 @@ cfr-doorhanger-extension-total-users =
        *[other] { $total } cleachdaiche
     }
 
-cfr-doorhanger-pintab-description = Faigh cothrom luath air na làraichean a chleachdas tu gu tric. Cùm làraichean fosgailte ’nan tabaichean (fiù ma nì thu ath-thòiseachadh).
-
-## These messages are steps on how to use the feature and are shown together.
-
-cfr-doorhanger-pintab-step1 = <b>Dèan briogadh deas</b> air an taba a tha thu airson prìneachadh.
-cfr-doorhanger-pintab-step2 = Tagh <b>Prìnich an taba</b> on chlàr-taice.
-cfr-doorhanger-pintab-step3 = Ma thig ùrachadh air an làrach, chì thu dotag ghorm air an taba phrìnichte agad.
-
-cfr-doorhanger-pintab-animation-pause = Cuir ’na stad
-cfr-doorhanger-pintab-animation-resume = Lean air
-
-
 ## Firefox Accounts Message
 
 cfr-doorhanger-bookmark-fxa-header = Sioncronaich na comharran-lìn agad àite sam bith.
@@ -109,139 +94,9 @@ cfr-whatsnew-button =
     .label = Na tha ùr
     .tooltiptext = Na tha ùr
 
-cfr-whatsnew-panel-header = Na tha ùr
-
 cfr-whatsnew-release-notes-link-text = Leugh na nòtaichean sgaoilidh
 
-cfr-whatsnew-fx70-title = Tha { -brand-short-name } a’ strì nas cruaidhe airson do phrìobhaideachd a-nis
-cfr-whatsnew-fx70-body =
-    Tha an t-ùrachadh seo a’ cur spionnadh sa ghleus a dhìonas o thracadh thu agus
-    nì e fiù nas fhasa e faclan-faire tèarainte a chruthachadh airson gach làrach.
-
-cfr-whatsnew-tracking-protect-title = Dìon thu fhèin o thracaichean
-cfr-whatsnew-tracking-protect-body =
-    Bacaidh { -brand-short-name } mòran dhe na tracaichean cumanta a leanas riut
-    air feadh làraichean agus nam meadhanan sòisealta.
-cfr-whatsnew-tracking-protect-link-text = Seall an aithisg agad
-
-# This string is displayed before a large numeral that indicates the total
-# number of tracking elements blocked. Don’t add $blockedCount to your
-# localization, because it would result in the number showing twice.
-cfr-whatsnew-tracking-blocked-title =
-    { $blockedCount ->
-        [one] tracaiche air a bhacadh
-        [two] thracaiche air a bhacadh
-        [few] tracaichean air am bacadh
-       *[other] tracaiche air am bacadh
-    }
-cfr-whatsnew-tracking-blocked-subtitle = A-mach o { DATETIME($earliestDate, month: "long", year: "numeric") }
-cfr-whatsnew-tracking-blocked-link-text = Seall an aithisg
-
-cfr-whatsnew-lockwise-backup-title = Dèan lethbhreac-glèidhidh dhe na faclan-faire agad
-cfr-whatsnew-lockwise-backup-body = Gin faclan-faire tèarainte a-nis as urrainn dhut cleachdadh àite sam bith far an clàraich thu a-steach.
-cfr-whatsnew-lockwise-backup-link-text = Cuir na lethbhreacan-glèidhidh air
-
-cfr-whatsnew-lockwise-take-title = Thoir leat na faclan-faire agad
-cfr-whatsnew-lockwise-take-body =
-    Bheir an aplacaid mobile { -lockwise-brand-short-name } cothrom tèarainte dhut
-    air na faclan-faire a rinn thu lethbhreac-glèidhidh dhiubh ge be càit am bi thu.
-cfr-whatsnew-lockwise-take-link-text = Faigh an aplacaid
-
-## Search Bar
-
-cfr-whatsnew-searchbar-title = Faigh lorg air rudan nas luaithe le nas lugha de sgrìobhadh le bàr an t-seolaidh
-cfr-whatsnew-searchbar-body-topsites = Nise, cha leig thu leas ach bàr an t-seòlaidh a thaghadh agus nochdaidh bogsa le ceanglaichean ri brod nan làrach agad.
-
-## Search bar
-
-cfr-whatsnew-searchbar-icon-alt-text = Ìomhaigheag na glainne-mheudachaidh
-
-## Picture-in-Picture
-
-cfr-whatsnew-pip-header = Coimhead air videothan fhad ’s a nì thu brabhsadh
-cfr-whatsnew-pip-body = Cuiridh an gleus “Dealbh am broinn deilbh” videothan ann an uinneag air fleod ach an urrainn dhut coimhead air fhad ’s a nì thu obair sna tabaichean eile.
-cfr-whatsnew-pip-cta = Barrachd fiosrachaidh
-
-## Permission Prompt
-
-cfr-whatsnew-permission-prompt-header = Nas lugha de phriob-uinneagan a bhriseas a-steach ort air làraichean
-cfr-whatsnew-permission-prompt-body = Cumaidh { -brand-shorter-name } làraichean o bhith a’ cur teachdaireachdan fèin-obrachail ann am priob-uinneagan thugad a-nis.
-cfr-whatsnew-permission-prompt-cta = Barrachd fiosrachaidh
-
-## Fingerprinter Counter
-
-# This string is displayed before a large numeral that indicates the total
-# number of tracking elements blocked. Don’t add $fingerprinterCount to your
-# localization, because it would result in the number showing twice.
-cfr-whatsnew-fingerprinter-counter-header =
-    { $fingerprinterCount ->
-        [one] lorgaiche-meur air a bhacadh
-        [two] lorgaiche-meur air a bhacadh
-        [few] lorgaichean-meur air am bacadh
-       *[other] lorgaiche-meur air am bacadh
-    }
-cfr-whatsnew-fingerprinter-counter-body = Bacaidh { -brand-shorter-name } iomadh lorgaiche-meur a chruinnicheas fiosrachadh os ìseal mun uidheam agad is mu na nì thu airson pròifil sanasachd a chruthachadh dhìot.
-
-# Message variation when fingerprinters count is less than 10
-cfr-whatsnew-fingerprinter-counter-header-alt = Lorgaichean-meur
-cfr-whatsnew-fingerprinter-counter-body-alt = ’S urrainn dha { -brand-shorter-name } iomadh lorgaiche-meur a bhacadh a chruinnicheas fiosrachadh os ìseal mun uidheam agad is mu na nì thu airson pròifil sanasachd a chruthachadh dhìot.
-
-## Bookmark Sync
-
-cfr-doorhanger-sync-bookmarks-header = Faigh an comharra-lìn seo air an fhòn agad
-cfr-doorhanger-sync-bookmarks-body = Thoir leat na comharran-lìn, faclan-faire, an eachdraidh ’s mòran a bharrachd àite sam bith far an do chlàraich thu a-steach gu { -brand-product-name }.
-cfr-doorhanger-sync-bookmarks-ok-button = Cuir { -sync-brand-short-name } air
-    .accesskey = C
-
-## Login Sync
-
-cfr-doorhanger-sync-logins-header = Na caill facal-faire a-rithist gu bràth
-cfr-doorhanger-sync-logins-body = Cùm is sioncronaich na faclan-faire agad gu tèarainte eadar na h-uidheaman agad.
-cfr-doorhanger-sync-logins-ok-button = Cuir { -sync-brand-short-name } air
-    .accesskey = C
-
-## Send Tab
-
-cfr-doorhanger-send-tab-header = Leugh seo air an rathad
-cfr-doorhanger-send-tab-recipe-header = Thoir leat an reasabaidh seo dhan chidsin
-cfr-doorhanger-send-tab-body = Bheir gleus cur nan tabaichean comas dhut an ceangal seo a chur gun fhòn agad no àite sam bith far an do chlàraich thu a-steach gu { -brand-product-name }.
-cfr-doorhanger-send-tab-ok-button = Feuch gleus cur nan taba
-    .accesskey = F
-
-## Firefox Send
-
-cfr-doorhanger-firefox-send-header = Co-roinn am PDF seo gu tèarainte
-cfr-doorhanger-firefox-send-body = Cùm na sgrìobhainnean dìomhair agad sàbhailte o shùilean sireach le crioptachadh finn-fuainneach agus ceangal a thèid air falbh nuair a bhios tu deiseil leis.
-cfr-doorhanger-firefox-send-ok-button = Feuch { -send-brand-name }
-    .accesskey = F
-
-## Social Tracking Protection
-
-cfr-doorhanger-socialtracking-ok-button = Seall an dìon
-    .accesskey = S
-cfr-doorhanger-socialtracking-close-button = Dùin
-    .accesskey = D
-cfr-doorhanger-socialtracking-dont-show-again = Na seall dhomh teachdaireachdan mar seo a-rithist
-    .accesskey = N
-cfr-doorhanger-socialtracking-heading = Chùm { -brand-short-name } lìonra sòisealta o bhith ’gad thracadh an-seo
-cfr-doorhanger-socialtracking-description = Tha do phrìobhaideachd cudromach. Bacaidh { -brand-short-name } tracaichean cumanta nam meadhanan sòisealta a-nis, a’ cuingeachadh an dàta as urrainn dhaibh cruinneachadh mu na nì thu air loidhne.
-cfr-doorhanger-fingerprinters-heading = Bhac { -brand-short-name } lorgaiche-meur air an duilleag seo
-cfr-doorhanger-fingerprinters-description = Tha do phrìobhaideachd cudromach. Bacaidh { -brand-short-name } lorgaichean-meur a-nis, gleusan a chruinneachas pìosan de dhàta àraidh air an aithnichear an t-uidheam agad gus do thracadh.
-cfr-doorhanger-cryptominers-heading = Bhac { -brand-short-name } criopto-mhèinneadair air an duilleag seo
-cfr-doorhanger-cryptominers-description = Tha do phrìobhaideachd cudromach. Bacaidh { -brand-short-name } criopto-mhèinneadairean a-nis, gleusan a chleachdas cumhachd a’ choimpiutair agad airson airgead digiteach a mhèinnearachd.
-
 ## Enhanced Tracking Protection Milestones
-
-# Variables:
-#   $blockedCount (Number) - The total count of blocked trackers. This number will always be greater than 1.
-#   $date (String) - The date we began recording the count of blocked trackers
-cfr-doorhanger-milestone-heading =
-    { $blockedCount ->
-        [one] Bhac { -brand-short-name } barrachd air  <b>{ $blockedCount }</b> tracaiche o { $date }!
-        [two] Bhac { -brand-short-name } barrachd air  <b>{ $blockedCount }</b> thracaiche o { $date }!
-        [few] Bhac { -brand-short-name } barrachd air  <b>{ $blockedCount }</b> tracaichean o { $date }!
-       *[other] Bhac { -brand-short-name } barrachd air  <b>{ $blockedCount }</b> tracaiche o { $date }!
-    }
 
 # Variables:
 #   $blockedCount (Number) - The total count of blocked trackers. This number will always be greater than 1.
@@ -255,45 +110,8 @@ cfr-doorhanger-milestone-heading2 =
     }
 cfr-doorhanger-milestone-ok-button = Seall na h-uile
     .accesskey = S
-
-## What’s New Panel Content for Firefox 76
-
-
-## Lockwise message
-
-cfr-whatsnew-lockwise-header = Cruthaich faclan-faire tèarainte gun duilgheadas
-cfr-whatsnew-lockwise-body = Tha e doirbh smaoineachadh air faclan-faire fa leth ’s tèarainte do gach cunntas. Nuair a chruthaicheas tu facal-faire, tagh raon an fhacail-fhaire airson facal-faire tèarainte a chleachdadh a ghineas { -brand-shorter-name } dhut.
-cfr-whatsnew-lockwise-icon-alt = Ìomhaigheag { -lockwise-brand-short-name }
-
-## Vulnerable Passwords message
-
-cfr-whatsnew-passwords-header = Faigh caismeachdan mu fhaclan-faire so-leònta
-cfr-whatsnew-passwords-body = Tha fios aig na hackers gun cleachd daoine an aon fhacal-faire a-rithist. Ma chleachd thu an aon fhacal-faire air iomadh làrach agus ma chaidh dàta tè dhe na làraichean sin a leigeil air èalaidh, chì thu caismeachd am broinn { -lockwise-brand-short-name } ach an atharraich thu am facal-faire agad air na làraichean ud.
-cfr-whatsnew-passwords-icon-alt = Ìomhaigheag iuchrach an fhacail-fhaire sho-leònta
-
-## Picture-in-Picture fullscreen message
-
-cfr-whatsnew-pip-fullscreen-header = Cuir dealbh am broinn deilbh air an làn-sgrìn
-cfr-whatsnew-pip-fullscreen-body = Nuair a chuireas tu video gu uinneag air fleòd, ’s urrainn dhut briogadh dùbailte a dhèanamh air an uinneag sin a-nis ach an dèid i ’na làn-sgrìn.
-cfr-whatsnew-pip-fullscreen-icon-alt = Ìomhaigheag dealbh am broinn deilbh
-
-## Protections Dashboard message
-
-cfr-whatsnew-protections-header = Dìonan ann am priobadh na sùla
-cfr-whatsnew-protections-body = Gheibh thu aithrisean geàrr-chunntais mu dhàta a chaidh a leigeil air èalaidh agus stiùireadh nam faclan-faire air deas-bhòrd an dìona a-nis. ’S urrainn dhut tracadh co mheud briseadh a-steach a dh’fhuasgail thu agus chì thu ma chaidh gin dhe na faclan-faire a shàbhail thu fhoillseachadh ann am briseadh dàta.
-cfr-whatsnew-protections-cta-link = Seall deas-bhòrd an dìona
-cfr-whatsnew-protections-icon-alt = Ìomhaigheag sgèithe
-
-## Better PDF message
-
-cfr-whatsnew-better-pdf-header = Gleusan PDF nas fheàrr
-cfr-whatsnew-better-pdf-body = Thèid sgrìobhainnean PDF fhosgladh am broinn { -brand-short-name } fhèin a-nis airson an sruth-obrach agad a chumail deas ri do làmh.
-
 cfr-doorhanger-milestone-close-button = Dùin
     .accesskey = D
-
-## What’s New Panel Content for Firefox 76
-## Protections Dashboard message
 
 ## DOH Message
 
@@ -306,28 +124,141 @@ cfr-doorhanger-doh-secondary-button = Cuir à comas
 
 ## Fission Experiment Message
 
-cfr-doorhanger-fission-body-approved = Tha do phrìobhaideachd cudromach. Cumaidh { -brand-short-name } làraichean-lìn fa leth o chàch a chèile a-nis (’s e seo ann am bogsaichean-gainmhich) a nì e nas dorra do hackers faclan-faire, àireamhan cairte-creideis agus fiosrachadh dìomhair eile a ghoid.
-cfr-doorhanger-fission-header = Cumail làraichean fa leth
-cfr-doorhanger-fission-primary-button = Ceart, tha mi agaibh
-    .accesskey = e
-cfr-doorhanger-fission-secondary-button = Barrachd fiosrachaidh
-    .accesskey = B
-
-## What's new: Cookies message
-
-## What's new: Media controls message
-
-## What's new: Search shortcuts
-
-## What's new: Cookies protection
-
-## What's new: Better bookmarking
-
-## What's new: Cross-site cookie tracking
-
 ## Full Video Support CFR message
 
 cfr-doorhanger-video-support-body = Dh’fhaoidte nach dèid na videothan air an làrach seo a chluich mar bu chòir leis an tionndadh seo dhe { -brand-short-name }. Airson làn-taic ri videothan, ùraich { -brand-short-name } an-dràsta.
 cfr-doorhanger-video-support-header = Ùraich { -brand-short-name } airson a’ video a chluich
 cfr-doorhanger-video-support-primary-button = Ùraich an-dràsta
     .accesskey = r
+
+## Spotlight modal shared strings
+
+## VPN promotion dialog for public Wi-Fi users
+##
+## If a user is detected to be on a public Wi-Fi network, they are given a
+## bit of info about how to improve their privacy and then offered a button
+## to the Mozilla VPN page and a link to dismiss the dialog.
+
+# This header text can be explicitly wrapped.
+spotlight-public-wifi-vpn-header = Tha coltas gu bheil thu air WiFi poblach
+spotlight-public-wifi-vpn-body = Airson d’ ionad is am brabhsadh a nì thu a chumail falaichte, saoil am b’ fheàirrde dhut Virtual Private Network? Cumaidh e tèarainte thu ’s tu ri brabhsadh ann an àitichean poblach mar puirt-adhair is cafaidhean.
+spotlight-public-wifi-vpn-primary-button = Dìon do phrìobhaideachd le { -mozilla-vpn-brand-name }
+    .accesskey = D
+spotlight-public-wifi-vpn-link = Chan ann an-dràsta
+    .accesskey = C
+
+## Total Cookie Protection Rollout
+
+## Emotive Continuous Onboarding
+
+spotlight-better-internet-header = Is tusa ceann-toisich eadar-lìn nas fheàrr
+spotlight-better-internet-body = Le bhith a’ cleachdadh { -brand-short-name }, tha thu a’ cur taic ri eadar-lìon fosgailte agus so-ruigsinneach a tha nas fheàrr dhan a h-uile duine.
+spotlight-peace-mind-header = Tha sinn ri do thaobh
+spotlight-peace-mind-body = Bacaidh { -brand-short-name } mu thuaiream 3,000 tracaiche gach mìos. Oir cha bu chòir cas-bhacaidh a bhith eadar thusa agus deagh eadar-lìon.
+spotlight-pin-primary-button =
+    { PLATFORM() ->
+        [macos] Cùm san doca
+       *[other] Prìnich ri bàr nan saothair
+    }
+spotlight-pin-secondary-button = Chan ann an-dràsta
+
+## MR2022 Background Update Windows native toast notification strings.
+##
+## These strings will be displayed by the Windows operating system in
+## a native toast, like:
+##
+## <b>multi-line title</b>
+## multi-line text
+## <img>
+## [ primary button ] [ secondary button ]
+##
+## The button labels are fitted into narrow fixed-width buttons by
+## Windows and therefore must be as narrow as possible.
+
+mr2022-background-update-toast-title = { -brand-short-name } ùr. Nas prìobhaidiche. Na lugha de thracaichean. Gun mhura-bhith.
+mr2022-background-update-toast-text = Feuch am { -brand-short-name } as ùire, le dìon o thracadh a tha nas treasa na bha e a-riamh roimhe.
+
+# This button label will be fitted into a narrow fixed-width button by
+# Windows. Try to not exceed the width of the English text (compare it
+# using a variable font like Arial): the button can only fit 1-2
+# additional characters, exceeding characters will be truncated.
+mr2022-background-update-toast-primary-button-label = Fosgail { -brand-shorter-name } an-dràsta
+
+# This button label will be fitted into a narrow fixed-width button by
+# Windows. Try to not exceed the width of the English text (compare it using a
+# variable font like Arial): the button can only fit 1-2 additional characters,
+# exceeding characters will be truncated.
+mr2022-background-update-toast-secondary-button-label = Cuir nam chuimhne an ceann tamaill
+
+## Firefox View CFR
+
+firefoxview-cfr-primarybutton = Feuch e
+    .accesskey = F
+firefoxview-cfr-secondarybutton = Chan ann an-dràsta
+    .accesskey = C
+firefoxview-cfr-header-v2 = Lean ort far an do stad thu roimhe gun dàil
+firefoxview-cfr-body-v2 = Faigh greim a-rithist air tabaichean a dhùin thu o chionn goirid is leum eadar uidheaman gun chnap-starra le { -firefoxview-brand-name }.
+
+## Firefox View Spotlight
+
+firefoxview-spotlight-promo-title = Cuir fàilte air { -firefoxview-brand-name }
+
+# “Poof” refers to the expression to convey when something or someone suddenly disappears, or in this case, reappears. For example, “Poof, it’s gone.”
+firefoxview-spotlight-promo-subtitle = Ag iarradh an taba ud a tha fosgailte air an fhòn agad? Faigh greim air. An làrach air an do thadhail thu an-dràsta fhèin a dhìth ort? Fruis, seo dhut e le { -firefoxview-brand-name }.
+firefoxview-spotlight-promo-primarybutton = Seo mar a dh’obraicheas e
+firefoxview-spotlight-promo-secondarybutton = Leum seachad
+
+## Colorways expiry reminder CFR
+
+colorways-cfr-primarybutton = Tagh sgeama dhathan
+    .accesskey = T
+
+# "shades" refers to the different color options available to users in colorways.
+colorways-cfr-body = Cuir dathan air a’ bhrabhsair agad le tuaran dhathan nach fhaigh thu ach ann am { -brand-short-name } stèidhichte air guthan aig an robh buaidh mhòr air cultar.
+colorways-cfr-header-28days = Falbhaidh an ùine air sgeamannan dhathan nan guthan neo-eisimeileach 16 dhen Fhaoilleach
+colorways-cfr-header-14days = Falbhaidh an ùine air sgeamannan dhathan nan guthan neo-eisimeileach ann an cola-deug
+colorways-cfr-header-7days = Falbhaidh an ùine air sgeamannan dhathan nan guthan neo-eisimeileach an t-seachdain-sa
+colorways-cfr-header-today = Falbhaidh an ùine air sgeamannan dhathan nan guthan neo-eisimeileach an-diugh
+
+## Cookie Banner Handling CFR
+
+cfr-cbh-header = A bheil thu airson cead a thoirt dha { -brand-short-name } brataichean bhriosgaidean a dhiùltadh?
+cfr-cbh-body = ’S urrainn dha { -brand-short-name } iomadh iarrtas airson briosgaidean a dhiùltadh gu fèin-obrachail.
+cfr-cbh-confirm-button = Diùlt brataichean bhriosgaidean
+    .accesskey = D
+cfr-cbh-dismiss-button = Chan ann an-dràsta
+    .accesskey = C
+
+## These strings are used in the Fox doodle Pin/set default spotlights
+
+july-jam-headline = Tha sinn ri do thaobh
+july-jam-body = Bacaidh { -brand-short-name } mu thuaireamh 3,000 tracaiche gach mìos do gach cleachdaiche agus bheir sinn dhut inntrigeadh sàbhailte ’s luath dhan eadar-lìon.
+july-jam-set-default-primary = Fosgail na ceanglaichean agam le { -brand-short-name }
+fox-doodle-pin-headline = Fàilte air ais
+
+# “indie” is short for the term “independent”.
+# In this instance, free from outside influence or control.
+fox-doodle-pin-body = Seo dhut cuimhneachan beag gu bheil am brabhsair neo-eisimeileach as fheàrr leat dìreach briogadh air falbh.
+fox-doodle-pin-primary = Fosgail na ceanglaichean agam le { -brand-short-name }
+fox-doodle-pin-secondary = Chan ann an-dràsta
+
+## These strings are used in the Set Firefox as Default PDF Handler for Existing Users experiment
+
+set-default-pdf-handler-headline = <strong>Thèid na PDFaichean agad fhosgladh ann am { -brand-short-name } a-nis.</strong> Deasaich no soidhnich foirmean sa bhrabhsair fhèin. Airson seo atharrachadh, lorg “PDF” sna roghainnean.
+set-default-pdf-handler-primary = Tha mi agaibh
+
+## FxA sync CFR
+
+fxa-sync-cfr-header = Uidheam ùr gu bhith agad?
+fxa-sync-cfr-body = Dèan cinnteach gun tig na comharran-lìn, faclan-faire is tabaichean cò riut uair sam bith a dh’fhosglas tu brabhsair { -brand-product-name } ùr.
+fxa-sync-cfr-primary = Barrachd fiosrachaidh
+    .accesskey = B
+fxa-sync-cfr-secondary = Cuir nam chuimhne an ceann greis
+    .accesskey = u
+
+## Device Migration FxA Spotlight
+
+device-migration-fxa-spotlight-header = A bheil uidheam nas sine agad?
+device-migration-fxa-spotlight-body = Dèan lethbhreacan-glèidhidh dhen dàta agad a dhèanamh cinnteach nach caill thu fiosrachadh cudromach mar chomharran-lìn is faclan-faire – gu sònraichte nuair a ghluaiseas tu gu uidheam ùr.
+device-migration-fxa-spotlight-primary-button = Ciamar a nì mi lethbhreac-glèidhidh dhen dàta agam
+device-migration-fxa-spotlight-link = Cuir nam chuimhne an ceann greis

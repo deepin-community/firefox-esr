@@ -31,9 +31,6 @@ toolbar-context-menu-remove-extension =
 toolbar-context-menu-pin-to-overflow-menu =
     .label = Pieslēgt izvēlnei
     .accesskey = P
-toolbar-context-menu-auto-hide-downloads-button =
-    .label = Automātiski paslēpt rīkjoslu
-    .accesskey = A
 toolbar-context-menu-remove-from-toolbar =
     .label = Aizvākt no rīkjoslas
     .accesskey = r
@@ -41,3 +38,6 @@ toolbar-context-menu-view-customize-toolbar =
     .label = Pielāgot…
     .accesskey = P
 
+toolbar-context-menu-menu-bar-cmd =
+    .toolbarname = Izvēlne
+    .accesskey = I

@@ -38,16 +38,11 @@ menu-quit =
             [windows] S
            *[other] S
         }
+
 # This menu-quit-mac string is only used on macOS.
 menu-quit-mac =
     .label = Encerrar { -brand-shorter-name }
-# This menu-quit-button string is only used on Linux.
-menu-quit-button =
-    .label = { menu-quit.label }
-# This menu-quit-button-win string is only used on Windows.
-menu-quit-button-win =
-    .label = { menu-quit.label }
-    .tooltip = Sair do { -brand-shorter-name }
+
 menu-about =
     .label = Sobre o { -brand-shorter-name }
     .accesskey = S
@@ -77,8 +72,14 @@ menu-file-open-location =
 menu-file-open-file =
     .label = Abrir arquivo…
     .accesskey = A
-menu-file-close =
-    .label = Fechar
+# Variables:
+#  $tabCount (Number): the number of tabs that are affected by the action.
+menu-file-close-tab =
+    .label =
+        { $tabCount ->
+            [1] Fechar aba
+           *[other] Fechar { $tabCount } abas
+        }
     .accesskey = F
 menu-file-close-window =
     .label = Fechar janela
@@ -95,9 +96,6 @@ menu-file-share-url =
 menu-file-print-setup =
     .label = Configurar página…
     .accesskey = C
-menu-file-print-preview =
-    .label = Visualizar impressão
-    .accesskey = z
 menu-file-print =
     .label = Imprimir…
     .accesskey = I
@@ -113,9 +111,6 @@ menu-file-go-offline =
 menu-edit =
     .label = Editar
     .accesskey = E
-menu-edit-find-on =
-    .label = Procurar nesta página…
-    .accesskey = n
 menu-edit-find-in-page =
     .label = Procurar na página…
     .accesskey = P
@@ -134,9 +129,6 @@ menu-view =
 menu-view-toolbars-menu =
     .label = Barras de ferramentas
     .accesskey = B
-menu-view-customize-toolbar =
-    .label = Personalizar…
-    .accesskey = P
 menu-view-customize-toolbar2 =
     .label = Personalizar barra de ferramentas…
     .accesskey = P
@@ -171,11 +163,8 @@ menu-view-page-style-no-style =
     .label = Sem estilo
     .accesskey = m
 menu-view-page-basic-style =
-    .label = Estilo de página básico
+    .label = Estilo básico de página
     .accesskey = b
-menu-view-charset =
-    .label = Codificação de texto
-    .accesskey = c
 menu-view-repair-text-encoding =
     .label = Reparar codificação de texto
     .accesskey = c
@@ -192,6 +181,17 @@ menu-view-exit-full-screen =
 menu-view-full-screen =
     .label = Tela inteira
     .accesskey = T
+
+## These menu items may use the same accesskey.
+
+# This should match reader-view-enter-button in browser.ftl
+menu-view-enter-readerview =
+    .label = Ativar leitor
+    .accesskey = l
+# This should match reader-view-close-button in browser.ftl
+menu-view-close-readerview =
+    .label = Desativar leitor
+    .accesskey = l
 
 ##
 
@@ -221,24 +221,21 @@ menu-history-undo-menu =
     .label = Abas fechadas recentemente
 menu-history-undo-window-menu =
     .label = Janelas fechadas recentemente
-menu-history-reopen-all-tabs = Reabrir todas as abas
-menu-history-reopen-all-windows = Reabrir todas as janelas
 
 ## Bookmarks Menu
 
 menu-bookmarks-menu =
     .label = Favoritos
     .accesskey = v
-menu-bookmarks-show-all =
-    .label = Mostrar todos os favoritos
-menu-bookmark-this-page =
-    .label = Adicionar página aos favoritos
 menu-bookmarks-manage =
     .label = Gerenciar favoritos
-menu-bookmark-current-tab =
-    .label = Adicionar aba atual aos favoritos
-menu-bookmark-edit =
-    .label = Editar este favorito
+menu-bookmark-tab =
+    .label = Adicionar aba atual aos favoritos…
+menu-edit-bookmark =
+    .label = Editar este favorito…
+# "Search" is a verb, as in "Search in bookmarks"
+menu-bookmarks-search =
+    .label = Pesquisar nos favoritos
 menu-bookmarks-all-tabs =
     .label = Adicionar todas as abas…
 menu-bookmarks-toolbar =
@@ -256,15 +253,6 @@ menu-tools =
 menu-tools-downloads =
     .label = Downloads
     .accesskey = D
-menu-tools-addons =
-    .label = Extensões
-    .accesskey = E
-menu-tools-fxa-sign-in =
-    .label = Entrar no { -brand-product-name }…
-    .accesskey = E
-menu-tools-turn-on-sync =
-    .label = Ativar o { -sync-brand-short-name }…
-    .accesskey = A
 menu-tools-addons-and-themes =
     .label = Extensões e temas
     .accesskey = E
@@ -272,7 +260,7 @@ menu-tools-fxa-sign-in2 =
     .label = Entrar
     .accesskey = E
 menu-tools-turn-on-sync2 =
-    .label = Ativar o Sync…
+    .label = Ativar sincronização…
     .accesskey = n
 menu-tools-sync-now =
     .label = Sincronizar agora
@@ -280,9 +268,6 @@ menu-tools-sync-now =
 menu-tools-fxa-re-auth =
     .label = Reconectar ao { -brand-product-name }…
     .accesskey = R
-menu-tools-web-developer =
-    .label = Desenvolvimento web
-    .accesskey = w
 menu-tools-browser-tools =
     .label = Ferramentas do navegador
     .accesskey = F
@@ -295,17 +280,6 @@ menu-tools-page-source =
 menu-tools-page-info =
     .label = Informações da página
     .accesskey = I
-menu-preferences =
-    .label =
-        { PLATFORM() ->
-            [windows] Opções
-           *[other] Preferências
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] O
-           *[other] P
-        }
 menu-settings =
     .label = Configurações
     .accesskey =
@@ -338,44 +312,26 @@ menu-window-bring-all-to-front =
 menu-help =
     .label = Ajuda
     .accesskey = u
-menu-help-product =
-    .label = Ajuda do { -brand-shorter-name }
-    .accesskey = u
-menu-help-show-tour =
-    .label = Tutorial do { -brand-shorter-name }
-    .accesskey = o
-menu-help-import-from-another-browser =
-    .label = Importar de outro navegador…
-    .accesskey = I
-menu-help-keyboard-shortcuts =
-    .label = Atalhos de teclado
-    .accesskey = h
-menu-help-troubleshooting-info =
-    .label = Informações para resolver problemas
-    .accesskey = I
 menu-get-help =
     .label = Obter ajuda
     .accesskey = a
 menu-help-more-troubleshooting-info =
-    .label = Mais informações técnicas
-    .accesskey = i
+    .label = Informações técnicas
+    .accesskey = I
 menu-help-report-site-issue =
     .label = Relatar problema no site…
-menu-help-feedback-page =
-    .label = Enviar opinião…
-    .accesskey = n
-menu-help-safe-mode-without-addons =
-    .label = Reiniciar com extensões desativadas…
-    .accesskey = R
-menu-help-safe-mode-with-addons =
-    .label = Reiniciar com extensões ativadas
-    .accesskey = R
+menu-help-share-ideas =
+    .label = Compartilhar ideias e comentários…
+    .accesskey = C
 menu-help-enter-troubleshoot-mode2 =
     .label = Modo de solução de problemas…
     .accesskey = M
 menu-help-exit-troubleshoot-mode =
     .label = Desativar modo de solução de problemas
     .accesskey = m
+menu-help-switch-device =
+    .label = Mudança para outro dispositivo
+    .accesskey = M
 # Label of the Help menu item. Either this or
 # menu-help-notdeceptive is shown.
 menu-help-report-deceptive-site =

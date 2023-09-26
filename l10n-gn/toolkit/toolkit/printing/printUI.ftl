@@ -15,6 +15,9 @@ printui-sheets-count =
     }
 
 printui-page-range-all = Opavave
+printui-page-range-current = Ag̃agua
+printui-page-range-odd = Papapyete’ỹ
+printui-page-range-even = Avei
 printui-page-range-custom = Momba’epyre
 printui-page-range-label = Kuatiarogue
 printui-page-range-picker =
@@ -57,8 +60,6 @@ printui-two-sided-printing-short-edge = Ehasa ag̃uiveha rupi
 printui-options = Poravorã
 printui-headers-footers-checkbox = Emongutia myakãha ha kuatiarogue guy gotyo
 printui-backgrounds-checkbox = Tugua ñembokuatia
-
-printui-selection-checkbox = Embokuatia jeporavo
 
 ## The "Format" section, select a version of the website to print. Radio
 ## options to select between the original page, selected text only, or a version

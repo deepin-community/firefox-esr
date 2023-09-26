@@ -41,15 +41,6 @@ menu-quit =
 menu-quit-mac =
     .label = { -brand-shorter-name } থেকে প্রস্থান
 
-# This menu-quit-button string is only used on Linux.
-menu-quit-button =
-    .label = { menu-quit.label }
-
-# This menu-quit-button-win string is only used on Windows.
-menu-quit-button-win =
-    .label = { menu-quit.label }
-    .tooltip = { -brand-shorter-name } থেকে প্রস্থান
-
 menu-about =
     .label = About { -brand-shorter-name }
     .accesskey = A
@@ -60,7 +51,7 @@ menu-file =
     .label = ফাইল
     .accesskey = F
 menu-file-new-tab =
-    .label = নতুন ট্যাব T
+    .label = নতুন ট্যাব
     .accesskey = T
 menu-file-new-container-tab =
     .label = নতুন কন্টেইনার ট্যাব
@@ -79,9 +70,6 @@ menu-file-open-location =
 menu-file-open-file =
     .label = ফাইল খুলুন…
     .accesskey = O
-menu-file-close =
-    .label = বন্ধ
-    .accesskey = C
 menu-file-close-window =
     .label = উইন্ডো বন্ধ
     .accesskey = d
@@ -94,9 +82,6 @@ menu-file-email-link =
 menu-file-print-setup =
     .label = পাতার বিন্যাস…
     .accesskey = u
-menu-file-print-preview =
-    .label = মুদ্রণের প্রাকদর্শন v
-    .accesskey = v
 menu-file-print =
     .label = মুদ্রণ…
     .accesskey = P
@@ -112,9 +97,6 @@ menu-file-go-offline =
 menu-edit =
     .label = সম্পাদনা
     .accesskey = E
-menu-edit-find-on =
-    .label = এই পাতায় অনুসন্ধান…
-    .accesskey = F
 menu-edit-find-again =
     .label = পুনরায় খুঁজুন
     .accesskey = g
@@ -130,9 +112,6 @@ menu-view =
 menu-view-toolbars-menu =
     .label = টুলবার
     .accesskey = T
-menu-view-customize-toolbar =
-    .label = নিজের পছন্দানুযায়ী নির্বাচন…
-    .accesskey = C
 menu-view-sidebar =
     .label = সাইডবার
     .accesskey = e
@@ -166,9 +145,6 @@ menu-view-page-style-no-style =
 menu-view-page-basic-style =
     .label = মৌলিক পাতাশৈলী
     .accesskey = B
-menu-view-charset =
-    .label = টেক্সট এনকোডিং
-    .accesskey = c
 
 ## These should match what Safari and other Apple applications
 ## use on macOS.
@@ -182,6 +158,17 @@ menu-view-exit-full-screen =
 menu-view-full-screen =
     .label = পূর্ণ পর্দাজুড়ে প্রদর্শন
     .accesskey = F
+
+## These menu items may use the same accesskey.
+
+# This should match reader-view-enter-button in browser.ftl
+menu-view-enter-readerview =
+    .label = রিডার ভিউতে প্রবেশ করুন
+    .accesskey = R
+# This should match reader-view-close-button in browser.ftl
+menu-view-close-readerview =
+    .label = রিডার ভিউ বন্ধ করুন
+    .accesskey = R
 
 ##
 
@@ -217,12 +204,6 @@ menu-history-undo-window-menu =
 menu-bookmarks-menu =
     .label = বুকমার্ক
     .accesskey = B
-menu-bookmarks-show-all =
-    .label = সব বুকমার্ক প্রদর্শন
-menu-bookmark-this-page =
-    .label = এই পাতা বুকমার্ক করুন
-menu-bookmark-edit =
-    .label = বুকমার্ক সম্পাদনা
 menu-bookmarks-all-tabs =
     .label = সব ট্যাব বুকমার্ক করা হবে…
 menu-bookmarks-toolbar =
@@ -240,41 +221,21 @@ menu-tools =
 menu-tools-downloads =
     .label = ডাউনলোড
     .accesskey = D
-menu-tools-addons =
-    .label = অ্যাড-অন
+menu-tools-addons-and-themes =
+    .label = অ্যাড-অন ও থিম
     .accesskey = A
-menu-tools-fxa-sign-in =
-    .label = { -brand-product-name } এ সাইন ইন করুন …
-    .accesskey = g
-menu-tools-turn-on-sync =
-    .label = { -sync-brand-short-name } চালু করুন..
-    .accesskey = n
 menu-tools-sync-now =
     .label = এখন সিঙ্ক
     .accesskey = S
 menu-tools-fxa-re-auth =
     .label = { -brand-product-name } এ পুনরায় সংযুক্ত করুন...
     .accesskey = R
-menu-tools-web-developer =
-    .label = ওয়েব ডেভেলপার
-    .accesskey = W
 menu-tools-page-source =
-    .label = পাতার সোর্স
+    .label = পাতার উৎস
     .accesskey = o
 menu-tools-page-info =
     .label = পাতার সংক্রান্ত তথ্য
     .accesskey = I
-menu-preferences =
-    .label =
-        { PLATFORM() ->
-            [windows] অপশন
-           *[other] পছন্দসমূহ
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] O
-           *[other] n
-        }
 menu-tools-layout-debugger =
     .label = লেআইট ডিবাগার
     .accesskey = L
@@ -292,15 +253,6 @@ menu-window-bring-all-to-front =
 # NOTE: For Engineers, any additions or changes to Help menu strings should
 # also be reflected in the related strings in appmenu.ftl. Those strings, by
 # convention, will have the same ID as these, but prefixed with "app".
-# Example: appmenu-help-product
-#
-# These strings are duplicated to allow for different casing depending on
-# where the strings appear.
-
-
-# NOTE: For Engineers, any additions or changes to Help menu strings should
-# also be reflected in the related strings in appmenu.ftl. Those strings, by
-# convention, will have the same ID as these, but prefixed with "app".
 # Example: appmenu-get-help
 #
 # These strings are duplicated to allow for different casing depending on
@@ -309,32 +261,14 @@ menu-window-bring-all-to-front =
 menu-help =
     .label = সহায়তা
     .accesskey = H
-menu-help-product =
-    .label = { -brand-shorter-name } সহায়তা
-    .accesskey = H
-menu-help-show-tour =
-    .label = { -brand-shorter-name } ট্যুর
-    .accesskey = o
-menu-help-import-from-another-browser =
-    .label = অন্য ব্রাউজার থেকে ইম্পোর্ট করুন…
-    .accesskey = I
-menu-help-keyboard-shortcuts =
-    .label = কীবোর্ড শর্টকাট
-    .accesskey = K
-menu-help-troubleshooting-info =
-    .label = সমাধান করার তথ্য
+menu-help-more-troubleshooting-info =
+    .label = সমস্যা সমাধান সংক্রান্ত আরও তথ্য
     .accesskey = T
 menu-help-report-site-issue =
     .label = সাইটের সমস্যা রিপোর্ট করুন…
-menu-help-feedback-page =
-    .label = মন্তব্য প্রদান…
+menu-help-share-ideas =
+    .label = ধারনা ও প্রতিক্রিয়া শেয়ার করুন…
     .accesskey = S
-menu-help-safe-mode-without-addons =
-    .label = নিস্ক্রিয় অ্যাড-অনসহ পুনরায় শুরু…
-    .accesskey = R
-menu-help-safe-mode-with-addons =
-    .label = অ্যাড-অন সক্রিয় করে পুনরায় চালু করুন
-    .accesskey = R
 # Label of the Help menu item. Either this or
 # menu-help-notdeceptive is shown.
 menu-help-report-deceptive-site =

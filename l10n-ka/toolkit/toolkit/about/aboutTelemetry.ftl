@@ -2,13 +2,13 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-about-telemetry-ping-data-source = პინგის მონაცემების წყარო:
+about-telemetry-ping-data-source = კრებულის მონაცემთა წყარო:
 about-telemetry-show-current-data = მიმდინარე მონაცემები
-about-telemetry-show-archived-ping-data = პინგის დაარქივებული მონაცემები
+about-telemetry-show-archived-ping-data = კრებულის მონაცემთა დაარქივება
 about-telemetry-show-subsession-data = ქვესეანსის მონაცემების ჩვენება
-about-telemetry-choose-ping = პინგის არჩევა:
-about-telemetry-archive-ping-type = კავშირის დამოწმების სახეობა
-about-telemetry-archive-ping-header = პინგი
+about-telemetry-choose-ping = კრებულის არჩევა:
+about-telemetry-archive-ping-type = კრებულის სახეობა
+about-telemetry-archive-ping-header = კრებული
 about-telemetry-option-group-today = დღეს
 about-telemetry-option-group-yesterday = გუშინ
 about-telemetry-option-group-older = უფრო ძველი
@@ -24,7 +24,7 @@ about-telemetry-telemetry-probe-dictionary = <a data-l10n-name="probe-dictionary
 about-telemetry-show-in-Firefox-json-viewer = JSON მნახველში გახსნა
 about-telemetry-home-section = მთავარი
 about-telemetry-general-data-section = ზოგადი მონაცემები
-about-telemetry-environment-data-section = გარემოს მონაცემები
+about-telemetry-environment-data-section = გარსის მონაცემები
 about-telemetry-session-info-section = სეანსის მონაცემები
 about-telemetry-scalar-section = სიდიდეები
 about-telemetry-keyed-scalar-section = შიფრიანი სიდიდეები
@@ -34,7 +34,6 @@ about-telemetry-events-section = მოვლენები
 about-telemetry-simple-measurements-section = მარტივი განსაზღვრებები
 about-telemetry-slow-sql-section = ნელი SQL-ბრძანებები
 about-telemetry-addon-details-section = დამატების მონაცემები
-about-telemetry-captured-stacks-section = დაფიქსირებული სტეკები
 about-telemetry-late-writes-section = გვიანი ჩაწერები
 about-telemetry-raw-payload-section = ნედლი დატვირთვა
 about-telemetry-raw = ნედლი JSON
@@ -69,7 +68,7 @@ about-telemetry-histogram-stats =
     }
 # Variables:
 #   $telemetryServerOwner (String): the value of the toolkit.telemetry.server_owner preference. Typically "Mozilla"
-about-telemetry-page-subtitle = ამ გვერდზე ნაჩვენებია გაზომვების მიერ შეგროვებული ინფორმაცია წარმადობის, აპარატურის, პროგრამის გამოყენებისა და შერჩეული პარამეტრების შესახებ, რომელიც იგზავნება { $telemetryServerOwner }-ში, რომ გავაუმჯობესოთ { -brand-full-name }.
+about-telemetry-page-subtitle = ამ გვერდზე ნაჩვენებია გაზომვებით შეგროვებული ინფორმაცია წარმადობის, აპარატურის, პროგრამის გამოყენებისა და შერჩეული პარამეტრების შესახებ, რომელიც იგზავნება { $telemetryServerOwner }-ში, რომ გავაუმჯობესოთ { -brand-full-name }.
 about-telemetry-settings-explanation = გაზომვებით აღირიცხება { about-telemetry-data-type }, რომელთა ატვირთვაც <a data-l10n-name="upload-link">{ about-telemetry-upload-type }</a>.
 # Variables:
 #   $name (String): ping name, e.g. “saved-session”
@@ -122,10 +121,6 @@ about-telemetry-keys-header = მახასიათებელი
 about-telemetry-names-header = სახელი
 about-telemetry-values-header = მნიშვნელობა
 # Variables:
-#   $stackKey (String): the string key for this stack
-#   $capturedStacksCount (Integer):  the number of times this stack was captured
-about-telemetry-captured-stacks-title = { $stackKey } (დაფიქსირების რაოდენობა: { $capturedStacksCount })
-# Variables:
 #   $lateWriteCount (Integer): the number of the late writes
 about-telemetry-late-writes-title = ბოლო ჩანაწერი #{ $lateWriteCount }
 about-telemetry-stack-title = სტეკი:
@@ -136,12 +131,6 @@ about-telemetry-category-header = კატეგორია
 about-telemetry-method-header = მეთოდი
 about-telemetry-object-header = ობიექტი
 about-telemetry-extra-header = დამატებით
-about-telemetry-origin-section = წყაროს გაზომვები
-about-telemetry-origin-origin = წარმომავლობა
-about-telemetry-origin-count = რაოდენობა
-# Variables:
-#   $telemetryServerOwner (String): the value of the toolkit.telemetry.server_owner preference. Typically "Mozilla"
-about-telemetry-origins-explanation = <a data-l10n-name="origin-doc-link">Firefox-ის წყაროს გაზომვები</a> შიფრავს მონაცემებს გადაგზავნამდე, შესაბამისად { $telemetryServerOwner } შეძლებს მათ აღრიცხვას, თუმცა არ ეცოდინება რომელი { -brand-product-name } აწვდის საჭირო მონაცემებს. (<a data-l10n-name="prio-blog-link">ვრცლად</a>)
 # Variables:
 #  $process (String): type of process in subsection headers ( e.g. "content", "parent" )
 about-telemetry-process = { $process } ამოცანა

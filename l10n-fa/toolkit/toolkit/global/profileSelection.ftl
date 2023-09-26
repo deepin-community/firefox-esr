@@ -23,6 +23,8 @@ profile-selection-delete-button =
     .label = حذف مجموعه تنظیمات…
     .accesskey = ح
 
+profile-selection-conflict-message = نسخه دیگر از { -brand-product-name } تغییراتی در نمایه‌ها ایجاد کرد. قبل ایجاد تغییرات بیشتر شما باید { -brand-short-name } را راه‌اندازی مجدد کنید.
+
 ## Messages used in the profile manager
 
 profile-manager-description = { -brand-short-name } تنظیمات، ترجیحات و موارد کاربری دیگر را در مجموعه تنظیمات کاربری شما ذخیره می‌کند.

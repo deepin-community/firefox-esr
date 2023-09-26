@@ -2,12 +2,12 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-connection-window =
+connection-window2 =
     .title = Paramètres de connexion
     .style =
         { PLATFORM() ->
-            [macos] width: 44em
-           *[other] width: 49em
+            [macos] min-width: 44em
+           *[other] min-width: 49em
         }
 
 connection-close-key =
@@ -35,10 +35,6 @@ connection-proxy-http = Proxy HTTP
     .accesskey = H
 connection-proxy-http-port = Port
     .accesskey = p
-connection-proxy-http-sharing =
-    .label = Utiliser également ce proxy pour FTP et HTTPS
-    .accesskey = s
-
 connection-proxy-https-sharing =
     .label = Utiliser également ce proxy pour HTTPS
     .accesskey = s
@@ -47,11 +43,6 @@ connection-proxy-https = Proxy HTTPS
     .accesskey = H
 connection-proxy-ssl-port = Port
     .accesskey = o
-
-connection-proxy-ftp = Proxy FTP
-    .accesskey = F
-connection-proxy-ftp-port = Port
-    .accesskey = r
 
 connection-proxy-socks = Hôte SOCKS
     .accesskey = C
@@ -69,9 +60,6 @@ connection-proxy-noproxy = Pas de proxy pour
 
 connection-proxy-noproxy-desc = Exemples : .mozilla.org, .asso.fr, 192.168.1.0/24
 
-# Do not translate localhost, 127.0.0.1 and ::1.
-connection-proxy-noproxy-localhost-desc = Les connexions à localhost, 127.0.0.1 ou ::1 ne passent jamais par un proxy.
-
 # Do not translate "localhost", "127.0.0.1/8" and "::1". (You can translate "and".)
 connection-proxy-noproxy-localhost-desc-2 = Les connexions à localhost, 127.0.0.1/8 ou ::1 ne passent jamais par un proxy.
 
@@ -88,16 +76,14 @@ connection-proxy-autologin =
     .accesskey = g
     .tooltip = Cette option vous authentifie automatiquement sur les serveurs proxy dont le mot de passe est enregistré. Si l’authentification échoue, le mot de passe vous sera demandé.
 
+connection-proxy-autologin-checkbox =
+    .label = Ne pas me demander de m’authentifier si le mot de passe est enregistré
+    .accesskey = g
+    .tooltiptext = Cette option vous authentifie automatiquement sur les serveurs proxy dont le mot de passe est enregistré. Si l’authentification échoue, le mot de passe vous sera demandé.
+
 connection-proxy-socks-remote-dns =
     .label = Utiliser un DNS distant lorsque SOCKS v5 est actif
     .accesskey = n
-
-connection-dns-over-https =
-    .label = Activer le DNS via HTTPS
-    .accesskey = t
-
-connection-dns-over-https-url-resolver = Utiliser le fournisseur
-    .accesskey = U
 
 # Variables:
 #   $name (String) - Display name or URL for the DNS over HTTPS provider

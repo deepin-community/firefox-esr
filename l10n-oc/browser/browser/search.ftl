@@ -19,3 +19,20 @@ opensearch-error-download-desc = { -brand-short-name } a pas pogut telecargar lo
 
 ##
 
+searchbar-submit =
+    .tooltiptext = Mandar la recèrca
+
+# This string is displayed in the search box when the input field is empty
+searchbar-input =
+    .placeholder = Recercar
+
+searchbar-icon =
+    .tooltiptext = Recercar
+
+## Infobar shown when search engine is removed and replaced.
+## Variables
+## $oldEngine (String) - the search engine to be removed.
+## $newEngine (String) - the search engine to replace the removed search engine.
+
+removed-search-engine-message = <strong>Vòstre motor de recèrca per defaut es estat modificat.</strong> { $oldEngine } es pas mai disponible coma motor de recèrca per defaut dins { -brand-short-name }. D’ara enlà, { $newEngine } lo remplaça. Per cambiar lo motor de recèrca per defaut, anatz als paramètres. <label data-l10n-name="remove-search-engine-article">Ne saber mai</label>
+remove-search-engine-button = D'acòrdi

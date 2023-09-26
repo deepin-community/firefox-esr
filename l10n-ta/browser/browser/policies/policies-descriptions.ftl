@@ -38,8 +38,6 @@ policy-DisableFirefoxAccounts = ஒத்திசைவு உட்பட, { -
 
 policy-DisableFormHistory = தேடல் மற்றும் படிவ வரலாற்றை நினைவில் கொள்ளாதே.
 
-policy-DisableMasterPasswordCreation = உண்மையானால், ஒரு முதன்மை கடவுச்சொல்லை உருவாக்க முடியாது.
-
 policy-DNSOverHTTPS = HTTPS வழியாக DNS ஐ கட்டமைக்கவும்.
 
 policy-DontCheckDefaultBrowser = தொடக்கத்தில் இயல்புநிலை உலாவிக்கான சரிபார்ப்பை முடக்கு.
@@ -51,9 +49,6 @@ policy-InstallAddonsPermission = சில வலைத்தளங்களை 
 ##
 
 policy-Proxy = பதிலி அமைப்புகளை கட்டமைக்க.
-
-# For more information, see https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSS/PKCS11/Module_Installation
-policy-SecurityDevices = PKCS # 11 கூறுகளை நிறுவவும்.
 
 policy-SSLVersionMax = அதிகபட்ச SSL பதிப்பை அமைக்கவும்.
 

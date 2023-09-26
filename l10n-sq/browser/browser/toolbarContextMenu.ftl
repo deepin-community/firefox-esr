@@ -20,15 +20,6 @@ toolbar-context-menu-bookmark-selected-tabs =
 toolbar-context-menu-select-all-tabs =
     .label = Përzgjidhi Krejt Skedat
     .accesskey = P
-toolbar-context-menu-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Zhbëje Mbylljen e Skedës
-            [one] Zhbëje Mbylljen e Skedës
-           *[other] Zhbëje Mbylljen e Skedave
-        }
-    .accesskey = Z
-
 toolbar-context-menu-reopen-closed-tabs =
     .label =
         { $tabCount ->
@@ -52,18 +43,18 @@ toolbar-context-menu-report-extension =
     .label = Raportoje Zgjerimin
     .accesskey = o
 
-# Can appear on the same context menu as menubarCmd ("Menu Bar") and
-# personalbarCmd ("Bookmarks Toolbar"), so they should have different
-# access keys.
+# Can appear on the same context menu as toolbar-context-menu-menu-bar-cmd
+# ("Menu Bar") and personalbarCmd ("Bookmarks Toolbar"), so they should
+# have different access keys.
 toolbar-context-menu-pin-to-overflow-menu =
     .label = Fiksoje te Menuja Më Tepër Mjete
     .accesskey = F
-toolbar-context-menu-auto-hide-downloads-button =
-    .label = Vetëfshihe në Panel
-    .accesskey = V
 toolbar-context-menu-auto-hide-downloads-button-2 =
     .label = Fshihe Butonin, Kur Është e Zbrazët
     .accesskey = F
+toolbar-context-menu-always-open-downloads-panel =
+    .label = Shfaq Panel, Kur Fillon Shkarkimi
+    .accesskey = S
 toolbar-context-menu-remove-from-toolbar =
     .label = Hiqe nga Paneli
     .accesskey = H
@@ -73,6 +64,11 @@ toolbar-context-menu-view-customize-toolbar =
 toolbar-context-menu-view-customize-toolbar-2 =
     .label = Përshtateni Panelin…
     .accesskey = P
+# This is only ever shown when toolbar-context-menu-pin-to-overflow-menu
+# is hidden, so they can share access keys.
+toolbar-context-menu-pin-to-toolbar =
+    .label = Fiksoje te Paneli
+    .accesskey = F
 
 toolbar-context-menu-bookmarks-toolbar-always-show-2 =
     .label = Shfaqe Përherë
@@ -87,3 +83,7 @@ toolbar-context-menu-bookmarks-toolbar-on-new-tab-2 =
 toolbar-context-menu-bookmarks-show-other-bookmarks =
     .label = Shfaq Faqerojtës të Tjerë
     .accesskey = T
+
+toolbar-context-menu-menu-bar-cmd =
+    .toolbarname = Shtyllë Menush
+    .accesskey = M

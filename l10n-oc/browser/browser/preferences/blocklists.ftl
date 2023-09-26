@@ -2,9 +2,9 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-blocklist-window =
+blocklist-window2 =
     .title = Lista del blocatge
-    .style = width: 55em
+    .style = min-width: 55em
 
 blocklist-description = Causissètz quina lista { -brand-short-name } utiliza per blocar los traçadors en linha. Las listas venon de <a data-l10n-name="disconnect-link" title="Disconnect">Disconnect</a>.
 blocklist-close-key =
@@ -12,14 +12,6 @@ blocklist-close-key =
 
 blocklist-treehead-list =
     .label = Lista
-
-blocklist-button-cancel =
-    .label = Anullar
-    .accesskey = N
-
-blocklist-button-ok =
-    .label = Enregistrar las modificacions
-    .accesskey = E
 
 blocklist-dialog =
     .buttonlabelaccept = Enregistrar las modificacions

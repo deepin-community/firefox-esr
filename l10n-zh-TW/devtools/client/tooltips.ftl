@@ -31,6 +31,9 @@ inactive-css-not-for-internal-table-elements = <strong>{ $property }</strong> �
 inactive-css-not-for-internal-table-elements-except-table-cells = <strong>{ $property }</strong> 對表格欄位之外的內部表格元素沒有影響。
 inactive-css-not-table = 由於不是表格，<strong>{ $property }</strong> 對此元素沒有影響。
 inactive-scroll-padding-when-not-scroll-container = 由於不會捲動，<strong>{ $property }</strong> 對此元素沒有影響。
+inactive-css-border-image = 由於父階層表格元素的 <strong>border-collapse</strong> 設定為 <strong>collapse</strong>，無法套用到內部的表格元素，<strong>{ $property }</strong> 對此元素無效。
+inactive-css-ruby-element = 由於此元素是 ruby 元素，<strong>{ $property }</strong> 無效。此元素大小是由 ruby 文字的大小所決定的。
+inactive-css-highlight-pseudo-elements-not-supported = 強調的 pseudo-elements 不支援 <strong>{ $property }</strong>。
 
 ## In the Rule View when a CSS property cannot be successfully applied we display
 ## an icon. When this icon is hovered this message is displayed to explain how
@@ -38,7 +41,6 @@ inactive-scroll-padding-when-not-scroll-container = 由於不會捲動，<strong
 
 inactive-css-not-grid-or-flex-container-fix = 請嘗試加入 <strong>display:grid</strong> 或 <strong>display:flex</strong>。{ learn-more }
 inactive-css-not-grid-or-flex-container-or-multicol-container-fix = 請嘗試加入 <strong>display:grid</strong>、<strong>display:flex</strong> 或 <strong>columns:2</strong>。{ learn-more }
-inactive-css-not-grid-or-flex-item-fix-2 = 請嘗試加入 <strong>display:grid</strong>、<strong>display:flex</strong>、<strong>display:inline-grid</strong> 或 <strong>display:inline-flex</strong>。{ learn-more }
 inactive-css-not-grid-or-flex-item-fix-3 = 請嘗試為元素的父元素加入 <strong>display:grid</strong>、<strong>display:flex</strong>、<strong>display:inline-grid</strong> 或 <strong>display:inline-flex</strong>。{ learn-more }
 inactive-css-not-grid-item-fix-2 = 請嘗試為元素的父元素加入 <strong>display:grid</strong> 或 <strong>display:inline-grid</strong>。{ learn-more }
 inactive-css-not-grid-container-fix = 請嘗試加入 <strong>display:grid</strong> 或 <strong>display:inline-grid</strong>。{ learn-more }
@@ -54,6 +56,8 @@ inactive-css-not-for-internal-table-elements-fix = 請嘗試將其 <strong>displ
 inactive-css-not-for-internal-table-elements-except-table-cells-fix = 請嘗試將其 <strong>display</strong> 設定成 <strong>table-column</strong>、<strong>table-row</strong>、<strong>table-column-group</strong>、<strong>table-row-group</strong> 或<strong>table-footer-group</strong> 以外的值。{ learn-more }
 inactive-css-not-table-fix = 請嘗試加入 <strong>display:table</strong> 或 <strong>display:inline-table</strong>。{ learn-more }
 inactive-scroll-padding-when-not-scroll-container-fix = 請嘗試加入 <strong>overflow:auto</strong>、<strong>overflow:scroll</strong> 或<strong>overflow:hidden</strong>。{ learn-more }
+inactive-css-border-image-fix = 請於父表格元素移除該屬性，或將 <strong>border-collapse</strong> 的值更改為 <strong>collapse</strong> 以外的值。{ learn-more }
+inactive-css-ruby-element-fix = 請嘗試調整 ruby 文字的 <strong>font-size</strong>。{ learn-more }
 
 ## In the Rule View when a CSS property may have compatibility issues with other browsers
 ## we display an icon. When this icon is hovered this message is displayed to explain why

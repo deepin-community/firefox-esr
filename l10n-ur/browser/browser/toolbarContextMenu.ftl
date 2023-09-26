@@ -20,17 +20,14 @@ toolbar-context-menu-bookmark-selected-tabs =
 toolbar-context-menu-select-all-tabs =
     .label = تمام ٹیب منتخب کریں
     .accesskey = S
-toolbar-context-menu-undo-close-tabs =
+toolbar-context-menu-reopen-closed-tabs =
     .label =
         { $tabCount ->
-            [1] بند ٹیبز کو منسوخ کریں
-            [one] بند ٹیبز کو منسوخ کریں
-           *[other]
-                	U
-                	U
-                U
+            [1] بند ٹیب کو دوبارہ کھولیں
+            [one] بند ٹیب کو دوبارہ کھولیں
+           *[other] o
         }
-    .accesskey = U
+    .accesskey = o
 
 toolbar-context-menu-manage-extension =
     .label = توسیع بندرست کریں
@@ -52,9 +49,6 @@ toolbar-context-menu-report-extension =
 toolbar-context-menu-pin-to-overflow-menu =
     .label = اورفلوں مینو مے پن کرے
     .accesskey = P
-toolbar-context-menu-auto-hide-downloads-button =
-    .label = ٹولبار میں آوٹوں-حائڈ
-    .accesskey = A
 toolbar-context-menu-remove-from-toolbar =
     .label = ٹولبار سے ہٹائیں
     .accesskey = R
@@ -72,3 +66,6 @@ toolbar-context-menu-bookmarks-toolbar-on-new-tab-2 =
     .label = صرف نئی ٹیب پر دکھائیں
     .accesskey = O
 
+toolbar-context-menu-menu-bar-cmd =
+    .toolbarname = مینوبار
+    .accesskey = M

@@ -65,11 +65,6 @@ options-stylesheet-autocompletion-tooltip =
 # The heading
 options-screenshot-label = Conportamento de-e föto do schermo
 
-# Label for the checkbox that toggles screenshot to clipboard feature
-options-screenshot-clipboard-label = Föto do schermo inti aponti
-options-screenshot-clipboard-tooltip =
-    .title = Sarva e föto do schermo diretamente inti aponti
-
 # Label for the checkbox that toggles the camera shutter audio for screenshot tool
 options-screenshot-audio-label = Fanni o son da machina fòtografica
 options-screenshot-audio-tooltip =
@@ -131,8 +126,3 @@ options-context-triggers-page-refresh = * solo sescion corente, recarega a pagin
 
 ##
 
-# The label for the checkbox that toggles the display of the platform data in the
-# Profiler i.e. devtools.profiler.ui.show-platform-data a boolean preference in about:config
-options-show-platform-data-label = Fanni vedde i daæti piataforma Gecko
-options-show-platform-data-tooltip =
-    .title = Ativando sta opçion i rapòrti do Profiler JavaScript contegnian i scinboli da piataforma Gecko

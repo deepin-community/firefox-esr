@@ -3,22 +3,7 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 
-### UI strings for the simplified onboarding modal / about:welcome
-### Various strings use a non-breaking space to avoid a single dangling /
-### widowed word, so test on various window sizes if you also want this.
-
-
-## These button action text can be split onto multiple lines, so use explicit
-## newlines in translations to control where the line break appears (e.g., to
-## avoid breaking quoted text).
-
-onboarding-button-label-learn-more = Сазнај више
-onboarding-button-label-get-started = Први кораци
-
-## Welcome modal dialog strings
-
-
-### UI strings for the simplified onboarding / multistage about:welcome
+### UI strings for the MR1 onboarding / multistage about:welcome
 ### Various strings use a non-breaking space to avoid a single dangling /
 ### widowed word, so test on various window sizes if you also want this.
 
@@ -26,144 +11,9 @@ onboarding-button-label-get-started = Први кораци
 ## Welcome page strings
 
 onboarding-welcome-header = Добро дошли у { -brand-short-name }
-onboarding-welcome-body = Сада имате прегледач.<br/>Упознајте се са { -brand-product-name }-ом.
-onboarding-welcome-learn-more = Сазнајте више о предностима.
-onboarding-welcome-modal-get-body = Сада имате прегледач.<br/>Извуците максимум из { -brand-product-name }-а.
-onboarding-welcome-modal-supercharge-body = Појачајте заштиту приватности.
-onboarding-welcome-modal-privacy-body = Сада имате прегледач. Подигнимо приватност на виши ниво.
-onboarding-welcome-modal-family-learn-more = Сазнајте више о { -brand-product-name } породици производа.
-onboarding-welcome-form-header = Почните овде
-onboarding-join-form-body = Унесите своју е-адресу да бисте започели.
-onboarding-join-form-email =
-    .placeholder = Унесите е-адресу
-onboarding-join-form-email-error = Потребна је важећа имејл-адреса
-onboarding-join-form-legal = Настављањем даље, слажете се са <a data-l10n-name="terms">условима коришћења</a> и <a data-l10n-name="privacy">изјавом о политици приватности</a>.
-onboarding-join-form-continue = Настави
-# This message is followed by a link using onboarding-join-form-signin ("Sign In") as text.
-onboarding-join-form-signin-label = Већ имате налог?
-# Text for link to submit the sign in form
-onboarding-join-form-signin = Пријавите се
 onboarding-start-browsing-button-label = Претражујте интернет
-onboarding-cards-dismiss =
-    .title = Одбаци
-    .aria-label = Одбаци
-
-## Welcome full page string
-
-onboarding-fullpage-welcome-subheader = Хајде да истражимо шта све можете да урадите.
-onboarding-fullpage-form-email =
-    .placeholder = Ваша имејл-адреса…
-
-## Firefox Sync modal dialog strings.
-
-onboarding-sync-welcome-header = Понесите { -brand-product-name } са собом
-onboarding-sync-welcome-content = Приступите обележивачима, историји, лозинкама и другим подешавањима на свим уређајима.
-onboarding-sync-welcome-learn-more-link = Сазнајте више о Firefox Accounts
-onboarding-sync-form-input =
-    .placeholder = Имејл-адреса
-onboarding-sync-form-continue-button = Настави
-onboarding-sync-form-skip-login-button = Прескочи овај корак
-
-## This is part of the line "Enter your email to continue to Firefox Sync"
-
-onboarding-sync-form-header = Унесите имејл-адресу
-onboarding-sync-form-sub-header = да бисте наставили на { -sync-brand-name(case: "acc") }.
-
-## These are individual benefit messages shown with an image, title and
-## description.
-
-onboarding-benefit-products-text = Радите ефикасније са породицом алатки које поштују вашу приватност на свим вашим уређајима.
-# "Personal Data Promise" is a concept that should be translated consistently
-# across the product. It refers to a concept shown elsewhere to the user: "The
-# Firefox Personal Data Promise is the way we honor your data in everything we
-# make and do. We take less data. We keep it safe. And we make sure that we are
-# transparent about how we use it."
-onboarding-benefit-privacy-text = Све што радимо поштује наше обећање о личним подацима: узми мање података, добро их чувај и без икаквих тајни.
-onboarding-benefit-sync-title = { -sync-brand-short-name }
-onboarding-benefit-sync-text =
-    Приступите обележивачима, лозинкама, историји и другим подацима свуда где користите { -brand-product-name.gender ->
-        [masculine] { -brand-product-name(case: "acc") }
-        [feminine] { -brand-product-name(case: "acc") }
-        [neuter] { -brand-product-name(case: "acc") }
-       *[other] програм { -brand-product-name }
-    }.
-onboarding-benefit-monitor-title = { -monitor-brand-short-name }
-onboarding-benefit-monitor-text = Примите обавештење када се ваши лични подаци појаве у познатом цурењу података.
-onboarding-benefit-lockwise-title = { -lockwise-brand-short-name }
-onboarding-benefit-lockwise-text = Управљајте лозинкама, које су заштићене и преносиве.
-
-## These strings belong to the individual onboarding messages.
-
-
-## Each message has a title and a description of what the browser feature is.
-## Each message also has an associated button for the user to try the feature.
-## The string for the button is found above, in the UI strings section
-
-onboarding-tracking-protection-title2 = Заштита од праћења
-onboarding-tracking-protection-text2 = { -brand-short-name } помаже вам у спречавању веб страница да вас прате на мрежи, што отежава огласима да вас прате на вебу.
-onboarding-tracking-protection-button2 = Како то ради
-onboarding-data-sync-title = Понесите своја подешавања са собом
-# "Sync" is short for synchronize.
-onboarding-data-sync-text2 =
-    Приступите обележивачима, лозинкама и другим подацима свуда где користите { -brand-product-name.gender ->
-        [masculine] { -brand-product-name(case: "acc") }
-        [feminine] { -brand-product-name(case: "acc") }
-        [neuter] { -brand-product-name(case: "acc") }
-       *[other] програм { -brand-product-name }
-    }.
-onboarding-data-sync-button2 = Пријавите се на { -sync-brand-short-name }
-onboarding-firefox-monitor-title = Будите у приправности од повреде података
-onboarding-firefox-monitor-text2 = { -monitor-brand-name } проверава да ли је ваша имејл-адреса процурила у јавност и упозорава вас о новим цурењима.
-onboarding-firefox-monitor-button = Пријавите се за упозорења
-onboarding-browse-privately-title = Претражујте интернет приватно
-onboarding-browse-privately-text = Приватно прегледање брише историју претраге и прегледања како би остала скривена од било кога ко користи ваш рачунар.
-onboarding-browse-privately-button = Отвори приватни прозор
-onboarding-firefox-send-title = Држите своје дељене датотеке приватним
-onboarding-firefox-send-text2 = Датотеке отпремљене на { -send-brand-name(case: "acc") } заштићене су шифровањем с краја на крај и веза до њих аутоматски истиче.
-onboarding-firefox-send-button = Испробајте { -send-brand-name(case: "acc") }
-onboarding-mobile-phone-title = Преузмите { -brand-product-name } на Ваш телефон
-onboarding-mobile-phone-text =
-    Преузмите { -brand-product-name.gender ->
-        [masculine] { -brand-product-name(case: "acc") }
-        [feminine] { -brand-product-name(case: "acc") }
-        [neuter] { -brand-product-name(case: "acc") }
-       *[other] апликацију { -brand-product-name }
-    } за Android или iOS и синхронизујте податке са свим уређајима.
-# "Mobile" is short for mobile/cellular phone, "Browser" is short for web
-# browser.
-onboarding-mobile-phone-button = Преузми мобилни прегледач
-onboarding-send-tabs-title = Одмах пошаљите себи картице
-# "Send Tabs" refers to "Send Tab to Device" feature that appears when opening a
-# tab's context menu.
-onboarding-send-tabs-text2 = Једноставно делите странице са уређајима. Не морате да копирате везе нити да излазите из прегледача.
-onboarding-send-tabs-button = Почните да користите слање картица
-onboarding-pocket-anywhere-title = Читајте и слушајте било где
-onboarding-pocket-anywhere-text2 = Сачувајте омиљени садржај у { -pocket-brand-name(case: "loc") } и читајте, слушајте и гледајте га без интернета у било које време.
-onboarding-pocket-anywhere-button = Испробајте { -pocket-brand-name(case: "acc") }
-onboarding-lockwise-strong-passwords-title = Стварајте и чувајте јаке лозинке
-onboarding-lockwise-strong-passwords-text = { -lockwise-brand-name } генерише јаке лозинке за трен и чува их на једном месту.
-onboarding-lockwise-strong-passwords-button = Управљај лозинкама
-onboarding-facebook-container-title = Поставите границе за Facebook
-onboarding-facebook-container-text2 = { -facebook-container-brand-name } раздваја ваш профил од свега осталог, што отежава Facebook-у да вам приказује циљане рекламе.
-onboarding-facebook-container-button = Додај додатак
-onboarding-import-browser-settings-title = Увезите обележиваче, лозинке и друго
-onboarding-import-browser-settings-text = Слободно истражите — понесите са собом Chrome странице и подешавања.
-onboarding-import-browser-settings-button = Увези податке из Chrome-а
-onboarding-personal-data-promise-title = Дизајниран за приватност
-onboarding-personal-data-promise-text = { -brand-product-name } поштује ваше податке тако што их прикупља мање, штити их и даје до знања на који начин их користи.
-onboarding-personal-data-promise-button = Прочитајте наше обећање
-
-## Message strings belonging to the Return to AMO flow
-
-return-to-amo-sub-header = Одлично, добили сте { -brand-short-name }
-# <icon></icon> will be replaced with the icon belonging to the extension
-#
-# Variables:
-#   $addon-name (String) - Name of the add-on
-return-to-amo-addon-header = Сада ће се инсталирати додатак <icon></icon><b>{ $addon-name }.</b>
-return-to-amo-extension-button = Додај додатак
-return-to-amo-get-started-button = Крените са коришћењем програма { -brand-short-name }
 onboarding-not-now-button-label = Не сада
+mr1-onboarding-get-started-primary-button-label = Увод
 
 ## Custom Return To AMO onboarding strings
 
@@ -174,156 +24,24 @@ return-to-amo-subtitle = Одлично, имате { -brand-short-name }
 #   $addon-name (String) - Name of the add-on
 return-to-amo-addon-title = Сада ће се инсталирати додатак <img data-l10n-name="icon"/> <b>{ $addon-name }</b>.
 return-to-amo-add-extension-label = Додај додатак
+return-to-amo-add-theme-label = Додајте тему
 
-## Multistage 3-screen onboarding flow strings (about:welcome pages)
+##  Variables: $addon-name (String) - Name of the add-on to be installed
 
-# The <span data-l10n-name="zap"></span> in this string allows a "zap" underline style to be
-# automatically added to the text inside it. { -brand-short-name } should stay inside the span.
-onboarding-multistage-welcome-header = Добро дошли у <span data-l10n-name="zap">{ -brand-short-name }</span>
-onboarding-multistage-welcome-subtitle = Брз, сигуран и приватни прегледач који је подржан од непрофитне организације.
-onboarding-multistage-welcome-primary-button-label = Покрените подешавање
-onboarding-multistage-welcome-secondary-button-label = Пријавите се
-onboarding-multistage-welcome-secondary-button-text = Имате налог?
-# The <span data-l10n-name="zap"></span> in this string allows a "zap" underline style to be
-# automatically added to the text inside it. "default" should stay inside the span.
-onboarding-multistage-set-default-header =
-    Поставите { -brand-short-name.gender ->
-        [masculine] { -brand-short-name(case: "acc") }
-        [feminine] { -brand-short-name(case: "acc") }
-        [neuter] { -brand-short-name(case: "acc") }
-       *[other] програм { -brand-short-name }
-    } као <span data-l10n-name="zap">подразумевани</span>
-onboarding-multistage-set-default-subtitle = Претражујте интернет брзо, безбедно и приватно.
-onboarding-multistage-set-default-primary-button-label = Постави као подразумеван
-onboarding-multistage-set-default-secondary-button-label = Не сада
-# The <span data-l10n-name="zap"></span> in this string allows a "zap" underline style to be
-# automatically added to the text inside it. { -brand-short-name } should stay inside the span.
-onboarding-multistage-pin-default-header =
-    За почетак сместите <span data-l10n-name="zap">{ -brand-shorter-name.gender ->
-        [masculine] { -brand-short-name(case: "acc") }
-        [feminine] { -brand-short-name(case: "acc") }
-        [neuter] { -brand-short-name(case: "acc") }
-       *[other] програм { -brand-short-name }
-    }</span> надохват руке
-onboarding-multistage-pin-default-subtitle = Претражујте интернет брзо, безбедно и приватно.
-# The "settings" here refers to "Windows 10 Settings App" and not the browser's
-onboarding-multistage-pin-default-waiting-subtitle =
-    Када се отворе подешавања, у одељку „Веб-прегледач” одаберите { -brand-short-name.gender ->
-        [masculine] { -brand-short-name(case: "acc") }
-        [feminine] { -brand-short-name(case: "acc") }
-        [neuter] { -brand-short-name(case: "acc") }
-       *[other] програм { -brand-short-name }
-    }
-# The "settings" here refers to "Windows 10 Settings App" and not the browser's
-onboarding-multistage-pin-default-help-text =
-    Овим ћете закачити { -brand-short-name.gender ->
-        [masculine] { -brand-short-name(case: "acc") }
-        [feminine] { -brand-short-name(case: "acc") }
-        [neuter] { -brand-short-name(case: "acc") }
-       *[other] програм { -brand-short-name }
-    } на траку задатака и отворити подешавања
-onboarding-multistage-pin-default-primary-button-label =
-    Постави { -brand-short-name.gender ->
-        [masculine] { -brand-short-name(case: "acc") }
-        [feminine] { -brand-short-name(case: "acc") }
-        [neuter] { -brand-short-name(case: "acc") }
-       *[other] програм { -brand-short-name }
-    } као подразумевани прегледач
-# The <span data-l10n-name="zap"></span> in this string allows a "zap" underline style to be
-# automatically added to the text inside it. "more" should stay inside the span.
-onboarding-multistage-import-header = Увезите лозинке, <br/>обележиваче и <span data-l10n-name="zap">друго</span>
-onboarding-multistage-import-subtitle = Долазите од другог прегледача? Све можете лако увести у { -brand-short-name }.
-onboarding-multistage-import-primary-button-label = Покрени увоз
-onboarding-multistage-import-secondary-button-label = Не сада
-# Info displayed in the footer of import settings screen during onboarding flow.
-# This supports welcome screen showing top sites imported from the user's default browser.
-onboarding-import-sites-disclaimer = Странице са ове листе нису пронађене на овом уређају. { -brand-short-name } не чува нити синхронизује податке из другог прегледача, осим ако не изаберете да их увезете.
+mr1-return-to-amo-subtitle = Упознајте { -brand-short-name }
+mr1-return-to-amo-addon-title = Имате брз, приватни прегледач на дохват руке. Сада можете да додате <b>{ $addon-name }</b> и урадите више са { -brand-short-name }-ом.
+mr1-return-to-amo-add-extension-label = Додај { $addon-name }
+
+## Multistage onboarding strings (about:welcome pages)
+
 # Aria-label to make the "steps" of multistage onboarding visible to screen readers.
 # Variables:
 #   $current (Int) - Number of the current page
 #   $total (Int) - Total number of pages
-onboarding-welcome-steps-indicator =
-    .aria-label = Први кораци: екран { $current } од { $total }
-# The <span data-l10n-name="zap"></span> in this string allows a "zap" underline style to be
-# automatically added to the text inside it. "look" should stay inside the span.
-onboarding-multistage-theme-header = Изаберите <span data-l10n-name="zap">изглед</span>
-onboarding-multistage-theme-subtitle =
-    Промените изглед { -brand-short-name.gender ->
-        [masculine] { -brand-short-name(case: "gen") }
-        [feminine] { -brand-short-name(case: "gen") }
-        [neuter] { -brand-short-name(case: "gen") }
-       *[other] програма { -brand-short-name }
-    } помоћу теме.
-onboarding-multistage-theme-primary-button-label2 = Готово
-onboarding-multistage-theme-secondary-button-label = Не сада
-# Automatic theme uses operating system color settings
-onboarding-multistage-theme-label-automatic = Аутоматски
-onboarding-multistage-theme-label-light = Светла
-onboarding-multistage-theme-label-dark = Тамна
-# "Firefox Alpenglow" here is the name of the theme, and should be kept in English.
-onboarding-multistage-theme-label-alpenglow = Firefox Alpenglow
 
-## Please make sure to split the content of the title attribute into lines whose
-## width corresponds to about 40 Latin characters, to ensure that the tooltip
-## doesn't become too long. Line breaks will be preserved when displaying the
-## tooltip.
+onboarding-welcome-steps-indicator-label =
+    .aria-label = Напредак: корак { $current } од { $total }
 
-# Tooltip displayed on hover of automatic theme
-onboarding-multistage-theme-tooltip-automatic-2 =
-    .title =
-        Наследите изглед вашег оперативног
-        система за тастере, меније и прозоре.
-# Input description for automatic theme
-onboarding-multistage-theme-description-automatic-2 =
-    .aria-description =
-        Наследите изглед вашег оперативног
-        система за тастере, меније и прозоре.
-# Tooltip displayed on hover of light theme
-onboarding-multistage-theme-tooltip-light-2 =
-    .title =
-        Користите светли изглед за тастере,
-        меније и прозоре.
-# Input description for light theme
-onboarding-multistage-theme-description-light =
-    .aria-description =
-        Користите светли изглед за тастере,
-        меније и прозоре.
-# Tooltip displayed on hover of dark theme
-onboarding-multistage-theme-tooltip-dark-2 =
-    .title =
-        Користите тамни изглед за тастере,
-        меније и прозоре.
-# Input description for dark theme
-onboarding-multistage-theme-description-dark =
-    .aria-description =
-        Користите тамни изглед за тастере,
-        меније и прозоре.
-# Tooltip displayed on hover of Alpenglow theme
-onboarding-multistage-theme-tooltip-alpenglow-2 =
-    .title =
-        Користите шарени изглед за тастере,
-        меније и прозоре.
-# Input description for Alpenglow theme
-onboarding-multistage-theme-description-alpenglow =
-    .aria-description =
-        Користите шарени изглед за тастере,
-        меније и прозоре.
-
-## Multistage MR1 onboarding strings (MR1 about:welcome pages)
-
-# "Hero Text" displayed on left side of welcome screen.
-# The "Fire" in "Fire starts here" plays on the "Fire" in "Firefox".
-# It also signals the passion users bring to Firefox, how they use
-# Firefox to pursue those passions, as well as the boldness in their
-# choice to use Firefox over a larger competitor browser.
-# An alternative title for localization is: "It starts here".
-# This text can be formatted to span multiple lines as needed.
-mr1-welcome-screen-hero-text = Све почиње овде
-# Caption for background image in about:welcome. "Soraya Osorio" is the name
-# of the person and shouldn't be translated.
-# In case your language needs to adapt the nouns to a gender, Soraya is a female name (she/her).
-# You can see the picture in about:welcome in Nightly 90.
-mr1-onboarding-welcome-image-caption = Soraya Osorio — дизајнерка намештаја, обожаватељка Firefox-а
 # This button will open system settings to turn on prefers-reduced-motion
 mr1-onboarding-reduce-motion-button-label = Искључи анимације
 
@@ -331,81 +49,21 @@ mr1-onboarding-reduce-motion-button-label = Искључи анимације
 ## match the OS' application context menu item action where Windows uses "pin"
 ## and "taskbar" while macOS "keep" and "Dock" (proper noun).
 
-# Title used on welcome page when Firefox is not pinned
-mr1-onboarding-pin-header =
-    { PLATFORM() ->
-        [macos] Додајте { -brand-short-name } на траку задатака ради лакшег приступа
-       *[other] Закачите { -brand-short-name } на траку задатака ради лакшег приступа
-    }
-# Primary button string used on welcome page when Firefox is not pinned.
-mr1-onboarding-pin-primary-button-label =
-    { PLATFORM() ->
-        [macos] Додај на док
-       *[other] Закачи на траку задатака
-    }
-
 ## Multistage MR1 onboarding strings (about:welcome pages)
 
-# This string will be used on welcome page primary button label
-# when Firefox is both pinned and default
-mr1-onboarding-get-started-primary-button-label = Увод
-mr1-onboarding-welcome-header =
-    Добро дошли у { -brand-short-name.gender ->
-        [masculine] { -brand-short-name(case: "acc") }
-        [feminine] { -brand-short-name(case: "acc") }
-        [neuter] { -brand-short-name(case: "acc") }
-       *[other] програм { -brand-short-name }
-    }
-mr1-onboarding-set-default-pin-primary-button-label =
-    Постави програм { -brand-short-name.gender ->
-        [masculine] { -brand-short-name(case: "acc") }
-        [feminine] { -brand-short-name(case: "acc") }
-        [neuter] { -brand-short-name(case: "acc") }
-       *[other] програм { -brand-short-name }
-    } као примарни прегледач
-    .title =
-        Sets { -brand-short-name.gender ->
-            [masculine] { -brand-short-name(case: "acc") } као подразумевани прегледач и качи га
-            [feminine] { -brand-short-name(case: "acc") } као подразумевани прегледач и качи је
-            [neuter] { -brand-short-name(case: "acc") } као подразумевани прегледач и качи га
-           *[other] програм { -brand-short-name } као подразумевани прегледач и качи га
-        } на траку задатака
-# This string will be used on welcome page primary button label
-# when Firefox is not default but already pinned
-mr1-onboarding-set-default-only-primary-button-label =
-    Постави { -brand-short-name.gender ->
-        [masculine] { -brand-short-name(case: "acc") }
-        [feminine] { -brand-short-name(case: "acc") }
-        [neuter] { -brand-short-name(case: "acc") }
-       *[other] програм { -brand-short-name }
-    } као подразумевани прегледач
-mr1-onboarding-set-default-secondary-button-label = Не сада
+# String for the Firefox Accounts button
 mr1-onboarding-sign-in-button-label = Пријави ме
 
 ## Title, subtitle and primary button string used on set default onboarding screen
 ## when Firefox is not default browser
 
-mr1-onboarding-default-header =
-    Постави { -brand-short-name.gender ->
-        [masculine] { -brand-short-name(case: "acc") }
-        [feminine] { -brand-short-name(case: "acc") }
-        [neuter] { -brand-short-name(case: "acc") }
-       *[other] програм { -brand-short-name }
-    } као подразумевани прегледач
-mr1-onboarding-default-subtitle = Брзина, безбедност и приватност пре свега.
-mr1-onboarding-default-primary-button-label = Постави као подразумевани прегледач
-
 ## Multistage MR1 onboarding strings (about:welcome pages)
 
-mr1-onboarding-import-header = Понесите све са собом
-mr1-onboarding-import-subtitle = Увезите лозинке, <br/>обележиваче и још много тога.
 # The primary import button label will depend on whether we can detect which browser was used to download Firefox.
 # Variables:
 #   $previous (Str) - Previous browser name, such as Edge, Chrome
 mr1-onboarding-import-primary-button-label-attribution = Увези из прегледача { $previous }
-# This string will be used in cases where we can't detect the previous browser name.
-mr1-onboarding-import-primary-button-label-no-attribution = Увези из претходног прегледача
-mr1-onboarding-import-secondary-button-label = Не сада
+
 mr1-onboarding-theme-header = Персонализација
 mr1-onboarding-theme-subtitle =
     Персонализујте { -brand-short-name.gender ->
@@ -414,14 +72,17 @@ mr1-onboarding-theme-subtitle =
         [neuter] { -brand-short-name(case: "acc") }
        *[other] програм { -brand-short-name }
     } помоћу теме.
-mr1-onboarding-theme-primary-button-label = Сачувај тему
 mr1-onboarding-theme-secondary-button-label = Не сада
+
 # System theme uses operating system color settings
 mr1-onboarding-theme-label-system = Системска тема
+
 mr1-onboarding-theme-label-light = Светла
 mr1-onboarding-theme-label-dark = Тамна
 # "Alpenglow" here is the name of the theme, and should be kept in English.
 mr1-onboarding-theme-label-alpenglow = Алпски жар
+
+onboarding-theme-primary-button-label = Готово
 
 ## Please make sure to split the content of the title attribute into lines whose
 ## width corresponds to about 40 Latin characters, to ensure that the tooltip
@@ -433,38 +94,293 @@ mr1-onboarding-theme-tooltip-system =
     .title =
         Користите тему оперативног система
         за дугмад, меније и прозоре.
+
 # Input description for system theme
 mr1-onboarding-theme-description-system =
     .aria-description =
         Користите тему оперативног система
         за дугмад, меније и прозоре.
+
 # Tooltip displayed on hover of light theme
 mr1-onboarding-theme-tooltip-light =
     .title =
         Користите светлу тему за дугмад,
         меније и прозоре.
+
 # Input description for light theme
 mr1-onboarding-theme-description-light =
     .aria-description =
         Користите светлу тему за дугмад,
         меније и прозоре.
+
 # Tooltip displayed on hover of dark theme
 mr1-onboarding-theme-tooltip-dark =
     .title =
         Користите тамну тему за дугмад,
         меније и прозоре.
+
 # Input description for dark theme
 mr1-onboarding-theme-description-dark =
     .aria-description =
         Користите тамну тему за дугмад,
         меније и прозоре.
+
 # Tooltip displayed on hover of Alpenglow theme
 mr1-onboarding-theme-tooltip-alpenglow =
     .title =
         Користите динамичку и живописну тему за дугмад,
         меније и прозоре.
+
 # Input description for Alpenglow theme
 mr1-onboarding-theme-description-alpenglow =
     .aria-description =
         Користите динамичку и живописну тему за дугмад,
         меније и прозоре.
+
+# Selector description for default themes
+mr2-onboarding-default-theme-label = Истражите подразумеване теме.
+
+## Strings for Thank You page
+
+mr2-onboarding-thank-you-header = Хвала вам што сте нас изабрали
+mr2-onboarding-thank-you-text = { -brand-short-name } је независтан прегледач, подржан од стране непрофитног удружења. Заједно стварамо безбеднији, здравији и приватнији веб.
+mr2-onboarding-start-browsing-button-label = Започни прегледање
+
+## Multistage live language reloading onboarding strings (about:welcome pages)
+##
+## The following language names are generated by the browser's Intl.DisplayNames API.
+##
+## Variables:
+##   $negotiatedLanguage (String) - The name of the langpack's language, e.g. "Español (ES)"
+
+
+## Multistage live language reloading onboarding strings (about:welcome pages)
+##
+## The following language names are generated by the browser's Intl.DisplayNames API.
+##
+## Variables:
+##   $negotiatedLanguage (String) - The name of the langpack's language, e.g. "Español (ES)"
+##   $systemLanguage (String) - The name of the system language, e.g "Español (ES)"
+##   $appLanguage (String) - The name of the language shipping in the browser build, e.g. "English (EN)"
+
+onboarding-live-language-header = Изаберите ваш језик
+
+mr2022-onboarding-live-language-text = { -brand-short-name } говори вашим језиком
+
+mr2022-language-mismatch-subtitle = Захваљујући нашој заједници, { -brand-short-name } је преведен на преко 90 језика. Изгледа да ваш систем користи { $systemLanguage }, а { -brand-short-name } користи { $appLanguage } језик.
+
+onboarding-live-language-button-label-downloading = Преузимање језичког пакета за { $negotiatedLanguage }…
+onboarding-live-language-waiting-button = Добављање доступних језика…
+onboarding-live-language-installing = Инсталирање језичког пакета за { $negotiatedLanguage }…
+
+mr2022-onboarding-live-language-switch-to = Пребаците на { $negotiatedLanguage }
+mr2022-onboarding-live-language-continue-in = Наставите са { $appLanguage }
+
+onboarding-live-language-secondary-cancel-download = Откажи
+onboarding-live-language-skip-button-label = Прескочи
+
+## Firefox 100 Thank You screens
+
+# "Hero Text" displayed on left side of welcome screen. This text can be
+# formatted to span multiple lines as needed. The <span data-l10n-name="zap">
+# </span> in this string allows a "zap" underline style to be automatically
+# added to the text inside it. "Yous" should stay inside the zap span, but
+# "Thank" can be put inside instead if there's no "you" in the translation.
+# The English text would normally be "100 Thank-Yous" i.e., plural noun, but for
+# aesthetics of splitting it across multiple lines, the hyphen is omitted.
+fx100-thank-you-hero-text =
+    100
+    Хвала
+    <span data-l10n-name="zap">вам</span>
+fx100-thank-you-subtitle = Ово је наше стото издање! Хвала вам што нам помажете у изградњи бољег и здравијег интернета.
+fx100-thank-you-pin-primary-button-label =
+    { PLATFORM() ->
+        [macos] Остави { -brand-short-name } у доку
+       *[other] Закачи { -brand-short-name } на траку
+    }
+
+fx100-upgrade-thanks-header = 100 захвалница
+# Message shown with a start-browsing button. Emphasis <em> should be for "you"
+# but "Thank" can be used instead if there's no "you" in the translation.
+fx100-upgrade-thank-you-body = Ово је стото издање програма { -brand-short-name }. <em>Хвала вам</em> што нам помажете у изградњи бољег и здравијег интернета.
+# Message shown with either a pin-to-taskbar or set-default button.
+fx100-upgrade-thanks-keep-body = Ово је наше стото издање! Хвала вам што сте део наше заједнице. Нека { -brand-short-name } буде близу вас и у наредних 100 издања.
+
+mr2022-onboarding-secondary-skip-button-label = Прескочи овај корак
+
+## MR2022 New User Easy Setup screen strings
+
+# Primary button string used on new user onboarding first screen showing multiple actions such as Set Default, Import from previous browser.
+mr2022-onboarding-easy-setup-primary-button-label = Сачувај и настави
+# Set Default action checkbox label used on new user onboarding first screen
+mr2022-onboarding-easy-setup-set-default-checkbox-label = Поставите { -brand-short-name } подразумеваним прегледачем
+# Import action checkbox label used on new user onboarding first screen
+mr2022-onboarding-easy-setup-import-checkbox-label = Увези из претходног прегледача
+
+## MR2022 New User Pin Firefox screen strings
+
+# Title used on about:welcome for new users when Firefox is not pinned.
+# In this context, open up is synonymous with "Discover".
+# The metaphor is that when they open their Firefox browser, it helps them discover an amazing internet.
+# If this translation does not make sense in your language, feel free to use the word "discover."
+mr2022-onboarding-welcome-pin-header = Откријте невероватан интернет
+# Subtitle is used on onboarding page for new users page when Firefox is not pinned
+mr2022-onboarding-welcome-pin-subtitle = Једним кликом покрените { -brand-short-name } било где. Сваки пут када то урадите, бирате отворенији и независнији интернет.
+# Primary button string used on welcome page for when Firefox is not pinned.
+mr2022-onboarding-pin-primary-button-label =
+    { PLATFORM() ->
+        [macos] Остави { -brand-short-name } у доку
+       *[other] Закачи { -brand-short-name } на траку задатака
+    }
+# Subtitle will be used when user already has Firefox pinned, but
+# has not set it as their default browser.
+# When translating "zip", please feel free to pick a verb that signifies movement and/or exploration
+# and makes sense in the context of navigating the web.
+mr2022-onboarding-set-default-only-subtitle = Крените са прегледачем који подржава непрофитна организација. Док сте ви на интернету, ми бранимо вашу приватност.
+
+## MR2022 Existing User Pin Firefox Screen Strings
+
+# Title used on multistage onboarding page for existing users when Firefox is not pinned
+mr2022-onboarding-existing-pin-header = Хвала вам што волите { -brand-product-name }
+# Subtitle is used on onboarding page for existing users when Firefox is not pinned
+mr2022-onboarding-existing-pin-subtitle = Само једним кликом покрените здравије веб окружење блио где. Најновије издање има пуно нових ствари за које мислимо да ће вам се свидети.
+# Subtitle will be used on the welcome screen for existing users
+# when they already have Firefox pinned but not set as default
+mr2022-onboarding-existing-set-default-only-subtitle = Користите прегледач који штити вашу приватност док сурфујете интернетом. Наше најновије ажурирање је препуно стварима које ћете обожавати.
+mr2022-onboarding-existing-pin-checkbox-label = Такође додајте { -brand-short-name } приватно прегледање
+
+## MR2022 New User Set Default screen strings
+
+# This string is the title used when the user already has pinned the browser, but has not set default.
+mr2022-onboarding-set-default-title = Нека { -brand-short-name } буде ваш подразумевани прегледач
+mr2022-onboarding-set-default-primary-button-label = Поставите { -brand-short-name } подразумеваним прегледачем
+# When translating "zip", please feel free to pick a verb that signifies movement and/or exploration
+# and makes sense in the context of navigating the web.
+mr2022-onboarding-set-default-subtitle = Користите прегледач који подржава непрофитна организација. Док сурфујете интернетом, ми бранимо вашу приватност.
+
+## MR2022 Get Started screen strings.
+## These strings will be used on the welcome page
+## when Firefox is already set to default and pinned.
+
+# When translating "zip", please feel free to pick a verb that signifies movement and/or exploration
+# and makes sense in the context of navigating the web.
+mr2022-onboarding-get-started-primary-subtitle = Наша најновија верзија одговара вашим потребама и омогућава вам да лако прегледате интернет. Препуна је садржаја за који мислимо да ће вам се свидети.
+mr2022-onboarding-get-started-primary-button-label = Подесите у пар секунди
+
+## MR2022 Import Settings screen strings
+
+mr2022-onboarding-import-header = Муњевито брзо подешавање
+mr2022-onboarding-import-subtitle = Подесите { -brand-short-name } како ви то желите. Додајте ваше обележиваче, лозинке и друго из вашег старог прегледача.
+mr2022-onboarding-import-primary-button-label-no-attribution = Увези из претходног прегледача
+
+## If your language uses grammatical genders, in the description for the
+## colorway feel free to switch from "You are a X. You…" (e.g. "You are a
+## Playmaker. You create…") to "X: you…" ("Playmaker: You create…"). This might
+## help creating a more inclusive translation.
+
+mr2022-onboarding-colorway-title = Изаберите боју која вас инспирише
+mr2022-onboarding-colorway-subtitle = Независни гласови могу да промене културу.
+mr2022-onboarding-colorway-primary-button-label-continue = Подеси и настави
+mr2022-onboarding-existing-colorway-checkbox-label = Подесите { -firefox-home-brand-name } боје по свом укусу
+
+mr2022-onboarding-colorway-label-default = Подразумевано
+mr2022-onboarding-colorway-tooltip-default2 =
+    .title = Тренутне { -brand-short-name } боје
+mr2022-onboarding-colorway-description-default = <b>Користи моје тренутне { -brand-short-name } боје.</b>
+
+mr2022-onboarding-colorway-label-playmaker = Плејмејкер
+mr2022-onboarding-colorway-tooltip-playmaker2 =
+    .title = Плејмејкер (црвено)
+mr2022-onboarding-colorway-description-playmaker = <b>Плејмејкер.</b> Стварате прилике за победе и помажете свима око себе да подигну ниво своје игре.
+
+mr2022-onboarding-colorway-label-expressionist = Екпресионизам
+mr2022-onboarding-colorway-tooltip-expressionist2 =
+    .title = Екпресионизам (жуто)
+mr2022-onboarding-colorway-description-expressionist = <b>Експресионизам.</b> На свет гледате другачије и ваш рад изазива снажна осећања код других.
+
+mr2022-onboarding-colorway-label-visionary = Визионарски
+mr2022-onboarding-colorway-tooltip-visionary2 =
+    .title = Визионарски (зелено)
+mr2022-onboarding-colorway-description-visionary = <b>Визионарски.</b> Доводите у питање стање ствари око себе и побуђујете друге да размишљају о бољој будућности.
+
+mr2022-onboarding-colorway-label-activist = Активизам
+mr2022-onboarding-colorway-tooltip-activist2 =
+    .title = Активизам (плаво)
+mr2022-onboarding-colorway-description-activist = <b>Активизам.</b> Чините свет бољим него што је био претходног дана и изазивате друге да верују у промене.
+
+mr2022-onboarding-colorway-label-dreamer = Сањарски
+mr2022-onboarding-colorway-tooltip-dreamer2 =
+    .title = Сањарски (љубичасто)
+mr2022-onboarding-colorway-description-dreamer = <b>Сањарски.</b> Верујете да срећа прати храбре и инспиришете друге да буду храбрији.
+
+mr2022-onboarding-colorway-label-innovator = Проналазачки
+mr2022-onboarding-colorway-tooltip-innovator2 =
+    .title = Проналазачки (наранџасто)
+mr2022-onboarding-colorway-description-innovator = <b>Проналазачки.</b> Видите прилике свуда и позитивно утичете на животе свију око себе.
+
+## MR2022 Multistage Mobile Download screen strings
+
+mr2022-onboarding-mobile-download-title = Пребаците се са лаптопа на телефон и обратно
+mr2022-onboarding-mobile-download-subtitle = Превуците језичке на други уређај и наставите тамо где сте стали. Синхронизујте обележиваче и лозинке где год да користите { -brand-product-name }.
+mr2022-onboarding-mobile-download-cta-text = Скенирајте QR код да преузмете { -brand-product-name } за мобилне или <a data-l10n-name="download-label">пошаљите себи везу за преузимање.</a>
+mr2022-onboarding-no-mobile-download-cta-text = Скенирајте QR код да преузмете { -brand-product-name } за мобилне.
+
+## MR2022 Upgrade Dialog screens
+## Pin private window screen shown only for users who don't have Firefox private pinned
+
+mr2022-upgrade-onboarding-pin-private-window-header = Једним кликом до слободног приватног прегледања
+mr2022-upgrade-onboarding-pin-private-window-subtitle = Нема сачуваних колачића или историје, директно са радне површине. Прегледајте као да нико не гледа.
+mr2022-upgrade-onboarding-pin-private-window-primary-button-label =
+    { PLATFORM() ->
+        [macos] Остави { -brand-short-name } приватно прегледање у док
+       *[other] Закачи { -brand-short-name } приватно прегледање на траку задатака
+    }
+
+## MR2022 Privacy Segmentation screen strings
+
+mr2022-onboarding-privacy-segmentation-title = Увек поштујемо вашу приватност
+mr2022-onboarding-privacy-segmentation-subtitle = Било да се ради о предлозима за претрагу или паметнијим претрагама, наставићемо да чинимо { -brand-product-name } бољим и личнијим.
+mr2022-onboarding-privacy-segmentation-text-cta = Шта желите да видите када објавимо нове функције које користе ваше податке за побољшање прегледања?
+mr2022-onboarding-privacy-segmentation-button-primary-label = Користите { -brand-product-name } препоруке
+mr2022-onboarding-privacy-segmentation-button-secondary-label = Прикажи детаљне информације
+
+## MR2022 Multistage Gratitude screen strings
+
+mr2022-onboarding-gratitude-title = Помажете нам у изградњи бољег веба
+mr2022-onboarding-gratitude-subtitle = Хвала вам што користите { -brand-short-name }, којег подржава Mozilla фондација. Уз вашу подршку, настојимо да учинимо интернет бољим, отворенијим и приступачнијим местом за све.
+mr2022-onboarding-gratitude-primary-button-label = Погледајте шта је ново
+mr2022-onboarding-gratitude-secondary-button-label = Започните прегледање
+
+## Onboarding spotlight for infrequent users
+
+onboarding-infrequent-import-title = Осећајте се као код куће
+onboarding-infrequent-import-subtitle = Било да само испробавате или сте се одлучили да користите, можете да увезете обележиваче, лозинке и друго.
+onboarding-infrequent-import-primary-button = Увези у { -brand-short-name }
+
+## MR2022 Illustration alt tags
+## Descriptive tags for illustrations used by screen readers and other assistive tech
+
+mr2022-onboarding-pin-image-alt =
+    .aria-label = Особа која ради на лаптопу и окружена је звездама и цвећем
+mr2022-onboarding-default-image-alt =
+    .aria-label = Особа која грли { -brand-product-name } лого
+mr2022-onboarding-import-image-alt =
+    .aria-label = Особа која вози скејтборд, са кутијом софтверских икона
+mr2022-onboarding-mobile-download-image-alt =
+    .aria-label = Жабе која скакућу преко локвања, а у средини је QR код за преузимање { -brand-product-name } за мобилне
+mr2022-onboarding-pin-private-image-alt =
+    .aria-label = Магични штапић чини да се { -brand-product-name } лого приватног прегледања појави из шешира
+mr2022-onboarding-privacy-segmentation-image-alt =
+    .aria-label = Светлопуте и тамнопуте руке ударају петака
+mr2022-onboarding-gratitude-image-alt =
+    .aria-label = Поглед на залазак сунца кроз прозор, са лисицом и собном биљком на дасци прозора
+mr2022-onboarding-colorways-image-alt =
+    .aria-label = Рука спрејем прави шарени колаж зеленог ока, наранџасте патике, црвене кошаркашке лопте, љубичастих слушалица, плавог срца и жуте круне
+
+## Device migration onboarding
+
+onboarding-device-migration-image-alt =
+    .aria-label = Лисица маше на екрану лаптопа. Миш је повезан са лаптопом.
+onboarding-device-migration-title = Добродошли назад!
+onboarding-device-migration-subtitle = Пријавите се у ваш { -fxaccount-brand-name(capitalization: "sentence") } да бисте пренели ваше обележиваче, лозинке и историју на нови уређај.
+onboarding-device-migration-primary-button-label = Пријави се

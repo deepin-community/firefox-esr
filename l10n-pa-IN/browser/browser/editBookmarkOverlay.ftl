@@ -2,17 +2,6 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-bookmark-overlay-name =
-    .value = ਨਾਂ:
-    .accesskey = N
-
-bookmark-overlay-location =
-    .value = ਟਿਕਾਣਾ:
-    .accesskey = L
-
-bookmark-overlay-folder =
-    .value = ਫੋਲਡਰ:
-
 bookmark-overlay-name-2 =
     .value = ਨਾਂ
     .accesskey = N
@@ -35,13 +24,15 @@ bookmark-overlay-folders-expander =
     .tooltiptextdown = { bookmark-overlay-folders-expander.tooltiptext }
     .tooltiptextup = ਓਹਲੇ
 
+bookmark-overlay-folders-expander2 =
+    .tooltiptext = ਸਭ ਬੁੱਕਮਾਰਕ ਫੋਲਡਰ ਵੇਖੋ
+
+bookmark-overlay-folders-expander-hide =
+    .tooltiptext = ਓਹਲੇ
+
 bookmark-overlay-new-folder-button =
     .label = ਨਵਾਂ ਫੋਲਡਰ
     .accesskey = o
-
-bookmark-overlay-tags =
-    .value = ਟੈਗ:
-    .accesskey = T
 
 bookmark-overlay-tags-2 =
     .value = ਟੈਗ
@@ -57,9 +48,11 @@ bookmark-overlay-tags-expander =
     .tooltiptextdown = { bookmark-overlay-tags-expander.tooltiptext }
     .tooltiptextup = ਓਹਲੇ
 
-bookmark-overlay-keyword =
-    .value = ਸ਼ਬਦ:
-    .accesskey = K
+bookmark-overlay-tags-expander2 =
+    .tooltiptext = ਸਭ ਟੈਗ ਵੇਖੋ
+
+bookmark-overlay-tags-expander-hide =
+    .tooltiptext = ਓਹਲੇ
 
 bookmark-overlay-keyword-2 =
     .value = ਸ਼ਬਦ

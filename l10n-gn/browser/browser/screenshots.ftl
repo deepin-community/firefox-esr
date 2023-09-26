@@ -2,15 +2,14 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-screenshots-context-menu = Ejapo mba’erechaha japyhypy
-
-screenshots-my-shots-button = Che japyhypy
-
 screenshot-toolbarbutton =
     .label = Mba’erechaha japyhy
     .tooltiptext = Ejapyhy mba’erechaha
 
-screenshots-instructions = Embosyryry térã eikutu kuatiaroguépe embasa’y hag̃ua tendaguasu. Ejopy ESC eheja hag̃ua.
+screenshot-shortcut =
+    .key = S
+
+screenshots-instructions = Embosyryry térã eikutu kuatiaroguépe embosa’y hag̃ua tendaguasu. Ejopy ESC eheja hag̃ua.
 screenshots-cancel-button = Heja
 screenshots-save-visible-button = Ñongatu hechapy
 screenshots-save-page-button = Kuatiarogue tuichavéva ñongatu
@@ -18,6 +17,14 @@ screenshots-download-button = Mboguejy
 screenshots-download-button-tooltip = Emboguejy mba’erechaha japyhypyre
 screenshots-copy-button = Monguatia
 screenshots-copy-button-tooltip = Embohasa mba’erechaha japyhypyre kuatiajokohápe
+screenshots-download-button-title =
+    .title = Emboguejy mba’erechaha japyhypyre
+screenshots-copy-button-title =
+    .title = Emboasa mba’erechaha japyhypyre kuatiajokohápe
+screenshots-cancel-button-title =
+    .title = Heja
+screenshots-retry-button-title =
+    .title = Eha’ãjey mba’erechaha jejapyhy
 
 screenshots-meta-key =
     { PLATFORM() ->
@@ -41,8 +48,6 @@ screenshots-login-error-details = Ndaikatúi roñongatu pe japyhypy oĩ rupi apa
 screenshots-unshootable-page-error-title = Ndaikatúi rojapyhy ko kuatiarogue.
 screenshots-unshootable-page-error-details = Kóva ndaha’éi ñanduti kuatiarogue ypykuéva, péicha rupi ndaikatúi roñongatu japyhypy.
 
-screenshots-self-screenshot-error-title = Ndaikatúi jajapo peteĩ japyhypy { -screenshots-brand-name } kuatiaroguépe!
-
 screenshots-empty-selection-error-title = Pe jeporavo michĩeterei
 
 screenshots-private-window-error-title = { -screenshots-brand-name } ndojepurukuaái kundaha ñemigua rekópe
@@ -50,3 +55,6 @@ screenshots-private-window-error-details = Rombyasy ko’ã oikóva. Romba’apo
 
 screenshots-generic-error-title = ¡Épa! { -screenshots-brand-name } itavyraíma.
 screenshots-generic-error-details = Ndoroikuaái mba’etépa pe oikóva. ¿Ejapose jeýpa térã ejapyhy peteĩ kuatiarogue ambuévagui?
+
+screenshots-too-large-error-title = Pe mba’erechaha jejapyhy oñemomichĩ tuichaiterei rupi
+screenshots-too-large-error-details = Eñeha’ã eiporavo peteĩ tendaguasu oguereko’ỹva 32.700 píxeles ipukuvehápe térã 124.900.000 píxeles tuichakue.

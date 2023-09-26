@@ -2,12 +2,12 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-connection-window =
+connection-window2 =
     .title = Параметры злучэння
     .style =
         { PLATFORM() ->
-            [macos] width: 44em
-           *[other] width: 49em
+            [macos] min-width: 44em
+           *[other] min-width: 49em
         }
 
 connection-close-key =
@@ -35,10 +35,6 @@ connection-proxy-http = HTTP проксі
     .accesskey = п
 connection-proxy-http-port = Порт
     .accesskey = п
-connection-proxy-http-sharing =
-    .label = Таксама выкарыстоўваць гэты проксі для FTP і HTTPS
-    .accesskey = п
-
 connection-proxy-https-sharing =
     .label = Выкарыстоўваць гэты проксі таксама для HTTPS
     .accesskey = ы
@@ -48,29 +44,21 @@ connection-proxy-https = HTTPS-проксі
 connection-proxy-ssl-port = Порт
     .accesskey = о
 
-connection-proxy-ftp = FTP проксі
-    .accesskey = F
-connection-proxy-ftp-port = Порт
-    .accesskey = р
-
 connection-proxy-socks = Трымальнік SOCKS
     .accesskey = C
 connection-proxy-socks-port = Порт
     .accesskey = т
 
 connection-proxy-socks4 =
-    .label = SOCKS в4
+    .label = SOCKS 4
     .accesskey = 4
 connection-proxy-socks5 =
-    .label = SOCKS в5
+    .label = SOCKS 5
     .accesskey = 5
 connection-proxy-noproxy = Без проксі для
     .accesskey = е
 
 connection-proxy-noproxy-desc = Прыклад: .mozilla.org, .net.nz, 192.168.1.0/24
-
-# Do not translate localhost, 127.0.0.1 and ::1.
-connection-proxy-noproxy-localhost-desc = Злучэнне з localhost, 127.0.0.1 і :: 1 заўжды ідзе без без проксі.
 
 # Do not translate "localhost", "127.0.0.1/8" and "::1". (You can translate "and".)
 connection-proxy-noproxy-localhost-desc-2 = Злучэнне з localhost, 127.0.0.1/8 і ::1 заўжды ідзе без без проксі.
@@ -84,20 +72,18 @@ connection-proxy-reload =
     .accesskey = А
 
 connection-proxy-autologin =
-    .label = Не запытваць апазнаванне, калі ёсць захаваны пароль
+    .label = Не запытваць аўтэнтыфікацыю, калі ёсць захаваны пароль
     .accesskey = Н
-    .tooltip = Гэтая налада без запытаў выконвае апазнаванне вас на проксі, калі вы маеце захаваныя для іх уліковыя запісы. Запыт адбудзецца толькі падчас няўдачы апазнавання.
+    .tooltip = Гэта налада аўтэнтыфікуе вас на проксі без запытаў, калі вы маеце захаваныя для іх уліковыя запісы. Пры няўдалай аўтэнтыфікацыі вы атрымаеце запыт.
+
+connection-proxy-autologin-checkbox =
+    .label = Не запытваць аўтэнтыфікацыю, калі ёсць захаваны пароль
+    .accesskey = Н
+    .tooltiptext = Гэта налада аўтэнтыфікуе вас на проксі без запытаў, калі вы маеце захаваныя для іх уліковыя запісы. Пры няўдалай аўтэнтыфікацыі вы атрымаеце запыт.
 
 connection-proxy-socks-remote-dns =
-    .label = Праксіраваць DNS-запыты пры выкарыстанні SOCKS v5
+    .label = Праксіраваць DNS-запыты пры выкарыстанні SOCKS 5
     .accesskey = з
-
-connection-dns-over-https =
-    .label = Уключыць DNS праз HTTPS
-    .accesskey = р
-
-connection-dns-over-https-url-resolver = Выкарыстоўваць правайдар
-    .accesskey = п
 
 # Variables:
 #   $name (String) - Display name or URL for the DNS over HTTPS provider

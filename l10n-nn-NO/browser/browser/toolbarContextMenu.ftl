@@ -20,14 +20,6 @@ toolbar-context-menu-bookmark-selected-tabs =
 toolbar-context-menu-select-all-tabs =
     .label = Vel alle faner
     .accesskey = V
-toolbar-context-menu-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Angre attlating av faner
-           *[other] Angre attlating av faner
-        }
-    .accesskey = A
-
 toolbar-context-menu-reopen-closed-tabs =
     .label =
         { $tabCount ->
@@ -37,8 +29,8 @@ toolbar-context-menu-reopen-closed-tabs =
     .accesskey = a
 
 toolbar-context-menu-manage-extension =
-    .label = Handter utviding
-    .accesskey = e
+    .label = Handsam utviding
+    .accesskey = u
 toolbar-context-menu-remove-extension =
     .label = Fjern utviding
     .accesskey = F
@@ -50,18 +42,18 @@ toolbar-context-menu-report-extension =
     .label = Rapporter utviding
     .accesskey = o
 
-# Can appear on the same context menu as menubarCmd ("Menu Bar") and
-# personalbarCmd ("Bookmarks Toolbar"), so they should have different
-# access keys.
+# Can appear on the same context menu as toolbar-context-menu-menu-bar-cmd
+# ("Menu Bar") and personalbarCmd ("Bookmarks Toolbar"), so they should
+# have different access keys.
 toolbar-context-menu-pin-to-overflow-menu =
     .label = Fest til overflytsmenyen
     .accesskey = F
-toolbar-context-menu-auto-hide-downloads-button =
-    .label = Gøym automatisk i verktøylinja
-    .accesskey = a
 toolbar-context-menu-auto-hide-downloads-button-2 =
     .label = Gøym knapp når han er tom
     .accesskey = G
+toolbar-context-menu-always-open-downloads-panel =
+    .label = Vis panel når nedlastinga startar
+    .accesskey = s
 toolbar-context-menu-remove-from-toolbar =
     .label = Fjern frå verktøylinja
     .accesskey = n
@@ -71,6 +63,11 @@ toolbar-context-menu-view-customize-toolbar =
 toolbar-context-menu-view-customize-toolbar-2 =
     .label = Tilpass verktøylinje…
     .accesskey = T
+# This is only ever shown when toolbar-context-menu-pin-to-overflow-menu
+# is hidden, so they can share access keys.
+toolbar-context-menu-pin-to-toolbar =
+    .label = Fest til verktøylinja
+    .accesskey = F
 
 toolbar-context-menu-bookmarks-toolbar-always-show-2 =
     .label = Vis alltid
@@ -85,3 +82,7 @@ toolbar-context-menu-bookmarks-toolbar-on-new-tab-2 =
 toolbar-context-menu-bookmarks-show-other-bookmarks =
     .label = Vis andre bokmerke
     .accesskey = V
+
+toolbar-context-menu-menu-bar-cmd =
+    .toolbarname = Menylinje
+    .accesskey = M

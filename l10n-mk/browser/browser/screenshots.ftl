@@ -2,9 +2,8 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-screenshots-context-menu = Фати слика
-
-screenshots-my-shots-button = Мои слики
+screenshot-shortcut =
+    .key = S
 
 screenshots-instructions = Влечете и кликнете на страницата за да означите регион. Притиснете ESC за да се откажете.
 screenshots-cancel-button = Откажи
@@ -12,6 +11,8 @@ screenshots-save-visible-button = Сними видлив дел
 screenshots-save-page-button = Сними цела страница
 screenshots-download-button = Преземи
 screenshots-copy-button = Копирај
+screenshots-cancel-button-title =
+    .title = Откажи
 
 screenshots-meta-key =
     { PLATFORM() ->
@@ -35,8 +36,6 @@ screenshots-login-error-details = Не можевме да ја зачуваме
 screenshots-unshootable-page-error-title = Не можеме да фатиме слика од оваа страница.
 screenshots-unshootable-page-error-details = Ова не е обична веб-страница, па не можете да фатите слика од неа.
 
-screenshots-self-screenshot-error-title = Не можете да фатите слика од страницата на { -screenshots-brand-name }!
-
 screenshots-empty-selection-error-title = Делот што го избравте е премногу мал
 
 screenshots-private-window-error-title = { -screenshots-brand-name } е деактивиран во текот на Приватното прелистување
@@ -44,3 +43,4 @@ screenshots-private-window-error-details = Извинете за незгода�
 
 screenshots-generic-error-title = Ајдее! { -screenshots-brand-name } излезе од контрола.
 screenshots-generic-error-details = Не сме баш сигурни што се случи. Сакате да се обидете повторно или да направите слика од друга страница?
+

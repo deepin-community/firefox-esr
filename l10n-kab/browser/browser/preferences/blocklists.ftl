@@ -2,9 +2,9 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-blocklist-window =
+blocklist-window2 =
     .title = Tibdarin n usewḥel
-    .style = width: 55em
+    .style = min-width: 55em
 
 blocklist-description = Fren aseqdec n tebdert { -brand-short-name } i usewḥel n yineḍfaren srid. Tibdarin i d-yettwanefken sɣur <a data-l10n-name="disconnect-link" title="Disconnect">Ffeɣ</a>.
 blocklist-close-key =
@@ -12,14 +12,6 @@ blocklist-close-key =
 
 blocklist-treehead-list =
     .label = Tabdart
-
-blocklist-button-cancel =
-    .label = Sefsex
-    .accesskey = S
-
-blocklist-button-ok =
-    .label = Sekles asnifel
-    .accesskey = S
 
 blocklist-dialog =
     .buttonlabelaccept = Sekles asnifel

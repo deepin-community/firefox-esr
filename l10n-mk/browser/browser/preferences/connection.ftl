@@ -2,12 +2,12 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-connection-window =
+connection-window2 =
     .title = Поставки за врската
     .style =
         { PLATFORM() ->
-            [macos] width: 44em
-           *[other] width: 49em
+            [macos] min-width: 44em
+           *[other] min-width: 49em
         }
 
 connection-close-key =
@@ -28,9 +28,6 @@ connection-proxy-http-port = Порта
 
 connection-proxy-ssl-port = Порта
     .accesskey = о
-
-connection-proxy-ftp-port = Порта
-    .accesskey = р
 
 connection-proxy-socks-port = Порта
     .accesskey = т

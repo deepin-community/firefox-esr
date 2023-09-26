@@ -11,6 +11,12 @@ reload-tab =
 select-all-tabs =
     .label = Vælg alle faneblade
     .accesskey = V
+tab-context-play-tab =
+    .label = Afspil lyd/video i faneblad
+    .accesskey = A
+tab-context-play-tabs =
+    .label = Afspil lyd/video i fanebladene.
+    .accesskey = s
 duplicate-tab =
     .label = Kopier faneblad
     .accesskey = K
@@ -48,12 +54,9 @@ unpin-selected-tabs =
 bookmark-selected-tabs =
     .label = Bogmærk faneblade…
     .accesskey = B
-bookmark-tab =
-    .label = Bogmærk faneblad
+tab-context-bookmark-tab =
+    .label = Bogmærk faneblad…
     .accesskey = B
-reopen-in-container =
-    .label = Åbn igen i Kontekst
-    .accesskey = o
 tab-context-open-in-new-container-tab =
     .label = Åbn i nyt kontekst-faneblad
     .accesskey = t
@@ -69,30 +72,9 @@ move-to-new-window =
 tab-context-close-multiple-tabs =
     .label = Luk flere faneblade
     .accesskey = a
-tab-context-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Fortryd lukning af faneblad
-           *[other] Fortryd lukning af faneblade
-        }
-    .accesskey = r
-close-tab =
-    .label = Luk faneblad
-    .accesskey = u
-close-tabs =
-    .label = Luk faneblade
-    .accesskey = u
-move-tabs =
-    .label = Flyt faneblade
-    .accesskey = y
-move-tab =
-    .label = Flyt faneblad
-    .accesskey = y
 tab-context-share-url =
     .label = Del
     .accesskey = D
-tab-context-share-more =
-    .label = Mere…
 
 ## Variables:
 ##  $tabCount (Number): the number of tabs that are affected by the action.
@@ -103,14 +85,6 @@ tab-context-reopen-closed-tabs =
             [1] Åbn lukket faneblad igen
             [one] Åbn lukket faneblad igen
            *[other] Åbn lukkede faneblade igen
-        }
-    .accesskey = u
-tab-context-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Luk faneblad
-            [one] Luk et faneblad
-           *[other] Luk faneblade
         }
     .accesskey = u
 tab-context-close-n-tabs =
@@ -129,3 +103,11 @@ tab-context-move-tabs =
            *[other] Flyt faneblade
         }
     .accesskey = y
+
+tab-context-send-tabs-to-device =
+    .label =
+        { $tabCount ->
+            [one] Send faneblad til enhed
+           *[other] Send { $tabCount } faneblade til enhed
+        }
+    .accesskey = n

@@ -5,22 +5,14 @@
 
 about-logins-page-title = Oanmeldingen en wachtwurden
 
-# "Google Play" and "App Store" are both branding and should not be translated
-
-login-app-promo-title = Nim jo wachtwurden oeral mei hinne
-login-app-promo-subtitle = Download de fergeze { -lockwise-brand-name }-app
-login-app-promo-android =
-    .alt = Downloade op Google Play
-login-app-promo-apple =
-    .alt = Downloade yn de App Store
-
-login-filter =
+about-logins-login-filter =
     .placeholder = Oanmeldingen sykje
+    .key = F
 
-create-login-button = Nij oanmelding meitsje
+create-new-login-button =
+    .title = Nij oanmelding meitsje
 
 fxaccounts-sign-in-text = Bring jo wachtwurden nei jo oare apparaten
-fxaccounts-sign-in-button = Meld jo oan by { -sync-brand-short-name }
 fxaccounts-sign-in-sync-button = Oanmelde om te syngronisearjen
 fxaccounts-avatar-button =
     .title = Account beheare
@@ -40,21 +32,31 @@ menu-menuitem-preferences =
        *[other] Foarkarren
     }
 about-logins-menu-menuitem-help = Help
-menu-menuitem-android-app = { -lockwise-brand-short-name } foar Android
-menu-menuitem-iphone-app = { -lockwise-brand-short-name } foar iPhone en iPad
 
 ## Login List
 
 login-list =
-    .aria-label = Oanmeldingen dy't oerienkomme mei de sykterm
+    .aria-label = Oanmeldingen dy’t oerienkomme mei de sykterm
+# Variables
+#   $count (number) - Number of logins
 login-list-count =
     { $count ->
         [one] { $count } oanmelding
        *[other] { $count } oanmeldingen
     }
+# Variables
+#   $count (number) - Number of filtered logins
+#   $total (number) - Total number of logins
+login-list-filtered-count =
+    { $total ->
+        [one] { $count } fan { $total } oanmelding
+       *[other] { $count } fan { $total } oanmeldingen
+    }
 login-list-sort-label-text = Sortearje op:
 login-list-name-option = Namme (A-Z)
 login-list-name-reverse-option = Namme (Z-A)
+login-list-username-option = Brûkersnamme (A-Z)
+login-list-username-reverse-option = Brûkersnamme (Z-A)
 about-logins-login-list-alerts-option = Warskôgingen
 login-list-last-changed-option = Lêst wizige
 login-list-last-used-option = Lêst brûkt
@@ -69,22 +71,22 @@ about-logins-list-item-breach-icon =
     .title = Troffen website
 about-logins-list-item-vulnerable-password-icon =
     .title = Kwetsber wachtwurd
+about-logins-list-section-breach = Websites mei datalek
+about-logins-list-section-vulnerable = Kwetsbere wachtwurden
+about-logins-list-section-nothing = Gjin warskôging
+about-logins-list-section-today = Hjoed
+about-logins-list-section-yesterday = Juster
+about-logins-list-section-week = Ofrûne 7 dagen
 
 ## Introduction screen
-
-login-intro-heading = Sykje jo bewarre oanmeldingen? Stel { -sync-brand-short-name } yn.
 
 about-logins-login-intro-heading-logged-out2 = Op syk nei jo bewarre oanmeldingen? Skeakelje syngronisaasje yn of ymportearje se.
 about-logins-login-intro-heading-logged-in = Gjin syngronisearre oanmeldingen fûn.
 login-intro-description = As jo jo oanmeldgegevens by { -brand-product-name } op in oar apparaat bewarre hawwe, kinne jo se sa ophelje:
-login-intro-instruction-fxa = Meitsje op it apparaat wêrop jo oanmeldgegevens stean in { -fxaccount-brand-name } of meld jo oan
-login-intro-instruction-fxa-settings = Soargje derfoar dat jo it fjild Oanmeldingen yn de ynstellingen fan { -sync-brand-short-name } oanfinkt hawwe
-about-logins-intro-instruction-help = Besykje <a data-l10n-name="help-link">Stipe foar { -lockwise-brand-short-name }</a> foar mear help
 login-intro-instructions-fxa = Meitsje op it apparaat wêrop jo oanmeldgegevens stean in { -fxaccount-brand-name } of meld jo oan.
 login-intro-instructions-fxa-settings = Gean nei Ynstellingen > Sync > Syngronisaasje ynskeakelje… Pleats in finkje by Oanmeldingen en wachtwurden.
-login-intro-instructions-fxa-help = Besykje <a data-l10n-name="help-link">Stipe foar { -lockwise-brand-short-name }</a> foar mear help.
-about-logins-intro-import = As jo oanmeldingen yn in oare browser bewarre wurde, kinne jo <a data-l10n-name="import-link">se ymportearje yn { -lockwise-brand-short-name }</a>
-
+login-intro-instructions-fxa-passwords-help = Besykje <a data-l10n-name="passwords-help-link">help by wachtwurden</a> foar mear help.
+about-logins-intro-browser-only-import = As jo oanmeldingen yn in oare browser bewarre wurde, kinne jo <a data-l10n-name="import-link">se ymportearje yn { -brand-product-name }</a>
 about-logins-intro-import2 = As jo oanmeldingen bûten { -brand-product-name } bewarre binne, dan kinne jo se ymportearje <a data-l10n-name="import-browser-link">fan in oare browser út</a> of <a data-l10n-name = "import-file-link">fan in bestân út</a>
 
 ## Login
@@ -93,7 +95,7 @@ login-item-new-login-title = Nij oanmelding meitsje
 login-item-edit-button = Bewurkje
 about-logins-login-item-remove-button = Fuortsmite
 login-item-origin-label = Websiteadres
-login-item-tooltip-message = Soargje derfoar dat dit eksakt oerienkomt mei it adres fan de website wêr't jo jo oanmelde.
+login-item-tooltip-message = Soargje derfoar dat dit eksakt oerienkomt mei it adres fan de website wêr’t jo jo oanmelde.
 login-item-origin =
     .placeholder = https://www.example.com
 login-item-username-label = Brûkersnamme
@@ -109,9 +111,17 @@ login-item-copied-password-button-text = Kopiearre!
 login-item-save-changes-button = Wizigingen bewarje
 login-item-save-new-button = Bewarje
 login-item-cancel-button = Annulearje
-login-item-time-changed = Lêst wizige: { DATETIME($timeChanged, day: "numeric", month: "long", year: "numeric") }
-login-item-time-created = Oanmakke: { DATETIME($timeCreated, day: "numeric", month: "long", year: "numeric") }
-login-item-time-used = Lêst brûkt: { DATETIME($timeUsed, day: "numeric", month: "long", year: "numeric") }
+
+## The date is displayed in a timeline showing the password evolution.
+## A label is displayed under the date to describe the type of change.
+## (e.g. updated, created, etc.)
+
+# Variables
+#   $datetime (date) - Event date
+login-item-timeline-point-date = { DATETIME($datetime, day: "numeric", month: "short", year: "numeric") }
+login-item-timeline-action-created = Oanmakke
+login-item-timeline-action-updated = Bywurke
+login-item-timeline-action-used = Brûkt
 
 ## OS Authentication dialog
 
@@ -139,10 +149,6 @@ about-logins-copy-password-os-auth-dialog-message-win = Fier jo oanmeldgegevens 
 # On MacOS, only provide the reason that account verification is needed. Do not put a complete sentence here.
 about-logins-copy-password-os-auth-dialog-message-macosx = kopiearje it bewarre wachtwurd
 
-## Master Password notification
-
-master-password-notification-message = Fier jo haadwachtwurd yn om bewarre oanmeldingen en wachtwurden te besjen
-
 # This message can be seen when attempting to export a password in about:logins on Windows.
 about-logins-export-password-os-auth-dialog-message-win = Fier jo oanmeldgegevens foar Windows yn om jo oanmelding te eksportearjen. Hjirtroch wurdt de befeiliging fan jo accounts beskerme.
 # This message can be seen when attempting to export a password in about:logins
@@ -156,24 +162,6 @@ master-password-reload-button =
     .label = Oanmelde
     .accesskey = O
 
-## Password Sync notification
-
-enable-password-sync-notification-message =
-    { PLATFORM() ->
-        [windows] Wolle jo jo oanmeldingen oeral wêr't jo { -brand-product-name } brûke? Gean nei de opsjes fan { -sync-brand-short-name } en finkje it fjild Oanmeldingen oan.
-       *[other] Wolle jo jo oanmeldingen oeral wêr't jo { -brand-product-name } brûke? Gean nei de foarkarren fan { -sync-brand-short-name } en finkje it fjild Oanmeldingen oan.
-    }
-enable-password-sync-preferences-button =
-    .label =
-        { PLATFORM() ->
-            [windows] { -sync-brand-short-name }-opsjes besjen
-           *[other] { -sync-brand-short-name }-foarkarren besjen
-        }
-    .accesskey = b
-about-logins-enable-password-sync-dont-ask-again-button =
-    .label = Dit net mear freegje
-    .accesskey = D
-
 ## Dialogs
 
 confirmation-dialog-cancel-button = Annulearje
@@ -183,6 +171,9 @@ confirmation-dialog-dismiss-button =
 about-logins-confirm-remove-dialog-title = Dizze oanmelding fuortsmite?
 confirm-delete-dialog-message = Dizze aksje kin net ûngedien makke wurde.
 about-logins-confirm-remove-dialog-confirm-button = Fuortsmite
+
+## Variables
+##   $count (number) - Number of items
 
 about-logins-confirm-remove-all-dialog-confirm-button-label =
     { $count ->
@@ -205,9 +196,9 @@ about-logins-confirm-remove-all-dialog-title =
     }
 about-logins-confirm-remove-all-dialog-message =
     { $count ->
-        [1] Dit smyt de oanmelding fuort dy't jo yn { -brand-short-name } bewarre hawwe en alle warskôgingen foar datalekken dy't hjir ferskine. Jo kinne dizze aksje net ûngedien meitsje.
-        [one] Dit smyt de oanmelding fuort dy't jo yn { -brand-short-name } bewarre hawwe en alle warskôgingen foar datalekken dy't hjir ferskine. Jo kinne dizze aksje net ûngedien meitsje.
-       *[other] Dit smyt de oanmeldingen fuort dy't jo yn { -brand-short-name } bewarre hawwe en alle warskôgingen foar datalekken dy't hjir ferskine. Jo kinne dizze aksje net ûngedien meitsje.
+        [1] Dit smyt de oanmelding fuort dy’t jo yn { -brand-short-name } bewarre hawwe en alle warskôgingen foar datalekken dy’t hjir ferskine. Jo kinne dizze aksje net ûngedien meitsje.
+        [one] Dit smyt de oanmelding fuort dy’t jo yn { -brand-short-name } bewarre hawwe en alle warskôgingen foar datalekken dy’t hjir ferskine. Jo kinne dizze aksje net ûngedien meitsje.
+       *[other] Dit smyt de oanmeldingen fuort dy’t jo yn { -brand-short-name } bewarre hawwe en alle warskôgingen foar datalekken dy’t hjir ferskine. Jo kinne dizze aksje net ûngedien meitsje.
     }
 
 about-logins-confirm-remove-all-sync-dialog-title =
@@ -217,13 +208,15 @@ about-logins-confirm-remove-all-sync-dialog-title =
     }
 about-logins-confirm-remove-all-sync-dialog-message =
     { $count ->
-        [1] Dit smyt de oanmelding fuort dy't jo yn { -brand-short-name } bewarre hawwe fan alle apparaten dy't mei jo { -fxaccount-brand-name } syngronisearre binne. Dit smyt ek alle warskôgingen foar datalekken dy't hjir ferskine fuort. Jo kinne dizze aksje net ûngedien meitsje.
-        [one] Dit smyt de oanmelding fuort dy't jo yn { -brand-short-name } bewarre hawwe fan alle apparaten dy't mei jo { -fxaccount-brand-name } syngronisearre binne. Dit smyt ek alle warskôgingen foar datalekken dy't hjir ferskine fuort. Jo kinne dizze aksje net ûngedien meitsje.
-       *[other] Dit smyt de oanmeldingen fuort dy't jo yn { -brand-short-name } bewarre hawwe fan alle apparaten dy't mei jo { -fxaccount-brand-name } syngronisearre binne. Dit smyt ek alle warskôgingen foar datalekken dy't hjir ferskine fuort. Jo kinne dizze aksje net ûngedien meitsje.
+        [1] Dit smyt de oanmelding fuort dy’t jo yn { -brand-short-name } bewarre hawwe fan alle apparaten dy’t mei jo { -fxaccount-brand-name } syngronisearre binne. Dit smyt ek alle warskôgingen foar datalekken dy’t hjir ferskine fuort. Jo kinne dizze aksje net ûngedien meitsje.
+        [one] Dit smyt de oanmelding fuort dy’t jo yn { -brand-short-name } bewarre hawwe fan alle apparaten dy’t mei jo { -fxaccount-brand-name } syngronisearre binne. Dit smyt ek alle warskôgingen foar datalekken dy’t hjir ferskine fuort. Jo kinne dizze aksje net ûngedien meitsje.
+       *[other] Dit smyt de oanmeldingen fuort dy’t jo yn { -brand-short-name } bewarre hawwe fan alle apparaten dy’t mei jo { -fxaccount-brand-name } syngronisearre binne. Dit smyt ek alle warskôgingen foar datalekken dy’t hjir ferskine fuort. Jo kinne dizze aksje net ûngedien meitsje.
     }
 
+##
+
 about-logins-confirm-export-dialog-title = Oanmeldingen en wachtwurden eksportearje
-about-logins-confirm-export-dialog-message = Jo wachtwurden wurde bewarre as lêsbere tekst (bygelyks BadP@ssw0rd), dus elkenien dy't it eksportearre bestân iepenje kin, kin se besjen.
+about-logins-confirm-export-dialog-message = Jo wachtwurden wurde bewarre as lêsbere tekst (bygelyks BadP@ssw0rd), dus elkenien dy’t it eksportearre bestân iepenje kin, kin se besjen.
 about-logins-confirm-export-dialog-confirm-button = Eksportearje…
 
 about-logins-alert-import-title = Ymportearjen foltôge
@@ -241,12 +234,11 @@ about-logins-breach-alert-date = Dit lek is bard op { DATETIME($date, day: "nume
 # Variables:
 #   $hostname (String) - The hostname of the website associated with the login, e.g. "example.com"
 about-logins-breach-alert-link = Nei { $hostname }
-about-logins-breach-alert-learn-more-link = Mear ynfo
 
 ## Vulnerable Password notification
 
 about-logins-vulnerable-alert-title = Kwetsber wachtwurd
-about-logins-vulnerable-alert-text2 = Dit wachtwurd is brûkt op in oare account, dy't wierskynlik troch in datalek troffen is. It opnij brûken fan oanmeldgegevens bringt al jo accounts yn gefaar. Wizigje dit wachtwurd.
+about-logins-vulnerable-alert-text2 = Dit wachtwurd is brûkt op in oare account, dy’t wierskynlik troch in datalek troffen is. It opnij brûken fan oanmeldgegevens bringt al jo accounts yn gefaar. Wizigje dit wachtwurd.
 # Variables:
 #   $hostname (String) - The hostname of the website associated with the login, e.g. "example.com"
 about-logins-vulnerable-alert-link = Nei { $hostname }
@@ -262,7 +254,6 @@ about-logins-error-message-duplicate-login-with-link = Der bestiet al in fermeld
 
 # This is a generic error message.
 about-logins-error-message-default = Der is in flater bard wylst it bewarjen fan dit wachtwurd.
-
 
 ## Login Export Dialog
 
@@ -331,7 +322,7 @@ about-logins-import-dialog-done = Dien
 
 about-logins-import-dialog-error-title = Ymportearflater
 about-logins-import-dialog-error-conflicting-values-title = Meardere tsjinstridige wearden foar ien oanmelding
-about-logins-import-dialog-error-conflicting-values-description = Bygelyks: meardere brûkersnammen, wachtwurden, URL's, ensfh. foar ien oanmelding.
+about-logins-import-dialog-error-conflicting-values-description = Bygelyks: meardere brûkersnammen, wachtwurden, URL’s, ensfh. foar ien oanmelding.
 about-logins-import-dialog-error-file-format-title = Probleem mei bestânsyndieling
 about-logins-import-dialog-error-file-format-description = Ferkearde of ûntbrekkende kolomkoppen. Soargje derfoar dat it bestân kolommen foar brûkersnamme, wachtwurd en URL befettet.
 about-logins-import-dialog-error-file-permission-title = Kin bestân net lêze
@@ -340,7 +331,7 @@ about-logins-import-dialog-error-unable-to-read-title = Kin bestân net analysea
 about-logins-import-dialog-error-unable-to-read-description = Kontrolearje oft jo in CSV- of TSV-bestân selektearre hawwe.
 about-logins-import-dialog-error-no-logins-imported = Der binne gjin oanmeldingen ymportearre
 about-logins-import-dialog-error-learn-more = Mear ynfo
-about-logins-import-dialog-error-try-import-again = Probearje nochris te ymportearjen...
+about-logins-import-dialog-error-try-import-again = Probearje nochris te ymportearjen…
 about-logins-import-dialog-error-cancel = Annulearje
 
 about-logins-import-report-title = Ymportgearfetting

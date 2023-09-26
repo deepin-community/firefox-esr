@@ -26,9 +26,9 @@ graph-week-summary-private-window = 本周 { -brand-short-name } 所拦截跟踪
 protection-report-webpage-title = 保护信息面板
 protection-report-page-content-title = 保护信息面板
 # This message shows when all privacy protections are turned off, which is why we use the word "can", Firefox is able to protect your privacy, but it is currently not.
-protection-report-page-summary = 当您上网时，{ -brand-short-name } 可在后台保护您的隐私。以下是这些保护的个性化摘要，以及能够用来保护在线安全的各种工具。
+protection-report-page-summary = 当您上网时，{ -brand-short-name } 会在后台保护您的隐私。以下是这些保护的个性化摘要，以及能够用来保护在线安全的各种工具。
 # This message shows when at least some protections are turned on, we are more assertive compared to the message above, Firefox is actively protecting you.
-protection-report-page-summary-default = 当您上网时，{ -brand-short-name } 可在后台保护您的隐私。以下是这些保护的个性化摘要，以及能够用来保护在线安全的各种工具。
+protection-report-page-summary-default = 当您上网时，{ -brand-short-name } 会在后台保护您的隐私。以下是这些保护的个性化摘要，以及能够用来保护在线安全的各种工具。
 
 protection-report-settings-link = 管理您的隐私与安全设置
 
@@ -48,11 +48,11 @@ graph-legend-description = 此图展示了本周各类型跟踪器的总拦截�
 social-tab-title = 社交媒体跟踪器
 social-tab-contant = 社交网站会在众多网站上安插跟踪器。除了您在社交网站上分享、发言外，它们还监视您在其他地方看些什么、做些什么。<a data-l10n-name="learn-more-link">详细了解</a>
 
-cookie-tab-title = 跨网站跟踪性 Cookie
+cookie-tab-title = 跨站跟踪性 Cookie
 cookie-tab-content = 这些 Cookie 由第三方广告商或分析公司设置，能够在不同网站间跟踪您，以收集您的在线活动数据。<a data-l10n-name="learn-more-link">详细了解</a>
 
 tracker-tab-title = 跟踪性内容
-tracker-tab-description = 网站可能会载入包含跟踪代码的外部广告、视频等内容。拦截跟踪性内容可以让网站加载更快，但某些按钮、表单、登录栏可能无法正常工作。<a data-l10n-name="learn-more-link">详细了解</a>
+tracker-tab-description = 网站可能会加载包含跟踪代码的外部广告、视频等内容。拦截跟踪性内容可以让网站加载更快，但某些按钮、表单、登录栏可能无法正常工作。<a data-l10n-name="learn-more-link">详细了解</a>
 
 fingerprinter-tab-title = 数字指纹跟踪程序
 fingerprinter-tab-content = 数字指纹跟踪程序会针对您的浏览器、计算机设置，给您生成独一无二的编号，以便在不同网站间追踪您，勾勒出您的精准画像。<a data-l10n-name="learn-more-link">详细了解</a>
@@ -63,22 +63,20 @@ cryptominer-tab-content = 加密货币挖矿程序盗用您的计算机算力来
 protections-close-button2 =
     .aria-label = 关闭
     .title = 关闭
-  
+
 mobile-app-title = 在更多设备上拦截广告跟踪器
 mobile-app-card-content = 使用内置广告跟踪保护的移动浏览器。
 mobile-app-links = { -brand-product-name } 浏览器 <a data-l10n-name="android-mobile-inline-link">Android</a> 与 <a data-l10n-name="ios-mobile-inline-link">iOS</a> 版
 
 lockwise-title = 密码不怕再忘
-lockwise-title-logged-in2 = 密码管理
-lockwise-header-content = { -lockwise-brand-name } 能将您的密码安全地存储在浏览器中。
+passwords-title-logged-in = 管理您的密码
+passwords-header-content = { -brand-product-name } 能将您的密码安全地存储在浏览器中。
 lockwise-header-content-logged-in = 安全地存储密码，并同步到您的所有设备中。
-protection-report-save-passwords-button = 保存密码
-    .title = 将密码保存到 { -lockwise-brand-short-name }
-protection-report-manage-passwords-button = 管理密码
-    .title = 用 { -lockwise-brand-short-name } 管理密码
-lockwise-mobile-app-title = 密码随身带着走
-lockwise-no-logins-card-content = 在所有设备上使用 { -brand-short-name } 中存放的密码。
-lockwise-app-links = <a data-l10n-name="lockwise-android-inline-link">Android</a> 与 <a data-l10n-name="lockwise-ios-inline-link">iOS</a> 版 { -lockwise-brand-name }
+protection-report-passwords-save-passwords-button = 保存密码
+    .title = 保存密码
+protection-report-passwords-manage-passwords-button = 管理密码
+    .title = 管理密码
+
 
 # Variables:
 # $count (Number) - Number of passwords exposed in data breaches.
@@ -93,12 +91,9 @@ lockwise-scanned-text-breached-logins =
 # $count (Number) - Number of passwords stored in Lockwise.
 lockwise-scanned-text-no-breached-logins =
     { $count ->
-       *[other] 您的 { $count } 个密码皆已安全存放。
+       *[other] 您的 { $count } 个密码皆已安全保存。
     }
 lockwise-how-it-works-link = 工作原理
-
-turn-on-sync = 开启{ -sync-brand-short-name }…
-    .title = 前往“同步”首选项
 
 monitor-title = 帮您关心数据泄露事故
 monitor-link = 工作原理
@@ -199,10 +194,10 @@ bar-tooltip-social =
            *[other] { $count } 个社交媒体跟踪器（{ $percentage }%）
         }
 bar-tooltip-cookie =
-    .title = 跨网站跟踪性 Cookie
+    .title = 跨站跟踪性 Cookie
     .aria-label =
         { $count ->
-           *[other] { $count } 个跨网站跟踪性 Cookie（{ $percentage }%）
+           *[other] { $count } 个跨站跟踪性 Cookie（{ $percentage }%）
         }
 bar-tooltip-tracker =
     .title = 跟踪性内容

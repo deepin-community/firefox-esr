@@ -30,6 +30,15 @@ import-from-nothing =
 import-from-safari =
     .label = Safari
     .accesskey = S
+import-from-opera =
+    .label = Opera
+    .accesskey = O
+import-from-vivaldi =
+    .label = Vivaldi
+    .accesskey = V
+import-from-brave =
+    .label = Brave
+    .accesskey = r
 import-from-canary =
     .label = Chrome Canary
     .accesskey = n
@@ -51,6 +60,9 @@ import-from-firefox =
 import-from-360se =
     .label = 360 Porwr Diogel
     .accesskey = 3
+import-from-opera-gx =
+    .label = Opera GX
+    .accesskey = O
 
 no-migration-sources = Methu canfod unrhyw rhaglenni sy'n cynnwys nodau tudalen, hanes na data cyfrineiriau.
 
@@ -61,8 +73,8 @@ import-items-description = Dewis eitemau i'w mewnforio:
 
 import-permissions-page-title = Rhowch ganiatâd i { -brand-short-name }
 
-# Do not translate "Bookmarks.plist"; the file name is the same everywhere.
-import-permissions-description = Mae macOS yn gofyn i chi ganiatáu’n benodol i { -brand-short-name } gael mynediad i nodau tudalen Safari. Cliciwch “Continue” a dewiswch y ffeil “Bookmarks.plist” yn y panel File Open sy'n ymddangos.
+# Do not translate "Safari" (the name of the browser on Apple devices)
+import-safari-permissions-string = Mae macOS yn gofyn i chi ganiatáu yn benodol i { -brand-short-name } gael mynediad i ddata Safari. Cliciwch "Continue", dewiswch y ffolder "Safari" yn neialog Finder sy'n ymddangos ac yna cliciwch ar "Open".
 
 import-migrating-page-title = Mewnforio…
 
@@ -78,23 +90,9 @@ import-done-description = Cafodd yr eitemau canlynol eu mewnforio'n llwyddiannus
 
 import-close-source-browser = Gwnewch yn siŵr fod y porwr wedi ei gau cyn parhau.
 
-# Displays which browser the bookmarks are being imported from
-#
-# Variables:
-#   $source (String): The browser the user has chosen to import bookmarks from.
-imported-bookmarks-source = O { $source }
-
 source-name-ie = Internet Explorer
 source-name-edge = Microsoft Edge
-source-name-edge-beta = Microsoft Edge Beta
-source-name-safari = Safari
-source-name-canary = Google Chrome Canary
 source-name-chrome = Google Chrome
-source-name-chrome-beta = Google Chrome Beta
-source-name-chrome-dev = Google Chrome Dev
-source-name-chromium = Chromium
-source-name-firefox = Mozilla Firefox
-source-name-360se = 360 Porwr Diogel
 
 imported-safari-reading-list = Rhestr Darllen (O Safari)
 imported-edge-reading-list = Rhestr Darllen (O Edge)
@@ -169,3 +167,8 @@ browser-data-session-checkbox =
     .label = Ffenestri a Thabiau
 browser-data-session-label =
     .value = Ffenestri a Thabiau
+
+browser-data-payment-methods-checkbox =
+    .label = Dulliau talu
+browser-data-payment-methods-label =
+    .value = Dulliau talu

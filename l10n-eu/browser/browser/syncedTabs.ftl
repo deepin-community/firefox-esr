@@ -7,27 +7,44 @@ synced-tabs-sidebar-noclients-subtitle = Beste gailuetako zure fitxak hemen ikus
 synced-tabs-sidebar-intro = Ikusi zure beste gailuetako fitxen zerrenda.
 synced-tabs-sidebar-unverified = Zure kontua egiaztatu egin behar da.
 synced-tabs-sidebar-notabs = Irekitako fitxarik ez
-synced-tabs-sidebar-openprefs = Ireki { -sync-brand-short-name } hobespenak
 synced-tabs-sidebar-open-settings = Ireki sinkronizazio-ezarpenak
 synced-tabs-sidebar-tabsnotsyncing = Aktibatu fitxak sinkronizatzea zure beste gailuetako fitxen zerrenda ikusteko.
 synced-tabs-sidebar-connect-another-device = Konektatu beste gailu bat
 synced-tabs-sidebar-search =
     .placeholder = Bilatu sinkronizatutako fitxak
+
+## Displayed in the Synced Tabs sidebar's context menu when right-clicking tabs
+## and/or devices in the list. The "Open" strings below should be translated
+## consistently with the equivalent strings for the bookmarks manager's context
+## menu. That menu is activated by right-clicking a bookmark in the Library
+## window. The bookmarks manager context's strings are located in places.ftl.
+
 synced-tabs-context-open =
     .label = Ireki
     .accesskey = r
-synced-tabs-context-open-in-new-tab =
-    .label = Ireki fitxa berri batean
-    .accesskey = x
-synced-tabs-context-open-in-new-window =
+synced-tabs-context-open-in-tab =
+    .label = Ireki fitxa berrian
+    .accesskey = b
+synced-tabs-context-open-in-container-tab =
+    .label = Ireki edukiontzi-fitxa berrian
+    .accesskey = d
+synced-tabs-context-open-in-window =
     .label = Ireki leiho berrian
-    .accesskey = l
-synced-tabs-context-open-in-new-private-window =
-    .label = Ireki lotura leiho pribatu berrian
-    .accesskey = p
-synced-tabs-context-bookmark-single-tab =
-    .label = Egin fitxa honen laster-marka…
-    .accesskey = E
+    .accesskey = h
+synced-tabs-context-open-in-private-window =
+    .label = Ireki leiho pribatu berrian
+    .accesskey = r
+
+##
+
+# Displayed in the Synced Tabs sidebar's context menu when right-clicking tabs
+# and/or devices in the list. This string is for a menuitem equivalent to one in
+# the tab context menu (activated by right-clicking a tab in the tabstrip). That
+# string is located in tabContextMenu.ftl. So, this string should be translated
+# consistently with the "Bookmark Tab…" string there.
+synced-tabs-context-bookmark =
+    .label = Egin fitxaren laster-marka…
+    .accesskey = m
 synced-tabs-context-copy =
     .label = Kopiatu
     .accesskey = K
@@ -40,7 +57,5 @@ synced-tabs-context-manage-devices =
 synced-tabs-context-sync-now =
     .label = Sinkronizatu orain
     .accesskey = S
-fxa-sign-in = Hasi saioa { -sync-brand-short-name }(e)n
-turn-on-sync = Aktibatu { -sync-brand-short-name }
 synced-tabs-fxa-sign-in = Hasi saioa sinkronizatzeko
 synced-tabs-turn-on-sync = Gaitu sinkronizazioa

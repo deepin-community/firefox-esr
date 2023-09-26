@@ -6,9 +6,6 @@ password-quality-meter = Meter jakości hasła
 
 ## Change Password dialog
 
-change-password-window =
-    .title = Zmiyń głōwne hasło
-
 change-device-password-window =
     .title = Zmiyń hasło
 
@@ -18,12 +15,6 @@ change-password-token = Maszina ôd bezpieczyństwa: { $tokenName }
 change-password-old = Aktualne hasło:
 change-password-new = Nowe hasło:
 change-password-reenter = Nowe hasło (jeszcze roz):
-
-## Reset Password dialog
-
-reset-password-window =
-    .title = Wynuluj głōwne hasło
-    .style = width: 40em
 
 pippki-failed-pw-change = Niy idzie zmiynić hasła.
 pippki-incorrect-pw = Niy było wkludzōne dobre hasło. Sprōbuj jeszcze roz.
@@ -37,13 +28,11 @@ pippki-pw-change2empty-in-fips-mode = Jeżeś prawie w trybie FIPS, co potrzebuj
 
 ## Reset Primary Password dialog
 
-reset-primary-password-window =
+reset-primary-password-window2 =
     .title = Wynuluj głōwne hasło
-    .style = width: 40em
+    .style = min-width: 40em
 reset-password-button-label =
     .label = Wynuluj
-reset-password-text = Jak wynulujesz swoje głōwne hasło, to przepōmnōm sie wszyskie poschraniane hasła, dane formularōw, ôsobiste certyfikaty i prywatne klucze. Na zicher chcesz wynulować swoje głōwne hasło?
-
 reset-primary-password-text = Jak wynulujesz swoje głōwne hasło, to przepōmnōm sie wszyskie poschraniane hasła, dane formularōw, ôsobiste certyfikaty i prywatne klucze. Na zicher chcesz wynulować swoje głōwne hasło?
 
 pippki-reset-password-confirmation-title = Wynuluj głōwne hasło
@@ -51,9 +40,9 @@ pippki-reset-password-confirmation-message = Twoje głōwne hasło je wynulowane
 
 ## Downloading cert dialog
 
-download-cert-window =
+download-cert-window2 =
     .title = Pobiyranie certyfikatu
-    .style = width: 46em
+    .style = min-width: 46em
 download-cert-message = Prziszła prośba, coby wierzić nowymu wystowcy certyfikatōw (CA).
 download-cert-trust-ssl =
     .label = Wiyrz tymu CA przi poznowaniu strōn.
@@ -76,7 +65,7 @@ client-auth-cert-details = Detajle ôd ôbranego certyfikatu:
 
 set-password-window =
     .title = Ôbier hasło do ibrycznyj kopii certyfikatu
-set-password-message = Wkludzōne sam hasło ibrycznyj kopii certyfikatu chrōni rychtowany ibryczny zbiōr.  Coby dalij rychtować ibryczno kopia, trza nastawić te hasło.
+set-password-message = Wkludzōne sam hasło ibrycznyj kopiji certyfikatu chrōni rychtowany ibryczny zbiōr.  Coby dalij rychtować ibryczno kopijo, trza nastawić te hasło.
 set-password-backup-pw =
     .value = Hasło do ibrycznyj kopii certyfikatu:
 set-password-repeat-backup-pw =
@@ -85,7 +74,5 @@ set-password-reminder = Pozōr: jak przepōmnisz hasła do ibrycznyj kopii certy
 
 ## Protected Auth dialog
 
-protected-auth-window =
-    .title = Autyntyzacyjo chrōniōnego tokyna
-protected-auth-msg = Autyntyzuj sie do tokyna. Metoda autyntyzacyje znoleży ôd typu twojigo tokyna.
-protected-auth-token = Tokyn:
+## Protected authentication alert
+

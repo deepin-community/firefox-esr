@@ -2,13 +2,13 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-addons-window =
-    .title = Bainisteoir na mBreiseán
-
 addons-page-title = Bainisteoir na mBreiseán
 
-search-header-shortcut =
-    .key = f
+## Variables
+##   $domain - Domain name where add-ons are available (e.g. addons.mozilla.org)
+
+##
+
 
 list-empty-installed =
     .value = Níl aon bhreiseán den chineál seo suiteáilte agat
@@ -30,43 +30,6 @@ show-unsigned-extensions-button =
 
 show-all-extensions-button =
     .label = Taispeáin na heisínteachtaí go léir
-
-cmd-show-details =
-    .label = Taispeáin Tuilleadh Eolais
-    .accesskey = T
-
-cmd-find-updates =
-    .label = Aimsigh Nuashonruithe
-    .accesskey = A
-
-cmd-preferences =
-    .label =
-        { PLATFORM() ->
-            [windows] Roghanna
-           *[other] Sainroghanna
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] R
-           *[other] S
-        }
-
-cmd-enable-theme =
-    .label = Úsáid an téama
-    .accesskey = t
-
-cmd-disable-theme =
-    .label = Ná húsáid an téama a thuilleadh
-    .accesskey = N
-
-cmd-install-addon =
-    .label = Suiteáil
-    .accesskey = S
-
-cmd-contribute =
-    .label = Glac Páirt
-    .accesskey = c
-    .tooltiptext = Glac páirt i bhforbairt an bhreiseáin seo
 
 detail-version =
     .label = Leagan
@@ -178,7 +141,6 @@ extensions-warning-update-security = Tá seiceáil shlándáil na mbreiseán dí
 extensions-warning-update-security-button = Cumasaigh
     .title = Cumasaigh seiceáil slándála nuashonrú na mbreiseán
 
-
 ## Strings connected to add-on updates
 
 addon-updates-check-for-updates = Lorg Nuashonruithe
@@ -231,12 +193,46 @@ addon-open-about-debugging = Dífhabhtaigh Breiseáin
 ## Pending uninstall message bar
 
 
+## "sites with restrictions" (internally called "quarantined") are special domains
+## where add-ons are normally blocked for security reasons.
+
 ## This is the tooltip text for the recommended badges for an extension in about:addons. The
 ## badge is a small icon displayed next to an extension when it is recommended on AMO.
+
 
 ##
 
 ## Page headings
 
+default-heading-search-label = Faigh tuilleadh breiseáin
+addons-heading-search-input =
+    .placeholder = Cuardaigh in addons.mozilla.org
+
 addon-page-options-button =
     .title = Uirlisí le haghaidh gach breiseán
+
+## Detail notifications
+## Variables:
+##   $name (String): name of the add-on.
+
+## Detail notifications
+## Variables:
+##   $name (string) - Name of the add-on.
+
+# Variables:
+#   $version (String): application version.
+details-notification-incompatible = Níl { $name } comhoiriúnach le { -brand-short-name } { $version }.
+
+details-notification-unsigned-and-disabled = Níorbh fhéidir { $name } a fhíorú le húsáid in { -brand-short-name } agus díchumasaíodh é.
+details-notification-unsigned-and-disabled-link = Tuilleadh Eolais
+
+details-notification-unsigned = Níorbh fhéidir { $name } a fhíorú le húsáid in { -brand-short-name }. Oibriú leat go faichilleach.
+details-notification-unsigned-link = Tuilleadh Eolais
+
+details-notification-blocked = Tá { $name } díchumasaithe mar gheall ar fhadhbanna slándála nó cobhsaíochta.
+details-notification-blocked-link = Tuilleadh Eolais
+
+details-notification-softblocked = Tá { $name } freagrach as fadhbanna slándála nó cobhsaíochta.
+details-notification-softblocked-link = Tuilleadh Eolais
+
+details-notification-gmp-pending = Suiteálfar { $name } ar ball beag.

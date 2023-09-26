@@ -23,6 +23,8 @@ profile-selection-delete-button =
     .label = Pašalinti profilį…
     .accesskey = š
 
+profile-selection-conflict-message = Kita „{ -brand-product-name }“ kopija atliko pakeitimus profiliams. Turite paleisti „{ -brand-short-name }“ iš naujo, kad atliktumėte daugiau pakeitimų.
+
 ## Messages used in the profile manager
 
 profile-manager-description = „{ -brand-short-name }“ nuostatos, tinklaviečių adresynas, laiškai ir kt. informacija laikoma naudotojo profilyje.

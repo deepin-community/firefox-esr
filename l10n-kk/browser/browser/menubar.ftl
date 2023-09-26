@@ -38,16 +38,11 @@ menu-quit =
             [windows] ы
            *[other] Ш
         }
+
 # This menu-quit-mac string is only used on macOS.
 menu-quit-mac =
     .label = { -brand-shorter-name } жұмысын аяқтау
-# This menu-quit-button string is only used on Linux.
-menu-quit-button =
-    .label = { menu-quit.label }
-# This menu-quit-button-win string is only used on Windows.
-menu-quit-button-win =
-    .label = { menu-quit.label }
-    .tooltip = { -brand-shorter-name } жұмысын аяқтау
+
 menu-about =
     .label = { -brand-shorter-name } туралы
     .accesskey = а
@@ -77,9 +72,15 @@ menu-file-open-location =
 menu-file-open-file =
     .label = Файлды ашу…
     .accesskey = Ф
-menu-file-close =
-    .label = Жабу
-    .accesskey = Ж
+# Variables:
+#  $tabCount (Number): the number of tabs that are affected by the action.
+menu-file-close-tab =
+    .label =
+        { $tabCount ->
+            [1] Бетті жабу
+           *[other] { $tabCount } бетті жабу
+        }
+    .accesskey = ж
 menu-file-close-window =
     .label = Терезені жабу
     .accesskey = б
@@ -95,9 +96,6 @@ menu-file-share-url =
 menu-file-print-setup =
     .label = Парақ баптаулары…
     .accesskey = П
-menu-file-print-preview =
-    .label = Алдын-ала қарау
-    .accesskey = А
 menu-file-print =
     .label = Баспаға шығару…
     .accesskey = ш
@@ -113,9 +111,6 @@ menu-file-go-offline =
 menu-edit =
     .label = Түзету
     .accesskey = Т
-menu-edit-find-on =
-    .label = Осы парақтан іздеу…
-    .accesskey = т
 menu-edit-find-in-page =
     .label = Беттен табу…
     .accesskey = т
@@ -134,9 +129,6 @@ menu-view =
 menu-view-toolbars-menu =
     .label = Құралдар панельдері
     .accesskey = л
-menu-view-customize-toolbar =
-    .label = Баптау…
-    .accesskey = а
 menu-view-customize-toolbar2 =
     .label = Құралдар панелін баптау…
     .accesskey = п
@@ -173,9 +165,6 @@ menu-view-page-style-no-style =
 menu-view-page-basic-style =
     .label = Парақтың негізгі стилі
     .accesskey = н
-menu-view-charset =
-    .label = Мәтін кодталуы
-    .accesskey = к
 menu-view-repair-text-encoding =
     .label = Мәтін кодтауын жөндеу
     .accesskey = к
@@ -192,6 +181,17 @@ menu-view-exit-full-screen =
 menu-view-full-screen =
     .label = Толық экран режимі
     .accesskey = Т
+
+## These menu items may use the same accesskey.
+
+# This should match reader-view-enter-button in browser.ftl
+menu-view-enter-readerview =
+    .label = Оқу көрінісіне өту
+    .accesskey = у
+# This should match reader-view-close-button in browser.ftl
+menu-view-close-readerview =
+    .label = Оқу режимін жабу
+    .accesskey = у
 
 ##
 
@@ -221,24 +221,21 @@ menu-history-undo-menu =
     .label = Жақында жабылған беттер
 menu-history-undo-window-menu =
     .label = Жақында жабылған терезелер
-menu-history-reopen-all-tabs = Барлық беттерді қайта ашу
-menu-history-reopen-all-windows = Барлық терезелерді қайта ашу
 
 ## Bookmarks Menu
 
 menu-bookmarks-menu =
     .label = Бетбелгілер
     .accesskey = Б
-menu-bookmarks-show-all =
-    .label = Барлық бетбелгілерді көрсету
-menu-bookmark-this-page =
-    .label = Бұл бетті бетбелгілерге қосу
 menu-bookmarks-manage =
     .label = Бетбелгілерді басқару
-menu-bookmark-current-tab =
-    .label = Ағымдағы бетті бетбелгілерге қосу
-menu-bookmark-edit =
-    .label = Бетбелгіні түзету
+menu-bookmark-tab =
+    .label = Ағымдағы бетті бетбелгілерге қосу…
+menu-edit-bookmark =
+    .label = Бұл бетбелгіні түзету…
+# "Search" is a verb, as in "Search in bookmarks"
+menu-bookmarks-search =
+    .label = Бетбелгілер ішінен іздеу
 menu-bookmarks-all-tabs =
     .label = Барлық беттерді бетбелгілерге қосу…
 menu-bookmarks-toolbar =
@@ -256,15 +253,6 @@ menu-tools =
 menu-tools-downloads =
     .label = Жүктемелер
     .accesskey = Ж
-menu-tools-addons =
-    .label = Қосымшалар
-    .accesskey = с
-menu-tools-fxa-sign-in =
-    .label = { -brand-product-name } ішіне кіру…
-    .accesskey = к
-menu-tools-turn-on-sync =
-    .label = { -sync-brand-short-name } іске қосу…
-    .accesskey = е
 menu-tools-addons-and-themes =
     .label = Кеңейтулер және темалар
     .accesskey = а
@@ -280,9 +268,6 @@ menu-tools-sync-now =
 menu-tools-fxa-re-auth =
     .label = { -brand-product-name } ішіне қайта байланысу…
     .accesskey = й
-menu-tools-web-developer =
-    .label = Веб-әзірлеуші
-    .accesskey = В
 menu-tools-browser-tools =
     .label = Браузер құралдары
     .accesskey = Б
@@ -295,17 +280,6 @@ menu-tools-page-source =
 menu-tools-page-info =
     .label = Бет ақпараты
     .accesskey = а
-menu-preferences =
-    .label =
-        { PLATFORM() ->
-            [windows] Опциялар
-           *[other] Параметрлер
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] ц
-           *[other] м
-        }
 menu-settings =
     .label = Баптаулар
     .accesskey =
@@ -338,21 +312,6 @@ menu-window-bring-all-to-front =
 menu-help =
     .label = Көмек
     .accesskey = К
-menu-help-product =
-    .label = { -brand-shorter-name } көмегі
-    .accesskey = к
-menu-help-show-tour =
-    .label = { -brand-shorter-name } ішіне cаяхат
-    .accesskey = я
-menu-help-import-from-another-browser =
-    .label = Басқа браузерден импорттау…
-    .accesskey = и
-menu-help-keyboard-shortcuts =
-    .label = Пернетақта жарлықтары
-    .accesskey = е
-menu-help-troubleshooting-info =
-    .label = Техникалық ақпарат
-    .accesskey = а
 menu-get-help =
     .label = Көмек алу
     .accesskey = м
@@ -361,21 +320,18 @@ menu-help-more-troubleshooting-info =
     .accesskey = с
 menu-help-report-site-issue =
     .label = Сайт мәселесі жөнінде хабарлау…
-menu-help-feedback-page =
-    .label = Кері байланыс хабарламасын жіберу…
-    .accesskey = е
-menu-help-safe-mode-without-addons =
-    .label = Сөндірілген қосымшалармен қайта қосу…
-    .accesskey = р
-menu-help-safe-mode-with-addons =
-    .label = Іске қосылған қосымшалармен қайта қосу
-    .accesskey = р
+menu-help-share-ideas =
+    .label = Идеялар мен кері байланыспен бөлісіңіз…
+    .accesskey = с
 menu-help-enter-troubleshoot-mode2 =
     .label = Мәселелерді шешу режимі…
     .accesskey = М
 menu-help-exit-troubleshoot-mode =
     .label = Мәселелерді шешу режимін сөндіру
     .accesskey = м
+menu-help-switch-device =
+    .label = Жаңа құрылғыға ауысу
+    .accesskey = р
 # Label of the Help menu item. Either this or
 # menu-help-notdeceptive is shown.
 menu-help-report-deceptive-site =

@@ -8,9 +8,6 @@
 newtab-page-title = Ny flik
 newtab-settings-button =
     .title = Anpassa sidan för Ny flik
-newtab-personalize-button-label = Anpassa
-    .title = Anpassa ny flik
-    .aria-label = Anpassa ny flik
 newtab-personalize-icon-label =
     .title = Anpassa ny flik
     .aria-label = Anpassa ny flik
@@ -23,13 +20,13 @@ newtab-personalize-dialog-label =
 newtab-search-box-search-button =
     .title = Sök
     .aria-label = Sök
-newtab-search-box-search-the-web-text = Sök på webben
-# Variables
-#  $engine (String): the name of the user's default search engine
+
+# Variables:
+#   $engine (string) - The name of the user's default search engine
 newtab-search-box-handoff-text = Sök med { $engine } eller ange en adress
 newtab-search-box-handoff-text-no-engine = Sök eller ange adress
-# Variables
-#  $engine (String): the name of the user's default search engine
+# Variables:
+#   $engine (string) - The name of the user's default search engine
 newtab-search-box-handoff-input =
     .placeholder = Sök med { $engine } eller ange en adress
     .title = Sök med { $engine } eller ange en adress
@@ -38,10 +35,7 @@ newtab-search-box-handoff-input-no-engine =
     .placeholder = Sök eller ange adress
     .title = Sök eller ange adress
     .aria-label = Sök eller ange adress
-newtab-search-box-search-the-web-input =
-    .placeholder = Sök på webben
-    .title = Sök på webben
-    .aria-label = Sök på webben
+
 newtab-search-box-text = Sök på webben
 newtab-search-box-input =
     .placeholder = Sök på webben
@@ -50,17 +44,18 @@ newtab-search-box-input =
 ## Top Sites - General form dialog.
 
 newtab-topsites-add-search-engine-header = Lägg till sökmotor
-newtab-topsites-add-topsites-header = Ny mest besökt
 newtab-topsites-add-shortcut-header = Ny genväg
 newtab-topsites-edit-topsites-header = Redigera mest besökta
 newtab-topsites-edit-shortcut-header = Redigera genväg
 newtab-topsites-title-label = Titel
 newtab-topsites-title-input =
     .placeholder = Ange en titel
+
 newtab-topsites-url-label = URL
 newtab-topsites-url-input =
     .placeholder = Skriv eller klistra in en URL
 newtab-topsites-url-validation = Giltig URL krävs
+
 newtab-topsites-image-url-label = Anpassa bild-URL
 newtab-topsites-use-image-link = Använd en anpassad bild…
 newtab-topsites-image-validation = Bilden misslyckades att ladda. Prova en annan URL.
@@ -89,13 +84,15 @@ newtab-topsite-sponsored = Sponsrad
 newtab-menu-section-tooltip =
     .title = Öppna meny
     .aria-label = Öppna meny
+
 # Tooltip for dismiss button
 newtab-dismiss-button-tooltip =
     .title = Ta bort
     .aria-label = Ta bort
+
 # This tooltip is for the context menu of Pocket cards or Topsites
 # Variables:
-#  $title (String): The label or hostname of the site. This is for screen readers when the context menu button is focused/active.
+#   $title (string) - The label or hostname of the site. This is for screen readers when the context menu button is focused/active.
 newtab-menu-content-tooltip =
     .title = Öppna meny
     .aria-label = Öppna snabbmeny för { $title }
@@ -165,14 +162,22 @@ newtab-label-removed-bookmark = Bokmärke har tagits bort
 newtab-label-recommended = Trend
 newtab-label-saved = Spara till { -pocket-brand-name }
 newtab-label-download = Hämtat
+
 # This string is used in the story cards to indicate sponsored content
 # Variables:
-#  $sponsorOrSource (String): This is the name of a company or their domain
+#   $sponsorOrSource (string) - The name of a company or their domain
 newtab-label-sponsored = { $sponsorOrSource } · Sponsrad
+
 # This string is used at the bottom of story cards to indicate sponsored content
 # Variables:
-#  $sponsor (String): This is the name of a sponsor
+#   $sponsor (string) - The name of a sponsor
 newtab-label-sponsored-by = Sponsrad av { $sponsor }
+
+# This string is used under the image of story cards to indicate source and time to read
+# Variables:
+#   $source (string) - The name of a company or their domain
+#   $timeToRead (number) - The estimated number of minutes to read this story
+newtab-label-source-read-time = { $source } · { $timeToRead } min
 
 ## Section Menu: These strings are displayed in the section context menu and are
 ## meant as a call to action for the given section.
@@ -186,7 +191,7 @@ newtab-section-menu-add-topsite = Lägg till mest besökta
 newtab-section-menu-add-search-engine = Lägg till sökmotor
 newtab-section-menu-move-up = Flytta upp
 newtab-section-menu-move-down = Flytta ner
-newtab-section-menu-privacy-notice = Sekretesspolicy
+newtab-section-menu-privacy-notice = Sekretessmeddelande
 
 ## Section aria-labels
 
@@ -198,24 +203,24 @@ newtab-section-expand-section-label =
 ## Section Headers.
 
 newtab-section-header-topsites = Mest besökta
-newtab-section-header-highlights = Höjdpunkter
 newtab-section-header-recent-activity = Senaste aktivitet
 # Variables:
-#  $provider (String): Name of the corresponding content provider.
+#   $provider (string) - Name of the corresponding content provider.
 newtab-section-header-pocket = Rekommenderas av { $provider }
 
 ## Empty Section States: These show when there are no more items in a section. Ex. When there are no more Pocket story recommendations, in the space where there would have been stories, this is shown instead.
 
 newtab-empty-section-highlights = Börja surfa, och vi visar några av de bästa artiklarna, videoklippen och andra sidor du nyligen har besökt eller bokmärkt här.
+
 # Ex. When there are no more Pocket story recommendations, in the space where there would have been stories, this is shown instead.
 # Variables:
-#  $provider (String): Name of the content provider for this section, e.g "Pocket".
+#   $provider (string) - Name of the content provider for this section, e.g "Pocket".
 newtab-empty-section-topstories = Det finns inte fler. Kom tillbaka senare för fler huvudnyheter från { $provider }. Kan du inte vänta? Välj ett populärt ämne för att hitta fler bra nyheter från hela världen.
 
 ## Empty Section (Content Discovery Experience). These show when there are no more stories or when some stories fail to load.
 
 newtab-discovery-empty-section-topstories-header = Du är ikapp!
-newtab-discovery-empty-section-topstories-content = Kom tillbaka senare för fler nyheter.
+newtab-discovery-empty-section-topstories-content = Kom tillbaka senare för fler berättelser.
 newtab-discovery-empty-section-topstories-try-again-button = Försök igen
 newtab-discovery-empty-section-topstories-loading = Laddar…
 # Displays when a layout in a section took too long to fetch articles.
@@ -225,10 +230,24 @@ newtab-discovery-empty-section-topstories-timed-out = Hoppsan! Vi laddade nästa
 
 # This is shown at the bottom of the trending stories section and precedes a list of links to popular topics.
 newtab-pocket-read-more = Populära ämnen:
+newtab-pocket-new-topics-title = Vill du ha fler berättelser? Se dessa populära ämnen från { -pocket-brand-name }
 newtab-pocket-more-recommendations = Fler rekommendationer
 newtab-pocket-learn-more = Läs mer
 newtab-pocket-cta-button = Hämta { -pocket-brand-name }
-newtab-pocket-cta-text = Spara de nyheter som du tycker är intressant i { -pocket-brand-name } och stimulera dina tankar med fascinerande läsmaterial.
+newtab-pocket-cta-text = Spara de historier som du tycker är intressant i { -pocket-brand-name } och stimulera dina tankar med fascinerande läsmaterial.
+newtab-pocket-pocket-firefox-family = { -pocket-brand-name } är en del av familjen { -brand-product-name }
+
+## Pocket Final Card Section.
+## This is for the final card in the Pocket grid.
+
+# A save to Pocket button that shows over the card thumbnail on hover.
+newtab-pocket-save = Spara
+newtab-pocket-saved = Sparad
+
+## Pocket content onboarding experience dialog and modal for new users seeing the Pocket section for the first time, shown as the first item in the Pocket section.
+
+newtab-pocket-onboarding-discover = Upptäck det bästa från webben
+newtab-pocket-onboarding-cta = { -pocket-brand-name } utforskar en mängd olika publikationer för att få det mest informativa, inspirerande och pålitliga innehållet direkt till din { -brand-product-name }-webbläsare.
 
 ## Error Fallback Content.
 ## This message and suggested action link are shown in each section of UI that fails to render.
@@ -240,6 +259,8 @@ newtab-error-fallback-refresh-link = Uppdatera sidan för att försöka igen.
 
 newtab-custom-shortcuts-title = Genvägar
 newtab-custom-shortcuts-subtitle = Webbplatser du sparar eller besöker
+# Variables
+#   $num (number) - Number of rows to display
 newtab-custom-row-selector =
     { $num ->
         [one] { $num } rad
@@ -248,14 +269,9 @@ newtab-custom-row-selector =
 newtab-custom-sponsored-sites = Sponsrade genvägar
 newtab-custom-pocket-title = Rekommenderas av { -pocket-brand-name }
 newtab-custom-pocket-subtitle = Särskilt innehåll valt av { -pocket-brand-name }, en del av familjen { -brand-product-name }
-newtab-custom-pocket-sponsored = Sponsrade nyheter
+newtab-custom-pocket-sponsored = Sponsrade berättelser
+newtab-custom-pocket-show-recent-saves = Visa senast sparade
 newtab-custom-recent-title = Senaste aktivitet
 newtab-custom-recent-subtitle = Ett urval av senaste webbplatser och innehåll
 newtab-custom-close-button = Stäng
-# For the "Snippets" feature traditionally on about:home.
-# Alternative translation options: "Small Note" or something that
-# expresses the idea of "a small message, shortened from something else,
-# and non-essential but also not entirely trivial and useless.
-newtab-custom-snippets-title = Kort information
-newtab-custom-snippets-subtitle = Tips och nyheter från { -vendor-short-name } och { -brand-product-name }
 newtab-custom-settings = Hantera fler inställningar

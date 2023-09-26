@@ -19,3 +19,20 @@ opensearch-error-download-desc = { -brand-short-name } non poteva discargar le p
 
 ##
 
+searchbar-submit =
+    .tooltiptext = Submitter cerca
+
+# This string is displayed in the search box when the input field is empty
+searchbar-input =
+    .placeholder = Cercar
+
+searchbar-icon =
+    .tooltiptext = Cercar
+
+## Infobar shown when search engine is removed and replaced.
+## Variables
+## $oldEngine (String) - the search engine to be removed.
+## $newEngine (String) - the search engine to replace the removed search engine.
+
+removed-search-engine-message = <strong>Tu motor de recerca predefinite ha essite cambiate.</strong> { $oldEngine } non es plus disponibile como motor de recerca predefinite in { -brand-short-name }. { $newEngine } es ora tu motor de recerca predefinite. Pro cambiar a un altere motor de recerca predefinite, vade a parametros. <label data-l10n-name="remove-search-engine-article">Pro saper plus</label>
+remove-search-engine-button = OK

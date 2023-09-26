@@ -19,3 +19,20 @@ opensearch-error-download-desc = { -brand-short-name } ne povis elŝuti la serĉ
 
 ##
 
+searchbar-submit =
+    .tooltiptext = Sendi serĉon
+
+# This string is displayed in the search box when the input field is empty
+searchbar-input =
+    .placeholder = Serĉi
+
+searchbar-icon =
+    .tooltiptext = Serĉi
+
+## Infobar shown when search engine is removed and replaced.
+## Variables
+## $oldEngine (String) - the search engine to be removed.
+## $newEngine (String) - the search engine to replace the removed search engine.
+
+removed-search-engine-message = <strong>Via norma serĉilo estis ŝanĝita.</strong> { $oldEngine } ne plu estas disponebla kiel norma serĉilo en { -brand-short-name }. { $newEngine } estas nun via norma serĉilo. Por elekti alian norma serĉilon, iru al agordoj. <label data-l10n-name="remove-search-engine-article">Pli da informo</label>
+remove-search-engine-button = Akcepti

@@ -2,17 +2,16 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-addons-window =
-    .title = ऐड-ऑन्स प्रबंधक
-
 addons-page-title = ऐड-ऑन्स प्रबंधक
 
 search-header =
     .placeholder = addons.mozilla.org खोजें
     .searchbuttonlabel = खोजें
 
-search-header-shortcut =
-    .key = f
+## Variables
+##   $domain - Domain name where add-ons are available (e.g. addons.mozilla.org)
+
+##
 
 list-empty-installed =
     .value = आपके इस प्रकार की कोई ऐड-ऑन्स संस्थापित नहीं हैं
@@ -33,18 +32,6 @@ help-button = ऐड-ऑन समर्थन
 sidebar-help-button-title =
     .title = ऐड-ऑन समर्थन
 
-preferences =
-    { PLATFORM() ->
-        [windows] { -brand-short-name } विकल्प
-       *[other] { -brand-short-name } प्राथमिकताएं
-    }
-sidebar-preferences-button-title =
-    .title =
-        { PLATFORM() ->
-            [windows] { -brand-short-name } विकल्प
-           *[other] { -brand-short-name } प्राथमिकताएं
-        }
-
 addons-settings-button = { -brand-short-name } सेटिंग
 sidebar-settings-button-title =
     .title = { -brand-short-name } सेटिंग
@@ -54,43 +41,6 @@ show-unsigned-extensions-button =
 
 show-all-extensions-button =
     .label = सभी विस्तार दिखाएँ
-
-cmd-show-details =
-    .label = अधिक सूचना दिखाएँ
-    .accesskey = S
-
-cmd-find-updates =
-    .label = अद्यतन ढूँढ़ें
-    .accesskey = F
-
-cmd-preferences =
-    .label =
-        { PLATFORM() ->
-            [windows] विकल्प
-           *[other] वरीयताएँ
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] O
-           *[other] P
-        }
-
-cmd-enable-theme =
-    .label = प्रसंग पहनें
-    .accesskey = W
-
-cmd-disable-theme =
-    .label = प्रसंग पहनना बंद करें
-    .accesskey = W
-
-cmd-install-addon =
-    .label = संस्थापित करें
-    .accesskey = I
-
-cmd-contribute =
-    .label = योगदान करें
-    .accesskey = C
-    .tooltiptext = इस सहयुक्ति के विकास में अपना योगदान दें
 
 detail-version =
     .label = संस्करण
@@ -212,7 +162,6 @@ extensions-warning-update-security = सहयुक्ति अद्यतन
 extensions-warning-update-security-button = सक्रिय करें
     .title = सहयुक्ति अद्यतन सुरक्षा जाँच सक्रिय करें
 
-
 ## Strings connected to add-on updates
 
 addon-updates-check-for-updates = अद्यतन की जाँच करें
@@ -304,19 +253,23 @@ remove-addon-button = हटाएं
 remove-addon-disabled-button = हटाया नहीं जा सकता <a data-l10n-name="link">क्यों?</a>
 disable-addon-button = निष्क्रिय करें
 enable-addon-button = सक्रिय करें
+# This is used for the toggle on the extension card, it's a checkbox and this
+# is always its label.
+extension-enable-addon-button-label =
+    .aria-label = सक्रिय करें
 preferences-addon-button =
     { PLATFORM() ->
         [windows] विकल्प
        *[other] वरीयताएं
     }
 details-addon-button = विवरण
+release-notes-addon-button = रिलीज नोट्स
 permissions-addon-button = अनुमतियां
 
 extension-enabled-heading = सक्रिय किया गया
 extension-disabled-heading = निष्क्रिय किया गया
 
 theme-enabled-heading = सक्रिय किया गया
-theme-disabled-heading = निष्क्रिय किया गया
 
 plugin-enabled-heading = सक्रिय किया गया
 plugin-disabled-heading = निष्क्रिय किया गया
@@ -326,6 +279,9 @@ dictionary-disabled-heading = निष्क्रिय किया गया
 
 locale-enabled-heading = सक्रिय किया गया
 locale-disabled-heading = निष्क्रिय किया गया
+
+always-activate-button = हमेशा सक्रिय करें
+never-activate-button = कभी सक्रिय ना करें
 
 addon-detail-author-label = लेखक
 addon-detail-version-label = संस्करण
@@ -367,6 +323,9 @@ addon-badge-private-browsing-allowed2 =
     .title = निजी विंडो में अनुमति है
     .aria-label = { addon-badge-private-browsing-allowed2.title }
 
+## "sites with restrictions" (internally called "quarantined") are special domains
+## where add-ons are normally blocked for security reasons.
+
 ## This is the tooltip text for the recommended badges for an extension in about:addons. The
 ## badge is a small icon displayed next to an extension when it is recommended on AMO.
 
@@ -395,3 +354,29 @@ addons-heading-search-input =
 
 addon-page-options-button =
     .title = सभी सहयुक्तियों के लिए औज़ार
+
+## Detail notifications
+## Variables:
+##   $name (String): name of the add-on.
+
+## Detail notifications
+## Variables:
+##   $name (string) - Name of the add-on.
+
+# Variables:
+#   $version (String): application version.
+details-notification-incompatible = { $name } असंगत है { -brand-short-name } { $version } के साथ.
+
+details-notification-unsigned-and-disabled = { $name } का { -brand-short-name } मैं उपयोग सत्यापित नहीं हो सका है और निष्क्रिय कर दिया गया है.
+details-notification-unsigned-and-disabled-link = अधिक सूचना
+
+details-notification-unsigned = { -brand-short-name } मैं उपयोग के लिए { $name } का सत्यापित नहीं किया जा सका. सावधानी के साथ आगे बढ़ें.
+details-notification-unsigned-link = अधिक सूचना
+
+details-notification-blocked = { $name } को सुरक्षा या स्थायित्व कारणों से निष्क्रिय किया गया है.
+details-notification-blocked-link = अधिक सूचना
+
+details-notification-softblocked = { $name } सुरक्षा या स्थायित्व कारणों को पैदा करने के लिए जाना जाता है.
+details-notification-softblocked-link = अधिक सूचना
+
+details-notification-gmp-pending = { $name } जल्द ही संस्थापित होगा.

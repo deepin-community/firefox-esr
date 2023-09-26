@@ -24,8 +24,8 @@ url-classifier-cache-title = დროებითი ფაილები
 url-classifier-cache-refresh-btn = განახლება
 url-classifier-cache-clear-btn = გასუფთავება
 url-classifier-cache-table-name = ცხრილის სახელი
-url-classifier-cache-ncache-entries = კეშის უარყოფითი ჩანაწერების რაოდენობა
-url-classifier-cache-pcache-entries = კეშის დადებითი ჩანაწერების რაოდენობა
+url-classifier-cache-ncache-entries = მარაგის უარყოფითი ჩანაწერების რაოდენობა
+url-classifier-cache-pcache-entries = მარაგის დადებითი ჩანაწერების რაოდენობა
 url-classifier-cache-show-entries = ჩანაწერების ჩვენება
 url-classifier-cache-entries = დროებითი ჩანაწერები
 url-classifier-cache-prefix = წინსართი
@@ -50,5 +50,9 @@ url-classifier-disabled = გამორთულია
 url-classifier-updating = მიმდინარეობს განახლება
 url-classifier-cannot-update = განახლება ვერ ხერხდება
 url-classifier-success = წარმატებით შესრულდა
+
+## Variables
+##   $error (string) - Error message
+
 url-classifier-update-error = განახლების შეცდომა ({ $error })
 url-classifier-download-error = ჩამოტვირთვის შეცდომა ({ $error })

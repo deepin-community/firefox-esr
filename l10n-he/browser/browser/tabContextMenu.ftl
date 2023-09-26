@@ -11,6 +11,12 @@ reload-tab =
 select-all-tabs =
     .label = בחירת כל הלשוניות
     .accesskey = ב
+tab-context-play-tab =
+    .label = ניגון לשונית
+    .accesskey = נ
+tab-context-play-tabs =
+    .label = ניגון לשוניות
+    .accesskey = נ
 duplicate-tab =
     .label = שכפול לשונית
     .accesskey = כ
@@ -48,12 +54,9 @@ unpin-selected-tabs =
 bookmark-selected-tabs =
     .label = יצירת סימנייה ללשוניות…
     .accesskey = נ
-bookmark-tab =
-    .label = יצירת סימנייה ללשונית
-    .accesskey = צ
-reopen-in-container =
-    .label = פתיחה מחדש במגירה
-    .accesskey = פ
+tab-context-bookmark-tab =
+    .label = יצירת סימנייה ללשונית…
+    .accesskey = ס
 tab-context-open-in-new-container-tab =
     .label = פתיחה במגירת לשוניות חדשה
     .accesskey = ג
@@ -69,31 +72,9 @@ move-to-new-window =
 tab-context-close-multiple-tabs =
     .label = סגירת לשוניות מרובות
     .accesskey = מ
-tab-context-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] ביטול סגירת לשונית
-            [one] ביטול סגירת לשונית
-           *[other] ביטול סגירת לשוניות
-        }
-    .accesskey = י
-close-tab =
-    .label = סגירת לשונית
-    .accesskey = ס
-close-tabs =
-    .label = סגירת לשוניות
-    .accesskey = ס
-move-tabs =
-    .label = העברת לשוניות
-    .accesskey = ע
-move-tab =
-    .label = העברת לשונית
-    .accesskey = ע
 tab-context-share-url =
     .label = שיתוף
     .accesskey = ש
-tab-context-share-more =
-    .label = עוד…
 
 ## Variables:
 ##  $tabCount (Number): the number of tabs that are affected by the action.
@@ -105,13 +86,6 @@ tab-context-reopen-closed-tabs =
            *[other] פתיחת הלשוניות שנסגרו מחדש
         }
     .accesskey = מ
-tab-context-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] סגירת לשונית
-           *[other] סגירת לשוניות
-        }
-    .accesskey = ס
 tab-context-close-n-tabs =
     .label =
         { $tabCount ->
@@ -127,3 +101,11 @@ tab-context-move-tabs =
            *[other] העברת לשוניות
         }
     .accesskey = ע
+
+tab-context-send-tabs-to-device =
+    .label =
+        { $tabCount ->
+            [one] שליחת לשונית למכשיר
+           *[other] שליחת { $tabCount } לשוניות למכשיר
+        }
+    .accesskey = ש

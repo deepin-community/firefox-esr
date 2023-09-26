@@ -2,13 +2,12 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-screenshots-context-menu = Направи снимак екрана
-
-screenshots-my-shots-button = Моји снимци
-
 screenshot-toolbarbutton =
     .label = Снимак екрана
     .tooltiptext = Направи снимак екрана
+
+screenshot-shortcut =
+    .key = S
 
 screenshots-instructions = Изаберите област превлачењем мишем или кликом на страницу. Притисните Esc да бисте отказали.
 screenshots-cancel-button = Откажи
@@ -18,6 +17,14 @@ screenshots-download-button = Преузми
 screenshots-download-button-tooltip = Преузми снимак екрана
 screenshots-copy-button = Копирај
 screenshots-copy-button-tooltip = Копирај снимак екрана у привремену меморију
+screenshots-download-button-title =
+    .title = Преузми снимак
+screenshots-copy-button-title =
+    .title = Копирај снимак екрана у оставу
+screenshots-cancel-button-title =
+    .title = Откажи
+screenshots-retry-button-title =
+    .title = Понови снимак
 
 screenshots-meta-key =
     { PLATFORM() ->
@@ -41,8 +48,6 @@ screenshots-login-error-details = Није могуће сачувати сни�
 screenshots-unshootable-page-error-title = Не можемо забележити снимак ове странице.
 screenshots-unshootable-page-error-details = Ово није стандардна веб страница, тако да не можете забележити њен снимак.
 
-screenshots-self-screenshot-error-title = Не можете да направите снимак екрана странице { -screenshots-brand-name(case: "gen") }.
-
 screenshots-empty-selection-error-title = Ваша селекција је премала
 
 screenshots-private-window-error-title = Услуга { -screenshots-brand-name } је онемогућена у режиму приватног прегледања
@@ -50,3 +55,6 @@ screenshots-private-window-error-details = Извињавамо се на неп
 
 screenshots-generic-error-title = Ау! Услуга { -screenshots-brand-name } је престала са радом.
 screenshots-generic-error-details = Нисмо сигурни шта се управо догодило. Желите ли покушати поново или да усликате другачију страницу?
+
+screenshots-too-large-error-title = Снимак екрана је исечен јер је превелик
+screenshots-too-large-error-details = Покушајте да изаберете област мању од 32,700 пиксела дуж најдуже стране или 124,900,000 пиксела укупне површине.

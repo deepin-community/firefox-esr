@@ -20,16 +20,8 @@ toolbar-context-menu-bookmark-selected-tabs =
 toolbar-context-menu-select-all-tabs =
     .label = Selectează toate filele
     .accesskey = S
-toolbar-context-menu-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Anulează închiderea filelor
-            [one] Anulează închiderea filei
-            [few] Anulează închiderea filelor
-           *[other] Anulează închiderea filelor
-        }
-    .accesskey = U
-
+# Variables
+#   $tabCount (number) - Number of tabs
 toolbar-context-menu-reopen-closed-tabs =
     .label =
         { $tabCount ->
@@ -54,15 +46,12 @@ toolbar-context-menu-report-extension =
     .label = Raportează extensia
     .accesskey = o
 
-# Can appear on the same context menu as menubarCmd ("Menu Bar") and
-# personalbarCmd ("Bookmarks Toolbar"), so they should have different
-# access keys.
+# Can appear on the same context menu as toolbar-context-menu-menu-bar-cmd
+# ("Menu Bar") and personalbarCmd ("Bookmarks Toolbar"), so they should
+# have different access keys.
 toolbar-context-menu-pin-to-overflow-menu =
     .label = Fixează în meniul excedentar
     .accesskey = P
-toolbar-context-menu-auto-hide-downloads-button =
-    .label = Ascunde automat în bara de instrumente
-    .accesskey = A
 toolbar-context-menu-auto-hide-downloads-button-2 =
     .label = Ascunde butonul când lista este goală
     .accesskey = H
@@ -75,6 +64,11 @@ toolbar-context-menu-view-customize-toolbar =
 toolbar-context-menu-view-customize-toolbar-2 =
     .label = Personalizează bara de instrumente…
     .accesskey = C
+# This is only ever shown when toolbar-context-menu-pin-to-overflow-menu
+# is hidden, so they can share access keys.
+toolbar-context-menu-pin-to-toolbar =
+    .label = Fixează în bara de instrumente
+    .accesskey = P
 
 toolbar-context-menu-bookmarks-toolbar-always-show-2 =
     .label = Afișează întotdeauna
@@ -89,3 +83,7 @@ toolbar-context-menu-bookmarks-toolbar-on-new-tab-2 =
 toolbar-context-menu-bookmarks-show-other-bookmarks =
     .label = Afișează alte marcaje
     .accesskey = h
+
+toolbar-context-menu-menu-bar-cmd =
+    .toolbarname = Bară de meniu
+    .accesskey = M

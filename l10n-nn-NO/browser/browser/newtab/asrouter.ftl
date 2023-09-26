@@ -7,7 +7,6 @@
 
 cfr-doorhanger-extension-heading = Tilrådde utvidingar
 cfr-doorhanger-feature-heading = Tilrådd funksjon
-cfr-doorhanger-pintab-heading = Prøv dette: Fest fana
 
 ##
 
@@ -19,10 +18,8 @@ cfr-doorhanger-extension-cancel-button = Ikkje no
 
 cfr-doorhanger-extension-ok-button = Legg til no
     .accesskey = e
-cfr-doorhanger-pintab-ok-button = Fest denne fana
-    .accesskey = F
 
-cfr-doorhanger-extension-manage-settings-button = Handter tilrådingsinnstillingar
+cfr-doorhanger-extension-manage-settings-button = Handsam tilrådingsinnstillingar
     .accesskey = H
 
 cfr-doorhanger-extension-never-show-recommendation = Ikkje vis meg denne tilrådinga
@@ -68,18 +65,6 @@ cfr-doorhanger-extension-total-users =
        *[other] { $total } brukarar
     }
 
-cfr-doorhanger-pintab-description = Få enkel tilgang til dei mest brukte nettstadane dine. Hald nettstadar opne i ei fane (sjølv når du starter på nytt).
-
-## These messages are steps on how to use the feature and are shown together.
-
-cfr-doorhanger-pintab-step1 = <b>Høgreklikk</b> på fana du vil feste.
-cfr-doorhanger-pintab-step2 = Vel <b>Fest fane</ b> frå menyen.
-cfr-doorhanger-pintab-step3 = Om nettstaden har ei oppdatering, vil du sjå ein blå prikk på den festa fana di.
-
-cfr-doorhanger-pintab-animation-pause = Pause
-cfr-doorhanger-pintab-animation-resume = Fortset
-
-
 ## Firefox Accounts Message
 
 cfr-doorhanger-bookmark-fxa-header = Synkroniser bokmerka dine overalt.
@@ -105,181 +90,21 @@ cfr-whatsnew-button =
     .label = Kva er nytt
     .tooltiptext = Kva er nytt
 
-cfr-whatsnew-panel-header = Kva er nytt
-
 cfr-whatsnew-release-notes-link-text = Les versjonsnotatet
 
-cfr-whatsnew-fx70-title = { -brand-short-name } jobbar no endå meir for personvernet ditt
-cfr-whatsnew-fx70-body =
-    Den siste oppdateringa forbetrar sporingsvernfunksjonen og gjer det
-    enklare enn nokon gong å lage trygge passord for kvar nettstad.
-
-cfr-whatsnew-tracking-protect-title = Beskytt deg mot sporarar
-cfr-whatsnew-tracking-protect-body =
-    { -brand-short-name } blokkerer mange vanlege sporarar frå sosiale medium og sporing på tvers av nettstadar som
-    følgjer det du gjer på nettet.
-cfr-whatsnew-tracking-protect-link-text = Vis rapporten din
-
-# This string is displayed before a large numeral that indicates the total
-# number of tracking elements blocked. Don’t add $blockedCount to your
-# localization, because it would result in the number showing twice.
-cfr-whatsnew-tracking-blocked-title =
-    { $blockedCount ->
-        [one] Sporar blokkert
-       *[other] Sporar blokkert
-    }
-cfr-whatsnew-tracking-blocked-subtitle = Sidan { DATETIME($earliestDate, month: "long", year: "numeric") }
-cfr-whatsnew-tracking-blocked-link-text = Vis rapport
-
-cfr-whatsnew-lockwise-backup-title = Ta sikkerheitskopi av passorda dine
-cfr-whatsnew-lockwise-backup-body = No kan du generere trygge passord du får tilgang til kvar som helst du loggar inn.
-cfr-whatsnew-lockwise-backup-link-text = Slå på sikkerheitskopiering
-
-cfr-whatsnew-lockwise-take-title = Ta med deg passorda dine
-cfr-whatsnew-lockwise-take-body =
-    Mobilappen { -lockwise-brand-short-name } lèt deg få tilgang til dei
-    sikkerheitskopierte passorda dine kvar som helst.
-cfr-whatsnew-lockwise-take-link-text = Last ned appen
-
-## Search Bar
-
-cfr-whatsnew-searchbar-title = Skriv mindre, finn meir med adressefeltet
-cfr-whatsnew-searchbar-body-topsites = Vel adresselinja, og ein boks med lenker til dei mest besøkte nettstadane dine vil bli vist.
-
-## Search bar
-
-cfr-whatsnew-searchbar-icon-alt-text = Forstørringsglas-ikon
-
-## Picture-in-Picture
-
-cfr-whatsnew-pip-header = Sjå på videoar medan du surfar
-cfr-whatsnew-pip-body = Bilde-i-bilde opnar opp video i eit flytande vindauge slik at du kan så på han medan du jobbar i andre faner.
-cfr-whatsnew-pip-cta = Les meir
-
-## Permission Prompt
-
-cfr-whatsnew-permission-prompt-header = Færre irriterande sprettoppmeldingar
-cfr-whatsnew-permission-prompt-body = { -brand-shorter-name } blokkerer no nettstadar frå å automatisk be om å sende deg sprettopp-meldingar.
-cfr-whatsnew-permission-prompt-cta = Les meir
-
-## Fingerprinter Counter
-
-# This string is displayed before a large numeral that indicates the total
-# number of tracking elements blocked. Don’t add $fingerprinterCount to your
-# localization, because it would result in the number showing twice.
-cfr-whatsnew-fingerprinter-counter-header =
-    { $fingerprinterCount ->
-        [one] Fingerprinter blokkert
-       *[other] Fingerprinters blokkerte
-    }
-cfr-whatsnew-fingerprinter-counter-body = { -brand-shorter-name } blokkerer mange fingerprintarar som i løynd samlar informasjon om eininga di og handlingane dine for å lage ein annonseringsprofil av deg.
-
-# Message variation when fingerprinters count is less than 10
-cfr-whatsnew-fingerprinter-counter-header-alt = Fingerprinters
-cfr-whatsnew-fingerprinter-counter-body-alt = { -brand-shorter-name } kan blokkere fingerprintarar som i løynd samlar informasjon om eininga di og handlingane dine for å lage ein annonseringsprofil for deg.
-
-## Bookmark Sync
-
-cfr-doorhanger-sync-bookmarks-header = Få dette bokmerket på telefonen din
-cfr-doorhanger-sync-bookmarks-body = Ta med bokmerke, passord, historikk, og meir, overalt der du er logga inn på { -brand-product-name }.
-cfr-doorhanger-sync-bookmarks-ok-button = Slå på { -sync-brand-short-name }
-    .accesskey = S
-
-## Login Sync
-
-cfr-doorhanger-sync-logins-header = Gløym aldri meir eit passord
-cfr-doorhanger-sync-logins-body = Lagre og synkroniser passorda dine trygt med alle einingane dine.
-cfr-doorhanger-sync-logins-ok-button = Slå på { -sync-brand-short-name }
-    .accesskey = S
-
-## Send Tab
-
-cfr-doorhanger-send-tab-header = Les dette medan du er påfarten
-cfr-doorhanger-send-tab-recipe-header = Ta denne oppskrifta med på kjøkkenet
-cfr-doorhanger-send-tab-body = Send fane lèt deg enkelt dele denne lenka til telefonen din eller kvar som helst du er logga inn på { -brand-product-name }.
-cfr-doorhanger-send-tab-ok-button = Prøv send fane
-    .accesskey = P
-
-## Firefox Send
-
-cfr-doorhanger-firefox-send-header = Del denne PDF-fila trygt
-cfr-doorhanger-firefox-send-body = Hald dei sensitive dokumenta dine trygge mot nysgjerrige auge med ende-til-ende-kryptering og ei lenke som forsvinn når du er ferdig.
-cfr-doorhanger-firefox-send-ok-button = Prøv { -send-brand-name }
-    .accesskey = P
-
-## Social Tracking Protection
-
-cfr-doorhanger-socialtracking-ok-button = Sjå vern
-    .accesskey = S
-cfr-doorhanger-socialtracking-close-button = Lat att
-    .accesskey = L
-cfr-doorhanger-socialtracking-dont-show-again = Ikkje vis meg meldingar som dette igjen
-    .accesskey = I
-cfr-doorhanger-socialtracking-heading = { -brand-short-name } hindra eit sosialt nettverk frå å spore deg her
-cfr-doorhanger-socialtracking-description = Personvernet ditt betyr noko. { -brand-short-name } blokkerer no vanlege sporarar frå sosiale medium, og avgrensar kor mykje data dei kan samle inn om kva du gjer på nettet.
-cfr-doorhanger-fingerprinters-heading = { -brand-short-name } blokkerte ein fingerprinter på denne sida
-cfr-doorhanger-fingerprinters-description = Personvernet ditt betyr noko. { -brand-short-name } blokkerer no fingerprinters, som samlar inn delar av unikt identifiserbar informasjon om eininga di for å spore deg.
-cfr-doorhanger-cryptominers-heading = { -brand-short-name } blokkerte ein kryptominar på denne sida
-cfr-doorhanger-cryptominers-description = Personvernet ditt betyr noko. { -brand-short-name } blokkerer no kryptoutvinnarar, som brukar datakrafta til systemet for å utvinne digitale pengar.
-
 ## Enhanced Tracking Protection Milestones
-
-# Variables:
-#   $blockedCount (Number) - The total count of blocked trackers. This number will always be greater than 1.
-#   $date (String) - The date we began recording the count of blocked trackers
-cfr-doorhanger-milestone-heading =
-    { $blockedCount ->
-       *[other] { -brand-short-name } har blokkert over <b>{ $blockedCount }</b> sporarar sidan { $date }!
-    }
 
 # Variables:
 #   $blockedCount (Number) - The total count of blocked trackers. This number will always be greater than 1.
 #   $date (Datetime) - The date we began recording the count of blocked trackers
 cfr-doorhanger-milestone-heading2 =
     { $blockedCount ->
-       *[other] { -brand-short-name } blokkerte over <b>{ $blockedCount }</b>sporarar sidan { DATETIME($date, month: "long", year: "numeric") }!
+       *[other] { -brand-short-name } blokkerte over <b>{ $blockedCount }</b> sporarar sidan { DATETIME($date, month: "long", year: "numeric") }!
     }
 cfr-doorhanger-milestone-ok-button = Vis alle
     .accesskey = s
-
-## What’s New Panel Content for Firefox 76
-
-
-## Lockwise message
-
-cfr-whatsnew-lockwise-header = Lag enkelt trygge passord
-cfr-whatsnew-lockwise-body = Det er vanskeleg å kome på unike, trygge passord for kvar konto. Når du lagar eit passord, vel du passordfeltet for å bruke eit trygt, generert passord frå { -brand-shorter-name }.
-cfr-whatsnew-lockwise-icon-alt = { -lockwise-brand-short-name }-ikon
-
-## Vulnerable Passwords message
-
-cfr-whatsnew-passwords-header = Få varsel om sårbare passord
-cfr-whatsnew-passwords-body = Hackarar veit at folk brukar dei same passorda på nytt. Dersom du brukar det same passordet på fleire nettstadar, og ein av desse nettstadane er i ein datalekkasje, vil du sjå eit varsel i { -lockwise-brand-short-name } om å endre passordet ditt på desse nettstadane.
-cfr-whatsnew-passwords-icon-alt = Sårbart passord, nøkkelikon
-
-## Picture-in-Picture fullscreen message
-
-cfr-whatsnew-pip-fullscreen-header = Ta bilde-i-bilde fullskjerm
-cfr-whatsnew-pip-fullscreen-body = Når du sprett ein video inn i eit flytande vindauge, kan du no dobbelklikke på det vindauget for å gå i fullskjerm.
-cfr-whatsnew-pip-fullscreen-icon-alt = Bilde-i-bilde ikon
-
-## Protections Dashboard message
-
-cfr-whatsnew-protections-header = Vern på ein augneblink
-cfr-whatsnew-protections-body = Tryggingsoversikta inneheld samandragsrapportar om datalekkasjar og passordhandtering. Du kan no spore kor mange datalekkasjar du har løyst, og sjå om nokon av dei lagra passorda dine kan ha blitt eksponerte i ein datalekkasje.
-cfr-whatsnew-protections-cta-link = Vis tryggingsoversyn
-cfr-whatsnew-protections-icon-alt = Skjoldikon
-
-## Better PDF message
-
-cfr-whatsnew-better-pdf-header = Betre PDF-oppleving
-cfr-whatsnew-better-pdf-body = PDF-dokument vert no opna direkte i { -brand-short-name }, og held arbeidsflyten innan same program.
-
 cfr-doorhanger-milestone-close-button = Lat att
     .accesskey = L
-
-## What’s New Panel Content for Firefox 76
-## Protections Dashboard message
 
 ## DOH Message
 
@@ -292,28 +117,141 @@ cfr-doorhanger-doh-secondary-button = Slå av
 
 ## Fission Experiment Message
 
-cfr-doorhanger-fission-body-approved = Personvernet ditt er viktig. { -brand-short-name } isolerer no nettstadar frå kvarandre, noko som gjer det vanskelegare for hackarar å stele passord, kreditkortnummer og annan sensitiv informasjon.
-cfr-doorhanger-fission-header = Nettstadisolering
-cfr-doorhanger-fission-primary-button = Ok, eg forstår
-    .accesskey = O
-cfr-doorhanger-fission-secondary-button = Les meir
-    .accesskey = L
-
-## What's new: Cookies message
-
-## What's new: Media controls message
-
-## What's new: Search shortcuts
-
-## What's new: Cookies protection
-
-## What's new: Better bookmarking
-
-## What's new: Cross-site cookie tracking
-
 ## Full Video Support CFR message
 
 cfr-doorhanger-video-support-body = Videoar på dnne nettstaden kan ikkje spelast av rett på denne versjonen av { -brand-short-name }. For full videostøtte, oppdater { -brand-short-name } no.
 cfr-doorhanger-video-support-header = Oppdater { -brand-short-name } for å spele av video
 cfr-doorhanger-video-support-primary-button = Oppdater no
     .accesskey = O
+
+## Spotlight modal shared strings
+
+## VPN promotion dialog for public Wi-Fi users
+##
+## If a user is detected to be on a public Wi-Fi network, they are given a
+## bit of info about how to improve their privacy and then offered a button
+## to the Mozilla VPN page and a link to dismiss the dialog.
+
+# This header text can be explicitly wrapped.
+spotlight-public-wifi-vpn-header = Det ser ut til at du brukar offentleg Wi-Fi
+spotlight-public-wifi-vpn-body = For å skjule posisjonen din og nettlesingsaktiviteten, bør du vurdere eit virtuelt privat nettverk. Det vil bidra til å halde deg beskytta når du surfar på offentlege stadar som flyplassar og kaféar.
+spotlight-public-wifi-vpn-primary-button = Hald deg privat med { -mozilla-vpn-brand-name }
+    .accesskey = H
+spotlight-public-wifi-vpn-link = Ikkje no
+    .accesskey = I
+
+## Total Cookie Protection Rollout
+
+## Emotive Continuous Onboarding
+
+spotlight-better-internet-header = Eit betre internett byrjar med deg
+spotlight-better-internet-body = Når du brukar { -brand-short-name }, stemmer du for eit ope og tilgjengeleg internett som er betre for alle.
+spotlight-peace-mind-header = Vi beskyttar deg
+spotlight-peace-mind-body = Kvar månad blokkerer { -brand-short-name } i gjennomsnitt over 3000 sporarar per brukar. Fordi ingenting, spesielt personvernplager som sporarar, skal stå mellom deg og eit godt internett.
+spotlight-pin-primary-button =
+    { PLATFORM() ->
+        [macos] Behald i dokk
+       *[other] Fest til oppgåvelinja
+    }
+spotlight-pin-secondary-button = Ikkje no
+
+## MR2022 Background Update Windows native toast notification strings.
+##
+## These strings will be displayed by the Windows operating system in
+## a native toast, like:
+##
+## <b>multi-line title</b>
+## multi-line text
+## <img>
+## [ primary button ] [ secondary button ]
+##
+## The button labels are fitted into narrow fixed-width buttons by
+## Windows and therefore must be as narrow as possible.
+
+mr2022-background-update-toast-title = Ny { -brand-short-name }. Meir privat. Færre sporarar. Ingen kompromiss.
+mr2022-background-update-toast-text = Prøv den nyaste { -brand-short-name } no, oppgradert med det sterkaste anti-sporingsvernet vårt til no.
+
+# This button label will be fitted into a narrow fixed-width button by
+# Windows. Try to not exceed the width of the English text (compare it
+# using a variable font like Arial): the button can only fit 1-2
+# additional characters, exceeding characters will be truncated.
+mr2022-background-update-toast-primary-button-label = Opne { -brand-shorter-name } no
+
+# This button label will be fitted into a narrow fixed-width button by
+# Windows. Try to not exceed the width of the English text (compare it using a
+# variable font like Arial): the button can only fit 1-2 additional characters,
+# exceeding characters will be truncated.
+mr2022-background-update-toast-secondary-button-label = Minn meg på det seinare
+
+## Firefox View CFR
+
+firefoxview-cfr-primarybutton = Prøv det
+    .accesskey = t
+firefoxview-cfr-secondarybutton = Ikkje no
+    .accesskey = n
+firefoxview-cfr-header-v2 = Hald fram raskt der du slutta
+firefoxview-cfr-body-v2 = Få tilbake nyleg attlatne faner, og skift snøgt mellom einingar med { -firefoxview-brand-name }.
+
+## Firefox View Spotlight
+
+firefoxview-spotlight-promo-title = Sei hei til { -firefoxview-brand-name }
+
+# “Poof” refers to the expression to convey when something or someone suddenly disappears, or in this case, reappears. For example, “Poof, it’s gone.”
+firefoxview-spotlight-promo-subtitle = Vil du ha den opne fana på telefonen din? Hent henne. Treng du sida du nettopp har besøkt? Hent henne tilbake med { -firefoxview-brand-name }.
+firefoxview-spotlight-promo-primarybutton = Sjå korleis dette fungerer
+firefoxview-spotlight-promo-secondarybutton = Hopp over
+
+## Colorways expiry reminder CFR
+
+colorways-cfr-primarybutton = Vel fargesamansetjing
+    .accesskey = V
+
+# "shades" refers to the different color options available to users in colorways.
+colorways-cfr-body = Farg nettlesaren din med eksklusive { -brand-short-name }-fargenyansar inspirert av røyster som endra kulturen.
+colorways-cfr-header-28days = Fargesamansetjinga «Uavhengige røyster» går ut 16. januar
+colorways-cfr-header-14days = Fargesamansetjinga «Uavhengige røyster» går ut om to veker
+colorways-cfr-header-7days = Fargesamansetjinga «Uavhengige røyster» går ut om to veker
+colorways-cfr-header-today = Fargesamansetjinga «Uavhengige røyster» går ut i dag
+
+## Cookie Banner Handling CFR
+
+cfr-cbh-header = Tillate at { -brand-short-name } avviser infokapselbanner?
+cfr-cbh-body = { -brand-short-name } kan automatisk avvise mange infokapselbanner-førespurnadar.
+cfr-cbh-confirm-button = Avvis infokapselbanner
+    .accesskey = A
+cfr-cbh-dismiss-button = Ikkje no
+    .accesskey = N
+
+## These strings are used in the Fox doodle Pin/set default spotlights
+
+july-jam-headline = Vi beskyttar deg
+july-jam-body = Kvar månad blokkerer { -brand-short-name } i gjennomsnitt over 3000 sporarar per brukar, noko som gir deg trygg og rask tilgang til eit bra internett.
+july-jam-set-default-primary = Opne lenkene mine med { -brand-short-name }
+fox-doodle-pin-headline = Velkomen tilbake
+
+# “indie” is short for the term “independent”.
+# In this instance, free from outside influence or control.
+fox-doodle-pin-body = Her er ei rask påminning om at du kan ha den uavhengige nettlesaren din eitt klikk unna.
+fox-doodle-pin-primary = Opne lenkene mine med { -brand-short-name }
+fox-doodle-pin-secondary = Ikkje no
+
+## These strings are used in the Set Firefox as Default PDF Handler for Existing Users experiment
+
+set-default-pdf-handler-headline = <strong>PDF-filene dine vert no opna i { -brand-short-name }.</strong> Rediger eller fyll ut skjema direkte i nettlesaren din. For å endre, søk etter «PDF» i innstillingane.
+set-default-pdf-handler-primary = Eg forstår
+
+## FxA sync CFR
+
+fxa-sync-cfr-header = Planlegg du å kjøpe ei ny eining i framtida?
+fxa-sync-cfr-body = Pass på at dei siste bokmerka, passord og faner følgjer med deg kvar gong du opnar ein ny { -brand-product-name }-nettlesar.
+fxa-sync-cfr-primary = Les meir
+    .accesskey = L
+fxa-sync-cfr-secondary = Minn meg på det seinare
+    .accesskey = M
+
+## Device Migration FxA Spotlight
+
+device-migration-fxa-spotlight-header = Brukar du ei gammal eining?
+device-migration-fxa-spotlight-body = Sikkerheitskopier dine data for å sikre at du ikkje mistar viktig informasjon som bokmerke og passord — spesielt viss du byter til ei ny eining.
+device-migration-fxa-spotlight-primary-button = Korleis tryggingskopiere mine data
+device-migration-fxa-spotlight-link = Minn meg på det seinare

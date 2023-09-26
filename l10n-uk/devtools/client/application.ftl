@@ -25,18 +25,8 @@ serviceworker-worker-unregister = Скасувати реєстрацію
 # Text for the debug link displayed for an already started Service Worker. Clicking on the
 # link opens a new devtools toolbox for this service worker. The title attribute is only
 # displayed when the link is disabled.
-serviceworker-worker-debug = Зневадження
-    .title = Лише виконувані service workers можуть бути зневаджені
-
-# Text for the debug link displayed for an already started Service Worker, when we
-# are in multi e10s mode, which effectively disables this link.
-serviceworker-worker-debug-forbidden = Зневадження
-    .title = Зневадження service workers можливе лише якщо вимкнено e10s
-
-# Text for the start link displayed for a registered but not running Service Worker.
-# Clicking on the link will attempt to start the service worker.
-serviceworker-worker-start2 = Почати
-    .title = Можливо запустити service workers лише якщо вимкнено e10s
+serviceworker-worker-debug = Налагодження
+    .title = Можна налагоджувати лише виконувані service workers
 
 # Alt text for the image icon displayed inside a debug link for a service worker.
 serviceworker-worker-inspect-icon =
@@ -48,13 +38,9 @@ serviceworker-worker-start3 = Почати
 
 # Text displayed for the updated time of the service worker. The <time> element will
 # display the last update time of the service worker script.
+# Variables:
+#   $date (date) - Update date
 serviceworker-worker-updated = Оновлено <time>{ DATETIME($date, month: "long", year: "numeric", day: "numeric", hour: "numeric", minute: "numeric", second: "numeric") }</time>
-
-# Text displayed next to the URL for the source of the service worker (e-g. "Source my/path/to/worker-js")
-serviceworker-worker-source = Джерело
-
-# Text displayed next to the current status of the service worker.
-serviceworker-worker-status = Стан
 
 ## Service Worker status strings: all serviceworker-worker-status-* strings are also
 ## defined in aboutdebugging.properties and should be synchronized with them.
@@ -66,26 +52,6 @@ serviceworker-worker-status-running = Виконується
 # Service Worker status. A stopped service worker is registered but not currently active.
 serviceworker-worker-status-stopped = Зупинено
 
-# Text displayed when no service workers are visible for the current page. Clicking on the
-# link will open https://developer-mozilla-org/docs/Web/API/Service_Worker_API/Using_Service_Workers
-serviceworker-empty-intro = Щоб інспектувати Service Worker тут, вам потрібно зареєструвати його. <a>Докладніше</a>
-
-# Text displayed when there are no Service Workers to display for the current page,
-# introducing hints to debug Service Worker issues.
-serviceworker-empty-suggestions = Якщо поточна сторінка повинна мати service worker, ось кілька речей, які ви можете спробувати
-
-# Suggestion to check for errors in the Console to investigate why a service worker is not
-# registered. Clicking on the link opens the webconsole.
-serviceworker-empty-suggestions-console = Перевірте в консолі наявність помилок. <a>Відкрити консоль</a>
-
-# Suggestion to use the debugger to investigate why a service worker is not registered.
-# Clicking on the link will switch from the Application panel to the debugger.
-serviceworker-empty-suggestions-debugger = Пройдіть через реєстрацію вашого Service Worker і перевірте винятки. <a>Відкрити зневаджувач</a>
-
-# Suggestion to go to about:debugging in order to see Service Workers for all domains.
-# Clicking on the link will open about:debugging in a new tab.
-serviceworker-empty-suggestions-aboutdebugging = Інспектуйте Service Workers від інших доменів. <a>Відкрити about:debugging</a>
-
 # Text displayed when no service workers are visible for the current page.
 serviceworker-empty-intro2 = Не знайдено service workers
 
@@ -95,7 +61,7 @@ serviceworker-empty-intro-link = Докладніше
 # Text displayed when there are no Service Workers to display for the current page,
 # introducing hints to debug Service Worker issues.
 # <a> and <span> are links that will open the webconsole and the debugger, respectively.
-serviceworker-empty-suggestions2 = Якщо ця сторінка повинна містити service worker, ви можете переглянути помилки в <a>Консолі</a> або зареєструвати свій service worker у <span>Зневаджувачі</span>.
+serviceworker-empty-suggestions2 = Якщо ця сторінка повинна містити service worker, ви можете переглянути помилки в <a>Консолі</a> або зареєструвати свій service worker у <span>Налагоджувачі</span>.
 
 # Suggestion to go to about:debugging in order to see Service Workers for all domains.
 # Link will open about:debugging in a new tab.
@@ -103,10 +69,6 @@ serviceworker-empty-suggestions-aboutdebugging2 = Перегляньте service
 
 # Header for the Manifest page when we have an actual manifest
 manifest-view-header = Маніфест додатка
-
-# Header for the Manifest page when there's no manifest to inspect
-# The link will open https://developer.mozilla.org/en-US/docs/Web/Manifest
-manifest-empty-intro = Вам необхідно додати маніфест вебпрограми, щоб інспектувати його тут. <a>Докладніше</a>
 
 # Header for the Manifest page when there's no manifest to inspect
 manifest-empty-intro2 = Не виявлено маніфесту вебпрограми
@@ -149,6 +111,8 @@ manifest-json-link-data-url = Маніфест вбудовано в URL дан�
 
 # Text displayed at manifest icons to label their purpose, as declared
 # in the manifest.
+# Variables:
+#   $purpose (string) - Manifest purpose
 manifest-icon-purpose = Призначення: <code>{ $purpose }</code>
 
 # Text displayed as the alt attribute for <img> tags showing the icons in the
@@ -157,8 +121,11 @@ manifest-icon-img =
     .alt = Піктограма
 
 # Text displayed as the title attribute for <img> tags showing the icons in the
-# manifest. `$sizes` is a user-dependent string that has been parsed as a
-# space-separated list of `<width>x<height>` sizes or the keyword `any`.
+# manifest.
+# Variables:
+#   $sizes (string) - User-dependent string that has been parsed as a
+#                     space-separated list of `<width>x<height>` sizes or
+#                     the keyword `any`.
 manifest-icon-img-title = Піктограма з розмірами: { $sizes }
 
 # Text displayed as the title attribute for <img> tags showing the icons in the
@@ -184,4 +151,3 @@ icon-warning =
 icon-error =
     .alt = Піктограма помилки
     .title = Помилка
-

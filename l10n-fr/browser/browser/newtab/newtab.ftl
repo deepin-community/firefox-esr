@@ -8,9 +8,6 @@
 newtab-page-title = Nouvel onglet
 newtab-settings-button =
     .title = Personnaliser la page Nouvel onglet
-newtab-personalize-button-label = Personnaliser
-    .title = Personnaliser la page de nouvel onglet
-    .aria-label = Personnaliser la page de nouvel onglet
 newtab-personalize-icon-label =
     .title = Personnaliser la page de nouvel onglet
     .aria-label = Personnaliser la page de nouvel onglet
@@ -23,13 +20,13 @@ newtab-personalize-dialog-label =
 newtab-search-box-search-button =
     .title = Rechercher
     .aria-label = Rechercher
-newtab-search-box-search-the-web-text = Rechercher sur le Web
-# Variables
-#  $engine (String): the name of the user's default search engine
+
+# Variables:
+#   $engine (string) - The name of the user's default search engine
 newtab-search-box-handoff-text = Rechercher avec { $engine } ou saisir une adresse
 newtab-search-box-handoff-text-no-engine = Rechercher ou saisir une adresse
-# Variables
-#  $engine (String): the name of the user's default search engine
+# Variables:
+#   $engine (string) - The name of the user's default search engine
 newtab-search-box-handoff-input =
     .placeholder = Rechercher avec { $engine } ou saisir une adresse
     .title = Rechercher avec { $engine } ou saisir une adresse
@@ -38,10 +35,7 @@ newtab-search-box-handoff-input-no-engine =
     .placeholder = Rechercher ou saisir une adresse
     .title = Rechercher ou saisir une adresse
     .aria-label = Rechercher ou saisir une adresse
-newtab-search-box-search-the-web-input =
-    .placeholder = Rechercher sur le Web
-    .title = Rechercher sur le Web
-    .aria-label = Rechercher sur le Web
+
 newtab-search-box-text = Rechercher sur le Web
 newtab-search-box-input =
     .placeholder = Rechercher sur le Web
@@ -50,17 +44,18 @@ newtab-search-box-input =
 ## Top Sites - General form dialog.
 
 newtab-topsites-add-search-engine-header = Ajouter un moteur de recherche
-newtab-topsites-add-topsites-header = Nouveau site populaire
 newtab-topsites-add-shortcut-header = Nouveau raccourci
 newtab-topsites-edit-topsites-header = Modifier le site populaire
 newtab-topsites-edit-shortcut-header = Modifier le raccourci
 newtab-topsites-title-label = Titre
 newtab-topsites-title-input =
     .placeholder = Saisir un titre
+
 newtab-topsites-url-label = Adresse web
 newtab-topsites-url-input =
     .placeholder = Saisir ou coller une adresse web
 newtab-topsites-url-validation = Adresse web valide requise
+
 newtab-topsites-image-url-label = URL de l’image personnalisée
 newtab-topsites-use-image-link = Utiliser une image personnalisée…
 newtab-topsites-image-validation = Échec du chargement de l’image. Essayez avec une autre URL.
@@ -89,13 +84,15 @@ newtab-topsite-sponsored = Sponsorisé
 newtab-menu-section-tooltip =
     .title = Ouvrir le menu
     .aria-label = Ouvrir le menu
+
 # Tooltip for dismiss button
 newtab-dismiss-button-tooltip =
     .title = Supprimer
     .aria-label = Supprimer
+
 # This tooltip is for the context menu of Pocket cards or Topsites
 # Variables:
-#  $title (String): The label or hostname of the site. This is for screen readers when the context menu button is focused/active.
+#   $title (string) - The label or hostname of the site. This is for screen readers when the context menu button is focused/active.
 newtab-menu-content-tooltip =
     .title = Ouvrir le menu
     .aria-label = Ouvrir le menu contextuel pour { $title }
@@ -161,14 +158,22 @@ newtab-label-removed-bookmark = Marque-page supprimé
 newtab-label-recommended = Tendance
 newtab-label-saved = Enregistré dans { -pocket-brand-name }
 newtab-label-download = Téléchargé
+
 # This string is used in the story cards to indicate sponsored content
 # Variables:
-#  $sponsorOrSource (String): This is the name of a company or their domain
+#   $sponsorOrSource (string) - The name of a company or their domain
 newtab-label-sponsored = { $sponsorOrSource } · Sponsorisé
+
 # This string is used at the bottom of story cards to indicate sponsored content
 # Variables:
-#  $sponsor (String): This is the name of a sponsor
+#   $sponsor (string) - The name of a sponsor
 newtab-label-sponsored-by = Sponsorisé par { $sponsor }
+
+# This string is used under the image of story cards to indicate source and time to read
+# Variables:
+#   $source (string) - The name of a company or their domain
+#   $timeToRead (number) - The estimated number of minutes to read this story
+newtab-label-source-read-time = { $source } · { $timeToRead } min
 
 ## Section Menu: These strings are displayed in the section context menu and are
 ## meant as a call to action for the given section.
@@ -194,18 +199,18 @@ newtab-section-expand-section-label =
 ## Section Headers.
 
 newtab-section-header-topsites = Sites les plus visités
-newtab-section-header-highlights = Éléments-clés
 newtab-section-header-recent-activity = Activité récente
 # Variables:
-#  $provider (String): Name of the corresponding content provider.
+#   $provider (string) - Name of the corresponding content provider.
 newtab-section-header-pocket = Recommandations par { $provider }
 
 ## Empty Section States: These show when there are no more items in a section. Ex. When there are no more Pocket story recommendations, in the space where there would have been stories, this is shown instead.
 
 newtab-empty-section-highlights = Commencez à naviguer puis nous afficherons des articles, des vidéos ou d’autres pages que vous avez récemment visités ou ajoutés aux marque-pages.
+
 # Ex. When there are no more Pocket story recommendations, in the space where there would have been stories, this is shown instead.
 # Variables:
-#  $provider (String): Name of the content provider for this section, e.g "Pocket".
+#   $provider (string) - Name of the content provider for this section, e.g "Pocket".
 newtab-empty-section-topstories = Il n’y en a pas d’autres. Revenez plus tard pour plus d’articles de { $provider }. Vous ne voulez pas attendre ? Choisissez un sujet parmi les plus populaires pour découvrir d’autres articles intéressants sur le Web.
 
 ## Empty Section (Content Discovery Experience). These show when there are no more stories or when some stories fail to load.
@@ -221,10 +226,24 @@ newtab-discovery-empty-section-topstories-timed-out = Oups, il semblerait que la
 
 # This is shown at the bottom of the trending stories section and precedes a list of links to popular topics.
 newtab-pocket-read-more = Sujets populaires :
+newtab-pocket-new-topics-title = Vous voulez encore plus d’articles ? Parcourez ces sujets populaires de { -pocket-brand-name }
 newtab-pocket-more-recommendations = Plus de recommandations
 newtab-pocket-learn-more = En savoir plus
 newtab-pocket-cta-button = Installer { -pocket-brand-name }
 newtab-pocket-cta-text = Enregistrez les articles que vous aimez dans { -pocket-brand-name }, et stimulez votre imagination avec des lectures fascinantes.
+newtab-pocket-pocket-firefox-family = { -pocket-brand-name } fait partie de la famille { -brand-product-name }
+
+## Pocket Final Card Section.
+## This is for the final card in the Pocket grid.
+
+# A save to Pocket button that shows over the card thumbnail on hover.
+newtab-pocket-save = Enregistrer
+newtab-pocket-saved = Enregistrée
+
+## Pocket content onboarding experience dialog and modal for new users seeing the Pocket section for the first time, shown as the first item in the Pocket section.
+
+newtab-pocket-onboarding-discover = Découvrez le meilleur du Web
+newtab-pocket-onboarding-cta = { -pocket-brand-name } explore une grande palette de publications pour vous apporter les contenus les plus instructifs, enthousiasmants et fiables directement dans votre navigateur { -brand-product-name }.
 
 ## Error Fallback Content.
 ## This message and suggested action link are shown in each section of UI that fails to render.
@@ -236,6 +255,8 @@ newtab-error-fallback-refresh-link = Actualisez la page pour réessayer.
 
 newtab-custom-shortcuts-title = Raccourcis
 newtab-custom-shortcuts-subtitle = Sites que vous enregistrez ou visitez
+# Variables
+#   $num (number) - Number of rows to display
 newtab-custom-row-selector =
     { $num ->
         [one] { $num } ligne
@@ -245,13 +266,8 @@ newtab-custom-sponsored-sites = Raccourcis sponsorisés
 newtab-custom-pocket-title = Recommandé par { -pocket-brand-name }
 newtab-custom-pocket-subtitle = Contenu exceptionnel sélectionné par { -pocket-brand-name }, membre de la famille { -brand-product-name }
 newtab-custom-pocket-sponsored = Articles sponsorisés
+newtab-custom-pocket-show-recent-saves = Afficher les éléments enregistrés récemment
 newtab-custom-recent-title = Activité récente
 newtab-custom-recent-subtitle = Une sélection de sites et de contenus récents
 newtab-custom-close-button = Fermer
-# For the "Snippets" feature traditionally on about:home.
-# Alternative translation options: "Small Note" or something that
-# expresses the idea of "a small message, shortened from something else,
-# and non-essential but also not entirely trivial and useless.
-newtab-custom-snippets-title = Brèves
-newtab-custom-snippets-subtitle = Astuces et actualité de { -vendor-short-name } et { -brand-product-name }
 newtab-custom-settings = Gérer plus de paramètres

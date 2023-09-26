@@ -16,8 +16,8 @@ downloads-panel =
 # The style attribute has the width of the Downloads Panel expressed using
 # a CSS unit. The longest labels that should fit are usually those of
 # in-progress and blocked downloads.
-downloads-panel-list =
-    .style = width: 70ch
+downloads-panel-items =
+    .style = width: 35em
 
 downloads-cmd-pause =
     .label = Duraklat
@@ -30,42 +30,65 @@ downloads-cmd-cancel =
 downloads-cmd-cancel-panel =
     .aria-label = İptal
 
-# This message is only displayed on Windows and Linux devices
-downloads-cmd-show-menuitem =
-    .label = Bulunduğu klasörü aç
-    .accesskey = d
+downloads-cmd-show-menuitem-2 =
+    .label =
+        { PLATFORM() ->
+            [macos] Finder’da göster
+           *[other] Klasörde göster
+        }
+    .accesskey = ö
 
-# This message is only displayed on macOS devices
-downloads-cmd-show-menuitem-mac =
-    .label = Finder’da göster
-    .accesskey = F
+## Displayed in the downloads context menu for files that can be opened.
+## Variables:
+##   $handler (String) - The name of the mime type's default file handler.
+##   Example: "Notepad", "Acrobat Reader DC", "7-Zip File Manager"
 
 downloads-cmd-use-system-default =
     .label = Sistem görüntüleyicisinde aç
     .accesskey = S
+# This version is shown when the download's mime type has a valid file handler.
+downloads-cmd-use-system-default-named =
+    .label = { $handler } ile aç
+    .accesskey = i
 
+# We can use the same accesskey as downloads-cmd-always-open-similar-files.
+# Both should not be visible in the downloads context menu at the same time.
 downloads-cmd-always-use-system-default =
     .label = Her zaman sistem görüntüleyicisinde aç
     .accesskey = H
+# We can use the same accesskey as downloads-cmd-always-open-similar-files.
+# Both should not be visible in the downloads context menu at the same time.
+# This version is shown when the download's mime type has a valid file handler.
+downloads-cmd-always-use-system-default-named =
+    .label = Her zaman { $handler } ile aç
+    .accesskey = e
 
-downloads-cmd-show-button =
+##
+
+# We can use the same accesskey as downloads-cmd-always-use-system-default.
+# Both should not be visible in the downloads context menu at the same time.
+downloads-cmd-always-open-similar-files =
+    .label = Benzer dosyaları her zaman aç
+    .accesskey = B
+
+downloads-cmd-show-button-2 =
     .tooltiptext =
         { PLATFORM() ->
             [macos] Finder’da göster
-           *[other] Bulunduğu klasörü aç
+           *[other] Klasörde göster
         }
 
-downloads-cmd-show-panel =
+downloads-cmd-show-panel-2 =
     .aria-label =
         { PLATFORM() ->
             [macos] Finder’da göster
-           *[other] Bulunduğu klasörü aç
+           *[other] Klasörde göster
         }
-downloads-cmd-show-description =
+downloads-cmd-show-description-2 =
     .value =
         { PLATFORM() ->
             [macos] Finder’da göster
-           *[other] Bulunduğu klasörü aç
+           *[other] Klasörde göster
         }
 
 downloads-cmd-show-downloads =
@@ -89,6 +112,9 @@ downloads-cmd-clear-list =
 downloads-cmd-clear-downloads =
     .label = İndirmeleri temizle
     .accesskey = t
+downloads-cmd-delete-file =
+    .label = Sil
+    .accesskey = S
 
 # This command is shown in the context menu when downloads are blocked.
 downloads-cmd-unblock =
@@ -138,11 +164,18 @@ downloads-open-file =
 ##   $seconds (number) - Amount of seconds left till the file opens.
 ##   $minutes (number) - Amount of minutes till the file opens.
 
-downloading-file-opens-in-hours-and-minutes = { $hours } saat { $minutes } dk sonra açılacak…
-downloading-file-opens-in-minutes = { $minutes } dk sonra açılacak…
-downloading-file-opens-in-minutes-and-seconds = { $minutes } dk { $seconds } sn sonra açılacak…
-downloading-file-opens-in-seconds = { $seconds } sn sonra açılacak…
-downloading-file-opens-in-some-time = Tamamlandığında açılacak…
+downloading-file-opens-in-hours-and-minutes-2 =
+    .value = { $hours } saat { $minutes } dk sonra açılacak…
+downloading-file-opens-in-minutes-2 =
+    .value = { $minutes } dk sonra açılacak…
+downloading-file-opens-in-minutes-and-seconds-2 =
+    .value = { $minutes } dk { $seconds } sn sonra açılacak…
+downloading-file-opens-in-seconds-2 =
+    .value = { $seconds } sn sonra açılacak…
+downloading-file-opens-in-some-time-2 =
+    .value = Tamamlandığında açılacak…
+downloading-file-click-to-open =
+    .value = Tamamlandığında aç
 
 ##
 
@@ -168,6 +201,21 @@ downloads-history =
 downloads-details =
     .title = İndirme ayrıntıları
 
+## Displayed when a site attempts to automatically download many files.
+## Variables:
+##   $num (number) - Number of blocked downloads.
+##   $url (string) - The url of the suspicious site, stripped of http, https and www prefix.
+
+downloads-files-not-downloaded =
+    { $num ->
+        [one] Dosya indirilmedi.
+       *[other] { $num } dosya indirilmedi.
+    }
+downloads-blocked-from-url = { $url } adresinden indirmeler engellendi.
+downloads-blocked-download-detailed-info = { $url } otomatik olarak birden çok dosya indirmeye çalıştı. Site bozuk olabilir veya cihazınızda spam dosyalar depolamaya çalışıyor olabilir.
+
+##
+
 downloads-clear-downloads-button =
     .label = İndirmeleri temizle
     .tooltiptext = Tamamlanan, iptal edilen ve başarısız olan indirmeleri temizler
@@ -180,3 +228,27 @@ downloads-list-empty =
 # This string is shown when there are no items in the Downloads Panel.
 downloads-panel-empty =
     .value = Bu oturumda indirme yapılmadı.
+
+# This is displayed in an item at the bottom of the Downloads Panel when there
+# are more downloads than can fit in the list in the panel.
+#   $count (number) - number of files being downloaded that are not shown in the
+#                     panel list.
+downloads-more-downloading =
+    { $count ->
+        [one] { $count } dosya daha indiriliyor
+       *[other] { $count } dosya daha indiriliyor
+    }
+
+## Download errors
+
+downloads-error-alert-title = İndirme hatası
+# Variables:
+#   $extension (String): the name of the blocking extension.
+downloads-error-blocked-by = İndirme { $extension } tarafından engellendiği için kaydedilemiyor.
+# Used when the name of the blocking extension is unavailable.
+downloads-error-extension = İndirme bir uzantı tarafından engellendiği için kaydedilemiyor.
+# Line breaks in this message are meaningful, and should be maintained.
+downloads-error-generic =
+    Bilinmeyen bir hata oluştuğu için indirilen dosya kaydedilemiyor.
+    
+    Lütfen tekrar deneyin.

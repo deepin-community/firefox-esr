@@ -2,13 +2,12 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-screenshots-context-menu = Tak a Screenshot
-
-screenshots-my-shots-button = Ma Shots
-
 screenshot-toolbarbutton =
     .label = Screenshot
     .tooltiptext = Tak a screenshot
+
+screenshot-shortcut =
+    .key = S
 
 screenshots-instructions = Drag or click on the page tae wale a bittie. Press ESC tae stap.
 screenshots-cancel-button = Stap
@@ -18,6 +17,12 @@ screenshots-download-button = Doonload
 screenshots-download-button-tooltip = Doonload screenshot
 screenshots-copy-button = Copy
 screenshots-copy-button-tooltip = Copy screenshot tae clipbuird
+screenshots-download-button-title =
+    .title = Doonload screenshot
+screenshots-copy-button-title =
+    .title = Copy screenshot tae clipbuird
+screenshots-cancel-button-title =
+    .title = Stap
 
 screenshots-meta-key =
     { PLATFORM() ->
@@ -41,8 +46,6 @@ screenshots-login-error-details = We couldnae save yer shot acause there's a pro
 screenshots-unshootable-page-error-title = We cannae screenshot this page.
 screenshots-unshootable-page-error-details = This isnae a staunart Wab page, sae ye cannae tak a screenshot o it.
 
-screenshots-self-screenshot-error-title = Ye cannae tak a shot o a { -screenshots-brand-name } page!
-
 screenshots-empty-selection-error-title = Yer selection is ower wee
 
 screenshots-private-window-error-title = { -screenshots-brand-name } is disabled in Private Stravaigin Mode
@@ -50,3 +53,4 @@ screenshots-private-window-error-details = Sorry aboot aw the faff. We're wirkin
 
 screenshots-generic-error-title = Help ma boab! { -screenshots-brand-name } jist went radge!
 screenshots-generic-error-details = We're no shair whit jist happened. Want tae try again or tak a shot o anither page?
+

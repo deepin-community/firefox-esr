@@ -11,14 +11,6 @@ navbar-tooltip-instruction =
 
 ## Back
 
-main-context-menu-back =
-    .tooltiptext = Jednu stronu wróćo
-    .aria-label = Wróćo
-    .accesskey = W
-navbar-tooltip-back =
-    .value = { main-context-menu-back.tooltiptext }
-toolbar-button-back =
-    .label = { main-context-menu-back.aria-label }
 # Variables
 #   $shortcut (String) - A keyboard shortcut for the Go Back command.
 main-context-menu-back-2 =
@@ -36,14 +28,6 @@ toolbar-button-back-2 =
 
 ## Forward
 
-main-context-menu-forward =
-    .tooltiptext = Jednu stronu doprědka
-    .aria-label = Doprědka
-    .accesskey = D
-navbar-tooltip-forward =
-    .value = { main-context-menu-forward.tooltiptext }
-toolbar-button-forward =
-    .label = { main-context-menu-forward.aria-label }
 # Variables
 #   $shortcut (String) - A keyboard shortcut for the Go Forward command.
 main-context-menu-forward-2 =
@@ -99,43 +83,41 @@ toolbar-button-fxaccount =
 main-context-menu-page-save =
     .label = Stronu składować jako…
     .accesskey = k
-toolbar-button-page-save =
-    .label = { main-context-menu-page-save.label }
 
 ## Simple menu items
 
-main-context-menu-bookmark-add =
-    .aria-label = Tutu stronu jako zapołožku składować
+main-context-menu-bookmark-page =
+    .aria-label = Stronu jako zapołožku składować …
     .accesskey = z
-    .tooltiptext = Tutu stronu jako zapołožku składować
+    .tooltiptext = Stronu jako zapołožku składować
 # This menuitem is only visible on macOS
-# Cannot be shown at the same time as main-context-menu-bookmark-edit-mac,
+# Cannot be shown at the same time as main-context-menu-edit-bookmark-mac,
 # so should probably have the same access key if possible.
-main-context-menu-bookmark-add-mac =
-    .label = Stronu jako zapołožku składować
-    .accesskey = S
+main-context-menu-bookmark-page-mac =
+    .label = Stronu jako zapołožku składować …
+    .accesskey = z
 # This menuitem is only visible on macOS
-# Cannot be shown at the same time as main-context-menu-bookmark-add-mac,
+# Cannot be shown at the same time as main-context-menu-bookmark-page-mac,
 # so should probably have the same access key if possible.
-main-context-menu-bookmark-edit-mac =
-    .label = Zapołožku wobdźěłać
-    .accesskey = Z
+main-context-menu-edit-bookmark-mac =
+    .label = Zapołožku wobdźěłać…
+    .accesskey = o
 # Variables
 #   $shortcut (String) - A keyboard shortcut for the add bookmark command.
-main-context-menu-bookmark-add-with-shortcut =
-    .aria-label = Tutu stronu jako zapołožku składować
-    .accesskey = z
-    .tooltiptext = Tutu stronu ({ $shortcut }) jako zapołožku składować
-main-context-menu-bookmark-change =
-    .aria-label = Tutu zapołožku wobdźěłać
-    .accesskey = z
-    .tooltiptext = Tutu zapołožku wobdźěłać
+main-context-menu-bookmark-page-with-shortcut =
+    .aria-label = Stronu jako zapołožku składować …
+    .accesskey = o
+    .tooltiptext = Stronu jako zapołožku składować ({ $shortcut })
+main-context-menu-edit-bookmark =
+    .aria-label = Zapołožku wobdźěłać …
+    .accesskey = o
+    .tooltiptext = Zapołožku wobdźěłać
 # Variables
 #   $shortcut (String) - A keyboard shortcut for the edit bookmark command.
-main-context-menu-bookmark-change-with-shortcut =
-    .aria-label = Tutu zapołožku wobdźěłać
-    .accesskey = z
-    .tooltiptext = Tutu zapołožku ({ $shortcut }) wobdźěłać
+main-context-menu-edit-bookmark-with-shortcut =
+    .aria-label = Zapołožku wobdźěłać …
+    .accesskey = o
+    .tooltiptext = Zapołožku wobdźěłać ({ $shortcut })
 main-context-menu-open-link =
     .label = Wotkaz wočinić
     .accesskey = o
@@ -151,23 +133,15 @@ main-context-menu-open-link-new-window =
 main-context-menu-open-link-new-private-window =
     .label = Wotkaz w nowym priwatnym woknje wočinić
     .accesskey = o
-main-context-menu-bookmark-this-link =
-    .label = Tutón wotkaz jako zapołožku składować
-    .accesskey = k
-main-context-menu-bookmark-link =
-    .label = Wotkaz jako zapołožku składować
-    .accesskey = k
+main-context-menu-bookmark-link-2 =
+    .label = Wotkaz jako zapołožku składować …
+    .accesskey = z
 main-context-menu-save-link =
     .label = Wotkaz składować jako…
     .accesskey = k
 main-context-menu-save-link-to-pocket =
     .label = Wotkaz do { -pocket-brand-name } składować
     .accesskey = o
-
-## The access keys for "Copy Link Location" and "Copy Email Address"
-## should be the same if possible; the two context menu items
-## are mutually exclusive.
-
 
 ## The access keys for "Copy Link" and "Copy Email Address"
 ## should be the same if possible; the two context menu items
@@ -176,12 +150,17 @@ main-context-menu-save-link-to-pocket =
 main-context-menu-copy-email =
     .label = E-mejlowu adresu kopěrować
     .accesskey = E
-main-context-menu-copy-link =
-    .label = Wotkazowu adresu kopěrować
-    .accesskey = k
+main-context-menu-copy-phone =
+    .label = Telefonowe čisło kopěrować
+    .accesskey = T
 main-context-menu-copy-link-simple =
     .label = Wotkaz kopěrować
     .accesskey = z
+# This command copies the link, removing additional
+# query parameters used to track users across sites.
+main-context-menu-strip-on-share-link =
+    .label = Wotkaz bjez slědowanja sydła kopěrować
+    .accesskey = o
 
 ## Media (video/audio) controls
 ##
@@ -204,26 +183,6 @@ main-context-menu-media-mute =
 main-context-menu-media-unmute =
     .label = Ze zynkom
     .accesskey = Z
-main-context-menu-media-play-speed =
-    .label = Wothrawanska spěšnosć
-    .accesskey = h
-main-context-menu-media-play-speed-slow =
-    .label = Pomału (0.5×)
-    .accesskey = P
-main-context-menu-media-play-speed-normal =
-    .label = Normalny
-    .accesskey = N
-main-context-menu-media-play-speed-fast =
-    .label = Spěšna (1.25×)
-    .accesskey = S
-main-context-menu-media-play-speed-faster =
-    .label = Spěšniša (1.5×)
-    .accesskey = n
-# "Ludicrous" is a reference to the movie "Space Balls" and is meant
-# to say that this speed is very fast.
-main-context-menu-media-play-speed-fastest =
-    .label = Jara wysoki (2×)
-    .accesskey = J
 main-context-menu-media-play-speed-2 =
     .label = Spěšnosć
     .accesskey = S
@@ -261,23 +220,12 @@ main-context-menu-media-video-leave-fullscreen =
     .accesskey = o
 # This is used when right-clicking on a video in the
 # content area when the Picture-in-Picture feature is enabled.
-main-context-menu-media-pip =
-    .label = Wobraz-we-wobrazu
-    .accesskey = b
-# This is used when right-clicking on a video in the
-# content area when the Picture-in-Picture feature is enabled.
 main-context-menu-media-watch-pip =
     .label = We „wobraz-we-wobrazu“ wobhladać
     .accesskey = b
 main-context-menu-image-reload =
     .label = Wobraz znowa začitać
     .accesskey = b
-main-context-menu-image-view =
-    .label = Wobraz pokazać
-    .accesskey = r
-main-context-menu-video-view =
-    .label = Widejo pokazać
-    .accesskey = d
 main-context-menu-image-view-new-tab =
     .label = Wobraz w nowym rajtarku wočinić
     .accesskey = r
@@ -287,15 +235,6 @@ main-context-menu-video-view-new-tab =
 main-context-menu-image-copy =
     .label = Wobraz kopěrować
     .accesskey = r
-main-context-menu-image-copy-location =
-    .label = Wobrazowu adresu kopěrować
-    .accesskey = o
-main-context-menu-video-copy-location =
-    .label = Widejowu adresu kopěrować
-    .accesskey = i
-main-context-menu-audio-copy-location =
-    .label = Adresu awdiodataje kopěrować
-    .accesskey = u
 main-context-menu-image-copy-link =
     .label = Wobrazowy wotkaz kopěrować
     .accesskey = b
@@ -311,12 +250,12 @@ main-context-menu-image-save-as =
 main-context-menu-image-email =
     .label = Wobraz e-mejlować…
     .accesskey = b
-main-context-menu-image-set-as-background =
-    .label = Jako desktopowy pozadk nastajić…
-    .accesskey = J
 main-context-menu-image-set-image-as-background =
     .label = Wobraz jako desktopowy pozadk nastajić…
     .accesskey = d
+main-context-menu-image-copy-text =
+    .label = Tekst z wobraza kopěrować
+    .accesskey = T
 main-context-menu-image-info =
     .label = Info wo wobrazu pokazać
     .accesskey = w
@@ -329,9 +268,6 @@ main-context-menu-video-save-as =
 main-context-menu-audio-save-as =
     .label = Awdiodataju składować jako…
     .accesskey = A
-main-context-menu-video-image-save-as =
-    .label = Foto wobrazowki składować jako…
-    .accesskey = F
 main-context-menu-video-take-snapshot =
     .label = Foto wobrazowki činić…
     .accesskey = F
@@ -341,23 +277,11 @@ main-context-menu-video-email =
 main-context-menu-audio-email =
     .label = Awdiodataju e-mejlować…
     .accesskey = i
-main-context-menu-plugin-play =
-    .label = Tutón tykač aktiwizować
-    .accesskey = T
-main-context-menu-plugin-hide =
-    .label = Tutón tykač schować
-    .accesskey = h
 main-context-menu-save-to-pocket =
     .label = Stronu pola { -pocket-brand-name } składować
     .accesskey = k
 main-context-menu-send-to-device =
     .label = Stronu na grat pósłać
-    .accesskey = S
-main-context-menu-view-background-image =
-    .label = Pozadkowy wobraz pokazać
-    .accesskey = P
-main-context-menu-generate-new-password =
-    .label = Spłodźene hesło wužiwać…
     .accesskey = S
 
 ## The access keys for "Use Saved Login" and "Use Saved Password"
@@ -373,6 +297,9 @@ main-context-menu-use-saved-password =
 
 ##
 
+main-context-menu-use-relay-mask =
+    .label = E-mejlowu masku { -relay-brand-short-name } wužiwać
+    .accesskey = E
 main-context-menu-suggest-strong-password =
     .label = Sylne hesło namjetować…
     .accesskey = l
@@ -400,8 +327,8 @@ main-context-menu-frame-open-window =
 main-context-menu-frame-reload =
     .label = Wobłuk znowa začitać
     .accesskey = z
-main-context-menu-frame-bookmark =
-    .label = Tutón wobłuk jako zapołožku skladować
+main-context-menu-frame-add-bookmark =
+    .label = Wobłuk jako zapołožku składować …
     .accesskey = b
 main-context-menu-frame-save-as =
     .label = Wobłuk składować jako…
@@ -415,9 +342,9 @@ main-context-menu-frame-view-source =
 main-context-menu-frame-view-info =
     .label = Info wo wobłuku pokazać
     .accesskey = f
-main-context-menu-print-selection =
-    .label = Wuběr ćišćeć
-    .accesskey = b
+main-context-menu-print-selection-2 =
+    .label = Wuběr ćišćeć …
+    .accesskey = r
 main-context-menu-view-selection-source =
     .label = Žórłowy tekst wuběra zwobraznić
     .accesskey = t
@@ -430,18 +357,12 @@ main-context-menu-take-frame-screenshot =
 main-context-menu-view-page-source =
     .label = Žórłowy tekst strony pokazać
     .accesskey = t
-main-context-menu-view-page-info =
-    .label = Info wo stronje pokazać
-    .accesskey = I
 main-context-menu-bidi-switch-text =
     .label = Směr teksta přepinyć
     .accesskey = k
 main-context-menu-bidi-switch-page =
     .label = Směr strony přepinyć
     .accesskey = t
-main-context-menu-inspect-element =
-    .label = Element přepytować
-    .accesskey = E
 main-context-menu-inspect =
     .label = Přepytować
     .accesskey = P
@@ -455,3 +376,6 @@ main-context-menu-eme-learn-more =
 main-context-menu-open-link-in-container-tab =
     .label = Wotkaz w nowym rajtarku kontejnera { $containerName } wočinić
     .accesskey = r
+main-context-menu-reveal-password =
+    .label = Hesło pokazać
+    .accesskey = s

@@ -48,6 +48,7 @@ options-default-color-unit-authored = लेखक जैसा
 options-default-color-unit-hex = हेक्स
 options-default-color-unit-hsl = HSL(A)
 options-default-color-unit-rgb = RGB(A)
+options-default-color-unit-hwb = HWB
 options-default-color-unit-name = रंग नाम
 
 ## Style Editor section
@@ -64,11 +65,6 @@ options-stylesheet-autocompletion-tooltip =
 
 # The heading
 options-screenshot-label = स्क्रीनशॉट व्यवहार
-
-# Label for the checkbox that toggles screenshot to clipboard feature
-options-screenshot-clipboard-label = स्क्रीनशॉट क्लिपबोर्ड पर भेजें
-options-screenshot-clipboard-tooltip =
-    .title = स्क्रीनबोर्ड को सीधे क्लिपबोर्ड पर सहेजता है
 
 # Label for the checkbox that toggles the camera shutter audio for screenshot tool
 options-screenshot-audio-label = कैमरा शटर ध्वनि चलाएँ
@@ -95,7 +91,7 @@ options-sourceeditor-keybinding-default-label = तयशुदा
 
 ## Advanced section
 
-# The heading
+# The heading (this item is also used in perftools.ftl)
 options-context-advanced-settings = उन्नत सेटिंग...
 
 # The label for the checkbox that toggles the HTTP cache on or off
@@ -126,10 +122,3 @@ options-source-maps-tooltip =
 # The message shown for settings that trigger page reload
 options-context-triggers-page-refresh = * वर्तमान सत्र केवल, फिर से पृष्ठ लोड करता है
 
-##
-
-# The label for the checkbox that toggles the display of the platform data in the
-# Profiler i.e. devtools.profiler.ui.show-platform-data a boolean preference in about:config
-options-show-platform-data-label = दिखाएँ गेक्को मंच डेटा
-options-show-platform-data-tooltip =
-    .title = आप इस विकल्प को सक्षम जावास्क्रिप्ट प्रोफाइलर रिपोर्टों गेक्को मंच प्रतीकों शामिल होंगे.

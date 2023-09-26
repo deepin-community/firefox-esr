@@ -2,12 +2,12 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-connection-window =
+connection-window2 =
     .title = Tilkoplingsinnstillingar
     .style =
         { PLATFORM() ->
-            [macos] width: 44em
-           *[other] width: 49em
+            [macos] min-width: 44em
+           *[other] min-width: 49em
         }
 
 connection-close-key =
@@ -35,10 +35,6 @@ connection-proxy-http = HTTP-proxy
     .accesskey = x
 connection-proxy-http-port = Port
     .accesskey = P
-connection-proxy-http-sharing =
-    .label = Bruk òg denne proxyen for FTP og HTTPS
-    .accesskey = B
-
 connection-proxy-https-sharing =
     .label = Bruk også denne proxyserveren for HTTPS
     .accesskey = s
@@ -47,11 +43,6 @@ connection-proxy-https = HTTPS-proxy
     .accesskey = H
 connection-proxy-ssl-port = Port
     .accesskey = o
-
-connection-proxy-ftp = FTP-proxy
-    .accesskey = F
-connection-proxy-ftp-port = Port
-    .accesskey = r
 
 connection-proxy-socks = SOCKS-server
     .accesskey = C
@@ -69,9 +60,6 @@ connection-proxy-noproxy = Ingen proxy for
 
 connection-proxy-noproxy-desc = Døme: .mozilla.org, .online.no, 192.168.1.0/24
 
-# Do not translate localhost, 127.0.0.1 and ::1.
-connection-proxy-noproxy-localhost-desc = Tilkoplingar til localhost, 127.0.0.1 og ::1 er aldri kopla til via proxy.
-
 # Do not translate "localhost", "127.0.0.1/8" and "::1". (You can translate "and".)
 connection-proxy-noproxy-localhost-desc-2 = Tilkoplingar til localhost, 127.0.0.1/8, og ::1 er aldri kopla til via proxy.
 
@@ -88,16 +76,14 @@ connection-proxy-autologin =
     .accesskey = i
     .tooltip = Dette valet stadfestar identiteten din stille mot proxiar når du har lagra innloggingsdetaljar for dei. Du vil få spørsmål dersom autentiseringa er mislykka.
 
+connection-proxy-autologin-checkbox =
+    .label = Ikkje spør om stadfesting dersom passordet er lagra
+    .accesskey = i
+    .tooltiptext = Dette valet stadfestar identiteten din stille mot proxiar når du har lagra innloggingsdetaljar for dei. Du vil få spørsmål dersom autentiseringa er mislykka.
+
 connection-proxy-socks-remote-dns =
     .label = Proxy DNS når du brukar SOCKS v5
     .accesskey = d
-
-connection-dns-over-https =
-    .label = Slå på DNS-over-HTTPS
-    .accesskey = H
-
-connection-dns-over-https-url-resolver = Bruk leverandør
-    .accesskey = B
 
 # Variables:
 #   $name (String) - Display name or URL for the DNS over HTTPS provider

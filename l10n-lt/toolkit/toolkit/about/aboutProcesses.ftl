@@ -16,6 +16,18 @@ about-processes-shutdown-process =
 about-processes-shutdown-tab =
     .title = Užverti kortelę
 
+# Profiler icons
+# Variables:
+#    $duration (Number) The time in seconds during which the profiler will be running.
+#                       The value will be an integer, typically less than 10.
+about-processes-profile-process =
+    .title =
+        { $duration ->
+            [one] Profiliuoti visas šio proceso gijas { $duration } sekundei
+            [few] Profiliuoti visas šio proceso gijas { $duration } sekundėms
+           *[other] Profiliuoti visas šio proceso gijas { $duration } sekundžių
+        }
+
 ## Column headers
 
 about-processes-column-name = Pavadinimas
@@ -54,10 +66,9 @@ about-processes-unknown-process = Kitas: { $type } ({ $pid })
 ##    $origin (String) The domain name for this process.
 
 about-processes-web-isolated-process = { $origin } ({ $pid })
-about-processes-web-large-allocation-process = { $origin } ({ $pid }, didelis)
+about-processes-web-serviceworker = { $origin } ({ $pid }, aptarnavimo scenarijus)
 about-processes-with-coop-coep-process = { $origin } ({ $pid }, „cross-origin“ izoliacija)
 about-processes-web-isolated-process-private = { $origin } – privatus ({ $pid })
-about-processes-web-large-allocation-process-private = { $origin } – privatus ({ $pid }, didelis)
 about-processes-with-coop-coep-process-private = { $origin } – privatus ({ $pid }, „cross-origin“ izoliacija)
 
 ## Details within processes
@@ -116,6 +127,8 @@ about-processes-frame-name-one = Sub-kadras: { $url }
 #   $shortUrl (String) The shared prefix for the subframes in the group.
 about-processes-frame-name-many = Sub-kadrai ({ $number }): { $shortUrl }
 
+## Utility process actor names
+
 ## Displaying CPU (percentage and total)
 ## Variables:
 ##    $percent (Number) The percentage of CPU used by the process or thread.
@@ -132,9 +145,14 @@ about-processes-cpu = { NUMBER($percent, maximumSignificantDigits: 2, style: "pe
 # Special case: data is not available yet.
 about-processes-cpu-user-and-kernel-not-ready = (matuojama)
 
+# Special case: process or thread is almost idle (using less than 0.1% of a CPU core).
+# This case only occurs on Windows where the precision of the CPU times is low.
+about-processes-cpu-almost-idle = < 0.1%
+    .title = Bendras CPU laikas: { NUMBER($total, maximumFractionDigits: 0) }{ $unit }
+
 # Special case: process or thread is currently idle.
-about-processes-cpu-idle = laisva
-    .title = Bendras CPU laikas: { NUMBER($total, maximumFractionDigits: 2) }{ $unit }
+about-processes-cpu-fully-idle = laisvas
+    .title = Bendras CPU laikas: { NUMBER($total, maximumFractionDigits: 0) }{ $unit }
 
 ## Displaying Memory (total and delta)
 ## Variables:

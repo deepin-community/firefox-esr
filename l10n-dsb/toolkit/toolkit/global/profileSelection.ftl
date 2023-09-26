@@ -23,6 +23,8 @@ profile-selection-delete-button =
     .label = Profil lašowaś…
     .accesskey = l
 
+profile-selection-conflict-message = Druga kopija { -brand-product-name } jo pśewjedła změny na wašych profilach. Musyśo { -brand-short-name } znowego startowaś, nježli až dalšne změny pśewjedujośo.
+
 ## Messages used in the profile manager
 
 profile-manager-description = { -brand-short-name } składujo informacije wó wašych nastajenjach, preferencach a drugich wužywaŕskich zapiskach we wašom wužywaŕskem profilu.

@@ -7,7 +7,6 @@
 
 cfr-doorhanger-extension-heading = Estyniadau Cymeradwy
 cfr-doorhanger-feature-heading = Nodwedd Cymeradwy
-cfr-doorhanger-pintab-heading = Profi hwn: Pinio Tab
 
 ##
 
@@ -19,8 +18,6 @@ cfr-doorhanger-extension-cancel-button = Nid Nawr
 
 cfr-doorhanger-extension-ok-button = Ychwanegu Nawr
     .accesskey = Y
-cfr-doorhanger-pintab-ok-button = Pinio'r Tab
-    .accesskey = P
 
 cfr-doorhanger-extension-manage-settings-button = Gosodiadau Argymell Rheoli
     .accesskey = R
@@ -76,18 +73,6 @@ cfr-doorhanger-extension-total-users =
        *[other] { $total } defnyddiwr
     }
 
-cfr-doorhanger-pintab-description = Cael mynediad hawdd i'ch hoff wefannau. Cadwch wefannau ar agor mewn tab (hyd yn oed pan yn ailgychwyn).
-
-## These messages are steps on how to use the feature and are shown together.
-
-cfr-doorhanger-pintab-step1 = <b>Clic de</ b> ar y tab rydych am ei binio.
-cfr-doorhanger-pintab-step2 = Dewis <b>Pinio Tab</ b> o'r ddewislen.
-cfr-doorhanger-pintab-step3 = Os fydd gan y wefan ddiweddariad, gwelwch ddot glas ar eich tab wedi'i binio.
-
-cfr-doorhanger-pintab-animation-pause = Oedi
-cfr-doorhanger-pintab-animation-resume = Ailgychwyn
-
-
 ## Firefox Accounts Message
 
 cfr-doorhanger-bookmark-fxa-header = Cydweddu eich nodau tudalen ym mhob man
@@ -113,145 +98,9 @@ cfr-whatsnew-button =
     .label = Beth sy'n Newydd
     .tooltiptext = Beth sy'n Newydd
 
-cfr-whatsnew-panel-header = Beth sy'n Newydd
-
 cfr-whatsnew-release-notes-link-text = Darllenwch y nodiadau rhyddhau
 
-cfr-whatsnew-fx70-title = Mae { -brand-short-name } nawr yn ymladd yn galetach dros eich preifatrwydd
-cfr-whatsnew-fx70-body =
-    Mae'r diweddariad diweddaraf yn gwella'r nodwedd Diogelu rhag Tracio ac yn ei wneud
-    haws nag erioed i greu cyfrineiriau diogel ar gyfer pob gwefan.
-
-cfr-whatsnew-tracking-protect-title = Diogelwch eich hun rhag tracwyr
-cfr-whatsnew-tracking-protect-body =
-    Mae { -brand-short-name } yn rhwystro llawer o dracwyr cymdeithasol a thraws-gwefan cyffredin sy'n 
-    dilyn yr hyn rydych chi'n ei wneud ar-lein.
-cfr-whatsnew-tracking-protect-link-text = Gweld Eich Adroddiad
-
-# This string is displayed before a large numeral that indicates the total
-# number of tracking elements blocked. Don’t add $blockedCount to your
-# localization, because it would result in the number showing twice.
-cfr-whatsnew-tracking-blocked-title =
-    { $blockedCount ->
-        [zero] Tracwyr wedi'u rhwystro
-        [one] Traciwr wedi'i rwystro
-        [two] Draciwr wedi'u rhwystro
-        [few] Traciwr wedi'u rhwystro
-        [many] Thraciwr wedi'u rhwystro
-       *[other] Traciwr wedi'u rhwystro
-    }
-cfr-whatsnew-tracking-blocked-subtitle = Ers { DATETIME($earliestDate, month: "long", year: "numeric") }
-cfr-whatsnew-tracking-blocked-link-text = Gweld yr Adroddiad
-
-cfr-whatsnew-lockwise-backup-title = Gwnewch gopi wrth gefn o'ch cyfrineiriau
-cfr-whatsnew-lockwise-backup-body = Nawr cynhyrchwch gyfrineiriau diogel y gallwch gael mynediad atyn nhw lle bynnag fyddwch yn mewngofnodi.
-cfr-whatsnew-lockwise-backup-link-text = Cychwyn creu copïau wrth gefn
-
-cfr-whatsnew-lockwise-take-title = Ewch â'ch cyfrineiriau gyda chi
-cfr-whatsnew-lockwise-take-body =
-    Mae'r ap symudol { -lockwise-brand-short-name } yn caniatáu i chi gael mynediad diogel i'ch
-    cyfrineiriau wrth gefn o unrhyw le.
-cfr-whatsnew-lockwise-take-link-text = Estyn yr ap
-
-## Search Bar
-
-cfr-whatsnew-searchbar-title = Teipio llai, darganfod mwy gyda'r bar cyfeiriad
-cfr-whatsnew-searchbar-body-topsites = Nawr, dewiswch y bar cyfeiriadau, a bydd blwch yn ehangu gyda dolenni i'ch prif wefannau.
-
-## Search bar
-
-cfr-whatsnew-searchbar-icon-alt-text = Eicon chwyddwydr
-
-## Picture-in-Picture
-
-cfr-whatsnew-pip-header = Gwyliwch fideos wrth i chi bori
-cfr-whatsnew-pip-body = Mae Llun mewn Llun yn gosod fideo i mewn i ffenestr sy'n arnofio, fel y gallwch chi wylio wrth weithio mewn tabiau eraill.
-cfr-whatsnew-pip-cta = Dysgu rhagor
-
-## Permission Prompt
-
-cfr-whatsnew-permission-prompt-header = Llai o lamlenni annifyr
-cfr-whatsnew-permission-prompt-body = Mae { -brand-shorter-name } bellach yn rhwystro gwefannau rhag gofyn yn awtomatig am anfon negeseuon llamlen atoch.
-cfr-whatsnew-permission-prompt-cta = Dysgu rhagor
-
-## Fingerprinter Counter
-
-# This string is displayed before a large numeral that indicates the total
-# number of tracking elements blocked. Don’t add $fingerprinterCount to your
-# localization, because it would result in the number showing twice.
-cfr-whatsnew-fingerprinter-counter-header =
-    { $fingerprinterCount ->
-        [zero] Bysbrintwyr wedi'u rhwystro
-        [one] Bysbrintiwr wedi'i rwystro
-        [two] Bysbrintwyr wedi'u rhwystro
-        [few] Bysbrintwyr wedi'u rhwystro
-        [many] Bysbrintwyr wedi'u rhwystro
-       *[other] Bysbrintwyr wedi'u rhwystro
-    }
-cfr-whatsnew-fingerprinter-counter-body = Mae { -brand-shorter-name } yn rhwystro llawer o fysbrintwyr sy'n casglu manylion am eich dyfais a'ch gweithredoedd yn gyfrinachol i greu proffil hysbysebu ohonoch chi.
-
-# Message variation when fingerprinters count is less than 10
-cfr-whatsnew-fingerprinter-counter-header-alt = Bysbrintwyr
-cfr-whatsnew-fingerprinter-counter-body-alt = Gall { -brand-shorter-name } rwystro bysbrintwyr sy'n casglu manylion am eich dyfais a'ch gweithredoedd yn gyfrinachol i greu proffil hysbysebu ohonoch chi.
-
-## Bookmark Sync
-
-cfr-doorhanger-sync-bookmarks-header = Defnyddiwch y nod tudalen hwn ar eich ffôn
-cfr-doorhanger-sync-bookmarks-body = Cymerwch eich nodau tudalen, cyfrineiriau, hanes a mwy ym mhob man rydych chi wedi mewngofnodi iddo { -brand-product-name }.
-cfr-doorhanger-sync-bookmarks-ok-button = Troi { -sync-brand-short-name } ymlaen
-    .accesskey = T
-
-## Login Sync
-
-cfr-doorhanger-sync-logins-header = Peidiwch Byth â Cholli Cyfrinair Eto
-cfr-doorhanger-sync-logins-body = Cadwch a chydweddu eich cyfrineiriau yn ddiogel i'ch holl ddyfeisiau.
-cfr-doorhanger-sync-logins-ok-button = Agor { -sync-brand-short-name }
-    .accesskey = A
-
-## Send Tab
-
-cfr-doorhanger-send-tab-header = Darllen hwn wrth fynd
-cfr-doorhanger-send-tab-recipe-header = Ewch â'r rysáit hon i'r gegin
-cfr-doorhanger-send-tab-body = Mae'r Tab Anfon yn caniatáu i chi rannu'r ddolen hon yn hawdd i'ch ffôn neu unrhyw le rydych chi wedi mewngofnodi i { -brand-product-name }.
-cfr-doorhanger-send-tab-ok-button = Rhowch gynnig ar y Tab Anfon
-    .accesskey = R
-
-## Firefox Send
-
-cfr-doorhanger-firefox-send-header = Rhannwch y PDF hwn yn ddiogel
-cfr-doorhanger-firefox-send-body = Cadwch eich dogfennau sensitif yn ddiogel rhag llygaid busneslyd gydag amgryptio o'r dechrau i'r diwedd a dolen sy'n diflannu pan fyddwch chi wedi gorffen.
-cfr-doorhanger-firefox-send-ok-button = Rhowch gynnig ar { -send-brand-name }
-    .accesskey = R
-
-## Social Tracking Protection
-
-cfr-doorhanger-socialtracking-ok-button = Gweld y Diogelwch
-    .accesskey = D
-cfr-doorhanger-socialtracking-close-button = Cau
-    .accesskey = C
-cfr-doorhanger-socialtracking-dont-show-again = Peidiwch â dangos negeseuon fel hyn i mi eto
-    .accesskey = d
-cfr-doorhanger-socialtracking-heading = Mae { -brand-short-name } wedi atal rhwydwaith cymdeithasol rhag eich tracio chi yma
-cfr-doorhanger-socialtracking-description = Mae eich preifatrwydd yn bwysig. Mae { -brand-short-name } nawr yn rhwystro tracwyr cyfryngau cymdeithasol cyffredin, gan gyfyngu ar faint o ddata y mae nhw'n gallu ei gasglu am yr hyn rydych chi'n ei wneud ar-lein.
-cfr-doorhanger-fingerprinters-heading = Fe wnaeth { -brand-short-name } rwystro bys brintiwr ar y dudalen hon
-cfr-doorhanger-fingerprinters-description = Mae eich preifatrwydd yn bwysig. Mae { -brand-short-name } nawr yn rhwystro bysbrintwyr, sy'n casglu manylion unigryw y mae modd eu hadnabod am eich dyfais i'ch tracio.
-cfr-doorhanger-cryptominers-heading = Fe wnaeth { -brand-short-name } rwystro cryptogloddwyr ar y dudalen hon
-cfr-doorhanger-cryptominers-description = Mae eich preifatrwydd yn bwysig. Mae { -brand-short-name } nawr yn rhwystro cryptogloddwyr, sy'n defnyddio pŵer cyfrifiadurol eich system i gloddio arian digidol.
-
 ## Enhanced Tracking Protection Milestones
-
-# Variables:
-#   $blockedCount (Number) - The total count of blocked trackers. This number will always be greater than 1.
-#   $date (String) - The date we began recording the count of blocked trackers
-cfr-doorhanger-milestone-heading =
-    { $blockedCount ->
-        [zero] Nid yw { -brand-short-name } wedi rhwystro <b>{ $blockedCount }</b> traciwr ers { $date }!
-        [one] Mae { -brand-short-name } wedi rhwystro <b>{ $blockedCount }</b> traciwr ers { $date }!
-        [two] Mae { -brand-short-name } wedi rhwystro <b>{ $blockedCount }</b> traciwr ers { $date }!
-        [few] Mae { -brand-short-name } wedi rhwystro <b>{ $blockedCount }</b> traciwr ers { $date }!
-        [many] Mae { -brand-short-name } wedi rhwystro dros <b>{ $blockedCount }</b> traciwr ers { $date }!
-       *[other] Mae { -brand-short-name } wedi rhwystro <b>{ $blockedCount }</b> traciwr ers { $date }!
-    }
 
 # Variables:
 #   $blockedCount (Number) - The total count of blocked trackers. This number will always be greater than 1.
@@ -267,45 +116,8 @@ cfr-doorhanger-milestone-heading2 =
     }
 cfr-doorhanger-milestone-ok-button = Gweld y Cyfan
     .accesskey = G
-
-## What’s New Panel Content for Firefox 76
-
-
-## Lockwise message
-
-cfr-whatsnew-lockwise-header = Crëwch gyfrineiriau diogel yn hawdd
-cfr-whatsnew-lockwise-body = Mae'n anodd meddwl am gyfrineiriau unigryw, diogel ar gyfer pob cyfrif. Wrth greu cyfrinair, dewiswch y maes cyfrinair i ddefnyddio cyfrinair diogel wedi'i gynhyrchu gan { -brand-shorter-name }.
-cfr-whatsnew-lockwise-icon-alt = Eicon { -lockwise-brand-short-name }
-
-## Vulnerable Passwords message
-
-cfr-whatsnew-passwords-header = Derbyn rhybuddion am gyfrineiriau bregus
-cfr-whatsnew-passwords-body = Mae hacwyr yn gwybod bod pobl yn ailddefnyddio'r un cyfrineiriau. Os gwnaethoch chi ddefnyddio'r un cyfrinair ar sawl gwefan, a bod un o'r gwefannau hynny wedi bod yn rhan o dor-data, fe welwch rybudd yn { -lockwise-brand-short-name } i newid eich cyfrinair ar y gwefannau hynny.
-cfr-whatsnew-passwords-icon-alt = Eicon allwedd cyfrinair bregus
-
-## Picture-in-Picture fullscreen message
-
-cfr-whatsnew-pip-fullscreen-header = Cymerwch llun-mewn-llun sgrin lawn
-cfr-whatsnew-pip-fullscreen-body = Pan fyddwch yn gosod fideo i mewn i ffenestr sy'n arnofio, gallwch nawr glicio ddwywaith ar y ffenestr honno i droi'n sgrin lawn.
-cfr-whatsnew-pip-fullscreen-icon-alt = Eicon llun mewn llun
-
-## Protections Dashboard message
-
-cfr-whatsnew-protections-header = Cipolwg ar ddiogelwch
-cfr-whatsnew-protections-body = Mae'r Bwrdd Gwaith Diogelwch yn cynnwys adroddiadau cryno am dor-data a rheoli cyfrineiriau. Nawr gallwch chi olrhain faint o dor-data rydych chi wedi'u datrys, a gweld a allai unrhyw un o'ch cyfrineiriau sydd wedi'u cadw fod wedi bod yn agored i dor-data.
-cfr-whatsnew-protections-cta-link = Gweld y Bwrdd Gwaith Diogelwch
-cfr-whatsnew-protections-icon-alt = Eicon tarian
-
-## Better PDF message
-
-cfr-whatsnew-better-pdf-header = Gwell profiad PDF
-cfr-whatsnew-better-pdf-body = Mae dogfennau PDF nawr yn agor yn uniongyrchol yn { -brand-short-name }, gan gadw'ch llif gwaith o fewn cyrraedd.
-
 cfr-doorhanger-milestone-close-button = Cau
     .accesskey = C
-
-## What’s New Panel Content for Firefox 76
-## Protections Dashboard message
 
 ## DOH Message
 
@@ -318,28 +130,141 @@ cfr-doorhanger-doh-secondary-button = Analluogi
 
 ## Fission Experiment Message
 
-cfr-doorhanger-fission-body-approved = Mae eich preifatrwydd yn bwysig. Erbyn hyn mae { -brand-short-name } yn ynysu, neu'n creu blychau tywod er mwyn cadw gwefannau oddi wrth ei gilydd, sy'n ei gwneud hi'n anoddach i hacwyr ddwyn cyfrineiriau, rhifau cardiau credyd, a manylion sensitif arall, oddi arnoch.
-cfr-doorhanger-fission-header = Ynysu Gwefan
-cfr-doorhanger-fission-primary-button = Iawn, Wedi deall!
-    .accesskey = I
-cfr-doorhanger-fission-secondary-button = Dysgu rhagor
-    .accesskey = D
-
-## What's new: Cookies message
-
-## What's new: Media controls message
-
-## What's new: Search shortcuts
-
-## What's new: Cookies protection
-
-## What's new: Better bookmarking
-
-## What's new: Cross-site cookie tracking
-
 ## Full Video Support CFR message
 
 cfr-doorhanger-video-support-body = Efallai na fydd fideos ar y wefan hon yn chwarae'n gywir ar y fersiwn hon o { -brand-short-name }. I gael cefnogaeth fideo lawn, diweddarwch { -brand-short-name } nawr.
 cfr-doorhanger-video-support-header = Diweddarwch { -brand-short-name } i chwarae fideo
 cfr-doorhanger-video-support-primary-button = Diweddarwch Nawr
     .accesskey = D
+
+## Spotlight modal shared strings
+
+## VPN promotion dialog for public Wi-Fi users
+##
+## If a user is detected to be on a public Wi-Fi network, they are given a
+## bit of info about how to improve their privacy and then offered a button
+## to the Mozilla VPN page and a link to dismiss the dialog.
+
+# This header text can be explicitly wrapped.
+spotlight-public-wifi-vpn-header = Mae'n edrych fel eich bod chi'n defnyddio Wi-Fi cyhoeddus
+spotlight-public-wifi-vpn-body = I guddio'ch lleoliad a'ch gweithgaredd pori, ystyriwch Rwydwaith Preifat Rhithwir. Bydd yn helpu i'ch diogelu wrth bori mewn mannau cyhoeddus fel meysydd awyr a siopau coffi.
+spotlight-public-wifi-vpn-primary-button = Cadwch yn breifat gyda { -mozilla-vpn-brand-name }
+    .accesskey = b
+spotlight-public-wifi-vpn-link = Nid Nawr
+    .accesskey = N
+
+## Total Cookie Protection Rollout
+
+## Emotive Continuous Onboarding
+
+spotlight-better-internet-header = Mae rhyngrwyd gwell yn dechrau gyda chi
+spotlight-better-internet-body = Pan fyddwch yn defnyddio { -brand-short-name }, rydych yn cefnogi rhyngrwyd agored a hygyrch sy'n well i bawb.
+spotlight-peace-mind-header = Rydyn ni yn eich cefnogi chi
+spotlight-peace-mind-body = Bob mis, ar gyfartaledd, mae { -brand-short-name } yn rhwystro dros 3,000 o dracwyr fesul defnyddiwr . Oherwydd dylai dim byd, yn enwedig niwsans preifatrwydd fel tracwyr, sefyll rhyngoch chi a'r rhyngrwyd da.
+spotlight-pin-primary-button =
+    { PLATFORM() ->
+        [macos] Cadw yn y Doc
+       *[other] Pinio i'r bar tasgau
+    }
+spotlight-pin-secondary-button = Nid nawr
+
+## MR2022 Background Update Windows native toast notification strings.
+##
+## These strings will be displayed by the Windows operating system in
+## a native toast, like:
+##
+## <b>multi-line title</b>
+## multi-line text
+## <img>
+## [ primary button ] [ secondary button ]
+##
+## The button labels are fitted into narrow fixed-width buttons by
+## Windows and therefore must be as narrow as possible.
+
+mr2022-background-update-toast-title = { -brand-short-name } newydd. Yn fwy preifat. Llai o dracwyr. Dim cyfaddawdu.
+mr2022-background-update-toast-text = Rhowch gynnig ar y { -brand-short-name } mwyaf newydd nawr, wedi'i uwchraddio gyda'n diogelwch gwrth-dracio cryfaf eto.
+
+# This button label will be fitted into a narrow fixed-width button by
+# Windows. Try to not exceed the width of the English text (compare it
+# using a variable font like Arial): the button can only fit 1-2
+# additional characters, exceeding characters will be truncated.
+mr2022-background-update-toast-primary-button-label = Agorwch { -brand-shorter-name } Nawr
+
+# This button label will be fitted into a narrow fixed-width button by
+# Windows. Try to not exceed the width of the English text (compare it using a
+# variable font like Arial): the button can only fit 1-2 additional characters,
+# exceeding characters will be truncated.
+mr2022-background-update-toast-secondary-button-label = Atgoffwch Fi Nes ymlaen
+
+## Firefox View CFR
+
+firefoxview-cfr-primarybutton = Rhowch gynnig arni
+    .accesskey = R
+firefoxview-cfr-secondarybutton = Nid nawr
+    .accesskey = N
+firefoxview-cfr-header-v2 = Ail gychwyn yn syth o'r lle roeddech chi
+firefoxview-cfr-body-v2 = Cael tabiau sydd wedi'u cau'n ddiweddar nôl, a symud yn rhwydd rhwng dyfeisiau gyda { -firefoxview-brand-name }.
+
+## Firefox View Spotlight
+
+firefoxview-spotlight-promo-title = Dywedwch helo wrth { -firefoxview-brand-name }
+
+# “Poof” refers to the expression to convey when something or someone suddenly disappears, or in this case, reappears. For example, “Poof, it’s gone.”
+firefoxview-spotlight-promo-subtitle = Eisiau'r tab agored hwnnw ar eich ffôn? Gafaelwch ynddo. Oes angen y wefan hon rydych newydd ymweld â hi? Pwff, mae'n ôl gyda { -firefoxview-brand-name }.
+firefoxview-spotlight-promo-primarybutton = Dyma sut mae'n gweithio...
+firefoxview-spotlight-promo-secondarybutton = Hepgor
+
+## Colorways expiry reminder CFR
+
+colorways-cfr-primarybutton = Dewis cyfuniad lliw
+    .accesskey = D
+
+# "shades" refers to the different color options available to users in colorways.
+colorways-cfr-body = Lliwiwch eich porwr gyda lliwiau unigryw { -brand-short-name } wedi'u hysbrydoli gan leisiau a newidiodd ddiwylliant.
+colorways-cfr-header-28days = Mae cyfuniadau lliw Lleisiau Annibynnol yn dod i ben Ionawr 16
+colorways-cfr-header-14days = Mae cyfuniadau lliw Lleisiau Annibynnol yn dod i ben mewn pythefnos
+colorways-cfr-header-7days = Mae cyfuniadau lliw Lleisiau Annibynnol yn dod i ben yr wythnos hon
+colorways-cfr-header-today = Mae cyfuniadau lliw Lleisiau Annibynnol yn dod i ben heddiw
+
+## Cookie Banner Handling CFR
+
+cfr-cbh-header = Caniatáu i { -brand-short-name } wrthod baneri cwci?
+cfr-cbh-body = Gall { -brand-short-name } wrthod llawer o geisiadau baner cwci yn awtomatig.
+cfr-cbh-confirm-button = Gwrthod baneri cwci
+    .accesskey = G
+cfr-cbh-dismiss-button = Nid nawr
+    .accesskey = N
+
+## These strings are used in the Fox doodle Pin/set default spotlights
+
+july-jam-headline = Rydyn ni yn eich cefnogi chi
+july-jam-body = Bob mis, mae { -brand-short-name } yn rhwystro 3,000+ o dracwyr fesul defnyddiwr ar gyfartaledd, gan roi mynediad diogel a chyflym i'r rhyngrwyd da i chi.
+july-jam-set-default-primary = Agor fy nolenni gyda { -brand-short-name }
+fox-doodle-pin-headline = Croeso nôl
+
+# “indie” is short for the term “independent”.
+# In this instance, free from outside influence or control.
+fox-doodle-pin-body = Dyma neges atgoffa cyflym y gallwch chi gadw'ch hoff borwr annibynnol un clic yn unig i ffwrdd.
+fox-doodle-pin-primary = Agor fy nolenni gyda { -brand-short-name }
+fox-doodle-pin-secondary = Nid nawr
+
+## These strings are used in the Set Firefox as Default PDF Handler for Existing Users experiment
+
+set-default-pdf-handler-headline = <strong>Mae'ch ffeiliau PDF nawr yn agor yn { -brand-short-name }.</strong> Golygwch neu llofnodwch ffurflenni o fewn eich porwr. I newid, chwiliwch am "PDF" yn y gosodiadau.
+set-default-pdf-handler-primary = Iawn
+
+## FxA sync CFR
+
+fxa-sync-cfr-header = Dyfais newydd yn eich dyfodol?
+fxa-sync-cfr-body = Gwnewch yn siŵr fod eich nodau tudalen, cyfrineiriau a thabiau diweddaraf yn dod gyda chi unrhyw bryd y byddwch yn agor porwr { -brand-product-name } newydd.
+fxa-sync-cfr-primary = Dysgu rhagor
+    .accesskey = D
+fxa-sync-cfr-secondary = Atgoffwch fi yn nes ymlaen
+    .accesskey = A
+
+## Device Migration FxA Spotlight
+
+device-migration-fxa-spotlight-header = Yn defnyddio dyfais hŷn?
+device-migration-fxa-spotlight-body = Gwnewch gopi wrth gefn o'ch data i wneud yn siŵr nad ydych chi'n colli manylion pwysig fel nodau tudalen a chyfrineiriau — yn enwedig os byddwch chi'n newid i ddyfais newydd.
+device-migration-fxa-spotlight-primary-button = Sut i wneud copi wrth gefn o fy nata
+device-migration-fxa-spotlight-link = Atgoffwch fi yn nes ymlaen

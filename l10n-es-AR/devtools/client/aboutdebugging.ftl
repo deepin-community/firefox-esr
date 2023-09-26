@@ -61,10 +61,6 @@ about-debugging-sidebar-item-connect-button-connection-not-responding = La conex
 # Text displayed as connection error in sidebar item when the connection has timed out.
 about-debugging-sidebar-item-connect-button-connection-timeout = La conexión tardó demasiado tiempo
 
-# Temporary text displayed in sidebar items representing remote runtimes after
-# successfully connecting to them. Temporary UI, do not localize.
-about-debugging-sidebar-item-connected-label = Conectado
-
 # Text displayed in sidebar items for remote devices where a compatible browser (eg
 # Firefox) has not been detected yet. Typically, Android phones connected via USB with
 # USB debugging enabled, but where Firefox is not started.
@@ -83,7 +79,7 @@ about-debugging-sidebar-runtime-item-name-no-device =
     .title = { $displayName }
 
 # Text to show in the footer of the sidebar that links to a help page
-# (currently: https://developer.mozilla.org/docs/Tools/about:debugging)
+# (currently: https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/)
 about-debugging-sidebar-support = Soporte de depuración
 
 # Text to show as the ALT attribute of a help icon that accompanies the help about
@@ -144,7 +140,7 @@ about-debugging-setup-usb-step-enable-debug-firefox2 = Habilitar depuración USB
 about-debugging-setup-usb-step-plug-device = Conectar el dispositivo Android a su equipo.
 
 # Text shown in the USB section of the setup page with a link to troubleshoot connection errors.
-# The link goes to https://developer.mozilla.org/docs/Tools/Remote_Debugging/Debugging_over_USB
+# The link goes to https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html#connecting-to-a-remote-device
 about-debugging-setup-usb-troubleshoot = ¿Problemas conectando al dispositivo USB? <a>Solucionar problemas</a>
 
 # Network section of the Setup page
@@ -152,7 +148,7 @@ about-debugging-setup-network =
     .title = Ubicación de la red
 
 # Text shown in the Network section of the setup page with a link to troubleshoot connection errors.
-# The link goes to https://developer.mozilla.org/en-US/docs/Tools/Remote_Debugging/Debugging_over_a_network
+# The link goes to https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html#connecting-over-the-network
 about-debugging-setup-network-troubleshoot = ¿Problemas conectando vía ubicación de red? <a>Solucionar problemas</a>
 
 # Text of a button displayed after the network locations "Host" input.
@@ -174,7 +170,7 @@ about-debugging-network-locations-remove-button = Eliminar
 # Text used as error message if the format of the input value was invalid in the network locations form of the Setup page.
 # Variables:
 #   $host-value (string) - The input value submitted by the user in the network locations form
-about-debugging-network-location-form-invalid = Servidor inválido "{ $host-value }". El formato esperado es "nombredelservidor: númerodepuerto".
+about-debugging-network-location-form-invalid = Servidor inválido “{ $host-value }”. El formato esperado es “nombredelservidor: númerodepuerto”.
 
 # Text used as error message if the input value was already registered in the network locations form of the Setup page.
 # Variables:
@@ -212,12 +208,12 @@ about-debugging-runtime-processes =
 about-debugging-runtime-profile-button2 = Rendimiento del perfil
 
 # This string is displayed in the runtime page if the current configuration of the
-# target runtime is incompatible with service workers. "Learn more" points to MDN.
-# https://developer.mozilla.org/en-US/docs/Tools/about%3Adebugging#Service_workers_not_compatible
+# target runtime is incompatible with service workers. "Learn more" points to:
+# https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html#service-workers-not-compatible
 about-debugging-runtime-service-workers-not-compatible = La configuración del navegador no es compatible con Service Workers. <a>Conocer más</a>
 
 # This string is displayed in the runtime page if the remote browser version is too old.
-# "Troubleshooting" link points to https://developer.mozilla.org/docs/Tools/about:debugging#Troubleshooting
+# "Troubleshooting" link points to https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/
 # { $runtimeVersion } is the version of the remote browser (for instance "67.0a1")
 # { $minVersion } is the minimum version that is compatible with the current Firefox instance (same format)
 about-debugging-browser-version-too-old = El navegador conectado tiene una versión antigua ({ $runtimeVersion }). La versión mínima compatible es ({ $minVersion }). Esta es una configuración incompatible y puede causar la falla de DevTools. Actualice el navegador conectado. <a>Resolución de problemas</a>
@@ -227,12 +223,12 @@ about-debugging-browser-version-too-old = El navegador conectado tiene una versi
 about-debugging-browser-version-too-old-fennec = Esta versión de Firefox no puede depurar Firefox para Android (68). Recomendamos instalar Firefox para Android Nightly en su teléfono para realizar pruebas. <a>Más detalles</a>
 
 # This string is displayed in the runtime page if the remote browser version is too recent.
-# "Troubleshooting" link points to https://developer.mozilla.org/docs/Tools/about:debugging#Troubleshooting
+# "Troubleshooting" link points to https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/
 # { $runtimeID } is the build ID of the remote browser (for instance "20181231", format is yyyyMMdd)
 # { $localID } is the build ID of the current Firefox instance (same format)
 # { $runtimeVersion } is the version of the remote browser (for instance "67.0a1")
 # { $localVersion } is the version of your current browser (same format)
-about-debugging-browser-version-too-recent = El navegador conectado es más reciente ({ $runtimeVersion }, buildID { $runtimeID }) que su { -brand-shorter-name } ({ $localVersion }, buildID { $localID }). Esta es una configuración incompatible y puede hacer que DevTools falle. Por favor actualice Firefox. <a>Solución de problemas</a>
+about-debugging-browser-version-too-recent = El navegador conectado es más reciente ({ $runtimeVersion }, buildID { $runtimeID }) que su { -brand-shorter-name } ({ $localVersion }, buildID { $localID }). Esta es una configuración incompatible y puede hacer que DevTools falle. Actualice Firefox. <a>Solución de problemas</a>
 
 # Displayed for runtime info in runtime pages.
 # { $name } is brand name such as "Firefox Nightly"
@@ -285,6 +281,12 @@ about-debugging-tmp-extension-reload-button = Recargar
 # Clicking on the button will uninstall the extension and remove it from the page.
 about-debugging-tmp-extension-remove-button = Eliminar
 
+# Text of a button displayed for a temporary extension loaded in the "This Firefox" page.
+# Clicking on the button will forcefully terminate the extension background script (button
+# only visible in extensions that includes a non-persistent background script, either an
+# event page or a background service worker).
+about-debugging-tmp-extension-terminate-bgscript-button = Terminar script en segundo plano
+
 # Message displayed in the file picker that opens to select a temporary extension to load
 # (triggered by the button using "about-debugging-tmp-extension-install-button")
 # manifest.json .xpi and .zip should not be localized.
@@ -313,6 +315,18 @@ about-debugging-extension-location =
 # For instance "geckoprofiler@mozilla.com" or "{ed26ddcb-5611-4512-a89a-51b8db81cfb2}".
 about-debugging-extension-id =
     .label = ID de extensión
+
+# Text displayed for extensions in "runtime" pages, before displaying the status of the
+# extension background script.
+about-debugging-extension-backgroundscript =
+    .label = Script en segundo plano
+
+# Displayed for extension using a non-persistent background page (either an event page or
+# background service worker) when the background script is currently running.
+about-debugging-extension-backgroundscript-status-running = En ejecución
+
+# Displayed for extension using a non-persistent background page when is currently stopped.
+about-debugging-extension-backgroundscript-status-stopped = Detenido
 
 # This string is displayed as a label of the button that pushes a test payload
 # to a service worker.
@@ -367,17 +381,10 @@ about-debugging-zombie-tab-inspect-action-disabled =
 
 # Displayed as name for the Main Process debug target in the Processes category. Only for
 # remote runtimes, if `devtools.aboutdebugging.process-debugging` is true.
-about-debugging-main-process-name = Proceso principal
+about-debugging-multiprocess-toolbox-name = Caja de herramientas de multiproceso
 
 # Displayed as description for the Main Process debug target in the Processes category.
 # Only for remote browsers, if `devtools.aboutdebugging.process-debugging` is true.
-about-debugging-main-process-description2 = Proceso principal para el navegador de destino.
-
-# Displayed instead of the Main Process debug target when the preference
-# `devtools.browsertoolbox.fission` is true.
-about-debugging-multiprocess-toolbox-name = Caja de herramientas de multiproceso
-
-# Description for the Multiprocess Toolbox target.
 about-debugging-multiprocess-toolbox-description = Proceso principal y procesos de contenido para el navegador de destino
 
 # Alt text used for the close icon of message component (warnings, errors and notifications).

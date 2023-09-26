@@ -11,17 +11,6 @@ navbar-tooltip-instruction =
 
 ## Back
 
-main-context-menu-back =
-    .tooltiptext = Shkoni mbrapsht një faqe
-    .aria-label = Mbrapsht
-    .accesskey = M
-
-navbar-tooltip-back =
-    .value = { main-context-menu-back.tooltiptext }
-
-toolbar-button-back =
-    .label = { main-context-menu-back.aria-label }
-
 # Variables
 #   $shortcut (String) - A keyboard shortcut for the Go Back command.
 main-context-menu-back-2 =
@@ -42,27 +31,16 @@ toolbar-button-back-2 =
 
 ## Forward
 
-main-context-menu-forward =
-    .tooltiptext = Shkoni para një faqe
-    .aria-label = Para
-    .accesskey = P
-
-navbar-tooltip-forward =
-    .value = { main-context-menu-forward.tooltiptext }
-
-toolbar-button-forward =
-    .label = { main-context-menu-forward.aria-label }
-
 # Variables
 #   $shortcut (String) - A keyboard shortcut for the Go Forward command.
 main-context-menu-forward-2 =
     .tooltiptext = Shkoni para një faqe ({ $shortcut })
-    .aria-label = Para
+    .aria-label = Përpara
     .accesskey = P
 
 # This menuitem is only visible on macOS
 main-context-menu-forward-mac =
-    .label = Para
+    .label = Përpara
     .accesskey = P
 
 navbar-tooltip-forward-2 =
@@ -116,48 +94,45 @@ main-context-menu-page-save =
     .label = Ruajeni Faqen Si…
     .accesskey = S
 
-toolbar-button-page-save =
-    .label = { main-context-menu-page-save.label }
-
 ## Simple menu items
 
-main-context-menu-bookmark-add =
-    .aria-label = Faqeruaje Këtë Faqe
+main-context-menu-bookmark-page =
+    .aria-label = Faqeruani Faqe…
     .accesskey = F
-    .tooltiptext = Faqeruani këtë faqe
+    .tooltiptext = Faqeruani faqen
 
 # This menuitem is only visible on macOS
-# Cannot be shown at the same time as main-context-menu-bookmark-edit-mac,
+# Cannot be shown at the same time as main-context-menu-edit-bookmark-mac,
 # so should probably have the same access key if possible.
-main-context-menu-bookmark-add-mac =
-    .label = Faqeruaje Faqen
+main-context-menu-bookmark-page-mac =
+    .label = Faqeruani Faqe…
     .accesskey = F
 
 # This menuitem is only visible on macOS
-# Cannot be shown at the same time as main-context-menu-bookmark-add-mac,
+# Cannot be shown at the same time as main-context-menu-bookmark-page-mac,
 # so should probably have the same access key if possible.
-main-context-menu-bookmark-edit-mac =
-    .label = Përpunoni Faqerojtësin
+main-context-menu-edit-bookmark-mac =
+    .label = Përpunoni Faqerojtës…
     .accesskey = P
 
 # Variables
 #   $shortcut (String) - A keyboard shortcut for the add bookmark command.
-main-context-menu-bookmark-add-with-shortcut =
-    .aria-label = Faqeruaje Këtë Faqe
+main-context-menu-bookmark-page-with-shortcut =
+    .aria-label = Faqeruani Faqe…
     .accesskey = F
-    .tooltiptext = Faqeruani këtë faqe ({ $shortcut })
+    .tooltiptext = Faqeruani faqen ({ $shortcut })
 
-main-context-menu-bookmark-change =
-    .aria-label = Përpunojeni Këtë Faqerojtës
-    .accesskey = F
-    .tooltiptext = Përpunoni këtë faqerojtës
+main-context-menu-edit-bookmark =
+    .aria-label = Përpunoni Faqerojtës…
+    .accesskey = P
+    .tooltiptext = Përpunoni faqerojtës
 
 # Variables
 #   $shortcut (String) - A keyboard shortcut for the edit bookmark command.
-main-context-menu-bookmark-change-with-shortcut =
-    .aria-label = Përpunojeni Këtë Faqerojtës
-    .accesskey = F
-    .tooltiptext = Përpunoni këtë faqerojtës ({ $shortcut })
+main-context-menu-edit-bookmark-with-shortcut =
+    .aria-label = Përpunoni Faqerojtës…
+    .accesskey = P
+    .tooltiptext = Përpunoni faqerojtës ({ $shortcut })
 
 main-context-menu-open-link =
     .label = Hape Lidhjen
@@ -179,12 +154,8 @@ main-context-menu-open-link-new-private-window =
     .label = Hape Lidhjen në Dritare të Re Private
     .accesskey = V
 
-main-context-menu-bookmark-this-link =
-    .label = Faqeruaje Këtë Lidhje
-    .accesskey = L
-
-main-context-menu-bookmark-link =
-    .label = Faqeruani Lidhjen
+main-context-menu-bookmark-link-2 =
+    .label = Faqeruani Lidhjen…
     .accesskey = F
 
 main-context-menu-save-link =
@@ -195,11 +166,6 @@ main-context-menu-save-link-to-pocket =
     .label = Ruajeni Lidhjen te { -pocket-brand-name }
     .accesskey = o
 
-## The access keys for "Copy Link Location" and "Copy Email Address"
-## should be the same if possible; the two context menu items
-## are mutually exclusive.
-
-
 ## The access keys for "Copy Link" and "Copy Email Address"
 ## should be the same if possible; the two context menu items
 ## are mutually exclusive.
@@ -208,8 +174,8 @@ main-context-menu-copy-email =
     .label = Kopjo Adresë Email
     .accesskey = E
 
-main-context-menu-copy-link =
-    .label = Kopjo Vendndodhje Lidhjeje
+main-context-menu-copy-phone =
+    .label = Kopjoni Numrin e Telefonit
     .accesskey = K
 
 main-context-menu-copy-link-simple =
@@ -237,34 +203,8 @@ main-context-menu-media-mute =
     .accesskey = z
 
 main-context-menu-media-unmute =
-    .label = Me Zë
+    .label = Me zë
     .accesskey = z
-
-main-context-menu-media-play-speed =
-    .label = Shpejtësi Loje
-    .accesskey = e
-
-main-context-menu-media-play-speed-slow =
-    .label = Ngadalë (0.5×)
-    .accesskey = a
-
-main-context-menu-media-play-speed-normal =
-    .label = Normale
-    .accesskey = N
-
-main-context-menu-media-play-speed-fast =
-    .label = Shpejt (1.25×)
-    .accesskey = S
-
-main-context-menu-media-play-speed-faster =
-    .label = Më shpejt (1.5×)
-    .accesskey = ë
-
-# "Ludicrous" is a reference to the movie "Space Balls" and is meant
-# to say that this speed is very fast.
-main-context-menu-media-play-speed-fastest =
-    .label = Marramendëse (2×)
-    .accesskey = M
 
 main-context-menu-media-play-speed-2 =
     .label = Shpejtësi
@@ -312,12 +252,6 @@ main-context-menu-media-video-leave-fullscreen =
 
 # This is used when right-clicking on a video in the
 # content area when the Picture-in-Picture feature is enabled.
-main-context-menu-media-pip =
-    .label = Picture-in-Picture
-    .accesskey = u
-
-# This is used when right-clicking on a video in the
-# content area when the Picture-in-Picture feature is enabled.
 main-context-menu-media-watch-pip =
     .label = Shiheni nën mënyrën Picture-in-Picture
     .accesskey = u
@@ -325,14 +259,6 @@ main-context-menu-media-watch-pip =
 main-context-menu-image-reload =
     .label = Ringarkoje Figurën
     .accesskey = R
-
-main-context-menu-image-view =
-    .label = Shiheni Figurën
-    .accesskey = I
-
-main-context-menu-video-view =
-    .label = Shiheni Videon
-    .accesskey = S
 
 main-context-menu-image-view-new-tab =
     .label = Hape Figurën në Skedë të Re
@@ -345,18 +271,6 @@ main-context-menu-video-view-new-tab =
 main-context-menu-image-copy =
     .label = Kopjo Figurën
     .accesskey = K
-
-main-context-menu-image-copy-location =
-    .label = Kopjo Vendndodhje Figure
-    .accesskey = P
-
-main-context-menu-video-copy-location =
-    .label = Kopjo Vendndodhje Videoje
-    .accesskey = k
-
-main-context-menu-audio-copy-location =
-    .label = Kopjo Vendndodhje Audioje
-    .accesskey = k
 
 main-context-menu-image-copy-link =
     .label = Kopjo Lidhje Figure
@@ -378,13 +292,13 @@ main-context-menu-image-email =
     .label = Dërgoni Figurë me Email…
     .accesskey = g
 
-main-context-menu-image-set-as-background =
-    .label = Vëreni Si Sfond Desktopi…
-    .accesskey = S
-
 main-context-menu-image-set-image-as-background =
     .label = Vëreni Figurën si Sfond Desktopi…
     .accesskey = V
+
+main-context-menu-image-copy-text =
+    .label = Kopjo Tekstin Nga Figura
+    .accesskey = x
 
 main-context-menu-image-info =
     .label = Shfaq të Dhëna Figure
@@ -402,10 +316,6 @@ main-context-menu-audio-save-as =
     .label = Ruajeni Audion Si…
     .accesskey = u
 
-main-context-menu-video-image-save-as =
-    .label = Ruajeni Foton Si…
-    .accesskey = R
-
 main-context-menu-video-take-snapshot =
     .label = Bëni Fotografim…
     .accesskey = F
@@ -418,14 +328,6 @@ main-context-menu-audio-email =
     .label = Dërgoni Audio me Email…
     .accesskey = a
 
-main-context-menu-plugin-play =
-    .label = Aktivizoje këtë shtojcë
-    .accesskey = A
-
-main-context-menu-plugin-hide =
-    .label = Fshihe këtë shtojcë
-    .accesskey = F
-
 main-context-menu-save-to-pocket =
     .label = Ruaje Faqen te { -pocket-brand-name }
     .accesskey = k
@@ -433,14 +335,6 @@ main-context-menu-save-to-pocket =
 main-context-menu-send-to-device =
     .label = Dërgoje Faqen te Pajisje
     .accesskey = P
-
-main-context-menu-view-background-image =
-    .label = Shihni Figurë Sfondi
-    .accesskey = i
-
-main-context-menu-generate-new-password =
-    .label = Përdorni Fjalëkalimin e Prodhuar…
-    .accesskey = o
 
 ## The access keys for "Use Saved Login" and "Use Saved Password"
 ## should be the same if possible; the two context menu items
@@ -492,9 +386,9 @@ main-context-menu-frame-reload =
     .label = Ringarkoje Kuadrin
     .accesskey = R
 
-main-context-menu-frame-bookmark =
-    .label = Faqeruaje Këtë Kuadër
-    .accesskey = K
+main-context-menu-frame-add-bookmark =
+    .label = Faqeruani Kuadrin…
+    .accesskey = d
 
 main-context-menu-frame-save-as =
     .label = Ruajeni Kuadrin Si…
@@ -512,9 +406,9 @@ main-context-menu-frame-view-info =
     .label = Shihni të Dhëna Kuadri
     .accesskey = I
 
-main-context-menu-print-selection =
-    .label = Shtypni Përzgjedhjen
-    .accesskey = S
+main-context-menu-print-selection-2 =
+    .label = Shtypni Përzgjedhjen…
+    .accesskey = t
 
 main-context-menu-view-selection-source =
     .label = Shihni Burim Përzgjedhjeje
@@ -532,10 +426,6 @@ main-context-menu-view-page-source =
     .label = Shihni Burim Faqeje
     .accesskey = u
 
-main-context-menu-view-page-info =
-    .label = Shihni të Dhëna Faqeje
-    .accesskey = D
-
 main-context-menu-bidi-switch-text =
     .label = Këmbe Drejtim Teksti
     .accesskey = T
@@ -544,17 +434,23 @@ main-context-menu-bidi-switch-page =
     .label = Këmbe Drejtim Faqeje
     .accesskey = F
 
-main-context-menu-inspect-element =
-    .label = Shqyrtoje Elementin
-    .accesskey = E
-
 main-context-menu-inspect =
-    .label = Shqyrtoje
-    .accesskey = Q
+    .label = Inspektoje
+    .accesskey = I
 
 main-context-menu-inspect-a11y-properties =
-    .label = Mbikëqyrni Veti Përdorshmërie
+    .label = Inspektoni Veti Përdorimi Nga Persona Me Aftësi të Kufizuar
 
 main-context-menu-eme-learn-more =
     .label = Mësoni më tepër rreth DRM-s…
     .accesskey = D
+
+# Variables
+#   $containerName (String): The name of the current container
+main-context-menu-open-link-in-container-tab =
+    .label = Hape Lidhjen në Skedë të Re { $containerName }
+    .accesskey = S
+
+main-context-menu-reveal-password =
+    .label = Shfaqe Fjalëkalimin
+    .accesskey = f

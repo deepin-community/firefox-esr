@@ -16,6 +16,17 @@ about-processes-shutdown-process =
 about-processes-shutdown-tab =
     .title = Fermer l’onglet
 
+# Profiler icons
+# Variables:
+#    $duration (Number) The time in seconds during which the profiler will be running.
+#                       The value will be an integer, typically less than 10.
+about-processes-profile-process =
+    .title =
+        { $duration ->
+            [one] Profilez tous les threads de ce processus pendant { $duration } seconde
+           *[other] Profilez tous les threads de ce processus pendant { $duration } secondes
+        }
+
 ## Column headers
 
 about-processes-column-name = Nom
@@ -25,16 +36,10 @@ about-processes-column-cpu-total = Processeur
 ## Process names
 ## Variables:
 ##    $pid (String) The process id of this process, assigned by the OS.
-##    $origin (String) The domain name for this process.
-##    $type (String) The raw type for this process. Used for unknown processes.
-
-## Process names
-## Variables:
-##    $pid (String) The process id of this process, assigned by the OS.
 
 about-processes-browser-process = { -brand-short-name } ({ $pid })
 about-processes-web-process = Processus web partagé ({ $pid })
-about-processes-file-process = Fichiers { $pid })
+about-processes-file-process = Fichiers ({ $pid })
 about-processes-extension-process = Extensions ({ $pid })
 about-processes-privilegedabout-process = Pages « about: » ({ $pid })
 about-processes-plugin-process = Plugins ({ $pid })
@@ -47,6 +52,7 @@ about-processes-socket-process = Réseau ({ $pid })
 about-processes-remote-sandbox-broker-process = Broker du bac à sable distant ({ $pid })
 about-processes-fork-server-process = Copie du serveur ({ $pid })
 about-processes-preallocated-process = Préalloué ({ $pid })
+about-processes-utility-process = Utilitaire ({ $pid })
 
 # Unknown process names
 # Variables:
@@ -60,10 +66,9 @@ about-processes-unknown-process = Autre : { $type } ({ $pid })
 ##    $origin (String) The domain name for this process.
 
 about-processes-web-isolated-process = { $origin } ({ $pid })
-about-processes-web-large-allocation-process = { $origin } ({ $pid }, grande allocation)
+about-processes-web-serviceworker = { $origin } ({ $pid }, ServiceWorker)
 about-processes-with-coop-coep-process = { $origin } ({ $pid }, processus multiorigine isolé)
 about-processes-web-isolated-process-private = { $origin } — Privé ({ $pid })
-about-processes-web-large-allocation-process-private = { $origin } — Privé ({ $pid }, grande allocation)
 about-processes-with-coop-coep-process-private = { $origin } — Privé ({ $pid }, processus multiorigine isolé)
 
 ## Details within processes
@@ -120,6 +125,17 @@ about-processes-frame-name-one = Iframe imbriqué : { $url }
 #   $shortUrl (String) The shared prefix for the subframes in the group.
 about-processes-frame-name-many = Iframes imbriqués ({ $number }) : { $shortUrl }
 
+## Utility process actor names
+
+about-processes-utility-actor-unknown = Utilitaire inconnu
+about-processes-utility-actor-audio-decoder-generic = Décodeur audio générique
+about-processes-utility-actor-audio-decoder-applemedia = Décodeur audio multimédia Apple
+about-processes-utility-actor-audio-decoder-wmf = Décodeur audio Windows Media Framework
+about-processes-utility-actor-mf-media-engine = CDM du moteur multimédia Windows Media Foundation
+# "Oracle" refers to an internal Firefox process and should be kept in English
+about-processes-utility-actor-js-oracle = Oracle JavaScript
+about-processes-utility-actor-windows-utils = Utilitaires Windows
+
 ## Displaying CPU (percentage and total)
 ## Variables:
 ##    $percent (Number) The percentage of CPU used by the process or thread.
@@ -136,9 +152,14 @@ about-processes-cpu = { NUMBER($percent, maximumSignificantDigits: 2, style: "pe
 # Special case: data is not available yet.
 about-processes-cpu-user-and-kernel-not-ready = (mesure en cours)
 
+# Special case: process or thread is almost idle (using less than 0.1% of a CPU core).
+# This case only occurs on Windows where the precision of the CPU times is low.
+about-processes-cpu-almost-idle = < 0,1 %
+    .title = Temps CPU total : { NUMBER($total, maximumFractionDigits: 0) } { $unit }
+
 # Special case: process or thread is currently idle.
-about-processes-cpu-idle = inactif
-    .title = Temps total de CPU : { NUMBER($total, maximumFractionDigits: 2) } { $unit }
+about-processes-cpu-fully-idle = inactif
+    .title = Temps total de CPU : { NUMBER($total, maximumFractionDigits: 0) } { $unit }
 
 ## Displaying Memory (total and delta)
 ## Variables:

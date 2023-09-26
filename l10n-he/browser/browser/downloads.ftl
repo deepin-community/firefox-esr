@@ -16,8 +16,8 @@ downloads-panel =
 # The style attribute has the width of the Downloads Panel expressed using
 # a CSS unit. The longest labels that should fit are usually those of
 # in-progress and blocked downloads.
-downloads-panel-list =
-    .style = width: 70ch
+downloads-panel-items =
+    .style = width: 35em
 
 downloads-cmd-pause =
     .label = השהייה
@@ -30,42 +30,65 @@ downloads-cmd-cancel =
 downloads-cmd-cancel-panel =
     .aria-label = ביטול
 
-# This message is only displayed on Windows and Linux devices
-downloads-cmd-show-menuitem =
-    .label = פתיחת תיקייה מכילה
-    .accesskey = ת
+downloads-cmd-show-menuitem-2 =
+    .label =
+        { PLATFORM() ->
+            [macos] הצגה ב־Finder
+           *[other] הצגה בתיקייה
+        }
+    .accesskey = ה
 
-# This message is only displayed on macOS devices
-downloads-cmd-show-menuitem-mac =
-    .label = הצגה ב־Finder
-    .accesskey = צ
+## Displayed in the downloads context menu for files that can be opened.
+## Variables:
+##   $handler (String) - The name of the mime type's default file handler.
+##   Example: "Notepad", "Acrobat Reader DC", "7-Zip File Manager"
 
 downloads-cmd-use-system-default =
     .label = פתיחה באמצעות מציג המערכת
     .accesskey = פ
+# This version is shown when the download's mime type has a valid file handler.
+downloads-cmd-use-system-default-named =
+    .label = לפתוח באמצעות { $handler }
+    .accesskey = פ
 
+# We can use the same accesskey as downloads-cmd-always-open-similar-files.
+# Both should not be visible in the downloads context menu at the same time.
 downloads-cmd-always-use-system-default =
     .label = תמיד לפתוח באמצעות מציג המערכת
     .accesskey = ת
+# We can use the same accesskey as downloads-cmd-always-open-similar-files.
+# Both should not be visible in the downloads context menu at the same time.
+# This version is shown when the download's mime type has a valid file handler.
+downloads-cmd-always-use-system-default-named =
+    .label = תמיד לפתוח באמצעות { $handler }
+    .accesskey = ת
 
-downloads-cmd-show-button =
+##
+
+# We can use the same accesskey as downloads-cmd-always-use-system-default.
+# Both should not be visible in the downloads context menu at the same time.
+downloads-cmd-always-open-similar-files =
+    .label = תמיד לפתוח קבצים דומים
+    .accesskey = ת
+
+downloads-cmd-show-button-2 =
     .tooltiptext =
         { PLATFORM() ->
             [macos] הצגה ב־Finder
-           *[other] פתיחת תיקייה מכילה
+           *[other] הצגה בתיקייה
         }
 
-downloads-cmd-show-panel =
+downloads-cmd-show-panel-2 =
     .aria-label =
         { PLATFORM() ->
             [macos] הצגה ב־Finder
-           *[other] פתיחת תיקייה מכילה
+           *[other] הצגה בתיקייה
         }
-downloads-cmd-show-description =
+downloads-cmd-show-description-2 =
     .value =
         { PLATFORM() ->
             [macos] הצגה ב־Finder
-           *[other] פתיחת תיקייה מכילה
+           *[other] הצגה בתיקייה
         }
 
 downloads-cmd-show-downloads =
@@ -89,6 +112,9 @@ downloads-cmd-clear-list =
 downloads-cmd-clear-downloads =
     .label = ניקוי רשימת ההורדות
     .accesskey = ה
+downloads-cmd-delete-file =
+    .label = מחיקה
+    .accesskey = מ
 
 # This command is shown in the context menu when downloads are blocked.
 downloads-cmd-unblock =
@@ -138,44 +164,51 @@ downloads-open-file =
 ##   $seconds (number) - Amount of seconds left till the file opens.
 ##   $minutes (number) - Amount of minutes till the file opens.
 
-downloading-file-opens-in-hours-and-minutes =
-    { $hours ->
-        [1]
-            { $minutes ->
-                [1] הקובץ ייפתח בעוד שעה ודקה אחת…
-               *[other] הקובץ ייפתח בעוד שעה ו־{ $minutes } דק’…
-            }
-        [2]
-            { $minutes ->
-                [1] הקובץ ייפתח בעוד שעתיים ודקה אחת…
-               *[other] הקובץ ייפתח בעוד שעתיים ו־{ $minutes } דק’…
-            }
-       *[other]
-            { $minutes ->
-                [1] הקובץ ייפתח בעוד { $hours } שעות ודקה אחת…
-               *[other] הקובץ ייפתח בעוד { $hours } שעות ו־{ $minutes } דק’…
-            }
-    }
-downloading-file-opens-in-minutes =
-    { $minutes ->
-        [1] הקובץ ייפתח בעוד דקה אחת…
-       *[other] הקובץ ייפתח בעוד { $minutes } דק’…
-    }
-downloading-file-opens-in-minutes-and-seconds =
-    { $minutes ->
-        [1]
-            { $seconds ->
-                [1] הקובץ ייפתח בעוד דקה ושנייה אחת…
-               *[other] הקובץ ייפתח בעוד דקה ו־{ $seconds } שנ’…
-            }
-       *[other]
-            { $seconds ->
-                [1] הקובץ ייפתח בעוד { $minutes } דקות ושנייה אחת…
-               *[other] הקובץ ייפתח בעוד { $minutes } דקות ו־{ $seconds } שנ’…
-            }
-    }
-downloading-file-opens-in-seconds = הקובץ ייפתח בעוד { $seconds } שניות…
-downloading-file-opens-in-some-time = הקובץ ייפתח כשההורדה תושלם…
+downloading-file-opens-in-hours-and-minutes-2 =
+    .value =
+        { $hours ->
+            [1]
+                { $minutes ->
+                    [1] הקובץ ייפתח בעוד שעה ודקה אחת…
+                   *[other] הקובץ ייפתח בעוד שעה ו־{ $minutes } דק’…
+                }
+            [2]
+                { $minutes ->
+                    [1] הקובץ ייפתח בעוד שעתיים ודקה אחת…
+                   *[other] הקובץ ייפתח בעוד שעתיים ו־{ $minutes } דק’…
+                }
+           *[other]
+                { $minutes ->
+                    [1] הקובץ ייפתח בעוד { $hours } שעות ודקה אחת…
+                   *[other] הקובץ ייפתח בעוד { $hours } שעות ו־{ $minutes } דק’…
+                }
+        }
+downloading-file-opens-in-minutes-2 =
+    .value =
+        { $minutes ->
+            [1] הקובץ ייפתח בעוד דקה אחת…
+           *[other] הקובץ ייפתח בעוד { $minutes } דק’…
+        }
+downloading-file-opens-in-minutes-and-seconds-2 =
+    .value =
+        { $minutes ->
+            [1]
+                { $seconds ->
+                    [1] הקובץ ייפתח בעוד דקה ושנייה אחת…
+                   *[other] הקובץ ייפתח בעוד דקה ו־{ $seconds } שנ’…
+                }
+           *[other]
+                { $seconds ->
+                    [1] הקובץ ייפתח בעוד { $minutes } דקות ושנייה אחת…
+                   *[other] הקובץ ייפתח בעוד { $minutes } דקות ו־{ $seconds } שנ’…
+                }
+        }
+downloading-file-opens-in-seconds-2 =
+    .value = הקובץ ייפתח בעוד { $seconds } שניות…
+downloading-file-opens-in-some-time-2 =
+    .value = הקובץ ייפתח כשההורדה תושלם…
+downloading-file-click-to-open =
+    .value = פתיחה בסיום ההורדה
 
 ##
 
@@ -201,6 +234,21 @@ downloads-history =
 downloads-details =
     .title = פרטי הורדה
 
+## Displayed when a site attempts to automatically download many files.
+## Variables:
+##   $num (number) - Number of blocked downloads.
+##   $url (string) - The url of the suspicious site, stripped of http, https and www prefix.
+
+downloads-files-not-downloaded =
+    { $num ->
+        [one] הקובץ לא הורד.
+       *[other] { $num } קבצים לא הורדו.
+    }
+downloads-blocked-from-url = הורדות נחסמו מ־{ $url }.
+downloads-blocked-download-detailed-info = האתר { $url } ניסה להוריד באופן אוטומטי מספר מרובה של קבצים. ייתכן שהאתר פועל לא כשורה, או שהוא מנסה לאחסן קובצי זבל על המכשיר שלך.
+
+##
+
 downloads-clear-downloads-button =
     .label = ניקוי הורדות
     .tooltiptext = ניקוי ההורדות שהושלמו, בוטלו ונכשלו
@@ -213,3 +261,27 @@ downloads-list-empty =
 # This string is shown when there are no items in the Downloads Panel.
 downloads-panel-empty =
     .value = אין הורדות בהפעלה זו.
+
+# This is displayed in an item at the bottom of the Downloads Panel when there
+# are more downloads than can fit in the list in the panel.
+#   $count (number) - number of files being downloaded that are not shown in the
+#                     panel list.
+downloads-more-downloading =
+    { $count ->
+        [one] עוד קובץ אחד בהורדה
+       *[other] עוד { $count } קבצים בהורדה
+    }
+
+## Download errors
+
+downloads-error-alert-title = שגיאת הורדה
+# Variables:
+#   $extension (String): the name of the blocking extension.
+downloads-error-blocked-by = לא ניתן לשמור את ההורדה מכיוון שנחסמה על־ידי { $extension }.
+# Used when the name of the blocking extension is unavailable.
+downloads-error-extension = לא ניתן לשמור את ההורדה מכיוון שנחסמה על־ידי הרחבה.
+# Line breaks in this message are meaningful, and should be maintained.
+downloads-error-generic =
+    לא ניתן לשמור את ההורדה מכיוון שאירעה שגיאה לא ידועה.
+    
+    נא לנסות שוב.

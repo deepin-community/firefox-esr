@@ -2,19 +2,22 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-addons-window =
-    .title = Kiegészítőkezelő
-
 addons-page-title = Kiegészítőkezelő
 
 search-header =
     .placeholder = Keresés itt: addons.mozilla.org
     .searchbuttonlabel = Keresés
 
-search-header-shortcut =
-    .key = f
+## Variables
+##   $domain - Domain name where add-ons are available (e.g. addons.mozilla.org)
 
 list-empty-get-extensions-message = Kiegészítők és témák beszerzése itt: <a data-l10n-name="get-extensions">{ $domain }</a>
+
+list-empty-get-dictionaries-message = Szótárak beszerzése itt: <a data-l10n-name="get-extensions">{ $domain }</a>
+
+list-empty-get-language-packs-message = Nyelvi csomagok beszerzése itt: <a data-l10n-name="get-extensions">{ $domain }</a>
+
+##
 
 list-empty-installed =
     .value = Nincs ilyen típusú kiegészítője
@@ -35,21 +38,9 @@ help-button = Kiegészítő támogatás
 sidebar-help-button-title =
     .title = Kiegészítő támogatás
 
-preferences =
-    { PLATFORM() ->
-        [windows] { -brand-short-name } beállítások
-       *[other] { -brand-short-name } beállítások
-    }
-sidebar-preferences-button-title =
-    .title =
-        { PLATFORM() ->
-            [windows] { -brand-short-name } beállítások
-           *[other] { -brand-short-name } beállítások
-        }
-
-addons-settings-button = { -brand-short-name } Beállítások
+addons-settings-button = { -brand-short-name } beállítások
 sidebar-settings-button-title =
-    .title = { -brand-short-name } Beállítások
+    .title = { -brand-short-name } beállítások
 
 show-unsigned-extensions-button =
     .label = Néhány kiegészítő nem ellenőrizhető
@@ -57,48 +48,14 @@ show-unsigned-extensions-button =
 show-all-extensions-button =
     .label = Minden kiegészítő megjelenítése
 
-cmd-show-details =
-    .label = További adatok megjelenítése
-    .accesskey = T
-
-cmd-find-updates =
-    .label = Frissítések keresése
-    .accesskey = F
-
-cmd-preferences =
-    .label =
-        { PLATFORM() ->
-            [windows] Beállítások
-           *[other] Beállítások
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] B
-           *[other] B
-        }
-
-cmd-enable-theme =
-    .label = Téma alkalmazása
-    .accesskey = T
-
-cmd-disable-theme =
-    .label = Téma levétele
-    .accesskey = l
-
-cmd-install-addon =
-    .label = Telepítés
-    .accesskey = T
-
-cmd-contribute =
-    .label = Támogatás
-    .accesskey = T
-    .tooltiptext = A kiegészítő fejlesztésének támogatása
-
 detail-version =
     .label = Verzió
 
 detail-last-updated =
     .label = Utoljára frissítve
+
+addon-detail-description-expand = Több megjelenítése
+addon-detail-description-collapse = Kevesebb megjelenítése
 
 detail-contributions-description = A kiegészítő fejlesztője azt kéri, hogy egy csekély összeggel támogassa a további fejlesztést.
 
@@ -230,6 +187,13 @@ addon-category-available-updates-title =
 addon-category-recent-updates = Legutóbbi frissítések
 addon-category-recent-updates-title =
     .title = Legutóbbi frissítések
+addon-category-sitepermission = Oldalengedélyek
+addon-category-sitepermission-title =
+    .title = Oldalengedélyek
+# String displayed in about:addons in the Site Permissions section
+# Variables:
+#  $host (string) - DNS host name for which the webextension enables permissions
+addon-sitepermission-host = A(z) { $host } webhelyengedélyei
 
 ## These are global warnings
 
@@ -241,6 +205,8 @@ extensions-warning-update-security = A kiegészítők biztonsági vizsgálata ti
 extensions-warning-update-security-button = Engedélyezés
     .title = Kiegészítők frissítésekor a biztonsági ellenőrzés engedélyezése
 
+extensions-warning-imported-addons = Véglegesítse a { -brand-short-name }ba importált kiegészítők telepítését.
+extensions-warning-imported-addons-button = Kiegészítők telepítése
 
 ## Strings connected to add-on updates
 
@@ -316,6 +282,8 @@ shortcuts-duplicate-warning-message = A { $shortcut } gyorsbillentyű több mint
 #   $addon (string) - Name of the add-on
 shortcuts-exists = Már használja: { $addon }
 
+# Variables:
+#   $numberToShow (number) - Number of other elements available to show
 shortcuts-card-expand-button =
     { $numberToShow ->
         [one] Még { $numberToShow } megjelenítése
@@ -362,6 +330,7 @@ install-theme-button = Téma telepítése
 # the detailed add-on view is opened, from where the add-on can be managed.
 manage-addon-button = Kezelés
 find-more-addons = Több kiegészítő keresése
+find-more-themes = További témák keresése
 
 # This is a label for the button to open the "more options" menu, it is only
 # used for screen readers.
@@ -393,7 +362,7 @@ extension-enabled-heading = Engedélyezve
 extension-disabled-heading = Tiltva
 
 theme-enabled-heading = Engedélyezve
-theme-disabled-heading = Tiltva
+theme-disabled-heading2 = Mentett témák
 
 plugin-enabled-heading = Engedélyezve
 plugin-disabled-heading = Tiltva
@@ -404,7 +373,8 @@ dictionary-disabled-heading = Tiltva
 locale-enabled-heading = Engedélyezve
 locale-disabled-heading = Tiltva
 
-ask-to-activate-button = Aktiválás kérésre
+sitepermission-enabled-heading = Engedélyezve
+sitepermission-disabled-heading = Tiltva
 
 always-activate-button = Mindig aktiválja
 never-activate-button = Soha ne aktiválja
@@ -453,6 +423,11 @@ addon-detail-updates-radio-off = Ki
 addon-detail-update-check-label = Frissítések keresése
 install-update-button = Frissítés
 
+# aria-label associated to the updates row to help screen readers to announce the group
+# of input controls being entered.
+addon-detail-group-label-updates =
+    .aria-label = { addon-detail-updates-label }
+
 # This is the tooltip text for the private browsing badge in about:addons. The
 # badge is the private browsing icon included next to the extension's name.
 addon-badge-private-browsing-allowed2 =
@@ -462,13 +437,31 @@ addon-detail-private-browsing-help = Ha engedélyezve van, a kiegészítő hozz�
 addon-detail-private-browsing-allow = Engedélyezés
 addon-detail-private-browsing-disallow = Tiltás
 
+# aria-label associated to the private browsing row to help screen readers to announce the group
+# of input controls being entered.
+addon-detail-group-label-private-browsing =
+    .aria-label = { detail-private-browsing-label }
+
+## "sites with restrictions" (internally called "quarantined") are special domains
+## where add-ons are normally blocked for security reasons.
+
+# Used as a description for the option to allow or block an add-on on quarantined domains.
+addon-detail-quarantined-domains-label = Futtatás korlátozásokkal rendelkező webhelyeken
+# Used as help text part of the quarantined domains UI controls row.
+addon-detail-quarantined-domains-help = Ha engedélyezett, akkor a kiegészítő hozzá fog férni a { -vendor-short-name } által korlátozott webhelyekhez. Csak akkor engedélyezze, ha megbízik ebben a kiegészítőben.
+# Used as label and tooltip text on the radio inputs associated to the quarantined domains UI controls.
+addon-detail-quarantined-domains-allow = Engedélyezés
+addon-detail-quarantined-domains-disallow = Tiltás
+# aria-label associated to the quarantined domains exempt row to help screen readers to announce the group.
+addon-detail-group-label-quarantined-domains =
+    .aria-label = { addon-detail-quarantined-domains-label }
+
 ## This is the tooltip text for the recommended badges for an extension in about:addons. The
 ## badge is a small icon displayed next to an extension when it is recommended on AMO.
 
 addon-badge-recommended2 =
     .title = A { -brand-product-name } csak olyan kiegészítőket ajánl, amelyek megfelelnek a biztonsági és a teljesítménybeli követelményeinknek.
     .aria-label = { addon-badge-recommended2.title }
-
 # We hard code "Mozilla" in the string below because the extensions are built
 # by Mozilla and we don't want forks to display "by Fork".
 addon-badge-line3 =
@@ -487,13 +480,16 @@ release-notes-loading = Betöltés…
 release-notes-error = Sajnáljuk, de hiba történt a kiadási megjegyzések betöltésekor.
 
 addon-permissions-empty = Ez a kiegészítő nem igényel semmilyen engedélyt
-
 addon-permissions-required = Az alapvető funkciókhoz szükséges engedélyek:
 addon-permissions-optional = A további funkciókhoz szükséges engedélyek:
 addon-permissions-learnmore = További tudnivalók az engedélyekről
 
 recommended-extensions-heading = Ajánlott kiegészítők
 recommended-themes-heading = Ajánlott témák
+
+# Variables:
+#   $hostname (string) - Host where the permissions are granted
+addon-sitepermissions-required = A következő lehetőségeket biztosítja a(z) <span data-l10n-name="hostname">{ $hostname }</span> számára:
 
 # A recommendation for the Firefox Color theme shown at the bottom of the theme
 # list view. The "Firefox Color" name itself should not be translated.
@@ -507,6 +503,7 @@ plugin-heading = Bővítmények kezelése
 dictionary-heading = Szótárak kezelése
 locale-heading = Nyelvek kezelése
 updates-heading = Frissítések kezelése
+sitepermission-heading = Oldalengedélyek kezelése
 discover-heading = A { -brand-short-name } testreszabása
 shortcuts-heading = Kiegészítő-gyorsbillentyűk kezelése
 
@@ -516,3 +513,31 @@ addons-heading-search-input =
 
 addon-page-options-button =
     .title = Eszközök minden kiegészítőhöz
+
+## Detail notifications
+## Variables:
+##   $name (String): name of the add-on.
+
+
+## Detail notifications
+## Variables:
+##   $name (string) - Name of the add-on.
+
+# Variables:
+#   $version (string) - Application version.
+details-notification-incompatible = A(z) { $name } nem kompatibilis ezzel: { -brand-short-name } { $version }.
+details-notification-incompatible-link = További információk
+
+details-notification-unsigned-and-disabled = { $name } használhatósága nem ellenőrizhető a { -brand-short-name } programban, és le lett tiltva.
+details-notification-unsigned-and-disabled-link = További információ
+
+details-notification-unsigned = { $name } használhatósága nem ellenőrizhető a { -brand-short-name } programban. Legyen óvatos.
+details-notification-unsigned-link = További információ
+
+details-notification-blocked = A(z) { $name } le lett tiltva biztonsági vagy stabilitási problémák miatt.
+details-notification-blocked-link = További információ
+
+details-notification-softblocked = A(z) { $name } biztonsági vagy stabilitási problémát okoz.
+details-notification-softblocked-link = További információ
+
+details-notification-gmp-pending = { $name } hamarosan telepítésre kerül.

@@ -2,17 +2,6 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-bookmark-overlay-name =
-    .value = Namn:
-    .accesskey = N
-
-bookmark-overlay-location =
-    .value = Adresse
-    .accesskey = d
-
-bookmark-overlay-folder =
-    .value = Mappe:
-
 bookmark-overlay-name-2 =
     .value = Namn
     .accesskey = N
@@ -35,13 +24,15 @@ bookmark-overlay-folders-expander =
     .tooltiptextdown = { bookmark-overlay-folders-expander.tooltiptext }
     .tooltiptextup = Gøym
 
+bookmark-overlay-folders-expander2 =
+    .tooltiptext = Vis alle bokmerkemapper
+
+bookmark-overlay-folders-expander-hide =
+    .tooltiptext = Gøym
+
 bookmark-overlay-new-folder-button =
     .label = Ny mappe
     .accesskey = N
-
-bookmark-overlay-tags =
-    .value = Etikettar:
-    .accesskey = E
 
 bookmark-overlay-tags-2 =
     .value = Etikettar
@@ -55,9 +46,11 @@ bookmark-overlay-tags-expander =
     .tooltiptextdown = { bookmark-overlay-tags-expander.tooltiptext }
     .tooltiptextup = Gøym
 
-bookmark-overlay-keyword =
-    .value = Nøkkelord:
-    .accesskey = k
+bookmark-overlay-tags-expander2 =
+    .tooltiptext = Vis alle etikettar
+
+bookmark-overlay-tags-expander-hide =
+    .tooltiptext = Gøym
 
 bookmark-overlay-keyword-2 =
     .value = Nøkkelord

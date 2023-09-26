@@ -16,8 +16,8 @@ downloads-panel =
 # The style attribute has the width of the Downloads Panel expressed using
 # a CSS unit. The longest labels that should fit are usually those of
 # in-progress and blocked downloads.
-downloads-panel-list =
-    .style = width: 70ch
+downloads-panel-items =
+    .style = width: 35em
 
 downloads-cmd-pause =
     .label = 暫停
@@ -30,42 +30,65 @@ downloads-cmd-cancel =
 downloads-cmd-cancel-panel =
     .aria-label = 取消
 
-# This message is only displayed on Windows and Linux devices
-downloads-cmd-show-menuitem =
-    .label = 開啟所在資料夾
-    .accesskey = f
+downloads-cmd-show-menuitem-2 =
+    .label =
+        { PLATFORM() ->
+            [macos] 於 Finder 顯示
+           *[other] 於資料夾顯示
+        }
+    .accesskey = F
 
-# This message is only displayed on macOS devices
-downloads-cmd-show-menuitem-mac =
-    .label = 在 Finder 中顯示
-    .accesskey = f
+## Displayed in the downloads context menu for files that can be opened.
+## Variables:
+##   $handler (String) - The name of the mime type's default file handler.
+##   Example: "Notepad", "Acrobat Reader DC", "7-Zip File Manager"
 
 downloads-cmd-use-system-default =
     .label = 用系統檢視器開啟
     .accesskey = V
+# This version is shown when the download's mime type has a valid file handler.
+downloads-cmd-use-system-default-named =
+    .label = 用 { $handler } 開啟
+    .accesskey = I
 
+# We can use the same accesskey as downloads-cmd-always-open-similar-files.
+# Both should not be visible in the downloads context menu at the same time.
 downloads-cmd-always-use-system-default =
     .label = 永遠使用系統檢視器開啟
     .accesskey = w
+# We can use the same accesskey as downloads-cmd-always-open-similar-files.
+# Both should not be visible in the downloads context menu at the same time.
+# This version is shown when the download's mime type has a valid file handler.
+downloads-cmd-always-use-system-default-named =
+    .label = 總是使用 { $handler } 開啟
+    .accesskey = w
 
-downloads-cmd-show-button =
+##
+
+# We can use the same accesskey as downloads-cmd-always-use-system-default.
+# Both should not be visible in the downloads context menu at the same time.
+downloads-cmd-always-open-similar-files =
+    .label = 總是開啟類似檔案
+    .accesskey = w
+
+downloads-cmd-show-button-2 =
     .tooltiptext =
         { PLATFORM() ->
-            [macos] 在 Finder 中顯示
-           *[other] 開啟所在資料夾
+            [macos] 於 Finder 顯示
+           *[other] 於資料夾顯示
         }
 
-downloads-cmd-show-panel =
+downloads-cmd-show-panel-2 =
     .aria-label =
         { PLATFORM() ->
-            [macos] 在 Finder 中顯示
-           *[other] 開啟所在資料夾
+            [macos] 於 Finder 顯示
+           *[other] 於資料夾顯示
         }
-downloads-cmd-show-description =
+downloads-cmd-show-description-2 =
     .value =
         { PLATFORM() ->
-            [macos] 在 Finder 中顯示
-           *[other] 開啟所在資料夾
+            [macos] 於 Finder 顯示
+           *[other] 於資料夾顯示
         }
 
 downloads-cmd-show-downloads =
@@ -88,6 +111,9 @@ downloads-cmd-clear-list =
     .accesskey = a
 downloads-cmd-clear-downloads =
     .label = 清空下載清單
+    .accesskey = D
+downloads-cmd-delete-file =
+    .label = 刪除
     .accesskey = D
 
 # This command is shown in the context menu when downloads are blocked.
@@ -138,11 +164,18 @@ downloads-open-file =
 ##   $seconds (number) - Amount of seconds left till the file opens.
 ##   $minutes (number) - Amount of minutes till the file opens.
 
-downloading-file-opens-in-hours-and-minutes = 將於 { $hours } 時 { $minutes } 分後開啟…
-downloading-file-opens-in-minutes = 將於 { $minutes } 分後開啟…
-downloading-file-opens-in-minutes-and-seconds = 將於 { $minutes } 分 { $seconds } 秒後開啟…
-downloading-file-opens-in-seconds = 將於 { $seconds } 秒後開啟…
-downloading-file-opens-in-some-time = 將於下載完成時開啟…
+downloading-file-opens-in-hours-and-minutes-2 =
+    .value = 將於 { $hours } 時 { $minutes } 分後開啟…
+downloading-file-opens-in-minutes-2 =
+    .value = 將於 { $minutes } 分後開啟…
+downloading-file-opens-in-minutes-and-seconds-2 =
+    .value = 將於 { $minutes } 分 { $seconds } 秒後開啟…
+downloading-file-opens-in-seconds-2 =
+    .value = 將於 { $seconds } 秒後開啟…
+downloading-file-opens-in-some-time-2 =
+    .value = 將於下載完成時開啟…
+downloading-file-click-to-open =
+    .value = 於下載完成時開啟
 
 ##
 
@@ -168,6 +201,21 @@ downloads-history =
 downloads-details =
     .title = 下載項目詳情
 
+## Displayed when a site attempts to automatically download many files.
+## Variables:
+##   $num (number) - Number of blocked downloads.
+##   $url (string) - The url of the suspicious site, stripped of http, https and www prefix.
+
+downloads-files-not-downloaded =
+    { $num ->
+       *[one] 未下載檔案。
+        [other] 未下載 { $num } 個檔案。
+    }
+downloads-blocked-from-url = 封鎖了來自 { $url } 的下載項目。
+downloads-blocked-download-detailed-info = { $url } 嘗試自動下載多個檔案，可能是這個網站發生問題，或是嘗試在您的電腦上亂儲存無用擋案。
+
+##
+
 downloads-clear-downloads-button =
     .label = 清空下載清單
     .tooltiptext = 清除失敗、已取消、已完成的下載項目
@@ -180,3 +228,26 @@ downloads-list-empty =
 # This string is shown when there are no items in the Downloads Panel.
 downloads-panel-empty =
     .value = 此次瀏覽階段沒有下載項目。
+
+# This is displayed in an item at the bottom of the Downloads Panel when there
+# are more downloads than can fit in the list in the panel.
+#   $count (number) - number of files being downloaded that are not shown in the
+#                     panel list.
+downloads-more-downloading =
+    { $count ->
+       *[other] 還在下載 { $count } 個檔案
+    }
+
+## Download errors
+
+downloads-error-alert-title = 下載錯誤
+# Variables:
+#   $extension (String): the name of the blocking extension.
+downloads-error-blocked-by = 由於被 { $extension } 封鎖，無法儲存此下載項目。
+# Used when the name of the blocking extension is unavailable.
+downloads-error-extension = 由於被擴充套件封鎖，無法儲存此下載項目。
+# Line breaks in this message are meaningful, and should be maintained.
+downloads-error-generic =
+    下載工作無法進行，因為發生未知錯誤。
+    
+    請再試一次。

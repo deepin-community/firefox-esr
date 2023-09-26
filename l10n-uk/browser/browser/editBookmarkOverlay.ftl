@@ -2,17 +2,6 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-bookmark-overlay-name =
-    .value = Назва:
-    .accesskey = з
-
-bookmark-overlay-location =
-    .value = Адреса:
-    .accesskey = А
-
-bookmark-overlay-folder =
-    .value = Тека:
-
 bookmark-overlay-name-2 =
     .value = Назва
     .accesskey = Н
@@ -31,17 +20,19 @@ bookmark-overlay-choose =
     .label = Вибрати…
 
 bookmark-overlay-folders-expander =
-    .tooltiptext = Показувати всі теки закладок
+    .tooltiptext = Показати всі теки закладок
     .tooltiptextdown = { bookmark-overlay-folders-expander.tooltiptext }
-    .tooltiptextup = Приховати
+    .tooltiptextup = Сховати
+
+bookmark-overlay-folders-expander2 =
+    .tooltiptext = Показати всі теки закладок
+
+bookmark-overlay-folders-expander-hide =
+    .tooltiptext = Сховати
 
 bookmark-overlay-new-folder-button =
     .label = Нова тека
     .accesskey = т
-
-bookmark-overlay-tags =
-    .value = Мітки:
-    .accesskey = М
 
 bookmark-overlay-tags-2 =
     .value = Мітки
@@ -53,11 +44,13 @@ bookmark-overlay-tags-empty-description =
 bookmark-overlay-tags-expander =
     .tooltiptext = Показати всі мітки
     .tooltiptextdown = { bookmark-overlay-tags-expander.tooltiptext }
-    .tooltiptextup = Приховати
+    .tooltiptextup = Сховати
 
-bookmark-overlay-keyword =
-    .value = Скорочення:
-    .accesskey = к
+bookmark-overlay-tags-expander2 =
+    .tooltiptext = Показати всі мітки
+
+bookmark-overlay-tags-expander-hide =
+    .tooltiptext = Сховати
 
 bookmark-overlay-keyword-2 =
     .value = Скорочення

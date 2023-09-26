@@ -23,6 +23,8 @@ profile-selection-delete-button =
     .label = Հաշիվը պրոֆիլը…
     .accesskey = D
 
+profile-selection-conflict-message = { -brand-product-name }-ի այլ պատճենը Ձեր հաշիվներում փոփոխություններ է կատարել։ Դուք պետք է վերագործարկեք { -brand-short-name }-ը նախքան այլ փոփոություններ կատարելը։
+
 ## Messages used in the profile manager
 
 profile-manager-description = { -brand-short-name }­-ը պահում է ձեր կարգավորումները, նախընտրանքներն ու այլ բաներ ձեր օգտվողի հաշվում:

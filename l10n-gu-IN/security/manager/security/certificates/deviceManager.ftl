@@ -5,9 +5,9 @@
 
 ## Strings used for device manager
 
-devmgr =
+devmgr-window =
     .title = ઉપકરણ વ્યવસ્થાપક
-    .style = width: 67em; height: 32em;
+    .style = min-width: 67em; min-height: 32em;
 
 devmgr-devlist =
     .label = સુરક્ષા મોડ્યુલો અને ઉપકરણો
@@ -115,8 +115,6 @@ devinfo-label =
 
 devinfo-serialnum =
     .label = સિરીયલ નંબર
-
-fips-nonempty-password-required = FIPS સ્થીતીને બધા સુરક્ષા સાધન માટે મુખ્ય પાસવર્ડની જરુર છે. FIPS સ્થીતીને અમલમા લાવા માટે મહેરબાની કરીને પાસવર્ડ દાખલકરો.
 
 unable-to-toggle-fips = સુરક્ષા ઉપકરણ માટે FIPS સ્થિતિને બદલવાનું અસમર્થ. તે અગ્રહણીય છે કે તમે બહાર નીકળો અને આ કાર્યક્રમને પુન:શરૂ કરો.
 load-pk11-module-file-picker-title = લોડ કરવા માટે PKCS#11 ઉપકરણ ડ્રાઈવર પસંદ કરો

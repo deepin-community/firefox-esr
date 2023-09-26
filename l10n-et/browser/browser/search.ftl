@@ -19,3 +19,20 @@ opensearch-error-download-desc = { -brand-short-name } ei suutnud alla laadida o
 
 ##
 
+searchbar-submit =
+    .tooltiptext = Soorita otsing
+
+# This string is displayed in the search box when the input field is empty
+searchbar-input =
+    .placeholder = Otsi
+
+searchbar-icon =
+    .tooltiptext = Otsi
+
+## Infobar shown when search engine is removed and replaced.
+## Variables
+## $oldEngine (String) - the search engine to be removed.
+## $newEngine (String) - the search engine to replace the removed search engine.
+
+removed-search-engine-message = <strong>Vaikeotsingumootorit on muudetud</strong>. Otsingumootor { $oldEngine } ei ole enam { -brand-short-name }is vaikeotsingumootorina saadaval. Sinu uueks vaikeotsingumootoriks on { $newEngine }. Teisele vaikeotsingumootorile vahetamiseks ava sätted. <label data-l10n-name="remove-search-engine-article">Rohkem teavet</label>
+remove-search-engine-button = Sobib

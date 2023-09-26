@@ -2,10 +2,6 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-screenshots-context-menu = Kemer un dapadenn-skramm
-
-screenshots-my-shots-button = Ma zapadennoù
-
 screenshot-toolbarbutton =
     .label = Tapadenn-skramm
     .tooltiptext = Kemer un dapadenn
@@ -41,8 +37,6 @@ screenshots-login-error-details = N'haller ket enrollañ ho tapadenn dre ma 'z e
 screenshots-unshootable-page-error-title = N'haller ket tapout ar bajenn-mañ.
 screenshots-unshootable-page-error-details = N'eo ket ur bajenn web reoliek neuze n'haller ket kemer un dapadenn-skramm ganti.
 
-screenshots-self-screenshot-error-title = N'hallit ket kemer un dapadenn-skramm eus ur bajenn { -screenshots-brand-name }!
-
 screenshots-empty-selection-error-title = Re vihan eo ho tiuzadenn
 
 screenshots-private-window-error-title = Diweredekaet eo { -screenshots-brand-name } er merdeiñ prevez.
@@ -50,3 +44,4 @@ screenshots-private-window-error-details = Digarezit evit ar gudenn. Labourat a 
 
 screenshots-generic-error-title = Chaous! Ur gudenn a zo savet gant { -screenshots-brand-name }.
 screenshots-generic-error-details = N'omp ket sur eus ar pezh a zo c'hoarvezet. Gallout a rit adklask pe kemer ur dapadenn eus ur bajenn all.
+

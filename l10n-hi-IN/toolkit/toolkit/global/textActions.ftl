@@ -48,3 +48,13 @@ text-action-select-all =
 text-action-select-all-shortcut =
     .key = A
 
+text-action-spell-add-to-dictionary =
+    .label = शब्दकोश में जोड़ें
+    .accesskey = o
+
+text-action-spell-dictionaries =
+    .label = भाषाएं:
+    .accesskey = L
+
+text-action-search-text-box-clear =
+    .title = साफ करें|

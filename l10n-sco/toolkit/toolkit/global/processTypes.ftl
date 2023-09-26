@@ -9,8 +9,6 @@
 
 process-type-web = Wab Content
 
-process-type-browser = Main
-
 # process used to run privileged about pages,
 # such as about:home
 process-type-privilegedabout = Preevileged Aboot
@@ -23,10 +21,6 @@ process-type-extension = Extension
 
 # process used to open file:// URLs
 process-type-file = Local File
-
-# process used to isolate webpages that requested special
-# permission to allocate large amounts of memory
-process-type-weblargeallocation = Muckle Allocation
 
 # process used to isolate a webpage from other web pages
 # to improve security

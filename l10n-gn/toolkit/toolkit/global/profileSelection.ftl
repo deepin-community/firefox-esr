@@ -23,6 +23,8 @@ profile-selection-delete-button =
     .label = Emboguete mba’ete…
     .accesskey = D
 
+profile-selection-conflict-message = Ambue { -brand-product-name } mbokuatiapyre omoambue umi mba’ete. Emoñepyrũjeyva’erã { -brand-short-name } emoambueve mboyve.
+
 ## Messages used in the profile manager
 
 profile-manager-description = { -brand-short-name } oñongatu marandu ñembohekopyahu rehegua, jerororyvéva ha ambue mba’epuru puruhára imba’eteépe.

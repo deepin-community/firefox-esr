@@ -23,6 +23,8 @@ profile-selection-delete-button =
     .label = Ezabatu profila…
     .accesskey = E
 
+profile-selection-conflict-message = { -brand-product-name }(r)en beste kopia batek aldaketak egin ditu profiletan. { -brand-short-name } berrabiarazi behar duzu aldaketa gehiago egin aurretik.
+
 ## Messages used in the profile manager
 
 profile-manager-description = { -brand-short-name }(e)k zure ezarpen, hobespen eta erabiltzaileari buruzko informazioa gordetzen du profil pertsonalean.

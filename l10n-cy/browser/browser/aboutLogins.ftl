@@ -5,19 +5,14 @@
 
 about-logins-page-title = Mewngofnodion a Chyfrineiriau
 
-# "Google Play" and "App Store" are both branding and should not be translated
-
-login-app-promo-title = Ewch â'ch cyfrineiriau i bob man
-login-app-promo-subtitle = Defnyddiwch yr ap { -lockwise-brand-name } - mae am ddim!
-login-app-promo-android =
-    .alt = Mae ar gael yn Google Play
-login-app-promo-apple =
-    .alt = Llwythwch i lawr o'r App Store
-login-filter =
+about-logins-login-filter =
     .placeholder = Chwilio Mewngofnodion
-create-login-button = Creu Mewngofnod Newydd
+    .key = F
+
+create-new-login-button =
+    .title = Creu mewngofnod newydd
+
 fxaccounts-sign-in-text = Defnyddiwch eich cyfrineiriau ar eich dyfeisiau eraill
-fxaccounts-sign-in-button = Mewngofnodi i { -sync-brand-short-name }
 fxaccounts-sign-in-sync-button = Mewngofnodi i gydweddu
 fxaccounts-avatar-button =
     .title = Rheoli cyfrif
@@ -37,13 +32,13 @@ menu-menuitem-preferences =
        *[other] Dewisiadau
     }
 about-logins-menu-menuitem-help = Cymorth
-menu-menuitem-android-app = { -lockwise-brand-short-name } ar gyfer Android
-menu-menuitem-iphone-app = { -lockwise-brand-short-name } ar gyfer iPhone ac iPad
 
 ## Login List
 
 login-list =
     .aria-label = Mewngofnodi yn cyfateb i ymholiad chwilio
+# Variables
+#   $count (number) - Number of logins
 login-list-count =
     { $count ->
         [zero] { $count } mewngofnod
@@ -52,6 +47,18 @@ login-list-count =
         [few] { $count } mewngofnod
         [many] { $count } mewngofnod
        *[other] { $count } mewngofnod
+    }
+# Variables
+#   $count (number) - Number of filtered logins
+#   $total (number) - Total number of logins
+login-list-filtered-count =
+    { $total ->
+        [zero] { $count } o { $total } mewngofnod
+        [one] { $count } o { $total } mewngofnod
+        [two] { $count } o { $total } mewngofnod
+        [few] { $count } o { $total } mewngofnod
+        [many] { $count } o { $total } mewngofnod
+       *[other] { $count } o { $total } mewngofnod
     }
 login-list-sort-label-text = Trefnu yn ôl
 login-list-name-option = Enw (A-Z)
@@ -81,17 +88,13 @@ about-logins-list-section-week = Y 7 diwrnod diwethaf
 
 ## Introduction screen
 
-login-intro-heading = Chwilio am eich mewngofnodi wedi'u cadw? Gosodwch { -sync-brand-short-name }.
 about-logins-login-intro-heading-logged-out2 = Yn chwilio am eich mewngofnodi wedi'u cadw? Trowch cydweddu ymlaen neu eu mewnforio.
 about-logins-login-intro-heading-logged-in = Heb ganfod mewngofnodion wedi'u cydweddu.
 login-intro-description = Os gwnaethoch gadw eich mewngofnodion i { -brand-product-name } ar ddyfais wahanol, dyma sut i'w cael yma:
-login-intro-instruction-fxa = Creu neu fewngofnodi i'ch { -fxaccount-brand-name } ar y ddyfais lle mae'ch mewngofnodion yn cael eu cadw
-login-intro-instruction-fxa-settings = Sicrhewch eich bod wedi dewis y blwch gwirio Mewngofnodion yng Ngosodiadau { -sync-brand-short-name }
-about-logins-intro-instruction-help = Ewch i <a data-l10n-name="help-link"> Cefnogaeth { -lockwise-brand-short-name }</a> i gael rhagor o gymorth
 login-intro-instructions-fxa = Crëwch neu fewngofnodwch i'ch cyfrif { -fxaccount-brand-name } ar y ddyfais lle mae'ch mewngofnodion yn cael eu cadw
 login-intro-instructions-fxa-settings = Ewch i Gosodiadau > Sync > Cychwyn cydweddu... Dewiswch y blwch ticio Mewngofnodi a chyfrineiriau.
-login-intro-instructions-fxa-help = Ewch i <a data-l10n-name="help-link">Gefnogaeth { -lockwise-brand-short-name }</a> i gael rhagor o gymorth
-about-logins-intro-import = Os yw eich mewngofnodion yn cael eu cadw mewn porwr arall, gallwch <a data-l10n-name="import-link">eu mewnforio i { -lockwise-brand-short-name }</a>
+login-intro-instructions-fxa-passwords-help = Ewch i <a data-l10n-name="passwords-help-link">cefnogaeth cyfrineiriau</a> i gael rhagor o gymorth.
+about-logins-intro-browser-only-import = Os yw eich mewngofnodion yn cael eu cadw mewn porwr arall, gallwch <a data-l10n-name="import-link">eu mewnforio i { -brand-product-name }</a>
 about-logins-intro-import2 = Os yw eich mewngofnodion wedi'u cadw y tu allan i { -brand-product-name }, gallwch <a data-l10n-name="import-browser-link">eu mewnforio o borwr arall</a> neu <a data-l10n-name="import-file-link">o ffeil</a>
 
 ## Login
@@ -116,9 +119,17 @@ login-item-copied-password-button-text = Copïwyd
 login-item-save-changes-button = Cadw Newidiadau
 login-item-save-new-button = Cadw
 login-item-cancel-button = Diddymu
-login-item-time-changed = Newidiwyd ddiwethaf: { DATETIME($timeChanged, day: "numeric", month: "long", year: "numeric") }
-login-item-time-created = Crëwyd: { DATETIME($timeCreated, day: "numeric", month: "long", year: "numeric") }
-login-item-time-used = Defnyddiwyd ddiwethaf: { DATETIME($timeUsed, day: "numeric", month: "long", year: "numeric") }
+
+## The date is displayed in a timeline showing the password evolution.
+## A label is displayed under the date to describe the type of change.
+## (e.g. updated, created, etc.)
+
+# Variables
+#   $datetime (date) - Event date
+login-item-timeline-point-date = { DATETIME($datetime, day: "numeric", month: "short", year: "numeric") }
+login-item-timeline-action-created = Crëwyd
+login-item-timeline-action-updated = Diweddarwyd
+login-item-timeline-action-used = Defnyddiwyd
 
 ## OS Authentication dialog
 
@@ -133,20 +144,19 @@ about-logins-edit-login-os-auth-dialog-message-win = I olygu eich mewngofnod, rh
 # This message can be seen when attempting to edit a login in about:logins
 # On MacOS, only provide the reason that account verification is needed. Do not put a complete sentence here.
 about-logins-edit-login-os-auth-dialog-message-macosx = golygu'r mewngofnod sydd wedi'i gadw
+
 # This message can be seen when attempting to reveal a password in about:logins on Windows.
 about-logins-reveal-password-os-auth-dialog-message-win = I weld eich cyfrinair, rhowch eich manylion mewngofnodi Windows. Mae hyn yn helpu i amddiffyn diogelwch eich cyfrifon.
 # This message can be seen when attempting to reveal a password in about:logins
 # On MacOS, only provide the reason that account verification is needed. Do not put a complete sentence here.
 about-logins-reveal-password-os-auth-dialog-message-macosx = dadlennu'r cyfrinair sydd wedi'i gadw
+
 # This message can be seen when attempting to copy a password in about:logins on Windows.
 about-logins-copy-password-os-auth-dialog-message-win = I gopïo'ch cyfrinair, rhowch eich manylion mewngofnodi Windows. Mae hyn yn helpu i amddiffyn diogelwch eich cyfrifon.
 # This message can be seen when attempting to copy a password in about:logins
 # On MacOS, only provide the reason that account verification is needed. Do not put a complete sentence here.
 about-logins-copy-password-os-auth-dialog-message-macosx = copïo'r cyfrinair sydd wedi'i gadw
 
-## Master Password notification
-
-master-password-notification-message = Rhowch eich prif gyfrinair i weld mewngofnodi a chyfrineiriau wedi'u cadw
 # This message can be seen when attempting to export a password in about:logins on Windows.
 about-logins-export-password-os-auth-dialog-message-win = I allforio'ch mewngofnodion, nodwch eich manylion mewngofnodi Windows. Mae hyn yn helpu i amddiffyn diogelwch eich cyfrifon.
 # This message can be seen when attempting to export a password in about:logins
@@ -160,32 +170,19 @@ master-password-reload-button =
     .label = Mewngofnodi
     .accesskey = M
 
-## Password Sync notification
-
-enable-password-sync-notification-message =
-    { PLATFORM() ->
-        [windows] Eisiau eich mewngofnodion ym mhobman rydych chi'n defnyddio { -brand-product-name }? Ewch i Opsiynau { -sync-brand-short-name } a dewiswch y blwch gwirio Mewngofnodi.
-       *[other] Eisiau eich mewngofnodion ym mhobman rydych chi'n defnyddio { -brand-product-name }? Ewch i Ddewisiadau { -sync-brand-short-name } a dewiswch y blwch gwirio Mewngofnodi.
-    }
-enable-password-sync-preferences-button =
-    .label =
-        { PLATFORM() ->
-            [windows] Ewch i { -sync-brand-short-name } Opsiynau
-           *[other] Ewch i { -sync-brand-short-name } Dewisiadau
-        }
-    .accesskey = E
-about-logins-enable-password-sync-dont-ask-again-button =
-    .label = Peidiwch gofyn i mi eto
-    .accesskey = g
-
 ## Dialogs
 
 confirmation-dialog-cancel-button = Diddymu
 confirmation-dialog-dismiss-button =
     .title = Diddymu
+
 about-logins-confirm-remove-dialog-title = Tynnu'r mewngofnod?
 confirm-delete-dialog-message = Nid oes modd dadwneud y weithred hon.
 about-logins-confirm-remove-dialog-confirm-button = Tynnu
+
+## Variables
+##   $count (number) - Number of items
+
 about-logins-confirm-remove-all-dialog-confirm-button-label =
     { $count ->
         [1] Tynnu
@@ -196,6 +193,7 @@ about-logins-confirm-remove-all-dialog-confirm-button-label =
         [many] Tynnu
        *[other] Tynnu'r Cyfan
     }
+
 about-logins-confirm-remove-all-dialog-checkbox-label =
     { $count ->
         [1] Ie, tynnu'r mewngofnod
@@ -206,6 +204,7 @@ about-logins-confirm-remove-all-dialog-checkbox-label =
         [many] Ie, tynnu'r mewngofnodion
        *[other] Ie, tynnu'r mewngofnodion
     }
+
 about-logins-confirm-remove-all-dialog-title =
     { $count ->
         [zero] Tynnu { $count } mewngofnodion
@@ -225,6 +224,7 @@ about-logins-confirm-remove-all-dialog-message =
         [many] Bydd hyn yn dileu'r mewngofnodion rydych wedi'u cadw i { -brand-short-name } ac unrhyw rybuddion tor-data sy'n ymddangos yma. Nid oes modd i chi ddadwneud y weithred hon.
        *[other] Bydd hyn yn dileu'r mewngofnodion rydych wedi'u cadw i { -brand-short-name } ac unrhyw rybuddion tor-data sy'n ymddangos yma. Nid oes modd i chi ddadwneud y weithred hon.
     }
+
 about-logins-confirm-remove-all-sync-dialog-title =
     { $count ->
         [zero] Tynnu'r { $count } mewngofnodion o'r holl ddyfeisiau?
@@ -244,11 +244,16 @@ about-logins-confirm-remove-all-sync-dialog-message =
         [many] Bydd hyn yn tynnu'r holl fewngofnodion rydych wedi'u cadw i { -brand-short-name } ar bob dyfais sy'n cael ei gydweddu i'ch { -fxaccount-brand-name }. Bydd hyn hefyd yn dileu rhybuddion tor-data sy'n ymddangos yma. Nid oes modd i chi ddadwneud y weithred hon.
        *[other] Bydd hyn yn tynnu'r holl fewngofnodion rydych wedi'u cadw i { -brand-short-name } ar bob dyfais sy'n cael ei gydweddu i'ch { -fxaccount-brand-name }. Bydd hyn hefyd yn dileu rhybuddion tor-data sy'n ymddangos yma. Nid oes modd i chi ddadwneud y weithred hon.
     }
+
+##
+
 about-logins-confirm-export-dialog-title = Allforio mewngofnodion a chyfrineiriau
 about-logins-confirm-export-dialog-message = Bydd eich cyfrineiriau'n cael eu cadw fel testun darllenadwy (e.e. BadP@ssw0rd) fel y gall unrhyw un sy'n gallu agor y ffeil a allforiwyd eu gweld.
 about-logins-confirm-export-dialog-confirm-button = Allforio…
+
 about-logins-alert-import-title = Wedi Cwblhau Mewnforio
 about-logins-alert-import-message = Gweld crynodeb mewnforio manwl
+
 confirm-discard-changes-dialog-title = Hepgor newidiadau heb eu cadw?
 confirm-discard-changes-dialog-message = Bydd yr holl newidiadau sydd heb eu cadw'n cael eu colli.
 confirm-discard-changes-dialog-confirm-button = Dileu
@@ -261,7 +266,6 @@ about-logins-breach-alert-date = Digwyddodd y tor-data hwn ar { DATETIME($date, 
 # Variables:
 #   $hostname (String) - The hostname of the website associated with the login, e.g. "example.com"
 about-logins-breach-alert-link = Mynd i { $hostname }
-about-logins-breach-alert-learn-more-link = Dysgu rhagor
 
 ## Vulnerable Password notification
 
@@ -279,6 +283,7 @@ about-logins-vulnerable-alert-learn-more-link = Dysgu rhagor
 # Variables:
 #   $loginTitle (String) - The title of the website associated with the login.
 about-logins-error-message-duplicate-login-with-link = Mae cofnod ar gyfer { $loginTitle } gyda'r enw defnyddiwr hwnnw eisoes yn bodoli. <a data-l10n-name="duplicate-link"> Ewch i'r cofnod presennol? </a>
+
 # This is a generic error message.
 about-logins-error-message-default = Digwyddodd gwall wrth geisio gadw'r cyfrinair hwn.
 
@@ -332,6 +337,7 @@ about-logins-import-dialog-items-added =
         [many] <span>Ychwanegwyd mewngofnodion newydd:</span> <span data-l10n-name="count">{ $count }</span>
        *[other] <span>Ychwanegwyd mewngofnodion newydd:</span> <span data-l10n-name="count">{ $count }</span>
     }
+
 about-logins-import-dialog-items-modified =
     { $count ->
         [zero] <span>Diweddarwyd mewngofnodi presennol:</span> <span data-l10n-name="count">{ $count }</span>
@@ -341,6 +347,7 @@ about-logins-import-dialog-items-modified =
         [many] <span>Diweddarwyd mewngofnodi presennol:</span> <span data-l10n-name="count">{ $count }</span>
        *[other] <span>Diweddarwyd mewngofnodi presennol:</span> <span data-l10n-name="count">{ $count }</span>
     }
+
 about-logins-import-dialog-items-no-change =
     { $count ->
         [zero] <span>Mewngofnodion dyblyg wedi'u darganfod: </span> <span data-l10n-name="count">{ $count }</span><span data-l10n-name="meta">(heb ei fewnforio)</span>
@@ -360,6 +367,7 @@ about-logins-import-dialog-items-error =
        *[other] <span>Gwallau:</span> <span data-l10n-name="count">{ $count }</span><span data-l10n-name="meta">(heb ei fewnforio)</span>
     }
 about-logins-import-dialog-done = Gorffen
+
 about-logins-import-dialog-error-title = Gwall Mewnforio
 about-logins-import-dialog-error-conflicting-values-title = Gwerthoedd Lluosog sy'n Gwrthdaro mewn Un Mewngofnod
 about-logins-import-dialog-error-conflicting-values-description = Er enghraifft: enwau defnyddwyr lluosog, cyfrineiriau, URLau, ac ati ar gyfer un mewngofnod.
@@ -373,8 +381,10 @@ about-logins-import-dialog-error-no-logins-imported = Heb fewnforio unrhyw fewng
 about-logins-import-dialog-error-learn-more = Dysgu rhagor
 about-logins-import-dialog-error-try-import-again = Ceisiwch Fewnforio Eto…
 about-logins-import-dialog-error-cancel = Diddymu
+
 about-logins-import-report-title = Crynodeb Mewnforio
 about-logins-import-report-description = Mewngofnodion a chyfrineiriau wedi'u mewnforio i { -brand-short-name }.
+
 #
 # Variables:
 #  $number (number) - The number of the row

@@ -39,15 +39,6 @@ menu-quit =
 menu-quit-mac =
     .label = Sluit { -brand-shorter-name } af
 
-# This menu-quit-button string is only used on Linux.
-menu-quit-button =
-    .label = { menu-quit.label }
-
-# This menu-quit-button-win string is only used on Windows.
-menu-quit-button-win =
-    .label = { menu-quit.label }
-    .tooltip = Sluit { -brand-shorter-name } af
-
 menu-about =
     .label = Aangaande { -brand-shorter-name }
     .accesskey = A
@@ -77,9 +68,6 @@ menu-file-open-location =
 menu-file-open-file =
     .label = Open lêer…
     .accesskey = O
-menu-file-close =
-    .label = Sluit
-    .accesskey = S
 menu-file-close-window =
     .label = Sluit venster
     .accesskey = v
@@ -92,9 +80,6 @@ menu-file-email-link =
 menu-file-print-setup =
     .label = Bladsyopstelling…
     .accesskey = t
-menu-file-print-preview =
-    .label = Drukvoorskou
-    .accesskey = v
 menu-file-print =
     .label = Druk…
     .accesskey = D
@@ -107,9 +92,6 @@ menu-file-go-offline =
 menu-edit =
     .label = Redigeer
     .accesskey = e
-menu-edit-find-on =
-    .label = Vind op hierdie bladsy…
-    .accesskey = V
 menu-edit-find-again =
     .label = Vind weer
     .accesskey = e
@@ -125,9 +107,6 @@ menu-view =
 menu-view-toolbars-menu =
     .label = Nutsbalke
     .accesskey = N
-menu-view-customize-toolbar =
-    .label = Doelmaak…
-    .accesskey = D
 menu-view-sidebar =
     .label = Kantbalk
     .accesskey = b
@@ -158,9 +137,6 @@ menu-view-page-style-no-style =
 menu-view-page-basic-style =
     .label = Basiese bladsystyl
     .accesskey = B
-menu-view-charset =
-    .label = Teksenkodering
-    .accesskey = e
 
 ## These should match what Safari and other Apple applications
 ## use on macOS.
@@ -174,6 +150,17 @@ menu-view-exit-full-screen =
 menu-view-full-screen =
     .label = Volskerm
     .accesskey = V
+
+## These menu items may use the same accesskey.
+
+# This should match reader-view-enter-button in browser.ftl
+menu-view-enter-readerview =
+    .label = Gebruik leesaansig
+    .accesskey = l
+# This should match reader-view-close-button in browser.ftl
+menu-view-close-readerview =
+    .label = Sluit leesaansig
+    .accesskey = l
 
 ##
 
@@ -207,12 +194,6 @@ menu-history-undo-window-menu =
 menu-bookmarks-menu =
     .label = Boekmerke
     .accesskey = B
-menu-bookmarks-show-all =
-    .label = Wys alle boekmerke
-menu-bookmark-this-page =
-    .label = Boekmerk hierdie bladsy
-menu-bookmark-edit =
-    .label = Redigeer hierdie boekmerk
 menu-bookmarks-all-tabs =
     .label = Boekmerk alle oortjies…
 menu-bookmarks-toolbar =
@@ -228,32 +209,15 @@ menu-tools =
 menu-tools-downloads =
     .label = Afgelaai
     .accesskey = A
-menu-tools-addons =
-    .label = Byvoegings
-    .accesskey = B
 menu-tools-sync-now =
     .label = Sinkroniseer nou
     .accesskey = S
-menu-tools-web-developer =
-    .label = Webontwikkelaar
-    .accesskey = W
 menu-tools-page-source =
     .label = Bladsybron
     .accesskey = r
 menu-tools-page-info =
     .label = Bladsyinfo
     .accesskey = i
-menu-preferences =
-    .label =
-        { PLATFORM() ->
-            [windows] Opsies
-           *[other] Voorkeure
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] O
-           *[other] k
-        }
 
 ## Window Menu
 
@@ -268,14 +232,6 @@ menu-window-bring-all-to-front =
 # NOTE: For Engineers, any additions or changes to Help menu strings should
 # also be reflected in the related strings in appmenu.ftl. Those strings, by
 # convention, will have the same ID as these, but prefixed with "app".
-# Example: appmenu-help-product
-#
-# These strings are duplicated to allow for different casing depending on
-# where the strings appear.
-
-# NOTE: For Engineers, any additions or changes to Help menu strings should
-# also be reflected in the related strings in appmenu.ftl. Those strings, by
-# convention, will have the same ID as these, but prefixed with "app".
 # Example: appmenu-get-help
 #
 # These strings are duplicated to allow for different casing depending on
@@ -284,27 +240,6 @@ menu-window-bring-all-to-front =
 menu-help =
     .label = Hulp
     .accesskey = H
-menu-help-product =
-    .label = { -brand-shorter-name }-hulp
-    .accesskey = h
-menu-help-show-tour =
-    .label = { -brand-shorter-name }-toer
-    .accesskey = o
-menu-help-keyboard-shortcuts =
-    .label = Sleutelbordkortpaaie
-    .accesskey = k
-menu-help-troubleshooting-info =
-    .label = Inligting vir probleemoplossing
-    .accesskey = p
-menu-help-feedback-page =
-    .label = Dien terugvoer in…
-    .accesskey = D
-menu-help-safe-mode-without-addons =
-    .label = Herbegin met byvoegings gedeaktiveer…
-    .accesskey = H
-menu-help-safe-mode-with-addons =
-    .label = Herbegin met byvoegings geaktiveer
-    .accesskey = r
 # Label of the Help menu item. Either this or
 # safeb.palm.notdeceptive.label from
 # phishing-afterload-warning-message.dtd is shown.

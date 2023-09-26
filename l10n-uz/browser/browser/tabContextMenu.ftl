@@ -14,6 +14,13 @@ duplicate-tab =
 duplicate-tabs =
     .label = Varaqlarni nusxalash
     .accesskey = n
+# The following string is displayed on a menuitem that will close the tabs from the start of the tabstrip to the currently targeted tab (excluding the currently targeted and any other selected tabs).
+# In left-to-right languages this should use "Left" and in right-to-left languages this should use "Right".
+close-tabs-to-the-start =
+    .label = Chapdago varaqlarni yopish
+    .accesskey = C
+# The following string is displayed on a menuitem that will close the tabs from the end of the tabstrip to the currently targeted tab (excluding the currently targeted and any other selected tabs).
+# In left-to-right languages this should use "Right" and in right-to-left languages this should use "Left".
 close-tabs-to-the-end =
     .label = Oʻngdagi varaqlarni yopish
     .accesskey = O
@@ -38,12 +45,6 @@ unpin-selected-tabs =
 bookmark-selected-tabs =
     .label = Varaqlarni xatchoʻpga qoʻshish
     .accesskey = k
-bookmark-tab =
-    .label = Varaqni xatchoʻplarga qoʻshish
-    .accesskey = q
-reopen-in-container =
-    .label = Konteynerda qayta ochish
-    .accesskey = e
 move-to-start =
     .label = Boshiga oʻtkazish
     .accesskey = B
@@ -54,19 +55,13 @@ move-to-new-window =
     .label = Yangi oynaga ko‘chirish
     .accesskey = y
 
-close-tab =
-    .label = Varaqni yopish
-    .accesskey = y
-close-tabs =
-    .label = Varaqlarni yopish
-    .accesskey = y
-move-tabs =
-    .label = Varaqlarni koʻchirish
-    .accesskey = k
-move-tab =
-    .label = Varaqni koʻchirish
-    .accesskey = o
-
 ## Variables:
 ##  $tabCount (Number): the number of tabs that are affected by the action.
 
+tab-context-send-tabs-to-device =
+    .label =
+        { $tabCount ->
+            [one] Varaqni qurilmaga joʻnatish
+           *[other] { $tabCount } ta varaqni qurilmaga joʻnatish
+        }
+    .accesskey = n

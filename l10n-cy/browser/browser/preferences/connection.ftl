@@ -2,12 +2,12 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-connection-window =
+connection-window2 =
     .title = Gosodiadau Cysylltu
     .style =
         { PLATFORM() ->
-            [macos] width: 44em
-           *[other] width: 49em
+            [macos] min-width: 44em
+           *[other] min-width: 49em
         }
 
 connection-close-key =
@@ -35,10 +35,6 @@ connection-proxy-http = Dirprwy yr HTTP
     .accesskey = H
 connection-proxy-http-port = Porth
     .accesskey = P
-connection-proxy-http-sharing =
-    .label = Defnyddiwch y dirprwy yma hefyd ar gyfer FTP a HTTPS
-    .accesskey = d
-
 connection-proxy-https-sharing =
     .label = Defnyddio'r dirprwy yma hefyd ar gyfer HTTPS
     .accesskey = D
@@ -47,11 +43,6 @@ connection-proxy-https = Dirprwy HTTPS:
     .accesskey = D
 connection-proxy-ssl-port = Porth
     .accesskey = o
-
-connection-proxy-ftp = Dirprwy FTP
-    .accesskey = F
-connection-proxy-ftp-port = Porth
-    .accesskey = r
 
 connection-proxy-socks = Gwesteiwr SOCKS v5
     .accesskey = G
@@ -69,9 +60,6 @@ connection-proxy-noproxy = Dim Dirprwy ar gyfer
 
 connection-proxy-noproxy-desc = Esiampl: .mozilla.org, .net.nz, 192.168.1.0/24
 
-# Do not translate localhost, 127.0.0.1 and ::1.
-connection-proxy-noproxy-localhost-desc = Nid yw cysylltiadau i localhost, 127.0.0.1, a ::1 byth yn cael eu cirprwyo.
-
 # Do not translate "localhost", "127.0.0.1/8" and "::1". (You can translate "and".)
 connection-proxy-noproxy-localhost-desc-2 = Nid yw cysylltiadau â localhost, 127.0.0.1/8, a ::1 byth yn cael eu dirprwyo.
 
@@ -88,16 +76,14 @@ connection-proxy-autologin =
     .accesskey = d
     .tooltip = Mae'r dewis hwn yn eich dilysu'n dawel i ddirprwyon rydych wedi eu cadw eu manylion ar eu cyfer. Byddwn yn gofyn os bydd y dilysiad yn methu.
 
+connection-proxy-autologin-checkbox =
+    .label = Peidio gofyn am ddilysiad os yw'r cyfrinair wedi ei gadw
+    .accesskey = d
+    .tooltiptext = Mae'r dewis hwn yn eich dilysu'n dawel i ddirprwyon rydych wedi eu cadw eu manylion ar eu cyfer. Byddwn yn gofyn os bydd y dilysiad yn methu.
+
 connection-proxy-socks-remote-dns =
     .label = DNS dirprwyol wrth ddefnyddio SOCKS v5
     .accesskey = d
-
-connection-dns-over-https =
-    .label = Galluogi DNS dros HTTPS
-    .accesskey = D
-
-connection-dns-over-https-url-resolver = Defnyddio'r Darparwr
-    .accesskey = D
 
 # Variables:
 #   $name (String) - Display name or URL for the DNS over HTTPS provider
@@ -106,8 +92,8 @@ connection-dns-over-https-url-item-default =
     .tooltiptext = Defnyddiwch yr URL rhagosodedig i ddatrys DNS dros HTTPS
 
 connection-dns-over-https-url-custom =
-    .label = Cyfaddasu
+    .label = Cyfaddas
     .accesskey = C
     .tooltiptext = Rhowch eich hoff URL ar gyfer datrys DNS dros HTTPS
 
-connection-dns-over-https-custom-label = Cyfaddasu
+connection-dns-over-https-custom-label = Cyfaddas

@@ -23,6 +23,8 @@ profile-selection-delete-button =
     .label = Stizzar il profil…
     .accesskey = S
 
+profile-selection-conflict-message = Ina autra copia da { -brand-product-name } ha modifitgà profils. Igl è necessari da reaviar { -brand-short-name } avant che far ulteriuras midadas.
+
 ## Messages used in the profile manager
 
 profile-manager-description = { -brand-short-name } memorisescha parameters e datas persunalas en tes profil persunal.

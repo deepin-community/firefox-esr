@@ -2,13 +2,13 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-addons-window =
-    .title = Topitorde Ɓeyditte
-
 addons-page-title = Topitorde Ɓeyditte
 
-search-header-shortcut =
-    .key = f
+## Variables
+##   $domain - Domain name where add-ons are available (e.g. addons.mozilla.org)
+
+##
+
 
 list-empty-installed =
     .value = A alaa hay ɓeydital gootal aafaangal e oo fannu
@@ -30,43 +30,6 @@ show-unsigned-extensions-button =
 
 show-all-extensions-button =
     .label = Hollu timmitte fof
-
-cmd-show-details =
-    .label = Hollir Humpito Ɓeydoro
-    .accesskey = H
-
-cmd-find-updates =
-    .label = Yiylo Kesɗitine
-    .accesskey = Y
-
-cmd-preferences =
-    .label =
-        { PLATFORM() ->
-            [windows] Cuɓe
-           *[other] Cuɓoraaɗe
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] C
-           *[other] C
-        }
-
-cmd-enable-theme =
-    .label = Jammin Siŋkoore
-    .accesskey = J
-
-cmd-disable-theme =
-    .label = Dartin Jammingol Siŋkoore
-    .accesskey = J
-
-cmd-install-addon =
-    .label = Aaf
-    .accesskey = A
-
-cmd-contribute =
-    .label = Addu ballal
-    .accesskey = A
-    .tooltiptext = Wallit e totagol ngal ɓeydital
 
 detail-version =
     .label = Yamre
@@ -181,7 +144,6 @@ extensions-warning-update-security = Ƴeewtagol kisnal ɓeyditte koko daaƴaa. A
 extensions-warning-update-security-button = Daaƴtu
     .title = Daaƴtu ƴeewtagol kisnal ɓeyditte
 
-
 ## Strings connected to add-on updates
 
 addon-updates-check-for-updates = Yuurno kesɗitine
@@ -234,8 +196,12 @@ addon-open-about-debugging = Buggito Ɓeyditte
 ## Pending uninstall message bar
 
 
+## "sites with restrictions" (internally called "quarantined") are special domains
+## where add-ons are normally blocked for security reasons.
+
 ## This is the tooltip text for the recommended badges for an extension in about:addons. The
 ## badge is a small icon displayed next to an extension when it is recommended on AMO.
+
 
 ##
 
@@ -243,3 +209,29 @@ addon-open-about-debugging = Buggito Ɓeyditte
 
 addon-page-options-button =
     .title = Kuutorɗe ɓeyditte fof
+
+## Detail notifications
+## Variables:
+##   $name (String): name of the add-on.
+
+## Detail notifications
+## Variables:
+##   $name (string) - Name of the add-on.
+
+# Variables:
+#   $version (String): application version.
+details-notification-incompatible = { $name } jaaɓdaani e { -brand-short-name } { $version }.
+
+details-notification-unsigned-and-disabled = { $name } horiima ƴeewteede ngam huutoraade e { -brand-short-name } tee daaƴaama kisa.
+details-notification-unsigned-and-disabled-link = Ɓeydu Humpito
+
+details-notification-unsigned = { $name } horiima ƴeewteede ngam huutoraade e { -brand-short-name }. Waɗtu heen hakkille.
+details-notification-unsigned-link = Ɓeydu Humpito
+
+details-notification-blocked = { $name } daaƴaama sabu caɗe kisal walla jamɗugol.
+details-notification-blocked-link = Ɓeydu Humpito
+
+details-notification-softblocked = { $name } ena anndiraa addude caɗe kisal walla jamɗugol.
+details-notification-softblocked-link = Ɓeydu Humpito
+
+details-notification-gmp-pending = { $name } maa aafe ko leelaani.

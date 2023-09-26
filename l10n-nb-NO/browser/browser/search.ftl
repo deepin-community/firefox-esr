@@ -19,3 +19,20 @@ opensearch-error-download-desc = { -brand-short-name } klarte ikke å laste ned 
 
 ##
 
+searchbar-submit =
+    .tooltiptext = Send søk
+
+# This string is displayed in the search box when the input field is empty
+searchbar-input =
+    .placeholder = Søk
+
+searchbar-icon =
+    .tooltiptext = Søk
+
+## Infobar shown when search engine is removed and replaced.
+## Variables
+## $oldEngine (String) - the search engine to be removed.
+## $newEngine (String) - the search engine to replace the removed search engine.
+
+removed-search-engine-message = <strong>Standardsøkemotoren din er endret.</strong>  { $oldEngine } er ikke lenger tilgjengelig som standard søkemotor i { -brand-short-name }. { $newEngine } er nå standard søkemotor. For å bytte til en annen standard søkemotor, gå til innstillinger. <label data-l10n-name="remove-search-engine-article">Les mer</label>
+remove-search-engine-button = OK

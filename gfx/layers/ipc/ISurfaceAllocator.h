@@ -52,8 +52,6 @@ enum BufferCapabilities {
 
 class SurfaceDescriptor;
 
-mozilla::ipc::SharedMemory::SharedMemoryType OptimalShmemType();
-
 /**
  * An interface used to create and destroy surfaces that are shared with the
  * Compositor process (using shmem, or other platform specific memory)
@@ -186,9 +184,6 @@ class LegacySurfaceDescriptorAllocator {
 };
 
 bool IsSurfaceDescriptorValid(const SurfaceDescriptor& aSurface);
-
-already_AddRefed<gfx::DrawTarget> GetDrawTargetForDescriptor(
-    const SurfaceDescriptor& aDescriptor);
 
 already_AddRefed<gfx::DataSourceSurface> GetSurfaceForDescriptor(
     const SurfaceDescriptor& aDescriptor);

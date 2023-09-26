@@ -2,15 +2,20 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-fxa-toolbar-sync-syncing =
-    .label = Sinxronlaşır…
-fxa-toolbar-sync-syncing-tabs =
-    .label = Vərəqlər sinxronlaşdırılır…
-
-sync-disconnect-dialog-title = { -sync-brand-short-name } ilə əlaqə kəsilsin?
-
 fxa-toolbar-sync-syncing2 = Sinxronlaşır…
 
-fxa-disconnect-dialog-title = { -brand-product-name } ilə əlaqə kəsilsin?
 sync-disconnect-dialog-button = Əlaqəni kəs
+
+# Variables:
+#   $tabCount (Number): The number of tabs sent to the device.
+fxa-menu-send-tab-to-device =
+    .label =
+        { $tabCount ->
+            [one] Vərəqi cihaza göndər
+           *[other] { $tabCount } vərəqi cihaza göndər
+        }
+
+# This is shown dynamically within "Send tab to device" in fxa menu.
+fxa-menu-send-tab-to-device-syncnotready =
+    .label = Cihazlar Sinxronlaşdırılır…
 

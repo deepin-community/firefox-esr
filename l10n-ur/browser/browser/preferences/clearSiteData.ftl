@@ -2,9 +2,9 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-clear-site-data-window =
+clear-site-data-window2 =
     .title = کوائف صاف کریں
-    .style = width: 35em
+    .style = min-width: 35em
 
 clear-site-data-description = تمام کوکیز اور سائٹ کا ڈیٹا صاف کرنے سے جو کی { -brand-short-name } کی طرف سے ذخیرہ شدہ ہے، آپ کو سائن اوٹ کرسکتا ہے اور آف لائن ویب مشمول ہٹ سکتے ہیں۔ کیشہ ڈیٹا کی صفائی آپ لاگ کو متاثر نہیں کرے گا۔
 
@@ -50,14 +50,6 @@ clear-site-data-cache-empty =
     .accesskey = W
 
 clear-site-data-cache-info = ویب سائٹس کو تصاویر اور ڈیٹا دوبارہ لوڈ کرنے کی ضرورت ہوگی
-
-clear-site-data-cancel =
-    .label = منسوخ کریں
-    .accesskey = C
-
-clear-site-data-clear =
-    .label = صاف کریں
-    .accesskey = l
 
 clear-site-data-dialog =
     .buttonlabelaccept = صاف کریں

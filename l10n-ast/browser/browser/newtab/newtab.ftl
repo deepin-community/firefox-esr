@@ -8,10 +8,6 @@
 newtab-page-title = Llingüeta nueva
 newtab-settings-button =
     .title = Personalizar la páxina «Llingüeta nueva»
-
-newtab-personalize-button-label = Personalizar
-    .title = Personaliza «Llingüeta nueva»
-    .aria-label = Personalizar «Llingüeta nueva»
 newtab-personalize-icon-label =
     .title = Personaliza «Llingüeta nueva»
     .aria-label = Personalizar «Llingüeta nueva»
@@ -144,13 +140,11 @@ newtab-section-menu-privacy-notice = Avisu de privacidá
 ## Section Headers.
 
 newtab-section-header-topsites = Sitios principales
-newtab-section-header-highlights = Lo destacao
 newtab-section-header-recent-activity = Actividá recién
 
 ## Empty Section States: These show when there are no more items in a section. Ex. When there are no more Pocket story recommendations, in the space where there would have been stories, this is shown instead.
 
 newtab-empty-section-highlights = Comienza a restolar y equí vamos amosate dalgunos de los meyores artículos, vídeos y otres páxines que visitesti o amestesti apocayá a Marcadores.
-
 
 ## Empty Section (Content Discovery Experience). These show when there are no more stories or when some stories fail to load.
 
@@ -164,6 +158,11 @@ newtab-discovery-empty-section-topstories-timed-out = ¡Meca! Paez qu'esta seici
 newtab-pocket-read-more = Temes populares:
 newtab-pocket-more-recommendations = Más recomendaciones
 newtab-pocket-learn-more = Lleer más
+
+## Pocket Final Card Section.
+## This is for the final card in the Pocket grid.
+
+## Pocket content onboarding experience dialog and modal for new users seeing the Pocket section for the first time, shown as the first item in the Pocket section.
 
 ## Error Fallback Content.
 ## This message and suggested action link are shown in each section of UI that fails to render.
@@ -181,13 +180,6 @@ newtab-custom-row-selector =
     }
 newtab-custom-sponsored-sites = Atayos patrocinaos
 newtab-custom-recent-title = Actividá recién
-newtab-custom-recent-subtitle = Una esbilla de los sitios y el conteníu recién
+newtab-custom-recent-subtitle = Una esbilla de los sitios y del conteníu recién
 newtab-custom-close-button = Zarrar
-
-# For the "Snippets" feature traditionally on about:home.
-# Alternative translation options: "Small Note" or something that
-# expresses the idea of "a small message, shortened from something else,
-# and non-essential but also not entirely trivial and useless.
-newtab-custom-snippets-title = Cachos d'información
-newtab-custom-snippets-subtitle = Conseyos y noticies de { -vendor-short-name } y { -brand-product-name }
 newtab-custom-settings = Xestionar más axustes

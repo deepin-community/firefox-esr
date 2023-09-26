@@ -60,11 +60,6 @@ options-stylesheet-autocompletion-tooltip =
 # The heading
 options-screenshot-label = Kit Cal me wang kio
 
-# Label for the checkbox that toggles screenshot to clipboard feature
-options-screenshot-clipboard-label = Cal me wang kio i bao coc
-options-screenshot-clipboard-tooltip =
-    .title = Gwoko i cal me wang kio atir i bao coc
-
 # Label for the checkbox that toggles the camera shutter audio for screenshot tool
 options-screenshot-audio-label = Tuk dwon me koko pa lamak cal
 options-screenshot-audio-tooltip =
@@ -119,8 +114,3 @@ options-context-triggers-page-refresh = * Kare ma kombedi ni keken, nwoyo cano p
 
 ##
 
-# The label for the checkbox that toggles the display of the platform data in the
-# Profiler i.e. devtools.profiler.ui.show-platform-data a boolean preference in about:config
-options-show-platform-data-label = Nyut tuti me tic pa Gecko
-options-show-platform-data-tooltip =
-    .title = Ka ce i ye gin ayera man ripot pa La co profile me JavaScript obi bedo ki lanen me tuti me Gecko

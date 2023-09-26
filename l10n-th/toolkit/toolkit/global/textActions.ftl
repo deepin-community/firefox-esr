@@ -34,6 +34,10 @@ text-action-paste =
     .label = วาง
     .accesskey = ว
 
+text-action-paste-no-formatting =
+    .label = วางโดยไม่มีการจัดรูปแบบ
+    .accesskey = m
+
 text-action-paste-shortcut =
     .key = V
 
@@ -50,3 +54,26 @@ text-action-select-all-shortcut =
 
 text-action-spell-no-suggestions =
     .label = ไม่มีข้อเสนอแนะการสะกดคำ
+
+text-action-spell-add-to-dictionary =
+    .label = เพิ่มไปยังพจนานุกรม
+    .accesskey = ไ
+
+text-action-spell-undo-add-to-dictionary =
+    .label = ยกเลิกการเพิ่มไปยังพจนานุกรม
+    .accesskey = ย
+
+text-action-spell-check-toggle =
+    .label = ตรวจสอบการสะกดคำ
+    .accesskey = ต
+
+text-action-spell-add-dictionaries =
+    .label = เพิ่มพจนานุกรม…
+    .accesskey = พ
+
+text-action-spell-dictionaries =
+    .label = ภาษา
+    .accesskey = ภ
+
+text-action-search-text-box-clear =
+    .title = ล้าง

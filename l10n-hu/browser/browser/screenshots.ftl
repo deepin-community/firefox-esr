@@ -2,13 +2,12 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-screenshots-context-menu = Képernyőkép készítése
-
-screenshots-my-shots-button = Az Ön képei
-
 screenshot-toolbarbutton =
     .label = Képernyőkép
     .tooltiptext = Képernyőkép készítése
+
+screenshot-shortcut =
+    .key = S
 
 screenshots-instructions = Húzza, vagy kattintson a lapra a terület kiválasztásához. A megszakításhoz nyomja meg az ESC billentyűt.
 screenshots-cancel-button = Mégse
@@ -18,6 +17,14 @@ screenshots-download-button = Letöltés
 screenshots-download-button-tooltip = Képernyőkép letöltése
 screenshots-copy-button = Másolás
 screenshots-copy-button-tooltip = Képernyőkép másolása a vágólapra
+screenshots-download-button-title =
+    .title = Képernyőkép letöltése
+screenshots-copy-button-title =
+    .title = Képernyőkép másolása a vágólapra
+screenshots-cancel-button-title =
+    .title = Mégse
+screenshots-retry-button-title =
+    .title = Képernyőkép újbóli elkészítése
 
 screenshots-meta-key =
     { PLATFORM() ->
@@ -41,8 +48,6 @@ screenshots-login-error-details = Nem tudtuk elmenteni a képét, mert probléma
 screenshots-unshootable-page-error-title = Nem lehet képet készíteni erről a lapról.
 screenshots-unshootable-page-error-details = Ez egy nem szabványos weblap, így nem készíthet róla képernyőképet.
 
-screenshots-self-screenshot-error-title = Nem készíthet képet a { -screenshots-brand-name } oldalról!
-
 screenshots-empty-selection-error-title = A kijelölés túl kicsi
 
 screenshots-private-window-error-title = A { -screenshots-brand-name } le vannak tiltva Privát böngészésben
@@ -50,3 +55,6 @@ screenshots-private-window-error-details = Sajnáljuk a kényelmetlenséget. Dol
 
 screenshots-generic-error-title = Húha! A { -screenshots-brand-name } megkergült.
 screenshots-generic-error-details = Nem vagyunk benne biztosak, hogy mi történt. Próbálja újra, vagy készítsen képet egy másik oldalról.
+
+screenshots-too-large-error-title = A képernyőkép le lett vágva, mert túl nagy volt
+screenshots-too-large-error-details = Próbáljon egy 32 700 képpontosnál kisebb szélességű, vagy egy 124 900 000 képpontosnál kisebb összképpontszámú területet kiválasztani .

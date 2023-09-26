@@ -23,6 +23,8 @@ profile-selection-delete-button =
     .label = Sguab às pròifil…
     .accesskey = S
 
+profile-selection-conflict-message = Rinn lethbhreac eile de { -brand-product-name } atharraichean air pròifilean. Feumaidh tu { -brand-short-name } ath-thòiseachadh mus atharraich thu dad eile.
+
 ## Messages used in the profile manager
 
 profile-manager-description = Sàbhalaidh { -brand-short-name } fiosrachadh mu na roghainnean is rudan eile agad 'nad phròifil.

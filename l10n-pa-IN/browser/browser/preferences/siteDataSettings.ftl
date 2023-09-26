@@ -30,14 +30,6 @@ site-data-remove-selected =
     .label = ਚੁਣੇ ਨੂੰ ਹਟਾਓ
     .accesskey = r
 
-site-data-button-cancel =
-    .label = ਰੱਦ ਕਰੋ
-    .accesskey = C
-
-site-data-button-save =
-    .label = ਤਬਦੀਲੀਆਂ ਨੂੰ ਸੰਭਾਲੋ
-    .accesskey = a
-
 site-data-settings-dialog =
     .buttonlabelaccept = ਤਬਦੀਲੀਆਂ ਨੂੰ ਸੰਭਾਲੋ
     .buttonaccesskeyaccept = a
@@ -67,5 +59,8 @@ site-data-removing-dialog =
 site-data-removing-header = ਕੂਕੀਜ਼ ਅਤੇ ਸਾਈਟ ਡਾਟਾ ਹਟਾਇਆ ਜਾ ਰਿਹਾ ਹੈ
 
 site-data-removing-desc = ਕੂਕੀਜ਼ ਅਤੇ ਸਾਈਟ ਡਾਟੇ ਨੂੰ ਹਟਾਉਣਾ ਨਾਲ ਤੁਸੀਂ ਵੈੱਬਸਾਈਟ ਤੋਂ ਲਾਗ ਆਉਟ ਹੋ ਜਾਉਂਗੇ। ਕੀ ਤੁਸੀਂ ਤਬਦੀਲੀਆਂ ਕਰਨੀਆਂ ਚਾਹੁੰਦੇ ਹੋ?
+# Variables:
+#   $baseDomain (String) - The single domain for which data is being removed
+site-data-removing-single-desc = ਕੂਕੀਜ਼ ਤੇ ਸਾਈਟ ਡਾਟੇ ਨੂੰ ਹਟਾਉਣ ਨਾਲ ਤੁਸੀਂ ਵੈੱਬਸਾਈਟਾਂ ਤੋਂ ਲਾਗ ਆਉਟ ਹੋ ਸਕਦੇ ਹੋ। ਕੀ ਤੁਸੀਂ <strong>{ $baseDomain }</strong> ਤੋਂ ਕੂਕੀਜ਼ ਤੇ ਸਾਈਟ ਡਾਟੇ ਨੂੰ ਹਟਾਉਣਾ ਚਾਹੋਗੇ?
 
 site-data-removing-table = ਅੱਗੇ ਦਿੱਤੀਆਂ ਵੈੱਬਸਾਈਟਾਂ ਤੋਂ ਕੂਕੀਜ਼ ਅਤੇ ਡਾਟੇ ਨੂੰ ਹਟਾਇਆ ਜਾਵੇਗਾ

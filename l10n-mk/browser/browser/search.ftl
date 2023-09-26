@@ -19,3 +19,19 @@ opensearch-error-download-desc = { -brand-short-name } не може да го �
 
 ##
 
+searchbar-submit =
+    .tooltiptext = Изврши пребарување
+
+# This string is displayed in the search box when the input field is empty
+searchbar-input =
+    .placeholder = Пребарај
+
+searchbar-icon =
+    .tooltiptext = Пребарај
+
+## Infobar shown when search engine is removed and replaced.
+## Variables
+## $oldEngine (String) - the search engine to be removed.
+## $newEngine (String) - the search engine to replace the removed search engine.
+
+remove-search-engine-button = Во ред

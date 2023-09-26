@@ -9,28 +9,6 @@ do-not-track-option-default-content-blocking-known =
 do-not-track-option-always =
     .label = Junelïk
 
-pref-page-title =
-    { PLATFORM() ->
-        [windows] Taq cha'oj
-       *[other] Taq ajowab'äl
-    }
-
-# This is used to determine the width of the search field in about:preferences,
-# in order to make the entire placeholder string visible
-#
-# Please keep the placeholder string short to avoid truncation.
-#
-# Notice: The value of the `.style` attribute is a CSS string, and the `width`
-# is the name of the CSS property. It is intended only to adjust the element's width.
-# Do not translate.
-search-input-box =
-    .style = width: 15.4em
-    .placeholder =
-        { PLATFORM() ->
-            [windows] Tikanöx pa Taq Cha'oj
-           *[other] Tikanöx pa Taq Ajowab'äl
-        }
-
 settings-page-title = Taq Runuk'ulem
 
 # This is used to determine the width of the search field in about:preferences,
@@ -65,10 +43,6 @@ category-search =
 pane-privacy-title = Ichinanem & Jikomal
 category-privacy =
     .tooltiptext = { pane-privacy-title }
-
-pane-sync-title2 = { -sync-brand-short-name }
-category-sync2 =
-    .tooltiptext = { pane-sync-title2 }
 
 pane-sync-title3 = Ximoj
 category-sync3 =
@@ -113,37 +87,32 @@ restart-later = Titikirisäx pa jun Mej
 ## Variables:
 ##   $name (String): name of the extension
 
-# This string is shown to notify the user that their home page
-# is being controlled by an extension.
-extension-controlled-homepage-override = Jun k'amal, <img data-l10n-name="icon"/> { $name }, ruchajin ri ruxaq atikirisab'al.
 
-# This string is shown to notify the user that their new tab page
-# is being controlled by an extension.
-extension-controlled-new-tab-url = Jun k'amal, <img data-l10n-name="icon"/> { $name }, ruchajin ri ruxaq K'ak'a' Ruwi'.
+## Extension Control Notifications
+##
+## These strings are used to inform the user
+## about changes made by extensions to browser settings.
+##
+## <img data-l10n-name="icon"/> is going to be replaced by the extension icon.
+##
+## Variables:
+##   $name (string) - Name of the extension
 
 # This string is shown to notify the user that the password manager setting
 # is being controlled by an extension
-extension-controlled-password-saving = Jun k'amal, <img data-l10n-name="icon"/> { $name }, nuchajij re runuk'ulem re'.
+extension-controlling-password-saving = <img data-l10n-name="icon"/> <strong>{ $name }</strong> tasamajij re runuk'ulem re'.
 
 # This string is shown to notify the user that their notifications permission
 # is being controlled by an extension.
-extension-controlled-web-notifications = Jun k'amal, <img data-l10n-name="icon"/> { $name }, nuchajij re runuk'ulem re'.
-
-# This string is shown to notify the user that the default search engine
-# is being controlled by an extension.
-extension-controlled-default-search = Jun k'amal, <img data-l10n-name="icon"/> { $name }, xujäl ri kanob'äl ruk'amon pe.
+extension-controlling-web-notifications = <img data-l10n-name="icon"/> <strong>{ $name }</strong> tasamajij re runuk'ulem re'.
 
 # This string is shown to notify the user that Container Tabs
 # are being enabled by an extension.
-extension-controlled-privacy-containers = Jun k'amal, <img data-l10n-name="icon"/> { $name }, nik'atzin K'ayöl Tabs chi re.
+extension-controlling-privacy-containers = <img data-l10n-name="icon"/> <strong>{ $name }</strong> nik'atzin K'wayöl Ruwi' chi re.
 
 # This string is shown to notify the user that their content blocking "All Detected Trackers"
 # preferences are being controlled by an extension.
-extension-controlled-websites-content-blocking-all-trackers = Jun k'amal, <img data-l10n-name="icon"/> { $name }, nuchajij re runuk'ulem re'.
-
-# This string is shown to notify the user that their proxy configuration preferences
-# are being controlled by an extension.
-extension-controlled-proxy-config = Jun k'amal, <img data-l10n-name="icon"/> { $name }, nuchajij rub'eyal { -brand-short-name } nok pa k'amaya'l.
+extension-controlling-websites-content-blocking-all-trackers = <img data-l10n-name="icon"/> <strong>{ $name }</strong> tasamajij re runuk'ulem re'.
 
 # This string is shown after the user disables an extension to notify the user
 # how to enable an extension that they disabled.
@@ -157,13 +126,6 @@ extension-controlled-enable = Richin nitzij ri k'amal jät pa <img data-l10n-nam
 search-results-header = Taq ruq'i'oj kanoxïk
 
 # `<span data-l10n-name="query"></span>` will be replaced by the search term.
-search-results-empty-message =
-    { PLATFORM() ->
-        [windows] ¡Kojakuyu'! Majun achike xqïl pa Taq Cha'oj richin ri “<span data-l10n-name="query"></span>”.
-       *[other] ¡Kojakuyu'! Majun achike xqïl pa Taq Ajowab'äl richin ri “<span data-l10n-name="query"></span>”.
-    }
-
-# `<span data-l10n-name="query"></span>` will be replaced by the search term.
 search-results-empty-message2 = ¡Kojakuyu'! Majun achike xqïl pa taq Runuk'ulem richin ri “<span data-l10n-name="query"></span>”.
 
 search-results-help-link = ¿La nawajo' ato'ik? Tatz'eta' <a data-l10n-name="url">{ -brand-short-name } To'ïk</a>
@@ -171,14 +133,6 @@ search-results-help-link = ¿La nawajo' ato'ik? Tatz'eta' <a data-l10n-name="url
 ## General Section
 
 startup-header = Tikirisab'äl
-
-# { -brand-short-name } will be 'Firefox Developer Edition',
-# since this setting is only exposed in Firefox Developer Edition
-separate-profile-mode =
-    .label = Tiya' q'ij chi ri { -brand-short-name } chuqa' Firefox ketzije' junam
-use-firefox-sync = Pixa': Re re' nrokisaj jachon taq ruwäch b'i'aj. Tawokisaj { -sync-brand-short-name } richin nakomonij na'oj chi kikojol.
-get-started-not-logged-in = Tatz'ib'aj ab'i' pa { -sync-brand-short-name }…
-get-started-configured = Tijaq { -sync-brand-short-name } taq rajowab'al
 
 always-check-default =
     .label = Junelïk tinik'öx we { -brand-short-name } ja ri' ri awokik'amaya'l
@@ -191,15 +145,20 @@ set-as-my-default-browser =
     .label = Tib'an chi K'o wi…
     .accesskey = K
 
-startup-restore-previous-session =
-    .label = Titzolin ri jun kan molojri'ïl
-    .accesskey = m
+startup-restore-windows-and-tabs =
+    .label = Kejaq taq tzuwäch chuqa' taq ruwi' xe'ik'o yan
+    .accesskey = k
 
 startup-restore-warn-on-quit =
     .label = Tiya' rutzijol toq yatel pa okik'amaya'l
 
 disable-extension =
     .label = Tichup ri K'amal
+
+preferences-data-migration-header = Ke'ajik'a' Rutzij Okik'amaya'l
+preferences-data-migration-button =
+    .label = Tijik' Tzij
+    .accesskey = j
 
 tabs-group-header = Taq ruwi'
 
@@ -211,17 +170,22 @@ open-new-link-as-tabs =
     .label = Kejaq taq ximonel pa taq ruwi' pa ruk'exel kik'in k'ak'a' taq tzuwäch
     .accesskey = z
 
-warn-on-close-multiple-tabs =
-    .label = Taya' pe rutzijol we xketz'apitäj jalajöj taq ruwi'
+confirm-on-close-multiple-tabs =
+    .label = Nab'ey tijikib'äx toq yetz'apïx jalajöj taq ruwi'
     .accesskey = j
+
+# This string is used for the confirm before quitting preference.
+# Variables:
+#   $quitKey (string) - the quit keyboard shortcut, and formatted
+#                       in the same manner as it would appear,
+#                       for example, in the File menu.
+confirm-on-quit-with-key =
+    .label = Nab'ey tijikib'äx richin nel rik'in { $quitKey }
+    .accesskey = b
 
 warn-on-open-many-tabs =
     .label = Taya' pe rutzijol we { -brand-short-name } yalan eqal xtisamäj toq xkerujäq k'ïy taq ruwi'
     .accesskey = e
-
-switch-links-to-new-tabs =
-    .label = Toq najäq jun ximonel pa jun k'ak'a' ruwi', tijalwachïx rik'in re' pan aninäq
-    .accesskey = o
 
 switch-to-new-tabs =
     .label = Toq najäq jun ximonel, wachib'äl o silowäch pa jun k'ak'a' ruwi', tijalwachïx rik'in re' pan aninäq
@@ -242,6 +206,10 @@ browser-containers-settings =
     .accesskey = l
 
 containers-disable-alert-title = ¿La yetz'apïx konojel ri kik'ojlib'al taq ruwi'?
+
+## Variables:
+##   $tabCount (number) - Number of tabs
+
 containers-disable-alert-desc =
     { $tabCount ->
         [one] We ye'achüp ri ruk'ojlib'al taq ruwi' wakami, { $tabCount } ruk'ojlib'al ruwi' xtitz'apïx. ¿La kan nawajo' ye'achüp ruk'ojlib'al taq ruwi'?
@@ -253,12 +221,15 @@ containers-disable-alert-ok-button =
         [one] Titz'apïx { $tabCount } ruk'ojlib'al ruwi'
        *[other] Ketz'apïx { $tabCount } ruk'ojlib'al taq ruwi'
     }
+
+##
+
 containers-disable-alert-cancel-button = Junelïk titzije'
 
 containers-remove-alert-title = ¿La niyuj el re k'wayöl re'?
 
 # Variables:
-#   $count (Number) - Number of tabs that will be closed.
+#   $count (number) - Number of tabs that will be closed.
 containers-remove-alert-msg =
     { $count ->
         [one] We nayüj el re Ruk'wayöl re' wakami, { $count } ruk'wayöl ruwi' xtitz'apïx. ¿La kan nawajo' ye'ayüj re k'wayöl re'?
@@ -268,12 +239,30 @@ containers-remove-alert-msg =
 containers-remove-ok-button = Tiyuj el re k'wayöl re'
 containers-remove-cancel-button = Man tiyuj el re k'wayöl re'
 
-
 ## General Section - Language & Appearance
 
 language-and-appearance-header = Ch'ab'äl chuqa' Rutzub'al
 
-fonts-and-colors-header = Kiwäch taq tz'ib' chuqa' taq b'onil
+preferences-web-appearance-choice-auto = Yonil
+preferences-web-appearance-choice-light = Yuk'unel
+preferences-web-appearance-choice-dark = Q'equ'm
+
+preferences-web-appearance-choice-input-auto =
+    .aria-description = { preferences-web-appearance-choice-tooltip-auto.title }
+
+preferences-web-appearance-choice-input-light =
+    .aria-description = { preferences-web-appearance-choice-tooltip-light.title }
+
+preferences-web-appearance-choice-input-dark =
+    .aria-description = { preferences-web-appearance-choice-tooltip-dark.title }
+
+preferences-colors-header = Taq b'onil
+
+preferences-colors-manage-button =
+    .label = Kenuk'samajïx taq B'onil…
+    .accesskey = B
+
+preferences-fonts-header = Ruwäch tz'ib'
 
 default-font = Ruwäch tzij kan k'o wi
     .accesskey = k
@@ -284,16 +273,14 @@ advanced-fonts =
     .label = Taq Q'axinäq…
     .accesskey = Q
 
-colors-settings =
-    .label = Taq b'onil…
-    .accesskey = T
-
 # Zoom is a noun, and the message is used as header for a group of options
 preferences-zoom-header = Sum
 
 preferences-default-zoom = Sum k'o wi
     .accesskey = S
 
+# Variables:
+#   $percentage (number) - Zoom percentage value
 preferences-default-zoom-value =
     .label = { $percentage }%
 
@@ -320,6 +307,8 @@ translate-web-pages =
     .label = Titzalq'omïx rupam ajk'amaya'l
     .accesskey = T
 
+fx-translate-web-pages = { -translations-brand-name }
+
 # The <img> element is replaced by the logo of the provider
 # used to provide machine translations for web pages.
 translate-attribution = Tzalq'oman ruma <img data-l10n-name="logo"/>
@@ -343,8 +332,7 @@ files-and-applications-title = Taq Yakb'äl chuqa' taq Chokoy
 
 download-header = Taq qasanïk
 
-download-save-to =
-    .label = Keyak yakb'äl pa
+download-save-where = Keyak yakb'äl pa
     .accesskey = y
 
 download-choose-folder =
@@ -410,24 +398,19 @@ applications-manage-app =
     .label = Taq kib'anikil chokoy…
 applications-always-ask =
     .label = Junelïk tik'utüx pe
-applications-type-pdf = K'wayel Rub'anikil Wuj (K'RW)
 
 # Variables:
-#   $type (String) - the MIME type (e.g application/binary)
-applications-type-pdf-with-type = { applications-type-pdf } ({ $type })
-
-# Variables:
-#   $type-description (String) - Description of the type (e.g "Portable Document Format")
-#   $type (String) - the MIME type (e.g application/binary)
+#   $type-description (string) - Description of the type (e.g "Portable Document Format")
+#   $type (string) - The MIME type (e.g application/binary)
 applications-type-description-with-type = { $type-description } ({ $type })
 
 # Variables:
-#   $extension (String) - file extension (e.g .TXT)
-#   $type (String) - the MIME type (e.g application/binary)
+#   $extension (string) - File extension (e.g .TXT)
+#   $type (string) - The MIME type (e.g application/binary)
 applications-file-ending-with-type = { applications-file-ending } ({ $type })
 
 # Variables:
-#   $plugin-name (String) - Name of a plugin (e.g Adobe Flash)
+#   $plugin-name (string) - Name of a plugin (e.g Adobe Flash)
 applications-use-plugin-in =
     .label = Tokisäx { $plugin-name } (pa { -brand-short-name })
 applications-open-inapp =
@@ -463,6 +446,16 @@ applications-use-os-default-label =
 
 ##
 
+applications-handle-new-file-types-description = ¿Achike k'o chi nub'än { -brand-short-name } rik'in ch'aqa' chik yakb'äl?
+
+applications-save-for-new-types =
+    .label = Tiyak yakb'äl
+    .accesskey = y
+
+applications-ask-before-handling =
+    .label = Tik'utüx we yejaq o yeyak taq yakb'äl
+    .accesskey = k
+
 drm-content-header = Kematz'ib'il ch'ojib'äl Runuk'samajixik (DRM) Rupam
 
 play-drm-content =
@@ -475,6 +468,8 @@ update-application-title = { -brand-short-name } Taq k'exoj ruwäch
 
 update-application-description = Junelïk tik'ex ri { -brand-short-name } richin ütz nisamäj, jikïl, chuqa' jikon.
 
+# Variables:
+# $version (string) - Firefox version
 update-application-version = Ruwäch { $version } <a data-l10n-name="learn-more">Achike natzijoj</a>
 
 update-history =
@@ -505,21 +500,14 @@ update-application-use-service =
     .label = Tokisäx jun samaj pa ruka'n b'ey richin yeyak ri taq k'exoj ruwäch
     .accesskey = r
 
-update-setting-write-failure-title = Xsach toq xyak ri Ruk'exoj taq ajowab'äl
-
-# Variables:
-#   $path (String) - Path to the configuration file
-# The newlines between the main text and the line containing the path is
-# intentional so the path is easier to identify.
-update-setting-write-failure-message =
-    { -brand-short-name } xrïl jun sachoj ruma ri' toq man xuyäk ta re jaloj re'. Tatz'eta' chi re runuk'ulem re rajowab'al jaloj re' nrajo' chi niya' q'ij richin nitz'ib'äx pa ri yakb'äl. Rik'in jub'a' rat o jun runuk'samajel q'inoj yixtikïr nisöl re sachoj, rik'in ruchajixik chijun ri yakb'äl ruma ri molaj okisanela'. 
-    
-    Man tikirel ta xtz'ib'äx chupam ri yakb'äl: { $path }
+update-application-suppress-prompts =
+    .label = Tik'ut jub'a' taq rutzijol richin k'exoj
+    .accesskey = r
 
 update-setting-write-failure-title2 = Xsach toq xyak ri Ruk'exoj taq runuk'ulem
 
 # Variables:
-#   $path (String) - Path to the configuration file
+#   $path (string) - Path to the configuration file
 # The newlines between the main text and the line containing the path is
 # intentional so the path is easier to identify.
 update-setting-write-failure-message2 =
@@ -559,7 +547,7 @@ performance-limit-content-process-enabled-desc = Ri taq ruxenab'al rutz'aqat rup
 performance-limit-content-process-blocked-desc = Ri rujalwachinik rajilab'al rutajinik rupam xa okel rik'in ri k'ïy tajinïk { -brand-short-name }. <a data-l10n-name="learn-more">Tawetamaj nanik'oj we tzijïl ri k'ïy tajinïk</a>
 
 # Variables:
-#   $num - default value of the `dom.ipc.processCount` pref.
+#   $num (number) - Default value of the `dom.ipc.processCount` pref.
 performance-default-content-process-count =
     .label = { $num } (ruk'amon wi pe)
 
@@ -574,6 +562,10 @@ browsing-use-autoscroll =
 browsing-use-smooth-scrolling =
     .label = Tokisäx jeb'ël q'axanïk
     .accesskey = e
+
+browsing-gtk-use-non-overlay-scrollbars =
+    .label = Jantape' tik'ut ri ruche'el silonem
+    .accesskey = k
 
 browsing-use-onscreen-keyboard =
     .label = Tik'ut pe ri na'onel pitzb'äl toq xtik'atzin
@@ -636,10 +628,8 @@ home-restore-defaults =
     .label = Ketzolij ri E K'o wi
     .accesskey = K
 
-# "Firefox" should be treated as a brand and kept in English,
-# while "Home" and "(Default)" can be localized.
-home-mode-choice-default =
-    .label = Firefox Tikirib'äl (K'o wi)
+home-mode-choice-default-fx =
+    .label = { -firefox-home-brand-name } (K'o wi)
 
 home-mode-choice-custom =
     .label = Ichinan URLs...
@@ -668,17 +658,11 @@ choose-bookmark =
 
 ## Home Section - Firefox Home Content Customization
 
-home-prefs-content-header = Etamab'äl pa ri Rutikirib'al Firefox
-home-prefs-content-description = Tacha' achike etamab'äl nawajo' pa ri Rutikirib'al Firefox ruwäch.
+home-prefs-content-header2 = Rupam { -firefox-home-brand-name }
+home-prefs-content-description2 = Tacha' achike etamab'äl nawajo' pa ruwäch { -firefox-home-brand-name }.
 
 home-prefs-search-header =
     .label = Ajk'amaya'l Kanoxïk
-home-prefs-topsites-header =
-    .label = Jeb'ël Taq Ruxaq
-home-prefs-topsites-description = Taq ruxaq yalan ye'atz'ët
-
-home-prefs-topsites-by-option-sponsored =
-    .label = Nïm taq Ruxaq Eto'on
 home-prefs-shortcuts-header =
     .label = Chojmin Okem
 home-prefs-shortcuts-description = Taq ruxaq xe'ayäk o xe'atz'ët
@@ -688,9 +672,12 @@ home-prefs-shortcuts-by-option-sponsored =
 ## Variables:
 ##  $provider (String): Name of the corresponding content provider, e.g "Pocket".
 
+
+## Variables:
+##  $provider (string) - Name of the corresponding content provider, e.g "Pocket".
+
 home-prefs-recommended-by-header =
     .label = Chilab'en ruma { $provider }
-home-prefs-recommended-by-description-update = Man relik ta chi rupam chijun ri ajk'amaya'l, to'on ruma { $provider }
 home-prefs-recommended-by-description-new = Cha'on rupam cha'on ruma { $provider }, rach'ala'ïl { -brand-product-name }
 
 ##
@@ -698,10 +685,9 @@ home-prefs-recommended-by-description-new = Cha'on rupam cha'on ruma { $provider
 home-prefs-recommended-by-learn-more = Achike rub'eyal nisamäj
 home-prefs-recommended-by-option-sponsored-stories =
     .label = To'on taq B'anob'äl
+home-prefs-recommended-by-option-recent-saves =
+    .label = Kek'ut k'ab'a' eyakon
 
-home-prefs-highlights-header =
-    .label = Ya'on kiq'ij
-home-prefs-highlights-description = Jun rucha'onem ruxaq, ri xayäk o xatz'ët
 home-prefs-highlights-option-visited-pages =
     .label = Taq Ruxaq Etz'eton
 home-prefs-highlights-options-bookmarks =
@@ -721,10 +707,11 @@ home-prefs-recent-activity-description = Jun cha'on taq ruxaq chuqa' k'ak'a' rup
 # and non-essential but also not entirely trivial and useless.
 home-prefs-snippets-header =
     .label = Taq pir
-home-prefs-snippets-description = Kik'exoj { -vendor-short-name } chuqa' { -brand-product-name }
 
 home-prefs-snippets-description-new = Taq runa'oj chuqa' taq rutzijol { -vendor-short-name } chuqa' { -brand-product-name }
 
+# Variables:
+#   $num (number) - Number of rows displayed
 home-prefs-sections-rows-option =
     .label =
         { $num ->
@@ -758,6 +745,7 @@ search-show-suggestions-url-bar-option =
     .label = Kek'ut pe taq ruchilab'enik kanoxïk chi kikojol ri kiq'iq'oj kikajtz'ik taq ochochib'äl
     .accesskey = q
 
+
 # This string describes what the user will observe when the system
 # prioritizes search suggestions over browsing history in the results
 # that extend down from the address bar. In the original English string,
@@ -769,13 +757,9 @@ search-show-suggestions-above-history-option =
 search-show-suggestions-private-windows =
     .label = Kek'ut pe taq kichilab'exik kanoxik pa Ichinan taq Tzuwäch
 
-suggestions-addressbar-settings-generic = Kek'ex ri taq kajowab'al ch'aqa' chik taq kichilab'enik kikajtz'ik ochochib'äl
-
 suggestions-addressbar-settings-generic2 = Kek'ex ri taq runuk'ulem ch'aqa' chik taq kichilab'enik kikajtz'ik ochochib'äl
 
 search-suggestions-cant-show = Man xkeq'alajin ta pe ri taq chilab'exïk richin nikanöx pa rukajtz'ik ochochib'äl ruma chi anuk'un ri { -brand-short-name } richin majub'ey tunataj ri anatab'al.
-
-search-one-click-header = Samajel taq kanob'äl rik'in jupitz'oj
 
 search-one-click-header2 = Kekanöx Ruq'a' Okem
 
@@ -793,7 +777,6 @@ search-restore-default =
 search-remove-engine =
     .label = Tiyuj
     .accesskey = y
-
 search-add-engine =
     .label = Titz'aqatisäx
     .accesskey = t
@@ -804,18 +787,11 @@ search-find-more-link = Kekanöx ch'aqa' chik kik'u'x taq kanob'äl
 # ('Duplicate' is an adjective)
 search-keyword-warning-title = Kamulun ewan tzij
 # Variables:
-#   $name (String) - Name of a search engine.
+#   $name (string) - Name of a search engine.
 search-keyword-warning-engine = Xacha' jun ewan tzij ri tajin nokisäx ruma “{ $name }”. Tacha' jun chik.
 search-keyword-warning-bookmark = Xacha' jun ewan tzij okisan ruma jun yaketal. Tacha' jun chik.
 
 ## Containers Section
-
-containers-back-button =
-    .aria-label =
-        { PLATFORM() ->
-            [windows] Titzolin pa taq Cha'oj
-           *[other] Titzolin pa taq Ajowab'äl
-        }
 
 containers-back-button2 =
     .aria-label = Tib'an chik Runuk'ulem
@@ -828,9 +804,6 @@ containers-new-tab-check =
     .label = Ticha jun ruk'wayöl ri k'ak'a' ruwi'
     .accesskey = T
 
-containers-preferences-button =
-    .label = Taq ajowab'äl
-
 containers-settings-button =
     .label = Taq runuk'ulem
 containers-remove-button =
@@ -839,13 +812,11 @@ containers-remove-button =
 ## Firefox Account - Signed out. Note that "Sync" and "Firefox Account" are now
 ## more discrete ("signed in" no longer means "and sync is connected").
 
+
+## Firefox account - Signed out. Note that "Sync" and "Firefox account" are now
+## more discrete ("signed in" no longer means "and sync is connected").
+
 sync-signedout-caption = Tak'waj awik'in ri Ajk'amaya'l
-sync-signedout-description = Ke'axima' ri taq ayaketal, natab'äl, taq ruwi', taq ewan tzij, taq tz'aqat chuqa' taq ajowab'äl chi kikojol konojel ri taq awokisaxel.
-
-sync-signedout-account-signin2 =
-    .label = Tatz'ib'aj ab'i' pa { -sync-brand-short-name }…
-    .accesskey = p
-
 sync-signedout-description2 = Ke'axima' ri taq ayaketal, natab'äl, taq ruwi', taq ewan tzij, taq tz'aqat chuqa' taq runuk'ulem chi kikojol konojel ri taq awokisaxel.
 
 sync-signedout-account-signin3 =
@@ -864,6 +835,9 @@ sync-mobile-promo = Taqasaj Firefox richin <img data-l10n-name="android-icon"/> 
 
 ## Firefox Account - Signed in
 
+
+## Firefox account - Signed in
+
 sync-profile-picture =
     .tooltiptext = Tijal ruwachib'al ruwäch b'i'aj
 
@@ -874,8 +848,13 @@ sync-sign-out =
 sync-manage-account = Tinuk'samajïx rub'i' taqoya'l
     .accesskey = y
 
+## Variables
+## $email (string) - Email used for Firefox account
+
 sync-signedin-unverified = { $email } man jikib'an ta.
 sync-signedin-login-failure = Tatikirisaj molojri'ïl richin yatok chik { $email }
+
+##
 
 sync-resend-verification =
     .label = Titaq chik Jikib'anïk
@@ -895,12 +874,6 @@ prefs-syncing-on = Nixim: TZIJÏL
 
 prefs-syncing-off = Nixim: CHUPÜL
 
-prefs-sync-setup =
-    .label = Tib'an runuk'ulem { -sync-brand-short-name }...
-    .accesskey = n
-
-prefs-sync-offer-setup-label = Ke'axima' ri taq ayaketal, natab'äl, taq ruwi', taq ewan tzij, taq tz'aqat chuqa' taq ajowab'äl chi kikojol konojel ri taq awokisaxel.
-
 prefs-sync-turn-on-syncing =
     .label = Titzij pa ximoj…
     .accesskey = x
@@ -912,9 +885,14 @@ prefs-sync-now =
     .accesskeynotsyncing = W
     .labelsyncing = Nixim…
 
-## The list of things currently syncing.
+prefs-sync-now-button =
+    .label = Tixim Wakami
+    .accesskey = W
 
-sync-currently-syncing-heading = Wakami ye'axïm re taq ch'akulal:
+prefs-syncing-button =
+    .label = Nixim…
+
+## The list of things currently syncing.
 
 sync-currently-syncing-bookmarks = Taq yaketal
 sync-currently-syncing-history = Natab'äl
@@ -923,12 +901,6 @@ sync-currently-syncing-logins-passwords = Kitikirisaxik molojri'ïl chuqa' ewan 
 sync-currently-syncing-addresses = Taq ochochib'äl
 sync-currently-syncing-creditcards = Taq ch'utit'im pwäq
 sync-currently-syncing-addons = Taq tz'aqat
-sync-currently-syncing-prefs =
-    { PLATFORM() ->
-        [windows] Taq cha'oj
-       *[other] Taq ajowab'äl
-    }
-
 sync-currently-syncing-settings = Taq runuk'ulem
 
 sync-change-options =
@@ -937,9 +909,9 @@ sync-change-options =
 
 ## The "Choose what to sync" dialog.
 
-sync-choose-what-to-sync-dialog =
+sync-choose-what-to-sync-dialog3 =
     .title = Tacha' Achike Naxïm
-    .style = width: 36em; min-height: 35em;
+    .style = min-width: 36em;
     .buttonlabelaccept = Keyak Jaloj
     .buttonaccesskeyaccept = K
     .buttonlabelextra2 = Nichup…
@@ -978,15 +950,6 @@ sync-engine-addons =
     .tooltiptext = Taq k'amal chuqa' taq wachinïk richin Firefox ajk'ematz'ib'
     .accesskey = t
 
-sync-engine-prefs =
-    .label =
-        { PLATFORM() ->
-            [windows] Taq cha'oj
-           *[other] Taq ajowab'äl
-        }
-    .tooltiptext = Chijun Runuk'ulem, Ichinanem chuqa' Jikomal e'ajalon
-    .accesskey = a
-
 sync-engine-settings =
     .label = Taq runuk'ulem
     .tooltiptext = Xjal Chijun, Ichinan, chuqa' Jikïl runuk'ulem
@@ -1009,6 +972,16 @@ sync-device-name-save =
     .accesskey = a
 
 sync-connect-another-device = Tokisäx jun chik okisaxel
+
+## These strings are shown in a desktop notification after the
+## user requests we resend a verification email.
+
+sync-verification-sent-title = Xtaq ri runik'oxik
+# Variables:
+#   $email (String): Email address of user's Firefox account.
+sync-verification-sent-body = Xtaq jun ruximöy jikib'anïk pa { $email }.
+sync-verification-not-sent-title = Man tikirel ta nitaq ri jikib'anïk
+sync-verification-not-sent-body = K'a wakami man yojtikïr ta niqanik'oj pa taqoya'l, tab'ana' utzil tatojtob'ej pa jun chi ti ramaj.
 
 ## Privacy Section
 
@@ -1034,6 +1007,7 @@ forms-breach-alerts =
     .label = Kek'ut pe rutzijol taq k'ayewal chi kij ewan taq tzij kichin tz'ilan ajk'amaya'l ruxaq.
     .accesskey = n
 forms-breach-alerts-learn-more-link = Tetamäx ch'aqa' chik
+relay-integration-learn-more-link = Tetamäx ch'aqa' chik
 
 # Checkbox which controls filling saved logins into fields automatically when they appear, in some cases without user interaction.
 forms-fill-logins-and-passwords =
@@ -1042,9 +1016,6 @@ forms-fill-logins-and-passwords =
 forms-saved-logins =
     .label = Yakon kitikirib'al molojri'ïl…
     .accesskey = k
-forms-master-pw-use =
-    .label = Tokisäx ri nimaläj ewan tzij
-    .accesskey = T
 forms-primary-pw-use =
     .label = Tokisäx jun Nab'ey Ewan Tzij
     .accesskey = k
@@ -1055,8 +1026,6 @@ forms-primary-pw-learn-more-link = Tetamäx ch'aqa' chik
 forms-master-pw-change =
     .label = Tijal Ajtij Ewan Tzij…
     .accesskey = A
-
-forms-master-pw-fips-title = Wakami at k'o pa rub'eyal FIPS. FIPS nrajo' jun nimaläj ewan tzij, ri man kowöl ta.
 forms-primary-pw-change =
     .label = Tijal Nab'ey Ewan Tzij…
     .accesskey = N
@@ -1067,17 +1036,12 @@ forms-primary-pw-former-name = Etaman ruwa achi'el Ajtij Ewan Tzij
 
 forms-primary-pw-fips-title = Wakami at k'o pa rub'eyal FIPS. FIPS nrajo' jun Nab'ey Ewan Tzij ri man kowöl ta.
 forms-master-pw-fips-desc = Xsach toq Nijal ri Ewan Tzij
+forms-windows-sso =
+    .label = Xa xe tiya' q'ij chi re jun rutikirib'al rumolojri'ïl Windows pa Microsoft, retal samaj chuqa' tijob'äl.
+forms-windows-sso-learn-more-link = Tetamäx ch'aqa' chik
+forms-windows-sso-desc = Kenuk'samajïx taq rub'i' taqoya'l pa runuk'ulem okisaxel
 
 ## OS Authentication dialog
-
-# This message can be seen by trying to add a Master Password.
-master-password-os-auth-dialog-message-win = Richin natz'ük jun ajtij ewan atzij, tatz'ib'aj ri ruwujil rutikirisaxik molojri'ïl richin Windows. Re re' nuto' richin nuchajij rujikomal ri rub'i' ataqoya'l.
-
-# This message can be seen by trying to add a Master Password.
-# The macOS strings are preceded by the operating system with "Firefox is trying to "
-# and includes subtitle of "Enter password for the user "xxx" to allow this." These
-# notes are only valid for English. Please test in your locale.
-master-password-os-auth-dialog-message-macosx = Titz'uk jun Nimaläj Ewan Tzij
 
 # This message can be seen by trying to add a Primary Password.
 primary-password-os-auth-dialog-message-win = Richin natz'ük jun Nab'ey Ewan Tzij, tatz'ib'aj ri ruwujil rutikirisaxik molojri'ïl richin Windows. Re re' nuto' richin nuchajij rujikomal ri rub'i' ataqoya'l.
@@ -1146,8 +1110,8 @@ sitedata-header = Taq Kuki chuqa' Rutzij Ruxaq
 sitedata-total-size-calculating = Tajin nipaj kinimilem taq rutzij chuqa' rujumejyak ruxaq k'amaya'l…
 
 # Variables:
-#   $value (Number) - Value of the unit (for example: 4.6, 500)
-#   $unit (String) - Name of the unit (for example: "bytes", "KB")
+#   $value (number) - Value of the unit (for example: 4.6, 500)
+#   $unit (string) - Name of the unit (for example: "bytes", "KB")
 sitedata-total-size = Ri yakon taq kaxlanwey, rutzij ruxaq chuqa' ri rutzatzq'or taq jumejyak nikokisaj { $value } { $unit } chi re ri rupam nimayakb'äl.
 
 sitedata-learn-more = Tetamäx ch'aqa' chik
@@ -1173,18 +1137,14 @@ sitedata-block-desc = Q'aton ruwäch
 
 sitedata-option-block-cross-site-trackers =
     .label = Kojqanela' xoch'in taq ruxaq
-sitedata-option-block-cross-site-and-social-media-trackers =
-    .label = Kojqanela' taq ruxaq chuqa' aj winäq k'amab'ey
-sitedata-option-block-cross-site-tracking-cookies-including-social-media =
-    .label = Taq kicookies kojqanem xoch'in taq ruxaq — kik'wan kicookies aj winaqil k'amab'ey
-sitedata-option-block-cross-site-cookies-including-social-media =
-    .label = Taq kicookies xoch'in taq ruxaq — kik'wan kicookies aj winaqil k'amab'ey
-sitedata-option-block-cross-site-and-social-media-trackers-plus-isolate =
-    .label = Kojqanela' xoch'in taq ruxaq chuqa' winaqil taq k'amab'ey, chuqa' kijech'unik ri ch'aqa' chik taq kuki
+sitedata-option-block-cross-site-tracking-cookies =
+    .label = kikuki kojqanik xoch'in taq ruxaq
+sitedata-option-block-cross-site-cookies =
+    .label = Taq kikuki kojqanem xoch'in taq ruxaq chuqa' kijech'unik ch'aqa' chik taq kikuki xoch'in taq ruxaq.
 sitedata-option-block-unvisited =
     .label = Taq kuki man etz'eton ta ajkamaya'l taq ruxaq
-sitedata-option-block-all-third-party =
-    .label = Konojel ri taq kikuki aj rox winäq (yetikïr yetz'ilon pan ajk'amaya'l ruxaq)
+sitedata-option-block-all-cross-site-cookies =
+    .label = Ronojel rukuki xoch'in ruxaq (yetikïr nikiya' sachoj pa taq ajk'amaya'l ruxaq)
 sitedata-option-block-all =
     .label = Konojel ri taq kuki (xketz'ilon pa ri ajk'amaya'l ruxaq)
 
@@ -1196,13 +1156,16 @@ sitedata-settings =
     .label = Kenuk'samajïx Tzij…
     .accesskey = K
 
-sitedata-cookies-permissions =
-    .label = Kenuk'samajïx taq Ya'oj Q'ij...
-    .accesskey = Y
-
 sitedata-cookies-exceptions =
     .label = Kenuk'samajïx taq Man Relik Ta...
     .accesskey = R
+
+## Privacy Section - Cookie Banner Handling
+
+cookie-banner-handling-header = Kech'utinirisäx kitzijol kuki
+cookie-banner-learn-more = Tetamäx ch'aqa' chik
+forms-handle-cookie-banners =
+    .label = Kech'utinär ri taq kib'aner koki
 
 ## Privacy Section - Address Bar
 
@@ -1226,12 +1189,16 @@ addressbar-locbar-shortcuts-option =
 addressbar-locbar-topsites-option =
     .label = Jeb'ël taq ruxaq
     .accesskey = J
-
 addressbar-locbar-engines-option =
     .label = Rusamajel taq kanob'äl
     .accesskey = a
+addressbar-locbar-quickactions-option =
+    .label = Anin taq b'anoj
+    .accesskey = A
 
 addressbar-suggestions-settings = Kek'ex ri taq kajowab'al ri taq kichilab'enik kisamajinel taq kanob'äl
+
+addressbar-quickactions-learn-more = Tetamäx ch'aqa' chik
 
 ## Privacy Section - Content Blocking
 
@@ -1262,11 +1229,10 @@ enhanced-tracking-protection-setting-custom =
 content-blocking-etp-standard-desc = Silan richin chajinem chuqa' rub'eyal nisamäj. Achi'el jutaqil xkesamäj ri taq ruxaq.
 content-blocking-etp-strict-desc = Nïm chajinem, xa xe chi nub'än chi jujun taq ruxaq o rupam man yesamäj ta.
 content-blocking-etp-custom-desc = Ke'acha' achike taq ojqanela' chuqa' kiskrip taq komando nawajo' ye'aq'ät
-
 content-blocking-etp-blocking-desc = { -brand-short-name } yeruq'ät re':
 
 content-blocking-private-windows = Kichajinik taq rupam pan Ichinan taq Tzuwäch
-content-blocking-cross-site-cookies-in-all-windows = Kicookie q'eb'an ruxaq k'amaya'l pa ronojel tzuwäch (ruk'wan ojqanel taq cookie)
+content-blocking-cross-site-cookies-in-all-windows2 = Taq kikuki xoch'in pan ronojel tzuwäch
 content-blocking-cross-site-tracking-cookies = kikuki kojqanik xoch'in taq ruxaq
 content-blocking-all-cross-site-cookies-private-windows = Taq kicookie q'eb'an taq ruxaq k'amaya'l pan Ichinan taq Tzuwäch
 content-blocking-cross-site-tracking-cookies-plus-isolate = Taq kikuki kojqanem xoch'in taq ruxaq chuqa' kijech'unik ri ch'aqa' chik taq kuki
@@ -1274,12 +1240,15 @@ content-blocking-social-media-trackers = Kojqanela' aj winäq k'amab'ey
 content-blocking-all-cookies = Ronojel taq kuki
 content-blocking-unvisited-cookies = Taq kikuki ruxaq k'amaya'l man e tz'eton ta
 content-blocking-all-windows-tracking-content = Rojqaxik rupam pa ronojel tzuwäch
-content-blocking-all-third-party-cookies = Ronojel kikuki aj rox winäq
+content-blocking-all-cross-site-cookies = Ronojel Kikuki xoch'in taq ruxaq
 content-blocking-cryptominers = Cryptominers
 content-blocking-fingerprinters = Fingerprinters
 
+# The tcp-rollout strings are no longer used for the rollout but for tcp-by-default in the standard section
+
+content-blocking-etp-standard-tcp-rollout-learn-more = Tetamäx ch'aqa' chik
+
 content-blocking-warning-title = ¡Tak'axäx!
-content-blocking-and-isolating-etp-warning-description = Rik'in yeq'at taq ojqanela' chuqa' yejech'üx ri taq kuki rik'in jub'a' nutz'ila' rub'eyal yesamäj jujun taq ruxaq. Tasamajij chik jun ruxaq rik'in ojqanela' richin nasamajib'ej ronojel ri rupam.
 content-blocking-and-isolating-etp-warning-description-2 = Re nuk'ulem re' nitikïr nub'än chi jujun ajk'amaya'l taq ruxaq man nikik'üt ta pe ri rupam o man ütz ta yesamäj jun ruxaq achi'el qupin, rik'in jub'a' nawajo' nachüp ri chajinïk chuwäch ojqanem richin nusamajij ronojel ri rupam.
 content-blocking-warning-learn-how = Tetamäx achike rub'eyal
 
@@ -1347,6 +1316,12 @@ permissions-microphone-settings =
     .label = Taq nuk'ulem…
     .accesskey = m
 
+# Short form for "the act of choosing sound output devices and redirecting audio to the chosen devices".
+permissions-speaker = Rucha'ik q'asäy ch'ab'äl
+permissions-speaker-settings =
+    .label = Taq nuk'ulem…
+    .accesskey = n
+
 permissions-notification = Taq rutzijol
 permissions-notification-settings =
     .label = Taq nuk'ulem…
@@ -1367,9 +1342,12 @@ permissions-block-popups =
     .label = Keq'at elenel taq tzuwäch
     .accesskey = K
 
-permissions-block-popups-exceptions =
+# "popup" is a misspelling that is more popular than the correct spelling of
+# "pop-up" so it's included as a search keyword, not displayed in the UI.
+permissions-block-popups-exceptions-button =
     .label = Taq man relik ta…
-    .accesskey = r
+    .accesskey = m
+    .searchkeywords = elenel
 
 permissions-addon-install-warning =
     .label = Taya' rutzijol jampe' toq ri ruxaq ajk'amaya'l nrajo' yeruyäk taq tz'aqat
@@ -1378,12 +1356,6 @@ permissions-addon-install-warning =
 permissions-addon-exceptions =
     .label = Taq man relik ta…
     .accesskey = r
-
-permissions-a11y-privacy-checkbox =
-    .label = Tichajïx chi ri okem taq samaj ke'ok pan awokik'amaya'l
-    .accesskey = a
-
-permissions-a11y-privacy-link = Tetamäx ch'aqa' chik
 
 ## Privacy Section - Data Collection
 
@@ -1412,13 +1384,16 @@ addon-recommendations-link = Tetamäx ch'aqa' chik
 # or builds with no Telemetry support available.
 collection-health-report-disabled = Chupül ri kitzijol taq tzij richin nib'an kinuk'ulem re taq alk'walaxinem re'
 
-collection-backlogged-crash-reports =
-    .label = Tiya' q'ij chi re { -brand-short-name } nutäq e'oyob'en kitzijol sachoj pan ab'i'
-    .accesskey = c
-collection-backlogged-crash-reports-link = Tetamäx ch'aqa' chik
-
 collection-backlogged-crash-reports-with-link = Tiya' q'ij chi { -brand-short-name } yerutäq taq rutzijol sachoj emolon pa rub'i' <a data-l10n-name="crash-reports-link">Tetamäx ch'aqa' chik</a>
     .accesskey = s
+
+privacy-segmentation-section-header = K'ak'a' taq b'anikil nikutzilaj ri okem pa k'amaya'l
+
+privacy-segmentation-radio-off =
+    .label = Tokisäx ruchilab'exik { -brand-product-name }
+
+privacy-segmentation-radio-on =
+    .label = Tik'ut pe ri cholajin retamab'al
 
 ## Privacy Section - Security
 ##
@@ -1446,16 +1421,6 @@ security-block-uncommon-software =
 
 certs-header = Taq ruwujil b'i'aj
 
-certs-personal-label = Toq jun ruk'u'x samaj nuk'utuj pe ri ruwujil ab'i'
-
-certs-select-auto-option =
-    .label = Pa ruyonil ticha' jun
-    .accesskey = c
-
-certs-select-ask-option =
-    .label = Junelïk tik'utüx pe
-    .accesskey = J
-
 certs-enable-ocsp =
     .label = Rutzolixik rutzij ri OCSP peyon tzij, ri ruk'u'x taq samaj nikijikib'a' ri kutzil ri taq ruwujil rub'i'
     .accesskey = p
@@ -1467,34 +1432,6 @@ certs-view =
 certs-devices =
     .label = Taq Rokisab'al Jikomal…
     .accesskey = R
-
-space-alert-learn-more-button =
-    .label = Tetamäx Ch'aqa' Chik
-    .accesskey = T
-
-space-alert-over-5gb-pref-button =
-    .label =
-        { PLATFORM() ->
-            [windows] Kejaq taq cha'oj
-           *[other] Kejaq taq ajowab'äl
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] K
-           *[other] K
-        }
-
-space-alert-over-5gb-message =
-    { PLATFORM() ->
-        [windows] { -brand-short-name } majun chik rupam nikanaj kan pa rujolom. Rik'in jub'a' man ütz ta yek'ut pe ri rupam Ajk'amaya'l ruxaq. Yatikïr ye'ayüj el ri taq tzij eyakon pa Taq Cha'oj > Ichinanem & Jikomal > Taq Kaxlanwey chuqa' Rutzij Ruxaq K'amaya'l.
-       *[other] { -brand-short-name } majun chik rupam nikanaj kan pa rujolom. Rik'in jub'a' man ütz ta yek'ut pe ri rupam Ajk'amaya'l ruxaq. Yatikïr ye'ayüj el ri taq tzij eyakon pa Taq Ajowab'äl > Ichinanem & Jikomal > Taq Kaxlanwey chuqa' Rutzij Ruxaq K'amaya'l.
-    }
-
-space-alert-under-5gb-ok-button =
-    .label = ÜTZ, Wetaman chik
-    .accesskey = T
-
-space-alert-under-5gb-message = { -brand-short-name } tajin majun rupam nikanaj kan pa rujolom. Rik'in jub'a' man ütz ta nik'ut pe ri rupam ruxaq k'amaya'l. Tab'etz'eta' “Tetamäx ch'aqa' chik” richin nutziläx toq nokisäx rujolom richin tik'asäs nawokisaj awetamab'al rik'in ri okem pa k'amaya'l.
 
 space-alert-over-5gb-settings-button =
     .label = Tijaq taq runuk'ulem
@@ -1521,13 +1458,55 @@ httpsonly-radio-enabled-pbm =
 httpsonly-radio-disabled =
     .label = Man titzij HTTPS-Only B'anikil
 
+## DoH Section
+
+preferences-doh-header = DNS chi rij HTTPS
+
+# Variables:
+#   $status (string) - The status of the DoH connection
+preferences-doh-status = B'anikil: { $status }
+# Variables:
+#   $name (string) - The name of the DNS over HTTPS resolver. If a custom resolver is used, the name will be the domain of the URL.
+preferences-doh-resolver = Ya'öl samaj: { $name }
+# This is displayed instead of $name in preferences-doh-resolver
+# when the DoH URL is not a valid URL
+preferences-doh-bad-url = Me'okel URL
+preferences-doh-steering-status = Nokisäx jun ya'öl samaj ajwawe'
+
+preferences-doh-status-active = Tzijïl
+preferences-doh-status-disabled = Tichup
+# Variables:
+#   $reason (string) - A string representation of the reason DoH is not active. For example NS_ERROR_UNKNOWN_HOST or TRR_RCODE_FAIL.
+preferences-doh-status-not-active = Man tzijïlta ({ $reason })
+
+preferences-doh-group-message = Tatzij ri jikïl DNS rik'in rokisaxik:
+
+preferences-doh-expand-section =
+    .tooltiptext = Ch'aqa' chik rutzijol
+
+preferences-doh-setting-default =
+    .label = Chajinïk K'o Wi
+    .accesskey = a
+
+preferences-doh-enabled-detailed-desc-1 = Tawokisaj ri ya'öl samaj xacha'
+
+preferences-doh-strict-detailed-desc-1 = Xa xe tawokisaj ri ya'öl samaj xacha'
+
+preferences-doh-setting-off =
+    .label = Tichup
+    .accesskey = u
+preferences-doh-off-desc = Tawokisaj ri ruchojmirisaxel DNS k'o wi
+
+preferences-doh-select-resolver = Ticha' ya'öl samaj:
+
+preferences-doh-exceptions-description = { -brand-short-name } man xtrokisaj ta jikïl DNS pa re taq ruxaq re'
+
+preferences-doh-manage-exceptions =
+    .label = Kenuk'samajïx taq Man Relik Ta...
+    .accesskey = R
+
 ## The following strings are used in the Download section of settings
 
 desktop-folder-name = Kematz'ib'ab'äl
 downloads-folder-name = Taq qasanïk
 choose-download-folder-title = Ticha' yakwuj, ri xkeruyäk taq qasanïk:
-
-# Variables:
-#   $service-name (String) - Name of a cloud storage provider like Dropbox, Google Drive, etc...
-save-files-to-cloud-storage =
-    .label = Keyak taq yakb'äl pa { $service-name }

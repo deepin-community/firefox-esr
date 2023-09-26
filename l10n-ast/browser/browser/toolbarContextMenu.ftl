@@ -20,15 +20,6 @@ toolbar-context-menu-bookmark-selected-tabs =
 toolbar-context-menu-select-all-tabs =
     .label = Esbillar toles llingüetes
     .accesskey = E
-toolbar-context-menu-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Desfacer el zarru d'una llingüeta
-            [one] Desfacer el zarru d'una llingüeta
-           *[other] Desfacer el zarru de les llingüetes
-        }
-    .accesskey = D
-
 toolbar-context-menu-reopen-closed-tabs =
     .label =
         { $tabCount ->
@@ -58,9 +49,6 @@ toolbar-context-menu-report-extension =
 toolbar-context-menu-pin-to-overflow-menu =
     .label = Fixar nel menú flotante
     .accesskey = F
-toolbar-context-menu-auto-hide-downloads-button =
-    .label = Anubrir automáticamente na barra de ferramientes
-    .accesskey = A
 toolbar-context-menu-auto-hide-downloads-button-2 =
     .label = Anubrir al nun haber descargues
     .accesskey = A
@@ -87,3 +75,7 @@ toolbar-context-menu-bookmarks-toolbar-on-new-tab-2 =
 toolbar-context-menu-bookmarks-show-other-bookmarks =
     .label = Amosar «Otros marcadores»
     .accesskey = s
+
+toolbar-context-menu-menu-bar-cmd =
+    .toolbarname = Barra de menús
+    .accesskey = m

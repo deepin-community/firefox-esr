@@ -8,6 +8,12 @@ reload-tab =
 select-all-tabs =
     .label = सर्व टॅब निवडा
     .accesskey = S
+tab-context-play-tab =
+    .label = प्ले टॅब
+    .accesskey = l
+tab-context-play-tabs =
+    .label = प्ले टॅब
+    .accesskey = y
 duplicate-tab =
     .label = प्रतिरूप टॅब
     .accesskey = D
@@ -38,12 +44,6 @@ unpin-selected-tabs =
 bookmark-selected-tabs =
     .label = टॅब ना वाचनखूण लावा…
     .accesskey = k
-bookmark-tab =
-    .label = टॅब ला वाचनखूण लावा
-    .accesskey = B
-reopen-in-container =
-    .label = कंटेनर मध्ये पुन्हा उघडा
-    .accesskey = e
 move-to-start =
     .label = प्रारंभी जा
     .accesskey = S
@@ -53,19 +53,6 @@ move-to-end =
 move-to-new-window =
     .label = नवीन पटलाकडे हलवा
     .accesskey = W
-
-close-tab =
-    .label = टॅब बंद करा
-    .accesskey = C
-close-tabs =
-    .label = टॅब बंद करा
-    .accesskey = S
-move-tabs =
-    .label = टॅब हलवा
-    .accesskey = v
-move-tab =
-    .label = टॅब हलवा
-    .accesskey = v
 
 ## Variables:
 ##  $tabCount (Number): the number of tabs that are affected by the action.

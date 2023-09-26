@@ -7,7 +7,6 @@
 
 cfr-doorhanger-extension-heading = Rykōmyndowane rozszyrzynie
 cfr-doorhanger-feature-heading = Rykōmyndowano funkcyjo
-cfr-doorhanger-pintab-heading = Sprōbuj tego: Przipnij karta
 
 ##
 
@@ -19,8 +18,6 @@ cfr-doorhanger-extension-cancel-button = Niy teroz
 
 cfr-doorhanger-extension-ok-button = Przidej teroz
     .accesskey = P
-cfr-doorhanger-pintab-ok-button = Przipnij ta karta
-    .accesskey = K
 
 cfr-doorhanger-extension-manage-settings-button = Nasztalowania rykōmyndacyji
     .accesskey = n
@@ -70,18 +67,6 @@ cfr-doorhanger-extension-total-users =
        *[many] { $total } użytkownikōw
     }
 
-cfr-doorhanger-pintab-description = Snadny dostymp do strōn, co ich nojwiyncyj używosz: karty ś nimi sōm durch ôtwarte (tyż przi resztartowaniu).
-
-## These messages are steps on how to use the feature and are shown together.
-
-cfr-doorhanger-pintab-step1 = Prziciś <b>prawym prziciskiym</b> na karta, kero chcesz przipnōnć.
-cfr-doorhanger-pintab-step2 = Ôbier <b>Przipnij karta</b> w myni.
-cfr-doorhanger-pintab-step3 = Jak strōna mo jako aktualizacyjo, to na przipniyntyj karcie pokoże sie modro kropka.
-
-cfr-doorhanger-pintab-animation-pause = Pauza
-cfr-doorhanger-pintab-animation-resume = Rōb zaś
-
-
 ## Firefox Accounts Message
 
 cfr-doorhanger-bookmark-fxa-header = Miyj swoje zokłodki wszyńdzie zsynchrōnizowane.
@@ -107,130 +92,9 @@ cfr-whatsnew-button =
     .label = Co je nowego
     .tooltiptext = Co je nowego
 
-cfr-whatsnew-panel-header = Co je nowego
-
 cfr-whatsnew-release-notes-link-text = Poczytej informacyje ô wydaniu
 
-cfr-whatsnew-fx70-title = { -brand-short-name } teroz wiyncyj sie bije ô twoja prywatność
-cfr-whatsnew-fx70-body = Nojnowszo aktualizacyjo polepszo funkcyjo ôchrōny ôd śledzynio. Skuli nij rychtowanie bezpiecznych haseł do kożdyj strōny je snadniyjsze jak kej ino.
-
-cfr-whatsnew-tracking-protect-title = Ôbrōń sie ôd śledzōncych elymyntōw
-cfr-whatsnew-tracking-protect-body = { -brand-short-name } szperuje moc popularnych śledzōncych elymyntōw ze społecznościowych serwisōw, co filujōm na twoja aktywność w internecie.
-cfr-whatsnew-tracking-protect-link-text = Pokoż raport
-
-# This string is displayed before a large numeral that indicates the total
-# number of tracking elements blocked. Don’t add $blockedCount to your
-# localization, because it would result in the number showing twice.
-cfr-whatsnew-tracking-blocked-title =
-    { $blockedCount ->
-        [one] Zaszperowany śledzōncy elymynt
-        [few] Zaszperowane śledzōnce elymynta
-       *[many] Zaszperowanych śledzōncych elymyntōw
-    }
-cfr-whatsnew-tracking-blocked-subtitle = Ôd { DATETIME($earliestDate, month: "long", year: "numeric") }
-cfr-whatsnew-tracking-blocked-link-text = Pokoż raport
-
-cfr-whatsnew-lockwise-backup-title = Rōb ibryczne kopije haseł
-cfr-whatsnew-lockwise-backup-body = Rychtuj bezpieczne hasła dostympne wszyńdzie, kaj sie wlogujesz.
-cfr-whatsnew-lockwise-backup-link-text = Załōncz kopiowanie na ibrich
-
-cfr-whatsnew-lockwise-take-title = Miyj swoje hasła przi siebie
-cfr-whatsnew-lockwise-take-body = Mobilno aplikacyjo { -lockwise-brand-short-name } dowo ci wszyńdzie bezpieczny dostymp do twojich haseł spamiyntanych w ibrycznych kopijach.
-cfr-whatsnew-lockwise-take-link-text = Pobier aplikacyjo
-
-## Search Bar
-
-cfr-whatsnew-searchbar-title = Mynij pisz, wiyncyj znojduj - skuli poska z adresōm
-cfr-whatsnew-searchbar-body-topsites = Kliknij ino na posek z adresōm, coby ôboczyć linki do strōn, co je porzōnd ôdwiydzosz.
-
-## Search bar
-
-cfr-whatsnew-searchbar-icon-alt-text = Ikōna lupy
-
-## Picture-in-Picture
-
-cfr-whatsnew-pip-header = Zaglōndej na filmy przi przeglōndaniu neca
-cfr-whatsnew-pip-body = Funkcyjo ôbroz we ôbrazie pokazuje film we ruchōmym ôkiynku, skuli czego idzie ôglōndać film przi robocie na inkszych kartach.
-cfr-whatsnew-pip-cta = Przewiydz sie wiyncyj
-
-## Permission Prompt
-
-cfr-whatsnew-permission-prompt-header = Mynij wyskakujōncych ôkiyn
-cfr-whatsnew-permission-prompt-body = Teroz { -brand-shorter-name } niy dowo strōnōm posyłać ci wyskakujōncych powiadōmiyń.
-cfr-whatsnew-permission-prompt-cta = Przewiydz sie wiyncyj
-
-## Fingerprinter Counter
-
-# This string is displayed before a large numeral that indicates the total
-# number of tracking elements blocked. Don’t add $fingerprinterCount to your
-# localization, because it would result in the number showing twice.
-cfr-whatsnew-fingerprinter-counter-header =
-    { $fingerprinterCount ->
-        [one] Zaszperowane chytanie ôdciska
-        [few] Zaszperowane chytanie ôdciska
-       *[many] Zaszperowane chytanie ôdciska
-    }
-cfr-whatsnew-fingerprinter-counter-body = { -brand-shorter-name } szperuje moc elymyntōw, co rychtujōm ôdciski przeglōndarki: po kryjōmu zbiyrajōm informacyje ô twojij maszinie i akcyjach, coby stworzić twōj reklamowy profil.
-
-# Message variation when fingerprinters count is less than 10
-cfr-whatsnew-fingerprinter-counter-header-alt = Szperowanie ôdciska ôd przeglōndarki
-cfr-whatsnew-fingerprinter-counter-body-alt = { -brand-shorter-name } poradzi zaszperować rychtowanie ôdciska twojij przeglōndarki (zbiyranie po kryjōmu informacyji ô twojij maszinie i akcyjach, coby stworzić twōj reklamowy profil).
-
-## Bookmark Sync
-
-cfr-doorhanger-sync-bookmarks-header = Przeniyś ta zokłodka na swōj telefōn
-cfr-doorhanger-sync-bookmarks-body = Bier swoje zokłodki, historyjo, hasła i inksze wszyńdzie, kaj ino sie wlogujesz do aplikacyji { -brand-product-name }.
-cfr-doorhanger-sync-bookmarks-ok-button = Załōncz { -sync-brand-short-name }
-    .accesskey = Z
-
-## Login Sync
-
-cfr-doorhanger-sync-logins-header = Już nigdy niy strać hasła
-cfr-doorhanger-sync-logins-body = Bezpiecznie schranio i synchrōnizuje hasła na wszyskich twojich maszinach.
-cfr-doorhanger-sync-logins-ok-button = Załōncz { -sync-brand-short-name }
-    .accesskey = Z
-
-## Send Tab
-
-cfr-doorhanger-send-tab-header = Poczytej to w drōdze
-cfr-doorhanger-send-tab-recipe-header = Weź se tyn recept do kuchnie
-cfr-doorhanger-send-tab-body = Posyłanie kart snadnie udostympni tyn link na telefōn abo kaj ino sie wlogujesz do aplikacyje { -brand-product-name }.
-cfr-doorhanger-send-tab-ok-button = Sprōbuj: Poślij karta
-    .accesskey = P
-
-## Firefox Send
-
-cfr-doorhanger-firefox-send-header = Bezpiecznie udostympnij tyn PDF
-cfr-doorhanger-firefox-send-body = Chrōń swoje ôsobiste dokumynta ôd wrazidlatych ôczōw dziynki szyfrowaniu end-to-end i linkowi, co sie traci po użyciu.
-cfr-doorhanger-firefox-send-ok-button = Sprōbuj: { -send-brand-name }
-    .accesskey = S
-
-## Social Tracking Protection
-
-cfr-doorhanger-socialtracking-ok-button = Pokoż zabezpieczynia
-    .accesskey = P
-cfr-doorhanger-socialtracking-close-button = Zawrzij
-    .accesskey = Z
-cfr-doorhanger-socialtracking-dont-show-again = Niy pokozuj mi już takich wiadōmości
-    .accesskey = N
-cfr-doorhanger-socialtracking-heading = { -brand-short-name } niy doł śledzić ci sam społecznościowym serwisōm.
-cfr-doorhanger-socialtracking-description = Mōmy w zocy twoja prywatność. Teroz { -brand-short-name } szperuje popularne śledzōnce elymynta ôd społecznościowych serwisōw i ukrōco to, wiela danych śmiōm zbiyrać ô ciebie i twojich akcyjach w necu.
-cfr-doorhanger-fingerprinters-heading = { -brand-short-name } zaszperowoł rychtowanie ôdciska twojij przeglōndarki na tyj strōnie
-cfr-doorhanger-fingerprinters-description = Mōmy w zocy twoja prywatność. Teroz { -brand-short-name } szperuje rychtowanie ôdciska twojij przeglōndarki, kerego idzie użyć do zidentyfikowanio abo śledzynio cie.
-cfr-doorhanger-cryptominers-heading = { -brand-short-name } zaszperowoł kryptominera na tyj strōnie
-cfr-doorhanger-cryptominers-description = Mōmy w zocy twoja prywatność. Teroz { -brand-short-name } szperuje kryptominery, co używajōm siyły ôd twojigo kōmputra, coby fedrować cyfrowe piniōndze.
-
 ## Enhanced Tracking Protection Milestones
-
-# Variables:
-#   $blockedCount (Number) - The total count of blocked trackers. This number will always be greater than 1.
-#   $date (String) - The date we began recording the count of blocked trackers
-cfr-doorhanger-milestone-heading =
-    { $blockedCount ->
-        [one] { -brand-short-name } zaszperowoł wiyncyj jak <b>{ $blockedCount }</b>śledzōncy elymynt ôd { $date }!
-        [few] { -brand-short-name } zaszperowoł wiyncyj jak <b>{ $blockedCount }</b>śledzōnce elymynty ôd { $date }!
-       *[many] { -brand-short-name } zaszperowoł wiyncyj jak <b>{ $blockedCount }</b>śledzōncych elymyntōw ôd { $date }!
-    }
 
 # Variables:
 #   $blockedCount (Number) - The total count of blocked trackers. This number will always be greater than 1.
@@ -243,45 +107,8 @@ cfr-doorhanger-milestone-heading2 =
     }
 cfr-doorhanger-milestone-ok-button = Pokoż wszyskie
     .accesskey = P
-
-## What’s New Panel Content for Firefox 76
-
-
-## Lockwise message
-
-cfr-whatsnew-lockwise-header = Snadnie rychtuj bezpieczne hasła
-cfr-whatsnew-lockwise-body = Niy ma leko ôbmyślić unikatowe, bezpieczne hasło do kożdego kōnta. Przi rychtowaniu hasła kliknij na pole hasła, coby użyć bezpiecznego hasła wygenerowanego ôd { -brand-shorter-name(case: "gen") }.
-cfr-whatsnew-lockwise-icon-alt = Ikōna { -lockwise-brand-short-name(case: "gen") }
-
-## Vulnerable Passwords message
-
-cfr-whatsnew-passwords-header = Dostowej powiadōmiynia ô niyherskich hasłach
-cfr-whatsnew-passwords-body = Hakry znajōm, iże ludzie porzōnd używajōm jednego hasła na roztōmajtych strōnach. Jak tak robisz, a z jednyj takij strōny wycieknōm dane, { -lockwise-brand-short-name } do ci znać, coby zmiynić hasło na tych strōnach.
-cfr-whatsnew-passwords-icon-alt = Ikōna niyherskigo hasła
-
-## Picture-in-Picture fullscreen message
-
-cfr-whatsnew-pip-fullscreen-header = Dej ôbroz w ôbrazie na cołki ekran
-cfr-whatsnew-pip-fullscreen-body = Jak film je puszczōny w ruchōmym ôknie, kliknij na niego dwa razy, coby go dać na cołki ekran.
-cfr-whatsnew-pip-fullscreen-icon-alt = Ikōna ôbrazu w ôbrazie
-
-## Protections Dashboard message
-
-cfr-whatsnew-protections-header = Wejzdrzynie na ôchrōna
-cfr-whatsnew-protections-body = Na panelu ôchrōny sōm pozbiyrane raporty ô wyciekach danych i regiyrowaniu hasłami. Idzie teroz zaglōndać, wiela wyciekōw danych je rozwiōnzanych, abo jeźli je ryzyko, iże jakie spamiyntane hasła mogły wyciyknōnć.
-cfr-whatsnew-protections-cta-link = Pokoż panel ôchrōny
-cfr-whatsnew-protections-icon-alt = Ikōna ôsłōny
-
-## Better PDF message
-
-cfr-whatsnew-better-pdf-header = Lepszo ôbsuga dokumyntōw PDF
-cfr-whatsnew-better-pdf-body = Dokumynta PDF ôtwiyrajōm sie teroz dyrekt w aplikacyji { -brand-short-name }, coby robota szła snadnie.
-
 cfr-doorhanger-milestone-close-button = Zawrzij
     .accesskey = Z
-
-## What’s New Panel Content for Firefox 76
-## Protections Dashboard message
 
 ## DOH Message
 
@@ -294,28 +121,70 @@ cfr-doorhanger-doh-secondary-button = Zastow
 
 ## Fission Experiment Message
 
-cfr-doorhanger-fission-body-approved = Twoja prywatność je ważno. { -brand-short-name } terozki izoluje strōny, skuli czego ciynżyj je hakrōm kraść hasła, numery kredytowych kart i inksze ôsobiste informacyje.
-cfr-doorhanger-fission-header = Izolacyjo strōn
-cfr-doorhanger-fission-primary-button = OK, rozumia
-    .accesskey = O
-cfr-doorhanger-fission-secondary-button = Przewiydz sie wiyncyj
-    .accesskey = P
-
-## What's new: Cookies message
-
-## What's new: Media controls message
-
-## What's new: Search shortcuts
-
-## What's new: Cookies protection
-
-## What's new: Better bookmarking
-
-## What's new: Cross-site cookie tracking
-
 ## Full Video Support CFR message
 
 cfr-doorhanger-video-support-body = Przi tyj wersyji aplikacyje { -brand-short-name } filmy na tyj strōnie mogōm sie niy puszczać dobrze. Zaktualizuj aplikacyjo { -brand-short-name }, coby mieć pōłno ôbsuga filmōw.
 cfr-doorhanger-video-support-header = Zaktualizuj aplikacyjo { -brand-short-name }, coby puszczać filmy
 cfr-doorhanger-video-support-primary-button = Aktualizuj teroz
     .accesskey = A
+
+## Spotlight modal shared strings
+
+## VPN promotion dialog for public Wi-Fi users
+##
+## If a user is detected to be on a public Wi-Fi network, they are given a
+## bit of info about how to improve their privacy and then offered a button
+## to the Mozilla VPN page and a link to dismiss the dialog.
+
+# This header text can be explicitly wrapped.
+spotlight-public-wifi-vpn-header = Zdo sie, iże używosz publicznego necu Wi-Fi
+spotlight-public-wifi-vpn-body = Coby skryć informacyje ô swojim placu i przeglōndaniu, rozwoż wirtualny prywatny nec. Pōmoże ci ôstać pod ôchrōnōm, jak przeglōndosz w publicznych placach: lotniskach abo kafyjach.
+spotlight-public-wifi-vpn-primary-button = Chrōń przywatność z usugōm { -mozilla-vpn-brand-name }
+    .accesskey = C
+spotlight-public-wifi-vpn-link = Niy teroz
+    .accesskey = N
+
+## Total Cookie Protection Rollout
+
+## Emotive Continuous Onboarding
+
+spotlight-better-internet-header = Lepszy internet zaczyno sie ôd ciebie
+spotlight-better-internet-body = Jak używosz aplikacyje { -brand-short-name }, to welujesz ôtwarty, dostympniyjszy internet, co je lepszy do wszyskich.
+spotlight-peace-mind-header = Dowōmy na ciebie pozōr
+spotlight-peace-mind-body = Kożdy miesiōnc { -brand-short-name } szperuje kole 3,000 śledzōncych elymyntōw na użytkownika. Bo nic, a ôsobliwie niy takie detajle jak sledzōnce elymynty, niy śmiōm stoć miyndzy tobōm a dobrym internetym.
+spotlight-pin-primary-button =
+    { PLATFORM() ->
+        [macos] Trzimej w Docku
+       *[other] Przipnij do poska ze zadaniami
+    }
+spotlight-pin-secondary-button = Niy teroz
+
+## MR2022 Background Update Windows native toast notification strings.
+##
+## These strings will be displayed by the Windows operating system in
+## a native toast, like:
+##
+## <b>multi-line title</b>
+## multi-line text
+## <img>
+## [ primary button ] [ secondary button ]
+##
+## The button labels are fitted into narrow fixed-width buttons by
+## Windows and therefore must be as narrow as possible.
+
+## Firefox View CFR
+
+## Firefox View Spotlight
+
+## Colorways expiry reminder CFR
+
+## Cookie Banner Handling CFR
+
+## These strings are used in the Fox doodle Pin/set default spotlights
+
+## These strings are used in the Set Firefox as Default PDF Handler for Existing Users experiment
+
+## FxA sync CFR
+
+## Device Migration FxA Spotlight
+

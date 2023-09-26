@@ -10,11 +10,6 @@ crashes-id = Txostenaren IDa
 crashes-send-date = Noiz bidalia
 crashes-all-reports = Hutsegite-txosten guztiak
 crashes-no-config = Aplikazioa ez da konfiguratu hutsegite-txostenak bistaratzeko.
-extensions-title = Hedapenak
-extensions-name = Izena
-extensions-enabled = Gaituta
-extensions-version = Bertsioa
-extensions-id = ID
 support-addons-title = Gehigarriak
 support-addons-name = Izena
 support-addons-type = Mota
@@ -60,12 +55,14 @@ app-basics-enabled-plugins = Gaitutako pluginak
 app-basics-build-config = Eraikitze-konfigurazioa
 app-basics-user-agent = Erabiltzaile-agentea
 app-basics-os = SEa
+app-basics-os-theme = SEaren itxura
 # Rosetta is Apple's translation process to run apps containing x86_64
 # instructions on Apple Silicon. This should remain in English.
 app-basics-rosetta = Rosetta Translated
 app-basics-memory-use = Memoriaren erabilpena
 app-basics-performance = Errendimendua
 app-basics-service-workers = Erregistratutako zerbitzu-langileak
+app-basics-third-party = Hirugarrenen moduluak
 app-basics-profiles = Profilak
 app-basics-launcher-process-status = Abioko prozesua
 app-basics-multi-process-support = Multiprozesu leihoak
@@ -76,6 +73,14 @@ app-basics-location-service-key-google = Google Location Service gakoa
 app-basics-safebrowsing-key-google = Google Safebrowsing gakoa
 app-basics-key-mozilla = Mozilla Location Service gakoa
 app-basics-safe-mode = Modu segurua
+app-basics-memory-size = Memoriaren tamaina (RAM)
+app-basics-disk-available = Diskoko leku erabilgarria
+
+# Variables:
+#   $value (number) - Amount of data being stored
+#   $unit (string) - The unit of data being stored (e.g. MB)
+app-basics-data-size = { $value } { $unit }
+
 show-dir-label =
     { PLATFORM() ->
         [macos] Erakutsi Finder-en
@@ -105,11 +110,21 @@ graphics-gpu2-title = 2. GPUa
 graphics-decision-log-title = Erabakien erregistroa
 graphics-crash-guards-title = Babestu desgaitutako eginbideen hutsegiteak
 graphics-workarounds-title = Behin-behineko konponbideak
+graphics-device-pixel-ratios = Leiho-gailuaren pixelen aspektu-erlazioak
 # Windowing system in use on Linux (e.g. X11, Wayland).
 graphics-window-protocol = Leiho-sistemaren protokoloa
 # Desktop environment in use on Linux (e.g. GNOME, KDE, XFCE, etc).
 graphics-desktop-environment = Mahaigain ingurunea
 place-database-title = Lekuen datu-basea
+place-database-stats = Estatistikak
+place-database-stats-show = Erakutsi estatistikak
+place-database-stats-hide = Ezkutatu estatistikak
+place-database-stats-entity = Entitatea
+place-database-stats-count = Kopurua
+place-database-stats-size-kib = Tamaina (KiB)
+place-database-stats-size-perc = Tamaina (%)
+place-database-stats-efficiency-perc = Eraginkortasuna (%)
+place-database-stats-sequentiality-perc = Sekuentzialitatea (%)
 place-database-integrity = Osotasuna
 place-database-verify-integrity = Egiaztatu osotasuna
 a11y-title = Erabilgarritasuna
@@ -129,9 +144,6 @@ sandbox-sys-call-tid = TID
 sandbox-sys-call-proc-type = Prozesu mota
 sandbox-sys-call-number = Sistema-deia
 sandbox-sys-call-args = Argumentuak
-safe-mode-title = Probatu modu segurua
-restart-in-safe-mode-label = Berrabiarazi gehigarriak desgaituta…
-
 troubleshoot-mode-title = Diagnostikatu arazoak
 restart-in-troubleshoot-mode-label = Arazoak konpontzeko modua…
 clear-startup-cache-title = Saiatu abioko cachea garbitzen
@@ -159,8 +171,11 @@ media-device-channels = Kanalak
 media-device-rate = Emaria
 media-device-latency = Atzerapena
 media-capabilities-title = Multimedia-gaitasunak
+media-codec-support-info = Kodekaren laguntzarako informazioa
 # List all the entries of the database.
 media-capabilities-enumerate = Zerrendatu datu-basea
+
+## Codec support table
 
 ##
 
@@ -188,37 +203,6 @@ remote-debugging-accepting-connections = Konexioak onartzen
 remote-debugging-url = URLa
 
 ##
-
-support-third-party-modules-title = Hirugarrenen moduluak
-support-third-party-modules-module = Modulu-fitxategia
-support-third-party-modules-version = Fitxategiaren bertsioa
-support-third-party-modules-vendor = Hornitzailearen informazioa
-support-third-party-modules-occurrence = Gertaerak
-support-third-party-modules-process = Prozesu mota eta IDa
-support-third-party-modules-thread = Haria
-support-third-party-modules-base = Imagebase helbidea
-support-third-party-modules-uptime = Prozesuaren jardun-denbora (ms)
-support-third-party-modules-duration = Kargatzearen iraupena (ms)
-support-third-party-modules-status = Egoera
-support-third-party-modules-status-loaded = Kargatuta
-support-third-party-modules-status-blocked = Blokeatuta
-support-third-party-modules-status-redirected = Berbideratuta
-support-third-party-modules-empty = Ez da hirugarrenen modulurik kargatu.
-support-third-party-modules-no-value = (Baliorik ez)
-support-third-party-modules-button-open =
-    .title = Ireki fitxategi-kokalekua…
-support-third-party-modules-expand =
-    .title = Erakutsi informazio xehatua
-support-third-party-modules-collapse =
-    .title = Tolestu informazio xehatua
-support-third-party-modules-unsigned-icon =
-    .title = Modulu hau ez dago sinatuta
-support-third-party-modules-folder-icon =
-    .title = Ireki fitxategi-kokalekua…
-support-third-party-modules-down-icon =
-    .title = Erakutsi informazio xehatua
-support-third-party-modules-up-icon =
-    .title = Tolestu informazio xehatua
 
 # Variables
 # $days (Integer) - Number of days of crashes to log
@@ -314,11 +298,8 @@ webgl2-renderer = WebGL 2 kontrolatzailearen errendatzailea
 webgl2-version = WebGL 2 kontrolatzailearen bertsioa
 webgl2-driver-extensions = WebGL 2 kontrolatzailearen hedapenak
 webgl2-extensions = WebGL 2 hedapenak
-blocklisted-bug = Arazo ezagunengatik zerrenda beltzean
-
-# Variables
-# $bugNumber (string) - String of bug number from Bugzilla
-bug-link = { $bugNumber }. buga
+webgpu-default-adapter = WebGPU moldagailu lehenetsia
+webgpu-fallback-adapter = WebGPU moldagailu alternatiboa
 
 # Variables
 #   $bugNumber (string) - Bug number on Bugzilla
@@ -329,8 +310,6 @@ support-blocklisted-bug = Zerrenda beltzean arazo ezagunak direla-eta: <a data-l
 unknown-failure = Zerrenda beltzean; { $failureCode } hutsegite-kodea
 
 d3d11layers-crash-guard = D3D11 konposatzailea
-d3d11video-crash-guard = D3D11 bideo-deskodetzailea
-d3d9video-crash-guard = D3D9 bideo-deskodetzailea
 glcontext-crash-guard = OpenGL
 wmfvpxvideo-crash-guard = WMF VPX bideo-deskodetzailea
 
@@ -355,6 +334,8 @@ can-sandbox-content = Eduki-prozesuen isolamendua
 can-sandbox-media = Multimedia-pluginen isolamendua
 content-sandbox-level = Eduki-prozesuen isolamendu maila
 effective-content-sandbox-level = Eduki-prozesuen isolamendu maila eraginkorra
+content-win32k-lockdown-state = Win32k Lockdown egoera eduki-prozesuentzat
+support-sandbox-gpu-level = GPU prozesuaren isolamendu maila
 sandbox-proc-type-content = edukia
 sandbox-proc-type-file = fitxategiaren edukia
 sandbox-proc-type-media-plugin = multimedia plugina
@@ -375,15 +356,6 @@ launcher-process-status-unknown = Egoera ezezaguna
 # $remoteWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
 multi-process-windows = { $remoteWindows }/{ $totalWindows }
-multi-process-status-0 = Erabiltzaileak gaituta
-multi-process-status-1 = Lehenespenez gaituta
-multi-process-status-2 = Desgaituta
-multi-process-status-4 = Erabilgarritasun-tresnek desgaituta
-multi-process-status-6 = Onartzen ez den testu-sarrerak desgaituta
-multi-process-status-7 = Gehigarriek desgaituta
-multi-process-status-8 = Behartuta desgaituta
-multi-process-status-unknown = Egoera ezezaguna
-
 # Variables
 # $fissionWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
@@ -392,12 +364,13 @@ fission-status-experiment-control = Esperimentuak desgaituta
 fission-status-experiment-treatment = Esperimentuak gaituta
 fission-status-disabled-by-e10s-env = Inguruneak desgaituta
 fission-status-enabled-by-env = Inguruneak gaituta
-fission-status-disabled-by-safe-mode = Modu seguruak desgaituta
+fission-status-disabled-by-env = Inguruneak desgaituta
 fission-status-enabled-by-default = Lehenespenez gaituta
 fission-status-disabled-by-default = Lehenespenez desgaituta
 fission-status-enabled-by-user-pref = Erabiltzaileak gaituta
 fission-status-disabled-by-user-pref = Erabiltzaileak desgaituta
 fission-status-disabled-by-e10s-other = E10s desgaituta
+fission-status-enabled-by-rollout = Urratseko ezagutzera ematearen bidez gaituta
 
 async-pan-zoom = Mugimendu panoramiko/zoom asinkronoak
 apz-none = bat ere ez

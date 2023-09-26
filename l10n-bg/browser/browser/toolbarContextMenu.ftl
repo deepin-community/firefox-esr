@@ -17,13 +17,6 @@ toolbar-context-menu-bookmark-selected-tabs =
 toolbar-context-menu-select-all-tabs =
     .label = Избиране на всички раздели
     .accesskey = и
-toolbar-context-menu-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [one] Отваряне на затворен раздел
-           *[other] Отваряне на затворени раздели
-        }
-    .accesskey = в
 
 toolbar-context-menu-manage-extension =
     .label = Управление на добавката
@@ -39,15 +32,12 @@ toolbar-context-menu-report-extension =
     .label = Докладване на разширението
     .accesskey = к
 
-# Can appear on the same context menu as menubarCmd ("Menu Bar") and
-# personalbarCmd ("Bookmarks Toolbar"), so they should have different
-# access keys.
+# Can appear on the same context menu as toolbar-context-menu-menu-bar-cmd
+# ("Menu Bar") and personalbarCmd ("Bookmarks Toolbar"), so they should
+# have different access keys.
 toolbar-context-menu-pin-to-overflow-menu =
     .label = Преместване в допълнителното меню
     .accesskey = д
-toolbar-context-menu-auto-hide-downloads-button =
-    .label = Автоматично скриване от лентата
-    .accesskey = А
 toolbar-context-menu-remove-from-toolbar =
     .label = Премахване от лентата с инструменти
     .accesskey = П
@@ -55,6 +45,20 @@ toolbar-context-menu-view-customize-toolbar =
     .label = Приспособяване…
     .accesskey = П
 
+toolbar-context-menu-bookmarks-toolbar-always-show-2 =
+    .label = Винаги да се показва
+    .accesskey = В
+toolbar-context-menu-bookmarks-toolbar-never-show-2 =
+    .label = Никога да не се показва
+    .accesskey = Н
+toolbar-context-menu-bookmarks-toolbar-on-new-tab-2 =
+    .label = Да се показва само в нов раздел
+    .accesskey = р
+
 toolbar-context-menu-bookmarks-show-other-bookmarks =
     .label = Показване на другите отметки
     .accesskey = д
+
+toolbar-context-menu-menu-bar-cmd =
+    .toolbarname = Лента с менюта
+    .accesskey = м

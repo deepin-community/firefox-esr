@@ -2,10 +2,6 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-screenshots-context-menu = Facer una captura
-
-screenshots-my-shots-button = Captures de mio
-
 screenshot-toolbarbutton =
     .label = Facer una captura
     .tooltiptext = Fai una captura de pantalla
@@ -41,8 +37,6 @@ screenshots-login-error-details = Nun podemos guardar la captura porque hai un p
 screenshots-unshootable-page-error-title = Nun pue capturase esta páxina.
 screenshots-unshootable-page-error-details = Esta páxina web nun ye estándar polo que nun pues capturala.
 
-screenshots-self-screenshot-error-title = ¡Nun pues facer captures de la páxina de { -screenshots-brand-name }!
-
 screenshots-empty-selection-error-title = La esbilla ye perpequeña
 
 screenshots-private-window-error-title = { -screenshots-brand-name } ta desactiváu nel mou Restolar en Privao
@@ -50,3 +44,4 @@ screenshots-private-window-error-details = Sentimos l'inconveniente. Tamos traba
 
 screenshots-generic-error-title = ¡Meca! { -screenshots-brand-name } volvióse llocu.
 screenshots-generic-error-details = Nun tamos seguros de lo qu'asocedió. ¿Importaríate tentalo de nueves o facer una captura n'otra páxina?
+

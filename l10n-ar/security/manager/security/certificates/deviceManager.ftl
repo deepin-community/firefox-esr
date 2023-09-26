@@ -5,9 +5,9 @@
 
 ## Strings used for device manager
 
-devmgr =
+devmgr-window =
     .title = مدير الأجهزة
-    .style = width: 67em; height: 32em;
+    .style = min-width: 67em; min-height: 32em;
 
 devmgr-devlist =
     .label = وحدات الأمن وأجهزته
@@ -115,8 +115,6 @@ devinfo-label =
 
 devinfo-serialnum =
     .label = الرّقم التّسلسلي
-
-fips-nonempty-password-required = يتطلّب وضع FIPS وجود كلمة سر رئيسيّة لكلّ جهاز أمن. رجاءً ضع كلمة سر قبل تمكين وضع FIPS.
 
 unable-to-toggle-fips = تعذر تغيير نمط FIPS للجهاز الأمني. ننصحك بالخروج من هذا البرنامج و إعادة تشغيله.
 load-pk11-module-file-picker-title = اختر مشغّل جهاز PKCS#11 ليحمّل

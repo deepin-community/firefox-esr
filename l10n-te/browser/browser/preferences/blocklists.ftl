@@ -2,23 +2,15 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-blocklist-window =
+blocklist-window2 =
     .title = నిరోధపు జాబితాలు
-    .style = width: 55em
+    .style = min-width: 55em
 
 blocklist-close-key =
     .key = w
 
 blocklist-treehead-list =
     .label = జాబితా
-
-blocklist-button-cancel =
-    .label = రద్దుచేయి
-    .accesskey = C
-
-blocklist-button-ok =
-    .label = మార్పులను భద్రపరచు
-    .accesskey = S
 
 blocklist-dialog =
     .buttonlabelaccept = మార్పులను భద్రపరచు

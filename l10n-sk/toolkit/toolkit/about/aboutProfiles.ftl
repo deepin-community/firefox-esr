@@ -9,10 +9,10 @@ profiles-create = Vytvoriť nový profil
 profiles-restart-title = Reštartovať
 profiles-restart-in-safe-mode = Reštartovať a zakázať doplnky…
 profiles-restart-normal = Reštartovať normálne…
-profiles-conflict = Iná kópia aplikácie { -brand-product-name } urobila zmeny v profile. Pred urobením ďalších zmien musíte reštartovať { -brand-short-name }.
+profiles-conflict = Iná kópia aplikácie { -brand-product-name } vykonala zmeny v profile. Pred vykonaním ďalších zmien musíte reštartovať { -brand-short-name }.
 profiles-flush-fail-title = Zmeny neboli uložené
 profiles-flush-conflict = { profiles-conflict }
-profiles-flush-failed = Neočakávaná chyba zabránila v uložení zmien.
+profiles-flush-failed = Neočakávaná chyba zabránila uloženiu vašich zmien.
 profiles-flush-restart-button = Reštartovať { -brand-short-name }
 
 # Variables:

@@ -2,13 +2,12 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-addons-window =
-    .title = ॲड-ऑन्स् व्यवस्थापक
-
 addons-page-title = ॲड-ऑन्स् व्यवस्थापक
 
-search-header-shortcut =
-    .key = f
+## Variables
+##   $domain - Domain name where add-ons are available (e.g. addons.mozilla.org)
+
+##
 
 list-empty-installed =
     .value = या प्रकारचे ॲड-ऑन्स् प्रतिष्ठापीत नाही
@@ -25,61 +24,11 @@ list-empty-find-updates =
 list-empty-button =
     .label = ॲड-ऑन्स् विषयी अधिक शिका
 
-preferences =
-    { PLATFORM() ->
-        [windows] { -brand-short-name } पर्याय
-       *[other] { -brand-short-name } पसंती
-    }
-
-sidebar-preferences-button-title =
-    .title =
-        { PLATFORM() ->
-            [windows] { -brand-short-name } पर्याय
-           *[other] { -brand-short-name } पसंती
-        }
-
 show-unsigned-extensions-button =
     .label = काही एक्सटेंशन पडताळले जाऊ शकले नाहीत
 
 show-all-extensions-button =
     .label = सर्व एक्सटेंशन दर्शवा
-
-cmd-show-details =
-    .label = आणखी माहिती दाखवा
-    .accesskey = S
-
-cmd-find-updates =
-    .label = सुधारणा शोधा
-    .accesskey = F
-
-cmd-preferences =
-    .label =
-        { PLATFORM() ->
-            [windows] पर्याय
-           *[other] प्राधान्यक्रम
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] O
-           *[other] P
-        }
-
-cmd-enable-theme =
-    .label = दृष्य कल्पना लागू करा
-    .accesskey = W
-
-cmd-disable-theme =
-    .label = दृष्य कल्पना लागू करू नका
-    .accesskey = W
-
-cmd-install-addon =
-    .label = इंस्टॉल करा
-    .accesskey = I
-
-cmd-contribute =
-    .label = योगदान करा
-    .accesskey = C
-    .tooltiptext = या ॲड-ऑनच्या विकासकरीता योगदान करा
 
 detail-version =
     .label = आवृत्ती
@@ -205,7 +154,6 @@ extensions-warning-update-security = ॲड-ऑन सुधारणा सु�
 extensions-warning-update-security-button = सुरू करा
     .title = ॲड-ऑन सुधारणा सुरक्षा तपासणी सुरू करा
 
-
 ## Strings connected to add-on updates
 
 addon-updates-check-for-updates = सुधारणांकरीता तपासणी करा
@@ -278,8 +226,6 @@ details-addon-button = तपशील
 release-notes-addon-button = प्रकाशन टीपा
 permissions-addon-button = परवानग्या
 
-ask-to-activate-button = सक्रिय करण्यास विचारा
-
 always-activate-button = नेहमी सक्रिय करा
 never-activate-button = कधीही सक्रिय करू नका
 
@@ -301,8 +247,12 @@ install-update-button = अद्ययावत करा
 addon-detail-private-browsing-allow = परवानगी द्या
 addon-detail-private-browsing-disallow = परवानगी देऊ नका
 
+## "sites with restrictions" (internally called "quarantined") are special domains
+## where add-ons are normally blocked for security reasons.
+
 ## This is the tooltip text for the recommended badges for an extension in about:addons. The
 ## badge is a small icon displayed next to an extension when it is recommended on AMO.
+
 
 ##
 
@@ -327,3 +277,29 @@ shortcuts-heading = विस्तार शॉर्टकट व्यवस�
 
 addon-page-options-button =
     .title = सर्व ॲड-ऑन्स् करीता साधने
+
+## Detail notifications
+## Variables:
+##   $name (String): name of the add-on.
+
+## Detail notifications
+## Variables:
+##   $name (string) - Name of the add-on.
+
+# Variables:
+#   $version (String): application version.
+details-notification-incompatible = { $name }, { -brand-short-name } { $version } सह असहत्व आहे.
+
+details-notification-unsigned-and-disabled = { -brand-short-name } मध्ये वापरासाठी { $name } ची पडताळणी होऊ शकली नाही आणि ते अक्षम करण्यात आले आहे.
+details-notification-unsigned-and-disabled-link = अधिक माहिती
+
+details-notification-unsigned = { -brand-short-name } मध्ये वापरासाठी { $name } ची पडताळणी होऊ शकली नाही. काळजीपूर्वक पुढे जा.
+details-notification-unsigned-link = अधिक माहिती
+
+details-notification-blocked = { $name } सुरक्षा किंवा स्थिरता अडचणींमुळे बंद केले.
+details-notification-blocked-link = अधिक माहिती
+
+details-notification-softblocked = { $name } सुरक्षा किंवा स्थिरता अडचणी निर्माण करण्यास परिचीत आहे.
+details-notification-softblocked-link = अधिक माहिती
+
+details-notification-gmp-pending = { $name } लवकरच इंस्टॉल केले जाईल.

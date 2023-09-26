@@ -2,9 +2,9 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-clear-site-data-window =
+clear-site-data-window2 =
     .title = Clirio Data
-    .style = width: 35em
+    .style = min-width: 35em
 
 clear-site-data-description = Gall glirio'r oll gwcis a data gwefan wedi eu cadw gan { -brand-short-name } eich allgofnodi o wefannau a thynnu cynnwys all-lein gwe. Ni fydd clirio data storfa dros dro yn effeithio ar eich mewngofnodion.
 
@@ -50,14 +50,6 @@ clear-site-data-cache-empty =
     .accesskey = S
 
 clear-site-data-cache-info = Bydd angen i wefannau ail lwytho delweddau a data
-
-clear-site-data-cancel =
-    .label = Diddymu
-    .accesskey = D
-
-clear-site-data-clear =
-    .label = Clirio
-    .accesskey = l
 
 clear-site-data-dialog =
     .buttonlabelaccept = Clirio

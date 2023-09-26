@@ -38,16 +38,11 @@ menu-quit =
             [windows] x
            *[other] Q
         }
+
 # This menu-quit-mac string is only used on macOS.
 menu-quit-mac =
     .label = { -brand-shorter-name } 종료
-# This menu-quit-button string is only used on Linux.
-menu-quit-button =
-    .label = { menu-quit.label }
-# This menu-quit-button-win string is only used on Windows.
-menu-quit-button-win =
-    .label = { menu-quit.label }
-    .tooltip = { -brand-shorter-name } 종료
+
 menu-about =
     .label = { -brand-shorter-name } 정보
     .accesskey = A
@@ -77,8 +72,14 @@ menu-file-open-location =
 menu-file-open-file =
     .label = 파일 열기…
     .accesskey = O
-menu-file-close =
-    .label = 닫기
+# Variables:
+#  $tabCount (Number): the number of tabs that are affected by the action.
+menu-file-close-tab =
+    .label =
+        { $tabCount ->
+            [1] 탭 닫기
+           *[other] 탭 { $tabCount }개 닫기
+        }
     .accesskey = C
 menu-file-close-window =
     .label = 창 닫기
@@ -95,9 +96,6 @@ menu-file-share-url =
 menu-file-print-setup =
     .label = 페이지 설정…
     .accesskey = u
-menu-file-print-preview =
-    .label = 인쇄 미리 보기
-    .accesskey = v
 menu-file-print =
     .label = 인쇄…
     .accesskey = P
@@ -113,9 +111,6 @@ menu-file-go-offline =
 menu-edit =
     .label = 편집
     .accesskey = E
-menu-edit-find-on =
-    .label = 이 페이지에서 찾기…
-    .accesskey = F
 menu-edit-find-in-page =
     .label = 페이지에서 찾기…
     .accesskey = F
@@ -134,14 +129,11 @@ menu-view =
 menu-view-toolbars-menu =
     .label = 도구 모음
     .accesskey = T
-menu-view-customize-toolbar =
-    .label = 사용자 지정…
-    .accesskey = C
 menu-view-customize-toolbar2 =
     .label = 도구 모음 사용자 지정…
     .accesskey = C
 menu-view-sidebar =
-    .label = 탐색창
+    .label = 사이드바
     .accesskey = e
 menu-view-bookmarks =
     .label = 북마크
@@ -173,9 +165,6 @@ menu-view-page-style-no-style =
 menu-view-page-basic-style =
     .label = 문서 지정 스타일
     .accesskey = b
-menu-view-charset =
-    .label = 텍스트 인코딩
-    .accesskey = c
 menu-view-repair-text-encoding =
     .label = 텍스트 인코딩 복구
     .accesskey = c
@@ -192,6 +181,17 @@ menu-view-exit-full-screen =
 menu-view-full-screen =
     .label = 전체 화면
     .accesskey = F
+
+## These menu items may use the same accesskey.
+
+# This should match reader-view-enter-button in browser.ftl
+menu-view-enter-readerview =
+    .label = 리더뷰 보기
+    .accesskey = R
+# This should match reader-view-close-button in browser.ftl
+menu-view-close-readerview =
+    .label = 리더뷰 닫기
+    .accesskey = R
 
 ##
 
@@ -221,24 +221,21 @@ menu-history-undo-menu =
     .label = 최근에 닫은 탭
 menu-history-undo-window-menu =
     .label = 최근에 닫은 창
-menu-history-reopen-all-tabs = 모든 탭 다시 열기
-menu-history-reopen-all-windows = 모든 창 다시 열기
 
 ## Bookmarks Menu
 
 menu-bookmarks-menu =
     .label = 북마크
     .accesskey = B
-menu-bookmarks-show-all =
-    .label = 모든 북마크 보기
-menu-bookmark-this-page =
-    .label = 이 페이지 북마크
 menu-bookmarks-manage =
     .label = 북마크 관리
-menu-bookmark-current-tab =
-    .label = 현재 탭 북마크
-menu-bookmark-edit =
-    .label = 이 북마크 편집
+menu-bookmark-tab =
+    .label = 현재 탭 북마크…
+menu-edit-bookmark =
+    .label = 이 북마크 편집…
+# "Search" is a verb, as in "Search in bookmarks"
+menu-bookmarks-search =
+    .label = 북마크 검색
 menu-bookmarks-all-tabs =
     .label = 모든 탭 북마크…
 menu-bookmarks-toolbar =
@@ -256,15 +253,6 @@ menu-tools =
 menu-tools-downloads =
     .label = 다운로드
     .accesskey = D
-menu-tools-addons =
-    .label = 부가 기능
-    .accesskey = A
-menu-tools-fxa-sign-in =
-    .label = { -brand-product-name }에 로그인…
-    .accesskey = g
-menu-tools-turn-on-sync =
-    .label = { -sync-brand-short-name } 켜기…
-    .accesskey = n
 menu-tools-addons-and-themes =
     .label = 부가 기능 및 테마
     .accesskey = A
@@ -280,9 +268,6 @@ menu-tools-sync-now =
 menu-tools-fxa-re-auth =
     .label = { -brand-product-name }에 다시 연결…
     .accesskey = R
-menu-tools-web-developer =
-    .label = 웹 개발자
-    .accesskey = W
 menu-tools-browser-tools =
     .label = 브라우저 도구
     .accesskey = B
@@ -295,17 +280,6 @@ menu-tools-page-source =
 menu-tools-page-info =
     .label = 페이지 정보
     .accesskey = I
-menu-preferences =
-    .label =
-        { PLATFORM() ->
-            [windows] 설정…
-           *[other] 환경 설정
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] O
-           *[other] n
-        }
 menu-settings =
     .label = 설정
     .accesskey =
@@ -338,21 +312,6 @@ menu-window-bring-all-to-front =
 menu-help =
     .label = 도움말
     .accesskey = H
-menu-help-product =
-    .label = { -brand-shorter-name } 도움말
-    .accesskey = H
-menu-help-show-tour =
-    .label = { -brand-shorter-name } 둘러보기
-    .accesskey = o
-menu-help-import-from-another-browser =
-    .label = 다른 브라우저에서 가져오기…
-    .accesskey = I
-menu-help-keyboard-shortcuts =
-    .label = 키보드 단축키
-    .accesskey = K
-menu-help-troubleshooting-info =
-    .label = 문제 해결 정보…
-    .accesskey = T
 menu-get-help =
     .label = 도움 받기
     .accesskey = H
@@ -361,21 +320,18 @@ menu-help-more-troubleshooting-info =
     .accesskey = T
 menu-help-report-site-issue =
     .label = 사이트 문제 보고…
-menu-help-feedback-page =
-    .label = 의견 보내기…
+menu-help-share-ideas =
+    .label = 아이디어 공유 및 의견 보내기…
     .accesskey = S
-menu-help-safe-mode-without-addons =
-    .label = 부가 기능을 끄고 다시 시작…
-    .accesskey = R
-menu-help-safe-mode-with-addons =
-    .label = 부가 기능을 켜고 다시 시작
-    .accesskey = R
 menu-help-enter-troubleshoot-mode2 =
     .label = 문제 해결 모드…
     .accesskey = M
 menu-help-exit-troubleshoot-mode =
     .label = 문제 해결 모드 끄기
     .accesskey = M
+menu-help-switch-device =
+    .label = 새 기기로 전환
+    .accesskey = N
 # Label of the Help menu item. Either this or
 # menu-help-notdeceptive is shown.
 menu-help-report-deceptive-site =

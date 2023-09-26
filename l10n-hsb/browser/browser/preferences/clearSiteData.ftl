@@ -2,9 +2,9 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-clear-site-data-window =
+clear-site-data-window2 =
     .title = Daty zhašeć
-    .style = width: 35em
+    .style = min-width: 35em
 
 clear-site-data-description = Přez zhašenje wšěch plackow a datow sydła přez { -brand-short-name } móže k wotzjewjenju z websydłow a wotstronjenju webwobsaha offline dóńć. Zhašenje datow pufrowaka waše přizjewjenja njewobwliwuje.
 
@@ -50,14 +50,6 @@ clear-site-data-cache-empty =
     .accesskey = P
 
 clear-site-data-cache-info = Wužaduje sej, zo websydła wobrazy a daty znowa začitaja
-
-clear-site-data-cancel =
-    .label = Přetorhnyć
-    .accesskey = t
-
-clear-site-data-clear =
-    .label = Zhašeć
-    .accesskey = h
 
 clear-site-data-dialog =
     .buttonlabelaccept = Zhašeć

@@ -11,6 +11,7 @@
 # Placeholder text for tag input
 pocket-panel-saved-add-tags =
     .placeholder = Adaugă etichete
+
 pocket-panel-saved-error-generic = A apărut o eroare la încercarea de salvare în { -pocket-brand-name }.
 pocket-panel-saved-error-tag-length = Etichetele sunt limitate la 25 de caractere
 pocket-panel-saved-error-only-links = Doar linkurile pot fi salvate
@@ -24,7 +25,6 @@ pocket-panel-saved-save-tags = Salvează
 pocket-panel-saved-saving-tags = Se salvează...
 pocket-panel-saved-suggested-tags = Etichete sugerate
 pocket-panel-saved-tags-saved = Etichete adăugate
-pocket-panel-signup-view-list = Vezi lista
 
 ## about:pocket-signup panel
 
@@ -39,4 +39,11 @@ pocket-panel-signup-tagline-story-one = Clic pe butonul { -pocket-brand-name } p
 pocket-panel-signup-tagline-story-two = Vezi în { -pocket-brand-name } de pe orice dispozitiv, oricând.
 
 ## about:pocket-home panel
+
+pocket-panel-home-discover-more = Descoperă mai multe
+
+## Pocket panel header component
+
+
+## Pocket panel buttons
 

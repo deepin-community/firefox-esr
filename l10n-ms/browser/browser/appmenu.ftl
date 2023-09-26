@@ -5,17 +5,22 @@
 
 ## App Menu
 
-appmenuitem-customize-mode =
-    .label = Penyesuaian…
-
-## Zoom Controls
-
 appmenuitem-new-tab =
     .label = Tab Baru
 appmenuitem-new-window =
     .label = Tetingkap Baru
 appmenuitem-new-private-window =
     .label = Tetingkap Peribadi Baru
+appmenuitem-history =
+    .label = Sejarah
+appmenuitem-downloads =
+    .label = Muat turun
+appmenuitem-print =
+    .label = Cetak…
+appmenuitem-zoom =
+    .value = Zum
+appmenuitem-help =
+    .label = Bantuan
 
 ## Zoom and Fullscreen Controls
 
@@ -24,8 +29,19 @@ appmenuitem-fullscreen =
 
 ## Firefox Account toolbar button and Sync panel in App menu.
 
-fxa-toolbar-sync-now =
-    .label = Sync Sekarang
+# This is shown beneath the name of a device when that device has no open tabs
+appmenu-remote-tabs-notabs = Tiada tab terbuka
+
+# This is shown when Sync is configured but syncing tabs is disabled.
+appmenu-remote-tabs-tabsnotsyncing = Mengaktifkan sync tab untuk papar senarai tab dari peranti anda yang lain.
+
+# This is shown when Sync is configured but this appears to be the only device attached to
+# the account. We also show links to download Firefox for android/ios.
+appmenu-remote-tabs-noclients = Mahu melihat tab anda daripada peranti lain di sini?
+
+appmenu-remote-tabs-connectdevice =
+    .label = Sambung Peranti Lain
+appmenu-remote-tabs-unverified = Akaun anda perlu disahkan.
 
 appmenuitem-save-page =
     .label = Simpan Halaman Sebagai…
@@ -37,6 +53,17 @@ appmenuitem-save-page =
 ## performance profiles. To enable it go to profiler.firefox.com and click
 ## "Enable Profiler Menu Button".
 
+
+## Profiler presets
+## They are shown in the popup's select box.
+
+# Presets and their l10n IDs are defined in the file
+# devtools/client/performance-new/popup/background.jsm.js
+# Please take care that the same values are also defined in devtools' perftools.ftl.
+
+# Presets and their l10n IDs are defined in the file
+# devtools/client/performance-new/shared/background.jsm.js
+# Please take care that the same values are also defined in devtools' perftools.ftl.
 
 ## History panel
 
@@ -57,9 +84,6 @@ appmenu-about =
     .accesskey = P
 appmenu-help-report-site-issue =
     .label = Laporkan Isu Laman…
-appmenu-help-feedback-page =
-    .label = Hantar Maklum balas…
-    .accesskey = H
 
 ## appmenu-help-enter-troubleshoot-mode and appmenu-help-exit-troubleshoot-mode
 ## are mutually exclusive, so it's possible to use the same accesskey for both.
@@ -76,7 +100,4 @@ appmenu-help-not-deceptive =
     .accesskey = m
 
 ## More Tools
-
-appmenu-taskmanager =
-    .label = Pengurus Tugasan
 

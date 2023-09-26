@@ -10,9 +10,6 @@ third-party-intro =
     { -brand-short-name } inek·inem. Yal azegrir ur nettuzmel ara sɣur Microsoft neɣ
     { -vendor-short-name } yettuneḥsab d azegrir n wis kraḍ.
 
-third-party-header-module-list = Tabdart n yizegrar
-third-party-header-loading-events = Asali n tedyanin
-
 third-party-message-empty = Ulac izegrar n wis kraḍ ttwafen.
 third-party-message-no-duration = Ur yettwasekles ara
 
@@ -37,10 +34,12 @@ third-party-tag-background = Agilal
     .title =
         Azegrir-a ur issewḥel ara asnsa-a acku yettwasuli-d
         deg ugilal
-third-party-unsigned-icon =
+third-party-icon-unsigned =
     .title = Azegrir-a ur yettusezmel ara
-third-party-warning-icon =
+    .alt = Azegrir-a ur yettusezmel ara
+third-party-icon-warning =
     .title = { -brand-short-name } yerreẓ deg tengalt n uzegrir-a
+    .alt = { -brand-short-name } yerreẓ deg tengalt n uzegrir-a
 
 third-party-status-loaded = Yuli-d
 third-party-status-blocked = Yettusewḥel
@@ -51,7 +50,21 @@ third-party-button-reload = Ales asali s telɣut n unagraw
     .title = Ales asali s telɣut n unagraw
 third-party-button-open =
     .title = Ldi ideg n ufaylu…
+third-party-button-to-block =
+    .title = Sewḥel azegrir-a
+    .aria-label = Sewḥel azegrir-a
+third-party-button-to-unblock =
+    .title = Yemdel akka tura. Sit i wakken ad as-tserḥeḍ.
+    .aria-label = Yemdel akka tura. Sit i wakken ad as-tserḥeḍ.
 third-party-button-expand =
     .title = Sken Talɣut leqqayen
 third-party-button-collapse =
     .title = Fneẓ talɣut leqqayen
+third-party-blocking-requires-restart = I usewḥel n uzegrir n wis kraḍ, { -brand-short-name } ilaq ad yales tanekkra.
+third-party-should-restart-title = Ales asenker n { -brand-short-name }
+third-party-restart-now = Ales asenker tura
+third-party-restart-later = Ales asenker ticki
+
+third-party-blocked-by-builtin =
+    .title = Yettusewḥel sɣur { -brand-short-name }
+    .alt = Yettusewḥel sɣur { -brand-short-name }

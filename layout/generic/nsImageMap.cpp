@@ -23,7 +23,7 @@
 #include "nsIContentInlines.h"
 #include "nsIScriptError.h"
 #include "nsContentUtils.h"
-#include "ImageLayers.h"
+#include "nsLayoutUtils.h"
 
 #ifdef ACCESSIBILITY
 #  include "nsAccessibilityService.h"
@@ -688,7 +688,7 @@ void nsImageMap::UpdateAreas() {
 }
 
 void nsImageMap::AddArea(HTMLAreaElement* aArea) {
-  static Element::AttrValuesArray strings[] = {
+  static AttrArray::AttrValuesArray strings[] = {
       nsGkAtoms::rect,     nsGkAtoms::rectangle,
       nsGkAtoms::circle,   nsGkAtoms::circ,
       nsGkAtoms::_default, nsGkAtoms::poly,
@@ -697,8 +697,8 @@ void nsImageMap::AddArea(HTMLAreaElement* aArea) {
   UniquePtr<Area> area;
   switch (aArea->FindAttrValueIn(kNameSpaceID_None, nsGkAtoms::shape, strings,
                                  eIgnoreCase)) {
-    case Element::ATTR_VALUE_NO_MATCH:
-    case Element::ATTR_MISSING:
+    case AttrArray::ATTR_VALUE_NO_MATCH:
+    case AttrArray::ATTR_MISSING:
     case 0:
     case 1:
       area = MakeUnique<RectArea>(aArea);
@@ -737,10 +737,10 @@ void nsImageMap::AddArea(HTMLAreaElement* aArea) {
   mAreas.AppendElement(std::move(area));
 }
 
-HTMLAreaElement* nsImageMap::GetArea(nscoord aX, nscoord aY) const {
+HTMLAreaElement* nsImageMap::GetArea(const CSSIntPoint& aPt) const {
   NS_ASSERTION(mMap, "Not initialized");
   for (const auto& area : mAreas) {
-    if (area->IsInside(aX, aY)) {
+    if (area->IsInside(aPt.x, aPt.y)) {
       return area->mArea;
     }
   }

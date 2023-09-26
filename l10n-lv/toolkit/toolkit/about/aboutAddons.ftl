@@ -2,13 +2,13 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-addons-window =
-    .title = Papildinājumu pārvaldnieks
-
 addons-page-title = Papildinājumu pārvaldnieks
 
-search-header-shortcut =
-    .key = f
+## Variables
+##   $domain - Domain name where add-ons are available (e.g. addons.mozilla.org)
+
+##
+
 
 list-empty-installed =
     .value = Jums nav uzinstalēts neviens šī tipa atjauninājums
@@ -30,43 +30,6 @@ show-unsigned-extensions-button =
 
 show-all-extensions-button =
     .label = Rādīt visus papildinājumus
-
-cmd-show-details =
-    .label = Rādīt papildus informāciju
-    .accesskey = p
-
-cmd-find-updates =
-    .label = Meklēt atjauninājumus
-    .accesskey = M
-
-cmd-preferences =
-    .label =
-        { PLATFORM() ->
-            [windows] Iestatījumi
-           *[other] Iestatījumi
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] I
-           *[other] I
-        }
-
-cmd-enable-theme =
-    .label = Izmantot šo tēmu
-    .accesskey = I
-
-cmd-disable-theme =
-    .label = Neizmantot šo tēmu
-    .accesskey = N
-
-cmd-install-addon =
-    .label = Instalēt
-    .accesskey = I
-
-cmd-contribute =
-    .label = Atbalstīt
-    .accesskey = A
-    .tooltiptext = Atbalstīt šī papildinājuma izstrādi
 
 detail-version =
     .label = Versija
@@ -181,7 +144,6 @@ extensions-warning-update-security = Papildinājumu drošības pārbaude ir deak
 extensions-warning-update-security-button = Aktivēt
     .title = Aktivēt papildinājumu drošības pārbaudi
 
-
 ## Strings connected to add-on updates
 
 addon-updates-check-for-updates = Meklēt atjauninājumus
@@ -234,8 +196,12 @@ addon-open-about-debugging = Atkļūdot papildinājumus
 ## Pending uninstall message bar
 
 
+## "sites with restrictions" (internally called "quarantined") are special domains
+## where add-ons are normally blocked for security reasons.
+
 ## This is the tooltip text for the recommended badges for an extension in about:addons. The
 ## badge is a small icon displayed next to an extension when it is recommended on AMO.
+
 
 ##
 
@@ -243,3 +209,29 @@ addon-open-about-debugging = Atkļūdot papildinājumus
 
 addon-page-options-button =
     .title = Visu papildinājumu rīki
+
+## Detail notifications
+## Variables:
+##   $name (String): name of the add-on.
+
+## Detail notifications
+## Variables:
+##   $name (string) - Name of the add-on.
+
+# Variables:
+#   $version (String): application version.
+details-notification-incompatible = { $name } nav savietojams ar { -brand-short-name } { $version }.
+
+details-notification-unsigned-and-disabled = { $name } nevar pārbaudīt izmantošanai ar { -brand-short-name } un ir deaktivēts.
+details-notification-unsigned-and-disabled-link = Vairāk informācijas
+
+details-notification-unsigned = { $name } nevar pārbaudīt izmantošanai ar { -brand-short-name }. Esiet piesardzīgi.
+details-notification-unsigned-link = Vairāk informācijas
+
+details-notification-blocked = { $name } ir bloķēts drošības un stabilitātes nolūkos.
+details-notification-blocked-link = Vairāk informācijas
+
+details-notification-softblocked = Ir zināms, ka { $name } rada drošības vai stabilitātes problēmas.
+details-notification-softblocked-link = Vairāk informācijas
+
+details-notification-gmp-pending = { $name } pēc mirkļa tiks instalēts.

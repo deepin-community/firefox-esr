@@ -19,3 +19,20 @@ opensearch-error-download-desc = { -brand-short-name } no ha podido descargar el
 
 ##
 
+searchbar-submit =
+    .tooltiptext = Enviar búsqueda
+
+# This string is displayed in the search box when the input field is empty
+searchbar-input =
+    .placeholder = Buscar
+
+searchbar-icon =
+    .tooltiptext = Buscar
+
+## Infobar shown when search engine is removed and replaced.
+## Variables
+## $oldEngine (String) - the search engine to be removed.
+## $newEngine (String) - the search engine to replace the removed search engine.
+
+removed-search-engine-message = <strong>Su buscador predeterminado ha cambiado.</strong> { $oldEngine } ya no está disponible como buscador predeterminado en { -brand-short-name }. { $newEngine } es ahora su buscador predeterminado. Para cambiar a otro buscador predeterminado, vaya a los ajustes. <label data-l10n-name="remove-search-engine-article">Saber más</label>
+remove-search-engine-button = Aceptar

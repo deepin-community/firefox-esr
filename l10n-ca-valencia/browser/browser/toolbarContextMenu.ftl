@@ -2,6 +2,9 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
+toolbar-context-menu-new-tab =
+    .label = Pestanya nova
+    .accesskey = n
 toolbar-context-menu-reload-selected-tab =
     .label = Torna a carregar la pestanya seleccionada
     .accesskey = r
@@ -17,14 +20,6 @@ toolbar-context-menu-bookmark-selected-tabs =
 toolbar-context-menu-select-all-tabs =
     .label = Selecciona totes les pestanyes
     .accesskey = t
-toolbar-context-menu-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Desfés el tancament de la pestanya
-           *[other] Desfés el tancament de les pestanyes
-        }
-    .accesskey = f
-
 toolbar-context-menu-reopen-closed-tabs =
     .label =
         { $tabCount ->
@@ -53,9 +48,6 @@ toolbar-context-menu-report-extension =
 toolbar-context-menu-pin-to-overflow-menu =
     .label = Fixa al menú d'eines addicionals (»)
     .accesskey = F
-toolbar-context-menu-auto-hide-downloads-button =
-    .label = Amaga automàticament en la barra d'eines
-    .accesskey = A
 toolbar-context-menu-auto-hide-downloads-button-2 =
     .label = Amaga el botó quan la llista siga buida
     .accesskey = A
@@ -82,3 +74,7 @@ toolbar-context-menu-bookmarks-toolbar-on-new-tab-2 =
 toolbar-context-menu-bookmarks-show-other-bookmarks =
     .label = Mostra «Altres adreces d'interés»
     .accesskey = M
+
+toolbar-context-menu-menu-bar-cmd =
+    .toolbarname = Barra de menú
+    .accesskey = m

@@ -6,9 +6,6 @@ password-quality-meter = Qualitæ da paròlla segreta
 
 ## Change Password dialog
 
-change-password-window =
-    .title = Cangia a paròlla segreta prinçipâ
-
 # Variables:
 # $tokenName (String) - Security device of the change password dialog
 change-password-token = Aparato de seguessa: { $tokenName }
@@ -16,23 +13,16 @@ change-password-old = Paròlla segreta corente:
 change-password-new = Neuva paròlla segreta:
 change-password-reenter = Neuva paròlla segreta (ancon):
 
-## Reset Password dialog
-
-reset-password-window =
-    .title = Inpòsta torna a paròlla segreta prinçipâ
-    .style = width: 40em
-
 ## Reset Primary Password dialog
 
 reset-password-button-label =
     .label = Inpòsta torna
-reset-password-text = Se ti ti inposti torna a teu paròlla segreta prinçipâ tutte e teu paròlle segrete de mail, web, dæti di mòdoli, certificati personali e ciavi privæ saian scancelæ. T'ê seguo de inpostâ torna a teu paròlla segreta prinçipâ?
 
 ## Downloading cert dialog
 
-download-cert-window =
+download-cert-window2 =
     .title = Descarego o certificato
-    .style = width: 46em
+    .style = min-width: 46em
 download-cert-message = Te vegne domandou de dâ a fiduccia a sta neuva aotoritæ de certificaçion (CA).
 download-cert-trust-ssl =
     .label = Fiate de sta CA pe identificâ i sciti web.
@@ -64,7 +54,5 @@ set-password-reminder = Inportante: Se ti t'ascòrdi a paròlla segreta di certi
 
 ## Protected Auth dialog
 
-protected-auth-window =
-    .title = Aotenticaçion protezua dò-u Token
-protected-auth-msg = Pe piaxei aotenticate a-o Token.
-protected-auth-token = Token:
+## Protected authentication alert
+

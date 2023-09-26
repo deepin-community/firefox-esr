@@ -2,13 +2,13 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-addons-window =
-    .title = Tontoney juwalkaa
-
 addons-page-title = Tontoney juwalkaa
 
-search-header-shortcut =
-    .key = f
+## Variables
+##   $domain - Domain name where add-ons are available (e.g. addons.mozilla.org)
+
+##
+
 
 list-empty-installed =
     .value = War ši nda dumoo woo tontoni kul kaŋ sinjandi.
@@ -30,43 +30,6 @@ show-unsigned-extensions-button =
 
 show-all-extensions-button =
     .label = Dobuyaney kul cebe
-
-cmd-show-details =
-    .label = Alhabar cebe ka tonton
-    .accesskey = c
-
-cmd-find-updates =
-    .label = Taagandirey ceeci
-    .accesskey = T
-
-cmd-preferences =
-    .label =
-        { PLATFORM() ->
-            [windows] Suubarey
-           *[other] Ibaayey
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] S
-           *[other] b
-        }
-
-cmd-enable-theme =
-    .label = Bankaaray furari
-    .accesskey = B
-
-cmd-disable-theme =
-    .label = Bankaaray furari kayandi
-    .accesskey = B
-
-cmd-install-addon =
-    .label = Sinji
-    .accesskey = S
-
-cmd-contribute =
-    .label = Kanbuzaamay
-    .accesskey = K
-    .tooltiptext = Kanbuzaamay tontonoo woo cineyanoo še
 
 detail-version =
     .label = Dumi
@@ -171,7 +134,6 @@ extensions-warning-update-security = Tontoni saajaw taagandiri koroširoo kayand
 extensions-warning-update-security-button = Tunandi
     .title = Tontoni saajaw taagandiri koroširoo tunandi
 
-
 ## Strings connected to add-on updates
 
 addon-updates-check-for-updates = Taagandirey ceeci
@@ -224,8 +186,12 @@ addon-open-about-debugging = Hanseyan tontoney
 ## Pending uninstall message bar
 
 
+## "sites with restrictions" (internally called "quarantined") are special domains
+## where add-ons are normally blocked for security reasons.
+
 ## This is the tooltip text for the recommended badges for an extension in about:addons. The
 ## badge is a small icon displayed next to an extension when it is recommended on AMO.
+
 
 ##
 
@@ -233,3 +199,29 @@ addon-open-about-debugging = Hanseyan tontoney
 
 addon-page-options-button =
     .title = Goyjinayyaŋ tontoney kul še
+
+## Detail notifications
+## Variables:
+##   $name (String): name of the add-on.
+
+## Detail notifications
+## Variables:
+##   $name (string) - Name of the add-on.
+
+# Variables:
+#   $version (String): application version.
+details-notification-incompatible = { $name } nda { -brand-short-name } { $version } ši cere kanbe.
+
+details-notification-unsigned-and-disabled = { $name } mana hin ka korosandi ka goy nda { -brand-short-name } nda an' ka kayandi.
+details-notification-unsigned-and-disabled-link = Alhabar tontoni
+
+details-notification-unsigned = { $name } mana hin ka korosandi ka goy nda { -brand-short-name }. War ma hawgay.
+details-notification-unsigned-link = Alhabar tontoni
+
+details-notification-blocked = { $name } kay saajaw wala tabatiyan-jaŋay sabbu se.
+details-notification-blocked-link = Alhabar tontoni
+
+details-notification-softblocked = { $name } bayray ra, ga hin ka saajaw wala tabatiyan šenday tee.
+details-notification-softblocked-link = Alhabar tontoni
+
+details-notification-gmp-pending = { $name } ga kaa ka sinja kayna da.

@@ -31,9 +31,6 @@ toolbar-context-menu-remove-extension =
 toolbar-context-menu-pin-to-overflow-menu =
     .label = Pin to Overflow Cuɓirgol
     .accesskey = P
-toolbar-context-menu-auto-hide-downloads-button =
-    .label = Suuɗ hoore mum e palal kuutorɗe
-    .accesskey = A
 toolbar-context-menu-remove-from-toolbar =
     .label = Ittu e  palal kuutorɗe
     .accesskey = I
@@ -41,3 +38,6 @@ toolbar-context-menu-view-customize-toolbar =
     .label = Heertin…
     .accesskey = H
 
+toolbar-context-menu-menu-bar-cmd =
+    .toolbarname = Palal Dosi
+    .accesskey = P

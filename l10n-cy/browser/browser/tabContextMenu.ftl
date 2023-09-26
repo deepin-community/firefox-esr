@@ -11,6 +11,12 @@ reload-tab =
 select-all-tabs =
     .label = Dewis Pob Tab
     .accesskey = D
+tab-context-play-tab =
+    .label = Chwarae'r Tab
+    .accesskey = h
+tab-context-play-tabs =
+    .label = Chwarae Tabiau
+    .accesskey = C
 duplicate-tab =
     .label = Dyblygu Tab
     .accesskey = D
@@ -48,14 +54,11 @@ unpin-selected-tabs =
 bookmark-selected-tabs =
     .label = Gosod Nod Tudalen i'r Tabiau…
     .accesskey = T
-bookmark-tab =
+tab-context-bookmark-tab =
     .label = Gosod Nod Tudalen i'r Tab
-    .accesskey = N
-reopen-in-container =
-    .label = Ail agor mewn Cynhwysydd
-    .accesskey = A
+    .accesskey = T
 tab-context-open-in-new-container-tab =
-    .label = Agor Dolen mewn Tab Cynhwysydd Newydd
+    .label = Agor mewn Tab Cynhwysydd Newydd
     .accesskey = A
 move-to-start =
     .label = Symud i'r Cychwyn
@@ -69,35 +72,9 @@ move-to-new-window =
 tab-context-close-multiple-tabs =
     .label = Cau Tabiau Lluosog
     .accesskey = L
-tab-context-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Dadwneud Cau Tabiau
-            [zero] Dadwneud Cau Tabiau
-            [one] Dadwneud Cau Tab
-            [two] Dadwneud Cau Tabiau
-            [few] Dadwneud Cau Tabiau
-            [many] Dadwneud Cau Tabiau
-           *[other] Dadwneud Cau Tabiau
-        }
-    .accesskey = D
-close-tab =
-    .label = Cau Tab
-    .accesskey = C
-close-tabs =
-    .label = Cau Tabiau
-    .accesskey = T
-move-tabs =
-    .label = Symud Tabiau
-    .accesskey = y
-move-tab =
-    .label = Symud Tab
-    .accesskey = y
 tab-context-share-url =
     .label = Rhannu
     .accesskey = R
-tab-context-share-more =
-    .label = Rhagor…
 
 ## Variables:
 ##  $tabCount (Number): the number of tabs that are affected by the action.
@@ -105,36 +82,24 @@ tab-context-share-more =
 tab-context-reopen-closed-tabs =
     .label =
         { $tabCount ->
-            [1] Ail agor Tabiau wedi'u Cau
-            [zero] Ail agor Tabiau wedi'u Cau
-            [one] Ail agor Tab wedi'i Gau
-            [two] Ail agor Tabiau wedi'u Cau
-            [few] Ail agor Tabiau wedi'u Cau
-            [many] Ail agor Tabiau wedi'u Cau
-           *[other] Ail agor Tabiau wedi'u Cau
+            [1] Ailagor Tabiau wedi'u Cau
+            [zero] Ailagor Tabiau wedi'u Cau
+            [one] Ailagor Tab wedi'i Gau
+            [two] Ailagor Tabiau wedi'u Cau
+            [few] Ailagor Tabiau wedi'u Cau
+            [many] Ailagor Tabiau wedi'u Cau
+           *[other] Ailagor Tabiau wedi'u Cau
         }
     .accesskey = A
-tab-context-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Cau Tab
-            [zero] Cau Tab
-            [one] Cau Tab
-            [two] Cau Tab
-            [few] Cau Tab
-            [many] Cau Tab
-           *[other] Cau Tab
-        }
-    .accesskey = C
 tab-context-close-n-tabs =
     .label =
         { $tabCount ->
-            [1] Cau'r Tab
+            [1] Cau Tab
             [zero] Cau { $tabCount } Tabiau
             [one] Cau { $tabCount } Tab
             [two] Cau { $tabCount } Dab
-            [few] Cau { $tabCount } Thab
-            [many] Cau { $tabCount } Tab
+            [few] Cau { $tabCount } Tab
+            [many] Cau { $tabCount } Thab
            *[other] Cau { $tabCount } Tab
         }
     .accesskey = T
@@ -150,3 +115,15 @@ tab-context-move-tabs =
            *[other] Symud Tab
         }
     .accesskey = S
+
+tab-context-send-tabs-to-device =
+    .label =
+        { $tabCount ->
+            [zero] Anfon Tab i Ddyfais
+            [one] Anfon { $tabCount } Tab i Ddyfais
+            [two] Anfon { $tabCount } Dab i Ddyfais
+            [few] Anfon { $tabCount } Thab i Ddyfais
+            [many] Anfon { $tabCount } Tab i Ddyfais
+           *[other] Anfon { $tabCount } Thab i Ddyfais
+        }
+    .accesskey = n

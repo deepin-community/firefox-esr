@@ -11,6 +11,12 @@ reload-tab =
 select-all-tabs =
     .label = Изабери све картице
     .accesskey = И
+tab-context-play-tab =
+    .label = Пусти тон
+    .accesskey = П
+tab-context-play-tabs =
+    .label = Пусти картице
+    .accesskey = с
 duplicate-tab =
     .label = Дуплирај картицу
     .accesskey = Д
@@ -48,12 +54,9 @@ unpin-selected-tabs =
 bookmark-selected-tabs =
     .label = Обележи картице…
     .accesskey = б
-bookmark-tab =
-    .label = Обележи картицу
-    .accesskey = б
-reopen-in-container =
-    .label = Поново отвори у контејнеру
-    .accesskey = П
+tab-context-bookmark-tab =
+    .label = Обележи картицу…
+    .accesskey = О
 tab-context-open-in-new-container-tab =
     .label = Отвори на новој картици у контејнеру
     .accesskey = т
@@ -69,32 +72,9 @@ move-to-new-window =
 tab-context-close-multiple-tabs =
     .label = Затвори више картица
     .accesskey = ш
-tab-context-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Врати затворену картицу
-            [one] Врати затворену картицу
-            [few] Врати затворене картице
-           *[other] Врати затворених картица
-        }
-    .accesskey = р
-close-tab =
-    .label = Затвори картицу
-    .accesskey = а
-close-tabs =
-    .label = Затвори картице
-    .accesskey = З
-move-tabs =
-    .label = Премести картице
-    .accesskey = П
-move-tab =
-    .label = Помери картицу
-    .accesskey = м
 tab-context-share-url =
     .label = Дели…
     .accesskey = е
-tab-context-share-more =
-    .label = Више…
 
 ## Variables:
 ##  $tabCount (Number): the number of tabs that are affected by the action.
@@ -106,13 +86,6 @@ tab-context-reopen-closed-tabs =
            *[other] Врати затворене картице
         }
     .accesskey = В
-tab-context-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Затвори картицу
-           *[other] Затвори картице
-        }
-    .accesskey = З
 tab-context-close-n-tabs =
     .label =
         { $tabCount ->
@@ -129,3 +102,12 @@ tab-context-move-tabs =
            *[other] Премести картице
         }
     .accesskey = П
+
+tab-context-send-tabs-to-device =
+    .label =
+        { $tabCount ->
+            [one] Пошаљи картицу на уређај
+            [few] Пошаљи { $tabCount } картице на уређај
+           *[other] Пошаљи { $tabCount } картица на уређај
+        }
+    .accesskey = о

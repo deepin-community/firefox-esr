@@ -10,7 +10,7 @@ fonts-window-close =
 
 ## Font groups by language
 
-fonts-langgroup-header = 사용 글꼴
+fonts-langgroup-header = 언어별 글꼴
     .accesskey = F
 
 fonts-langgroup-arabic =
@@ -105,52 +105,8 @@ fonts-minsize-none =
     .label = 없음
 
 fonts-allow-own =
-    .label = 위에 선택된 글꼴 대신에 페이지 글꼴 설정 표시 허용
+    .label = 위에서 선택한 글꼴 대신, 페이지에서 지정된 글꼴을 사용하도록 허용
     .accesskey = A
-
-## Text Encodings
-##
-## Translate the encoding names as adjectives for an encoding, not as the name
-## of the language.
-
-fonts-languages-fallback-header = 레거시 콘텐츠에 사용할 글자 인코딩
-fonts-languages-fallback-desc = 인코딩 선언이 되어있지 않은 레거시 콘텐츠에 사용할 글자 인코딩입니다.
-
-fonts-languages-fallback-label = 대체 텍스트 인코딩
-    .accesskey = T
-
-fonts-languages-fallback-name-auto =
-    .label = 현재 언어의 기본값
-fonts-languages-fallback-name-arabic =
-    .label = 아라비아어
-fonts-languages-fallback-name-baltic =
-    .label = 발트어
-fonts-languages-fallback-name-ceiso =
-    .label = 중앙 유럽어, ISO
-fonts-languages-fallback-name-cewindows =
-    .label = 중앙 유럽어, Microsoft
-fonts-languages-fallback-name-simplified =
-    .label = 중국어, 간체
-fonts-languages-fallback-name-traditional =
-    .label = 중국어, 정체
-fonts-languages-fallback-name-cyrillic =
-    .label = 키릴 문자
-fonts-languages-fallback-name-greek =
-    .label = 그리스어
-fonts-languages-fallback-name-hebrew =
-    .label = 히브리어
-fonts-languages-fallback-name-japanese =
-    .label = 일본어
-fonts-languages-fallback-name-korean =
-    .label = 한국어
-fonts-languages-fallback-name-thai =
-    .label = 태국어
-fonts-languages-fallback-name-turkish =
-    .label = 터키어
-fonts-languages-fallback-name-vietnamese =
-    .label = 베트남어
-fonts-languages-fallback-name-other =
-    .label = 기타 (중앙유럽어 포함)
 
 # Variables:
 #   $name {string, "Arial"} - Name of the default font

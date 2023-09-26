@@ -2,9 +2,9 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-clear-site-data-window =
+clear-site-data-window2 =
     .title = Стерти дані
-    .style = width: 35em
+    .style = min-width: 35em
 
 clear-site-data-description = Стирання всіх кук і даних сайтів, що зберігаються в { -brand-short-name }, може призвести до виходу на вебсайтах та вилучення автономного вебвмісту.
 
@@ -50,14 +50,6 @@ clear-site-data-cache-empty =
     .accesskey = ш
 
 clear-site-data-cache-info = Вебсайтам доведеться повторно завантажувати зображення і дані
-
-clear-site-data-cancel =
-    .label = Скасувати
-    .accesskey = С
-
-clear-site-data-clear =
-    .label = Стерти
-    .accesskey = т
 
 clear-site-data-dialog =
     .buttonlabelaccept = Стерти

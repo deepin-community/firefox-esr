@@ -10,9 +10,6 @@ third-party-intro =
     { -brand-short-name }. Tot modul pas signat per Microsoft o
     { -vendor-short-name } es considerat coma un modul tèrç.
 
-third-party-header-module-list = Lista de moduls
-third-party-header-loading-events = Cargament dels eveniments
-
 third-party-message-empty = Cap de modul tèrç pas detectat.
 third-party-message-no-duration = Pas enregistrat
 
@@ -20,6 +17,8 @@ third-party-detail-version = Version del fichièr
 third-party-detail-vendor = Informacions del vendeire
 third-party-detail-occurrences = Ocuréncias
     .title = Quant de còps aqueste modul foguèt cargat.
+third-party-detail-duration = Temps mejan de blocatge (ms)
+    .title = Quant de temps aqueste modul a blocat l’aplicacion.
 third-party-detail-app = Aplicacion
 third-party-detail-publisher = Editor
 
@@ -27,10 +26,20 @@ third-party-th-process = Processús
 third-party-th-duration = Durada de cargament (ms)
 third-party-th-status = Estat
 
-third-party-unsigned-icon =
+third-party-tag-ime = IME
+    .title = Aqueste tipe de modul es cargat quand utilizatz un IME tèrç.
+third-party-tag-shellex = Extension Shell
+    .title = Aqueste tipe de modul es cargat quand dobrissètz la fenèstra del gestionari de fichièrs.
+third-party-tag-background = Rèireplan
+    .title =
+        Aqueste modul a pas blocat l’aplicacion perque èra blocat
+        en rèireplan.
+third-party-icon-unsigned =
     .title = Aqueste modul es pas signat
-third-party-warning-icon =
+    .alt = Aqueste modul es pas signat
+third-party-icon-warning =
     .title = { -brand-short-name } a plantat dins lo còdi d’aqueste modul
+    .alt = { -brand-short-name } a plantat dins lo còdi d’aqueste modul
 
 third-party-status-loaded = Cargat
 third-party-status-blocked = Blocat
@@ -41,7 +50,27 @@ third-party-button-reload = Recargar amb las info sistèma
     .title = Recargar amb las informacions sistèma
 third-party-button-open =
     .title = Dobrir l’emplaçament del fichièr…
+third-party-button-to-block =
+    .title = Blocar aqueste modul
+    .aria-label = Blocar aqueste modul
+third-party-button-to-unblock =
+    .title = Actualament blocat. Clicar per lo desblocar.
+    .aria-label = Actualament blocat. Clicar per lo desblocar.
+third-party-button-to-unblock-disabled =
+    .title =
+        Actualament marcat coma blocat, encara que la lista de blocatge siá desactivada per aquesta execucion
+        de { -brand-short-name }. Clicatz per lo desblocar.
+    .aria-label =
+        Actualament marcat coma blocat, encara que la lista de blocatge siá desactivada per aquesta execucion
+        de { -brand-short-name }. Clicatz per lo desblocar.
 third-party-button-expand =
     .title = Mostrar las informacions detalhadas
 third-party-button-collapse =
     .title = Plegar las informacions detalhadas
+third-party-should-restart-title = Reaviar { -brand-short-name }
+third-party-restart-now = Reaviar ara
+third-party-restart-later = Reaviar mai tard
+
+third-party-blocked-by-builtin =
+    .title = Blocat per { -brand-short-name }
+    .alt = Blocat per { -brand-short-name }

@@ -13,11 +13,6 @@ crashes-id = ID-ul raportului
 crashes-send-date = Trimis
 crashes-all-reports = Toate rapoartele de defecțiuni
 crashes-no-config = Această aplicație nu a fost configurată pentru afișarea rapoartelor de defecțiuni.
-extensions-title = Extensii
-extensions-name = Nume
-extensions-enabled = Activat
-extensions-version = Versiune
-extensions-id = ID
 support-addons-title = Suplimente
 support-addons-name = Nume
 support-addons-type = Tip
@@ -63,6 +58,10 @@ app-basics-enabled-plugins = Pluginuri activate
 app-basics-build-config = Configurația versiunii compilate
 app-basics-user-agent = Agent utilizator
 app-basics-os = SO
+app-basics-os-theme = Tema SO-ului
+# Rosetta is Apple's translation process to run apps containing x86_64
+# instructions on Apple Silicon. This should remain in English.
+app-basics-rosetta = Tradus prin Rosetta
 app-basics-memory-use = Utilizarea memoriei
 app-basics-performance = Performanță
 app-basics-service-workers = Scripturi service worker înregistrate
@@ -76,6 +75,7 @@ app-basics-location-service-key-google = Cheie de servicii Google pentru localiz
 app-basics-safebrowsing-key-google = Cheie Google pentru navigare în siguranță
 app-basics-key-mozilla = Cheie pentru serviciul de localizare Mozilla
 app-basics-safe-mode = Mod sigur
+
 show-dir-label =
     { PLATFORM() ->
         [macos] Afișează în Finder
@@ -123,19 +123,18 @@ copy-raw-data-to-clipboard-label = Copiază datele brute în clipboard
 sandbox-title = Sandbox
 sandbox-sys-call-log-title = Apeluri de sistem respinse
 sandbox-sys-call-index = #
-sandbox-sys-call-age = Secunde în urmă
+sandbox-sys-call-age = acum câteva secunde
 sandbox-sys-call-pid = PID
 sandbox-sys-call-tid = TID
 sandbox-sys-call-proc-type = Tipul de proces
 sandbox-sys-call-number = Apel sistem
 sandbox-sys-call-args = Argumente
-safe-mode-title = Încearcă modul sigur
-restart-in-safe-mode-label = Repornește cu suplimentele dezactivate…
-
 troubleshoot-mode-title = Diagnostică problemele
 restart-in-troubleshoot-mode-label = Mod de depanare…
 clear-startup-cache-title = Încearcă să golești cache-ul de pornire
 clear-startup-cache-label = Golește cache-ul de pornire…
+startup-cache-dialog-title2 = Repornești { -brand-short-name } pentru a goli cache-ul de pornire?
+startup-cache-dialog-body2 = Acest lucru nu va modifica setările și nu va elimina extensiile.
 restart-button-label = Repornește
 
 ## Media titles
@@ -159,6 +158,8 @@ media-device-latency = Latență
 media-capabilities-title = Capabilități media
 # List all the entries of the database.
 media-capabilities-enumerate = Enumeră baza de date
+
+## Codec support table
 
 ##
 
@@ -187,9 +188,6 @@ remote-debugging-url = URL
 
 ##
 
-support-third-party-modules-title = Module terțe
-support-third-party-modules-no-value = (Nicio valoare)
-
 # Variables
 # $days (Integer) - Number of days of crashes to log
 report-crash-for-days =
@@ -203,18 +201,18 @@ report-crash-for-days =
 # $minutes (integer) - Number of minutes since crash
 crashes-time-minutes =
     { $minutes ->
-        [one] { $minutes } minut în urmă
-        [few] { $minutes } minute în urmă
-       *[other] { $minutes } de minute în urmă
+        [one] acum { $minutes } minut
+        [few] acum { $minutes } minute
+       *[other] acum { $minutes } de minute
     }
 
 # Variables
 # $hours (integer) - Number of hours since crash
 crashes-time-hours =
     { $hours ->
-        [one] { $hours } oră în urmă
-        [few] { $hours } ore în urmă
-       *[other] { $hours } de ore în urmă
+        [one] acum { $hours } oră
+        [few] acum { $hours } ore
+       *[other] acum { $hours } de ore
     }
 
 # Variables
@@ -289,11 +287,6 @@ webgl2-renderer = Renderul driverului WebGL 2
 webgl2-version = Versiunea driverului WebGL 2
 webgl2-driver-extensions = Extensiile driverului WebGL 2
 webgl2-extensions = Extensii WebGL 2
-blocklisted-bug = Pe lista de blocări din cauza unor probleme cunoscute
-
-# Variables
-# $bugNumber (string) - String of bug number from Bugzilla
-bug-link = bug { $bugNumber }
 
 # Variables
 #   $bugNumber (string) - Bug number on Bugzilla
@@ -304,8 +297,6 @@ support-blocklisted-bug = Pus pe lista de blocare din cauza problemelor cunoscut
 unknown-failure = Pus pe lista de blocări; cod de eroare { $failureCode }
 
 d3d11layers-crash-guard = Compozitor D3D11
-d3d11video-crash-guard = Decodor video D3D11
-d3d9video-crash-guard = Decodor video D3D9
 glcontext-crash-guard = OpenGL
 wmfvpxvideo-crash-guard = Decodor video WMF VPX
 
@@ -350,14 +341,6 @@ launcher-process-status-unknown = Stare necunoscută
 # $remoteWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
 multi-process-windows = { $remoteWindows }/{ $totalWindows }
-multi-process-status-0 = Activate de utilizator
-multi-process-status-1 = Activate în mod implicit
-multi-process-status-2 = Dezactivate
-multi-process-status-4 = Dezactivate de instrumentele de accesibilitate
-multi-process-status-6 = Dezactivat din cauza introducerii de text neacceptat
-multi-process-status-7 = Dezactivate de suplimente
-multi-process-status-8 = Dezactivate forțat
-multi-process-status-unknown = Stare necunoscută
 
 async-pan-zoom = Panoramare/zoom asincron(ă)
 apz-none = fără

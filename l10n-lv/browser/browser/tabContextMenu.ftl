@@ -8,6 +8,12 @@ reload-tab =
 select-all-tabs =
     .label = Izvēlēties visas cilnes
     .accesskey = S
+tab-context-play-tab =
+    .label = Atskaņot cilni
+    .accesskey = A
+tab-context-play-tabs =
+    .label = Atskaņot cilnes
+    .accesskey = t
 duplicate-tab =
     .label = Dublēt cilni
     .accesskey = D
@@ -38,12 +44,6 @@ unpin-selected-tabs =
 bookmark-selected-tabs =
     .label = Saglabāt cilnes grāmatzīmēs…
     .accesskey = g
-bookmark-tab =
-    .label = Saglabāt grāmatzīmēs
-    .accesskey = B
-reopen-in-container =
-    .label = Atvērt konteinerā
-    .accesskey = t
 move-to-start =
     .label = Pārvietot uz sākumu
     .accesskey = S
@@ -53,19 +53,6 @@ move-to-end =
 move-to-new-window =
     .label = Pāriet uz jaunu logu
     .accesskey = P
-
-close-tab =
-    .label = Aizvērt cilni
-    .accesskey = c
-close-tabs =
-    .label = Aizvērt cilnes
-    .accesskey = S
-move-tabs =
-    .label = Pārvietot cilnes
-    .accesskey = v
-move-tab =
-    .label = Pārvietot cilni
-    .accesskey = v
 
 ## Variables:
 ##  $tabCount (Number): the number of tabs that are affected by the action.
@@ -79,3 +66,12 @@ tab-context-move-tabs =
            *[other] Pārvietot cilnes
         }
     .accesskey = c
+
+tab-context-send-tabs-to-device =
+    .label =
+        { $tabCount ->
+            [zero] Sūtīt { $tabCount } cilne uz ierīci
+            [one] Sūtīt { $tabCount } cilni uz ierīci
+           *[other] Sūtīt { $tabCount } cilnes uz ierīci
+        }
+    .accesskey = n

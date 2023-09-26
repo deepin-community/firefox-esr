@@ -115,7 +115,7 @@ certificate-viewer-unknown-group-label = (desconocido)
 
 ## Labels for tabs displayed in stand-alone about:certificate page
 
-certificate-viewer-tab-mine = Tus certificados
+certificate-viewer-tab-mine = Sus certificados
 certificate-viewer-tab-people = Personas
 certificate-viewer-tab-servers = Servidores
 certificate-viewer-tab-ca = Autoridades

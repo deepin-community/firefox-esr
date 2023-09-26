@@ -11,17 +11,6 @@ navbar-tooltip-instruction =
 
 ## Back
 
-main-context-menu-back =
-    .tooltiptext = ย้อนกลับไปหนึ่งหน้า
-    .aria-label = ย้อนกลับ
-    .accesskey = ย
-
-navbar-tooltip-back =
-    .value = { main-context-menu-back.tooltiptext }
-
-toolbar-button-back =
-    .label = { main-context-menu-back.aria-label }
-
 # Variables
 #   $shortcut (String) - A keyboard shortcut for the Go Back command.
 main-context-menu-back-2 =
@@ -41,17 +30,6 @@ toolbar-button-back-2 =
     .label = { main-context-menu-back-2.aria-label }
 
 ## Forward
-
-main-context-menu-forward =
-    .tooltiptext = เดินหน้าไปหนึ่งหน้า
-    .aria-label = เดินหน้า
-    .accesskey = ด
-
-navbar-tooltip-forward =
-    .value = { main-context-menu-forward.tooltiptext }
-
-toolbar-button-forward =
-    .label = { main-context-menu-forward.aria-label }
 
 # Variables
 #   $shortcut (String) - A keyboard shortcut for the Go Forward command.
@@ -116,48 +94,45 @@ main-context-menu-page-save =
     .label = บันทึกหน้าเป็น…
     .accesskey = ห
 
-toolbar-button-page-save =
-    .label = { main-context-menu-page-save.label }
-
 ## Simple menu items
 
-main-context-menu-bookmark-add =
-    .aria-label = เพิ่มที่คั่นหน้าสำหรับหน้านี้
+main-context-menu-bookmark-page =
+    .aria-label = เพิ่มที่คั่นหน้าสำหรับหน้า…
     .accesskey = พ
-    .tooltiptext = เพิ่มที่คั่นหน้าสำหรับหน้านี้
+    .tooltiptext = เพิ่มที่คั่นหน้าสำหรับหน้า
 
 # This menuitem is only visible on macOS
-# Cannot be shown at the same time as main-context-menu-bookmark-edit-mac,
+# Cannot be shown at the same time as main-context-menu-edit-bookmark-mac,
 # so should probably have the same access key if possible.
-main-context-menu-bookmark-add-mac =
-    .label = เพิ่มที่คั่นหน้าสำหรับหน้า
-    .accesskey = ท
+main-context-menu-bookmark-page-mac =
+    .label = เพิ่มที่คั่นหน้าสำหรับหน้า…
+    .accesskey = พ
 
 # This menuitem is only visible on macOS
-# Cannot be shown at the same time as main-context-menu-bookmark-add-mac,
+# Cannot be shown at the same time as main-context-menu-bookmark-page-mac,
 # so should probably have the same access key if possible.
-main-context-menu-bookmark-edit-mac =
-    .label = แก้ไขที่คั่นหน้า
-    .accesskey = ท
+main-context-menu-edit-bookmark-mac =
+    .label = แก้ไขที่คั่นหน้า…
+    .accesskey = ก
 
 # Variables
 #   $shortcut (String) - A keyboard shortcut for the add bookmark command.
-main-context-menu-bookmark-add-with-shortcut =
-    .aria-label = เพิ่มที่คั่นหน้าสำหรับหน้านี้
-    .accesskey = พ
-    .tooltiptext = เพิ่มที่คั่นหน้าสำหรับหน้านี้ ({ $shortcut })
+main-context-menu-bookmark-page-with-shortcut =
+    .aria-label = เพิ่มที่คั่นหน้าสำหรับหน้า…
+    .accesskey = ท
+    .tooltiptext = เพิ่มที่คั่นหน้าสำหรับหน้า ({ $shortcut })
 
-main-context-menu-bookmark-change =
-    .aria-label = แก้ไขที่คั่นหน้านี้
-    .accesskey = พ
-    .tooltiptext = แก้ไขที่คั่นหน้านี้
+main-context-menu-edit-bookmark =
+    .aria-label = แก้ไขที่คั่นหน้า…
+    .accesskey = ท
+    .tooltiptext = แก้ไขที่คั่นหน้า
 
 # Variables
 #   $shortcut (String) - A keyboard shortcut for the edit bookmark command.
-main-context-menu-bookmark-change-with-shortcut =
-    .aria-label = แก้ไขที่คั่นหน้านี้
-    .accesskey = พ
-    .tooltiptext = แก้ไขที่คั่นหน้านี้ ({ $shortcut })
+main-context-menu-edit-bookmark-with-shortcut =
+    .aria-label = แก้ไขที่คั่นหน้า…
+    .accesskey = ท
+    .tooltiptext = แก้ไขที่คั่นหน้า ({ $shortcut })
 
 main-context-menu-open-link =
     .label = เปิดลิงก์
@@ -179,13 +154,9 @@ main-context-menu-open-link-new-private-window =
     .label = เปิดลิงก์ในหน้าต่างส่วนตัวใหม่
     .accesskey = ส
 
-main-context-menu-bookmark-this-link =
-    .label = เพิ่มที่คั่นหน้าสำหรับลิงก์นี้
-    .accesskey = ล
-
-main-context-menu-bookmark-link =
-    .label = เพิ่มที่คั่นหน้าสำหรับลิงก์
-    .accesskey = B
+main-context-menu-bookmark-link-2 =
+    .label = เพิ่มที่คั่นหน้าสำหรับลิงก์…
+    .accesskey = พ
 
 main-context-menu-save-link =
     .label = บันทึกลิงก์เป็น…
@@ -195,11 +166,6 @@ main-context-menu-save-link-to-pocket =
     .label = บันทึกลิงก์ไปยัง { -pocket-brand-name }
     .accesskey = น
 
-## The access keys for "Copy Link Location" and "Copy Email Address"
-## should be the same if possible; the two context menu items
-## are mutually exclusive.
-
-
 ## The access keys for "Copy Link" and "Copy Email Address"
 ## should be the same if possible; the two context menu items
 ## are mutually exclusive.
@@ -208,9 +174,9 @@ main-context-menu-copy-email =
     .label = คัดลอกที่อยู่อีเมล
     .accesskey = ท
 
-main-context-menu-copy-link =
-    .label = คัดลอกตำแหน่งที่ตั้งลิงก์
-    .accesskey = ด
+main-context-menu-copy-phone =
+    .label = คัดลอกหมายเลขโทรศัพท์
+    .accesskey = o
 
 main-context-menu-copy-link-simple =
     .label = คัดลอกลิงก์
@@ -239,32 +205,6 @@ main-context-menu-media-mute =
 main-context-menu-media-unmute =
     .label = เลิกปิดเสียง
     .accesskey = ส
-
-main-context-menu-media-play-speed =
-    .label = ความเร็วในการเล่น
-    .accesskey = ร
-
-main-context-menu-media-play-speed-slow =
-    .label = ช้า (0.5×)
-    .accesskey = ช
-
-main-context-menu-media-play-speed-normal =
-    .label = ปกติ
-    .accesskey = ป
-
-main-context-menu-media-play-speed-fast =
-    .label = เร็ว (1.25×)
-    .accesskey = ร
-
-main-context-menu-media-play-speed-faster =
-    .label = เร็วขึ้น (1.5×)
-    .accesskey = ข
-
-# "Ludicrous" is a reference to the movie "Space Balls" and is meant
-# to say that this speed is very fast.
-main-context-menu-media-play-speed-fastest =
-    .label = เร็วมาก (2×)
-    .accesskey = ม
 
 main-context-menu-media-play-speed-2 =
     .label = ความเร็ว
@@ -312,12 +252,6 @@ main-context-menu-media-video-leave-fullscreen =
 
 # This is used when right-clicking on a video in the
 # content area when the Picture-in-Picture feature is enabled.
-main-context-menu-media-pip =
-    .label = ภาพที่เล่นควบคู่
-    .accesskey = ภ
-
-# This is used when right-clicking on a video in the
-# content area when the Picture-in-Picture feature is enabled.
 main-context-menu-media-watch-pip =
     .label = ดูในแบบภาพที่เล่นควบคู่
     .accesskey = ค
@@ -325,14 +259,6 @@ main-context-menu-media-watch-pip =
 main-context-menu-image-reload =
     .label = โหลดภาพใหม่
     .accesskey = ห
-
-main-context-menu-image-view =
-    .label = ดูภาพ
-    .accesskey = ด
-
-main-context-menu-video-view =
-    .label = ดูวิดีโอ
-    .accesskey = ด
 
 main-context-menu-image-view-new-tab =
     .label = เปิดภาพในแท็บใหม่
@@ -345,18 +271,6 @@ main-context-menu-video-view-new-tab =
 main-context-menu-image-copy =
     .label = คัดลอกภาพ
     .accesskey = ค
-
-main-context-menu-image-copy-location =
-    .label = คัดลอกตำแหน่งที่ตั้งภาพ
-    .accesskey = ง
-
-main-context-menu-video-copy-location =
-    .label = คัดลอกตำแหน่งที่ตั้งวิดีโอ
-    .accesskey = ง
-
-main-context-menu-audio-copy-location =
-    .label = คัดลอกตำแหน่งที่ตั้งเสียง
-    .accesskey = ง
 
 main-context-menu-image-copy-link =
     .label = คัดลอกลิงก์ภาพ
@@ -378,13 +292,13 @@ main-context-menu-image-email =
     .label = ส่งอีเมลภาพ…
     .accesskey = ม
 
-main-context-menu-image-set-as-background =
-    .label = ตั้งเป็นพื้นหลังเดสก์ท็อป…
-    .accesskey = ต
-
 main-context-menu-image-set-image-as-background =
     .label = ตั้งค่ารูปภาพเป็นพื้นหลังเดสก์ท็อป…
     .accesskey = S
+
+main-context-menu-image-copy-text =
+    .label = คัดลอกข้อความจากภาพ
+    .accesskey = ข
 
 main-context-menu-image-info =
     .label = ดูข้อมูลภาพ
@@ -402,10 +316,6 @@ main-context-menu-audio-save-as =
     .label = บันทึกเสียงเป็น…
     .accesskey = บ
 
-main-context-menu-video-image-save-as =
-    .label = บันทึกสแนปช็อตเป็น…
-    .accesskey = บ
-
 main-context-menu-video-take-snapshot =
     .label = ถ่ายสแนปช็อต…
     .accesskey = ส
@@ -418,14 +328,6 @@ main-context-menu-audio-email =
     .label = ส่งอีเมลเสียง…
     .accesskey = ม
 
-main-context-menu-plugin-play =
-    .label = เปิดใช้งานปลั๊กอินนี้
-    .accesskey = ป
-
-main-context-menu-plugin-hide =
-    .label = ซ่อนปลั๊กอินนี้
-    .accesskey = อ
-
 main-context-menu-save-to-pocket =
     .label = บันทึกหน้าไปยัง { -pocket-brand-name }
     .accesskey = บ
@@ -433,14 +335,6 @@ main-context-menu-save-to-pocket =
 main-context-menu-send-to-device =
     .label = ส่งหน้าไปยังอุปกรณ์
     .accesskey = ส
-
-main-context-menu-view-background-image =
-    .label = ดูภาพพื้นหลัง
-    .accesskey = ภ
-
-main-context-menu-generate-new-password =
-    .label = ใช้รหัสผ่านที่ถูกสร้างขึ้นมา ...
-    .accesskey = G
 
 ## The access keys for "Use Saved Login" and "Use Saved Password"
 ## should be the same if possible; the two context menu items
@@ -455,6 +349,10 @@ main-context-menu-use-saved-password =
     .accesskey = ห
 
 ##
+
+main-context-menu-use-relay-mask =
+    .label = ใช้ตัวปกปิดอีเมลของ { -relay-brand-short-name }
+    .accesskey = อ
 
 main-context-menu-suggest-strong-password =
     .label = แนะนำรหัสผ่านที่คาดเดายาก…
@@ -492,9 +390,9 @@ main-context-menu-frame-reload =
     .label = โหลดกรอบใหม่
     .accesskey = ล
 
-main-context-menu-frame-bookmark =
-    .label = เพิ่มที่คั่นหน้าสำหรับกรอบนี้
-    .accesskey = ม
+main-context-menu-frame-add-bookmark =
+    .label = เพิ่มที่คั่นหน้าสำหรับเฟรม…
+    .accesskey = ท
 
 main-context-menu-frame-save-as =
     .label = บันทึกกรอบเป็น…
@@ -512,9 +410,9 @@ main-context-menu-frame-view-info =
     .label = ดูข้อมูลกรอบ
     .accesskey = ข
 
-main-context-menu-print-selection =
-    .label = พิมพ์ที่เลือก
-    .accesskey = r
+main-context-menu-print-selection-2 =
+    .label = พิมพ์ส่วนที่เลือก…
+    .accesskey = ม
 
 main-context-menu-view-selection-source =
     .label = ดูต้นฉบับส่วนที่เลือก
@@ -532,10 +430,6 @@ main-context-menu-view-page-source =
     .label = ดูต้นฉบับหน้า
     .accesskey = ด
 
-main-context-menu-view-page-info =
-    .label = ดูข้อมูลหน้า
-    .accesskey = ข
-
 main-context-menu-bidi-switch-text =
     .label = สลับทิศทางข้อความ
     .accesskey = ล
@@ -543,10 +437,6 @@ main-context-menu-bidi-switch-text =
 main-context-menu-bidi-switch-page =
     .label = สลับทิศทางหน้ากระดาษ
     .accesskey = ส
-
-main-context-menu-inspect-element =
-    .label = ตรวจสอบองค์ประกอบ
-    .accesskey = อ
 
 main-context-menu-inspect =
     .label = ตรวจสอบ
@@ -558,3 +448,13 @@ main-context-menu-inspect-a11y-properties =
 main-context-menu-eme-learn-more =
     .label = เรียนรู้เพิ่มเติมเกี่ยวกับ DRM…
     .accesskey = ร
+
+# Variables
+#   $containerName (String): The name of the current container
+main-context-menu-open-link-in-container-tab =
+    .label = เปิดลิงก์ในแท็บ { $containerName } ใหม่
+    .accesskey = T
+
+main-context-menu-reveal-password =
+    .label = เผยรหัสผ่าน
+    .accesskey = v

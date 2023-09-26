@@ -43,15 +43,6 @@ menu-quit =
 menu-quit-mac =
     .label = Skōńcz { -brand-shorter-name }
 
-# This menu-quit-button string is only used on Linux.
-menu-quit-button =
-    .label = { menu-quit.label }
-
-# This menu-quit-button-win string is only used on Windows.
-menu-quit-button-win =
-    .label = { menu-quit.label }
-    .tooltip = Skōńcz { -brand-shorter-name }
-
 menu-about =
     .label = Ô aplikacyji { -brand-shorter-name }
     .accesskey = O
@@ -81,8 +72,16 @@ menu-file-open-location =
 menu-file-open-file =
     .label = Ôtwōrz zbiōr…
     .accesskey = d
-menu-file-close =
-    .label = Zawrzij
+# Variables:
+#  $tabCount (Number): the number of tabs that are affected by the action.
+menu-file-close-tab =
+    .label =
+        { $tabCount ->
+            [1] Zawrzij karta
+            [one] Zawrzij { $tabCount } karta
+            [few] Zawrzij { $tabCount } karty
+           *[many] Zawrzij { $tabCount } kart
+        }
     .accesskey = Z
 menu-file-close-window =
     .label = Zawrzij okno
@@ -93,12 +92,12 @@ menu-file-save-page =
 menu-file-email-link =
     .label = Poślij link emailym…
     .accesskey = E
+menu-file-share-url =
+    .label = Udostympnij
+    .accesskey = t
 menu-file-print-setup =
     .label = Nasztalowania strōny
     .accesskey = y
-menu-file-print-preview =
-    .label = Podlōnd durku
-    .accesskey = d
 menu-file-print =
     .label = Durkuj…
     .accesskey = D
@@ -114,9 +113,6 @@ menu-file-go-offline =
 menu-edit =
     .label = Edytuj
     .accesskey = E
-menu-edit-find-on =
-    .label = Znojdź na tyj strōnie…
-    .accesskey = Z
 menu-edit-find-in-page =
     .label = Znojdź na strōnie…
     .accesskey = Z
@@ -135,9 +131,6 @@ menu-view =
 menu-view-toolbars-menu =
     .label = Poski z noczyniami
     .accesskey = P
-menu-view-customize-toolbar =
-    .label = Przipasuj…
-    .accesskey = u
 menu-view-customize-toolbar2 =
     .label = Przipasuj posek z noczyniami…
     .accesskey = P
@@ -174,10 +167,6 @@ menu-view-page-style-no-style =
 menu-view-page-basic-style =
     .label = Bazowy styl
     .accesskey = B
-menu-view-charset =
-    .label = Kodowanie stylu
-    .accesskey = k
-
 menu-view-repair-text-encoding =
     .label = Naprow kodowanie tekstu
     .accesskey = n
@@ -194,6 +183,17 @@ menu-view-exit-full-screen =
 menu-view-full-screen =
     .label = Cołki ekran
     .accesskey = C
+
+## These menu items may use the same accesskey.
+
+# This should match reader-view-enter-button in browser.ftl
+menu-view-enter-readerview =
+    .label = Wlyź do podglōndu czytanio
+    .accesskey = P
+# This should match reader-view-close-button in browser.ftl
+menu-view-close-readerview =
+    .label = Zawrzij podglōnd czytanio
+    .accesskey = P
 
 ##
 
@@ -224,24 +224,13 @@ menu-history-undo-menu =
 menu-history-undo-window-menu =
     .label = Niydowno zawarte ôkna
 
-menu-history-reopen-all-tabs = Ôdewrzij nazod wszyskie karty
-menu-history-reopen-all-windows = Ôdewrzij nazod wszyskie ôkna
-
 ## Bookmarks Menu
 
 menu-bookmarks-menu =
     .label = Zokłodki
     .accesskey = Z
-menu-bookmarks-show-all =
-    .label = Pokoż wszyskie zokłodki
-menu-bookmark-this-page =
-    .label = Przidej ta strōna do zokłodek
 menu-bookmarks-manage =
     .label = Regiyruj zokłodkami
-menu-bookmark-current-tab =
-    .label = Przidej aktualno karta do zookłodek
-menu-bookmark-edit =
-    .label = Edytuj ta zokłodka
 menu-bookmarks-all-tabs =
     .label = Przidej wszyskie karty do zokłodek…
 menu-bookmarks-toolbar =
@@ -259,15 +248,6 @@ menu-tools =
 menu-tools-downloads =
     .label = Pobiyranie
     .accesskey = P
-menu-tools-addons =
-    .label = Rozszyrzynia
-    .accesskey = R
-menu-tools-fxa-sign-in =
-    .label = Zaloguj sie do aplikacyje { -brand-product-name }…
-    .accesskey = l
-menu-tools-turn-on-sync =
-    .label = Załōncz { -sync-brand-short-name }…
-    .accesskey = n
 menu-tools-addons-and-themes =
     .label = Rozszyrzynia i motywy
     .accesskey = R
@@ -283,9 +263,6 @@ menu-tools-sync-now =
 menu-tools-fxa-re-auth =
     .label = Połōncz sie zaś z aplikacyjōm { -brand-product-name }…
     .accesskey = a
-menu-tools-web-developer =
-    .label = Do deweloperōw
-    .accesskey = w
 menu-tools-browser-tools =
     .label = Noczynia przeglōndarki
     .accesskey = N
@@ -298,17 +275,6 @@ menu-tools-page-source =
 menu-tools-page-info =
     .label = Informacyje ô strōnie
     .accesskey = I
-menu-preferences =
-    .label =
-        { PLATFORM() ->
-            [windows] Ôpcyje
-           *[other] Preferyncyje
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] O
-           *[other] n
-        }
 menu-settings =
     .label = Sztalōnki
     .accesskey =
@@ -341,21 +307,6 @@ menu-window-bring-all-to-front =
 menu-help =
     .label = Pōmoc
     .accesskey = P
-menu-help-product =
-    .label = Pōmoc aplikacyje { -brand-shorter-name }
-    .accesskey = P
-menu-help-show-tour =
-    .label = Ôkludziny po aplikacyji { -brand-shorter-name }
-    .accesskey = o
-menu-help-import-from-another-browser =
-    .label = Importuj z inkszyj przeglōndarki…
-    .accesskey = I
-menu-help-keyboard-shortcuts =
-    .label = Skrōty tastatury
-    .accesskey = T
-menu-help-troubleshooting-info =
-    .label = Ô rozwiōnzowaniu problymōw
-    .accesskey = b
 menu-get-help =
     .label = Pōmoc
     .accesskey = P
@@ -364,15 +315,9 @@ menu-help-more-troubleshooting-info =
     .accesskey = r
 menu-help-report-site-issue =
     .label = Dej znać ô problymie ze strōnōm…
-menu-help-feedback-page =
-    .label = Poślij ôpinijo
-    .accesskey = S
-menu-help-safe-mode-without-addons =
-    .label = Resztartuj z wyłōnczōnymi rozszyrzyniami…
-    .accesskey = R
-menu-help-safe-mode-with-addons =
-    .label = Resztartuj ze załōnczōnymi roszyrzyniami
-    .accesskey = R
+menu-help-share-ideas =
+    .label = Dej znać ô pōmysłach i ôpiniach…
+    .accesskey = D
 menu-help-enter-troubleshoot-mode2 =
     .label = Tryb rozwiōnzowanio problymōw…
     .accesskey = T

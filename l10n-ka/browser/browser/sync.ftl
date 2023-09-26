@@ -2,19 +2,10 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-fxa-toolbar-sync-syncing =
-    .label = სინქრონდება…
-fxa-toolbar-sync-syncing-tabs =
-    .label = ჩანართების დასინქრონება…
-
-sync-disconnect-dialog-title = გაითიშოს { -sync-brand-short-name }?
-
 fxa-toolbar-sync-syncing2 = სინქრონდება…
 
 sync-disconnect-dialog-title2 = გამოითიშოს?
 sync-disconnect-dialog-body = { -brand-product-name } შეწყვეტს სინქრონიზაციას თქვენს ანგარიშთან, თუმცა ყველა არსებული მონაცემი შენარჩუნდება ამ მოწყობილობაზე.
-fxa-disconnect-dialog-title = გაითიშოს { -brand-product-name }?
-fxa-disconnect-dialog-body = { -brand-product-name } გამოითიშება ანგარიშიდან, თუმცა ყველა არსებული მონაცემი შენარჩუნდება ამ მოწყობილობაზე.
 sync-disconnect-dialog-button = გათიშვა
 
 fxa-signout-dialog2-title = გამოითიშოს { -fxaccount-brand-name }?
@@ -30,6 +21,21 @@ fxa-menu-turn-on-sync-default = დასინქრონების ჩა�
 
 fxa-menu-connect-another-device =
     .label = სხვა მოწყობილობის დაკავშირება…
+# Variables:
+#   $tabCount (Number): The number of tabs sent to the device.
+fxa-menu-send-tab-to-device =
+    .label =
+        { $tabCount ->
+            [one] ჩანართის მოწყობილობაზე გაგზავნა
+           *[other] { $tabCount } ჩანართის მოწყობილობაზე გაგზავნა
+        }
+
+# This is shown dynamically within "Send tab to device" in fxa menu.
+fxa-menu-send-tab-to-device-syncnotready =
+    .label = მოწყობილობების დასინქრონება…
+
+# This is shown within "Send tab to device" in fxa menu if account is not configured.
+fxa-menu-send-tab-to-device-description = გაგზავნეთ ჩანართი მყისიერად ნებისმიერ მოწყობილობაზე, რომელზეც შესული ხართ.
 
 fxa-menu-sign-out =
     .label = გამოსვლა…

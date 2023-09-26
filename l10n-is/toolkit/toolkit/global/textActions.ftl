@@ -34,6 +34,10 @@ text-action-paste =
     .label = Líma
     .accesskey = L
 
+text-action-paste-no-formatting =
+    .label = Líma án sniðs
+    .accesskey = m
+
 text-action-paste-shortcut =
     .key = V
 
@@ -48,3 +52,28 @@ text-action-select-all =
 text-action-select-all-shortcut =
     .key = A
 
+text-action-spell-no-suggestions =
+    .label = Engar athugasemdir við stafsetningu
+
+text-action-spell-add-to-dictionary =
+    .label = Bæta við orðasafn
+    .accesskey = o
+
+text-action-spell-undo-add-to-dictionary =
+    .label = Afturkalla að bæta við orðasafn
+    .accesskey = k
+
+text-action-spell-check-toggle =
+    .label = Yfirfara stafsetningu
+    .accesskey = g
+
+text-action-spell-add-dictionaries =
+    .label = Bæta við orðasöfnum…
+    .accesskey = a
+
+text-action-spell-dictionaries =
+    .label = Tungumál
+    .accesskey = l
+
+text-action-search-text-box-clear =
+    .title = Clear

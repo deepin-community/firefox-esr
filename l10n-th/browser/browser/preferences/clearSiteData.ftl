@@ -2,9 +2,9 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-clear-site-data-window =
+clear-site-data-window2 =
     .title = ล้างข้อมูล
-    .style = width: 35em
+    .style = min-width: 35em
 
 clear-site-data-description = การล้างคุกกี้และข้อมูลไซต์ทั้งหมดที่จัดเก็บไว้โดย { -brand-short-name } อาจลงชื่อคุณออกจากเว็บไซต์และเอาเนื้อหาเว็บออฟไลน์ออก การล้างข้อมูลแคชจะไม่ส่งผลกระทบต่อการเข้าสู่ระบบของคุณ
 
@@ -50,14 +50,6 @@ clear-site-data-cache-empty =
     .accesskey = น
 
 clear-site-data-cache-info = จะต้องให้เว็บไซต์โหลดภาพและข้อมูลใหม่
-
-clear-site-data-cancel =
-    .label = ยกเลิก
-    .accesskey = ย
-
-clear-site-data-clear =
-    .label = ล้าง
-    .accesskey = ล
 
 clear-site-data-dialog =
     .buttonlabelaccept = ล้าง

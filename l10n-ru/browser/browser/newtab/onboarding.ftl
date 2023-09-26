@@ -3,26 +3,6 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 
-### UI strings for the simplified onboarding modal / about:welcome
-### Various strings use a non-breaking space to avoid a single dangling /
-### widowed word, so test on various window sizes if you also want this.
-
-
-## These button action text can be split onto multiple lines, so use explicit
-## newlines in translations to control where the line break appears (e.g., to
-## avoid breaking quoted text).
-
-onboarding-button-label-learn-more = Подробнее
-onboarding-button-label-get-started = Начало работы
-
-## Welcome modal dialog strings
-
-
-### UI strings for the simplified onboarding / multistage about:welcome
-### Various strings use a non-breaking space to avoid a single dangling /
-### widowed word, so test on various window sizes if you also want this.
-
-
 ### UI strings for the MR1 onboarding / multistage about:welcome
 ### Various strings use a non-breaking space to avoid a single dangling /
 ### widowed word, so test on various window sizes if you also want this.
@@ -31,126 +11,9 @@ onboarding-button-label-get-started = Начало работы
 ## Welcome page strings
 
 onboarding-welcome-header = Добро пожаловать в { -brand-short-name }
-onboarding-welcome-body = Теперь у вас есть браузер.<br/>Познакомьтесь с { -brand-product-name } поближе.
-onboarding-welcome-learn-more = Узнать больше о преимуществах.
-onboarding-welcome-modal-get-body = Теперь у вас есть браузер.<br/>Получите максимальную отдачу от { -brand-product-name }.
-onboarding-welcome-modal-supercharge-body = «Перезарядите» вашу защиту приватности.
-onboarding-welcome-modal-privacy-body = У вас уже есть браузер. Теперь давайте добавим ещё больше защиты приватности.
-onboarding-welcome-modal-family-learn-more = Узнайте больше о семействе продуктов { -brand-product-name }.
-onboarding-welcome-form-header = Начните здесь
-onboarding-join-form-body = Введите ваш адрес эл. почты, чтобы начать.
-onboarding-join-form-email =
-    .placeholder = Введите адрес эл. почты
-onboarding-join-form-email-error = Введите действующий адрес эл. почты
-onboarding-join-form-legal = Продолжая, вы соглашаетесь с <a data-l10n-name="terms">условиями предоставления услуг</a> и <a data-l10n-name="privacy">уведомлением о конфиденциальности</a>.
-onboarding-join-form-continue = Продолжить
-# This message is followed by a link using onboarding-join-form-signin ("Sign In") as text.
-onboarding-join-form-signin-label = Уже есть аккаунт?
-# Text for link to submit the sign in form
-onboarding-join-form-signin = Войти
-onboarding-start-browsing-button-label = Начать веб-сёрфинг
-onboarding-cards-dismiss =
-    .title = Скрыть
-    .aria-label = Скрыть
-
-## Welcome full page string
-
-onboarding-fullpage-welcome-subheader = Давайте узнаем, что вы можете сделать.
-onboarding-fullpage-form-email =
-    .placeholder = Ваш адрес эл. почты…
-
-## Firefox Sync modal dialog strings.
-
-onboarding-sync-welcome-header = Возьмите { -brand-product-name } с собой
-onboarding-sync-welcome-content = Получите доступ к вашим закладкам, истории, паролям и другим параметрам на всех ваших устройствах.
-onboarding-sync-welcome-learn-more-link = Узнайте больше об Аккаунтах Firefox
-onboarding-sync-form-input =
-    .placeholder = Эл. почта
-onboarding-sync-form-continue-button = Продолжить
-onboarding-sync-form-skip-login-button = Пропустить этот шаг
-
-## This is part of the line "Enter your email to continue to Firefox Sync"
-
-onboarding-sync-form-header = Введите ваш адрес электронной почты
-onboarding-sync-form-sub-header = чтобы продолжить использовать { -sync-brand-name(case: "accusative") }
-
-## These are individual benefit messages shown with an image, title and
-## description.
-
-onboarding-benefit-products-text = Делайте свои дела с помощью семейства инструментов, которое уважает вашу приватность на всех ваших устройствах.
-# "Personal Data Promise" is a concept that should be translated consistently
-# across the product. It refers to a concept shown elsewhere to the user: "The
-# Firefox Personal Data Promise is the way we honor your data in everything we
-# make and do. We take less data. We keep it safe. And we make sure that we are
-# transparent about how we use it."
-onboarding-benefit-privacy-text = Во всём, что мы делаем, мы следуем нашему Обещанию по Личным Данным: Собирать меньше. Держать в безопасности. Никаких секретов.
-onboarding-benefit-sync-title = { -sync-brand-short-name }
-onboarding-benefit-sync-text = Возьмите ваши закладки, пароли, историю и многое другое с собой, где бы вы ни использовали { -brand-product-name }.
-onboarding-benefit-monitor-title = { -monitor-brand-short-name }
-onboarding-benefit-monitor-text = Получайте уведомления, когда ваша личная информация появляется в известных утечках данных.
-onboarding-benefit-lockwise-title = { -lockwise-brand-short-name }
-onboarding-benefit-lockwise-text = Управляйте своими паролями, которые хранятся под защитой и переносимы.
-
-## These strings belong to the individual onboarding messages.
-
-
-## Each message has a title and a description of what the browser feature is.
-## Each message also has an associated button for the user to try the feature.
-## The string for the button is found above, in the UI strings section
-
-onboarding-tracking-protection-title2 = Защита от отслеживания
-onboarding-tracking-protection-text2 = { -brand-short-name } помогает остановить отслеживание ваших действий в Интернете, что затрудняет отслеживание вас рекламой в Интернете.
-onboarding-tracking-protection-button2 = Как это работает
-onboarding-data-sync-title = Возьмите свои настройки с собой
-# "Sync" is short for synchronize.
-onboarding-data-sync-text2 = Синхронизируйте ваши закладки, пароли и многое другое, где бы вы ни использовали { -brand-product-name }.
-onboarding-data-sync-button2 = Войти в { -sync-brand-short-name(case: "accusative") }
-onboarding-firefox-monitor-title = Подпишитесь на уведомления об утечках данных
-onboarding-firefox-monitor-text2 = { -monitor-brand-name } следит, не был ли ваш адрес электронной почты затронут известными утечками данных, и если да, то сразу уведомляет вас об этом.
-onboarding-firefox-monitor-button = Подписаться на уведомления
-onboarding-browse-privately-title = Сёрфите приватно
-onboarding-browse-privately-text = Приватный режим удаляет вашу историю поиска и просмотров страниц, чтобы держать её в тайне от других людей, которые используют этот компьютер.
-onboarding-browse-privately-button = Открыть приватное окно
-onboarding-firefox-send-title = Приватно обменивайтесь файлами
-onboarding-firefox-send-text2 = Загружайте свои файлы с помощью { -send-brand-name }, чтобы делиться ими со сквозным шифрованием и ограниченным сроком действия ссылки на загрузку.
-onboarding-firefox-send-button = Попробовать { -send-brand-name }
-onboarding-mobile-phone-title = Загрузите { -brand-product-name } на ваш телефон
-onboarding-mobile-phone-text = Загрузите { -brand-product-name } для iOS или Android и синхронизируйте данные между всеми своими устройствами.
-# "Mobile" is short for mobile/cellular phone, "Browser" is short for web
-# browser.
-onboarding-mobile-phone-button = Загрузить мобильный браузер
-onboarding-send-tabs-title = Мгновенно отправляйте вкладки самому себе
-# "Send Tabs" refers to "Send Tab to Device" feature that appears when opening a
-# tab's context menu.
-onboarding-send-tabs-text2 = Легко обменивайтесь страницами между вашими устройствами, не копируя ссылки или выходя из браузера.
-onboarding-send-tabs-button = Начать использовать отправку вкладок
-onboarding-pocket-anywhere-title = Читайте и слушайте, где бы вы не находились
-onboarding-pocket-anywhere-text2 = Сохраняйте ваши любимые статьи с помощью { -pocket-brand-name } и читайте, слушайте или просматривайте их даже без Интернета в любое удобное для вас время.
-onboarding-pocket-anywhere-button = Попробовать { -pocket-brand-name }
-onboarding-lockwise-strong-passwords-title = Создавайте и храните надежные пароли
-onboarding-lockwise-strong-passwords-text = { -lockwise-brand-name } мгновенно создает надежные пароли и хранит их в одном месте.
-onboarding-lockwise-strong-passwords-button = Управляйте своими логинами
-onboarding-facebook-container-title = Установите границы для Фейсбука
-onboarding-facebook-container-text2 = { -facebook-container-brand-name } отделяет ваш профиль от всего остального, затрудняя Фейсбуку отслеживание вас для показа целевой рекламы.
-onboarding-facebook-container-button = Установить расширение
-onboarding-import-browser-settings-title = Импортируйте свои закладки, пароли и многое другое
-onboarding-import-browser-settings-text = Быстрое погружение — легко переносите сайты и настройки из Chrome.
-onboarding-import-browser-settings-button = Импортируйте данные из Chrome
-onboarding-personal-data-promise-title = Приватный по замыслу
-onboarding-personal-data-promise-text = { -brand-product-name } относится с уважением к вашим данным, используя их по минимуму, защищая их, и напрямую сообщая о том, как мы их используем.
-onboarding-personal-data-promise-button = Прочитать наше обещание
-
-## Message strings belonging to the Return to AMO flow
-
-return-to-amo-sub-header = Отлично, вы установили { -brand-short-name }
-# <icon></icon> will be replaced with the icon belonging to the extension
-#
-# Variables:
-#   $addon-name (String) - Name of the add-on
-return-to-amo-addon-header = Теперь давайте установим <icon></icon><b>{ $addon-name }.</b>
-return-to-amo-extension-button = Добавить расширение
-return-to-amo-get-started-button = Начните работу с { -brand-short-name }
+onboarding-start-browsing-button-label = Начать просмотр сети
 onboarding-not-now-button-label = Не сейчас
+mr1-onboarding-get-started-primary-button-label = Начать
 
 ## Custom Return To AMO onboarding strings
 
@@ -161,40 +24,13 @@ return-to-amo-subtitle = Отлично, вы установили { -brand-shor
 #   $addon-name (String) - Name of the add-on
 return-to-amo-addon-title = Теперь давайте установим <img data-l10n-name="icon"/> <b>{ $addon-name }</b>.
 return-to-amo-add-extension-label = Добавить расширение
+return-to-amo-add-theme-label = Добавить тему
 
-## Multistage 3-screen onboarding flow strings (about:welcome pages)
+##  Variables: $addon-name (String) - Name of the add-on to be installed
 
-# The <span data-l10n-name="zap"></span> in this string allows a "zap" underline style to be
-# automatically added to the text inside it. { -brand-short-name } should stay inside the span.
-onboarding-multistage-welcome-header = Добро пожаловать в <span data-l10n-name="zap">{ -brand-short-name }</span>
-onboarding-multistage-welcome-subtitle = Быстрый, безопасный и приватный браузер, поддерживаемый некоммерческой организацией.
-onboarding-multistage-welcome-primary-button-label = Начать настройку
-onboarding-multistage-welcome-secondary-button-label = Войти
-onboarding-multistage-welcome-secondary-button-text = Уже есть аккаунт?
-# The <span data-l10n-name="zap"></span> in this string allows a "zap" underline style to be
-# automatically added to the text inside it. "default" should stay inside the span.
-onboarding-multistage-set-default-header = Сделайте { -brand-short-name } вашим <span data-l10n-name="zap">браузером по умолчанию</span>
-onboarding-multistage-set-default-subtitle = Скорость, безопасность и конфиденциальность на всех веб-страницах.
-onboarding-multistage-set-default-primary-button-label = Установить по умолчанию
-onboarding-multistage-set-default-secondary-button-label = Не сейчас
-# The <span data-l10n-name="zap"></span> in this string allows a "zap" underline style to be
-# automatically added to the text inside it. { -brand-short-name } should stay inside the span.
-onboarding-multistage-pin-default-header = Для начала поместите <span data-l10n-name="zap">{ -brand-short-name }</span> на расстояние одного щелчка
-onboarding-multistage-pin-default-subtitle = Быстрый, безопасный и приватный просмотр страниц при каждом выходе в Интернет.
-# The "settings" here refers to "Windows 10 Settings App" and not the browser's
-onboarding-multistage-pin-default-waiting-subtitle = Выберите { -brand-short-name } в пункте «Веб-браузер», когда откроются настройки
-# The "settings" here refers to "Windows 10 Settings App" and not the browser's
-onboarding-multistage-pin-default-help-text = Это действие закрепит { -brand-short-name } на панели задач и откроет настройки
-onboarding-multistage-pin-default-primary-button-label = Сделать { -brand-short-name } моим основным браузером
-# The <span data-l10n-name="zap"></span> in this string allows a "zap" underline style to be
-# automatically added to the text inside it. "more" should stay inside the span.
-onboarding-multistage-import-header = Импортируйте свои пароли, закладки и <span data-l10n-name="zap">многое другое</span>
-onboarding-multistage-import-subtitle = Переходите с другого браузера? Вы легко можете перенести всё в { -brand-short-name }.
-onboarding-multistage-import-primary-button-label = Начать импорт
-onboarding-multistage-import-secondary-button-label = Не сейчас
-# Info displayed in the footer of import settings screen during onboarding flow.
-# This supports welcome screen showing top sites imported from the user's default browser.
-onboarding-import-sites-disclaimer = На этом устройстве были найдены следующие сайты. { -brand-short-name } не будет сохранять или синхронизировать данные из другого браузера, если только вы не решите их импортировать.
+mr1-return-to-amo-subtitle = Познакомьтесь с { -brand-short-name }
+mr1-return-to-amo-addon-title = Вы получили быстрый приватный браузер. Теперь вы можете добавить <b>{ $addon-name }</b> и сделать ещё больше с помощью { -brand-short-name }.
+mr1-return-to-amo-add-extension-label = Добавить { $addon-name }
 
 ## Multistage onboarding strings (about:welcome pages)
 
@@ -202,33 +38,10 @@ onboarding-import-sites-disclaimer = На этом устройстве были
 # Variables:
 #   $current (Int) - Number of the current page
 #   $total (Int) - Total number of pages
-onboarding-welcome-steps-indicator =
-    .aria-label = Начало работы: экран { $current } из { $total }
-# The <span data-l10n-name="zap"></span> in this string allows a "zap" underline style to be
-# automatically added to the text inside it. "look" should stay inside the span.
-onboarding-multistage-theme-header = Выберите <span data-l10n-name="zap">внешний вид</span>
-onboarding-multistage-theme-subtitle = Измените внешний вид { -brand-short-name } с помощью темы.
-onboarding-multistage-theme-primary-button-label2 = Готово
-onboarding-multistage-theme-secondary-button-label = Не сейчас
-# Automatic theme uses operating system color settings
-onboarding-multistage-theme-label-automatic = Автоматическая
-onboarding-multistage-theme-label-light = Светлая
-onboarding-multistage-theme-label-dark = Тёмная
-# "Firefox Alpenglow" here is the name of the theme, and should be kept in English.
-onboarding-multistage-theme-label-alpenglow = Firefox Alpenglow
-# "Hero Text" displayed on left side of welcome screen.
-# The "Fire" in "Fire starts here" plays on the "Fire" in "Firefox".
-# It also signals the passion users bring to Firefox, how they use
-# Firefox to pursue those passions, as well as the boldness in their
-# choice to use Firefox over a larger competitor browser.
-# An alternative title for localization is: "It starts here".
-# This text can be formatted to span multiple lines as needed.
-mr1-welcome-screen-hero-text = Firefox начинается здесь
-# Caption for background image in about:welcome. "Soraya Osorio" is the name
-# of the person and shouldn't be translated.
-# In case your language needs to adapt the nouns to a gender, Soraya is a female name (she/her).
-# You can see the picture in about:welcome in Nightly 90.
-mr1-onboarding-welcome-image-caption = Soraya Osorio — Дизайнер мебели, фанатка Firefox
+
+onboarding-welcome-steps-indicator-label =
+    .aria-label = Прогресс: шаг { $current } из { $total }
+
 # This button will open system settings to turn on prefers-reduced-motion
 mr1-onboarding-reduce-motion-button-label = Отключить анимации
 
@@ -236,153 +49,331 @@ mr1-onboarding-reduce-motion-button-label = Отключить анимации
 ## match the OS' application context menu item action where Windows uses "pin"
 ## and "taskbar" while macOS "keep" and "Dock" (proper noun).
 
-# Title used on welcome page when Firefox is not pinned
-mr1-onboarding-pin-header =
-    { PLATFORM() ->
-        [macos] Оставьте { -brand-short-name } в Dock для быстрого доступа
-       *[other] Закрепите { -brand-short-name } на панели задач для быстрого доступа
-    }
-# Primary button string used on welcome page when Firefox is not pinned.
-mr1-onboarding-pin-primary-button-label =
-    { PLATFORM() ->
-        [macos] Оставить в Dock
-       *[other] Закрепить на панели задач
-    }
-
 ## Multistage MR1 onboarding strings (about:welcome pages)
 
-# This string will be used on welcome page primary button label
-# when Firefox is both pinned and default
-mr1-onboarding-get-started-primary-button-label = Начать
-mr1-onboarding-welcome-header = Добро пожаловать в { -brand-short-name }
-mr1-onboarding-set-default-pin-primary-button-label = Сделать { -brand-short-name } моим основным браузером
-    .title = Устанавливает { -brand-short-name } в качестве браузера по умолчанию и закрепляет на панели задач
-# This string will be used on welcome page primary button label
-# when Firefox is not default but already pinned
-mr1-onboarding-set-default-only-primary-button-label = Сделать { -brand-short-name } моим браузером по умолчанию
-mr1-onboarding-set-default-secondary-button-label = Не сейчас
+# String for the Firefox Accounts button
 mr1-onboarding-sign-in-button-label = Войти
 
 ## Title, subtitle and primary button string used on set default onboarding screen
 ## when Firefox is not default browser
 
-mr1-onboarding-default-header = Сделать { -brand-short-name } браузером по умолчанию
-mr1-onboarding-default-subtitle = Поставьте на автопилот свою скорость, безопасность и приватность.
-mr1-onboarding-default-primary-button-label = Сделать браузером по умолчанию
-
 ## Multistage MR1 onboarding strings (about:welcome pages)
 
-mr1-onboarding-import-header = Возьмите всё с собой
-mr1-onboarding-import-subtitle = Импортируйте свои пароли, <br/>закладки и многое другое.
 # The primary import button label will depend on whether we can detect which browser was used to download Firefox.
 # Variables:
 #   $previous (Str) - Previous browser name, such as Edge, Chrome
 mr1-onboarding-import-primary-button-label-attribution = Импортировать из { $previous }
-# This string will be used in cases where we can't detect the previous browser name.
-mr1-onboarding-import-primary-button-label-no-attribution = Импортировать из предыдущего браузера
-mr1-onboarding-import-secondary-button-label = Не сейчас
+
 mr1-onboarding-theme-header = Сделайте его своим
 mr1-onboarding-theme-subtitle = Измените внешний вид { -brand-short-name } с помощью темы.
-mr1-onboarding-theme-primary-button-label = Сохранить тему
 mr1-onboarding-theme-secondary-button-label = Не сейчас
+
 # System theme uses operating system color settings
 mr1-onboarding-theme-label-system = Системная тема
+
 mr1-onboarding-theme-label-light = Светлая
 mr1-onboarding-theme-label-dark = Тёмная
 # "Alpenglow" here is the name of the theme, and should be kept in English.
 mr1-onboarding-theme-label-alpenglow = Alpenglow
 
-## Please make sure to split the content of the title attribute into lines whose
-## width corresponds to about 40 Latin characters, to ensure that the tooltip
-## doesn't become too long. Line breaks will be preserved when displaying the
-## tooltip.
-
+onboarding-theme-primary-button-label = Готово
 
 ## Please make sure to split the content of the title attribute into lines whose
 ## width corresponds to about 40 Latin characters, to ensure that the tooltip
 ## doesn't become too long. Line breaks will be preserved when displaying the
 ## tooltip.
-
-# Tooltip displayed on hover of automatic theme
-onboarding-multistage-theme-tooltip-automatic-2 =
-    .title =
-        Использует тему вашей операционной
-        системы для кнопок, меню и окон.
-# Input description for automatic theme
-onboarding-multistage-theme-description-automatic-2 =
-    .aria-description =
-        Использует тему вашей операционной
-        системы для кнопок, меню и окон.
-# Tooltip displayed on hover of light theme
-onboarding-multistage-theme-tooltip-light-2 =
-    .title =
-        Использует светлую тему для кнопок,
-        меню и окон.
-# Input description for light theme
-onboarding-multistage-theme-description-light =
-    .aria-description =
-        Использует светлую тему для кнопок,
-        меню и окон.
-# Tooltip displayed on hover of dark theme
-onboarding-multistage-theme-tooltip-dark-2 =
-    .title =
-        Использует тёмную тему для кнопок,
-        меню и окон.
-# Input description for dark theme
-onboarding-multistage-theme-description-dark =
-    .aria-description =
-        Использует тёмную тему для кнопок,
-        меню и окон.
-# Tooltip displayed on hover of Alpenglow theme
-onboarding-multistage-theme-tooltip-alpenglow-2 =
-    .title =
-        Использует красочный внешний вид для кнопок,
-        меню и окон.
-# Input description for Alpenglow theme
-onboarding-multistage-theme-description-alpenglow =
-    .aria-description =
-        Использует красочный внешний вид для кнопок,
-        меню и окон.
-
-## Multistage MR1 onboarding strings (MR1 about:welcome pages)
 
 # Tooltip displayed on hover of system theme
 mr1-onboarding-theme-tooltip-system =
     .title =
         Следовать теме операционной системы
         для кнопок, меню и окон.
+
 # Input description for system theme
 mr1-onboarding-theme-description-system =
     .aria-description =
         Следовать теме операционной системы
         для кнопок, меню и окон.
+
 # Tooltip displayed on hover of light theme
 mr1-onboarding-theme-tooltip-light =
     .title =
         Использовать светлую тему для кнопок,
         меню и окон.
+
 # Input description for light theme
 mr1-onboarding-theme-description-light =
     .aria-description =
         Использовать светлую тему для кнопок,
         меню и окон.
+
 # Tooltip displayed on hover of dark theme
 mr1-onboarding-theme-tooltip-dark =
     .title =
         Использовать тёмную тему для кнопок,
         меню и окон.
+
 # Input description for dark theme
 mr1-onboarding-theme-description-dark =
     .aria-description =
         Использовать тёмную тему для кнопок,
         меню и окон.
+
 # Tooltip displayed on hover of Alpenglow theme
 mr1-onboarding-theme-tooltip-alpenglow =
     .title =
         Использовать динамическую, красочную тему для кнопок,
         меню и окон.
+
 # Input description for Alpenglow theme
 mr1-onboarding-theme-description-alpenglow =
     .aria-description =
         Использовать динамическую, красочную тему для кнопок,
         меню и окон.
+
+# Selector description for default themes
+mr2-onboarding-default-theme-label = Посмотреть темы по умолчанию.
+
+## Strings for Thank You page
+
+mr2-onboarding-thank-you-header = Спасибо, что выбрали нас
+mr2-onboarding-thank-you-text = { -brand-short-name } 一 независимый браузер, поддерживаемый некоммерческой организацией. Вместе мы делаем Интернет более безопасным, здоровым и приватным.
+mr2-onboarding-start-browsing-button-label = Начать просмотр сети
+
+## Multistage live language reloading onboarding strings (about:welcome pages)
+##
+## The following language names are generated by the browser's Intl.DisplayNames API.
+##
+## Variables:
+##   $negotiatedLanguage (String) - The name of the langpack's language, e.g. "Español (ES)"
+
+
+## Multistage live language reloading onboarding strings (about:welcome pages)
+##
+## The following language names are generated by the browser's Intl.DisplayNames API.
+##
+## Variables:
+##   $negotiatedLanguage (String) - The name of the langpack's language, e.g. "Español (ES)"
+##   $systemLanguage (String) - The name of the system language, e.g "Español (ES)"
+##   $appLanguage (String) - The name of the language shipping in the browser build, e.g. "English (EN)"
+
+onboarding-live-language-header = Выберите свой язык
+
+mr2022-onboarding-live-language-text = { -brand-short-name } говорит на вашем языке
+
+mr2022-language-mismatch-subtitle = Благодаря нашему сообществу { -brand-short-name } переведён более чем на 90 языков. Похоже, что ваша система использует { $systemLanguage }, а { -brand-short-name } использует { $appLanguage }.
+
+onboarding-live-language-button-label-downloading = Загрузка языкового пакета для { $negotiatedLanguage }…
+onboarding-live-language-waiting-button = Получение доступных языков…
+onboarding-live-language-installing = Установка языкового пакета для { $negotiatedLanguage }…
+
+mr2022-onboarding-live-language-switch-to = Переключиться на { $negotiatedLanguage }
+mr2022-onboarding-live-language-continue-in = Продолжить на { $appLanguage }
+
+onboarding-live-language-secondary-cancel-download = Отмена
+onboarding-live-language-skip-button-label = Пропустить
+
+## Firefox 100 Thank You screens
+
+# "Hero Text" displayed on left side of welcome screen. This text can be
+# formatted to span multiple lines as needed. The <span data-l10n-name="zap">
+# </span> in this string allows a "zap" underline style to be automatically
+# added to the text inside it. "Yous" should stay inside the zap span, but
+# "Thank" can be put inside instead if there's no "you" in the translation.
+# The English text would normally be "100 Thank-Yous" i.e., plural noun, but for
+# aesthetics of splitting it across multiple lines, the hyphen is omitted.
+fx100-thank-you-hero-text =
+    100
+    <span data-l10n-name="zap">благодарностей</span>
+fx100-thank-you-subtitle = Это наш 100-й выпуск! Спасибо, что помогаете нам создавать лучший и более здоровый Интернет.
+fx100-thank-you-pin-primary-button-label =
+    { PLATFORM() ->
+        [macos] Оставьте { -brand-short-name } в Dock
+       *[other] Закрепите { -brand-short-name } на панели задач
+    }
+
+fx100-upgrade-thanks-header = 100 благодарностей
+# Message shown with a start-browsing button. Emphasis <em> should be for "you"
+# but "Thank" can be used instead if there's no "you" in the translation.
+fx100-upgrade-thank-you-body = Это наш 100-й выпуск { -brand-short-name }. Спасибо <em>Вам</em> за помощь в создании лучшего и более здорового Интернета.
+# Message shown with either a pin-to-taskbar or set-default button.
+fx100-upgrade-thanks-keep-body = Это наш 100-й выпуск! Спасибо, что являетесь частью нашего сообщества. Держите { -brand-short-name } под рукой для следующих 100.
+
+mr2022-onboarding-secondary-skip-button-label = Пропустить этот шаг
+
+## MR2022 New User Easy Setup screen strings
+
+# Primary button string used on new user onboarding first screen showing multiple actions such as Set Default, Import from previous browser.
+mr2022-onboarding-easy-setup-primary-button-label = Сохранить и продолжить
+# Set Default action checkbox label used on new user onboarding first screen
+mr2022-onboarding-easy-setup-set-default-checkbox-label = Установить { -brand-short-name } своим браузером по умолчанию
+# Import action checkbox label used on new user onboarding first screen
+mr2022-onboarding-easy-setup-import-checkbox-label = Импортировать из предыдущего браузера
+
+## MR2022 New User Pin Firefox screen strings
+
+# Title used on about:welcome for new users when Firefox is not pinned.
+# In this context, open up is synonymous with "Discover".
+# The metaphor is that when they open their Firefox browser, it helps them discover an amazing internet.
+# If this translation does not make sense in your language, feel free to use the word "discover."
+mr2022-onboarding-welcome-pin-header = Откройте для себя удивительный интернет
+# Subtitle is used on onboarding page for new users page when Firefox is not pinned
+mr2022-onboarding-welcome-pin-subtitle = Запускайте { -brand-short-name } из любого места одним щелчком мыши. Каждый раз, когда вы это делаете, вы выбираете более открытый и независимый Интернет.
+# Primary button string used on welcome page for when Firefox is not pinned.
+mr2022-onboarding-pin-primary-button-label =
+    { PLATFORM() ->
+        [macos] Добавьте { -brand-short-name } в Dock
+       *[other] Закрепите { -brand-short-name } на панели задач
+    }
+# Subtitle will be used when user already has Firefox pinned, but
+# has not set it as their default browser.
+# When translating "zip", please feel free to pick a verb that signifies movement and/or exploration
+# and makes sense in the context of navigating the web.
+mr2022-onboarding-set-default-only-subtitle = Начните с браузера, поддерживаемого некоммерческой организацией. Мы защищаем вашу приватность, пока вы путешествуете по Интернету.
+
+## MR2022 Existing User Pin Firefox Screen Strings
+
+# Title used on multistage onboarding page for existing users when Firefox is not pinned
+mr2022-onboarding-existing-pin-header = Спасибо, что полюбили { -brand-product-name }
+# Subtitle is used on onboarding page for existing users when Firefox is not pinned
+mr2022-onboarding-existing-pin-subtitle = Запустите более здоровый Интернет из любого места одним щелчком мыши. Наше последнее обновление наполнено новыми возможностями, которые, как мы думаем, вам понравятся.
+# Subtitle will be used on the welcome screen for existing users
+# when they already have Firefox pinned but not set as default
+mr2022-onboarding-existing-set-default-only-subtitle = Используйте браузер, который защищает вашу приватность, пока вы путешествуете по Интернету. Наше последнее обновление наполнено возможностями, которые вам понравятся.
+mr2022-onboarding-existing-pin-checkbox-label = Также добавьте приватный просмотр { -brand-short-name }
+
+## MR2022 New User Set Default screen strings
+
+# This string is the title used when the user already has pinned the browser, but has not set default.
+mr2022-onboarding-set-default-title = Сделайте { -brand-short-name } своим браузером по умолчанию
+mr2022-onboarding-set-default-primary-button-label = Установите { -brand-short-name } своим браузером по умолчанию
+# When translating "zip", please feel free to pick a verb that signifies movement and/or exploration
+# and makes sense in the context of navigating the web.
+mr2022-onboarding-set-default-subtitle = Используйте браузер, поддерживаемый некоммерческой организацией. Мы защищаем вашу приватность, пока вы путешествуете по Интернету.
+
+## MR2022 Get Started screen strings.
+## These strings will be used on the welcome page
+## when Firefox is already set to default and pinned.
+
+# When translating "zip", please feel free to pick a verb that signifies movement and/or exploration
+# and makes sense in the context of navigating the web.
+mr2022-onboarding-get-started-primary-subtitle = Наша последняя версия создана специально для вас, что делает путешествия по Интернету проще, чем когда-либо. Она наполнена функциями, которые, как мы думаем, вам понравятся.
+mr2022-onboarding-get-started-primary-button-label = Настроить за считанные секунды
+
+## MR2022 Import Settings screen strings
+
+mr2022-onboarding-import-header = Молниеносная настройка
+mr2022-onboarding-import-subtitle = Настройте { -brand-short-name } так, как вам нравится. Добавьте свои закладки, пароли и многое другое из старого браузера.
+mr2022-onboarding-import-primary-button-label-no-attribution = Импортировать из предыдущего браузера
+
+## If your language uses grammatical genders, in the description for the
+## colorway feel free to switch from "You are a X. You…" (e.g. "You are a
+## Playmaker. You create…") to "X: you…" ("Playmaker: You create…"). This might
+## help creating a more inclusive translation.
+
+mr2022-onboarding-colorway-title = Выберите цвет, который вас вдохновляет
+mr2022-onboarding-colorway-subtitle = Независимые голоса могут изменить культуру.
+mr2022-onboarding-colorway-primary-button-label-continue = Установить и продолжить
+mr2022-onboarding-existing-colorway-checkbox-label = Сделайте { -firefox-home-brand-name(case: "accusative") } красочной домашней страницей
+
+mr2022-onboarding-colorway-label-default = По умолчанию
+mr2022-onboarding-colorway-tooltip-default2 =
+    .title = Текущие цвета { -brand-short-name }
+mr2022-onboarding-colorway-description-default = <b>Использовать мои текущие цвета { -brand-short-name }.</b>
+
+mr2022-onboarding-colorway-label-playmaker = Создатель игр
+mr2022-onboarding-colorway-tooltip-playmaker2 =
+    .title = Создатель игр (красный)
+mr2022-onboarding-colorway-description-playmaker = <b>Вы — Создатель игр.</b> Вы создаёте возможности победить и помогаете всем вокруг поднять их игру на новый уровень.
+
+mr2022-onboarding-colorway-label-expressionist = Экспрессионист
+mr2022-onboarding-colorway-tooltip-expressionist2 =
+    .title = Экспрессионист (желтый)
+mr2022-onboarding-colorway-description-expressionist = <b>Вы — Экспрессионист.</b> Вы видите мир иначе, а ваши творения поражают остальных.
+
+mr2022-onboarding-colorway-label-visionary = Провидец
+mr2022-onboarding-colorway-tooltip-visionary2 =
+    .title = Провидец (зеленый)
+mr2022-onboarding-colorway-description-visionary = <b>Вы — Провидец.</b> Вы ставите под сомнение статус-кво и побуждаете остальных представлять лучшее будущее.
+
+mr2022-onboarding-colorway-label-activist = Активист
+mr2022-onboarding-colorway-tooltip-activist2 =
+    .title = Активист (синий)
+mr2022-onboarding-colorway-description-activist = <b>Вы — Активист.</b> Вы делаете мир лучше и ведёте за собой остальных.
+
+mr2022-onboarding-colorway-label-dreamer = Мечтатель
+mr2022-onboarding-colorway-tooltip-dreamer2 =
+    .title = Мечтатель (фиолетовый)
+mr2022-onboarding-colorway-description-dreamer = <b>Вы — Мечтатель.</b> Вы верите, что удача любит смелых, и вдохновляете других быть отважнее.
+
+mr2022-onboarding-colorway-label-innovator = Новатор
+mr2022-onboarding-colorway-tooltip-innovator2 =
+    .title = Новатор (оранжевый)
+mr2022-onboarding-colorway-description-innovator = <b>Вы — Новатор.</b> Вы везде видите возможности и влияете на жизнь всех вокруг.
+
+## MR2022 Multistage Mobile Download screen strings
+
+mr2022-onboarding-mobile-download-title = Переходите с ноутбука на телефон и обратно
+mr2022-onboarding-mobile-download-subtitle = Возьмите вкладки с одного устройства, и продолжайте с того места, на котором остановились, на другом. Также синхронизируйте свои закладки и пароли везде, где вы используете { -brand-product-name }.
+mr2022-onboarding-mobile-download-cta-text = Отсканируйте QR-код, чтобы загрузить { -brand-product-name } для мобильных устройств, или <a data-l10n-name="download-label">отправьте себе ссылку для загрузки.</a>
+mr2022-onboarding-no-mobile-download-cta-text = Отсканируйте QR-код, чтобы загрузить { -brand-product-name } на смартфон.
+
+## MR2022 Upgrade Dialog screens
+## Pin private window screen shown only for users who don't have Firefox private pinned
+
+mr2022-upgrade-onboarding-pin-private-window-header = Получите свободу приватного просмотра сети одним щелчком
+mr2022-upgrade-onboarding-pin-private-window-subtitle = Никаких сохранённых кук или истории, прямо с вашего рабочего стола. Сёрфите так, как будто никто не смотрит.
+mr2022-upgrade-onboarding-pin-private-window-primary-button-label =
+    { PLATFORM() ->
+        [macos] Добавить приватный просмотр { -brand-short-name } в Dock
+       *[other] Закрепить приватный просмотр { -brand-short-name } на панели задач
+    }
+
+## MR2022 Privacy Segmentation screen strings
+
+mr2022-onboarding-privacy-segmentation-title = Мы всегда уважаем вашу приватность
+mr2022-onboarding-privacy-segmentation-subtitle = Мы постоянно работаем над созданием лучшего и более индивидуального { -brand-product-name }, от интеллектуальных предложений до более умного поиска.
+mr2022-onboarding-privacy-segmentation-text-cta = Что вы хотите видеть, когда мы предлагаем новые функции, которые используют ваши данные для улучшения веб-сёрфинга?
+mr2022-onboarding-privacy-segmentation-button-primary-label = Использовать рекомендации { -brand-product-name }
+mr2022-onboarding-privacy-segmentation-button-secondary-label = Показать подробную информацию
+
+## MR2022 Multistage Gratitude screen strings
+
+mr2022-onboarding-gratitude-title = Вы помогаете нам сделать Интернет лучше
+mr2022-onboarding-gratitude-subtitle = Благодарим вас за использование { -brand-short-name }, поддерживаемого Mozilla Foundation. С вашей поддержкой мы работаем над тем, чтобы сделать Интернет более открытым, доступным и лучшим для всех и каждого.
+mr2022-onboarding-gratitude-primary-button-label = Ознакомьтесь с новинками
+mr2022-onboarding-gratitude-secondary-button-label = Начать просмотр сети
+
+## Onboarding spotlight for infrequent users
+
+onboarding-infrequent-import-title = Чувствуйте себя как дома
+onboarding-infrequent-import-subtitle = Неважно, надолго вы здесь или только заглянули, помните, что можете импортировать закладки, пароли и другую информацию.
+onboarding-infrequent-import-primary-button = Импорт в { -brand-short-name }
+
+## MR2022 Illustration alt tags
+## Descriptive tags for illustrations used by screen readers and other assistive tech
+
+mr2022-onboarding-pin-image-alt =
+    .aria-label = Человек, работающий на ноутбуке в окружении звезд и цветов
+mr2022-onboarding-default-image-alt =
+    .aria-label = Человек, обнимающий логотип { -brand-product-name }
+mr2022-onboarding-import-image-alt =
+    .aria-label = Человек, катающийся на скейтборде с коробкой значков программ
+mr2022-onboarding-mobile-download-image-alt =
+    .aria-label = Лягушки прыгают по кувшинкам с QR-кодом для загрузки { -brand-product-name } для мобильных устройств в центре
+mr2022-onboarding-pin-private-image-alt =
+    .aria-label = Волшебная палочка заставляет логотип приватного просмотра { -brand-product-name } появиться из шляпы
+mr2022-onboarding-privacy-segmentation-image-alt =
+    .aria-label = Рукопожатие светлокожей и темнокожей рук
+mr2022-onboarding-gratitude-image-alt =
+    .aria-label = Вид на закат через окно с лисой и комнатным растением на подоконнике
+mr2022-onboarding-colorways-image-alt =
+    .aria-label = Баллончик с краской рисует красочный коллаж из зеленого глаза, оранжевой обуви, красного баскетбольного мяча, фиолетовых наушников, синего сердца и желтой короны
+
+## Device migration onboarding
+
+onboarding-device-migration-image-alt =
+    .aria-label = Лиса на экране машет рукой — к ноутбуку подключена мышь.
+onboarding-device-migration-title = С возвращением!
+onboarding-device-migration-subtitle = Войдите в свой { -fxaccount-brand-name(case: "accusative") }, чтобы перенести закладки, пароли и историю на ваше новое устройство.
+onboarding-device-migration-primary-button-label = Войти

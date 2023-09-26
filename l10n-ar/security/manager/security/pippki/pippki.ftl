@@ -6,9 +6,6 @@ password-quality-meter = مقياس جودة كلمة السرّ
 
 ## Change Password dialog
 
-change-password-window =
-    .title = غيّر كلمة السرّ الرئيسيّة
-
 # Variables:
 # $tokenName (String) - Security device of the change password dialog
 change-password-token = جهاز الأمن: { $tokenName }
@@ -16,25 +13,18 @@ change-password-old = كلمة السرّ الحاليّة:
 change-password-new = كلمة السرّ الجّديدة:
 change-password-reenter = كلمة السرّ الجّديدة (مرّة ثانية):
 
-## Reset Password dialog
-
-reset-password-window =
-    .title = صفّر كلمة السرّ الرّئيسية
-    .style = width: 40em
-
 pippki-incorrect-pw = لم تُدخل كلمة السر الرئيسية الصحيحة. رجاءً أعِد المحاولة.
 
 ## Reset Primary Password dialog
 
 reset-password-button-label =
     .label = صفّر
-reset-password-text = إذا صفّرت كلمة السرّ الرئيسية، ستُنسى كلّ كلمات سرّ البريد الإلكتروني و وِب، وبيانات الاستمارات، والشّهادات الشّخصيّة، والمفاتيح السرّية المخزّنة. متأكّد أنّك تريد إعادة ضبط كلمة السرّ الرّئيسية؟
 
 ## Downloading cert dialog
 
-download-cert-window =
+download-cert-window2 =
     .title = يجري تنزيل الشّهادات
-    .style = width: 46em
+    .style = min-width: 46em
 download-cert-message = يُطلب منك الوثوق بسلطة شهادات جديدة.
 download-cert-trust-ssl =
     .label = ثِق في سلطة الشّهادات هذه لتعريف مواقع وِب.
@@ -66,7 +56,5 @@ set-password-reminder = هامّ: إذا نسيت كلمة سرّ النّسخة
 
 ## Protected Auth dialog
 
-protected-auth-window =
-    .title = استيثاق علامة محمية
-protected-auth-msg = من فضلك استوثق من هذه العلامة. تعتمد طريقة الاستيثاق على نوع علامتك.
-protected-auth-token = علامة:
+## Protected authentication alert
+

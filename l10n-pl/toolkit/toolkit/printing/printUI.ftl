@@ -16,6 +16,9 @@ printui-sheets-count =
     }
 
 printui-page-range-all = Wszystkie
+printui-page-range-current = Bieżąca
+printui-page-range-odd = Nieparzyste
+printui-page-range-even = Parzyste
 printui-page-range-custom = Wybrane
 printui-page-range-label = Strony
 printui-page-range-picker =
@@ -58,8 +61,6 @@ printui-two-sided-printing-short-edge = Obróć wzdłuż krótkiej krawędzi
 printui-options = Opcje
 printui-headers-footers-checkbox = Drukuj nagłówki i stopki
 printui-backgrounds-checkbox = Drukuj tła
-
-printui-selection-checkbox = Drukuj tylko zaznaczenie
 
 ## The "Format" section, select a version of the website to print. Radio
 ## options to select between the original page, selected text only, or a version

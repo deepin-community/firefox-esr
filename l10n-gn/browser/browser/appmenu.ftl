@@ -5,18 +5,20 @@
 
 ## App Menu
 
-appmenuitem-update-banner3 =
-    .label-update-downloading = Amboguejy { -brand-shorter-name } ñembohekopyahu
-    .label-update-available = Eipurukuaáma ñembohekopyahu — Emboguejy ko’ág̃a
-    .label-update-manual = Eipurukuaáma ñembohekopyahu — Emboguejy ko’ág̃a
-    .label-update-unsupported = Ndaikatúi embohekopyahu — ndojokupytýi apopyvusu
-    .label-update-restart = Eipurukuaáma ñembohekopyahu — Emoñepyrũjey ko’ág̃a
+appmenuitem-banner-update-downloading =
+    .label = Amboguejy { -brand-shorter-name } ñembohekopyahu
 
-appmenuitem-protection-dashboard-title = Ñemo’ãha renda
-appmenuitem-customize-mode =
-    .label = Ñemomba’e…
+appmenuitem-banner-update-available =
+    .label = Eipurukuaáma ñembohekopyahu — Emboguejy ko’ág̃a
 
-## Zoom Controls
+appmenuitem-banner-update-manual =
+    .label = Eipurukuaáma ñembohekopyahu — Emboguejy ko’ág̃a
+
+appmenuitem-banner-update-unsupported =
+    .label = Ndaikatúi embohekopyahu — ndojokupytýi apopyvusu
+
+appmenuitem-banner-update-restart =
+    .label = Eipurukuaáma ñembohekopyahu — Emoñepyrũjey ko’ág̃a
 
 appmenuitem-new-tab =
     .label = Tendayke pyahu
@@ -24,14 +26,26 @@ appmenuitem-new-window =
     .label = Ovetã pyahu
 appmenuitem-new-private-window =
     .label = Ovetã ñemi pyahu
+appmenuitem-history =
+    .label = Tembiasakue
+appmenuitem-downloads =
+    .label = Ñemboguejy
 appmenuitem-passwords =
     .label = Ñe’ẽñemi
 appmenuitem-addons-and-themes =
     .label = Moĩmbaha ha Téma
+appmenuitem-print =
+    .label = Mbokuatia…
 appmenuitem-find-in-page =
     .label = Kuatiaroguépe jejuhu…
+appmenuitem-translate =
+    .label = Emoñe’ẽasa kuatiarogue…
+appmenuitem-zoom =
+    .value = Tuichakue
 appmenuitem-more-tools =
     .label = Tembipuruve
+appmenuitem-help =
+    .label = Pytyvõ
 appmenuitem-exit2 =
     .label =
         { PLATFORM() ->
@@ -56,21 +70,41 @@ appmenuitem-zoom-enlarge =
     .label = Moag̃ui
 appmenuitem-zoom-reduce =
     .label = Momombyry
-
 appmenuitem-fullscreen =
     .label = Mba’erechaha tuichavéva
 
 ## Firefox Account toolbar button and Sync panel in App menu.
-
-fxa-toolbar-sync-now =
-    .label = Embojuehe ko’ág̃a
 
 appmenu-remote-tabs-sign-into-sync =
     .label = Eike embojuehe hag̃ua…
 appmenu-remote-tabs-turn-on-sync =
     .label = Emyandy Ñembojuehe…
 
+# This is shown after the tabs list if we can display more tabs by clicking on the button
+appmenu-remote-tabs-showmore =
+    .label = Ehechaukave tendayke
+    .tooltiptext = Ehechaukave tendayke ko mba’e’oka pegua
+
+# This is shown beneath the name of a device when that device has no open tabs
+appmenu-remote-tabs-notabs = Ndaipóri tendayke ijurujáva
+
+# This is shown when Sync is configured but syncing tabs is disabled.
+appmenu-remote-tabs-tabsnotsyncing = Emyendy tendayke mbojueheha ehecha hag̃ua peteĩ tendayke rysýi ambue ne mba’e’oka peguáva.
+
+appmenu-remote-tabs-opensettings =
+    .label = Ñemboheko
+
+# This is shown when Sync is configured but this appears to be the only device attached to
+# the account. We also show links to download Firefox for android/ios.
+appmenu-remote-tabs-noclients = Ehechasépa tendaykekuéra ambue mba’e’okaguáva ko’ápe?
+
+appmenu-remote-tabs-connectdevice =
+    .label = Embojoaju Ambue Mba’e’oka
+appmenu-remote-tabs-welcome = Ehecha tendayke rysýi ambue ne mba’e’okagua.
+appmenu-remote-tabs-unverified = Tekotevẽ ñemboaje ne mba’ete.
+
 appmenuitem-fxa-toolbar-sync-now2 = Embojuehe ko’ág̃a
+appmenuitem-fxa-sign-in = Eike { -brand-product-name }
 appmenuitem-fxa-manage-account = Mba’ete Ñangarekoha
 appmenu-fxa-header2 = { -fxaccount-brand-name }
 # Variables
@@ -82,7 +116,6 @@ appmenu-fxa-sync-and-save-data2 = Embojuehe ha eñongatu mba’ekuaarã
 appmenu-fxa-signed-in-label = Tembiapo ñepyrũ
 appmenu-fxa-setup-sync =
     .label = Emyandy ñembojuehe…
-appmenu-fxa-show-more-tabs = Ehechaukave tendayke
 
 appmenuitem-save-page =
     .label = Ñongatu pyahu…
@@ -101,8 +134,19 @@ whatsnew-panel-footer-checkbox =
 ## performance profiles. To enable it go to profiler.firefox.com and click
 ## "Enable Profiler Menu Button".
 
-profiler-popup-title =
-    .value = { -profiler-brand-name }
+profiler-popup-button-idle =
+    .label = Mbohapeha
+    .tooltiptext = Eñongatu mba’ete apopyre rehegua
+
+profiler-popup-button-recording =
+    .label = Mbohapeha
+    .tooltiptext = Mbohapeha oñongatu mba’ete
+
+profiler-popup-button-capturing =
+    .label = Mbohapeha
+    .tooltiptext = Mbohapeha ojapyhy mba’ete
+
+profiler-popup-header-text = { -profiler-brand-name }
 
 profiler-popup-reveal-description-button =
     .aria-label = Eguenohẽve marandu
@@ -112,24 +156,17 @@ profiler-popup-description-title =
 
 profiler-popup-description = Eipytyvõ tembiapo apañuãi ehechaukávo mba’etekuéra omoherakuãvo ne mohendahápe g̃uarã.
 
-profiler-popup-learn-more = Kuaave
+profiler-popup-learn-more-button =
+    .label = Kuaave
 
 profiler-popup-settings =
     .value = Ñemboheko
 
 # This link takes the user to about:profiling, and is only visible with the Custom preset.
-profiler-popup-edit-settings = Ñemboheko mbosako’i…
-
-profiler-popup-disabled =
-    Pe mbohapeha ndojepurukuaái ko’ag̃aite, ikatúre oguereko kundaha ñemi rovetã
-    ijurujavahína.
+profiler-popup-edit-settings-button =
+    .label = Ñemboheko mbosako’i…
 
 profiler-popup-recording-screen = Jehechapaite…
-
-# The profiler presets list is generated elsewhere, but the custom preset is defined
-# here only.
-profiler-popup-presets-custom =
-    .label = Ñemomba’epyre
 
 profiler-popup-start-recording-button =
     .label = Eñepyrũ ñe’ẽñongatu
@@ -152,13 +189,51 @@ profiler-popup-capture-shortcut =
        *[other] Ctrl+Shift+2
     }
 
+## Profiler presets
+## They are shown in the popup's select box.
+
+
+# Presets and their l10n IDs are defined in the file
+# devtools/client/performance-new/popup/background.jsm.js
+# Please take care that the same values are also defined in devtools' perftools.ftl.
+
+
+# Presets and their l10n IDs are defined in the file
+# devtools/client/performance-new/shared/background.jsm.js
+# Please take care that the same values are also defined in devtools' perftools.ftl.
+
+profiler-popup-presets-web-developer-description = Ñemboheko iporãva emopotĩ hag̃ua ñanduti tembipuru’i, nahenyhẽrasáiva.
+profiler-popup-presets-web-developer-label =
+    .label = Ñanduti Mboguatahára
+
+profiler-popup-presets-firefox-description = Tepy ypykue eipurukuaáva emoheñói hag̃ua mba’ete { -brand-shorter-name }.
+profiler-popup-presets-firefox-label =
+    .label = { -brand-shorter-name }
+
+profiler-popup-presets-graphics-description = Oñemoĩva ohapykuerereka hag̃ua ta’ãnga oiko’ỹva { -brand-shorter-name }.
+profiler-popup-presets-graphics-label =
+    .label = Ta’ãnga
+
+profiler-popup-presets-media-description2 = Oñemoĩva ohapykuerereka hag̃ua mba’epu ha ta’ãngamýi { -brand-shorter-name }.
+profiler-popup-presets-media-label =
+    .label = Momaranduha
+
+profiler-popup-presets-networking-description = Oñemoĩva ohapykuereka hag̃ua pyha apañuãi { -brand-shorter-name }-pe.
+profiler-popup-presets-networking-label =
+    .label = Pyha
+
+profiler-popup-presets-power-description = Oñemoĩva ohapykuerereka hag̃ua tendyry ndoikóirõ eipurukuévo { -brand-shorter-name }.
+# "Power" is used in the sense of energy (electricity used by the computer).
+profiler-popup-presets-power-label =
+    .label = Tendyry
+
+profiler-popup-presets-custom-label =
+    .label = Mboavapyre
+
 ## History panel
 
 appmenu-manage-history =
     .label = Tembiasakue ñangareko
-appmenu-reopen-all-tabs = Embojurujajey opaite tendayke
-appmenu-reopen-all-windows = Embojurujajey opaite ovetã
-
 appmenu-restore-session =
     .label = Tembiapopa’ũ ramovéva ñembojevy
 appmenu-clear-history =
@@ -168,6 +243,9 @@ appmenu-recently-closed-tabs =
     .label = Tendayke oñembotyramóva
 appmenu-recently-closed-windows =
     .label = Ovetã oñembotyramóva
+# This allows to search through the browser's history.
+appmenu-search-history =
+    .label = Eheka tembiasakuépe
 
 ## Help panel
 
@@ -184,9 +262,11 @@ appmenu-help-more-troubleshooting-info =
     .accesskey = T
 appmenu-help-report-site-issue =
     .label = Eikuaauka iñapañuãiha ko Tenda…
-appmenu-help-feedback-page =
-    .label = Temiandu mondo…
-    .accesskey = T
+appmenu-help-share-ideas =
+    .label = Emoherakuã ãroky ha ñe’ẽngue…
+    .accesskey = S
+appmenu-help-switch-device =
+    .label = Eva ambue mba’e’okápe
 
 ## appmenu-help-enter-troubleshoot-mode and appmenu-help-exit-troubleshoot-mode
 ## are mutually exclusive, so it's possible to use the same accesskey for both.
@@ -212,8 +292,6 @@ appmenu-help-not-deceptive =
 
 appmenu-customizetoolbar =
     .label = Emboava tembipuru renda…
-appmenu-taskmanager =
-    .label = Tembiapo ñangarekohára
 
 appmenu-developer-tools-subheader = Kundahára Rembipuru
 appmenu-developer-tools-extensions =

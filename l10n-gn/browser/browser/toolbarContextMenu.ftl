@@ -20,15 +20,6 @@ toolbar-context-menu-bookmark-selected-tabs =
 toolbar-context-menu-select-all-tabs =
     .label = Eiporavo opaite tendayke
     .accesskey = S
-toolbar-context-menu-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Emboguevi tendayke mboty
-            [one] Emboguevi tendayke mboty
-           *[other] Emboguevi tendayke mboty
-        }
-    .accesskey = U
-
 toolbar-context-menu-reopen-closed-tabs =
     .label =
         { $tabCount ->
@@ -52,18 +43,18 @@ toolbar-context-menu-report-extension =
     .label = Emomarandu jepysokue rehegua
     .accesskey = o
 
-# Can appear on the same context menu as menubarCmd ("Menu Bar") and
-# personalbarCmd ("Bookmarks Toolbar"), so they should have different
-# access keys.
+# Can appear on the same context menu as toolbar-context-menu-menu-bar-cmd
+# ("Menu Bar") and personalbarCmd ("Bookmarks Toolbar"), so they should
+# have different access keys.
 toolbar-context-menu-pin-to-overflow-menu =
     .label = Pin poravorã hembypáva pegua
     .accesskey = P
-toolbar-context-menu-auto-hide-downloads-button =
-    .label = Emokañy ijehegui tembipuru rendápe
-    .accesskey = A
 toolbar-context-menu-auto-hide-downloads-button-2 =
     .label = Eñomi votõ inandi jave
     .accesskey = H
+toolbar-context-menu-always-open-downloads-panel =
+    .label = Ehechauka ta’ãngarupa oñepyrũvo ñemboguejy
+    .accesskey = S
 toolbar-context-menu-remove-from-toolbar =
     .label = Tembipuru rendágui mboguete
     .accesskey = R
@@ -73,6 +64,11 @@ toolbar-context-menu-view-customize-toolbar =
 toolbar-context-menu-view-customize-toolbar-2 =
     .label = Emboava tembipuru renda…
     .accesskey = C
+# This is only ever shown when toolbar-context-menu-pin-to-overflow-menu
+# is hidden, so they can share access keys.
+toolbar-context-menu-pin-to-toolbar =
+    .label = Emboja tembipuru rendáre
+    .accesskey = P
 
 toolbar-context-menu-bookmarks-toolbar-always-show-2 =
     .label = Ehechauka tapiaite
@@ -87,3 +83,7 @@ toolbar-context-menu-bookmarks-toolbar-on-new-tab-2 =
 toolbar-context-menu-bookmarks-show-other-bookmarks =
     .label = Ehechauka ambue techaukaha
     .accesskey = m
+
+toolbar-context-menu-menu-bar-cmd =
+    .toolbarname = Poravorã renda
+    .accesskey = M

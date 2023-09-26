@@ -2,19 +2,22 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-addons-window =
-    .title = Administrilo de aldonaĵoj
-
 addons-page-title = Administrilo de aldonaĵoj
 
 search-header =
     .placeholder = Serĉi en addons.mozilla.org
     .searchbuttonlabel = Serĉi
 
-search-header-shortcut =
-    .key = f
+## Variables
+##   $domain - Domain name where add-ons are available (e.g. addons.mozilla.org)
 
 list-empty-get-extensions-message = Elŝutu etendaĵojn kaj etosojn el <a data-l10n-name="get-extensions">{ $domain }</a>
+
+list-empty-get-dictionaries-message = Elŝutu vortarojn el <a data-l10n-name="get-extensions">{ $domain }</a>
+
+list-empty-get-language-packs-message = Elŝutu lingvajn pakojn el <a data-l10n-name="get-extensions">{ $domain }</a>
+
+##
 
 list-empty-installed =
     .value = Vi havas neniun aldonaĵon de tiu tipo instalita
@@ -35,18 +38,6 @@ help-button = Helpo pri aldonaĵoj
 sidebar-help-button-title =
     .title = Helpo pri aldonaĵoj
 
-preferences =
-    { PLATFORM() ->
-        [windows] Preferoj de { -brand-short-name }
-       *[other] Preferoj de { -brand-short-name }
-    }
-sidebar-preferences-button-title =
-    .title =
-        { PLATFORM() ->
-            [windows] Preferoj de { -brand-short-name }
-           *[other] Preferoj de { -brand-short-name }
-        }
-
 addons-settings-button = Agordoj de { -brand-short-name }
 sidebar-settings-button-title =
     .title = Agordoj de { -brand-short-name }
@@ -57,48 +48,14 @@ show-unsigned-extensions-button =
 show-all-extensions-button =
     .label = Montri ĉiujn etendaĵojn
 
-cmd-show-details =
-    .label = Montri pli da informo
-    .accesskey = M
-
-cmd-find-updates =
-    .label = Serĉi ĝisdatigojn
-    .accesskey = S
-
-cmd-preferences =
-    .label =
-        { PLATFORM() ->
-            [windows] Preferoj
-           *[other] Preferoj
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] O
-           *[other] P
-        }
-
-cmd-enable-theme =
-    .label = Surmeti etoson
-    .accesskey = E
-
-cmd-disable-theme =
-    .label = Demeti etoson
-    .accesskey = E
-
-cmd-install-addon =
-    .label = Instali
-    .accesskey = I
-
-cmd-contribute =
-    .label = Kontribui
-    .accesskey = K
-    .tooltiptext = Kontribui al la disvolvo de tiu ĉi aldonaĵo
-
 detail-version =
     .label = Versio
 
 detail-last-updated =
     .label = Laste modifita
+
+addon-detail-description-expand = Montri pli
+addon-detail-description-collapse = Montri malpli
 
 detail-contributions-description = La programisto de tiu ĉi aldonaĵo petas al vi subteni la daŭran disvolvon per eta kontribuo.
 
@@ -225,6 +182,13 @@ addon-category-available-updates-title =
 addon-category-recent-updates = Ĵusaj ĝisdatigoj
 addon-category-recent-updates-title =
     .title = Ĵusaj ĝisdatigoj
+addon-category-sitepermission = Permesoj por retejo
+addon-category-sitepermission-title =
+    .title = Permesoj por retejo
+# String displayed in about:addons in the Site Permissions section
+# Variables:
+#  $host (string): DNS host name for which the webextension enables permissions
+addon-sitepermission-host = Retejaj permesoj por { $host }
 
 ## These are global warnings
 
@@ -235,7 +199,6 @@ extensions-warning-check-compatibility-button = Aktivigi
 extensions-warning-update-security = La kontrolado de sekurecaj ĝisdatigoj de aldonaĵoj ne estas aktiva.  Vi povus esti kompromitita de ĝisdatigoj.
 extensions-warning-update-security-button = Aktivigi
     .title = Aktivigi la kontroladon de sekurecaj ĝisdatigoj de aldonaĵoj
-
 
 ## Strings connected to add-on updates
 
@@ -348,6 +311,7 @@ install-theme-button = Instali etoson
 # the detailed add-on view is opened, from where the add-on can be managed.
 manage-addon-button = Administri
 find-more-addons = Serĉi pli da aldonaĵoj
+find-more-themes = Serĉi pli da etosoj
 
 # This is a label for the button to open the "more options" menu, it is only
 # used for screen readers.
@@ -379,7 +343,7 @@ extension-enabled-heading = Aktiva
 extension-disabled-heading = Malaktiva
 
 theme-enabled-heading = Aktiva
-theme-disabled-heading = Malaktiva
+theme-disabled-heading2 = Konservitaj etosoj
 
 plugin-enabled-heading = Aktiva
 plugin-disabled-heading = Malaktiva
@@ -390,7 +354,8 @@ dictionary-disabled-heading = Malaktiva
 locale-enabled-heading = Aktiva
 locale-disabled-heading = Malaktiva
 
-ask-to-activate-button = Demandi antaŭ ol aktivigi
+sitepermission-enabled-heading = Aktiva
+sitepermission-disabled-heading = Malaktiva
 
 always-activate-button = Ĉiam aktivigi
 never-activate-button = Neniam aktivigi
@@ -448,13 +413,15 @@ addon-detail-private-browsing-help = Se tio estas permesita, la etendaĵo havos 
 addon-detail-private-browsing-allow = Permesi
 addon-detail-private-browsing-disallow = Ne permesi
 
+## "sites with restrictions" (internally called "quarantined") are special domains
+## where add-ons are normally blocked for security reasons.
+
 ## This is the tooltip text for the recommended badges for an extension in about:addons. The
 ## badge is a small icon displayed next to an extension when it is recommended on AMO.
 
 addon-badge-recommended2 =
     .title = { -brand-product-name } nur rekomendas etendaĵojn, kiuj konformas al niaj normoj pri sekureco kaj efikeco
     .aria-label = { addon-badge-recommended2.title }
-
 # We hard code "Mozilla" in the string below because the extensions are built
 # by Mozilla and we don't want forks to display "by Fork".
 addon-badge-line3 =
@@ -473,13 +440,14 @@ release-notes-loading = Ŝargado…
 release-notes-error = Bedaŭrinde okazis eraro dum la ŝargado de la notoj pri liverado.
 
 addon-permissions-empty = Tiu ĉi etendaĵo postulas neniun permeson
-
 addon-permissions-required = Postulataj permesoj por kernaj funkcioj:
 addon-permissions-optional = Elekteblaj permesoj por aldonaj funkcioj:
 addon-permissions-learnmore = Pli da informo pri permesoj
 
 recommended-extensions-heading = Rekomenditaj etendaĵoj
 recommended-themes-heading = Rekomenditaj etosoj
+
+addon-sitepermissions-required = Ĝi donas jenajn kapablojn al <span data-l10n-name="hostname">{ $hostname }</span>:
 
 # A recommendation for the Firefox Color theme shown at the bottom of the theme
 # list view. The "Firefox Color" name itself should not be translated.
@@ -493,6 +461,7 @@ plugin-heading = Administri viajn kromprogramojn
 dictionary-heading = Administri viajn vortarojn
 locale-heading = Administri lingvojn
 updates-heading = Administri viajn ĝisdatigojn
+sitepermission-heading = Administri viajn permesojn por retejoj
 discover-heading = Personecigu vian { -brand-short-name }
 shortcuts-heading = Administri alirklavojn de etendaĵoj
 
@@ -502,3 +471,30 @@ addons-heading-search-input =
 
 addon-page-options-button =
     .title = Iloj por ĉiuj aldonaĵoj
+
+## Detail notifications
+## Variables:
+##   $name (String): name of the add-on.
+
+## Detail notifications
+## Variables:
+##   $name (string) - Name of the add-on.
+
+# Variables:
+#   $version (String): application version.
+details-notification-incompatible = { $name } estas nekongrua kun { -brand-short-name } { $version }.
+details-notification-incompatible-link = Pli da informo
+
+details-notification-unsigned-and-disabled = { $name } ne povis esti kontrolita por uzo en { -brand-short-name } kaj estis malaktivigita.
+details-notification-unsigned-and-disabled-link = Pli da informo
+
+details-notification-unsigned = { $name } ne povis esti kontrolita por uzo en { -brand-short-name }. Daŭrigu singarde.
+details-notification-unsigned-link = Pli da informo
+
+details-notification-blocked = { $name } esti blokita pro sekurecaj kaj stabilecaj problemoj.
+details-notification-blocked-link = Plia informo
+
+details-notification-softblocked = Estas konata fakto ke { $name } povas okazigi sekurecajn kaj stabilecajn problemojn.
+details-notification-softblocked-link = Plia informo
+
+details-notification-gmp-pending = { $name } estos baldaŭ instalita.

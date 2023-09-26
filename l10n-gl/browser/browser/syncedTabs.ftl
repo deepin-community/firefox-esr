@@ -7,26 +7,43 @@ synced-tabs-sidebar-noclients-subtitle = Quere ver aquí as lapelas dos outros d
 synced-tabs-sidebar-intro = Ver unha lista das lapelas dos outros dispositivos.
 synced-tabs-sidebar-unverified = Necesita comprobar a súa conta.
 synced-tabs-sidebar-notabs = Ningunha lapela aberta
-synced-tabs-sidebar-openprefs = Abrir as preferencias de { -sync-brand-short-name }
 synced-tabs-sidebar-open-settings = Abre a configuración de sincronización
 synced-tabs-sidebar-tabsnotsyncing = Active a sincronización de lapelas para ver a lista de lapelas dos outros dispositivos.
 synced-tabs-sidebar-connect-another-device = Conectar outro dispositivo
 synced-tabs-sidebar-search =
     .placeholder = Buscar nas lapelas sincronizadas
+
+## Displayed in the Synced Tabs sidebar's context menu when right-clicking tabs
+## and/or devices in the list. The "Open" strings below should be translated
+## consistently with the equivalent strings for the bookmarks manager's context
+## menu. That menu is activated by right-clicking a bookmark in the Library
+## window. The bookmarks manager context's strings are located in places.ftl.
+
 synced-tabs-context-open =
     .label = Abrir
     .accesskey = A
-synced-tabs-context-open-in-new-tab =
+synced-tabs-context-open-in-tab =
     .label = Abrir nunha nova lapela
-    .accesskey = o
-synced-tabs-context-open-in-new-window =
+    .accesskey = A
+synced-tabs-context-open-in-container-tab =
+    .label = Abrir nunha nova lapela contedora
+    .accesskey = i
+synced-tabs-context-open-in-window =
     .label = Abrir nunha nova xanela
-    .accesskey = n
-synced-tabs-context-open-in-new-private-window =
+    .accesskey = N
+synced-tabs-context-open-in-private-window =
     .label = Abrir nunha nova xanela privada
     .accesskey = p
-synced-tabs-context-bookmark-single-tab =
-    .label = Marcar esta lapela…
+
+##
+
+# Displayed in the Synced Tabs sidebar's context menu when right-clicking tabs
+# and/or devices in the list. This string is for a menuitem equivalent to one in
+# the tab context menu (activated by right-clicking a tab in the tabstrip). That
+# string is located in tabContextMenu.ftl. So, this string should be translated
+# consistently with the "Bookmark Tab…" string there.
+synced-tabs-context-bookmark =
+    .label = Marcar a lapela…
     .accesskey = M
 synced-tabs-context-copy =
     .label = Copiar
@@ -40,7 +57,5 @@ synced-tabs-context-manage-devices =
 synced-tabs-context-sync-now =
     .label = Sincronizar agora
     .accesskey = S
-fxa-sign-in = Conectarse a { -sync-brand-short-name }
-turn-on-sync = Activar { -sync-brand-short-name }
 synced-tabs-fxa-sign-in = Inicie sesión para sincronizar
 synced-tabs-turn-on-sync = Activar a sincronización

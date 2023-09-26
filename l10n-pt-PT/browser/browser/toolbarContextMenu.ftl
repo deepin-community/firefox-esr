@@ -20,15 +20,6 @@ toolbar-context-menu-bookmark-selected-tabs =
 toolbar-context-menu-select-all-tabs =
     .label = Selecionar todos os separadores
     .accesskey = S
-toolbar-context-menu-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Reabrir separador fechado
-            [one] Reabrir separador fechado
-           *[other] Reabrir separadores fechados
-        }
-    .accesskey = b
-
 toolbar-context-menu-reopen-closed-tabs =
     .label =
         { $tabCount ->
@@ -52,18 +43,18 @@ toolbar-context-menu-report-extension =
     .label = Reportar extensão
     .accesskey = o
 
-# Can appear on the same context menu as menubarCmd ("Menu Bar") and
-# personalbarCmd ("Bookmarks Toolbar"), so they should have different
-# access keys.
+# Can appear on the same context menu as toolbar-context-menu-menu-bar-cmd
+# ("Menu Bar") and personalbarCmd ("Bookmarks Toolbar"), so they should
+# have different access keys.
 toolbar-context-menu-pin-to-overflow-menu =
     .label = Afixar ao menu de excesso
     .accesskey = A
-toolbar-context-menu-auto-hide-downloads-button =
-    .label = Ocultar automaticamente na barra de ferramentas
-    .accesskey = a
 toolbar-context-menu-auto-hide-downloads-button-2 =
     .label = Ocultar botão quando vazio
     .accesskey = z
+toolbar-context-menu-always-open-downloads-panel =
+    .label = Mostrar painel quando a transferência começar
+    .accesskey = M
 toolbar-context-menu-remove-from-toolbar =
     .label = Remover da barra de ferramentas
     .accesskey = R
@@ -72,6 +63,11 @@ toolbar-context-menu-view-customize-toolbar =
     .accesskey = P
 toolbar-context-menu-view-customize-toolbar-2 =
     .label = Personalizar barra de ferramentas…
+    .accesskey = f
+# This is only ever shown when toolbar-context-menu-pin-to-overflow-menu
+# is hidden, so they can share access keys.
+toolbar-context-menu-pin-to-toolbar =
+    .label = Afixar na barra de ferramentas
     .accesskey = f
 
 toolbar-context-menu-bookmarks-toolbar-always-show-2 =
@@ -87,3 +83,7 @@ toolbar-context-menu-bookmarks-toolbar-on-new-tab-2 =
 toolbar-context-menu-bookmarks-show-other-bookmarks =
     .label = Mostrar outros marcadores
     .accesskey = r
+
+toolbar-context-menu-menu-bar-cmd =
+    .toolbarname = Barra de menu
+    .accesskey = m

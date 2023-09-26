@@ -20,14 +20,6 @@ toolbar-context-menu-bookmark-selected-tabs =
 toolbar-context-menu-select-all-tabs =
     .label = 모든 탭 선택
     .accesskey = S
-toolbar-context-menu-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] 닫은 탭 다시 열기
-           *[other] 닫은 탭 다시 열기
-        }
-    .accesskey = U
-
 toolbar-context-menu-reopen-closed-tabs =
     .label =
         { $tabCount ->
@@ -50,18 +42,18 @@ toolbar-context-menu-report-extension =
     .label = 확장 기능 신고
     .accesskey = o
 
-# Can appear on the same context menu as menubarCmd ("Menu Bar") and
-# personalbarCmd ("Bookmarks Toolbar"), so they should have different
-# access keys.
+# Can appear on the same context menu as toolbar-context-menu-menu-bar-cmd
+# ("Menu Bar") and personalbarCmd ("Bookmarks Toolbar"), so they should
+# have different access keys.
 toolbar-context-menu-pin-to-overflow-menu =
-    .label = 더보기 메뉴에 고정
+    .label = 도구 더보기 메뉴에 고정
     .accesskey = P
-toolbar-context-menu-auto-hide-downloads-button =
-    .label = 도구 모음에서 자동 숨김
-    .accesskey = A
 toolbar-context-menu-auto-hide-downloads-button-2 =
     .label = 비어있을 때 버튼 숨기기
     .accesskey = H
+toolbar-context-menu-always-open-downloads-panel =
+    .label = 다운로드 시작 시 패널 표시
+    .accesskey = S
 toolbar-context-menu-remove-from-toolbar =
     .label = 도구 모음에서 제거
     .accesskey = R
@@ -71,6 +63,11 @@ toolbar-context-menu-view-customize-toolbar =
 toolbar-context-menu-view-customize-toolbar-2 =
     .label = 도구 모음 사용자 지정…
     .accesskey = C
+# This is only ever shown when toolbar-context-menu-pin-to-overflow-menu
+# is hidden, so they can share access keys.
+toolbar-context-menu-pin-to-toolbar =
+    .label = 도구 모음에 고정
+    .accesskey = P
 
 toolbar-context-menu-bookmarks-toolbar-always-show-2 =
     .label = 항상 표시
@@ -85,3 +82,7 @@ toolbar-context-menu-bookmarks-toolbar-on-new-tab-2 =
 toolbar-context-menu-bookmarks-show-other-bookmarks =
     .label = 기타 북마크 표시
     .accesskey = h
+
+toolbar-context-menu-menu-bar-cmd =
+    .toolbarname = 메뉴 모음
+    .accesskey = M

@@ -16,8 +16,8 @@ downloads-panel =
 # The style attribute has the width of the Downloads Panel expressed using
 # a CSS unit. The longest labels that should fit are usually those of
 # in-progress and blocked downloads.
-downloads-panel-list =
-    .style = width: 70ch
+downloads-panel-items =
+    .style = width: 35em
 
 downloads-cmd-pause =
     .label = Pausar
@@ -30,42 +30,65 @@ downloads-cmd-cancel =
 downloads-cmd-cancel-panel =
     .aria-label = Cancelar
 
-# This message is only displayed on Windows and Linux devices
-downloads-cmd-show-menuitem =
-    .label = Abrir pasta
-    .accesskey = r
+downloads-cmd-show-menuitem-2 =
+    .label =
+        { PLATFORM() ->
+            [macos] Mostrar no Finder
+           *[other] Mostrar na pasta
+        }
+    .accesskey = M
 
-# This message is only displayed on macOS devices
-downloads-cmd-show-menuitem-mac =
-    .label = Mostrar no Finder
-    .accesskey = F
+## Displayed in the downloads context menu for files that can be opened.
+## Variables:
+##   $handler (String) - The name of the mime type's default file handler.
+##   Example: "Notepad", "Acrobat Reader DC", "7-Zip File Manager"
 
 downloads-cmd-use-system-default =
     .label = Abrir no visor do sistema
     .accesskey = v
+# This version is shown when the download's mime type has a valid file handler.
+downloads-cmd-use-system-default-named =
+    .label = Abrir no { $handler }
+    .accesskey = i
 
+# We can use the same accesskey as downloads-cmd-always-open-similar-files.
+# Both should not be visible in the downloads context menu at the same time.
 downloads-cmd-always-use-system-default =
     .label = Sempre abrir no visor do sistema
     .accesskey = m
+# We can use the same accesskey as downloads-cmd-always-open-similar-files.
+# Both should not be visible in the downloads context menu at the same time.
+# This version is shown when the download's mime type has a valid file handler.
+downloads-cmd-always-use-system-default-named =
+    .label = Sempre abrir no { $handler }
+    .accesskey = m
 
-downloads-cmd-show-button =
+##
+
+# We can use the same accesskey as downloads-cmd-always-use-system-default.
+# Both should not be visible in the downloads context menu at the same time.
+downloads-cmd-always-open-similar-files =
+    .label = Sempre abrir arquivos semelhantes
+    .accesskey = S
+
+downloads-cmd-show-button-2 =
     .tooltiptext =
         { PLATFORM() ->
             [macos] Mostrar no Finder
-           *[other] Abrir pasta
+           *[other] Mostrar na pasta
         }
 
-downloads-cmd-show-panel =
+downloads-cmd-show-panel-2 =
     .aria-label =
         { PLATFORM() ->
             [macos] Mostrar no Finder
-           *[other] Abrir pasta
+           *[other] Mostrar na pasta
         }
-downloads-cmd-show-description =
+downloads-cmd-show-description-2 =
     .value =
         { PLATFORM() ->
             [macos] Mostrar no Finder
-           *[other] Abrir pasta
+           *[other] Mostrar na pasta
         }
 
 downloads-cmd-show-downloads =
@@ -84,11 +107,14 @@ downloads-cmd-remove-from-history =
     .label = Remover do histórico
     .accesskey = E
 downloads-cmd-clear-list =
-    .label = Limpar o painel de visualização
+    .label = Limpar painel de exibição
     .accesskey = a
 downloads-cmd-clear-downloads =
     .label = Limpar downloads
     .accesskey = d
+downloads-cmd-delete-file =
+    .label = Excluir arquivo baixado
+    .accesskey = E
 
 # This command is shown in the context menu when downloads are blocked.
 downloads-cmd-unblock =
@@ -138,11 +164,18 @@ downloads-open-file =
 ##   $seconds (number) - Amount of seconds left till the file opens.
 ##   $minutes (number) - Amount of minutes till the file opens.
 
-downloading-file-opens-in-hours-and-minutes = Será aberto em { $hours }h { $minutes }m…
-downloading-file-opens-in-minutes = Será aberto em { $minutes }m…
-downloading-file-opens-in-minutes-and-seconds = Será aberto em { $minutes }m { $seconds }s…
-downloading-file-opens-in-seconds = Será aberto em { $seconds }s…
-downloading-file-opens-in-some-time = Será aberto quando concluir…
+downloading-file-opens-in-hours-and-minutes-2 =
+    .value = Será aberto em { $hours }h e { $minutes }min…
+downloading-file-opens-in-minutes-2 =
+    .value = Será aberto em { $minutes }min…
+downloading-file-opens-in-minutes-and-seconds-2 =
+    .value = Será aberto em { $minutes }min e { $seconds }s…
+downloading-file-opens-in-seconds-2 =
+    .value = Será aberto em { $seconds }s…
+downloading-file-opens-in-some-time-2 =
+    .value = Será aberto quando terminar…
+downloading-file-click-to-open =
+    .value = Abrir quando terminar de baixar
 
 ##
 
@@ -168,6 +201,21 @@ downloads-history =
 downloads-details =
     .title = Detalhes do download
 
+## Displayed when a site attempts to automatically download many files.
+## Variables:
+##   $num (number) - Number of blocked downloads.
+##   $url (string) - The url of the suspicious site, stripped of http, https and www prefix.
+
+downloads-files-not-downloaded =
+    { $num ->
+        [one] Arquivo não baixado.
+       *[other] { $num } arquivos não baixados.
+    }
+downloads-blocked-from-url = Downloads bloqueados de { $url }.
+downloads-blocked-download-detailed-info = { $url } tentou baixar automaticamente vários arquivos. O site pode estar ruim, ou está tentando armazenar arquivos de spam em seu dispositivo.
+
+##
+
 downloads-clear-downloads-button =
     .label = Limpar downloads
     .tooltiptext = Limpa downloads concluídos, cancelados e que falharam
@@ -179,4 +227,28 @@ downloads-list-empty =
 
 # This string is shown when there are no items in the Downloads Panel.
 downloads-panel-empty =
-    .value = Nenhum download nessa sessão.
+    .value = Nenhum arquivo baixado nesta sessão de navegação.
+
+# This is displayed in an item at the bottom of the Downloads Panel when there
+# are more downloads than can fit in the list in the panel.
+#   $count (number) - number of files being downloaded that are not shown in the
+#                     panel list.
+downloads-more-downloading =
+    { $count ->
+        [one] Mais { $count } arquivo sendo baixado
+       *[other] Mais { $count } arquivos sendo baixados
+    }
+
+## Download errors
+
+downloads-error-alert-title = Erro no download
+# Variables:
+#   $extension (String): the name of the blocking extension.
+downloads-error-blocked-by = O download não pode ser salvo porque está bloqueado por { $extension }.
+# Used when the name of the blocking extension is unavailable.
+downloads-error-extension = O download não pode ser salvo porque está bloqueado por uma extensão.
+# Line breaks in this message are meaningful, and should be maintained.
+downloads-error-generic =
+    O arquivo não pôde ser salvo porque ocorreu um erro desconhecido.
+    
+    Tente novamente.

@@ -7,26 +7,23 @@ synced-tabs-sidebar-noclients-subtitle = Gusto mong makita ang iyong mga tab mul
 synced-tabs-sidebar-intro = Tingnan ang listahan ng mga tab mula sa iba mong mga device.
 synced-tabs-sidebar-unverified = Ang iyong account ay kailangang ma-verify.
 synced-tabs-sidebar-notabs = Walang bukas na mga tab
-synced-tabs-sidebar-openprefs = Buksan ang mga Kagustuhan sa { -sync-brand-short-name }
 synced-tabs-sidebar-tabsnotsyncing = Paganahin ang tab syncing para makita ang listahan ng tabs na galing sa iba mo pang devices.
 synced-tabs-sidebar-connect-another-device = Magkonekta ng Isa Pang Device
 synced-tabs-sidebar-search =
     .placeholder = Maghanap ng mga naka-sync na tab
+
+## Displayed in the Synced Tabs sidebar's context menu when right-clicking tabs
+## and/or devices in the list. The "Open" strings below should be translated
+## consistently with the equivalent strings for the bookmarks manager's context
+## menu. That menu is activated by right-clicking a bookmark in the Library
+## window. The bookmarks manager context's strings are located in places.ftl.
+
 synced-tabs-context-open =
     .label = Buksan
     .accesskey = O
-synced-tabs-context-open-in-new-tab =
-    .label = Buksan sa Bagong Tab
-    .accesskey = w
-synced-tabs-context-open-in-new-window =
-    .label = Buksan ang Link sa Bagong Window
-    .accesskey = n
-synced-tabs-context-open-in-new-private-window =
-    .label = Buksan sa Bagong Private Window
-    .accesskey = P
-synced-tabs-context-bookmark-single-tab =
-    .label = i-Bookmark ang Tab na Ito...
-    .accesskey = B
+
+##
+
 synced-tabs-context-copy =
     .label = Kopyahin
     .accesskey = C
@@ -39,5 +36,3 @@ synced-tabs-context-manage-devices =
 synced-tabs-context-sync-now =
     .label = Mag-sync Na
     .accesskey = S
-fxa-sign-in = Mag Sign in sa { -sync-brand-short-name }
-turn-on-sync = Buksan ang { -sync-brand-short-name }

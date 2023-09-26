@@ -2,13 +2,12 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-screenshots-context-menu = Een schermafbeelding maken
-
-screenshots-my-shots-button = Mijn afbeeldingen
-
 screenshot-toolbarbutton =
     .label = Schermafbeelding
     .tooltiptext = Een schermafbeelding maken
+
+screenshot-shortcut =
+    .key = S
 
 screenshots-instructions = Sleep of klik op de pagina om een gebied te selecteren. Druk op ESC om te annuleren.
 screenshots-cancel-button = Annuleren
@@ -18,6 +17,14 @@ screenshots-download-button = Downloaden
 screenshots-download-button-tooltip = Schermafbeelding downloaden
 screenshots-copy-button = Kopiëren
 screenshots-copy-button-tooltip = Schermafbeelding naar klembord kopiëren
+screenshots-download-button-title =
+    .title = Schermafbeelding downloaden
+screenshots-copy-button-title =
+    .title = Schermafbeelding naar klembord kopiëren
+screenshots-cancel-button-title =
+    .title = Annuleren
+screenshots-retry-button-title =
+    .title = Schermafdruk opnieuw proberen
 
 screenshots-meta-key =
     { PLATFORM() ->
@@ -41,8 +48,6 @@ screenshots-login-error-details = Uw afbeelding kon niet worden opgeslagen, omda
 screenshots-unshootable-page-error-title = Een schermafbeelding van deze pagina is niet mogelijk.
 screenshots-unshootable-page-error-details = Dit is geen standaardwebpagina, dus u kunt er geen schermafbeelding van maken.
 
-screenshots-self-screenshot-error-title = U kunt geen afbeelding van een { -screenshots-brand-name }-pagina maken!
-
 screenshots-empty-selection-error-title = Uw selectie is te klein
 
 screenshots-private-window-error-title = { -screenshots-brand-name } is uitgeschakeld in Privénavigatiemodus
@@ -50,3 +55,6 @@ screenshots-private-window-error-details = Sorry voor het ongemak. Voor toekomst
 
 screenshots-generic-error-title = Ho! Er is iets mis met { -screenshots-brand-name }.
 screenshots-generic-error-details = We weten niet precies wat er zonet is gebeurd. Wilt u het nogmaals proberen, of een schermafbeelding van een andere pagina maken?
+
+screenshots-too-large-error-title = Uw schermafdruk is bijgesneden omdat deze te groot was
+screenshots-too-large-error-details = Probeer een gebied te selecteren dat kleiner is dan 32.700 pixels aan de langste zijde of een totale oppervlakte van 124.900.000 pixels.

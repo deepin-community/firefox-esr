@@ -13,6 +13,9 @@ about-webrtc-document-title = WebRTC nội bộ
 # translated. This string is used as a title for a file save dialog box.
 about-webrtc-save-page-dialog-title = lưu about:webrtc thành
 
+## These labels are for a disclosure which contains the information for closed PeerConnection sections
+
+
 ## AEC is an abbreviation for Acoustic Echo Cancellation.
 
 about-webrtc-aec-logging-msg-label = Ghi nhật ký AEC
@@ -20,7 +23,16 @@ about-webrtc-aec-logging-off-state-label = Bắt đầu ghi nhật ký AEC
 about-webrtc-aec-logging-on-state-label = Dừng ghi nhật ký AEC
 about-webrtc-aec-logging-on-state-msg = Bản ghi AEC đang hoạt động (nói chuyện với người gọi trong vài phút và sau đó dừng chụp)
 
+about-webrtc-aec-logging-toggled-on-state-msg = Bản ghi AEC đang hoạt động (nói chuyện với người gọi trong vài phút và sau đó dừng chụp)
+# Variables:
+#  $path (String) - The path to which the aec log file is saved.
+about-webrtc-aec-logging-toggled-off-state-msg = Các tập tin nhật ký đã chụp có thể được tìm thấy trong: { $path }
+
 ##
+
+# The autorefresh checkbox causes the page to autorefresh its content when checked
+about-webrtc-auto-refresh-label = Tự động làm mới
+
 
 # "PeerConnection" is a proper noun associated with the WebRTC module. "ID" is
 # an abbreviation for Identifier. This string should not normally be translated
@@ -57,9 +69,6 @@ about-webrtc-ice-pair-bytes-sent = Byte đã gửi:
 about-webrtc-ice-pair-bytes-received = Byte đã nhận:
 about-webrtc-ice-component-id = ID thành phần
 
-## "Avg." is an abbreviation for Average. These are used as data labels.
-
-
 ## These adjectives are used to label a line of statistics collected for a peer
 ## connection. The data represents either the local or remote end of the
 ## connection.
@@ -91,6 +100,11 @@ about-webrtc-log-show-msg = hiển thị nhật ký
 about-webrtc-log-hide-msg = ẩn nhật ký
     .title = nhấn chuột để thu gọn mục này
 
+about-webrtc-log-section-show-msg = Hiển thị nhật ký
+    .title = Nhấn chuột để mở rộng mục này
+about-webrtc-log-section-hide-msg = Ẩn nhật ký
+    .title = Nhấn chuột để thu gọn mục này
+
 ## These are used to display a header for a PeerConnection.
 ## Variables:
 ##  $browser-id (Number) - A numeric id identifying the browser tab for the PeerConnection.
@@ -101,6 +115,11 @@ about-webrtc-log-hide-msg = ẩn nhật ký
 about-webrtc-connection-open = [ { $browser-id } | { $id } ] { $url } { $now }
 about-webrtc-connection-closed = [ { $browser-id } | { $id } ] { $url } (đã đóng) { $now }
 
+## These are used to indicate what direction media is flowing.
+## Variables:
+##  $codecs - a list of media codecs
+
+
 ##
 
 about-webrtc-priority = Ưu tiên
@@ -108,16 +127,30 @@ about-webrtc-fold-show-msg = hiện chi tiết
     .title = nhấn chuột để mở rộng mục này
 about-webrtc-fold-hide-msg = ẩn chi tiết
     .title = nhấn chuột để thu gọn mục này
+about-webrtc-fold-default-show-msg = Hiện chi tiết
+    .title = Nhấn chuột để mở rộng mục này
+about-webrtc-fold-default-hide-msg = Ẩn chi tiết
+    .title = Nhấn chuột để thu gọn mục này
+about-webrtc-dropped-frames-label = Khung hình bị rơi:
+about-webrtc-discarded-packets-label = Các gói bị loại bỏ:
 about-webrtc-decoder-label = Bộ giải mã
 about-webrtc-encoder-label = Bộ mã hóa
 about-webrtc-show-tab-label = Hiển thị thẻ
+about-webrtc-current-framerate-label = Tỷ lệ khung hình
 about-webrtc-width-px = Chiều rộng (px)
 about-webrtc-height-px = Chiều cao (px)
 about-webrtc-time-elapsed = Thời gian đã trôi qua (giây)
+about-webrtc-estimated-framerate = Tốc độ khung hình ước tính
 about-webrtc-rotation-degrees = Xoay (độ)
 
 ## SSRCs are identifiers that represent endpoints in an RTP stream
 
+
+## These are displayed on the button that shows or hides the
+## PeerConnection configuration disclosure
+
+about-webrtc-pc-configuration-show-msg = Hiển thị cấu hình
+about-webrtc-pc-configuration-hide-msg = Ẩn cấu hình
 
 ##
 
@@ -141,6 +174,12 @@ about-webrtc-send-bandwidth-bytes-sec = Băng thông gửi (byte/giây)
 # The estimated bandwidth available for receiving WebRTC media in bytes per second
 about-webrtc-receive-bandwidth-bytes-sec = Băng thông nhận (byte/giây)
 
+# Maximum number of bytes per second that will be padding zeros at the ends of packets
+about-webrtc-max-padding-bytes-sec = Khoảng đệm tối đa (byte/giây)
+
+# The amount of time inserted between packets to keep them spaced out
+about-webrtc-pacer-delay-ms = Độ trễ pacer trong ms
+
 # The amount of time it takes for a packet to travel from the local machine to the remote machine,
 # and then have a packet return
 about-webrtc-round-trip-time-ms = RTT ms
@@ -161,7 +200,27 @@ about-webrtc-debug-mode-off-state-msg = nhật ký theo dõi có thể được 
 about-webrtc-debug-mode-on-state-msg = chế độ gỡ lỗi hoạt động, theo dõi nhật ký tại: { $path }
 about-webrtc-aec-logging-off-state-msg = các tập tin nhật ký đã chụp có thể được tìm thấy trong: { $path }
 
+about-webrtc-save-page-complete-msg = Đã lưu trang vào: { $path }
+about-webrtc-debug-mode-toggled-off-state-msg = Nhật ký theo dõi có thể được tìm thấy tại: { $path }
+about-webrtc-debug-mode-toggled-on-state-msg = Chế độ gỡ lỗi hoạt động, theo dõi nhật ký tại: { $path }
+
 ##
+
+# This is the total number of frames encoded or decoded over an RTP stream.
+# Variables:
+#  $frames (Number) - The number of frames encoded or decoded.
+about-webrtc-frames =
+    { $frames ->
+       *[other] { $frames } frame
+    }
+
+# This is the number of audio channels encoded or decoded over an RTP stream.
+# Variables:
+#  $channels (Number) - The number of channels encoded or decoded.
+about-webrtc-channels =
+    { $channels ->
+       *[other] { $channels } kênh
+    }
 
 # This is the total number of packets received on the PeerConnection.
 # Variables:
@@ -216,6 +275,14 @@ about-webrtc-sdp-set-at-timestamp-remote = Đặt SDP từ xa tại timestamp { 
 #  $timestamp (Number) - The Unix Epoch time at which the SDP was set.
 #  $relative-timestamp (Number) - The timestamp relative to the timestamp of the earliest received SDP.
 about-webrtc-sdp-set-timestamp = Timestamp { NUMBER($timestamp, useGrouping: "false") } (+ { $relative-timestamp } ms)
+
+## These are displayed on the button that shows or hides the SDP information disclosure
+
+
+## These are displayed on the button that shows or hides the Media Context information disclosure.
+## The Media Context is the set of preferences and detected capabilities that informs
+## the negotiated CODEC settings.
+
 
 ##
 

@@ -2,18 +2,8 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-about-httpsonly-insecure-title = Conexión segura no disponible
-
-# Variables:
-#   $websiteUrl (String) - Url of the website that failed to load. Example: www.example.com
-about-httpsonly-insecure-explanation-unavailable = Estás navegando en el modo de solo HTTPS, y una versión segura HTTPS de <em>{ $websiteUrl }</em> no se encuentra disponible.
-about-httpsonly-insecure-explanation-reasons = Lo más probable es que el sitio web no soporte HTTPS, pero también es posible que un atacante esté bloqueando la versión HTTPS.
-about-httpsonly-insecure-explanation-exception = Aunque el riesgo de seguridad es bajo, si decides visitar la versión HTTP del sitio web, no debieras ingresar ninguna información confidencial como contraseñas, correos electrónicos o detalles de tarjetas de crédito.
-
-about-httpsonly-button-make-exception = Aceptar el riesgo y continuar al sitio
-
 about-httpsonly-title-alert = Alerta de modo solo HTTPS
-about-httpsonly-title-connection-not-available = Conexión segura no disponible
+about-httpsonly-title-site-not-available = Sitio seguro no disponible
 
 # Variables:
 #   $websiteUrl (String) - Url of the website that failed to load. Example: www.example.com
@@ -30,6 +20,10 @@ about-httpsonly-link-learn-more = Aprender más…
 ## Suggestion Box that only shows up if a secure connection to www can be established
 ## Variables:
 ##   $websiteUrl (String) - Url of the website that can be securely loded with these alternatives. Example: example.com
+
+## Suggestion Box that only shows up if a secure connection to www can be established
+## Variables:
+##   $websiteUrl (String) - Url of the website that can be securely loaded with these alternatives. Example: example.com
 
 about-httpsonly-suggestion-box-header = Alternativa posible
 about-httpsonly-suggestion-box-www-text = Hay una versión segura de <em>www.{ $websiteUrl }</em>. Puedes visitar esta página en lugar de <em>{ $websiteUrl }</em>.

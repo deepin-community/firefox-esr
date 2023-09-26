@@ -38,9 +38,6 @@ toolbar-context-menu-report-extension =
 toolbar-context-menu-pin-to-overflow-menu =
     .label = Nuto' riña menu
     .accesskey = P
-toolbar-context-menu-auto-hide-downloads-button =
-    .label = Gachi huì ma'an ma riña dukuán rasùun
-    .accesskey = A
 toolbar-context-menu-remove-from-toolbar =
     .label = Dùsiki' ga'an riña dukuán rasùun
     .accesskey = R
@@ -48,3 +45,6 @@ toolbar-context-menu-view-customize-toolbar =
     .label = Nagi'iô' daj huin ruhuô'...
     .accesskey = C
 
+toolbar-context-menu-menu-bar-cmd =
+    .toolbarname = Riña ma sa raj sun'
+    .accesskey = M

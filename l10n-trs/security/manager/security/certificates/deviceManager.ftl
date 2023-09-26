@@ -5,9 +5,9 @@
 
 ## Strings used for device manager
 
-devmgr =
+devmgr-window =
     .title = Sa dugumî nej aga'a
-    .style = width: 67em; height: 32em;
+    .style = min-width: 67em; min-height: 32em;
 
 devmgr-devlist =
     .label = Sa dugûmi ni nej aga'a
@@ -115,8 +115,6 @@ devinfo-label =
 
 devinfo-serialnum =
     .label = Da'nga' nikaj serie
-
-fips-nonempty-password-required = Ruhuâ modô FIPS sisi ga 'ngo da'nga' huìi gi'iát ri ña da' go'ngo si gagâ't. Nachrun da'mga' huìi hìaj nï' achin gayi'ìt ngà modô FIPS.
 
 unable-to-toggle-fips = Na'ue nadunaj modô FIPS riña si agâ't. Gahui ni nayi'ì ñûnt aplikasiûn nan.
 load-pk11-module-file-picker-title = Nagui 'ngo kontrolador agar PKCS#11 da' ga'ue gayi'ìt

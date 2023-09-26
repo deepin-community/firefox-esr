@@ -5,9 +5,9 @@
 
 ## Strings used for device manager
 
-devmgr =
+devmgr-window =
     .title = సాధన నిర్వాహకి
-    .style = width: 67em; height: 32em;
+    .style = min-width: 67em; min-height: 32em;
 
 devmgr-devlist =
     .label = రక్షణ మాడ్యూళ్ళు మరియు సాధనాలు
@@ -115,8 +115,6 @@ devinfo-label =
 
 devinfo-serialnum =
     .label = వరుస సంఖ్య
-
-fips-nonempty-password-required = FIPS రీతికి మీరు ప్రతిభద్రతా సాదనానికి అమర్చిన ముఖ్యసంకేతపదం అవసరం.FIPS రీతిని చేతనంచేయుటకు మునుపే దయచేసి సంకేతపదాన్ని అమర్చండి.
 
 unable-to-toggle-fips = రక్షణ పరికరమునకు FIPS రీతిని మార్చలేక పోయింది. మీరు ఈ అనువర్తనం నుండి నిష్క్రమించి పునఃప్రారంభించడం మంచిది.
 load-pk11-module-file-picker-title = లోడుచేయాల్సిన PKCS#11 పరికర డ్రైవరును ఎంచుకోండి

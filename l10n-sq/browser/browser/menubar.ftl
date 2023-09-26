@@ -43,15 +43,6 @@ menu-quit =
 menu-quit-mac =
     .label = Dilni prej { -brand-shorter-name }-it
 
-# This menu-quit-button string is only used on Linux.
-menu-quit-button =
-    .label = { menu-quit.label }
-
-# This menu-quit-button-win string is only used on Windows.
-menu-quit-button-win =
-    .label = { menu-quit.label }
-    .tooltip = Dilni nga { -brand-shorter-name }-i
-
 menu-about =
     .label = Mbi { -brand-shorter-name }-in
     .accesskey = R
@@ -81,8 +72,14 @@ menu-file-open-location =
 menu-file-open-file =
     .label = Hapni Kartelë…
     .accesskey = K
-menu-file-close =
-    .label = Mbylleni
+# Variables:
+#  $tabCount (Number): the number of tabs that are affected by the action.
+menu-file-close-tab =
+    .label =
+        { $tabCount ->
+            [1] Mbylle Skedën
+           *[other] Mbylli { $tabCount } Skedat
+        }
     .accesskey = M
 menu-file-close-window =
     .label = Mbylleni Dritaren
@@ -93,12 +90,12 @@ menu-file-save-page =
 menu-file-email-link =
     .label = Dërgoni Lidhje me Email…
     .accesskey = E
+menu-file-share-url =
+    .label = Ndajeni me të tjerët
+    .accesskey = N
 menu-file-print-setup =
     .label = Rregullim Faqeje…
     .accesskey = u
-menu-file-print-preview =
-    .label = Paraparje e Shtypjes
-    .accesskey = a
 menu-file-print =
     .label = Shtypni…
     .accesskey = y
@@ -114,9 +111,6 @@ menu-file-go-offline =
 menu-edit =
     .label = Përpunim
     .accesskey = P
-menu-edit-find-on =
-    .label = Gjeni në Këtë Faqe…
-    .accesskey = G
 menu-edit-find-in-page =
     .label = Gjeni në Faqe…
     .accesskey = G
@@ -134,9 +128,6 @@ menu-view =
     .accesskey = S
 menu-view-toolbars-menu =
     .label = Panele
-    .accesskey = P
-menu-view-customize-toolbar =
-    .label = Përshtateni…
     .accesskey = P
 menu-view-customize-toolbar2 =
     .label = Përshtateni Panelin…
@@ -174,9 +165,9 @@ menu-view-page-style-no-style =
 menu-view-page-basic-style =
     .label = Stil Elementar Faqeje
     .accesskey = S
-menu-view-charset =
-    .label = Kodim Teksti
-    .accesskey = K
+menu-view-repair-text-encoding =
+    .label = Riparo Kodim Teksti
+    .accesskey = k
 
 ## These should match what Safari and other Apple applications
 ## use on macOS.
@@ -190,6 +181,17 @@ menu-view-exit-full-screen =
 menu-view-full-screen =
     .label = Sa Krejt Ekrani
     .accesskey = E
+
+## These menu items may use the same accesskey.
+
+# This should match reader-view-enter-button in browser.ftl
+menu-view-enter-readerview =
+    .label = Kalo në Pamjen Lexues
+    .accesskey = L
+# This should match reader-view-close-button in browser.ftl
+menu-view-close-readerview =
+    .label = Mbylle Pamjen Lexues
+    .accesskey = L
 
 ##
 
@@ -220,22 +222,17 @@ menu-history-undo-menu =
 menu-history-undo-window-menu =
     .label = Dritare të mbyllura Së Fundi
 
-menu-history-reopen-all-tabs = Rihapi Krejt Skedat
-menu-history-reopen-all-windows = Rihapi Krejt Dritaret
-
 ## Bookmarks Menu
 
 menu-bookmarks-menu =
     .label = Faqerojtës
     .accesskey = F
-menu-bookmarks-show-all =
-    .label = Shfaqni Krejt Faqerojtësit
-menu-bookmark-this-page =
-    .label = Faqeruaje Këtë Faqe
-menu-bookmark-current-tab =
-    .label = Faqeruaj Skedën e Tanishme
-menu-bookmark-edit =
-    .label = Përpunojeni Këtë Faqerojtës
+menu-bookmarks-manage =
+    .label = Administroni Faqerojtës
+menu-bookmark-tab =
+    .label = Faqeruani Skedën e Tanishme…
+menu-edit-bookmark =
+    .label = Përpunojeni Këtë Faqerojtës…
 menu-bookmarks-all-tabs =
     .label = Faqeruani Krejt Skedat…
 menu-bookmarks-toolbar =
@@ -253,15 +250,6 @@ menu-tools =
 menu-tools-downloads =
     .label = Shkarkime
     .accesskey = a
-menu-tools-addons =
-    .label = Shtesa
-    .accesskey = a
-menu-tools-fxa-sign-in =
-    .label = Hyni Te Llogari { -brand-product-name }…
-    .accesskey = H
-menu-tools-turn-on-sync =
-    .label = Aktivizoni { -sync-brand-short-name }…
-    .accesskey = A
 menu-tools-addons-and-themes =
     .label = Shtesa dhe Tema
     .accesskey = S
@@ -277,9 +265,6 @@ menu-tools-sync-now =
 menu-tools-fxa-re-auth =
     .label = Rilidhuni me { -brand-product-name }…
     .accesskey = R
-menu-tools-web-developer =
-    .label = Zhvillues Web
-    .accesskey = Z
 menu-tools-browser-tools =
     .label = Mjete Shfletuesi
     .accesskey = M
@@ -292,17 +277,6 @@ menu-tools-page-source =
 menu-tools-page-info =
     .label = Të dhëna Faqeje
     .accesskey = T
-menu-preferences =
-    .label =
-        { PLATFORM() ->
-            [windows] Mundësi
-           *[other] Parapëlqime
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] M
-           *[other] a
-        }
 menu-settings =
     .label = Rregullime
     .accesskey =
@@ -335,21 +309,6 @@ menu-window-bring-all-to-front =
 menu-help =
     .label = Ndihmë
     .accesskey = N
-menu-help-product =
-    .label = Ndihmë mbi { -brand-shorter-name }-in
-    .accesskey = N
-menu-help-show-tour =
-    .label = Tur { -brand-shorter-name }-i
-    .accesskey = u
-menu-help-import-from-another-browser =
-    .label = Importoni prej Shfletuesi Tjetër…
-    .accesskey = I
-menu-help-keyboard-shortcuts =
-    .label = Shkurtore Tastiere
-    .accesskey = S
-menu-help-troubleshooting-info =
-    .label = Të dhëna Diagnostikimi
-    .accesskey = D
 menu-get-help =
     .label = Merrni Ndihmë
     .accesskey = M
@@ -358,15 +317,9 @@ menu-help-more-troubleshooting-info =
     .accesskey = M
 menu-help-report-site-issue =
     .label = Njoftoni Problem Sajti…
-menu-help-feedback-page =
-    .label = Parashtroni Përshtypjet…
-    .accesskey = P
-menu-help-safe-mode-without-addons =
-    .label = Riniseni me Shtesat të Çaktivizuara…
-    .accesskey = Ç
-menu-help-safe-mode-with-addons =
-    .label = Rinise me Shtesat të Aktivizuara
-    .accesskey = A
+menu-help-share-ideas =
+    .label = Ndani me të tjerët Ide dhe Përshtypje…
+    .accesskey = N
 menu-help-enter-troubleshoot-mode2 =
     .label = Mënyra Diagnostikim…
     .accesskey = D
@@ -379,5 +332,5 @@ menu-help-report-deceptive-site =
     .label = Raportoni Sajt të Rremë…
     .accesskey = m
 menu-help-not-deceptive =
-    .label = Ky s'është sajt i rremë…
+    .label = Ky s'është Sajt i Rremë…
     .accesskey = r

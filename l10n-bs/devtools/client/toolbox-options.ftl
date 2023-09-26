@@ -65,11 +65,6 @@ options-stylesheet-autocompletion-tooltip =
 # The heading
 options-screenshot-label = Ponašanje screenshota
 
-# Label for the checkbox that toggles screenshot to clipboard feature
-options-screenshot-clipboard-label = Slika ekrana u međuspremnik
-options-screenshot-clipboard-tooltip =
-    .title = Snima sliku ekrana direktno u međuspremnik.
-
 # Label for the checkbox that toggles the camera shutter audio for screenshot tool
 options-screenshot-audio-label = Sviraj zvuk kamere
 options-screenshot-audio-tooltip =
@@ -131,8 +126,3 @@ options-context-triggers-page-refresh = * Samo trenutna sesija, ponovo učitava 
 
 ##
 
-# The label for the checkbox that toggles the display of the platform data in the
-# Profiler i.e. devtools.profiler.ui.show-platform-data a boolean preference in about:config
-options-show-platform-data-label = Prikaži podatke Gecko platforme
-options-show-platform-data-tooltip =
-    .title = Ukoliko uključite ovu opciju JavaScript Profiler izvještaji će uključivati simbole Gecko platforme

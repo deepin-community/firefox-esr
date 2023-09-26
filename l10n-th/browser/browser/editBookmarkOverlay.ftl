@@ -2,17 +2,6 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-bookmark-overlay-name =
-    .value = ชื่อ:
-    .accesskey = ช
-
-bookmark-overlay-location =
-    .value = ตำแหน่งที่ตั้ง:
-    .accesskey = ต
-
-bookmark-overlay-folder =
-    .value = โฟลเดอร์:
-
 bookmark-overlay-name-2 =
     .value = ชื่อ
     .accesskey = N
@@ -35,13 +24,15 @@ bookmark-overlay-folders-expander =
     .tooltiptextdown = { bookmark-overlay-folders-expander.tooltiptext }
     .tooltiptextup = ซ่อน
 
+bookmark-overlay-folders-expander2 =
+    .tooltiptext = แสดงโฟลเดอร์ที่คั่นหน้าทั้งหมด
+
+bookmark-overlay-folders-expander-hide =
+    .tooltiptext = ซ่อน
+
 bookmark-overlay-new-folder-button =
     .label = โฟลเดอร์ใหม่
     .accesskey = ฟ
-
-bookmark-overlay-tags =
-    .value = ป้ายกำกับ:
-    .accesskey = ป
 
 bookmark-overlay-tags-2 =
     .value = ป้ายกำกับ
@@ -55,9 +46,11 @@ bookmark-overlay-tags-expander =
     .tooltiptextdown = { bookmark-overlay-tags-expander.tooltiptext }
     .tooltiptextup = ซ่อน
 
-bookmark-overlay-keyword =
-    .value = คำสำคัญ:
-    .accesskey = ส
+bookmark-overlay-tags-expander2 =
+    .tooltiptext = แสดงป้ายกำกับทั้งหมด
+
+bookmark-overlay-tags-expander-hide =
+    .tooltiptext = ซ่อน
 
 bookmark-overlay-keyword-2 =
     .value = คำสำคัญ

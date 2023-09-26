@@ -15,6 +15,9 @@ printui-sheets-count =
     }
 
 printui-page-range-all = Alle
+printui-page-range-current = Actueel
+printui-page-range-odd = Oneven
+printui-page-range-even = Even
 printui-page-range-custom = Aangepast
 printui-page-range-label = Pagina’s
 printui-page-range-picker =
@@ -57,8 +60,6 @@ printui-two-sided-printing-short-edge = Draaien op korte zijde
 printui-options = Opties
 printui-headers-footers-checkbox = Kop- en voetteksten afdrukken
 printui-backgrounds-checkbox = Achtergronden afdrukken
-
-printui-selection-checkbox = Alleen selectie afdrukken
 
 ## The "Format" section, select a version of the website to print. Radio
 ## options to select between the original page, selected text only, or a version

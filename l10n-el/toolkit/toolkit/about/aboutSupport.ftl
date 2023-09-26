@@ -12,11 +12,6 @@ crashes-id = ID αναφοράς
 crashes-send-date = Υποβεβλημένα
 crashes-all-reports = Όλες οι αναφορές κατάρρευσης
 crashes-no-config = Αυτή η εφαρμογή δεν έχει ρυθμιστεί για εμφάνιση αναφορών κατάρρευσης.
-extensions-title = Επεκτάσεις
-extensions-name = Όνομα
-extensions-enabled = Ενεργές
-extensions-version = Έκδοση
-extensions-id = ID
 support-addons-title = Πρόσθετα
 support-addons-name = Όνομα
 support-addons-type = Τύπος
@@ -80,6 +75,12 @@ app-basics-location-service-key-google = Κλειδί υπηρεσίας τοπ�
 app-basics-safebrowsing-key-google = Κλειδί ασφαλούς περιήγησης Google
 app-basics-key-mozilla = Κλειδί υπηρεσίας τοποθεσίας Mozilla
 app-basics-safe-mode = Ασφαλής λειτουργία
+app-basics-memory-size = Μέγεθος μνήμης (RAM)
+app-basics-disk-available = Διαθέσιμος χώρος δίσκου
+# Variables:
+#   $value (number) - Amount of data being stored
+#   $unit (string) - The unit of data being stored (e.g. MB)
+app-basics-data-size = { $value } { $unit }
 show-dir-label =
     { PLATFORM() ->
         [macos] Προβολή στο Finder
@@ -109,11 +110,21 @@ graphics-gpu2-title = GPU #2
 graphics-decision-log-title = Αρχείο καταγραφής αποφάσεων
 graphics-crash-guards-title = Ανενεργές λειτουργίες φύλαξης καταρρεύσεων
 graphics-workarounds-title = Λύσεις
+graphics-device-pixel-ratios = Αναλογίες εικονοστοιχείων συσκευής παραθύρου
 # Windowing system in use on Linux (e.g. X11, Wayland).
 graphics-window-protocol = Πρωτόκολλο παραθύρου
 # Desktop environment in use on Linux (e.g. GNOME, KDE, XFCE, etc).
 graphics-desktop-environment = Περιβάλλον επιφάνειας εργασίας
 place-database-title = Βάση δεδομένων τοποθεσιών
+place-database-stats = Στατιστικά
+place-database-stats-show = Εμφάνιση στατιστικών
+place-database-stats-hide = Απόκρυψη στατιστικών
+place-database-stats-entity = Οντότητα
+place-database-stats-count = Αριθμός
+place-database-stats-size-kib = Μέγεθος (KiB)
+place-database-stats-size-perc = Μέγεθος (%)
+place-database-stats-efficiency-perc = Αποδοτικότητα (%)
+place-database-stats-sequentiality-perc = Διαδοχικότητα (%)
 place-database-integrity = Ακεραιότητα
 place-database-verify-integrity = Επαλήθευση ακεραιότητας
 a11y-title = Προσβασιμότητα
@@ -133,8 +144,6 @@ sandbox-sys-call-tid = TID
 sandbox-sys-call-proc-type = Τύπος διεργασίας
 sandbox-sys-call-number = Syscall
 sandbox-sys-call-args = Ορίσματα
-safe-mode-title = Δοκιμή ασφαλούς λειτουργίας
-restart-in-safe-mode-label = Επανεκκίνηση με ανενεργά πρόσθετα…
 troubleshoot-mode-title = Διάγνωση προβλημάτων
 restart-in-troubleshoot-mode-label = Λειτουργία επίλυσης προβλημάτων…
 clear-startup-cache-title = Απαλοιφή κρυφής μνήμης εκκίνησης
@@ -162,12 +171,22 @@ media-device-channels = Κανάλια
 media-device-rate = Ρυθμός
 media-device-latency = Καθυστέρηση
 media-capabilities-title = Δυνατότητες μέσων
+media-codec-support-info = Πληροφορίες υποστήριξης codec
 # List all the entries of the database.
 media-capabilities-enumerate = Απαρίθμηση βάσης δεδομένων
 
+## Codec support table
+
+media-codec-support-sw-decoding = Αποκωδικοποίηση λογισμικού
+media-codec-support-hw-decoding = Αποκωδικοποίηση υλικού
+media-codec-support-codec-name = Όνομα κωδικοποιητή
+media-codec-support-supported = Υποστηρίζεται
+media-codec-support-unsupported = Δεν υποστηρίζεται
+media-codec-support-error = Οι πληροφορίες υποστήριξης κωδικοποίησης δεν είναι διαθέσιμες. Δοκιμάστε ξανά μετά την αναπαραγωγή ενός αρχείου πολυμέσων.
+
 ##
 
-intl-title = Διεθνοποίηση & μετάφραση
+intl-title = Διεθνοποίηση και μετάφραση
 intl-app-title = Ρυθμίσεις εφαρμογής
 intl-locales-requested = Ζητούμενες γλώσσες
 intl-locales-available = Διαθέσιμες γλώσσες
@@ -278,10 +297,8 @@ webgl2-renderer = Πρόγραμμα οδήγησης απεικόνισης Web
 webgl2-version = Έκδοση προγράμματος οδήγησης WebGL 2
 webgl2-driver-extensions = Επεκτάσεις προγράμματος οδήγησης WebGL 2
 webgl2-extensions = Επεκτάσεις WebGL 2
-blocklisted-bug = Αποκλείστηκε λόγω γνωστών ζητημάτων
-# Variables
-# $bugNumber (string) - String of bug number from Bugzilla
-bug-link = σφάλμα { $bugNumber }
+webgpu-default-adapter = Προεπιλεγμένος προσαρμογέας WebGPU
+webgpu-fallback-adapter = Εφεδρικός προσαρμογέας WebGPU
 # Variables
 #   $bugNumber (string) - Bug number on Bugzilla
 support-blocklisted-bug = Αποκλείστηκε λόγω γνωστών ζητημάτων: <a data-l10n-name="bug-link">σφάλμα { $bugNumber }</a>
@@ -289,8 +306,6 @@ support-blocklisted-bug = Αποκλείστηκε λόγω γνωστών ζη�
 # $failureCode (string) - String that can be searched in the source tree.
 unknown-failure = Αποκλείστηκε· κωδικός αποτυχίας { $failureCode }
 d3d11layers-crash-guard = Συνθέτης D3D11
-d3d11video-crash-guard = Αποκωδικοποιητής βίντεο D3D11
-d3d9video-crash-guard = Αποκωδικοποιητής βίντεο D3D9
 glcontext-crash-guard = OpenGL
 wmfvpxvideo-crash-guard = Αποκωδικοποιητής βίντεο WMF VPX
 reset-on-next-restart = Επαναφορά στην επόμενη επανεκκίνηση
@@ -300,7 +315,7 @@ gpu-device-reset-button = Έναυσμα επαναφοράς συσκευής
 uses-tiling = Χρησιμοποιεί παράθεση
 content-uses-tiling = Χρησιμοποιεί παράθεση (περιεχόμενο)
 off-main-thread-paint-enabled = Ενεργό off main thread painting
-off-main-thread-paint-worker-count = Πλήθος workers για off main thread painting
+off-main-thread-paint-worker-count = Πλήθος worker για off main thread painting
 target-frame-rate = Ρυθμός καρέ στόχου
 min-lib-versions = Αναμενόμενη ελάχιστη έκδοση
 loaded-lib-versions = Έκδοση σε χρήση
@@ -313,6 +328,7 @@ can-sandbox-media = Sandboxing αρθρώματος πολυμέσων
 content-sandbox-level = Επίπεδο sandbox διεργασίας περιεχομένου
 effective-content-sandbox-level = Αποτελεσματικό επίπεδο επεξεργασίας περιεχομένου sandbox
 content-win32k-lockdown-state = Κατάσταση κλειδώματος Win32k για διεργασία περιεχομένου
+support-sandbox-gpu-level = Επίπεδο sandbox διεργασίας GPU
 sandbox-proc-type-content = περιεχόμενο
 sandbox-proc-type-file = περιεχόμενο αρχείου
 sandbox-proc-type-media-plugin = άρθρωμα πολυμέσων
@@ -322,22 +338,14 @@ startup-cache-disk-cache-path = Διαδρομή κρυφής μνήμης δί�
 startup-cache-ignore-disk-cache = Παράβλεψη κρυφής μνήμης δίσκου
 startup-cache-found-disk-cache-on-init = Βρέθηκε κρυφή μνήμη δίσκου στο Init
 startup-cache-wrote-to-disk-cache = Εγγράφηκε στην κρυφή μνήμη δίσκου
-launcher-process-status-0 = Ενεργό
-launcher-process-status-1 = Ανενεργό λόγω αποτυχίας
-launcher-process-status-2 = Ανενεργό εξαναγκαστικά
+launcher-process-status-0 = Ενεργή
+launcher-process-status-1 = Ανενεργή λόγω αποτυχίας
+launcher-process-status-2 = Ανενεργή εξαναγκαστικά
 launcher-process-status-unknown = Άγνωστη κατάσταση
 # Variables
 # $remoteWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
 multi-process-windows = { $remoteWindows }/{ $totalWindows }
-multi-process-status-0 = Ενεργοποιήθηκε από το χρήστη
-multi-process-status-1 = ενεργό από προεπιλογή
-multi-process-status-2 = Ανενεργό
-multi-process-status-4 = Ανενεργό λόγω εργαλείων προσβασιμότητας
-multi-process-status-6 = Ανενεργό λόγω μη υποστηριζόμενης εισόδου κειμένου
-multi-process-status-7 = Ανενεργό λόγω προσθέτων
-multi-process-status-8 = Ανενεργό εξαναγκαστικά
-multi-process-status-unknown = Άγνωστη κατάσταση
 # Variables
 # $fissionWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
@@ -346,7 +354,7 @@ fission-status-experiment-control = Απενεργοποιήθηκε από πε
 fission-status-experiment-treatment = Ενεργοποιήθηκε από πείραμα
 fission-status-disabled-by-e10s-env = Απενεργοποιήθηκε από το περιβάλλον
 fission-status-enabled-by-env = Ενεργοποιήθηκε από το περιβάλλον
-fission-status-disabled-by-safe-mode = Απενεργοποιήθηκε από την ασφαλή λειτουργία
+fission-status-disabled-by-env = Ανενεργό λόγω περιβάλλοντος
 fission-status-enabled-by-default = Ενεργό από προεπιλογή
 fission-status-disabled-by-default = Απενεργοποιήθηκε από προεπιλογή
 fission-status-enabled-by-user-pref = Ενεργοποιήθηκε από το χρήστη

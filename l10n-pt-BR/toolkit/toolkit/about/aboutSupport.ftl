@@ -2,21 +2,13 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-page-title = Informações para resolver problemas
-page-subtitle =
-    Esta página contém informações técnicas que podem ser úteis se você estiver
-    tentando solucionar um problema. Se estiver procurando respostas para as dúvidas mais comuns
-    do { -brand-short-name }, confira o <a data-l10n-name="support-link">site de suporte</a>.
+page-title = Informações técnicas
+page-subtitle = Esta página contém informações técnicas que podem ser úteis se você estiver tentando solucionar um problema. Se estiver procurando respostas às dúvidas mais comuns sobre o { -brand-short-name }, consulte o <a data-l10n-name="support-link">site de suporte</a>.
 crashes-title = Relatórios de travamento
 crashes-id = ID do relatório
 crashes-send-date = Envio
 crashes-all-reports = Todos os relatórios de travamento
 crashes-no-config = Este aplicativo não foi configurado para exibir relatórios de travamento.
-extensions-title = Extensões
-extensions-name = Nome
-extensions-enabled = Ativado
-extensions-version = Versão
-extensions-id = ID
 support-addons-title = Extensões
 support-addons-name = Nome
 support-addons-type = Tipo
@@ -75,11 +67,17 @@ app-basics-launcher-process-status = Processo de lançamento
 app-basics-multi-process-support = Janelas multiprocessadas
 app-basics-fission-support = Janelas do Fission
 app-basics-remote-processes-count = Processos remotos
-app-basics-enterprise-policies = Diretivas empresariais
+app-basics-enterprise-policies = Diretivas corporativas
 app-basics-location-service-key-google = Chave do Serviço de Localização do Google
 app-basics-safebrowsing-key-google = Chave do Google Safebrowsing
 app-basics-key-mozilla = Chave do serviço de localização da Mozilla
 app-basics-safe-mode = Modo de segurança
+app-basics-memory-size = Tamanho da memória (RAM)
+app-basics-disk-available = Espaço em disco disponível
+# Variables:
+#   $value (number) - Amount of data being stored
+#   $unit (string) - The unit of data being stored (e.g. MB)
+app-basics-data-size = { $value } { $unit }
 show-dir-label =
     { PLATFORM() ->
         [macos] Mostrar no Finder
@@ -109,11 +107,21 @@ graphics-gpu2-title = GPU #2
 graphics-decision-log-title = Registro de decisões
 graphics-crash-guards-title = Recursos desativados da proteção contra travamentos
 graphics-workarounds-title = Soluções alternativas
+graphics-device-pixel-ratios = Proporções de pixels do dispositivo de janela
 # Windowing system in use on Linux (e.g. X11, Wayland).
 graphics-window-protocol = Protocolo de janelas
 # Desktop environment in use on Linux (e.g. GNOME, KDE, XFCE, etc).
 graphics-desktop-environment = Ambiente de trabalho
 place-database-title = Base de dados de lugares
+place-database-stats = Estatísticas
+place-database-stats-show = Mostrar estatísticas
+place-database-stats-hide = Ocultar estatísticas
+place-database-stats-entity = Entidade
+place-database-stats-count = Quantidade
+place-database-stats-size-kib = Tamanho (KiB)
+place-database-stats-size-perc = Tamanho (%)
+place-database-stats-efficiency-perc = Eficiência (%)
+place-database-stats-sequentiality-perc = Sequencialidade (%)
 place-database-integrity = Integridade
 place-database-verify-integrity = Verificar integridade
 a11y-title = Acessibilidade
@@ -133,8 +141,6 @@ sandbox-sys-call-tid = TID
 sandbox-sys-call-proc-type = Tipo de processo
 sandbox-sys-call-number = Chamadas de sistema
 sandbox-sys-call-args = Argumentos
-safe-mode-title = Experimente o modo de segurança
-restart-in-safe-mode-label = Reiniciar com extensões desativadas…
 troubleshoot-mode-title = Diagnosticar problemas
 restart-in-troubleshoot-mode-label = Modo de solução de problemas…
 clear-startup-cache-title = Experimente limpar o cache de inicialização
@@ -162,8 +168,18 @@ media-device-channels = Canais
 media-device-rate = Taxa
 media-device-latency = Latência
 media-capabilities-title = Capacidades de mídia
+media-codec-support-info = Informações de suporte ao codec
 # List all the entries of the database.
 media-capabilities-enumerate = Enumeração de banco de dados
+
+## Codec support table
+
+media-codec-support-sw-decoding = Decodificação de software
+media-codec-support-hw-decoding = Decodificação de hardware
+media-codec-support-codec-name = Nome do codec
+media-codec-support-supported = Suportado
+media-codec-support-unsupported = Não suportado
+media-codec-support-error = Informações de suporte a codec não disponíveis. Tente novamente após reproduzir de novo um arquivo de mídia.
 
 ##
 
@@ -192,36 +208,6 @@ remote-debugging-url = URL
 
 ##
 
-support-third-party-modules-title = Módulos de terceiros
-support-third-party-modules-module = Arquivo do módulo
-support-third-party-modules-version = Versão do arquivo
-support-third-party-modules-vendor = Informações do fornecedor
-support-third-party-modules-occurrence = Ocorrência
-support-third-party-modules-process = Tipo e ID do processo
-support-third-party-modules-thread = Thread
-support-third-party-modules-base = Endereço do imagebase
-support-third-party-modules-uptime = Tempo de atividade do processo (ms)
-support-third-party-modules-duration = Duração do carregamento (ms)
-support-third-party-modules-status = Status
-support-third-party-modules-status-loaded = Carregado
-support-third-party-modules-status-blocked = Bloqueado
-support-third-party-modules-status-redirected = Redirecionado
-support-third-party-modules-empty = Nenhum módulo de terceiros foi carregado.
-support-third-party-modules-no-value = (sem valor)
-support-third-party-modules-button-open =
-    .title = Abrir local do arquivo…
-support-third-party-modules-expand =
-    .title = Mostrar informações detalhadas
-support-third-party-modules-collapse =
-    .title = Recolher informações detalhadas
-support-third-party-modules-unsigned-icon =
-    .title = Este módulo não está assinado
-support-third-party-modules-folder-icon =
-    .title = Abrir local do arquivo…
-support-third-party-modules-down-icon =
-    .title = Mostrar informações detalhadas
-support-third-party-modules-up-icon =
-    .title = Recolher informações detalhadas
 # Variables
 # $days (Integer) - Number of days of crashes to log
 report-crash-for-days =
@@ -257,8 +243,8 @@ pending-reports =
         [one] Todos os relatórios de travamento (incluindo { $reports } travamento pendente na faixa de tempo indicada)
        *[other] Todos os relatórios de travamento (incluindo { $reports } travamentos pendentes na faixa de tempo indicada)
     }
-raw-data-copied = Dados copiados para a área de transferência
-text-copied = Texto copiado para a área de transferência
+raw-data-copied = Dados copiados para área de transferência
+text-copied = Texto copiado para área de transferência
 
 ## The verb "blocked" here refers to a graphics feature such as "Direct2D" or "OpenGL layers".
 
@@ -308,10 +294,8 @@ webgl2-renderer = Renderizador do driver WebGL 2
 webgl2-version = Versão do driver WebGL 2
 webgl2-driver-extensions = Extensões do driver WebGL 2
 webgl2-extensions = Extensões WebGL 2
-blocklisted-bug = Bloqueado devido a problemas conhecidos
-# Variables
-# $bugNumber (string) - String of bug number from Bugzilla
-bug-link = bug { $bugNumber }
+webgpu-default-adapter = Adaptador padrão de WebGPU
+webgpu-fallback-adapter = Adaptador alternativo de WebGPU
 # Variables
 #   $bugNumber (string) - Bug number on Bugzilla
 support-blocklisted-bug = Incluído na lista de bloqueio devido a problemas conhecidos: <a data-l10n-name="bug-link">bug { $bugNumber }</a>
@@ -319,8 +303,6 @@ support-blocklisted-bug = Incluído na lista de bloqueio devido a problemas conh
 # $failureCode (string) - String that can be searched in the source tree.
 unknown-failure = Bloqueado; código de erro { $failureCode }
 d3d11layers-crash-guard = Compositor D3D11
-d3d11video-crash-guard = Decodificador de vídeo D3D11
-d3d9video-crash-guard = Decodificador de vídeo D3D9
 glcontext-crash-guard = OpenGL
 wmfvpxvideo-crash-guard = Decodificador de vídeo WMF VPX
 reset-on-next-restart = Redefinir na próxima reinicialização
@@ -338,16 +320,17 @@ has-seccomp-bpf = Seccomp-BPF (Sistema de filtragem de chamadas)
 has-seccomp-tsync = Sincronização do thread Seccomp
 has-user-namespaces = Espaço de nomes do usuário
 has-privileged-user-namespaces = Espaço de nomes do usuário para processos privilegiados
-can-sandbox-content = Isolamento de processamento de conteúdo
-can-sandbox-media = Isolamento de plugins de mídia
-content-sandbox-level = Nível de isolamento de processamento de conteúdo
-effective-content-sandbox-level = Nível efetivo de isolamento de processamento de conteúdo
+can-sandbox-content = Isolamento (sandbox) de processamento de conteúdo
+can-sandbox-media = Isolamento (sandbox) de plugins de mídia
+content-sandbox-level = Nível de isolamento (sandbox) de processamento de conteúdo
+effective-content-sandbox-level = Nível efetivo de isolamento (sandbox) de processamento de conteúdo
 content-win32k-lockdown-state = Estado de confinamento de Win32k em processos de conteúdo
+support-sandbox-gpu-level = Nível de isolamento de processamento em GPU
 sandbox-proc-type-content = conteúdo
 sandbox-proc-type-file = conteúdo do arquivo
 sandbox-proc-type-media-plugin = plugin de mídia
 sandbox-proc-type-data-decoder = decodificador de dados
-startup-cache-title = Cache ao iniciar
+startup-cache-title = Cache de inicialização
 startup-cache-disk-cache-path = Caminho do cache em disco
 startup-cache-ignore-disk-cache = Ignorar cache em disco
 startup-cache-found-disk-cache-on-init = Cache em disco encontrado ao iniciar
@@ -360,14 +343,6 @@ launcher-process-status-unknown = Status desconhecido
 # $remoteWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
 multi-process-windows = { $remoteWindows }/{ $totalWindows }
-multi-process-status-0 = Ativado pelo usuário
-multi-process-status-1 = Ativado por padrão
-multi-process-status-2 = Desativado
-multi-process-status-4 = Desativado por ferramentas de acessibilidade
-multi-process-status-6 = Desativado por entrada de texto não suportada
-multi-process-status-7 = Desativado por extensões
-multi-process-status-8 = Desativado à força
-multi-process-status-unknown = Status desconhecido
 # Variables
 # $fissionWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
@@ -376,7 +351,7 @@ fission-status-experiment-control = Desativado por experimento
 fission-status-experiment-treatment = Ativado por experimento
 fission-status-disabled-by-e10s-env = Desativado pelo ambiente
 fission-status-enabled-by-env = Ativado pelo ambiente
-fission-status-disabled-by-safe-mode = Desativado pelo modo de segurança
+fission-status-disabled-by-env = Desativado pelo ambiente
 fission-status-enabled-by-default = Ativado por padrão
 fission-status-disabled-by-default = Desativado por padrão
 fission-status-enabled-by-user-pref = Ativado pelo usuário

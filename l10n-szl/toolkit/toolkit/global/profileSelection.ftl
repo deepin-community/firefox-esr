@@ -23,6 +23,8 @@ profile-selection-delete-button =
     .label = Skasuj profil…
     .accesskey = S
 
+profile-selection-conflict-message = Inkszo kopijo aplikacyje { -brand-product-name } wkludziyła zmiany do profilōw. Coby wkludzić jakie zmiany, trza resztartnōnć aplikacyjo { -brand-short-name }.
+
 ## Messages used in the profile manager
 
 profile-manager-description = { -brand-short-name } schranio informacyje ô twojich sztalōnkach, preferyncyjach i inkszych twojich elymyntach we twojim prywatnym profilu.

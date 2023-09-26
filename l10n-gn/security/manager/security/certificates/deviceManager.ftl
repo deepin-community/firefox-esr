@@ -5,9 +5,9 @@
 
 ## Strings used for device manager
 
-devmgr =
+devmgr-window =
     .title = Mba’e’oka ñangarekohára
-    .style = width: 67em; height: 32em;
+    .style = min-width: 67em; min-height: 32em;
 
 devmgr-devlist =
     .label = Tekorosãrã ha mba’e’oka ra’ãha
@@ -115,8 +115,6 @@ devinfo-label =
 
 devinfo-serialnum =
     .label = Papapy syryry
-
-fips-nonempty-password-required = Pe FIPS reko oikotevẽ peteĩ ñe’ẽñemi ha’etéva oñemoheñóiva peteĩteĩva mba’e’oka tekorosãrãme g̃uarã. Emopyenda pe ñe’ẽñemi eñeha’ã mboyve emyandy pe FIPS reko.
 
 fips-nonempty-primary-password-required = FIPS ayvu oikotevẽ ñe’ẽñemi ha’etéva oñemoheñóiva peteĩteĩva mba’e’oka hekorosãvape. Emopyenda ñe’ẽñemi eñeha’ã mboyve emyandy pe FIPS ayvu.
 unable-to-toggle-fips = Ndaikatúi emoambue pe FIPS reko mba’e’oka rekorosãrãme g̃uarã. Ikatúramo esẽ ha upéi emoñepyrũjey ko tembipuru’i.

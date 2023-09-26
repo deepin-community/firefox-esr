@@ -2,9 +2,9 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-translation-window =
+translation-window2 =
     .title = استثناها - ترجمه
-    .style = width: 36em
+    .style = min-width: 36em
 
 translation-close-key =
     .key = W
@@ -34,10 +34,6 @@ translation-sites-button-remove =
 translation-sites-button-remove-all =
     .label = حذف همه سایت‌ها
     .accesskey = ه
-
-translation-button-close =
-    .label = بستن‌
-    .accesskey = ب
 
 translation-dialog =
     .buttonlabelaccept = بستن‌

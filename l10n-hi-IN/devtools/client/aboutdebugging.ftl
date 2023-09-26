@@ -61,10 +61,6 @@ about-debugging-sidebar-item-connect-button-connection-not-responding = कन�
 # Text displayed as connection error in sidebar item when the connection has timed out.
 about-debugging-sidebar-item-connect-button-connection-timeout = कनेक्शन का समय समाप्त
 
-# Temporary text displayed in sidebar items representing remote runtimes after
-# successfully connecting to them. Temporary UI, do not localize.
-about-debugging-sidebar-item-connected-label = कनेक्ट किया गया
-
 # Text displayed in sidebar items for remote devices where a compatible browser (eg
 # Firefox) has not been detected yet. Typically, Android phones connected via USB with
 # USB debugging enabled, but where Firefox is not started.
@@ -232,14 +228,6 @@ about-debugging-worker-status-registering = पंजीकृत किया �
 # Displayed for service workers in runtime pages, to label the scope of a worker
 about-debugging-worker-scope =
     .label = स्कोप
-
-# Displayed as name for the Main Process debug target in the Processes category. Only for
-# remote runtimes, if `devtools.aboutdebugging.process-debugging` is true.
-about-debugging-main-process-name = मुख्य प्रक्रिया
-
-# Displayed as description for the Main Process debug target in the Processes category.
-# Only for remote browsers, if `devtools.aboutdebugging.process-debugging` is true.
-about-debugging-main-process-description2 = लक्षित ब्राउज़र के लिए मुख्य प्रक्रिया
 
 # Label text used for the error details of message component.
 about-debugging-message-details-label-error = त्रुटि विवरण

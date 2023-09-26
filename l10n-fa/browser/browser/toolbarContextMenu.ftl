@@ -6,11 +6,11 @@ toolbar-context-menu-new-tab =
     .label = زبانهٔ جدید
     .accesskey = ز
 toolbar-context-menu-reload-selected-tab =
-    .label = بازآوری زبانه انتخاب شده
-    .accesskey = R
+    .label = بازخوانی زبانهٔ گزیده شده
+    .accesskey = خ
 toolbar-context-menu-reload-selected-tabs =
-    .label = بازآوری زبانه‌های انتخاب شده
-    .accesskey = R
+    .label = بازخوانی زبانه‌های گزیده شده
+    .accesskey = خ
 toolbar-context-menu-bookmark-selected-tab =
     .label = نشانک‌گذاری زبانه‌ انتخاب شده…
     .accesskey = T
@@ -20,14 +20,6 @@ toolbar-context-menu-bookmark-selected-tabs =
 toolbar-context-menu-select-all-tabs =
     .label = انتخاب همه‌ی زبانه‌ها
     .accesskey = S
-toolbar-context-menu-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] برگرداندن زبانهٔ بسته شده
-           *[other] برگرداندن زبانه‌های بسته شده
-        }
-    .accesskey = ب
-
 toolbar-context-menu-reopen-closed-tabs =
     .label =
         { $tabCount ->
@@ -50,18 +42,18 @@ toolbar-context-menu-report-extension =
     .label = گزارش برنامهٔ ضمیمه
     .accesskey = گ
 
-# Can appear on the same context menu as menubarCmd ("Menu Bar") and
-# personalbarCmd ("Bookmarks Toolbar"), so they should have different
-# access keys.
+# Can appear on the same context menu as toolbar-context-menu-menu-bar-cmd
+# ("Menu Bar") and personalbarCmd ("Bookmarks Toolbar"), so they should
+# have different access keys.
 toolbar-context-menu-pin-to-overflow-menu =
     .label = سنجاق کردن به منو شناور
     .accesskey = س
-toolbar-context-menu-auto-hide-downloads-button =
-    .label = مخفی کردن خودکار در نوارابزار
-    .accesskey = A
 toolbar-context-menu-auto-hide-downloads-button-2 =
     .label = مخفی کردن دکمه هنگام خالی بودن
     .accesskey = م
+toolbar-context-menu-always-open-downloads-panel =
+    .label = نمایش تابلو هنگام شروع بارگیری
+    .accesskey = ن
 toolbar-context-menu-remove-from-toolbar =
     .label = حذف از نوارابزار
     .accesskey = ح
@@ -84,4 +76,8 @@ toolbar-context-menu-bookmarks-toolbar-on-new-tab-2 =
 
 toolbar-context-menu-bookmarks-show-other-bookmarks =
     .label = نمایش نشانک‌های دیگر
+    .accesskey = ن
+
+toolbar-context-menu-menu-bar-cmd =
+    .toolbarname = نوار منو
     .accesskey = ن

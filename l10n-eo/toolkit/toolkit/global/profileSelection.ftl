@@ -23,6 +23,8 @@ profile-selection-delete-button =
     .label = Forviŝi profilon…
     .accesskey = F
 
+profile-selection-conflict-message = Alia kopio de { -brand-product-name } modifis la profilojn. Vi devas restartigi { -brand-short-name } antaŭ ol fari aliajn ŝanĝojn.
+
 ## Messages used in the profile manager
 
 profile-manager-description = { -brand-short-name } konservas en via profilo de uzanto informon pri viaj agordoj, preferoj kaj aliaj elementoj de uzanto.

@@ -2,13 +2,12 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-screenshots-context-menu = Tirar uma captura de ecrã
-
-screenshots-my-shots-button = Minhas capturas
-
 screenshot-toolbarbutton =
     .label = Captura de ecrã
     .tooltiptext = Tirar uma captura de ecrã
+
+screenshot-shortcut =
+    .key = S
 
 screenshots-instructions = Arraste ou clique na página para selecionar uma região. Pressione ESC para cancelar.
 screenshots-cancel-button = Cancelar
@@ -18,6 +17,14 @@ screenshots-download-button = Transferir
 screenshots-download-button-tooltip = Transferir captura de ecrã
 screenshots-copy-button = Copiar
 screenshots-copy-button-tooltip = Copiar captura de ecrã para a área de transferência
+screenshots-download-button-title =
+    .title = Transferir captura de ecrã
+screenshots-copy-button-title =
+    .title = Copiar captura de ecrã para a área de transferência
+screenshots-cancel-button-title =
+    .title = Cancelar
+screenshots-retry-button-title =
+    .title = Tentar novamente a captura de ecrã
 
 screenshots-meta-key =
     { PLATFORM() ->
@@ -41,8 +48,6 @@ screenshots-login-error-details = Não conseguimos guardar a sua captura porque 
 screenshots-unshootable-page-error-title = Não conseguimos capturar o ecrã nesta página.
 screenshots-unshootable-page-error-details = Esta não é uma página Web padrão, por isso não podemos tirar uma captura de ecrã da mesma.
 
-screenshots-self-screenshot-error-title = Não pode tirar uma captura de uma página { -screenshots-brand-name }!
-
 screenshots-empty-selection-error-title = A sua seleção é demasiado pequena
 
 screenshots-private-window-error-title = O { -screenshots-brand-name } está desativado no modo de navegação privada
@@ -50,3 +55,6 @@ screenshots-private-window-error-details = Desculpe pela inconveniência. Estamo
 
 screenshots-generic-error-title = Uau! Algo correu mal com o { -screenshots-brand-name }.
 screenshots-generic-error-details = Não temos a certeza do que acabou de acontecer. Importa-se de tentar novamente ou tirar uma captura de uma página diferente?
+
+screenshots-too-large-error-title = A sua captura de ecrã foi cortada porque era demasiado grande
+screenshots-too-large-error-details = Experimente selecionar uma região que tenha menos de 32700 pixels no lado maior ou 124900000 pixels de área total.

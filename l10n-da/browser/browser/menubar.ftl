@@ -41,13 +41,6 @@ menu-quit =
 # This menu-quit-mac string is only used on macOS.
 menu-quit-mac =
     .label = Afslut { -brand-shorter-name }
-# This menu-quit-button string is only used on Linux.
-menu-quit-button =
-    .label = { menu-quit.label }
-# This menu-quit-button-win string is only used on Windows.
-menu-quit-button-win =
-    .label = { menu-quit.label }
-    .tooltip = Afslut { -brand-shorter-name }
 menu-about =
     .label = Om { -brand-shorter-name }
     .accesskey = O
@@ -77,27 +70,31 @@ menu-file-open-location =
 menu-file-open-file =
     .label = Åbn fil…
     .accesskey = b
-menu-file-close =
-    .label = Luk
+# Variables:
+#  $tabCount (Number): the number of tabs that are affected by the action.
+menu-file-close-tab =
+    .label =
+        { $tabCount ->
+            [1] Luk faneblad
+            [one] Luk { $tabCount } faneblad
+           *[other] Luk { $tabCount } faneblade
+        }
     .accesskey = L
 menu-file-close-window =
     .label = Luk vindue
-    .accesskey = k
+    .accesskey = n
 menu-file-save-page =
     .label = Gem side som…
     .accesskey = m
 menu-file-email-link =
     .label = Send link…
-    .accesskey = l
+    .accesskey = S
 menu-file-share-url =
     .label = Del
     .accesskey = D
 menu-file-print-setup =
     .label = Sideopsætning…
     .accesskey = S
-menu-file-print-preview =
-    .label = Vis udskrift
-    .accesskey = d
 menu-file-print =
     .label = Udskriv…
     .accesskey = U
@@ -113,9 +110,6 @@ menu-file-go-offline =
 menu-edit =
     .label = Rediger
     .accesskey = R
-menu-edit-find-on =
-    .label = Find på denne side…
-    .accesskey = d
 menu-edit-find-in-page =
     .label = Find på side…
     .accesskey = d
@@ -134,9 +128,6 @@ menu-view =
 menu-view-toolbars-menu =
     .label = Værktøjslinjer
     .accesskey = V
-menu-view-customize-toolbar =
-    .label = Tilpas…
-    .accesskey = p
 menu-view-customize-toolbar2 =
     .label = Tilpas værktøjslinje…
     .accesskey = T
@@ -173,9 +164,6 @@ menu-view-page-style-no-style =
 menu-view-page-basic-style =
     .label = Basissidestil
     .accesskey = B
-menu-view-charset =
-    .label = Tegnkodning
-    .accesskey = T
 menu-view-repair-text-encoding =
     .label = Reparer tegnkodning
     .accesskey = t
@@ -192,6 +180,17 @@ menu-view-exit-full-screen =
 menu-view-full-screen =
     .label = Fuld skærm
     .accesskey = F
+
+## These menu items may use the same accesskey.
+
+# This should match reader-view-enter-button in browser.ftl
+menu-view-enter-readerview =
+    .label = Åbn læsevisning
+    .accesskey = L
+# This should match reader-view-close-button in browser.ftl
+menu-view-close-readerview =
+    .label = Luk læsevisning
+    .accesskey = L
 
 ##
 
@@ -221,24 +220,21 @@ menu-history-undo-menu =
     .label = Senest lukkede faneblade
 menu-history-undo-window-menu =
     .label = Senest lukkede vinduer
-menu-history-reopen-all-tabs = Genåbn alle faneblade
-menu-history-reopen-all-windows = Genåbn alle vinduer
 
 ## Bookmarks Menu
 
 menu-bookmarks-menu =
     .label = Bogmærker
     .accesskey = B
-menu-bookmarks-show-all =
-    .label = Vis alle bogmærker
-menu-bookmark-this-page =
-    .label = Bogmærk denne side
 menu-bookmarks-manage =
     .label = Håndter bogmærker
-menu-bookmark-current-tab =
-    .label = Bogmærk dette faneblad
-menu-bookmark-edit =
-    .label = Rediger bogmærke
+menu-bookmark-tab =
+    .label = Bogmærk dette faneblad…
+menu-edit-bookmark =
+    .label = Rediger bogmærke…
+# "Search" is a verb, as in "Search in bookmarks"
+menu-bookmarks-search =
+    .label = Søg i bogmærker
 menu-bookmarks-all-tabs =
     .label = Bogmærk alle faneblade…
 menu-bookmarks-toolbar =
@@ -256,15 +252,6 @@ menu-tools =
 menu-tools-downloads =
     .label = Filhentning
     .accesskey = F
-menu-tools-addons =
-    .label = Tilføjelser
-    .accesskey = t
-menu-tools-fxa-sign-in =
-    .label = Log ind på { -brand-product-name }…
-    .accesskey = g
-menu-tools-turn-on-sync =
-    .label = Aktiver { -sync-brand-short-name }…
-    .accesskey = A
 menu-tools-addons-and-themes =
     .label = Tilføjelser og temaer
     .accesskey = T
@@ -280,9 +267,6 @@ menu-tools-sync-now =
 menu-tools-fxa-re-auth =
     .label = Genopret forbindelse til { -brand-product-name }…
     .accesskey = G
-menu-tools-web-developer =
-    .label = Webudvikler
-    .accesskey = W
 menu-tools-browser-tools =
     .label = Browser-værktøj
     .accesskey = B
@@ -295,17 +279,6 @@ menu-tools-page-source =
 menu-tools-page-info =
     .label = Sideoplysninger
     .accesskey = o
-menu-preferences =
-    .label =
-        { PLATFORM() ->
-            [windows] Indstillinger
-           *[other] Indstillinger
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] I
-           *[other] I
-        }
 menu-settings =
     .label = Indstillinger
     .accesskey =
@@ -338,21 +311,6 @@ menu-window-bring-all-to-front =
 menu-help =
     .label = Hjælp
     .accesskey = H
-menu-help-product =
-    .label = Hjælp til { -brand-shorter-name }
-    .accesskey = H
-menu-help-show-tour =
-    .label = Rundvisning i { -brand-shorter-name }
-    .accesskey = R
-menu-help-import-from-another-browser =
-    .label = Importer fra en anden browser…
-    .accesskey = I
-menu-help-keyboard-shortcuts =
-    .label = Tastaturgenveje
-    .accesskey = u
-menu-help-troubleshooting-info =
-    .label = Teknisk information…
-    .accesskey = T
 menu-get-help =
     .label = Få hjælp
     .accesskey = h
@@ -361,21 +319,18 @@ menu-help-more-troubleshooting-info =
     .accesskey = t
 menu-help-report-site-issue =
     .label = Rapportér problem med websted…
-menu-help-feedback-page =
-    .label = Indsend feedback…
-    .accesskey = n
-menu-help-safe-mode-without-addons =
-    .label = Genstart med tilføjelser deaktiveret…
-    .accesskey = G
-menu-help-safe-mode-with-addons =
-    .label = Genstart med tilføjelser aktiveret
-    .accesskey = G
+menu-help-share-ideas =
+    .label = Del ideer og feedback...
+    .accesskey = D
 menu-help-enter-troubleshoot-mode2 =
     .label = Fejlsøgnings-tilstand…
     .accesskey = F
 menu-help-exit-troubleshoot-mode =
     .label = Slå fejlsøgnings-tilstand fra
     .accesskey = f
+menu-help-switch-device =
+    .label = Skifte til en ny enhed
+    .accesskey = n
 # Label of the Help menu item. Either this or
 # menu-help-notdeceptive is shown.
 menu-help-report-deceptive-site =

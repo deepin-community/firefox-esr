@@ -5,44 +5,52 @@
 
 ## The main browser window's title
 
-# These are the default window titles everywhere except macOS. The first two
-# attributes are used when the web content opened has no title:
+# These are the default window titles everywhere except macOS.
+# .data-title-default and .data-title-private are used when the web content
+# opened has no title:
 #
 # default - "Mozilla Firefox"
 # private - "Mozilla Firefox (Private Browsing)"
 #
-# The last two are for use when there *is* a content title.
+# .data-content-title-default and .data-content-title-private are for use when
+# there *is* a content title.
 # Variables:
 #  $content-title (String): the title of the web content.
-browser-main-window =
+browser-main-window-window-titles =
     .data-title-default = { -brand-full-name }
-    .data-title-private = { -brand-full-name } (사생활 보호 모드)
-    .data-content-title-default = { $content-title } - { -brand-full-name }
-    .data-content-title-private = { $content-title } - { -brand-full-name } (사생활 보호 모드)
-# These are the default window titles on macOS. The first two are for use when
-# there is no content title:
+    .data-title-private = { -brand-full-name } 사생활 보호 모드
+    .data-content-title-default = { $content-title } — { -brand-full-name }
+    .data-content-title-private = { $content-title } — { -brand-full-name } 사생활 보호 모드
+# These are the default window titles on macOS.
+# .data-title-default and .data-title-private are used when the web content
+# opened has no title:
+#
 #
 # "default" - "Mozilla Firefox"
 # "private" - "Mozilla Firefox — (Private Browsing)"
 #
-# The last two are for use when there *is* a content title.
-# Do not use the brand name in the last two attributes, as we do on non-macOS.
+# .data-content-title-default and .data-content-title-private are for use when
+# there *is* a content title.
+# Do not use the brand name in these, as we do on non-macOS.
 #
 # Also note the other subtle difference here: we use a `-` to separate the
 # brand name from `(Private Browsing)`, which does not happen on other OSes.
 #
 # Variables:
 #  $content-title (String): the title of the web content.
-browser-main-window-mac =
+browser-main-window-mac-window-titles =
     .data-title-default = { -brand-full-name }
-    .data-title-private = { -brand-full-name } - (사생활 보호 모드)
+    .data-title-private = { -brand-full-name } — 사생활 보호 모드
     .data-content-title-default = { $content-title }
-    .data-content-title-private = { $content-title } - (사생활 보호 모드)
+    .data-content-title-private = { $content-title } — 사생활 보호 모드
 # This gets set as the initial title, and is overridden as soon as we start
 # updating the titlebar based on loaded tabs or private browsing state.
 # This should match the `data-title-default` attribute in both
 # `browser-main-window` and `browser-main-window-mac`.
 browser-main-window-title = { -brand-full-name }
+# The non-variable portion of this MUST match the translation of
+# "PRIVATE_BROWSING_SHORTCUT_TITLE" in custom.properties
+private-browsing-shortcut-text-2 = { -brand-shortcut-name } 사생활 보호 모드
 
 ##
 
@@ -73,16 +81,12 @@ urlbar-xr-notification-anchor =
     .tooltiptext = 가상 현실 권한 패널 열기
 urlbar-storage-access-anchor =
     .tooltiptext = 탐색 활동 권한 패널 열기
-urlbar-translate-notification-anchor =
-    .tooltiptext = 페이지 번역
 urlbar-web-rtc-share-screen-notification-anchor =
     .tooltiptext = 사이트의 창 또는 화면 공유 관리
 urlbar-indexed-db-notification-anchor =
     .tooltiptext = 오프라인 저장소 메시지 패널 열기
 urlbar-password-notification-anchor =
     .tooltiptext = 저장된 비밀번호 메시지 패널 열기
-urlbar-translated-notification-anchor =
-    .tooltiptext = 페이지 번역 관리
 urlbar-plugins-notification-anchor =
     .tooltiptext = 플러그인 사용 관리
 urlbar-web-rtc-share-devices-notification-anchor =
@@ -100,11 +104,25 @@ urlbar-addons-notification-anchor =
 urlbar-tip-help-icon =
     .title = 도움 받기
 urlbar-search-tips-confirm = 확인
+urlbar-search-tips-confirm-short = 확인
 # Read out before Urlbar Tip text content so screenreader users know the
 # subsequent text is a tip offered by the browser. It should end in a colon or
 # localized equivalent.
 urlbar-tip-icon-description =
     .alt = 팁:
+urlbar-result-menu-button =
+    .title = 메뉴 열기
+urlbar-result-menu-button-feedback = 의견 보내기
+    .title = 메뉴 열기
+urlbar-result-menu-learn-more =
+    .label = 더 알아보기
+    .accesskey = L
+urlbar-result-menu-remove-from-history =
+    .label = 기록에서 삭제
+    .accesskey = R
+urlbar-result-menu-tip-get-help =
+    .label = 도움 받기
+    .accesskey = h
 
 ## Prompts users to use the Urlbar when they open a new tab or visit the
 ## homepage of their default search engine.
@@ -113,6 +131,8 @@ urlbar-tip-icon-description =
 
 urlbar-search-tips-onboard = 입력은 더 적게하고 더 많이 찾기: 주소 표시줄에서 바로 { $engineName } 검색해 보세요.
 urlbar-search-tips-redirect-2 = 주소 표시줄에서 검색을 시작하여 { $engineName }의 제안 및 방문 기록을 확인하세요.
+# Make sure to match the name of the Search panel in settings.
+urlbar-search-tips-persist = 검색이 더욱 간편해졌습니다. 여기 주소 표시줄에서 더 구체적으로 검색해 보세요. URL을 대신 표시하려면 설정의 검색으로 이동하세요.
 # Prompts users to use the Urlbar when they are typing in the domain of a
 # search engine, e.g. google.com or amazon.com.
 urlbar-tabtosearch-onboard = 더 빨리 찾으려면 여기에서 하세요.
@@ -122,31 +142,32 @@ urlbar-tabtosearch-onboard = 더 빨리 찾으려면 여기에서 하세요.
 urlbar-search-mode-bookmarks = 북마크
 urlbar-search-mode-tabs = 탭
 urlbar-search-mode-history = 기록
+urlbar-search-mode-actions = 작업
 
 ##
 
 urlbar-geolocation-blocked =
-    .tooltiptext = 이 사이트의 위치 정보 사용을 차단하였습니다.
+    .tooltiptext = 이 사이트의 위치 정보 사용을 차단했습니다.
 urlbar-xr-blocked =
     .tooltiptext = 이 웹 사이트에 대한 가상 현실 기기 접근을 차단했습니다.
 urlbar-web-notifications-blocked =
-    .tooltiptext = 이 사이트의 알림 사용을 차단하였습니다.
+    .tooltiptext = 이 사이트의 알림 사용을 차단했습니다.
 urlbar-camera-blocked =
-    .tooltiptext = 이 사이트의 카메라 사용을 차단하였습니다.
+    .tooltiptext = 이 사이트의 카메라 사용을 차단했습니다.
 urlbar-microphone-blocked =
-    .tooltiptext = 이 사이트의 마이크 사용을 차단하였습니다.
+    .tooltiptext = 이 사이트의 마이크 사용을 차단했습니다.
 urlbar-screen-blocked =
-    .tooltiptext = 이 사이트의 화면 공유를 차단하였습니다.
+    .tooltiptext = 이 사이트의 화면 공유를 차단했습니다.
 urlbar-persistent-storage-blocked =
-    .tooltiptext = 이 사이트의 영구 저장소 사용을 차단하였습니다.
+    .tooltiptext = 이 사이트의 영구 저장소 사용을 차단했습니다.
 urlbar-popup-blocked =
-    .tooltiptext = 이 사이트의 팝업을 차단하였습니다.
+    .tooltiptext = 이 사이트의 팝업을 차단했습니다.
 urlbar-autoplay-media-blocked =
-    .tooltiptext = 이 사이트의 소리있는 미디어 자동 재생을 차단하였습니다.
+    .tooltiptext = 이 사이트의 소리있는 미디어 자동 재생을 차단했습니다.
 urlbar-canvas-blocked =
-    .tooltiptext = 이 사이트의 캔버스 데이터 추출을 차단하였습니다.
+    .tooltiptext = 이 사이트의 캔버스 데이터 추출을 차단했습니다.
 urlbar-midi-blocked =
-    .tooltiptext = 이 사이트의 MIDI 접근을 차단하였습니다.
+    .tooltiptext = 이 사이트의 MIDI 접근을 차단했습니다.
 urlbar-install-blocked =
     .tooltiptext = 이 사이트의 부가 기능 설치를 차단했습니다.
 # Variables
@@ -160,14 +181,12 @@ urlbar-star-add-bookmark =
 
 ## Page Action Context Menu
 
-page-action-add-to-urlbar =
-    .label = 주소 표시줄에 추가
-page-action-manage-extension =
+page-action-manage-extension2 =
     .label = 확장 기능 관리…
-page-action-remove-from-urlbar =
-    .label = 주소 표시줄에서 제거
-page-action-remove-extension =
+    .accesskey = E
+page-action-remove-extension2 =
     .label = 확장 기능 제거
+    .accesskey = v
 
 ## Auto-hide Context Menu
 
@@ -183,14 +202,10 @@ full-screen-exit =
 # This string prompts the user to use the list of search shortcuts in
 # the Urlbar and searchbar.
 search-one-offs-with-title = 이번만 검색:
-# This string won't wrap, so if the translated string is longer,
-# consider translating it as if it said only "Search Settings".
-search-one-offs-change-settings-button =
-    .label = 검색 설정 변경
 search-one-offs-change-settings-compact-button =
     .tooltiptext = 검색 설정 변경
 search-one-offs-context-open-new-tab =
-    .label = 새 탭에 검색
+    .label = 새 탭에서 검색
     .accesskey = T
 search-one-offs-context-set-as-default =
     .label = 기본 검색 엔진으로 설정
@@ -230,6 +245,67 @@ search-one-offs-tabs =
     .tooltiptext = 탭 ({ $restrict })
 search-one-offs-history =
     .tooltiptext = 기록 ({ $restrict })
+search-one-offs-actions =
+    .tooltiptext = 작업 ({ $restrict })
+
+## QuickActions are shown in the urlbar as the user types a matching string
+## The -cmd- strings are comma separated list of keywords that will match
+## the action.
+
+# Opens the about:addons page in the home / recommendations section
+quickactions-addons = 부가 기능 보기
+quickactions-cmd-addons2 = 부가 기능, add-ons
+# Opens the bookmarks library window
+quickactions-bookmarks2 = 북마크 관리
+quickactions-cmd-bookmarks = 북마크, bookmarks
+# Opens a SUMO article explaining how to clear history
+quickactions-clearhistory = 기록 지우기
+quickactions-cmd-clearhistory = 기록 지우기, clear history
+# Opens about:downloads page
+quickactions-downloads2 = 다운로드 보기
+quickactions-cmd-downloads = 다운로드, downloads
+# Opens about:addons page in the extensions section
+quickactions-extensions = 확장 기능 관리
+quickactions-cmd-extensions = 확장 기능, extensions
+# Opens the devtools web inspector
+quickactions-inspector2 = 개발자 도구 열기
+quickactions-cmd-inspector = 검사기, 개발자 도구, inspector, devtools
+# Opens about:logins
+quickactions-logins2 = 비밀번호 관리
+quickactions-cmd-logins = 로그인, 비밀번호, logins, passwords
+# Opens about:addons page in the plugins section
+quickactions-plugins = 플러그인 관리
+quickactions-cmd-plugins = 플러그인, plugins
+# Opens the print dialog
+quickactions-print2 = 페이지 인쇄
+quickactions-cmd-print = 인쇄, print
+# Opens a new private browsing window
+quickactions-private2 = 사생활 보호 창 열기
+quickactions-cmd-private = 사생활 보호 모드, private browsing
+# Opens a SUMO article explaining how to refresh
+quickactions-refresh = { -brand-short-name } 새로 고침
+quickactions-cmd-refresh = 새로 고침, refresh
+# Restarts the browser
+quickactions-restart = { -brand-short-name } 다시 시작
+quickactions-cmd-restart = 다시 시작, restart
+# Opens the screenshot tool
+quickactions-screenshot3 = 스크린샷 찍기
+quickactions-cmd-screenshot = 스크린샷, screenshot
+# Opens about:preferences
+quickactions-settings2 = 설정 관리
+quickactions-cmd-settings = 설정, 옵션, settings, preferences, options
+# Opens about:addons page in the themes section
+quickactions-themes = 테마 관리
+quickactions-cmd-themes = 테마, themes
+# Opens a SUMO article explaining how to update the browser
+quickactions-update = { -brand-short-name } 업데이트
+quickactions-cmd-update = 업데이트, update
+# Opens the view-source UI with current pages source
+quickactions-viewsource2 = 페이지 소스 보기
+quickactions-cmd-viewsource = 소스 보기, 소스, view source, source
+# Tooltip text for the help button shown in the result.
+quickactions-learn-more =
+    .title = 빠른 작업 더 알아보기
 
 ## Bookmark Panel
 
@@ -246,8 +322,6 @@ bookmark-panel-remove =
 bookmark-panel-show-editor-checkbox =
     .label = 저장할 때 편집기 표시
     .accesskey = S
-bookmark-panel-done-button =
-    .label = 완료
 bookmark-panel-save-button =
     .label = 저장
 # Width of the bookmark panel.
@@ -270,17 +344,16 @@ identity-connection-secure = 안전한 연결
 identity-connection-failure = 연결 실패
 identity-connection-internal = 안전한 { -brand-short-name } 페이지입니다.
 identity-connection-file = 이 페이지는 컴퓨터에 저장되어 있습니다.
-identity-extension-page = 이 페이지는 확장 기능으로부터 로드되었습니다.
+identity-extension-page = 이 페이지는 확장 기능이 로드했습니다.
 identity-active-blocked = { -brand-short-name }가 안전하지 않은 페이지의 일부를 차단했습니다.
 identity-custom-root = Mozilla에서 인식하지 못하는 인증서 발급자가 연결을 확인했습니다.
 identity-passive-loaded = 페이지의 일부(이미지 등)가 안전하지 않습니다.
 identity-active-loaded = 이 페이지에서 보호를 비활성화하셨습니다.
 identity-weak-encryption = 이 페이지는 약한 암호화를 사용합니다.
 identity-insecure-login-forms = 이 페이지에 입력된 로그인 정보는 노출될 수 있습니다.
-identity-permissions =
-    .value = 권한
 identity-https-only-connection-upgraded = (HTTPS로 업그레이드됨)
 identity-https-only-label = HTTPS 전용 모드
+identity-https-only-label2 = 이 사이트를 보안 연결로 자동 업그레이드
 identity-https-only-dropdown-on =
     .label = 켜기
 identity-https-only-dropdown-off =
@@ -289,33 +362,32 @@ identity-https-only-dropdown-off-temporarily =
     .label = 일시적으로 끄기
 identity-https-only-info-turn-on2 = { -brand-short-name }가 가능한 경우 연결을 업그레이드하도록 하려면 이 사이트에 대해 HTTPS 전용 모드를 켜세요.
 identity-https-only-info-turn-off2 = 페이지가 손상된 것 같으면 이 사이트가 안전하지 않은 HTTP를 사용하여 다시 로드되도록 HTTPS 전용 모드를 끌 수 있습니다.
+identity-https-only-info-turn-on3 = { -brand-short-name }가 가능한 경우 연결을 업그레이드하도록 하려면 이 사이트에 대해 HTTPS 업그레이드를 켜세요.
+identity-https-only-info-turn-off3 = 페이지가 손상된 것 같으면 이 사이트가 안전하지 않은 HTTP를 사용하여 다시 로드되도록 HTTPS 업그레이드를 끌 수 있습니다.
 identity-https-only-info-no-upgrade = HTTP에서 연결을 업그레이드할 수 없습니다.
 identity-permissions-storage-access-header = 교차 사이트 쿠키
 identity-permissions-storage-access-hint = 이 당사자는 사용자가 이 사이트에 있는 동안 교차 사이트 쿠키 및 사이트 데이터를 사용할 수 있습니다.
 identity-permissions-storage-access-learn-more = 더 알아보기
 identity-permissions-reload-hint = 변경 사항을 적용하려면 페이지를 다시 로드해야할 수도 있습니다.
-identity-permissions-empty = 이 사이트를 특별한 권한으로 승인하지 않았습니다.
 identity-clear-site-data =
     .label = 쿠키 및 사이트 데이터 지우기…
 identity-connection-not-secure-security-view = 이 사이트에 안전하게 연결되어 있지 않습니다.
 identity-connection-verified = 이 사이트에 안전하게 연결되어 있습니다.
 identity-ev-owner-label = 인증서 발급 대상:
-identity-description-custom-root = Mozilla는 이 인증서 발급자를 인식하지 못합니다. 운영 체제 또는 관리자가 추가한 것일 수 있습니다. <label data-l10n-name="link">더 알아보기</label>
+identity-description-custom-root2 = Mozilla는 이 인증서 발급자를 인식하지 못합니다. 운영 체제 또는 관리자가 추가한 것일 수 있습니다.
 identity-remove-cert-exception =
     .label = 예외 제거
     .accesskey = R
-identity-description-insecure = 이 사이트의 연결이 보호되지 않습니다. 전송하는 정보(비밀번호, 메시지, 신용 카드 번호 등)를 다른사람이 볼 수 있습니다.
+identity-description-insecure = 이 사이트의 연결은 비공개가 아닙니다. 전송하는 정보(예: 비밀번호, 메시지, 신용 카드 등)를 다른 사람이 볼 수 있습니다.
 identity-description-insecure-login-forms = 이 페이지에 입력한 로그인 정보는 안전하지 않고 손상될 수 있습니다.
-identity-description-weak-cipher-intro = 이 사이트의 연결이 약한 암호화를 사용하고 있어서 보호되지 않습니다.
+identity-description-weak-cipher-intro = 이 사이트의 연결은 약한 암호화를 사용하며 비공개가 아닙니다.
 identity-description-weak-cipher-risk = 다른 사람이 정보를 보거나 웹 사이트의 동작을 바꿀 수 있습니다.
-identity-description-active-blocked = { -brand-short-name }가 안전하지 않은 페이지의 일부분을 차단했습니다. <label data-l10n-name="link">더 알아보기</label>
-identity-description-passive-loaded = 연결이 안전하지 않아서 사용자가 공유하는 정보를 다른 사람이 볼 수 있습니다.
-identity-description-passive-loaded-insecure = 이 웹 사이트는 안전하지 않은 콘텐츠(이미지 등)을 포함하고 있습니다. <label data-l10n-name="link">더 알아보기</label>
-identity-description-passive-loaded-mixed = { -brand-short-name }가 일부 콘텐츠를 차단했지만 아직 안전하지 않은 콘텐츠(이미지 등)가 있습니다. <label data-l10n-name="link">더 알아보기</label>
-identity-description-active-loaded = 이 웹 사이트는 안전하지 않은 콘텐츠(스크립트 등)를 포함하고 있고 사용자의 연결이 보호되지 않습니다.
-identity-description-active-loaded-insecure = 이 사이트에 공유하는 정보(비밀번호, 메시지, 신용 카드 번호 등)를 다른사람이 볼 수 있습니다.
-identity-learn-more =
-    .value = 더 알아보기
+identity-description-active-blocked2 = { -brand-short-name }가 안전하지 않은 페이지의 일부분을 차단했습니다.
+identity-description-passive-loaded = 이 사이트의 연결은 비공개가 아니므로 사용자가 공유하는 정보를 다른 사람들이 볼 수 있습니다.
+identity-description-passive-loaded-insecure2 = 이 웹 사이트는 안전하지 않은 콘텐츠(이미지 등)을 포함하고 있습니다.
+identity-description-passive-loaded-mixed2 = { -brand-short-name }가 일부 콘텐츠를 차단했지만 아직 안전하지 않은 콘텐츠(이미지 등)가 있습니다.
+identity-description-active-loaded = 이 웹 사이트는 안전하지 않은 콘텐츠(스크립트 등)가 포함되어 있으며 이 사이트의 연결은 비공개가 아닙니다.
+identity-description-active-loaded-insecure = 이 사이트에 공유하는 정보(예: 비밀번호, 메시지, 신용 카드 등)를 다른 사람이 볼 수 있습니다.
 identity-disable-mixed-content-blocking =
     .label = 지금부터 보호 끄기
     .accesskey = D
@@ -376,12 +448,6 @@ bookmarks-toolbar-empty-message = 빠르게 접근하려면, 여기 북마크 �
 
 ## WebRTC Pop-up notifications
 
-popup-select-camera =
-    .value = 공유할 카메라:
-    .accesskey = C
-popup-select-microphone =
-    .value = 공유할 마이크:
-    .accesskey = M
 popup-select-camera-device =
     .value = 카메라:
     .accesskey = C
@@ -394,22 +460,10 @@ popup-select-microphone-icon =
     .tooltiptext = 마이크
 popup-select-speaker-icon =
     .tooltiptext = 스피커
+popup-select-window-or-screen =
+    .label = 창 또는 화면:
+    .accesskey = W
 popup-all-windows-shared = 화면에 표시되어 있는 모든 창을 공유합니다.
-popup-screen-sharing-not-now =
-    .label = 나중에
-    .accesskey = w
-popup-screen-sharing-never =
-    .label = 허용 안 함
-    .accesskey = N
-popup-silence-notifications-checkbox = 공유하는 동안 { -brand-short-name }에서 알림을 사용 안 함
-popup-silence-notifications-checkbox-warning = { -brand-short-name }는 공유하는 동안 알림을 표시하지 않습니다.
-popup-screen-sharing-block =
-    .label = 차단
-    .accesskey = B
-popup-screen-sharing-always-block =
-    .label = 항상 차단
-    .accesskey = w
-popup-mute-notifications-checkbox = 공유하는 동안 웹 사이트 알림 음소거
 
 ## WebRTC window or screen share tab switch warning
 
@@ -422,18 +476,14 @@ sharing-warning-disable-for-session =
 
 ## DevTools F12 popup
 
-enable-devtools-popup-description = F12 단축키를 사용하려면, 먼저 웹 개발자 메뉴를 통해 DevTools를 여세요.
+enable-devtools-popup-description2 = F12 단축키를 사용하려면, 먼저 브라우저 도구 메뉴를 통해 개발자 도구를 여세요.
 
 ## URL Bar
 
-urlbar-default-placeholder =
-    .defaultPlaceholder = 검색어 또는 주소 입력
 # This placeholder is used when not in search mode and the user's default search
 # engine is unknown.
 urlbar-placeholder =
     .placeholder = 검색어 또는 주소 입력
-urlbar-remote-control-notification-anchor =
-    .tooltiptext = 브라우저가 원격 제어중
 # This placeholder is used in search mode with search engines that search the
 # entire web.
 # Variables
@@ -457,11 +507,15 @@ urlbar-placeholder-search-mode-other-bookmarks =
 # This placeholder is used when searching history.
 urlbar-placeholder-search-mode-other-history =
     .placeholder = 검색어 입력
-    .aria-label = 방문 기록 검색
+    .aria-label = 기록 검색
 # This placeholder is used when searching open tabs.
 urlbar-placeholder-search-mode-other-tabs =
     .placeholder = 검색어 입력
     .aria-label = 탭 검색
+# This placeholder is used when searching quick actions.
+urlbar-placeholder-search-mode-other-actions =
+    .placeholder = 검색어 입력
+    .aria-label = 작업 검색
 # Variables
 #  $name (String): the name of the user's default search engine
 urlbar-placeholder-with-name =
@@ -482,8 +536,6 @@ urlbar-go-button =
     .tooltiptext = 주소 표시줄의 주소로 이동
 urlbar-page-action-button =
     .tooltiptext = 페이지 작업
-urlbar-pocket-button =
-    .tooltiptext = { -pocket-brand-name }에 저장
 
 ## Action text shown in urlbar results, usually appended after the search
 ## string or the url, like "result value - action text".
@@ -539,6 +591,7 @@ urlbar-result-action-calculator-result = = { $result }
 urlbar-result-action-search-bookmarks = 북마크 검색
 urlbar-result-action-search-history = 기록 검색
 urlbar-result-action-search-tabs = 탭 검색
+urlbar-result-action-search-actions = 작업 검색
 
 ## Labels shown above groups of urlbar results
 
@@ -547,11 +600,37 @@ urlbar-result-action-search-tabs = 탭 검색
 urlbar-group-firefox-suggest =
     .label = { -firefox-suggest-brand-name }
 # A label shown above the search suggestions group in the urlbar results. It
-# should use title case.
+# should use sentence case.
 # Variables
 #  $engine (String): the name of the search engine providing the suggestions
 urlbar-group-search-suggestions =
     .label = { $engine } 제안
+# A label shown above Quick Actions in the urlbar results.
+urlbar-group-quickactions =
+    .label = 빠른 작업
+
+## Reader View toolbar buttons
+
+# This should match menu-view-enter-readerview in menubar.ftl
+reader-view-enter-button =
+    .aria-label = 리더뷰 보기
+# This should match menu-view-close-readerview in menubar.ftl
+reader-view-close-button =
+    .aria-label = 리더뷰 닫기
+
+## Picture-in-Picture urlbar button
+## Variables:
+##   $shortcut (String) - Keyboard shortcut to execute the command.
+
+picture-in-picture-urlbar-button-open =
+    .tooltiptext = 화면 속 화면 열기 ({ $shortcut })
+picture-in-picture-urlbar-button-close =
+    .tooltiptext = 화면 속 화면 닫기 ({ $shortcut })
+picture-in-picture-panel-header = 화면 속 화면
+picture-in-picture-panel-headline = 이 웹 사이트는 화면 속 화면을 권장하지 않음
+picture-in-picture-panel-body = 화면 속 화면을 사용하는 동안 동영상이 개발자가 의도한 대로 표시되지 않을 수 있습니다.
+picture-in-picture-enable-toggle =
+    .label = 그래도 사용
 
 ## Full Screen and Pointer Lock UI
 
@@ -569,19 +648,6 @@ fullscreen-exit-mac-button = 전체 화면 종료 (esc)
 pointerlock-warning-domain = <span data-l10n-name="domain">{ $domain }</span> 사이트가 포인터를 제어하려 합니다. 다시 제어하려면 ESC 키를 누르세요.
 pointerlock-warning-no-domain = 이 문서가 포인터를 제어하려 합니다. 다시 제어하려면 ESC 키를 누르세요.
 
-## Subframe crash notification
-
-crashed-subframe-message = <strong>이 페이지의 일부가 손상되었습니다.</strong> { -brand-product-name }에게 이 문제를 알리고 더 빨리 해결하려면 보고서를 제출하세요.
-# The string for crashed-subframe-title.title should match crashed-subframe-message,
-# but without any markup.
-crashed-subframe-title =
-    .title = 이 페이지의 일부가 손상되었습니다.{ -brand-product-name }에게 이 문제를 알리고 더 빨리 해결하려면 보고서를 제출하세요.
-crashed-subframe-learnmore-link =
-    .value = 더 알아보기
-crashed-subframe-submit =
-    .label = 보고서 제출
-    .accesskey = S
-
 ## Bookmarks panels, menus and toolbar
 
 bookmarks-manage-bookmarks =
@@ -597,11 +663,16 @@ bookmarks-other-bookmarks-menu =
     .label = 기타 북마크
 bookmarks-mobile-bookmarks-menu =
     .label = 모바일 북마크
+
+## Variables:
+##   $isVisible (boolean): if the specific element (e.g. bookmarks sidebar,
+##                         bookmarks toolbar, etc.) is visible or not.
+
 bookmarks-tools-sidebar-visibility =
     .label =
         { $isVisible ->
-            [true] 북마크 탐색창 숨기기
-           *[other] 북마크 탐색창 보기
+            [true] 북마크 사이드바 숨기기
+           *[other] 북마크 사이드바 표시
         }
 bookmarks-tools-toolbar-visibility-menuitem =
     .label =
@@ -621,12 +692,15 @@ bookmarks-tools-menu-button-visibility =
             [true] 도구 모음에서 북마크 메뉴 제거
            *[other] 도구 모음에 북마크 메뉴 추가
         }
+
+##
+
 bookmarks-search =
     .label = 북마크 검색
 bookmarks-tools =
     .label = 북마크 도구
-bookmarks-bookmark-edit-panel =
-    .label = 이 북마크 편집
+bookmarks-subview-edit-bookmark =
+    .label = 이 북마크 편집…
 # The aria-label is a spoken label that should not include the word "toolbar" or
 # such, because screen readers already know that this container is a toolbar.
 # This avoids double-speaking.
@@ -641,8 +715,8 @@ bookmarks-toolbar-placeholder =
 bookmarks-toolbar-placeholder-button =
     .label = 북마크 도구 모음 항목
 # "Bookmark" is a verb, as in "Add current tab to bookmarks".
-bookmarks-current-tab =
-    .label = 현재 탭 북마크
+bookmarks-subview-bookmark-tab =
+    .label = 현재 탭 북마크…
 
 ## Library Panel items
 
@@ -666,11 +740,6 @@ repair-text-encoding-button =
 ## Customize Toolbar Buttons
 
 # Variables:
-#  $shortcut (String): keyboard shortcut to open the add-ons manager
-toolbar-addons-themes-button =
-    .label = 부가 기능 및 테마
-    .tooltiptext = 부가 기능 및 테마 관리 ({ $shortcut })
-# Variables:
 #  $shortcut (String): keyboard shortcut to open settings (only on macOS)
 toolbar-settings-button =
     .label = 설정
@@ -679,15 +748,33 @@ toolbar-settings-button =
             [macos] 설정 열기 ({ $shortcut })
            *[other] 설정 열기
         }
-
-## More items
-
-more-menu-go-offline =
-    .label = 오프라인으로 작업
-    .accesskey = w
 toolbar-overflow-customize-button =
     .label = 도구 모음 사용자 지정…
     .accesskey = C
+toolbar-button-email-link =
+    .label = 메일로 링크 보내기
+    .tooltiptext = 메일로 이 페이지의 링크 보내기
+toolbar-button-logins =
+    .label = 비밀번호
+    .tooltiptext = 저장된 비밀번호 보기 및 관리
+# Variables:
+#  $shortcut (String): keyboard shortcut to save a copy of the page
+toolbar-button-save-page =
+    .label = 페이지 저장
+    .tooltiptext = 이 페이지 저장 ({ $shortcut })
+# Variables:
+#  $shortcut (String): keyboard shortcut to open a local file
+toolbar-button-open-file =
+    .label = 파일 열기
+    .tooltiptext = 파일 열기 ({ $shortcut })
+toolbar-button-synced-tabs =
+    .label = 동기화된 탭
+    .tooltiptext = 다른 기기의 탭 보기
+# Variables
+# $shortcut (string) - Keyboard shortcut to open a new private browsing window
+toolbar-button-new-private-window =
+    .label = 새 사생활 보호 창
+    .tooltiptext = 새 사생활 보호 창 열기 ({ $shortcut })
 
 ## EME notification panel
 
@@ -701,19 +788,6 @@ eme-notifications-drm-content-playing-dismiss-accesskey = D
 
 panel-save-update-username = 사용자 이름
 panel-save-update-password = 비밀번호
-
-## Add-on removal warning
-
-# Variables:
-#  $name (String): The name of the addon that will be removed.
-addon-removal-title = { $name } 부가 기능을 제거하시겠습니까?
-addon-removal-abuse-report-checkbox = 이 확장 기능을 { -vendor-short-name }에 신고
-
-## Remote / Synced tabs
-
-remote-tabs-manage-account =
-    .label = 계정 관리
-remote-tabs-sync-now = 지금 동기화
 
 ##
 
@@ -738,6 +812,143 @@ popups-infobar-block =
 popups-infobar-dont-show-message =
     .label = 팝업이 차단될 때 이 메시지를 표시하지 않음
     .accesskey = D
+edit-popup-settings =
+    .label = 팝업 설정 관리…
+    .accesskey = M
 picture-in-picture-hide-toggle =
-    .label = 화면 속 화면 토글 숨기기
+    .label = 화면 속 화면 전환 버튼 숨기기
     .accesskey = H
+
+## Since the default position for PiP controls does not change for RTL layout,
+## right-to-left languages should use "Left" and "Right" as in the English strings,
+
+picture-in-picture-move-toggle-right =
+    .label = 화면 속 화면 전환 버튼을 오른쪽으로 이동
+    .accesskey = R
+picture-in-picture-move-toggle-left =
+    .label = 화면 속 화면 전환 버튼을 왼쪽으로 이동
+    .accesskey = L
+
+##
+
+
+# Navigator Toolbox
+
+# This string is a spoken label that should not include
+# the word "toolbar" or such, because screen readers already know that
+# this container is a toolbar. This avoids double-speaking.
+navbar-accessible =
+    .aria-label = 탐색
+navbar-downloads =
+    .label = 다운로드
+navbar-overflow =
+    .tooltiptext = 도구 더보기…
+# Variables:
+#   $shortcut (String): keyboard shortcut to print the page
+navbar-print =
+    .label = 인쇄
+    .tooltiptext = 이 페이지 인쇄… ({ $shortcut })
+navbar-home =
+    .label = 홈
+    .tooltiptext = { -brand-short-name } 홈 페이지
+navbar-library =
+    .label = 라이브러리
+    .tooltiptext = 기록, 저장된 북마크 등 보기
+navbar-search =
+    .title = 검색
+# Name for the tabs toolbar as spoken by screen readers. The word
+# "toolbar" is appended automatically and should not be included in
+# in the string
+tabs-toolbar =
+    .aria-label = 브라우저 탭
+tabs-toolbar-new-tab =
+    .label = 새 탭
+tabs-toolbar-list-all-tabs =
+    .label = 탭 전체 목록
+    .tooltiptext = 탭 전체 목록
+
+## Infobar shown at startup to suggest session-restore
+
+# <img data-l10n-name="icon"/> will be replaced by the application menu icon
+restore-session-startup-suggestion-message = <strong>이전 탭을 여시겠습니까?</strong> { -brand-short-name } 애플리케이션 메뉴 <img data-l10n-name="icon"/>의 기록 아래에서 이전 세션을 복원할 수 있습니다.
+restore-session-startup-suggestion-button = 사용법 보기
+
+## Mozilla data reporting notification (Telemetry, Firefox Health Report, etc)
+
+data-reporting-notification-message = 여러분이 보다 나은 경험을 할 수 있도록 { -brand-short-name }는 { -vendor-short-name }에 자동으로 일부 데이터를 전송합니다.
+data-reporting-notification-button =
+    .label = 공유할 데이터 선택
+    .accesskey = C
+# Label for the indicator shown in the private browsing window titlebar.
+private-browsing-indicator-label = 사생활 보호 모드
+
+## Unified extensions (toolbar) button
+
+unified-extensions-button =
+    .label = 확장 기능
+    .tooltiptext = 확장 기능
+
+## Unified extensions button when permission(s) are needed.
+## Note that the new line is intentionally part of the tooltip.
+
+unified-extensions-button-permissions-needed =
+    .label = 확장 기능
+    .tooltiptext =
+        확장 기능
+        권한 필요
+
+## Unified extensions button when some extensions are quarantined.
+## Note that the new line is intentionally part of the tooltip.
+
+unified-extensions-button-quarantined =
+    .label = 확장 기능
+    .tooltiptext =
+        확장 기능
+        일부 확장 기능은 허용되지 않음
+
+## Autorefresh blocker
+
+refresh-blocked-refresh-label = { -brand-short-name }가 이 페이지를 자동으로 다시 로드하지 못하도록 차단했습니다.
+refresh-blocked-redirect-label = { -brand-short-name }가 이 페이지에서 다른 페이지로 자동으로 바뀌는 것을 차단했습니다.
+refresh-blocked-allow =
+    .label = 허용
+    .accesskey = A
+
+## Firefox Relay integration
+
+firefox-relay-offer-why-to-use-relay = 안전하고 사용하기 쉬운 마스크는 이메일 주소를 숨김으로써 신원을 보호하고 스팸을 방지합니다.
+# Variables:
+#  $useremail (String): user email that will receive messages
+firefox-relay-offer-what-relay-provides = 이메일 마스크로 전송된 모든 이메일은 차단하지 않는 한 <strong>{ $useremail }</strong>(으)로 전달됩니다.
+firefox-relay-offer-legal-notice = "이메일 마스크 사용"을 클릭하면, <label data-l10n-name="tos-url">서비스 약관</label>및 <label data-l10n-name="privacy-url">개인정보처리방침</label>에 동의하는 것입니다.
+
+## Add-on Pop-up Notifications
+
+popup-notification-addon-install-unsigned =
+    .value = (검사하지 않았음)
+popup-notification-xpinstall-prompt-learn-more = 부가 기능을 안전하게 설치하는 방법에 대해 더 알아보기
+
+## Pop-up warning
+
+# Variables:
+#   $popupCount (Number): the number of pop-ups blocked.
+popup-warning-message = { -brand-short-name }가 이 사이트에서 팝업 창 { $popupCount }개를 차단했습니다.
+# The singular form is left out for English, since the number of blocked pop-ups is always greater than 1.
+# Variables:
+#   $popupCount (Number): the number of pop-ups blocked.
+popup-warning-exceeded-message = { -brand-short-name }가 이 사이트에서 팝업 창 { $popupCount }개 이상을 차단했습니다.
+popup-warning-button =
+    .label =
+        { PLATFORM() ->
+            [windows] 옵션
+           *[other] 환경 설정
+        }
+    .accesskey =
+        { PLATFORM() ->
+            [windows] O
+           *[other] P
+        }
+# Variables:
+#   $popupURI (String): the URI for the pop-up window
+popup-show-popup-menuitem =
+    .label = 표시: “{ $popupURI }”

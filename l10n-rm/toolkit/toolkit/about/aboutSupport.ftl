@@ -12,11 +12,6 @@ crashes-id = ID dal rapport
 crashes-send-date = Tramess
 crashes-all-reports = Tut ils rapports da collaps
 crashes-no-config = Questa applicaziun n'è betg configurada per mussar rapports da collaps.
-extensions-title = Extensiuns
-extensions-name = Num
-extensions-enabled = Activà
-extensions-version = Versiun
-extensions-id = ID
 support-addons-title = Supplements
 support-addons-name = Num
 support-addons-type = Tip
@@ -80,6 +75,12 @@ app-basics-location-service-key-google = Clav dal servetsch da localisaziun da G
 app-basics-safebrowsing-key-google = Clav dal servetsch Google Safebrowsing
 app-basics-key-mozilla = Clav dal servetsch da posiziun da Mozilla
 app-basics-safe-mode = Modus privat
+app-basics-memory-size = Grondezza da la memoria (RAM)
+app-basics-disk-available = Memoria disponibla sin il disc
+# Variables:
+#   $value (number) - Amount of data being stored
+#   $unit (string) - The unit of data being stored (e.g. MB)
+app-basics-data-size = { $value } { $unit }
 show-dir-label =
     { PLATFORM() ->
         [macos] Mussar en il finder
@@ -109,11 +110,21 @@ graphics-gpu2-title = GPU #2
 graphics-decision-log-title = Protocol da decisiuns
 graphics-crash-guards-title = Funcziunalitads deactivadas da la protecziun cunter collaps
 graphics-workarounds-title = Soluziuns
+graphics-device-pixel-ratios = Proporziuns da pixels tenor apparat da la fanestra
 # Windowing system in use on Linux (e.g. X11, Wayland).
 graphics-window-protocol = Protocol da fanestras
 # Desktop environment in use on Linux (e.g. GNOME, KDE, XFCE, etc).
 graphics-desktop-environment = Sistem da desktop
 place-database-title = Banca da datas «Places»
+place-database-stats = Statisticas
+place-database-stats-show = Mussar las statisticas
+place-database-stats-hide = Zuppentar las statisticas
+place-database-stats-entity = Entitad
+place-database-stats-count = Dumber
+place-database-stats-size-kib = Grondezza (KiB)
+place-database-stats-size-perc = Grondezza (%)
+place-database-stats-efficiency-perc = Effizienza (%)
+place-database-stats-sequentiality-perc = Sequenzialitad (%)
 place-database-integrity = Integritad
 place-database-verify-integrity = Verifitgar l'integritad
 a11y-title = Accessibladad
@@ -133,8 +144,6 @@ sandbox-sys-call-tid = TID
 sandbox-sys-call-proc-type = Tip da process
 sandbox-sys-call-number = Syscall
 sandbox-sys-call-args = Arguments
-safe-mode-title = Empruvar il modus segirà
-restart-in-safe-mode-label = Reaviar cun supplements deactivads…
 troubleshoot-mode-title = Analisar problems
 restart-in-troubleshoot-mode-label = Modus per schliar problems…
 clear-startup-cache-title = Emprova da svidar il cache da l'aviar
@@ -162,8 +171,18 @@ media-device-channels = Chanals
 media-device-rate = Frequenza
 media-device-latency = Latenza
 media-capabilities-title = Funcziunalitad medias
+media-codec-support-info = Infurmaziuns davart il sustegn da codecs
 # List all the entries of the database.
 media-capabilities-enumerate = Percurrer la banca da datas
+
+## Codec support table
+
+media-codec-support-sw-decoding = Decodaziun software
+media-codec-support-hw-decoding = Decodaziun hardware
+media-codec-support-codec-name = Num dal codec
+media-codec-support-supported = Sustegnì
+media-codec-support-unsupported = Betg sustegnì
+media-codec-support-error = Naginas infurmaziuns disponiblas davart il sustegn da codecs. Emprova anc ina giada suenter avair reproducì ina datoteca da multimedia.
 
 ##
 
@@ -192,36 +211,6 @@ remote-debugging-url = URL
 
 ##
 
-support-third-party-modules-title = Moduls da terzas partidas
-support-third-party-modules-module = Datoteca dal modul
-support-third-party-modules-version = Versiun da la datoteca
-support-third-party-modules-vendor = Infurmaziuns dal vendider
-support-third-party-modules-occurrence = Occurrenzas
-support-third-party-modules-process = Tip da process & ID
-support-third-party-modules-thread = Thread
-support-third-party-modules-base = Adressa imagebase
-support-third-party-modules-uptime = Temp d'activitad dal process (ms)
-support-third-party-modules-duration = Temp per chargiar (ms)
-support-third-party-modules-status = Status
-support-third-party-modules-status-loaded = Chargià
-support-third-party-modules-status-blocked = Bloccà
-support-third-party-modules-status-redirected = Renvià
-support-third-party-modules-empty = Na chargià nagin modul da terzas partidas.
-support-third-party-modules-no-value = (nagina valur)
-support-third-party-modules-button-open =
-    .title = Avrir l'ordinatur da la datoteca…
-support-third-party-modules-expand =
-    .title = Mussar infurmaziuns detagliadas
-support-third-party-modules-collapse =
-    .title = Reducir las infurmaziuns detagliadas
-support-third-party-modules-unsigned-icon =
-    .title = Quest modul n'è betg signà
-support-third-party-modules-folder-icon =
-    .title = Avrir l'ordinatur da la datoteca…
-support-third-party-modules-down-icon =
-    .title = Mussar infurmaziuns detagliadas
-support-third-party-modules-up-icon =
-    .title = Reducir las infurmaziuns detagliadas
 # Variables
 # $days (Integer) - Number of days of crashes to log
 report-crash-for-days =
@@ -308,10 +297,8 @@ webgl2-renderer = Driver WebGL 2 - Visualisader
 webgl2-version = Driver WebGL 2 - Versiun
 webgl2-driver-extensions = Driver WebGL 2 - Extensiuns
 webgl2-extensions = WebGL 2 - Extensiuns
-blocklisted-bug = Sin la glista naira pervia da problems enconuschents
-# Variables
-# $bugNumber (string) - String of bug number from Bugzilla
-bug-link = bug { $bugNumber }
+webgpu-default-adapter = Adapter WebGPU standard
+webgpu-fallback-adapter = Adapter WebGPU alternativ
 # Variables
 #   $bugNumber (string) - Bug number on Bugzilla
 support-blocklisted-bug = Bloccà pervia da sbagls enconuschents: <a data-l10n-name="bug-link">bug { $bugNumber }</a>
@@ -319,8 +306,6 @@ support-blocklisted-bug = Bloccà pervia da sbagls enconuschents: <a data-l10n-n
 # $failureCode (string) - String that can be searched in the source tree.
 unknown-failure = Sin la glista naira; numer da sbagl { $failureCode }
 d3d11layers-crash-guard = D3D11 Compositor
-d3d11video-crash-guard = Decodader da video D3D11
-d3d9video-crash-guard = Decodader da video D3D9
 glcontext-crash-guard = OpenGL
 wmfvpxvideo-crash-guard = WMF VPX Video Decoder
 reset-on-next-restart = Redefinir cun reaviar la proxima giada
@@ -343,6 +328,7 @@ can-sandbox-media = Sandbox per plug-ins da medias
 content-sandbox-level = Nivel da sandbox per process da cuntegn
 effective-content-sandbox-level = Nivel effectiv da sandbox per ils process da cuntegn
 content-win32k-lockdown-state = Stadi Win32k Lockdown dal process per ils cuntegns
+support-sandbox-gpu-level = Nivel da sandbox per ils process da la GPU
 sandbox-proc-type-content = cuntegn
 sandbox-proc-type-file = cuntegn da la datoteca
 sandbox-proc-type-media-plugin = plugin per medias
@@ -360,14 +346,6 @@ launcher-process-status-unknown = Status nunenconuschent
 # $remoteWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
 multi-process-windows = { $remoteWindows }/{ $totalWindows }
-multi-process-status-0 = Activà da l'utilisader
-multi-process-status-1 = Activà tenor standard
-multi-process-status-2 = Deactivà
-multi-process-status-4 = Deactivà dals agids d'access
-multi-process-status-6 = Deactivà dad ina metoda incumpatibla d'endatar text
-multi-process-status-7 = Deactivà da supplements
-multi-process-status-8 = Deactivà cun forza
-multi-process-status-unknown = Status nunenconuschent
 # Variables
 # $fissionWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
@@ -376,7 +354,7 @@ fission-status-experiment-control = Deactivà dad experiment
 fission-status-experiment-treatment = Activà dad experiment
 fission-status-disabled-by-e10s-env = Deactivà da l'ambient
 fission-status-enabled-by-env = Activà da l'ambient
-fission-status-disabled-by-safe-mode = Deactivà dal modus segirà
+fission-status-disabled-by-env = Deactivà da l'ambient
 fission-status-enabled-by-default = Activà tenor standard
 fission-status-disabled-by-default = Deactivà tenor standard
 fission-status-enabled-by-user-pref = Activà da l'utilisader

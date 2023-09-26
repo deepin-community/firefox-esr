@@ -5,9 +5,9 @@
 
 ## Strings used for device manager
 
-devmgr =
+devmgr-window =
     .title = Enhetshanteraren
-    .style = width: 67em; height: 32em;
+    .style = min-width: 67em; min-height: 32em;
 
 devmgr-devlist =
     .label = Säkerhetsmoduler och enheter
@@ -115,8 +115,6 @@ devinfo-label =
 
 devinfo-serialnum =
     .label = Serienummer
-
-fips-nonempty-password-required = FIPS-läge kräver ett giltigt huvudlösenord för varje säkerhetsenhet. Ange ett lösenord innan du aktiverar FIPS-läge.
 
 fips-nonempty-primary-password-required = FIPS-läget kräver att du har ett huvudlösenord inställt för varje säkerhetsenhet. Vänligen ställ in lösenordet innan du försöker aktivera FIPS-läget.
 unable-to-toggle-fips = Kunde inte ändra FIPS-läget för säkerhetsenheten. Du rekommenderas att avsluta och starta om det här programmet.

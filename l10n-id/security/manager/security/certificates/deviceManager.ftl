@@ -5,9 +5,9 @@
 
 ## Strings used for device manager
 
-devmgr =
+devmgr-window =
     .title = Pengelola Perangkat
-    .style = width: 67em; height: 32em;
+    .style = min-width: 67em; min-height: 32em;
 
 devmgr-devlist =
     .label = Modul dan Perangkat Keamanan
@@ -115,8 +115,6 @@ devinfo-label =
 
 devinfo-serialnum =
     .label = Nomor Seri
-
-fips-nonempty-password-required = Mode FIPS mewajibkan Anda untuk memiliki Sandi Utama yang digunakan untuk tiap perangkat keamanan. Silakan aktifkan sandi sebelum mengaktifkan mode FIPS.
 
 fips-nonempty-primary-password-required = Mode FIPS mewajibkan Anda untuk memiliki Sandi Utama yang digunakan untuk tiap perangkat keamanan. Silakan aktifkan sandi sebelum mengaktifkan mode FIPS.
 unable-to-toggle-fips = Gagal mengubah mode FIPS pada perangkat keamanan. Anda disarankan untuk keluar dan memulai ulang aplikasi ini.

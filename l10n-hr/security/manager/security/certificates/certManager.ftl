@@ -19,48 +19,11 @@ certmgr-tab-ca =
 
 certmgr-mine = Imaš certifikate sljedećih organizacija koje te identificiraju
 certmgr-people = Imaš spremljene certifikate koji identificiraju sljedeće osobe
-certmgr-servers = Imaš spremljene certifikate koji identificiraju sljedeće poslužitelje
 certmgr-ca = Imaš spremljene certifikate koji identificiraju ova certifikacijska tijela
 
-certmgr-detail-general-tab-title =
-    .label = Opće
-    .accesskey = O
-
-certmgr-detail-pretty-print-tab-title =
-    .label = Detalji
-    .accesskey = D
-
-certmgr-pending-label =
-    .value = Trenutačno potvrđivanje certifikata …
-
-certmgr-subject-label = Izdano
-
-certmgr-issuer-label = Izdao
-
-certmgr-period-of-validity = Razdoblje valjanosti
-
-certmgr-fingerprints = Otisci
-
-certmgr-cert-detail =
-    .title = Detalji certifikata
-    .buttonlabelaccept = Zatvori
-    .buttonaccesskeyaccept = Z
-
-certmgr-cert-detail-commonname = Ime (CN)
-
-certmgr-cert-detail-org = Organizacija (O)
-
-certmgr-cert-detail-orgunit = Organizacijska jedinica (OU)
-
-certmgr-cert-detail-serial-number = Serijski broj
-
-certmgr-cert-detail-sha-256-fingerprint = SHA-256 otisak
-
-certmgr-cert-detail-sha-1-fingerprint = SHA1 otisak
-
-certmgr-edit-ca-cert =
+certmgr-edit-ca-cert2 =
     .title = Uredi postavke povjerenja CA-ovih certifikata
-    .style = width: 48em;
+    .style = min-width: 48em;
 
 certmgr-edit-cert-edit-trust = Uredi postavke povjerenja:
 
@@ -70,9 +33,9 @@ certmgr-edit-cert-trust-ssl =
 certmgr-edit-cert-trust-email =
     .label = Ovaj certifikat može identificirati korisnike e-pošte.
 
-certmgr-delete-cert =
+certmgr-delete-cert2 =
     .title = Izbriši certifikat
-    .style = width: 48em; height: 24em;
+    .style = min-width: 48em; min-height: 24em;
 
 certmgr-cert-host =
     .label = Poslužitelj
@@ -83,18 +46,11 @@ certmgr-cert-name =
 certmgr-cert-server =
     .label = Poslužitelj
 
-certmgr-override-lifetime =
-    .label = Vijek trajanja
-
 certmgr-token-name =
     .label = Sigurnosni uređaj
 
-certmgr-begins-on = Počinje na
-
 certmgr-begins-label =
     .label = Počinje na
-
-certmgr-expires-on = Isteći će
 
 certmgr-expires-label =
     .label = Isteći će
@@ -114,7 +70,7 @@ certmgr-edit =
     .accesskey = U
 
 certmgr-export =
-    .label = Izvoz…
+    .label = Izvezi …
     .accesskey = z
 
 certmgr-delete =
@@ -134,20 +90,8 @@ certmgr-backup-all =
     .accesskey = k
 
 certmgr-restore =
-    .label = Uvezi…
+    .label = Uvezi …
     .accesskey = v
-
-certmgr-details =
-    .value = Polja certifikata
-    .accesskey = P
-
-certmgr-fields =
-    .value = Vrijednost polja
-    .accesskey = V
-
-certmgr-hierarchy =
-    .value = Hijerarhija certifikata
-    .accesskey = H
 
 certmgr-add-exception =
     .label = Dodaj iznimku…
@@ -211,12 +155,6 @@ delete-user-cert-confirm = Stvarno želiš izbrisati ove certifikate?
 delete-user-cert-impact = Ako izbrišeš jedan od vlastitih certifikata, više ga nećeš moći koristiti za identifikaciju.
 
 
-delete-ssl-cert-title =
-    .title = Izbriši iznimku certifikata poslužitelja
-delete-ssl-cert-confirm = Zaista želiš ukloniti ove iznimke poslužitelja?
-delete-ssl-cert-impact = Ako izbrišeš iznimku poslužitelja, obnavljaš uobičajene sigurnosne provjere za te poslužitelje i uvjetuješ upotrebu ispravnih certifikata.
-
-
 delete-ssl-override-confirm = Sigurno izbrisati ovu iznimku poslužitelja?
 
 delete-ca-cert-title =
@@ -236,47 +174,6 @@ delete-email-cert-impact = Ako izbrišete certifikat e-pošte određene osobe, v
 #   $serialNumber : the serial number of the cert in AA:BB:CC hex format.
 cert-with-serial =
     .value = Certifikat sa serijskim brojem: { $serialNumber }
-
-## Cert Viewer
-
-# Title used for the Certificate Viewer.
-#
-# Variables:
-#   $certificate : a string representative of the certificate being viewed.
-cert-viewer-title =
-    .title = Preglednik certifikata: “{ $certName }”
-
-not-present =
-    .value = <Nije dio certifikata>
-
-# Cert verification
-cert-verified = Ovaj certifikat je ovjeren za sljedeće namjene:
-
-# Add usage
-verify-ssl-client =
-    .value = Certifikat SSL klijenta
-
-verify-ssl-server =
-    .value = Certifikat SSL poslužitelja
-
-verify-ssl-ca =
-    .value = Certifikacijsko tijelo za SSL
-
-verify-email-signer =
-    .value = Certifikat potpisnika e-pošte
-
-verify-email-recip =
-    .value = Certifikat primatelja e-pošte
-
-# Cert verification
-cert-not-verified-cert-revoked = Ovjera ovog certifikata nije moguća jer je poništen.
-cert-not-verified-cert-expired = Ovjera ovog certifikata nije moguća jer je istekao.
-cert-not-verified-cert-not-trusted = Ovjera ovog certifikata nije moguća jer nije pouzdan.
-cert-not-verified-issuer-not-trusted = Ovjera ovog certifikata nije moguća jer izdavač nije pouzdan.
-cert-not-verified-issuer-unknown = Ovjera ovog certifikata nije moguća jer je izdavač nepoznat.
-cert-not-verified-ca-invalid = Ovjera ovog certifikata nije moguća jer CA certifikat nije važeći.
-cert-not-verified_algorithm-disabled = Ovjera ovog certifikata nije moguća jer je potpisan koristeći algoritam potpisa koji je onemogućen iz sigurnosnih razloga.
-cert-not-verified-unknown = Ovjera ovog certifikata nije moguća zbog nepoznatih razloga.
 
 # Used when no cert is stored for an override
 no-cert-stored-for-override = (nije pohranjeno)

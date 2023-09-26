@@ -23,6 +23,8 @@ profile-selection-delete-button =
     .label = Profyl fuortsmite…
     .accesskey = f
 
+profile-selection-conflict-message = In oar eksimplaar fan { -brand-product-name } hat wizigingen yn profilen oanbrocht. Jo moatte { -brand-short-name } opnij starte, eardat jo mear wizigingen oanbringe.
+
 ## Messages used in the profile manager
 
 profile-manager-description = { -brand-short-name } bewarret ynformaasje oer jo ynstellingen, foarkarren en oare brûkersitems yn jo brûkersprofyl.

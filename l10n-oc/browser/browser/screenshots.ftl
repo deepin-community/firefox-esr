@@ -2,13 +2,12 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-screenshots-context-menu = Prendre una captura d’ecran
-
-screenshots-my-shots-button = Mas capturas
-
 screenshot-toolbarbutton =
     .label = Captura d’ecran
     .tooltiptext = Prendre una captura d’ecran
+
+screenshot-shortcut =
+    .key = S
 
 screenshots-instructions = Lisatz o clicatz per la pagina per seleccionar una region. Quichatz ESC per anullar.
 screenshots-cancel-button = Anullar
@@ -18,6 +17,14 @@ screenshots-download-button = Telecargar
 screenshots-download-button-tooltip = Telecargar la captura
 screenshots-copy-button = Copiar
 screenshots-copy-button-tooltip = Copiar la captura d’ecran dins lo quichapapièrs
+screenshots-download-button-title =
+    .title = Telecargar la captura
+screenshots-copy-button-title =
+    .title = Copiar la captura d’ecran al quichapapièrs
+screenshots-cancel-button-title =
+    .title = Anullar
+screenshots-retry-button-title =
+    .title = Tornar ensajar de capturar
 
 screenshots-meta-key =
     { PLATFORM() ->
@@ -41,8 +48,6 @@ screenshots-login-error-details = Avèm pas pogut enregistrar la captura perque 
 screenshots-unshootable-page-error-title = Captura impossibla de la pagina.
 screenshots-unshootable-page-error-details = Aquò es pas una pagina web estandarda, doncas podètz pas prendre una captura d’ecran.
 
-screenshots-self-screenshot-error-title = Podètz pas prendre una captura d’ecran d’una pagina { -screenshots-brand-name } !
-
 screenshots-empty-selection-error-title = La seleccion est tròp pichona.
 
 screenshots-private-window-error-title = { -screenshots-brand-name } es desactivat en navegacion privada.
@@ -50,3 +55,6 @@ screenshots-private-window-error-details = Perdonatz per l’empachament. Sèm a
 
 screenshots-generic-error-title = Sembla que { -screenshots-brand-name } a agut un problèma.
 screenshots-generic-error-details = Una error inesperada s’es producha. Podètz tornar ensajar o prendre una captura d’ecran d’una autra pagina.
+
+screenshots-too-large-error-title = La captura d’ecran es estada retalhada pr’amor qu’èra tròp granda
+screenshots-too-large-error-details = Ensajatz de seleccionar una zòna que lo costat mai grand conten mens de 32 700 pixèls o que la susfàcia excedís pas 124 900 000 pixèls.

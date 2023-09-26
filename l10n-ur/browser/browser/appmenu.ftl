@@ -5,26 +5,30 @@
 
 ## App Menu
 
-appmenuitem-protection-dashboard-title = حفاظتی ڈیش بورڈ
-appmenuitem-customize-mode =
-    .label = تخصیص کریں…
-
-## Zoom Controls
-
 appmenuitem-new-tab =
     .label = نیا ٹیب
 appmenuitem-new-window =
     .label = نیا ونڈوں
 appmenuitem-new-private-window =
     .label = نیا نجی ونڈوں
+appmenuitem-history =
+    .label = سابقات
+appmenuitem-downloads =
+    .label = ڈاؤن لوڈ
 appmenuitem-passwords =
     .label = پاس ورڈ
 appmenuitem-addons-and-themes =
     .label = ایڈ آنز اور تھیمز
+appmenuitem-print =
+    .label = چھاپیں…
 appmenuitem-find-in-page =
     .label = صفحہ میں ڈھونڈیں…
+appmenuitem-zoom =
+    .value = زوم
 appmenuitem-more-tools =
     .label = مزید ٹولز
+appmenuitem-help =
+    .label = مدد
 appmenuitem-exit2 =
     .label =
         { PLATFORM() ->
@@ -49,28 +53,47 @@ appmenuitem-zoom-enlarge =
     .label = اندر زوم کریں
 appmenuitem-zoom-reduce =
     .label = باہر زوم کریں
-
 appmenuitem-fullscreen =
     .label = پوری اسکرین
 
 ## Firefox Account toolbar button and Sync panel in App menu.
-
-fxa-toolbar-sync-now =
-    .label = ابھی Sync کریں
 
 appmenu-remote-tabs-sign-into-sync =
     .label = سنک کرنے کے لئے سائن ان کریں…
 appmenu-remote-tabs-turn-on-sync =
     .label = سینک چالو کریں…
 
+# This is shown after the tabs list if we can display more tabs by clicking on the button
+appmenu-remote-tabs-showmore =
+    .label = مزید ٹیبز دکھائیں
+    .tooltiptext = اس آلہ سے مزید َٹیبس دکھائیں
+
+# This is shown beneath the name of a device when that device has no open tabs
+appmenu-remote-tabs-notabs = کوئی کھولی ہوئی ٹیب نہیں
+
+# This is shown when Sync is configured but syncing tabs is disabled.
+appmenu-remote-tabs-tabsnotsyncing = اپنے دیگر آلات پر ٹیب کی فہرست دیکھنے کے لئے ٹیب ہم سازی آن کر دیں۔
+
+appmenu-remote-tabs-opensettings =
+    .label = ترتیبات
+
+# This is shown when Sync is configured but this appears to be the only device attached to
+# the account. We also show links to download Firefox for android/ios.
+appmenu-remote-tabs-noclients = اپنے ٹیب کو دوسرے آلات سے یہاں سے دیکھنا پسند کریں گے؟
+
+appmenu-remote-tabs-connectdevice =
+    .label = ایک اور آلہ جوڑیں
+appmenu-remote-tabs-welcome = دیگر آلات سے ٹیبیں کی فہرست دیکھنیں۔
+appmenu-remote-tabs-unverified = آپ کے اکائونٹ کو توژیکاری کی ظرورت ہے۔
+
 appmenuitem-fxa-toolbar-sync-now2 = ابھی سنک کریں
+appmenuitem-fxa-sign-in = { -brand-product-name } میں سائن ان کریں
 appmenuitem-fxa-manage-account = اکاؤنٹ منظم کریں
 appmenu-fxa-header2 = { -fxaccount-brand-name(capitalization: "sentence") }
 appmenu-fxa-sync-and-save-data2 = سنک اور محفوظ کریں
 appmenu-fxa-signed-in-label = سائن ان کریں
 appmenu-fxa-setup-sync =
     .label = سینک چالو کریں…
-appmenu-fxa-show-more-tabs = مزید ٹیبز دکھائیں
 
 appmenuitem-save-page =
     .label = صفحہ محفوظ کریں بطور…
@@ -89,8 +112,11 @@ whatsnew-panel-footer-checkbox =
 ## performance profiles. To enable it go to profiler.firefox.com and click
 ## "Enable Profiler Menu Button".
 
-profiler-popup-title =
-    .value = { -profiler-brand-name }
+profiler-popup-button-idle =
+    .label = پروفائل
+    .tooltiptext = کارکردگی کی پروفائل ریکارڈ کریں
+
+profiler-popup-header-text = { -profiler-brand-name }
 
 profiler-popup-reveal-description-button =
     .aria-label = مزید معلومات ظاہر کریں
@@ -98,20 +124,17 @@ profiler-popup-reveal-description-button =
 profiler-popup-description-title =
     .value = ریکارڈ کریں ، تجزیہ کریں ، شیر کریں
 
-profiler-popup-learn-more = مزیدجانیے
+profiler-popup-learn-more-button =
+    .label = مزیدجانیے
 
 profiler-popup-settings =
     .value = سیٹنگز
 
 # This link takes the user to about:profiling, and is only visible with the Custom preset.
-profiler-popup-edit-settings = سیٹنگز میں تدوین کریں…
+profiler-popup-edit-settings-button =
+    .label = سیٹنگز میں تدوین کریں…
 
 profiler-popup-recording-screen = ریکارڈنگ ہو رہا…
-
-# The profiler presets list is generated elsewhere, but the custom preset is defined
-# here only.
-profiler-popup-presets-custom =
-    .label = مخصوص
 
 profiler-popup-start-recording-button =
     .label = ریکارڈنگ شروع کریں
@@ -134,13 +157,40 @@ profiler-popup-capture-shortcut =
        *[other] 	Ctrl+Shift+2
     }
 
+## Profiler presets
+## They are shown in the popup's select box.
+
+
+# Presets and their l10n IDs are defined in the file
+# devtools/client/performance-new/popup/background.jsm.js
+# Please take care that the same values are also defined in devtools' perftools.ftl.
+
+# Presets and their l10n IDs are defined in the file
+# devtools/client/performance-new/shared/background.jsm.js
+# Please take care that the same values are also defined in devtools' perftools.ftl.
+
+profiler-popup-presets-web-developer-label =
+    .label = ویب تکمیل کار
+
+profiler-popup-presets-firefox-label =
+    .label = { -brand-shorter-name }
+
+profiler-popup-presets-graphics-label =
+    .label = گرافکس
+
+profiler-popup-presets-media-label =
+    .label = میڈیا
+
+profiler-popup-presets-networking-label =
+    .label = نیٹ ورکنگ
+
+profiler-popup-presets-custom-label =
+    .label = مخصوص
+
 ## History panel
 
 appmenu-manage-history =
     .label = تاریخ کا نظم کریں
-appmenu-reopen-all-tabs = تمام ٹیب کو دوبارہ کھولیں
-appmenu-reopen-all-windows = تمام ونڈوز کو دوبارہ کھولیں
-
 appmenu-restore-session =
     .label = پچھلا سیشن بحال کریں
 appmenu-clear-history =
@@ -163,9 +213,6 @@ appmenu-get-help =
     .accesskey = h
 appmenu-help-report-site-issue =
     .label = سائٹ مسلہ… رپورٹ کریں
-appmenu-help-feedback-page =
-    .label = اپنی رائے بھیجیں...
-    .accesskey = S
 
 ## appmenu-help-enter-troubleshoot-mode and appmenu-help-exit-troubleshoot-mode
 ## are mutually exclusive, so it's possible to use the same accesskey for both.
@@ -185,7 +232,5 @@ appmenu-help-not-deceptive =
 
 appmenu-customizetoolbar =
     .label = ٹول بار کی تخصیص کریں…
-appmenu-taskmanager =
-    .label = ٹاسک مینیجر
 
 appmenu-developer-tools-subheader = براؤزر ٹولز

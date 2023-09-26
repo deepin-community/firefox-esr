@@ -3,22 +3,7 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 
-### UI strings for the simplified onboarding modal / about:welcome
-### Various strings use a non-breaking space to avoid a single dangling /
-### widowed word, so test on various window sizes if you also want this.
-
-
-## These button action text can be split onto multiple lines, so use explicit
-## newlines in translations to control where the line break appears (e.g., to
-## avoid breaking quoted text).
-
-onboarding-button-label-learn-more = ਹੋਰ ਜਾਣੋ
-onboarding-button-label-get-started = ਸ਼ੁਰੂ ਕਰੀਏ
-
-## Welcome modal dialog strings
-
-
-### UI strings for the simplified onboarding / multistage about:welcome
+### UI strings for the MR1 onboarding / multistage about:welcome
 ### Various strings use a non-breaking space to avoid a single dangling /
 ### widowed word, so test on various window sizes if you also want this.
 
@@ -26,149 +11,9 @@ onboarding-button-label-get-started = ਸ਼ੁਰੂ ਕਰੀਏ
 ## Welcome page strings
 
 onboarding-welcome-header = { -brand-short-name } ਵਲੋਂ ਜੀ ਆਇਆਂ ਨੂੰ
-onboarding-welcome-body = ਤੁਸੀਂ ਬਰਾਊਜ਼ਰ ਤਾਂ ਲੈ ਲਿਆ ਹੈ।<br/>ਬਾਕੀ { -brand-product-name } ਨੂੰ ਜਾਣੋ।
-onboarding-welcome-learn-more = ਫਾਇਦਿਆਂ ਬਾਰੇ ਹੋਰ ਜਾਣੋ।
-onboarding-welcome-modal-get-body = ਤੁਹਾਡੇ ਕੋਲ ਨਵਾਂ ਨਕੋਰ ਬਰਾਊਜ਼ਰ ਹੈ।<br/>ਹੁਣ { -brand-product-name } ਦਾ ਪੂਰਾ ਫਾਇਦਾ ਲਵੋ।
-onboarding-welcome-modal-supercharge-body = ਆਪਣੀ ਪਰਦੇਦਾਰੀ ਸੁਰੱਖਿਆ ਨੂੰ ਵਧੀਆ ਬਣਾਓ।
-onboarding-welcome-modal-privacy-body = ਤੁਸੀਂ ਬਰਾਊਜ਼ਰ ਲੈ ਲਿਆ ਹੈ। ਆਓ ਫੇਰ ਹੋਰ ਪਰਦੇਦਾਰੀ ਸੁਰੱਖਿਆ ਜੋੜੀਏ।
-onboarding-welcome-modal-family-learn-more = { -brand-product-name } ਉਤਪਾਦਾਂ ਦੇ ਟੱਬਰ ਬਾਰੇ ਜਾਣੀਏ।
-onboarding-welcome-form-header = ਇੱਥੇ ਸ਼ੁਰੂ ਕਰੋ
-
-onboarding-join-form-body = ਸ਼ੁਰੂਆਤ ਕਰਨ ਲਈ ਆਪਣਾ ਈਮੇਲ ਸਿਰਨਾਵਾਂ ਦਿਓ।
-onboarding-join-form-email =
-    .placeholder = ਈਮੇਲ ਦਿਓ
-onboarding-join-form-email-error = ਠੀਕ ਈਮੇਲ ਚਾਹੀਦਾ ਹੈ
-onboarding-join-form-legal = ਜਾਰੀ ਰੱਖ ਕੇ ਤੁਸੀਂ <a data-l10n-name="terms">ਸੇਵਾ ਦੀਆਂ ਸ਼ਰਤਾਂ</a> ਅਤੇ <a data-l10n-name="privacy">ਪਰਦੇਦਾਰੀ ਸੂਚਨਾ</a> ਨਾਲ ਸਹਿਮਤ ਹੁੰਦੇ ਹੋ।
-onboarding-join-form-continue = ਜਾਰੀ ਰੱਖੋ
-
-# This message is followed by a link using onboarding-join-form-signin ("Sign In") as text.
-onboarding-join-form-signin-label = ਪਹਿਲਾਂ ਹੀ ਖਾਤਾ ਹੈ?
-# Text for link to submit the sign in form
-onboarding-join-form-signin = ਸਾਇਨ ਇਨ
-
 onboarding-start-browsing-button-label = ਬਰਾਊਜ਼ ਕਰਨਾ ਸ਼ੁਰੂ ਕਰੋ
-onboarding-cards-dismiss =
-    .title = ਰੱਦ ਕਰੋ
-    .aria-label = ਰੱਦ ਕਰੋ
-
-## Welcome full page string
-
-onboarding-fullpage-welcome-subheader = ਆਓ ਹਰ ਚੀਜ਼ ਦੀ ਛਾਣਬੀਣ ਸ਼ੁਰੂ ਕਰੀਏ, ਜੋ ਤੁਸੀਂ ਕਰ ਸਕਦੇ ਹੋ।
-onboarding-fullpage-form-email =
-    .placeholder = ਤੁਹਾਡਾ ਈਮੇਲ ਸਿਰਨਾਵਾਂ…
-
-## Firefox Sync modal dialog strings.
-
-onboarding-sync-welcome-header = { -brand-product-name } ਨੂੰ ਆਪਣੇ ਨਾਲ ਲੈ ਜਾਓ
-onboarding-sync-welcome-content = ਆਪਣੇ ਬੁੱਕਮਾਰਕ, ਅਤੀਤ, ਪਾਸਵਰਡ ਅਤੇ ਹੋਰ ਸੈਟਿੰਗਾਂ ਨੂੰ ਆਪਣੇ ਹੋਰ ਡਿਵਾਈਸਾਂ ਉੱਤੇ ਲਵੋ।
-onboarding-sync-welcome-learn-more-link = ਫਾਇਰਫਾਕਸ ਖਾਤਿਆਂ ਬਾਰੇ ਹੋਰ ਜਾਣਕਾਰੀ ਹਾਸਲ ਕਰੋ
-
-onboarding-sync-form-input =
-    .placeholder = ਈਮੇਲ
-
-onboarding-sync-form-continue-button = ਜਾਰੀ ਰੱਖੋ
-onboarding-sync-form-skip-login-button = ਇਹ ਪਗ਼ ਛੱਡੋ
-
-## This is part of the line "Enter your email to continue to Firefox Sync"
-
-onboarding-sync-form-header = ਆਪਣਾ ਈਮੇਲ ਦਿਓ
-onboarding-sync-form-sub-header = { -sync-brand-name } ਨਾਲ ਜਾਰੀ ਰੱਖੋ
-
-
-## These are individual benefit messages shown with an image, title and
-## description.
-
-onboarding-benefit-products-text = ਸੰਦਾਂ ਦੇ ਸਮੂਹ ਨਾਲ ਕੰਮ ਕਰੋ, ਜੋ ਕਿ ਤੁਹਾਡੇ ਡਿਵਾਈਸਾਂ ਉੱਤੇ ਤੁਹਾਡੀ ਪਰਦੇਦਾਰੀ ਦਾ ਸਨਮਾਣ ਕਰਦੇ ਹਨ।
-
-# "Personal Data Promise" is a concept that should be translated consistently
-# across the product. It refers to a concept shown elsewhere to the user: "The
-# Firefox Personal Data Promise is the way we honor your data in everything we
-# make and do. We take less data. We keep it safe. And we make sure that we are
-# transparent about how we use it."
-onboarding-benefit-privacy-text = ਜੋ ਵੀ ਅਸੀਂ ਕਰਦੇ ਹਨ, ਉਹ ਸਾਡੀ ਨਿੱਜੀ ਡਾਟੇ ਦੇ ਵਾਅਦੇ ਦਾ ਸਨਮਾਣ ਕਰਦੀ ਹੈ: ਘੱਟ ਲਵੋ। ਸੁਰੱਖਿਅਤ ਰੱਖੋ। ਕੋਈ ਭੇਤ ਨਹੀਂ।
-
-onboarding-benefit-sync-title = { -sync-brand-short-name }
-onboarding-benefit-sync-text = ਆਪਣੇ ਬੁੱਕਮਾਰਕ, ਪਾਸਵਰਡ, ਅਤੀਤ ਅਤੇ ਹੋਰ ਚੀਜ਼ਾਂ ਨੂੰ { -brand-product-name } ਵਰਤਣ ਸਮੇਂ ਹਰ ਥਾਂ ਆਪਣੇ ਨਾਲ ਲੈ ਜਾਓ।
-
-onboarding-benefit-monitor-title = { -monitor-brand-short-name }
-onboarding-benefit-monitor-text = ਜਦੋਂ ਤੁਹਾਡੀ ਨਿੱਜੀ ਜਾਣਕਾਰੀ ਲੱਭੇ ਕਿਸੇ ਲੱਗੇ ਸੰਨ੍ਹ ਵਿੱਚ ਹੋਵੇ ਤਾਂ ਸੂਚਨਾ ਪ੍ਰਾਪਤ ਕਰੋ।
-
-onboarding-benefit-lockwise-title = { -lockwise-brand-short-name }
-onboarding-benefit-lockwise-text = ਪਾਸਵਰਡਾਂ ਦਾ ਇੰਤਜ਼ਾਮ ਕਰੋ, ਜੋ ਕਿ ਸੁਰੱਖਿਅਤ ਅਤੇ ਚੱਕਵੇ ਹਨ।
-
-
-## These strings belong to the individual onboarding messages.
-
-
-## Each message has a title and a description of what the browser feature is.
-## Each message also has an associated button for the user to try the feature.
-## The string for the button is found above, in the UI strings section
-
-onboarding-tracking-protection-title2 = ਟਰੈਕ ਹੋਣ ਤੋਂ ਸੁਰੱਖਿਆ
-onboarding-tracking-protection-text2 = { -brand-short-name } ਵੈੱਬਸਾਈਤਾਂ ਨੂੰ ਤੁਹਾਡੇ ਆਨਲਾਈਨ ਹੋਣ ਨੂੰ ਟਰੈਕ ਕਰਨ ਤੋਂ ਰੋਕਣ ਲਈ ਮਦਦ ਕਰਦਾ ਹੈ, ਵੈੱਬ ਉੱਤੇ ਇਸ਼ਤਿਹਾਰਾ ਨੂੰ ਤੁਹਾਡਾ ਪਿੱਛਾ ਕਰਨਾ ਔਖਾ ਬਣਾ ਦਿੰਦਾ ਹੈ।
-onboarding-tracking-protection-button2 = ਇਹ ਕਿਵੇਂ ਕੰਮ ਕਰਦਾ ਹੈ
-
-onboarding-data-sync-title = ਆਪਣੀਆਂ ਸੈਟਿੰਗਾਂ ਆਪਣੇ ਨਾਲ ਲੈ ਜਾਓ
-# "Sync" is short for synchronize.
-onboarding-data-sync-text2 = ਜਿੱਥੇ ਵੀ ਕਿਤੇ ਤੁਸੀਂ { -brand-product-name } ਵਰਤੋ, ਆਪਣੇ ਬੁੱਕਮਾਰਕਾਂ, ਪਾਸਵਰਡਾਂ ਅਤੇ ਹਰ ਚੀਜ਼ ਨੂੰ ਸਿੰਕ ਕਰੋ।
-onboarding-data-sync-button2 = { -sync-brand-short-name } 'ਚ ਸਾਇਨ-ਇਨ ਕਰੋ
-
-onboarding-firefox-monitor-title = ਡਾਟਾ ਚੋਰੀ ਬਾਰੇ ਚੌਕਸ ਰਹੋ
-onboarding-firefox-monitor-text2 = { -monitor-brand-name } ਨਿਗਰਾਨੀ ਕਰਦਾ ਹੈ ਕਿ ਜੇ ਤੁਹਾਡਾ ਈਮੇਲ ਡਾਟਾ ਲੱਭੇ ਕਿਸੇ ਸੰਨ੍ਹ ਲੱਗਣ ਵਿੱਚ ਆਇਆ ਹੈ ਅਤੇ ਤੁਹਾਨੂੰ ਨਵੀਆਂ ਸੰਨ੍ਹ ਲੱਗਣ ਵਿੱਚ ਆਉਣ ਉੱਤੇ ਚੌਕਸ ਕਰਦਾ ਹੈ।
-onboarding-firefox-monitor-button = ਚੌਕਸੀ ਲਈ ਸਾਇਨ ਅੱਪ ਕਰੋ
-
-onboarding-browse-privately-title = ਪਰਾਈਵੇਟ ਤੌਰ 'ਤੇ ਬਰਾਊਜ਼ ਕਰੋ
-onboarding-browse-privately-text = ਪ੍ਰਾਈਵੇਟ ਬਰਾਊਜ਼ਿੰਗ ਤੁਹਾਡੀ ਖੋਜ ਅਤੇ ਬਰਾਊਜ਼ ਕਰਨ ਅਤੀਤ ਨੂੰ ਸਾਫ਼ ਕਰਦੀ ਹੈ ਤਾਂ ਕਿ ਇਸ ਨੂੰ ਤੁਹਾਡੇ ਕੰਪਿਊਟਰ ਉੱਤੇ ਕਿਸੇ ਨੂੰ ਵਰਤਣ ਵਾਲੇ ਤੋਂ ਭੇਤ ਬਣਾ ਕੇ ਰੱਖਿਆ ਜਾਵੇ।
-onboarding-browse-privately-button = ਪਰਾਈਵੇਟ ਵਿੰਡੋ ਖੋਲ੍ਹੋ
-
-onboarding-firefox-send-title = ਆਪਣੀਆਂ ਸਾਂਝੀਆਂ ਕੀਤੀਆਂ ਫਾਇਲਾਂ ਨੂੰ ਪਰਾਈਵੇਟ ਰੱਖੋ
-onboarding-firefox-send-text2 = ਆਪਣੀਆਂ ਫ਼ਾਈਲਾਂ ਨੂੰ { -send-brand-name } ਉੱਤੇ ਅੱਪਲੋਡ ਕਰੋ ਤਾਂ ਕਿ ਉਹਨਾਂ ਨੂੰ ਸਿਰੇ-ਤੋਂ-ਸਿਰੇ ਇੰਕ੍ਰਿਪਸ਼ਨ ਅਤੇ ਲਿੰਕ, ਜਿਸ ਦੀ ਮਿਆਦ ਆਪਣੇ-ਆਪ ਪੁੱਗ ਜਾਂਦੀ ਹੈ, ਨਾਲ ਸਾਂਝਾ ਕਰ ਸਕੋ।
-onboarding-firefox-send-button = { -send-brand-name } ਵਰਤ ਕੇ ਵੇਖੋ
-
-onboarding-mobile-phone-title = ਆਪਣੇ ਫ਼ੋਨ 'ਤੇ { -brand-product-name } ਲਵੋ
-onboarding-mobile-phone-text = iOS ਜਾਂ ਐਂਡਰਾਇਡ 'ਤੇ { -brand-product-name } ਡਾਊਨਲੋਡ ਕਰੋ ਤੇ ਆਪਣੇ ਡਾਟੇ ਨੂੰ ਡਿਵਾਈਸਾਂ 'ਤੇ ਸਿੰਕ ਕਰੋ।
-# "Mobile" is short for mobile/cellular phone, "Browser" is short for web
-# browser.
-onboarding-mobile-phone-button = ਮੋਬਾਈਲ ਬਰਾਊਜ਼ਰ ਡਾਊਨਲੋਡ ਕਰੋ
-
-onboarding-send-tabs-title = ਟੈਬਾਂ ਖੁਦ ਨੂੰ ਮੌਕੇ 'ਤੇ ਭੇਜੋ
-# "Send Tabs" refers to "Send Tab to Device" feature that appears when opening a
-# tab's context menu.
-onboarding-send-tabs-text2 = ਆਪਣੇ ਡਿਵਾਈਸਾਂ ਵਿਚਾਲੇ ਸਫ਼ਿਆਂ ਨੂੰ ਬਿਨਾਂ ਲਿੰਕ ਕਾਪੀ ਕੀਤੇ ਜਾਂ ਬਰਾਊਜ਼ਰ ਛੱਡੇ ਸੌਖੀ ਤਰ੍ਹਾਂ ਸਾਂਝਾ ਕਰੋ।
-onboarding-send-tabs-button = ਟੈਬਾਂ ਭੇਜਣ ਦੀ ਵਰਤੋਂ ਸ਼ੁਰੂ ਕਰੋ
-
-onboarding-pocket-anywhere-title = ਹਰ ਥਾਂ 'ਤੇ ਪੜ੍ਹੋ ਤੇ ਸੁਣੋ
-onboarding-pocket-anywhere-text2 = { -pocket-brand-name } ਐਪ ਦੇ ਨਾਲ ਆਪਣੀ ਮਨਪਸੰਦ ਸਮੱਗਰੀ ਨੂੰ ਔਫਲਾਈਨ ਸੁਰੱਖਿਅਤ ਕਰੋ ਅਤੇ ਜਦੋਂ ਵੀ ਤੁਹਾਡੇ ਲਈ ਸੁਵਿਧਾਜਨਕ ਹੋਵੇ, ਉਸਨੂੰ ਪੜ੍ਹੋ, ਸੁਣੋ ਅਤੇ ਦੇਖੋ।
-onboarding-pocket-anywhere-button = { -pocket-brand-name } ਵਰਤ ਕੇ ਵੇਖੋ
-
-onboarding-lockwise-strong-passwords-title = ਮਜ਼ਬੂਤ ਪਾਸਵਰਡ ਬਣਾਓ ਅਤੇ ਸੰਭਾਲੋ
-onboarding-lockwise-strong-passwords-text = { -lockwise-brand-name } ਮੌਕੇ ਉੱਤੇ ਮਜ਼ਬੂਤ ਪਾਸਵਰਡ ਬਣਾਉਂਦੀ ਅਤੇ ਉਹਨਾਂ ਸਾਰਿਆਂ ਨੂੰ ਇੱਕ ਥਾਂ ਉੱਤੇ ਸੰਭਾਲਦੀ ਹੈ।
-onboarding-lockwise-strong-passwords-button = ਆਪਣੇ ਲਾਗਇਨਾਂ ਦਾ ਇੰਤਜ਼ਾਮ ਕਰੋ
-
-onboarding-facebook-container-title = ਫੇਸਬੁੱਕ 'ਤੇ ਬੰਨ੍ਹ ਲਾਓ
-onboarding-facebook-container-text2 = { -facebook-container-brand-name } ਤੁਹਾਡੇ ਪਰੋਫਾਈਲ ਨੂੰ ਹਰੇਕ ਚੀਜ਼ ਤੋਂ ਵੱਖਰਾ ਰੱਖਦਾ ਹੈ, ਜਿਸ ਨਾਲ ਫੇਸਬੁੱਕ ਵਲੋਂ ਇਸ਼ਤਿਹਾਰਾਂ ਨਾਲ ਤੁਹਾਨੂੰ ਨਿਸ਼ਾਨਾ ਬਣਾਉਣਾ ਔਖਾ ਹੋ ਜਾਂਦਾ ਹੈ।
-onboarding-facebook-container-button = ਇਕਟੈਨਸ਼ਨ ਜੋੜੋ
-
-onboarding-import-browser-settings-title = ਆਪਣੇ ਬੁੱਕਮਾਰਕ, ਪਾਸਵਰਡ ਅਤੇ ਹੋਰ ਚੀਜ਼ਾਂ ਨੂੰ ਇੰਪੋਰਟ ਕਰੋ
-onboarding-import-browser-settings-text = ਹੁਣੇ ਸ਼ੂਰੋ ਕਰੋ — ਆਪਣੀਆਂ ਕਰੋਮ ਸਾਈਟਾਂ ਅਤੇ ਸੈਟਿੰਗਾਂ ਨੂੰ ਆਪਣੇ ਨਾਲ ਲੈ ਸੌਖੀ ਤਰ੍ਹਾਂ ਲਿਆਓ।
-onboarding-import-browser-settings-button = ਕਰੋਮ ਡਾਟਾ ਆਯਾਤ ਕਰੋ
-
-onboarding-personal-data-promise-title = ਮੁੱਢ ਤੋਂ ਹੀ ਪ੍ਰਾਈਵੇਟ
-onboarding-personal-data-promise-text = { -brand-product-name } ਤੁਹਾਡੇ ਡਾਟੇ ਤੋਂ ਘੱਟ ਪ੍ਰਾਪਤ ਕਰਕੇ, ਇਸ ਦੀ ਸੁਰੱਖਿਆ ਕਰਕੇ ਅਤੇ ਅਸੀਂ ਇਸ ਨੂੰ ਕਿਵੇਂ ਵਰਤਾਂਗੇ ਬਾਰੇ ਦੱਸ ਕੇ, ਤੁਹਾਡੇ ਡਾਟੇ ਦਾ ਸਤਿਕਾਰ ਕਰਦਾ ਹੈ।
-onboarding-personal-data-promise-button = ਸਾਡੇ ਵਾਅਦੇ ਨੂੰ ਪੜ੍ਹੋ
-
-## Message strings belonging to the Return to AMO flow
-
-return-to-amo-sub-header = ਬੱਲੇ, ਤੁਸੀਂ { -brand-short-name } ਲਿਆ ਹੈ
-
-# <icon></icon> will be replaced with the icon belonging to the extension
-#
-# Variables:
-#   $addon-name (String) - Name of the add-on
-return-to-amo-addon-header = ਆਓ ਹੁਣ ਤੁਹਾਨੂੰ <icon></icon><b>{ $addon-name } ਦੇਈਏ।</b>
-return-to-amo-extension-button = ਇਕਸਟੈਨਸ਼ਨ ਜੋੜੋ
-return-to-amo-get-started-button = { -brand-short-name } ਨਾਲ ਸ਼ੁਰੂ ਕਰੋ
 onboarding-not-now-button-label = ਹੁਣੇ ਨਹੀਂ
+mr1-onboarding-get-started-primary-button-label = ਸ਼ੁਰੂ ਕਰੀਏ
 
 ## Custom Return To AMO onboarding strings
 
@@ -179,136 +24,23 @@ return-to-amo-subtitle = ਬੱਲੇ, ਤੁਸੀਂ { -brand-short-name } ਪ
 #   $addon-name (String) - Name of the add-on
 return-to-amo-addon-title = ਆਓ ਫਿਰ ਹੁਣ <img data-l10n-name="icon"/> <b>{ $addon-name }</b> ਵੇਖੀਏ।
 return-to-amo-add-extension-label = ਇਕਸਟੈਨਸ਼ਨ ਜੋੜੋ
+return-to-amo-add-theme-label = ਥੀਮ ਜੋੜੋ
 
-## Multistage 3-screen onboarding flow strings (about:welcome pages)
+##  Variables: $addon-name (String) - Name of the add-on to be installed
 
-# The <span data-l10n-name="zap"></span> in this string allows a "zap" underline style to be
-# automatically added to the text inside it. { -brand-short-name } should stay inside the span.
-onboarding-multistage-welcome-header = <span data-l10n-name="zap">{ -brand-short-name }</span> ਵਲੋਂ ਜੀ ਆਇਆਂ ਨੂੰ
-onboarding-multistage-welcome-subtitle = ਤੇਜ਼, ਸੁਰੱਖਿਅਤ ਅਤੇ ਪ੍ਰਾਈਵੇਟ ਬਰਾਊਜ਼ਰ ਹੈ, ਜਿਸ ਦੇ ਪਿੱਛੇ ਗ਼ੈਰ-ਮੁਨਾਫ਼ਾ ਹੈ।
-onboarding-multistage-welcome-primary-button-label = ਸੈੱਟਅਪ ਸ਼ੁਰੂ ਕਰੋ
-onboarding-multistage-welcome-secondary-button-label = ਸਾਈਨ ਇਨ
-onboarding-multistage-welcome-secondary-button-text = ਖਾਤਾ ਹੈ?
+mr1-return-to-amo-subtitle = { -brand-short-name } ਨੂੰ ਮਿਲੋ
+mr1-return-to-amo-addon-title = ਤੇਜ਼, ਨਿੱਜੀ ਬਰਾਊਜ਼ਰ ਤੁਹਾਡੇ ਹੱਥਾਂ ਵਿੱਚ ਹੈ। ਹੁਣ ਤੁਸੀਂ <b>{ $addon-name }</b> ਜੋੜ ਸਕਦੇ ਹੋ ਅਤੇ { -brand-short-name } ਨਾਲ ਵੱਧ ਕੰਮ ਕਰ ਸਕਦੇ ਹੋ।
+mr1-return-to-amo-add-extension-label = { $addon-name } ਜੋੜੋ
 
-# The <span data-l10n-name="zap"></span> in this string allows a "zap" underline style to be
-# automatically added to the text inside it. "default" should stay inside the span.
-onboarding-multistage-set-default-header = { -brand-short-name } ਨੂੰ ਆਪਣਾ <span data-l10n-name="zap">ਮੂਲ</span> ਬਣਾਓ
-onboarding-multistage-set-default-subtitle = ਜਦੋਂ ਵੀ ਤੁਸੀਂ ਬਰਾਊਜ਼ ਕਰੋ ਤਾਂ ਗਤੀ, ਸੁਰੱਖਿਆ ਅਤੇ ਪਰਦੇਦਾਰੀ ਨਾਲ ਲੈੱਸ ਰਹੋ।
-onboarding-multistage-set-default-primary-button-label = ਮੂਲ ਬਣਾਓ
-onboarding-multistage-set-default-secondary-button-label = ਹੁਣੇ ਨਹੀਂ
-
-# The <span data-l10n-name="zap"></span> in this string allows a "zap" underline style to be
-# automatically added to the text inside it. { -brand-short-name } should stay inside the span.
-onboarding-multistage-pin-default-header = <span data-l10n-name="zap">{ -brand-short-name }</span> ਬਣਾ ਕੇ ਸ਼ੁਰੂ ਕਰੋ, ਸਿਰਫ਼ ਇੱਕ ਹੀ ਕਲਿੱਕ ਨਾਲ
-onboarding-multistage-pin-default-subtitle = ਜਦੋਂ ਵੀ ਤੁਸੀਂ ਵੈੱਬ ਵਰਤੋਂ ਤਾਂ ਤੇਜ਼, ਸੁਰੱਖਿਅਤ ਅਤੇ ਪ੍ਰਾਈਵੇਟ ਬਰਾਊਜ਼ ਕਰੋ।
-# The "settings" here refers to "Windows 10 Settings App" and not the browser's
-onboarding-multistage-pin-default-waiting-subtitle = ਜਦੋਂ ਤੁਸੀਂ ਸੈਟਿੰਗਾਂ ਖੋਲ੍ਹੋ ਤਾਂ ਵੈੱਬ ਬਰਾਊਜ਼ਰ ਦੇ ਹੇਠ { -brand-short-name } ਨੂੰ ਚੁਣੋ
-# The "settings" here refers to "Windows 10 Settings App" and not the browser's
-onboarding-multistage-pin-default-help-text = ਇਹ { -brand-short-name } ਨੂੰ ਟਾਸਕ-ਬਾਰ ਵਿੱਚ ਟੰਗੇਗਾ ਅਤੇ ਸੈਟਿੰਗਾਂ ਖੋਲ੍ਹੇਗਾ।
-onboarding-multistage-pin-default-primary-button-label = { -brand-short-name } ਨੂੰ ਮੇਰਾ ਮੁੱਢਲਾ ਬਰਾਊਜ਼ਰ ਬਣਾਓ
-
-# The <span data-l10n-name="zap"></span> in this string allows a "zap" underline style to be
-# automatically added to the text inside it. "more" should stay inside the span.
-onboarding-multistage-import-header = ਆਪਣੇ ਪਾਸਵਰਡ, <br/>ਬੁੱਕਮਾਰਕ ਅਤੇ <span data-l10n-name="zap">ਹੋਰਾਂ</span> ਨੂੰ ਦਰਾਮਦ ਕਰੋ
-onboarding-multistage-import-subtitle = ਹੋਰ ਬਰਾਊਜ਼ਰ ਨੂੰ ਛੱਡ ਕੇ ਆ ਰਹੇ ਹੋ? { -brand-short-name } ਲਈ ਹਰ ਚੀਜ਼ ਲਿਆਉਣ ਸੌਖੀ ਹੈ।
-onboarding-multistage-import-primary-button-label = ਦਰਾਮਦ ਸ਼ੁਰੂ ਕਰੋ
-onboarding-multistage-import-secondary-button-label = ਹਾਲੇ ਨਹੀਂ
-
-# Info displayed in the footer of import settings screen during onboarding flow.
-# This supports welcome screen showing top sites imported from the user's default browser.
-onboarding-import-sites-disclaimer = ਇੱਥੇ ਸੂਚੀਬੱਧ ਸਾਈਟਾਂ ਇਸ ਡਿਵਾਈਸ ਉੱਤੇ ਮਿਲੀਆਂ ਸਨ। { -brand-short-name } ਕਿਸੇ ਹੋਰ ਬਰਾਊਜ਼ਰ ਤੋਂ ਡਾਟਾ ਉਦੋੱ ਤੱਕ ਸੰਭਾਲਦਾ ਜਾਂ ਸਿੰਕ ਨਹੀਂ ਕਰਦਾ, ਜਦੋਂ ਤੱਕ ਤੁਸੀਂ ਇਸ ਨੂੰ ਦਰਾਮਦ ਕਰਨ ਦੀ ਚੋਣ ਨਹੀਂ ਕਰਦੇ।
+## Multistage onboarding strings (about:welcome pages)
 
 # Aria-label to make the "steps" of multistage onboarding visible to screen readers.
 # Variables:
 #   $current (Int) - Number of the current page
 #   $total (Int) - Total number of pages
-onboarding-welcome-steps-indicator =
-    .aria-label = ਸ਼ੁਰੂ ਕਰੀਏ: { $total } ਵਿੱਚੋਂ { $current } ਸਕਰੀਨ
 
-# The <span data-l10n-name="zap"></span> in this string allows a "zap" underline style to be
-# automatically added to the text inside it. "look" should stay inside the span.
-onboarding-multistage-theme-header = <span data-l10n-name="zap">ਦਿੱਖ</span> ਨੂੰ ਚੁਣੋ
-onboarding-multistage-theme-subtitle = ਥੀਮ ਨਾਲ { -brand-short-name } ਨੂੰ ਆਪਣਾ ਬਣਾਓ।
-onboarding-multistage-theme-primary-button-label2 = ਮੁਕੰਮਲ
-onboarding-multistage-theme-secondary-button-label = ਹਾਲੇ ਨਹੀਂ
-
-# Automatic theme uses operating system color settings
-onboarding-multistage-theme-label-automatic = ਆਟੋਮੈਟਿਕ
-
-onboarding-multistage-theme-label-light = ਹਲਕਾ
-onboarding-multistage-theme-label-dark = ਗੂੜ੍ਹਾ
-# "Firefox Alpenglow" here is the name of the theme, and should be kept in English.
-onboarding-multistage-theme-label-alpenglow = Firefox Alpenglow
-
-## Please make sure to split the content of the title attribute into lines whose
-## width corresponds to about 40 Latin characters, to ensure that the tooltip
-## doesn't become too long. Line breaks will be preserved when displaying the
-## tooltip.
-
-# Tooltip displayed on hover of automatic theme
-onboarding-multistage-theme-tooltip-automatic-2 =
-    .title =
-        ਬਟਨ, ਮੀਨੂ ਅਤੇ ਵਿੰਡੋਆਂ ਲਈ ਆਪਣੇ ਓਪਰੇਟਿੰਗ
-        ਸਿਸਟਮ ਦੀ ਦਿੱਖ ਨੂੰ ਪ੍ਰਾਪਤ ਕਰੋ।
-
-# Input description for automatic theme
-onboarding-multistage-theme-description-automatic-2 =
-    .aria-description =
-        ਬਟਨ, ਮੀਨੂ ਅਤੇ ਵਿੰਡੋਆਂ ਲਈ ਆਪਣੇ ਓਪਰੇਟਿੰਗ
-        ਸਿਸਟਮ ਦੀ ਦਿੱਖ ਨੂੰ ਪ੍ਰਾਪਤ ਕਰੋ।
-
-# Tooltip displayed on hover of light theme
-onboarding-multistage-theme-tooltip-light-2 =
-    .title =
-        ਬਟਨਾਂ, ਮੀਨੂ ਅਤੇ ਵਿੰਡੋਆਂ ਲਈ ਫਿੱਕੀ ਦਿੱਖ
-        ਵਰਤੋ।
-
-# Input description for light theme
-onboarding-multistage-theme-description-light =
-    .aria-description =
-        ਬਟਨਾਂ, ਮੀਨੂ ਅਤੇ ਵਿੰਡੋਆਂ ਲਈ ਫਿੱਕੀ ਦਿੱਖ
-        ਵਰਤੋ।
-
-# Tooltip displayed on hover of dark theme
-onboarding-multistage-theme-tooltip-dark-2 =
-    .title =
-        ਬਟਨਾਂ, ਮੀਨੂ ਅਤੇ ਵਿੰਡੋਆਂ ਲਈ ਗੂੜ੍ਹੀ
-        ਦਿੱਖ ਵਰਤੋ।
-
-# Input description for dark theme
-onboarding-multistage-theme-description-dark =
-    .aria-description =
-        ਬਟਨਾਂ, ਮੀਨੂ ਅਤੇ ਵਿੰਡੋਆਂ ਲਈ ਗੂੜ੍ਹੀ
-        ਦਿੱਖ ਵਰਤੋ।
-
-# Tooltip displayed on hover of Alpenglow theme
-onboarding-multistage-theme-tooltip-alpenglow-2 =
-    .title =
-        ਬਟਨਾਂ, ਮੀਨੂ ਅਤੇ ਵਿੰਡੋਆਂ ਲਈ ਰੰਗਦਾਰ
-        ਦਿੱਖ ਵਰਤੋ।
-
-# Input description for Alpenglow theme
-onboarding-multistage-theme-description-alpenglow =
-    .aria-description =
-        ਬਟਨਾਂ, ਮੀਨੂ ਅਤੇ ਵਿੰਡੋਆਂ ਲਈ ਰੰਗਦਾਰ
-        ਦਿੱਖ ਵਰਤੋ।
-
-## Multistage MR1 onboarding strings (MR1 about:welcome pages)
-
-# "Hero Text" displayed on left side of welcome screen.
-# The "Fire" in "Fire starts here" plays on the "Fire" in "Firefox".
-# It also signals the passion users bring to Firefox, how they use
-# Firefox to pursue those passions, as well as the boldness in their
-# choice to use Firefox over a larger competitor browser.
-# An alternative title for localization is: "It starts here".
-# This text can be formatted to span multiple lines as needed.
-mr1-welcome-screen-hero-text = ਫਾਇਰ ਇੱਥੋਂ ਸ਼ੁਰੂ ਕਰੋ
-
-# Caption for background image in about:welcome. "Soraya Osorio" is the name
-# of the person and shouldn't be translated.
-# In case your language needs to adapt the nouns to a gender, Soraya is a female name (she/her).
-# You can see the picture in about:welcome in Nightly 90.
-mr1-onboarding-welcome-image-caption = Soraya Osorio — ਫਰਚੀਨਰ ਡਿਜ਼ਾਈਨਰ, ਫਾਇਰਫਾਕਸ ਦੀ ਫ਼ੈਨ
+onboarding-welcome-steps-indicator-label =
+    .aria-label = ਤਰੱਕੀ: { $total } ਵਿੱਚੋਂ { $current } ਪੜਾਅ
 
 # This button will open system settings to turn on prefers-reduced-motion
 mr1-onboarding-reduce-motion-button-label = ਐਨੀਮੇਸ਼ਨਾਂ ਬੰਦ ਕਰੋ
@@ -317,59 +49,23 @@ mr1-onboarding-reduce-motion-button-label = ਐਨੀਮੇਸ਼ਨਾਂ ਬੰ�
 ## match the OS' application context menu item action where Windows uses "pin"
 ## and "taskbar" while macOS "keep" and "Dock" (proper noun).
 
-# Title used on welcome page when Firefox is not pinned
-mr1-onboarding-pin-header =
-    { PLATFORM() ->
-        [macos] ਸੌਖੀ ਪਹੁੰਚ ਲਈ { -brand-short-name } ਨੂੰ ਆਪਣੇ ਡੌਕ ਵਿੱਚ ਰੱਖੋ
-       *[other] ਸੌਖੀ ਪਹੁੰਚ ਲਈ { -brand-short-name } ਨੂੰ ਆਪਣੀ ਟਾਸਕਬਾਰ ਵਿੱਚ ਟੰਗੋ
-    }
-# Primary button string used on welcome page when Firefox is not pinned.
-mr1-onboarding-pin-primary-button-label =
-    { PLATFORM() ->
-        [macos] ਡੌਕ ਵਿੱਚ ਰੱਖੋ
-       *[other] ਟਾਸਕਬਾਰ ਵਿੱਚ ਟੰਗੋ
-    }
-
 ## Multistage MR1 onboarding strings (about:welcome pages)
 
-# This string will be used on welcome page primary button label
-# when Firefox is both pinned and default
-mr1-onboarding-get-started-primary-button-label = ਸ਼ੁਰੂ ਕਰੀਏ
-
-mr1-onboarding-welcome-header = { -brand-short-name } ਵਲੋਂ ਜੀ ਆਇਆਂ ਨੂੰ
-mr1-onboarding-set-default-pin-primary-button-label = { -brand-short-name } ਨੂੰ ਮੇਰਾ ਮੂਲ ਬਰਾਊਜ਼ਰ ਬਣਾਓ
-    .title = { -brand-short-name } ਨੂੰ ਮੂਲ ਬਰਾਊਜ਼ਰ ਬਣਾਓ ਤੇ ਟਾਸਕ-ਬਾਰ ਵਿੱਚ ਟੰਗੋ
-
-# This string will be used on welcome page primary button label
-# when Firefox is not default but already pinned
-mr1-onboarding-set-default-only-primary-button-label = { -brand-short-name } ਨੂੰ ਮੇਰਾ ਮੂਲ ਬਰਾਊਜ਼ਰ ਬਣਾਓ
-mr1-onboarding-set-default-secondary-button-label = ਹੁਣੇ ਨਹੀਂ
+# String for the Firefox Accounts button
 mr1-onboarding-sign-in-button-label = ਸਾਇਨ ਇਨ
 
 ## Title, subtitle and primary button string used on set default onboarding screen
 ## when Firefox is not default browser
 
-mr1-onboarding-default-header = { -brand-short-name } ਨੂੰ ਆਪਣਾ ਮੂਲ ਬਣਾਓ
-mr1-onboarding-default-subtitle = ਸਪੀਡ, ਸੁਰੱਖਿਆ ਤੇ ਪਰਦੇਦਾਰੀ ਨੂੰ ਆਟੋ-ਪਾਇਲਟ ਉੱਤੇ ਲਾਓ।
-mr1-onboarding-default-primary-button-label = ਮੂਲ ਬਰਾਊਜ਼ਰ ਬਣਾਓ
-
 ## Multistage MR1 onboarding strings (about:welcome pages)
-
-mr1-onboarding-import-header = ਇਹ ਸਭ ਆਪਣੇ ਨਾਲ ਲਿਆਓ
-mr1-onboarding-import-subtitle = ਆਪਣੇ ਪਾਸਵਰਡ, ਬੁੱਕਮਾਰਕ <br/>ਤੇ ਹੋਰ ਦਰਾਮਦ ਕਰੋ
 
 # The primary import button label will depend on whether we can detect which browser was used to download Firefox.
 # Variables:
 #   $previous (Str) - Previous browser name, such as Edge, Chrome
 mr1-onboarding-import-primary-button-label-attribution = { $previous } ਤੋਂ ਦਰਾਮਦ ਕਰੋ
 
-# This string will be used in cases where we can't detect the previous browser name.
-mr1-onboarding-import-primary-button-label-no-attribution = ਪਿਛਲੇ ਬਰਾਊਜ਼ਰ ਤੋਂ ਦਰਾਮਦ ਕਰੋ
-mr1-onboarding-import-secondary-button-label = ਹੁਣੇ ਨਹੀਂ
-
 mr1-onboarding-theme-header = ਇਸ ਨੂੰ ਆਪਣਾ ਬਣਾਓ
 mr1-onboarding-theme-subtitle = ਥੀਮ ਨਾਲ { -brand-short-name } ਨੂੰ ਸ਼ਿੰਗਾਰੋ
-mr1-onboarding-theme-primary-button-label = ਥੀਮ ਨੂੰ ਸੰਭਾਲੋ
 mr1-onboarding-theme-secondary-button-label = ਹੁਣੇ ਨਹੀਂ
 
 # System theme uses operating system color settings
@@ -379,6 +75,8 @@ mr1-onboarding-theme-label-light = ਹਲਕਾ
 mr1-onboarding-theme-label-dark = ਗੂੜ੍ਹਾ
 # "Alpenglow" here is the name of the theme, and should be kept in English.
 mr1-onboarding-theme-label-alpenglow = Alpenglow
+
+onboarding-theme-primary-button-label = ਮੁਕੰਮਲ
 
 ## Please make sure to split the content of the title attribute into lines whose
 ## width corresponds to about 40 Latin characters, to ensure that the tooltip
@@ -432,3 +130,249 @@ mr1-onboarding-theme-description-alpenglow =
     .aria-description =
         ਬਟਨਾਂ, ਮੇਨੂ ਅਤੇ ਵਿੰਡੋਆਂ ਲਈ ਸਫ਼ਰੀ ਰੰਗਦਾਰ ਥੀਮ 
         ਨੂੰ ਵਰਤੋ।
+
+# Selector description for default themes
+mr2-onboarding-default-theme-label = ਮੂਲ ਥੀਮਾਂ ਬਾਰੇ ਜਾਣਕਾਰੀ ਲਵੋ।
+
+## Strings for Thank You page
+
+mr2-onboarding-thank-you-header = ਸਾਨੂੰ ਚੁਣਨ ਲਈ ਤੁਹਾਡਾ ਧੰਨਵਾਦ ਹੈ
+mr2-onboarding-thank-you-text = { -brand-short-name } ਗ਼ੈਰ-ਫਾਇਦਾ ਸੰਗਠਨ ਵਲੋਂ ਤਿਆਰ ਕੀਤਾ ਆਜ਼ਾਦ ਬਰਾਊਜ਼ਰ ਹੈ। ਮਿਲ ਕੇ ਅਸੀਂ ਵੈੱਬ ਨੂੰ ਵੱਧ ਸੁਰੱਖਿਅਤ, ਮਜ਼ਬੂਤ ਅਤੇ ਵੱਧ ਨਿੱਜੀ ਬਣਾ ਰਹੇ ਹਾਂ।
+mr2-onboarding-start-browsing-button-label = ਬਰਾਊਜ਼ ਕਰਨਾ ਸ਼ੁਰੂ ਕਰੋ
+
+## Multistage live language reloading onboarding strings (about:welcome pages)
+##
+## The following language names are generated by the browser's Intl.DisplayNames API.
+##
+## Variables:
+##   $negotiatedLanguage (String) - The name of the langpack's language, e.g. "Español (ES)"
+
+
+## Multistage live language reloading onboarding strings (about:welcome pages)
+##
+## The following language names are generated by the browser's Intl.DisplayNames API.
+##
+## Variables:
+##   $negotiatedLanguage (String) - The name of the langpack's language, e.g. "Español (ES)"
+##   $systemLanguage (String) - The name of the system language, e.g "Español (ES)"
+##   $appLanguage (String) - The name of the language shipping in the browser build, e.g. "English (EN)"
+
+onboarding-live-language-header = ਆਪਣੀ ਭਾਸ਼ਾ ਚੁਣੋ
+
+mr2022-onboarding-live-language-text = { -brand-short-name } ਬੋਲੇ ਤੁਹਾਡੀ ਬੋਲੀ
+
+mr2022-language-mismatch-subtitle = ਸਾਡੀ ਕਮਿਊਨਟੀ ਦੇ ਸਦਕੇ ਜਾਈਏ, ਜਿਸ ਦੇ ਸਕਦਾ { -brand-short-name } 90 ਤੋ ਵੱਧ ਭਾਸ਼ਾਵਾਂ ਵਿੱਚ ਮੌਜੂਦ ਹੈ। ਜਾਪਦਾ ਹੈ ਕਿ ਤੁਹਾਡਾ ਸਿਸਟਮ { $systemLanguage } ਵਰਤ ਰਿਹਾ ਹੈ ਅਤੇ { -brand-short-name } { $appLanguage } ਵਰਤ ਰਿਹਾ ਹੈ।
+
+onboarding-live-language-button-label-downloading = { $negotiatedLanguage } ਭਾਸ਼ਾ ਪੈਕ ਡਾਊਨਲੋਡ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ…
+onboarding-live-language-waiting-button = ਮੌਜੂਦਾ ਭਾਸ਼ਾਵਾਂ ਲਿਆਂਦੀਆਂ ਜਾ ਰਹੀਆਂ ਹਨ…
+onboarding-live-language-installing = { $negotiatedLanguage } ਲਈ ਭਾਸ਼ਾ ਪੈਕੇਜ ਇੰਸਟਾਲ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ…
+
+mr2022-onboarding-live-language-switch-to = { $negotiatedLanguage } ਲਈ ਬਦਲੋ
+mr2022-onboarding-live-language-continue-in = { $appLanguage } ਨਾਲ ਜਾਰੀ ਰੱਖੋ
+
+onboarding-live-language-secondary-cancel-download = ਰੱਦ ਕਰੋ
+onboarding-live-language-skip-button-label = ਛੱਡੋ
+
+## Firefox 100 Thank You screens
+
+# "Hero Text" displayed on left side of welcome screen. This text can be
+# formatted to span multiple lines as needed. The <span data-l10n-name="zap">
+# </span> in this string allows a "zap" underline style to be automatically
+# added to the text inside it. "Yous" should stay inside the zap span, but
+# "Thank" can be put inside instead if there's no "you" in the translation.
+# The English text would normally be "100 Thank-Yous" i.e., plural noun, but for
+# aesthetics of splitting it across multiple lines, the hyphen is omitted.
+fx100-thank-you-hero-text =
+    100
+    ਧੰਨਵਾਦ
+    <span data-l10n-name="zap">ਤੁਹਾਡੇ</span>
+fx100-thank-you-subtitle = ਇਹ ਸਾਡਾ 100ਵਾਂ ਰੀਲਿਜ਼ ਹੈ! ਬੇਹਤਰ, ਵੱਧ ਮਜ਼ਬੂਤ ਇੰਟਰਨੈੱਟ ਬਣਾਉਣ ਵਾਸਤੇ ਸਾਡੀ ਮਦਦ ਕਰਨ ਲਈ ਧੰਨਵਾਦ ਹੈ।
+fx100-thank-you-pin-primary-button-label =
+    { PLATFORM() ->
+        [macos] { -brand-short-name } ਨੂੰ ਡੌਕ ਵਿੱਚ ਰੱਖੋ
+       *[other] { -brand-short-name } ਨੂੰ ਟਾਸਕਬਾਰ ਵਿੱਚ ਟੰਗੋ
+    }
+
+fx100-upgrade-thanks-header = 100 ਧੰਨਵਾਦ-ਤੁਹਾਡੇ
+# Message shown with a start-browsing button. Emphasis <em> should be for "you"
+# but "Thank" can be used instead if there's no "you" in the translation.
+fx100-upgrade-thank-you-body = { -brand-short-name } ਦਾ ਇਹ ਸਾਡਾ 100ਵਾਂ ਰੀਲਿਜ਼ ਹੈ। ਬੇਹਤਰ, ਜ਼ਿਆਦਾ ਮਜ਼ਬੂਤ ਇੰਟਰਨੈੱਟ ਬਣਾਉਣ ਲਈ ਸਾਡੀ ਮਦਦ ਕਰਨ ਲਈ <em>ਤੁਹਾਡਾ</em> ਧੰਨਵਾਦ ਹੈ।
+# Message shown with either a pin-to-taskbar or set-default button.
+fx100-upgrade-thanks-keep-body = ਸਾਡਾ 100ਵਾਂ ਰੀਲਿਜ਼ ਹੈ! ਸਾਡੀ ਕਮਿਊਨਟੀ ਦਾ ਹਿੱਸਾ ਬਣਨ ਲਈ ਤੁਹਾਡਾ ਧੰਨਵਾਦ ਹੈ! ਅਗਲੇ 100 ਲਈ { -brand-short-name } ਨੂੰ ਸਿਰਫ ਇੱਕ ਕਲਿੱਕ ਦੂਰ ਰੱਖੋ।
+
+mr2022-onboarding-secondary-skip-button-label = ਇਹ ਪੜਾਅ ਛੱਡੋ
+
+## MR2022 New User Easy Setup screen strings
+
+# Primary button string used on new user onboarding first screen showing multiple actions such as Set Default, Import from previous browser.
+mr2022-onboarding-easy-setup-primary-button-label = ਸੰਭਾਲੋ ਅਤੇ ਜਾਰੀ ਰੱਖੋ
+# Set Default action checkbox label used on new user onboarding first screen
+mr2022-onboarding-easy-setup-set-default-checkbox-label = { -brand-short-name } ਨੂੰ ਮੂਲ ਬਰਾਊਜ਼ਰ ਬਣਾਓ
+# Import action checkbox label used on new user onboarding first screen
+mr2022-onboarding-easy-setup-import-checkbox-label = ਪਿਛਲੇ ਬਰਾਊਜ਼ਰ ਤੋਂ ਦਰਾਮਦ ਕਰੋ
+
+## MR2022 New User Pin Firefox screen strings
+
+# Title used on about:welcome for new users when Firefox is not pinned.
+# In this context, open up is synonymous with "Discover".
+# The metaphor is that when they open their Firefox browser, it helps them discover an amazing internet.
+# If this translation does not make sense in your language, feel free to use the word "discover."
+mr2022-onboarding-welcome-pin-header = ਸ਼ਾਨਦਾਰ ਇੰਟਰਨੈੱਟ ਖੋਲ੍ਹੋ
+# Subtitle is used on onboarding page for new users page when Firefox is not pinned
+mr2022-onboarding-welcome-pin-subtitle = ਸਿਰਫ਼ ਇੱਕ ਕਲਿੱਕ ਨਾਲ ਕਿਤੋਂ ਵੀ { -brand-short-name } ਚਲਾਓ। ਜਦੋਂ ਵੀ ਤੁਸੀਂ ਚਲਾਓ ਤਾਂ ਤੁਸੀਂ ਵੱਧ ਬੇਫ਼ਿਕਰ ਅਤੇ ਆਜ਼ਾਦ ਵੈੱਬ ਚੁਣਦੇ ਹੋ।
+# Primary button string used on welcome page for when Firefox is not pinned.
+mr2022-onboarding-pin-primary-button-label =
+    { PLATFORM() ->
+        [macos] { -brand-short-name } ਡੌਕ ਵਿੱਚ ਰੱਖੋ
+       *[other] { -brand-short-name } ਟਾਸਕਬਾਰ ਵਿੱਚ ਟੰਗੋ
+    }
+# Subtitle will be used when user already has Firefox pinned, but
+# has not set it as their default browser.
+# When translating "zip", please feel free to pick a verb that signifies movement and/or exploration
+# and makes sense in the context of navigating the web.
+mr2022-onboarding-set-default-only-subtitle = ਗ਼ੈਰ-ਫਾਇਦੇ ਵਲੋਂ ਸਮਰੱਥਨ ਮਿਲੇ ਬਰਾਊਜ਼ਰ ਨਾਲ ਸ਼ੁਰੂ ਕਰੋ। ਤੁਹਾਡੇ ਵਲੋਂ ਵੈੱਬ ਦੇ ਫੇਰੇ ਲਾਉਣ ਦੌਰਾਨ ਅਸੀਂ ਤੁਹਾਡੀ ਪਰਦੇਦਾਰੀ ਦੀ ਸੁਰੱਖਿਆ ਕਰਦੇ ਹਾਂ।
+
+## MR2022 Existing User Pin Firefox Screen Strings
+
+# Title used on multistage onboarding page for existing users when Firefox is not pinned
+mr2022-onboarding-existing-pin-header = { -brand-product-name } ਨੂੰ ਪਿਆਰ ਕਰਨ ਲਈ ਤੁਹਾਡਾ ਧੰਨਵਾਦ
+# Subtitle is used on onboarding page for existing users when Firefox is not pinned
+mr2022-onboarding-existing-pin-subtitle = ਇੱਕ ਕਲਿੱਕ ਨਾਲ ਕਿਸੋ ਵੀ ਮਜ਼ਬੂਤ ਇੰਟਰਨੈੱਟ ਸ਼ੁਰੂ ਕਰੋ। ਸਾਡੇ ਨਵੇਂ ਅੱਪਡੇਟ ਵਿੱਚ ਨਵੀਆਂ ਚੀਜ਼ਾਂ ਪਈਆਂ ਹਨ, ਜਿੰਨ੍ਹਾਂ ਦੇ ਤੁਸੀਂ ਪ੍ਰਸੰਸ਼ਕ ਬਣੋਗੇ।
+# Subtitle will be used on the welcome screen for existing users
+# when they already have Firefox pinned but not set as default
+mr2022-onboarding-existing-set-default-only-subtitle = ਅਜਿਹਾ ਬਰਾਊਜ਼ਰ ਵਰਤੋਂ, ਜੋ ਕਿ ਤੁਹਾਡੇ ਵਲੋਂ ਵੈੱਬ ਦੁਆਲੇ ਭੌਣ ਦੌਰਾਨ ਤੁਹਾਡੀ ਪਰਦੇਦਾਰੀ ਨੂੰ ਬਚਾਉਂਦੇ ਹਨ। ਸਾਡੇ ਨਵੇਂ ਅੱਪਡੇਟ ਵਿੱਚ ਅਜਿਹੀਆਂ ਚੀਜ਼ਾਂ ਪਾਈਆਂ ਹਨ, ਜਿਹਨਾਂ ਦੇ ਤੁਸੀਂ ਪ੍ਰਸੰਸ਼ਕ ਬਣੋਗੇ।
+mr2022-onboarding-existing-pin-checkbox-label = { -brand-short-name } ਪ੍ਰਾਈਵੇਟ ਬਰਾਊਜ਼ਿੰਗ ਨੂੰ ਵੀ ਜੋੜੋ
+
+## MR2022 New User Set Default screen strings
+
+# This string is the title used when the user already has pinned the browser, but has not set default.
+mr2022-onboarding-set-default-title = { -brand-short-name } ਨੂੰ ਆਪਣਾ ਫਿਰਤੂ ਬਰਾਊਜ਼ਰ ਬਣਾਓ
+mr2022-onboarding-set-default-primary-button-label = { -brand-short-name } ਨੂੰ ਮੂਲ ਬਰਾਊਜ਼ਰ ਬਣਾਓ
+# When translating "zip", please feel free to pick a verb that signifies movement and/or exploration
+# and makes sense in the context of navigating the web.
+mr2022-onboarding-set-default-subtitle = ਗ਼ੈਰ-ਫਾਇਦੇ ਵਲੋਂ ਸਮਰੱਥਨ ਮਿਲੇ ਬਰਾਊਜ਼ਰ ਨੂੰ ਵਰਤੋਂ। ਤੁਹਾਡੇ ਵਲੋਂ ਵੈੱਬ ਦੇ ਫੇਰੇ ਲਾਉਣ ਦੌਰਾਨ ਅਸੀਂ ਤੁਹਾਡੀ ਪਰਦੇਦਾਰੀ ਦੀ ਸੁਰੱਖਿਆ ਕਰਦੇ ਹਾਂ।
+
+## MR2022 Get Started screen strings.
+## These strings will be used on the welcome page
+## when Firefox is already set to default and pinned.
+
+# When translating "zip", please feel free to pick a verb that signifies movement and/or exploration
+# and makes sense in the context of navigating the web.
+mr2022-onboarding-get-started-primary-subtitle = ਸਾਡਾ ਨਵਾਂ ਵਰਜ਼ਨ ਤੁਹਾਡੇ ਵਾਸਤੇ ਬਣਾਇਆ ਹੈ, ਜਿਸ ਨਾਲ ਤੁਹਾਨੂੰ ਵੈੱਬ ਉੱਤੇ ਭੌਣਾ ਪਹਿਲਾਂ ਤੋਂ ਸੁਖਾਲਾ ਹੋਇਆ ਹੈ। ਇਸ ਵਿੱਚ ਫ਼ੀਚਰ ਭਰੇ ਹਨ, ਸਾਨੂੰ ਆਸ ਹੈ ਕਿ ਜਿਹਨਾਂ ਦੀ ਤੁਸੀਂ ਪ੍ਰਸੰਸਾ ਕਰੋਗੇ।
+mr2022-onboarding-get-started-primary-button-label = ਸਕਿੰਟਾਂ ਵਿੱਚ ਸੈਟਅੱਪ ਕਰੋ
+
+## MR2022 Import Settings screen strings
+
+mr2022-onboarding-import-header = ਹਨ੍ਹੇਰੀ ਵਰਗਾ ਤੇਜ਼ ਸੈਟਅੱਪ
+mr2022-onboarding-import-subtitle = { -brand-short-name } ਨੂੰ ਜਿਵੇਂ ਤੁਸੀਂ ਚਾਹੋ, ਉਵੇਂ ਸੈਟਅੱਪ ਕਰੋ। ਆਪਣੇ ਪੁਰਾਣੇ ਬਰਾਊਜ਼ਰ ਤੋਂ ਆਪਣੇ ਬੁੱਕਮਾਰਕ, ਪਾਸਵਰਡ ਅਤੇ ਕਈ ਕੁਝ ਜੋੜੋ।
+mr2022-onboarding-import-primary-button-label-no-attribution = ਪਿਛਲੇ ਬਰਾਊਜ਼ਰ ਤੋਂ ਦਰਾਮਦ ਕਰੋ
+
+## If your language uses grammatical genders, in the description for the
+## colorway feel free to switch from "You are a X. You…" (e.g. "You are a
+## Playmaker. You create…") to "X: you…" ("Playmaker: You create…"). This might
+## help creating a more inclusive translation.
+
+mr2022-onboarding-colorway-title = ਰੰਗ ਚੁਣੋ, ਜੋ ਤੁਹਾਡੇ ਦਿਲ ਨੂੰ ਖਿੱਚ ਪਾਉਣ
+mr2022-onboarding-colorway-subtitle = ਆਜ਼ਾਦ ਆਵਾਜ਼ਾਂ, ਜੋ ਕਿ ਸੱਭਿਆਚਾਰ ਨੂੰ ਬਦਲ ਸਕਦੀਆਂ ਹਨ।
+mr2022-onboarding-colorway-primary-button-label-continue = ਲਾਓ ਤੇ ਜਾਰੀ ਰੱਖੋ
+mr2022-onboarding-existing-colorway-checkbox-label = { -firefox-home-brand-name } ਆਪਣਾ ਰੰਗਦਾਰ ਮੁੱਖ-ਸਫ਼ਾ ਬਣਾਓ
+
+mr2022-onboarding-colorway-label-default = ਡਿਫਾਲਟ
+mr2022-onboarding-colorway-tooltip-default2 =
+    .title = ਮੌਜੂਦਾ { -brand-short-name } ਰੰਗ
+mr2022-onboarding-colorway-description-default = <b>ਮੇਰੇ ਮੌਜੂਦਾ { -brand-short-name } ਰੰਗਾਂ ਨੂੰ ਵਰਤੋਂ।</b>
+
+mr2022-onboarding-colorway-label-playmaker = ਪਲੇਅਮੇਕਰ
+mr2022-onboarding-colorway-tooltip-playmaker2 =
+    .title = ਪਲੇਅਮੇਕਰ (ਲਾਲ)
+mr2022-onboarding-colorway-description-playmaker = <b>ਤੁਸੀਂ ਪਲੇਅਮੇਕਰ ਹੋ।</b> ਤੁਸੀਂ ਜਿੱਤਣ ਦੇ ਮੌਕੇ ਬਣਾਉਂਦੇ ਹੋ ਅਤੇ ਆਪਣੇ ਆਲੇ-ਦੁਆਲੇ ਦੇ ਲੋਕਾਂ ਨੂੰ ਉਹਨਾਂ ਦੀ ਖੇਡ 'ਚ ਅੱਗੇ ਵਧਣ ਲਈ ਮਦਦ ਕਰਦੇ ਹੋ।
+
+mr2022-onboarding-colorway-label-expressionist = ਪਰਗਟਾਵਾਦੀ
+mr2022-onboarding-colorway-tooltip-expressionist2 =
+    .title = ਪਰਗਟਾਵਾਦੀ (ਪੀਲਾ)
+mr2022-onboarding-colorway-description-expressionist = <b>ਤੁਸੀਂ ਪਰਗਟਾਵਾਦੀ ਹੋ। </b> ਤੁਸੀਂ ਸੰਸਾਰ ਨੂੰ ਵੱਖਰੇ ਢੰਗ ਨਾਲ ਵੇਖਦੇ ਹੋ ਅਤੇ ਤੁਹਾਡੀਆਂ ਰਚਨਾਵਾਂ ਹੋਰਾਂ ਦੇ ਜਜ਼ਬਾਤਾਂ ਨੂੰ ਟੁੰਬਦੀਆਂ ਹਨ।
+
+mr2022-onboarding-colorway-label-visionary = ਭਵਿੱਖਦਰਸ਼ੀ
+mr2022-onboarding-colorway-tooltip-visionary2 =
+    .title = ਭਵਿੱਖਦਰਸ਼ੀ (ਹਰਾ)
+mr2022-onboarding-colorway-description-visionary = <b>ਤੁਸੀਂ ਭਵਿੱਖਦਰਸ਼ੀ ਹੋ।</b> ਤੁਸੀਂ ਮੌਜੂਦਾ ਹਾਲਤਾਂ ਉੱਤੇ ਸਵਾਲ ਕਰਦੇ ਹੋ ਅਤੇ ਹੋਰਾਂ ਨੂੰ ਬੇਹਤਰ ਭਵਿੱਖ ਬਾਰੇ ਸੋਚਣ ਲਈ ਮਜ਼ਬੂਰ ਕਰਦੇ ਹੋ।
+
+mr2022-onboarding-colorway-label-activist = ਕਾਰਕੁੰਨ
+mr2022-onboarding-colorway-tooltip-activist2 =
+    .title = ਕਾਰਕੁੰਨ (ਨੀਲਾ)
+mr2022-onboarding-colorway-description-activist = <b>ਤੁਸੀਂ ਕਾਰਕੁੰਨ ਹੋ।</b> ਤੁਸੀਂ ਸੰਸਾਰ ਨੂੰ ਪਹਿਲਾਂ ਨਾਲੋਂ ਬੇਹਤਰ ਥਾਂ ਬਣਾ ਕੇ ਰੱਖਦੇ ਹੋ ਅਤੇ ਹੋਰਾਂ ਦਾ ਭਰੋਸਾ ਵਧਾਉਂਦੇ ਹੋ।
+
+mr2022-onboarding-colorway-label-dreamer = ਸੁਪਨਸਾਜ਼
+mr2022-onboarding-colorway-tooltip-dreamer2 =
+    .title = ਸੁਪਨਸਾਜ਼ (ਜਾਮਨੀ)
+mr2022-onboarding-colorway-description-dreamer = <b>ਤੁਸੀਂ ਸੁਪਨਸਾਜ਼ ਹੋ।</b> ਤੁਸੀਂ ਭਰੋਸਾ ਰੱਖਦੋ ਹੋ ਕਿ ਖੁਸ਼ਹਾਲੀ ਦੇ ਤਰਫ਼ਦਾਰੀਆਂ ਵੱਡੇ ਅਸਰ ਰੱਖਦੀਆਂ ਹਨ ਤੇ ਹੋਰਾਂ ਨੂੰ ਬਹਾਦਰ ਬਣਨ ਲਈ ਪ੍ਰੇਰਿਤ ਕਰਦੀਆਂ ਹਨ।
+
+mr2022-onboarding-colorway-label-innovator = ਖੋਜੀ
+mr2022-onboarding-colorway-tooltip-innovator2 =
+    .title = ਖੋਜੀ (ਸੰਤਰੀ)
+mr2022-onboarding-colorway-description-innovator = <b>ਤੁਸੀਂ ਖੋਜੀ ਹੋ।</b> ਤੁਸੀਂ ਹਰ ਥਾਂ ਉੱਤੇ ਮੌਕੇ ਤਲਾਸ਼ਦੇ ਹੋ ਅਤੇ ਆਪਣੇ ਆਲੇ ਦੁਆਲੇ ਹਰ ਕਿਸੇ ਦੀ ਜ਼ਿੰਦਗੀ ਉੱਤੇ ਅਸਰ ਛੱਡਦੇ ਹੋ।
+
+## MR2022 Multistage Mobile Download screen strings
+
+mr2022-onboarding-mobile-download-title = ਲੈਪਟਾਪ ਤੋਂ ਫ਼ੋਨ ਉੱਤੇ ਜਾਓ ਅਤੇ ਫੇਰ ਵਾਪਸ ਆਓ
+mr2022-onboarding-mobile-download-subtitle = ਕਿਸੇ ਡਿਵਾਈਸ ਤੋਂ ਟੈਬਾਂ ਲਵੋ ਅਤੇ ਜਿੱਥੇ ਤੁਸੀਂ ਹੋਰ ਉੱਤੇ ਕੰਮ ਕਰਦੇ ਸੀ, ਉਥੋਂ ਜਾਰੀ ਰੱਖੋ। { -brand-product-name } ਨੂੰ ਜਿੱਥੇ ਵੀ ਤੁਸੀਂ ਵਰਤੋਂ, ਆਪਣੇ ਬੁੱਕਮਾਰਕ ਅਤੇ ਪਾਸਵਰਡ ਸਿੰਕ ਵੀ ਕਰ ਲਵੋ।
+mr2022-onboarding-mobile-download-cta-text = ਮੋਬਾਈਲ ਲਈ { -brand-product-name } ਲਈ QR ਕੋਡ ਸਕੈਨ ਕਰੋ ਜਾਂ <a data-l10n-name="download-label">ਖੁਦ ਨੂੰ ਡਾਊਨਲੋਡ ਲਿੰਕ ਭੇਜੋ।</a>
+mr2022-onboarding-no-mobile-download-cta-text = ਮੋਬਾਇਲ ਲਈ { -brand-product-name } ਲੈਣ ਲਈ QR ਕੋਡ ਸਕੈਨ ਕਰੋ।
+
+## MR2022 Upgrade Dialog screens
+## Pin private window screen shown only for users who don't have Firefox private pinned
+
+mr2022-upgrade-onboarding-pin-private-window-header = ਪ੍ਰਾਈਵੇਟ ਬਰਾਊਜ਼ਿੰਗ ਆਜ਼ਾਦੀ ਇੱਕ ਕਲਿੱਕ ਨਾਲ ਲਵੋ
+mr2022-upgrade-onboarding-pin-private-window-subtitle = ਕੋਈ ਵੀ ਸੰਭਾਲੇ ਕੂਕੀਜ਼ ਜਾਂ ਅਤੀਤ ਨਹੀਂ, ਸਿੱਧੇ ਤੁਹਾਡੇ ਡੈਸਕਟਾਪ ਤੋਂ। ਬਰਾਊਜ਼ ਇੰਞ ਕਰੋ ਕਿ ਕੋਈ ਨਿਗਰਾਨੀ ਨਹੀਂ ਕਰਦਾ।
+mr2022-upgrade-onboarding-pin-private-window-primary-button-label =
+    { PLATFORM() ->
+        [macos] { -brand-short-name } ਪ੍ਰਾਈਵੇਟ ਬਰਾਊਜ਼ਿੰਗ ਡੌਕ ਵਿੱਚ ਰੱਖੋ
+       *[other] { -brand-short-name } ਪ੍ਰਾਈਵੇਟ ਬਰਾਊਜ਼ਿੰਗ ਨੂੰ ਟਾਸਕ-ਬਾਰ ਵਿੱਚ ਟੰਗੋ
+    }
+
+## MR2022 Privacy Segmentation screen strings
+
+mr2022-onboarding-privacy-segmentation-title = ਅਸੀਂ ਹਮੇਸ਼ਾਂ ਤੁਹਾਡੀ ਪਰਰੇਦਾਰੀ ਦਾ ਸਤਿਕਾਰ ਕਰਦੇ ਹਾਂ
+mr2022-onboarding-privacy-segmentation-subtitle = ਮਾਹਰ ਸੁਝਾਆਵਾਂ ਤੋਂ ਚੁਸਤ ਖੋਜ ਲਈ, ਅਸੀਂ ਲਗਾਤਾਰ ਬੇਹਤਰ, ਵੱਧ ਨਿੱਜੀ { -brand-product-name } ਬਣਾਉਣ ਲਈ ਕੰਮ ਕਰ ਰਹੇ ਹਾਂ।
+mr2022-onboarding-privacy-segmentation-text-cta = ਜਦੋਂ ਅਸੀਂ ਤੁਹਾਡੀ ਬਰਾਊਜ਼ਿੰਗ ਨੂੰ ਸੁਧਾਰਨ ਲਈ ਤੁਹਾਡੇ ਡਾਟੇ ਨੂੰ ਵਰਤਣ ਵਾਲੇ ਨਵੇਂ ਫੀਚਰ ਦੇਈਏ ਤਾਂ ਤੁਸੀਂ ਕੀ ਵੇਖਣਾ ਚਾਹੁੰਦੇ ਹੋ?
+mr2022-onboarding-privacy-segmentation-button-primary-label = { -brand-product-name } ਸਿਫ਼ਾਰਸ਼ਾਂ ਨੂੰ ਵਰਤੋਂ
+mr2022-onboarding-privacy-segmentation-button-secondary-label = ਵੇਰਵੇ ਸਮੇਤ ਜਾਣਕਾਰੀ ਵੇਖਾਓ
+
+## MR2022 Multistage Gratitude screen strings
+
+mr2022-onboarding-gratitude-title = ਤੁਸੀਂ ਸਾਨੂੰ ਹੋਰ ਵਧੀਆ ਵੈੱਬ ਬਣਾਉਣ ਲਈ ਮਦਦ ਕਰ ਰਹੇ ਹੋ।
+mr2022-onboarding-gratitude-subtitle = { -brand-short-name }, ਜਿਸ ਨੂੰ Mozilla Foundation ਵਲੋਂ ਸਹਿਯੋਗ ਮਿਲਦਾ ਹੈ, ਵਰਤਣ ਲਈ ਤੁਹਾਡਾ ਧੰਨਵਾਦ ਹੈ। ਤੁਹਾਡੀ ਮਦਦ ਨਾਲ ਅਸੀਂ ਇੰਟਰਨੈੱਟ ਨੂੰ ਹਰ ਕਿਸੇ ਲਈ ਵੱਧ ਆਜ਼ਾਦ, ਪਹੁੰਚ ਵਿੱਚ ਅਤੇ ਹੋਰ ਵਧੀਆ ਬਣਾਉਣ ਲਈ ਕੰਮ ਕਰ ਰਹੇ ਹਾਂ।
+mr2022-onboarding-gratitude-primary-button-label = ਵੇਖੋ ਕਿ ਨਵਾਂ ਕੀ ਹੈ
+mr2022-onboarding-gratitude-secondary-button-label = ਬਰਾਊਜ਼ ਕਰਨਾ ਸ਼ੁਰੂ ਕਰੋ
+
+## Onboarding spotlight for infrequent users
+
+onboarding-infrequent-import-title = ਸਹਿਜ ਮਹਿਸੂਸ ਕਰੋ
+onboarding-infrequent-import-subtitle = ਭਾਵੇ ਤੁਸੀਂ ਰਹਿਣਾ ਹੋਵੇ ਜਾਂ ਬੱਸ ਠਹਿਰਨਾ, ਯਾਦ ਰੱਖੋ, ਤੁਸੀਂ ਆਪਣੇ ਬੁੱਕਮਾਰਕ, ਪਾਸਵਰਡ ਆਦਿ ਨੂੰ ਇੰਪੋਰਟ ਕਰ ਸਕਦੇ ਹੋ।
+onboarding-infrequent-import-primary-button = { -brand-short-name } ਲਈ ਇੰਪੋਰਟ ਕਰੋ
+
+## MR2022 Illustration alt tags
+## Descriptive tags for illustrations used by screen readers and other assistive tech
+
+mr2022-onboarding-pin-image-alt =
+    .aria-label = ਲੈਪਟਾਪ ਉੱਤੇ ਕੰਮ ਕਰਨ ਵਾਲਾ ਵਿਅਕਤੀ ਸਿਤਾਰਿਆਂ ਅਤੇ ਫੁੱਲਾਂ ਨਾਲ ਘਿਰਿਆ ਰਹੇ
+mr2022-onboarding-default-image-alt =
+    .aria-label = ਵਿਅਕਤੀ { -brand-product-name } ਲੋਗੋ ਨੂੰ ਸੀਨੇ ਨਾਲ ਲਾਵੇ
+mr2022-onboarding-import-image-alt =
+    .aria-label = ਵਿਅਕਤੀ ਸਾਫਟਵੇਅਰ ਆਈਕਾਨਾਂ ਨਾਲ ਸਕੇਟਬੋਰਡ ਦੀ ਸਵਾਰੀ ਕਰੇ
+mr2022-onboarding-mobile-download-image-alt =
+    .aria-label = ਡੱਡੂ ਕਮਲ ਦੇ ਪੱਤਿਆਂ ਉੱਤੇ QR ਕੋਡ ਉੱਤੇ ਛਾਲਾਂ ਮਾਰਦੇ ਹਨ, ਜਿਸ ਦੇ ਕੇਂਦਰ ਵਿੱਚ ਮੋਬਾਈਲ ਲਈ { -brand-product-name } ਡਾਊਨਲੋਡ ਕਰਨ ਲਈ ਹੈ
+mr2022-onboarding-pin-private-image-alt =
+    .aria-label = ਜਾਦੂ ਦੀ ਸੋਟੀ { -brand-product-name } ਦੇ ਪ੍ਰਾਈਵੇਟ ਬਰਾਊਜ਼ ਕਰਨ ਦੇ ਲੋਗੋ ਨੂੰ ਵੱਖ ਦਿਖਾਉਂਦੀ ਹੈ
+mr2022-onboarding-privacy-segmentation-image-alt =
+    .aria-label = ਹਲਕੇ ਅਤੇ ਗੂੜ੍ਹੇ ਰੰਗ ਰੱਦ ਹੱਥ ਜਿੱਤ ਦਰਸਾਉਂਦੇ ਹਨ
+mr2022-onboarding-gratitude-image-alt =
+    .aria-label = ਲੂੰਬੜੀ ਨਾਲ ਅਤੇ ਝਰੋਖੇ ਉੱਤੇ ਬਣੇ ਬੂਟੇ ਰਾਹੀਂ ਡੁੱਬਦੇ ਸੂਰਜ ਨੂੰ ਨਿਹਾਰਨਾ
+mr2022-onboarding-colorways-image-alt =
+    .aria-label = ਹੱਥ ਨਾਲ ਸਪਰੇਅ ਕਰਕੇ ਹਰੇ ਰੰਗ ਦੀ ਅੱਖ, ਸੰਤਰੀ ਰੰਗ ਦੇ ਜੁੱਤੇ, ਲਾਲ ਬਾਸਟਕਬਾਲ, ਜਾਮਨੀ ਹੈੱਡਫੋਨ, ਨੀਲਾ ਦਿਲ ਅਤੇ ਪੀਲਾ ਤਾਜ ਬਣਾਓ
+
+## Device migration onboarding
+
+onboarding-device-migration-title = ਫਿਰ ਜੀ ਆਇਆਂ ਨੂੰ!
+onboarding-device-migration-subtitle = ਆਪਣੇ ਬੁੱਕਮਾਰਕਾਂ, ਪਾਸਵਰਡਾਂ ਅਤੇ ਅਤੀਤ ਨੂੰ ਆਪਣੇ ਨਵੇਂ ਡਿਵਾਈਸ ਉੱਤੇ ਆਪਣੇ ਨਾਲ ਲਿਆਉਣ ਵਾਸਤੇ ਆਪਣੇ { -fxaccount-brand-name(capitalization: "sentence") } ਵਿੱਚ ਸਾਈਨ ਇਨ ਕਰੋ।
+onboarding-device-migration-primary-button-label = ਸਾਈਨ ਇਨ

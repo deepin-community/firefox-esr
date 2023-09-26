@@ -23,6 +23,8 @@ profile-selection-delete-button =
     .label = Odstrániť profil…
     .accesskey = d
 
+profile-selection-conflict-message = Iná kópia aplikácie { -brand-product-name } vykonala zmeny v profile. Pred vykonaním ďalších zmien musíte reštartovať { -brand-short-name }.
+
 ## Messages used in the profile manager
 
 profile-manager-description = { -brand-short-name } ukladá informácie o nastaveniach, predvoľbách a iných používateľských položkách v používateľskom profile.

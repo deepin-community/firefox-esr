@@ -23,6 +23,8 @@ profile-selection-delete-button =
     .label = Өшіру…
     .accesskey = ш
 
+profile-selection-conflict-message = { -brand-product-name } басқа нұсқасы профильдерге өзгерістер жасады. Көбірек өзгерістерді жасау алдында, { -brand-short-name } қайта іске қосу керек.
+
 ## Messages used in the profile manager
 
 profile-manager-description = { -brand-short-name } сіздің баптаулар, бетбелгілер туралы және т.б. ақпаратты жеке профиліңізде сақтайды.

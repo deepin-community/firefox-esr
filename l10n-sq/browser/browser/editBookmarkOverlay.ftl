@@ -2,17 +2,6 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-bookmark-overlay-name =
-    .value = Emër:
-    .accesskey = E
-
-bookmark-overlay-location =
-    .value = Vendndodhje:
-    .accesskey = V
-
-bookmark-overlay-folder =
-    .value = Dosje:
-
 bookmark-overlay-name-2 =
     .value = Emër
     .accesskey = E
@@ -35,13 +24,15 @@ bookmark-overlay-folders-expander =
     .tooltiptextdown = { bookmark-overlay-folders-expander.tooltiptext }
     .tooltiptextup = Fshihini
 
+bookmark-overlay-folders-expander2 =
+    .tooltiptext = Shfaqni tërë dosjet e faqerojtësve
+
+bookmark-overlay-folders-expander-hide =
+    .tooltiptext = Fshihini
+
 bookmark-overlay-new-folder-button =
     .label = Dosje e Re
     .accesskey = D
-
-bookmark-overlay-tags =
-    .value = Etiketa:
-    .accesskey = t
 
 bookmark-overlay-tags-2 =
     .value = Etiketa
@@ -55,9 +46,11 @@ bookmark-overlay-tags-expander =
     .tooltiptextdown = { bookmark-overlay-tags-expander.tooltiptext }
     .tooltiptextup = Fshihini
 
-bookmark-overlay-keyword =
-    .value = Fjalëkyç:
-    .accesskey = F
+bookmark-overlay-tags-expander2 =
+    .tooltiptext = Shfaqni tërë etiketat
+
+bookmark-overlay-tags-expander-hide =
+    .tooltiptext = Fshihini
 
 bookmark-overlay-keyword-2 =
     .value = Fjalëkyç

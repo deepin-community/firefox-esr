@@ -11,6 +11,12 @@ reload-tab =
 select-all-tabs =
     .label = Valitse kaikki välilehdet
     .accesskey = a
+tab-context-play-tab =
+    .label = Toista välilehden äänet
+    .accesskey = T
+tab-context-play-tabs =
+    .label = Toista välilehtien äänet
+    .accesskey = t
 duplicate-tab =
     .label = Monista välilehti
     .accesskey = n
@@ -48,12 +54,9 @@ unpin-selected-tabs =
 bookmark-selected-tabs =
     .label = Lisää välilehdet kirjanmerkkeihin…
     .accesskey = h
-bookmark-tab =
-    .label = Lisää välilehti kirjanmerkkeihin
-    .accesskey = h
-reopen-in-container =
-    .label = Avaa uudelleen eristystilassa
-    .accesskey = e
+tab-context-bookmark-tab =
+    .label = Lisää välilehti kirjanmerkkeihin…
+    .accesskey = L
 tab-context-open-in-new-container-tab =
     .label = Avaa uuteen eristettyyn välilehteen
     .accesskey = e
@@ -69,30 +72,9 @@ move-to-new-window =
 tab-context-close-multiple-tabs =
     .label = Sulje useita välilehtiä
     .accesskey = t
-tab-context-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Kumoa välilehden sulkeminen
-           *[other] Kumoa välilehtien sulkeminen
-        }
-    .accesskey = u
-close-tab =
-    .label = Sulje välilehti
-    .accesskey = S
-close-tabs =
-    .label = Sulje välilehdet
-    .accesskey = S
-move-tabs =
-    .label = Siirrä välilehdet
-    .accesskey = r
-move-tab =
-    .label = Siirrä välilehti
-    .accesskey = r
 tab-context-share-url =
     .label = Jaa
     .accesskey = J
-tab-context-share-more =
-    .label = Lisää…
 
 ## Variables:
 ##  $tabCount (Number): the number of tabs that are affected by the action.
@@ -104,13 +86,6 @@ tab-context-reopen-closed-tabs =
            *[other] Avaa uudelleen suljetut välilehdet
         }
     .accesskey = d
-tab-context-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Sulje välilehti
-           *[other] Sulje välilehdet
-        }
-    .accesskey = S
 tab-context-close-n-tabs =
     .label =
         { $tabCount ->
@@ -125,3 +100,11 @@ tab-context-move-tabs =
            *[other] Siirrä välilehdet
         }
     .accesskey = r
+
+tab-context-send-tabs-to-device =
+    .label =
+        { $tabCount ->
+            [one] Lähetä välilehti laitteeseen
+           *[other] Lähetä { $tabCount } välilehteä laitteeseen
+        }
+    .accesskey = L

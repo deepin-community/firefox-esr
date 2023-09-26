@@ -19,3 +19,20 @@ opensearch-error-download-desc = Impussibel per { -brand-short-name } da telecha
 
 ##
 
+searchbar-submit =
+    .tooltiptext = Trametter la tschertga
+
+# This string is displayed in the search box when the input field is empty
+searchbar-input =
+    .placeholder = Tschertgar
+
+searchbar-icon =
+    .tooltiptext = Tschertgar
+
+## Infobar shown when search engine is removed and replaced.
+## Variables
+## $oldEngine (String) - the search engine to be removed.
+## $newEngine (String) - the search engine to replace the removed search engine.
+
+removed-search-engine-message = <strong>Tia maschina da tschertgar predefinida è vegnida midada.</strong> { $oldEngine } na stat betg pli a disposiziun sco maschina da tschertgar da standard en { -brand-short-name }. { $newEngine } è ussa tia maschina da tschertgar predefinida. Acceda als parameters per definir in'autra maschina da tschertgar da standard. <label data-l10n-name="remove-search-engine-article">Ulteriuras infurmaziuns</label>
+remove-search-engine-button = OK

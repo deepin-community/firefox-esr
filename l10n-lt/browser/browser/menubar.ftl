@@ -38,16 +38,11 @@ menu-quit =
             [windows] B
            *[other] B
         }
+
 # This menu-quit-mac string is only used on macOS.
 menu-quit-mac =
     .label = Baigti „{ -brand-shorter-name }“ darbą
-# This menu-quit-button string is only used on Linux.
-menu-quit-button =
-    .label = { menu-quit.label }
-# This menu-quit-button-win string is only used on Windows.
-menu-quit-button-win =
-    .label = { menu-quit.label }
-    .tooltip = Baigti „{ -brand-shorter-name }“ darbą
+
 menu-about =
     .label = Apie „{ -brand-shorter-name }“
     .accesskey = A
@@ -77,8 +72,16 @@ menu-file-open-location =
 menu-file-open-file =
     .label = Atverti…
     .accesskey = A
-menu-file-close =
-    .label = Užverti
+# Variables:
+#  $tabCount (Number): the number of tabs that are affected by the action.
+menu-file-close-tab =
+    .label =
+        { $tabCount ->
+            [1] Užverti kortelę
+            [one] Užverti { $tabCount } kortelę
+            [few] Užverti { $tabCount } korteles
+           *[other] Užverti { $tabCount } kortelių
+        }
     .accesskey = U
 menu-file-close-window =
     .label = Užverti langą
@@ -95,9 +98,6 @@ menu-file-share-url =
 menu-file-print-setup =
     .label = Puslapio nuostatos…
     .accesskey = n
-menu-file-print-preview =
-    .label = Spaudinio peržiūra
-    .accesskey = ž
 menu-file-print =
     .label = Spausdinti…
     .accesskey = S
@@ -113,9 +113,6 @@ menu-file-go-offline =
 menu-edit =
     .label = Taisa
     .accesskey = T
-menu-edit-find-on =
-    .label = Ieškoti šiame tinklalapyje…
-    .accesskey = I
 menu-edit-find-in-page =
     .label = Rasti tinklalapyje
     .accesskey = R
@@ -134,9 +131,6 @@ menu-view =
 menu-view-toolbars-menu =
     .label = Priemonių juostos
     .accesskey = j
-menu-view-customize-toolbar =
-    .label = Tvarkyti…
-    .accesskey = T
 menu-view-customize-toolbar2 =
     .label = Tvarkyti priemonių juostą…
     .accesskey = T
@@ -173,9 +167,6 @@ menu-view-page-style-no-style =
 menu-view-page-basic-style =
     .label = Pagrindinis tinklalapio stilius
     .accesskey = P
-menu-view-charset =
-    .label = Teksto koduotė
-    .accesskey = k
 menu-view-repair-text-encoding =
     .label = Sutvarkyti simbolių koduotę
     .accesskey = k
@@ -192,6 +183,17 @@ menu-view-exit-full-screen =
 menu-view-full-screen =
     .label = Visas ekranas
     .accesskey = V
+
+## These menu items may use the same accesskey.
+
+# This should match reader-view-enter-button in browser.ftl
+menu-view-enter-readerview =
+    .label = Pereiti į skaitymo rodinį
+    .accesskey = s
+# This should match reader-view-close-button in browser.ftl
+menu-view-close-readerview =
+    .label = Išjungti skaitymo rodinį
+    .accesskey = s
 
 ##
 
@@ -221,24 +223,18 @@ menu-history-undo-menu =
     .label = Paskiausiai užvertos kortelės
 menu-history-undo-window-menu =
     .label = Paskiausiai užverti langai
-menu-history-reopen-all-tabs = Įkelti visas korteles
-menu-history-reopen-all-windows = Įkelti visus langus
 
 ## Bookmarks Menu
 
 menu-bookmarks-menu =
     .label = Adresynas
     .accesskey = A
-menu-bookmarks-show-all =
-    .label = Rodyti visą adresyną
-menu-bookmark-this-page =
-    .label = Įrašyti į adresyną
 menu-bookmarks-manage =
     .label = Tvarkyti adresyną
-menu-bookmark-current-tab =
-    .label = Įrašyti šią kortelę į adresyną
-menu-bookmark-edit =
-    .label = Taisyti adresyno įrašą
+menu-bookmark-tab =
+    .label = Įrašyti šią kortelę į adresyną…
+menu-edit-bookmark =
+    .label = Taisyti šį adresyno įrašą…
 menu-bookmarks-all-tabs =
     .label = Visas korteles įtraukti į adresyną…
 menu-bookmarks-toolbar =
@@ -256,15 +252,6 @@ menu-tools =
 menu-tools-downloads =
     .label = Atsiuntimai
     .accesskey = s
-menu-tools-addons =
-    .label = Priedai
-    .accesskey = P
-menu-tools-fxa-sign-in =
-    .label = Prisijungti prie „{ -brand-product-name }“…
-    .accesskey = g
-menu-tools-turn-on-sync =
-    .label = Įjungti „{ -sync-brand-short-name }“…
-    .accesskey = n
 menu-tools-addons-and-themes =
     .label = Priedai ir grafiniai apvalkalai
     .accesskey = P
@@ -280,9 +267,6 @@ menu-tools-sync-now =
 menu-tools-fxa-re-auth =
     .label = Prisijungti prie „{ -brand-product-name }“ iš naujo…
     .accesskey = r
-menu-tools-web-developer =
-    .label = Saityno kūrėjams
-    .accesskey = k
 menu-tools-browser-tools =
     .label = Naršyklės priemonės
     .accesskey = N
@@ -295,17 +279,6 @@ menu-tools-page-source =
 menu-tools-page-info =
     .label = Informacija apie tinklalapį
     .accesskey = I
-menu-preferences =
-    .label =
-        { PLATFORM() ->
-            [windows] Nuostatos
-           *[other] Nuostatos
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] N
-           *[other] N
-        }
 menu-settings =
     .label = Nuostatos
     .accesskey =
@@ -338,21 +311,6 @@ menu-window-bring-all-to-front =
 menu-help =
     .label = Žinynas
     .accesskey = Ž
-menu-help-product =
-    .label = „{ -brand-shorter-name }“ žinynas
-    .accesskey = ž
-menu-help-show-tour =
-    .label = Įvadas į „{ -brand-shorter-name }“
-    .accesskey = v
-menu-help-import-from-another-browser =
-    .label = Importuoti iš kitos naršyklės…
-    .accesskey = I
-menu-help-keyboard-shortcuts =
-    .label = Spartieji klavišai
-    .accesskey = k
-menu-help-troubleshooting-info =
-    .label = Informacija problemų sprendimui
-    .accesskey = r
 menu-get-help =
     .label = Žinynas ir pagalba
     .accesskey = Ž
@@ -361,15 +319,9 @@ menu-help-more-troubleshooting-info =
     .accesskey = p
 menu-help-report-site-issue =
     .label = Pranešti apie svetainės problemą…
-menu-help-feedback-page =
-    .label = Siųsti atsiliepimą…
-    .accesskey = S
-menu-help-safe-mode-without-addons =
-    .label = Perleisti programą, išjungus priedus…
-    .accesskey = r
-menu-help-safe-mode-with-addons =
-    .label = Perleisti programą su išjungtais priedais
-    .accesskey = r
+menu-help-share-ideas =
+    .label = Pasidalinti idėjomis ir atsiliepimais…
+    .accesskey = s
 menu-help-enter-troubleshoot-mode2 =
     .label = Trikčių šalinimo veiksena…
     .accesskey = v

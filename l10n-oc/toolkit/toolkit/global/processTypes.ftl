@@ -9,8 +9,6 @@
 
 process-type-web = Contengut Web
 
-process-type-browser = Principal
-
 # process used to run privileged about pages,
 # such as about:home
 process-type-privilegedabout = Paginas « A prepaus de » privilegiadas
@@ -24,13 +22,13 @@ process-type-extension = Extension
 # process used to open file:// URLs
 process-type-file = Fichièr local
 
-# process used to isolate webpages that requested special
-# permission to allocate large amounts of memory
-process-type-weblargeallocation = Allocacion larga
-
 # process used to isolate a webpage from other web pages
 # to improve security
 process-type-webisolated = Contengut Web isolat
+
+# process used to isolate a ServiceWorker to improve
+# performance
+process-type-webserviceworker = Servicis Workers isolat
 
 # process preallocated; may change to other types
 process-type-prealloc = Preatribuit
@@ -51,6 +49,9 @@ process-type-socket = Socket
 
 # process used to decode media
 process-type-rdd = RDD
+
+# process used to run some IPC actor in their own sandbox
+process-type-utility = Actor IPC en nauc de sable
 
 ##
 ## Other

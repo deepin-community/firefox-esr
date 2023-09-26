@@ -23,6 +23,8 @@ profile-selection-delete-button =
     .label = احذف الملف الشخصي…
     .accesskey = ح
 
+profile-selection-conflict-message = أجرت نسخة أخرى من { -brand-product-name } التغييرات على الملفات الشخصية. عليك إعادة تشغيل { -brand-short-name } قبل إجراء تغييرات أخرى.
+
 ## Messages used in the profile manager
 
 profile-manager-description = يخزّن { -brand-short-name } معلومات عن إعداداتك، وتفضيلاتك، وعناصر أخرى في ملفّك الشّخصي.

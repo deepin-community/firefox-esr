@@ -71,16 +71,8 @@ mobile-app-card-content = Usa lo navegador mobil con protección integrada contr
 mobile-app-links = Lo navegador { -brand-product-name } pa <a data-l10n-name="android-mobile-inline-link">Android</a> y <a data-l10n-name="ios-mobile-inline-link">iOS</a>
 
 lockwise-title = No tornará a ixuplidar la suya clau
-lockwise-title-logged-in2 = Administración de claus
-lockwise-header-content = { -lockwise-brand-name } almagazena de forma segura las suyas claus en o navegador.
 lockwise-header-content-logged-in = Alce y sincronice las suyas claus en totz los suyos dispositivos de traza segura.
-protection-report-save-passwords-button = Alzar claus
-    .title = Alzar claus en { -lockwise-brand-short-name }
-protection-report-manage-passwords-button = Administrar claus
-    .title = Administrar claus en { -lockwise-brand-short-name }
-lockwise-mobile-app-title = Leve las suyas claus a totas partes
-lockwise-no-logins-card-content = Use claus alzadas en { -brand-short-name } en qualsequier dispositivo.
-lockwise-app-links = { -lockwise-brand-name } pa <a data-l10n-name="lockwise-android-inline-link">Android</a> y <a data-l10n-name="lockwise-ios-inline-link">iOS</a>
+
 
 # Variables:
 # $count (Number) - Number of passwords exposed in data breaches.
@@ -100,9 +92,6 @@ lockwise-scanned-text-no-breached-logins =
        *[other] Las tuyas claus s'algamazenan de traza segura.
     }
 lockwise-how-it-works-link = Cómo funciona
-
-turn-on-sync = Activar { -sync-brand-short-name }...
-    .title = Ir a las preferencias de sincronización
 
 monitor-title = Buscar filtracions de datos
 monitor-link = Cómo funciona

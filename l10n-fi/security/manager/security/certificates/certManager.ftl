@@ -23,49 +23,12 @@ certmgr-tab-ca =
 certmgr-mine = Seuraavilta organisaatioilta on sinut todentava varmenne
 certmgr-remembered = Näitä varmenteita käytetään sinun todentamiseen sivustoille
 certmgr-people = Seuraavat yksilöt todentavia varmenteita on tiedossa
-certmgr-servers = Seuraavat palvelimet todentavia varmenteita on tiedossa
 certmgr-server = Nämä tietueet identifioivat palvelinvarmenteen virhepoikkeukset
 certmgr-ca = Seuraavat varmentajat todentavia varmenteita on tiedossa
 
-certmgr-detail-general-tab-title =
-    .label = Yleistiedot
-    .accesskey = Y
-
-certmgr-detail-pretty-print-tab-title =
-    .label = Yksityiskohdat
-    .accesskey = t
-
-certmgr-pending-label =
-    .value = Todennetaan varmennetta…
-
-certmgr-subject-label = Myönnetty
-
-certmgr-issuer-label = Myöntäjä
-
-certmgr-period-of-validity = Kelpoisuusaika
-
-certmgr-fingerprints = Sormenjäljet
-
-certmgr-cert-detail =
-    .title = Varmenteen yksityiskohdat
-    .buttonlabelaccept = Sulje
-    .buttonaccesskeyaccept = S
-
-certmgr-cert-detail-commonname = Yleinen nimi (CN)
-
-certmgr-cert-detail-org = Organisaatio (O)
-
-certmgr-cert-detail-orgunit = Organisaation yksikkö (OU)
-
-certmgr-cert-detail-serial-number = Sarjanumero
-
-certmgr-cert-detail-sha-256-fingerprint = SHA-256-sormenjälki
-
-certmgr-cert-detail-sha-1-fingerprint = SHA1-sormenjälki
-
-certmgr-edit-ca-cert =
+certmgr-edit-ca-cert2 =
     .title = Muokkaa varmentajan varmenteen luotettavuusasetuksia
-    .style = width: 48em;
+    .style = min-width: 48em;
 
 certmgr-edit-cert-edit-trust = Muokkaa luotettavuusasetuksia:
 
@@ -75,9 +38,9 @@ certmgr-edit-cert-trust-ssl =
 certmgr-edit-cert-trust-email =
     .label = Tämä varmenne voi todentaa sähköpostittajia.
 
-certmgr-delete-cert =
+certmgr-delete-cert2 =
     .title = Poista varmenne
-    .style = width: 48em; height: 24em;
+    .style = min-width: 48em; min-height: 24em;
 
 certmgr-cert-host =
     .label = Palvelin
@@ -88,18 +51,11 @@ certmgr-cert-name =
 certmgr-cert-server =
     .label = Palvelin
 
-certmgr-override-lifetime =
-    .label = Elinikä
-
 certmgr-token-name =
     .label = Turvallisuuslaite
 
-certmgr-begins-on = Astuu voimaan
-
 certmgr-begins-label =
     .label = Astuu voimaan
-
-certmgr-expires-on = Vanhenee
 
 certmgr-expires-label =
     .label = Vanhenee
@@ -109,6 +65,9 @@ certmgr-email =
 
 certmgr-serial =
     .label = Sarjanumero
+
+certmgr-fingerprint-sha-256 =
+    .label = SHA-256-sormenjälki
 
 certmgr-view =
     .label = Näytä…
@@ -141,18 +100,6 @@ certmgr-backup-all =
 certmgr-restore =
     .label = Tuo…
     .accesskey = T
-
-certmgr-details =
-    .value = Varmenteen kentät
-    .accesskey = m
-
-certmgr-fields =
-    .value = Kentän arvo
-    .accesskey = K
-
-certmgr-hierarchy =
-    .value = Varmennehierarkia
-    .accesskey = n
 
 certmgr-add-exception =
     .label = Lisää poikkeus…
@@ -216,12 +163,6 @@ delete-user-cert-confirm = Poistetaanko nämä varmenteet?
 delete-user-cert-impact = Poistettua varmennetta ei voi enää käyttää itsensä todentamiseen.
 
 
-delete-ssl-cert-title =
-    .title = Poista palvelinvarmenteen poikkeus
-delete-ssl-cert-confirm = Poistetaanko nämä palvelinkohtaiset poikkeukset?
-delete-ssl-cert-impact = Palvelinkohtaisen poikkeuksen poistamisen jälkeen normaalit turvallisuustarkastukset ovat taas voimassa ja palvelimelta vaaditaan tällöin kelvollinen varmenne.
-
-
 delete-ssl-override-title =
     .title = Poista palvelinvarmenteen poikkeus
 delete-ssl-override-confirm = Haluatko varmasti poistaa tämän palvelinpoikkeuksen?
@@ -244,47 +185,6 @@ delete-email-cert-impact = Jos sähköpostivarmenne poistetaan, varmenteen kohte
 #   $serialNumber : the serial number of the cert in AA:BB:CC hex format.
 cert-with-serial =
     .value = Varmenne sarjanumerolla: { $serialNumber }
-
-## Cert Viewer
-
-# Title used for the Certificate Viewer.
-#
-# Variables:
-#   $certificate : a string representative of the certificate being viewed.
-cert-viewer-title =
-    .title = Varmenteen tarkastelu: ”{ $certName }”
-
-not-present =
-    .value = <Ei osa varmennetta>
-
-# Cert verification
-cert-verified = Tämä varmenne on seuraaviin tarkoituksiin:
-
-# Add usage
-verify-ssl-client =
-    .value = SSL-asiakasohjelman varmenne
-
-verify-ssl-server =
-    .value = SSL-palvelimen varmenne
-
-verify-ssl-ca =
-    .value = SSL-varmentaja
-
-verify-email-signer =
-    .value = Sähköpostin allekirjoittajan varmenne
-
-verify-email-recip =
-    .value = Sähköpostin vastaanottajan varmenne
-
-# Cert verification
-cert-not-verified-cert-revoked = Varmennetta ei voitu todentaa, koska se on sulkulistalla.
-cert-not-verified-cert-expired = Varmennetta ei voitu todentaa, koska se on vanhentunut.
-cert-not-verified-cert-not-trusted = Varmennetta ei voitu todentaa, koska siihen ei luoteta.
-cert-not-verified-issuer-not-trusted = Varmennetta ei voitu todentaa, koska sen myöntäjään ei luoteta.
-cert-not-verified-issuer-unknown = Varmennetta ei voitu todentaa, koska sen myöntäjä on tuntematon.
-cert-not-verified-ca-invalid = Varmennetta ei voitu todentaa, koska sen varmentajan varmenne on epäkelpo.
-cert-not-verified_algorithm-disabled = Varmennetta ei voitu todentaa, koska se on allekirjoitettu allekirjoitusalgoritmilla, joka ei ole turvallinen.
-cert-not-verified-unknown = Varmennetta ei voitu todentaa tuntemattomasta syystä.
 
 # Used to indicate that the user chose not to send a client authentication certificate to a server that requested one in a TLS handshake.
 send-no-client-certificate = Älä lähetä asiakasvarmennetta

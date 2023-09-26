@@ -2,20 +2,14 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-containers-window-new =
+containers-window-new2 =
     .title = Додати новий контейнер
-    .style = width: 45em
+    .style = min-width: 45em
 # Variables
 #   $name (String) - Name of the container
-containers-window-update =
+containers-window-update-settings2 =
     .title = Налаштування контейнера { $name }
-    .style = width: 45em
-
-# Variables
-#   $name (String) - Name of the container
-containers-window-update-settings =
-    .title = Налаштування контейнера { $name }
-    .style = width: 45em
+    .style = min-width: 45em
 
 containers-window-close =
     .key = w
@@ -45,10 +39,6 @@ containers-icon-label = Піктограма
 containers-color-label = Колір
     .accesskey = К
     .style = { -containers-labels-style }
-
-containers-button-done =
-    .label = Готово
-    .accesskey = Г
 
 containers-dialog =
     .buttonlabelaccept = Готово

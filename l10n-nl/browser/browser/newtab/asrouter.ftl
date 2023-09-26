@@ -7,7 +7,6 @@
 
 cfr-doorhanger-extension-heading = Aanbevolen extensie
 cfr-doorhanger-feature-heading = Aanbevolen functie
-cfr-doorhanger-pintab-heading = Probeer dit: Tabblad vastmaken
 
 ##
 
@@ -19,8 +18,6 @@ cfr-doorhanger-extension-cancel-button = Niet nu
 
 cfr-doorhanger-extension-ok-button = Nu toevoegen
     .accesskey = t
-cfr-doorhanger-pintab-ok-button = Dit tabblad vastmaken
-    .accesskey = v
 
 cfr-doorhanger-extension-manage-settings-button = Instellingen voor aanbevelingen beheren
     .accesskey = I
@@ -68,18 +65,6 @@ cfr-doorhanger-extension-total-users =
        *[other] { $total } gebruikers
     }
 
-cfr-doorhanger-pintab-description = Makkelijke toegang tot uw meestgebruikte websites. Houd websites open in een tabblad (zelfs wanneer u herstart).
-
-## These messages are steps on how to use the feature and are shown together.
-
-cfr-doorhanger-pintab-step1 = <b>Klik met de rechtermuisknop</b> op het tabblad dat u wilt vastmaken.
-cfr-doorhanger-pintab-step2 = Selecteer <b>Tabblad vastmaken</b> vanuit het menu.
-cfr-doorhanger-pintab-step3 = Als de website een update bevat, ziet u een blauwe stip op uw vastgemaakte tabblad.
-
-cfr-doorhanger-pintab-animation-pause = Pauzeren
-cfr-doorhanger-pintab-animation-resume = Hervatten
-
-
 ## Firefox Accounts Message
 
 cfr-doorhanger-bookmark-fxa-header = Synchroniseer uw bladwijzers overal.
@@ -105,133 +90,9 @@ cfr-whatsnew-button =
     .label = Wat is er nieuw
     .tooltiptext = Wat is er nieuw
 
-cfr-whatsnew-panel-header = Wat is er nieuw
-
 cfr-whatsnew-release-notes-link-text = Uitgaveopmerkingen lezen
 
-cfr-whatsnew-fx70-title = { -brand-short-name } vecht nu nog harder voor uw privacy
-cfr-whatsnew-fx70-body =
-    De nieuwste update verbetert de functie Bescherming tegen volgen en maakt het
-    gemakkelijker dan ooit om veilige wachtwoorden voor elke website te maken.
-
-cfr-whatsnew-tracking-protect-title = Bescherm uzelf tegen trackers
-cfr-whatsnew-tracking-protect-body =
-    { -brand-short-name } blokkeert veel gebruikelijke sociale en cross-site-trackers die
-    volgen wat u online doet.
-cfr-whatsnew-tracking-protect-link-text = Uw rapport bekijken
-
-# This string is displayed before a large numeral that indicates the total
-# number of tracking elements blocked. Don’t add $blockedCount to your
-# localization, because it would result in the number showing twice.
-cfr-whatsnew-tracking-blocked-title =
-    { $blockedCount ->
-        [one] Tracker geblokkeerd
-       *[other] Trackers geblokkeerd
-    }
-cfr-whatsnew-tracking-blocked-subtitle = Sinds { DATETIME($earliestDate, month: "long", year: "numeric") }
-cfr-whatsnew-tracking-blocked-link-text = Rapport bekijken
-
-cfr-whatsnew-lockwise-backup-title = Maak een back-up van uw wachtwoorden
-cfr-whatsnew-lockwise-backup-body = Maak nu veilige wachtwoorden die u overal waar u zich aanmeldt kunt benaderen.
-cfr-whatsnew-lockwise-backup-link-text = Back-ups inschakelen
-
-cfr-whatsnew-lockwise-take-title = Neem uw wachtwoorden mee
-cfr-whatsnew-lockwise-take-body =
-    Met de mobiele app { -lockwise-brand-short-name } heeft u overal veilig
-    toegang tot uw wachtwoorden.
-cfr-whatsnew-lockwise-take-link-text = App downloaden
-
-## Search Bar
-
-cfr-whatsnew-searchbar-title = Typ minder, vind meer met de adresbalk
-cfr-whatsnew-searchbar-body-topsites = Selecteer nu eenvoudigweg de adresbalk en een vak zal uitbreiden met snelkoppelingen naar uw topwebsites.
-
-## Search bar
-
-cfr-whatsnew-searchbar-icon-alt-text = Vergrootglaspictogram
-
-## Picture-in-Picture
-
-cfr-whatsnew-pip-header = Bekijk video’s terwijl u surft
-cfr-whatsnew-pip-body = Picture-in-picture zet een video in een zwevend venster, zodat u kunt kijken terwijl u op andere tabbladen werkt.
-cfr-whatsnew-pip-cta = Meer info
-
-## Permission Prompt
-
-cfr-whatsnew-permission-prompt-header = Minder vervelende pop-ups van websites
-cfr-whatsnew-permission-prompt-body = { -brand-shorter-name } verhindert nu dat websites u automatisch vragen of ze u pop-upberichten mogen sturen.
-cfr-whatsnew-permission-prompt-cta = Meer info
-
-## Fingerprinter Counter
-
-# This string is displayed before a large numeral that indicates the total
-# number of tracking elements blocked. Don’t add $fingerprinterCount to your
-# localization, because it would result in the number showing twice.
-cfr-whatsnew-fingerprinter-counter-header =
-    { $fingerprinterCount ->
-        [one] Fingerprinter geblokkeerd
-       *[other] Fingerprinters geblokkeerd
-    }
-cfr-whatsnew-fingerprinter-counter-body = { -brand-shorter-name } blokkeert veel fingerprinters, die stiekem informatie over uw apparaat en handelingen verzamelen om een advertentieprofiel van u te maken.
-
-# Message variation when fingerprinters count is less than 10
-cfr-whatsnew-fingerprinter-counter-header-alt = Fingerprinters
-cfr-whatsnew-fingerprinter-counter-body-alt = { -brand-shorter-name } kan fingerprinters, die stiekem informatie over uw apparaat en handelingen verzamelen om een advertentieprofiel van u te maken, blokkeren.
-
-## Bookmark Sync
-
-cfr-doorhanger-sync-bookmarks-header = Deze bladwijzer op uw telefoon ontvangen
-cfr-doorhanger-sync-bookmarks-body = Neem uw bladwijzers, wachtwoorden, geschiedenis en meer mee naar overal waar u bent aangemeld bij { -brand-product-name }.
-cfr-doorhanger-sync-bookmarks-ok-button = { -sync-brand-short-name } inschakelen
-    .accesskey = i
-
-## Login Sync
-
-cfr-doorhanger-sync-logins-header = Verlies nooit meer een wachtwoord
-cfr-doorhanger-sync-logins-body = Bewaar en synchroniseer uw wachtwoorden veilig op al uw apparaten.
-cfr-doorhanger-sync-logins-ok-button = { -sync-brand-short-name } inschakelen
-    .accesskey = i
-
-## Send Tab
-
-cfr-doorhanger-send-tab-header = Dit onderweg lezen
-cfr-doorhanger-send-tab-recipe-header = Dit recept meenemen naar de keuken
-cfr-doorhanger-send-tab-body = Met Send Tab kunt u eenvoudig deze koppeling met uw telefoon delen, of waar u ook maar bent aangemeld bij { -brand-product-name }.
-cfr-doorhanger-send-tab-ok-button = Send Tab proberen
-    .accesskey = p
-
-## Firefox Send
-
-cfr-doorhanger-firefox-send-header = Dit pdf-document veilig delen
-cfr-doorhanger-firefox-send-body = Houd uw gevoelige documenten weg bij nieuwsgierige blikken met end-to-end-versleuteling en een koppeling die verdwijnt als u klaar bent.
-cfr-doorhanger-firefox-send-ok-button = { -send-brand-name } proberen
-    .accesskey = p
-
-## Social Tracking Protection
-
-cfr-doorhanger-socialtracking-ok-button = Beschermingen bekijken
-    .accesskey = B
-cfr-doorhanger-socialtracking-close-button = Sluiten
-    .accesskey = S
-cfr-doorhanger-socialtracking-dont-show-again = Dit soort berichten niet meer tonen
-    .accesskey = D
-cfr-doorhanger-socialtracking-heading = { -brand-short-name } heeft verhinderd dat een sociaal netwerk u hier volgt
-cfr-doorhanger-socialtracking-description = Uw privacy is belangrijk. { -brand-short-name } blokkeert nu veelgebruikte sociale-mediatrackers en beperkt zo, hoeveel gegevens ze kunnen verzamelen over wat u online doet.
-cfr-doorhanger-fingerprinters-heading = { -brand-short-name } heeft een fingerprinter op deze pagina geblokkeerd
-cfr-doorhanger-fingerprinters-description = Uw privacy is belangrijk. { -brand-short-name } blokkeert nu fingerprinters, die stukjes uniek identificeerbare informatie over uw apparaat verzamelen om u te volgen.
-cfr-doorhanger-cryptominers-heading = { -brand-short-name } heeft een cryptominer op deze pagina geblokkeerd
-cfr-doorhanger-cryptominers-description = Uw privacy is belangrijk. { -brand-short-name } blokkeert nu cryptominers, die de rekenkracht van uw systeem gebruiken om digitale valuta te minen.
-
 ## Enhanced Tracking Protection Milestones
-
-# Variables:
-#   $blockedCount (Number) - The total count of blocked trackers. This number will always be greater than 1.
-#   $date (String) - The date we began recording the count of blocked trackers
-cfr-doorhanger-milestone-heading =
-    { $blockedCount ->
-        [one] { -brand-short-name } heeft <b>{ $blockedCount }</b> tracker geblokkeerd sinds { $date }!
-       *[other] { -brand-short-name } heeft meer dan <b>{ $blockedCount }</b> trackers geblokkeerd sinds { $date }!
-    }
 
 # Variables:
 #   $blockedCount (Number) - The total count of blocked trackers. This number will always be greater than 1.
@@ -243,45 +104,8 @@ cfr-doorhanger-milestone-heading2 =
     }
 cfr-doorhanger-milestone-ok-button = Alles bekijken
     .accesskey = A
-
-## What’s New Panel Content for Firefox 76
-
-
-## Lockwise message
-
-cfr-whatsnew-lockwise-header = Maak eenvoudig veilige wachtwoorden
-cfr-whatsnew-lockwise-body = Het is moeilijk om voor elke account unieke, veilige wachtwoorden te bedenken. Selecteer bij het maken van een wachtwoord het wachtwoordveld om een veilig, aangemaakt wachtwoord van { -brand-shorter-name } te gebruiken.
-cfr-whatsnew-lockwise-icon-alt = { -lockwise-brand-short-name }-pictogram
-
-## Vulnerable Passwords message
-
-cfr-whatsnew-passwords-header = Ontvang meldingen over kwetsbare wachtwoorden
-cfr-whatsnew-passwords-body = Hackers weten dat mensen dezelfde wachtwoorden hergebruiken. Als u hetzelfde wachtwoord op meerdere websites hebt gebruikt en een van die sites getroffen is door een datalek, dan ziet u een melding in { -lockwise-brand-short-name } om uw wachtwoord op die websites te wijzigen.
-cfr-whatsnew-passwords-icon-alt = Sleutelpictogram voor kwetsbaar wachtwoord
-
-## Picture-in-Picture fullscreen message
-
-cfr-whatsnew-pip-fullscreen-header = Maak picture-in-picture schermvullend
-cfr-whatsnew-pip-fullscreen-body = Wanneer u een video in een zwevend scherm plaatst, kunt u daar nu op dubbelklikken om het schermvullend te maken.
-cfr-whatsnew-pip-fullscreen-icon-alt = Pictogram Picture-in-Picture
-
-## Protections Dashboard message
-
-cfr-whatsnew-protections-header = Beschermingen in een oogopslag
-cfr-whatsnew-protections-body = Het Beveiligingsdashboard bevat samenvattingen over datalekken en wachtwoordbeheer. U kunt nu volgen hoeveel datalekken u hebt opgelost en bekijken of uw opgeslagen wachtwoorden mogelijk zijn getroffen door een datalek.
-cfr-whatsnew-protections-cta-link = Beveiligingsdashboard bekijken
-cfr-whatsnew-protections-icon-alt = Schildpictogram
-
-## Better PDF message
-
-cfr-whatsnew-better-pdf-header = Betere PDF-ervaring
-cfr-whatsnew-better-pdf-body = PDF-documenten worden nu rechtstreeks geopend in { -brand-short-name }, waardoor uw werk binnen handbereik blijft.
-
 cfr-doorhanger-milestone-close-button = Sluiten
     .accesskey = S
-
-## What’s New Panel Content for Firefox 76
-## Protections Dashboard message
 
 ## DOH Message
 
@@ -294,28 +118,141 @@ cfr-doorhanger-doh-secondary-button = Uitschakelen
 
 ## Fission Experiment Message
 
-cfr-doorhanger-fission-body-approved = Uw privacy is belangrijk. { -brand-short-name } isoleert, of sandboxt, websites nu van elkaar, waardoor het voor hackers moeilijker wordt om wachtwoorden, creditcardnummers en andere gevoelige informatie te stelen.
-cfr-doorhanger-fission-header = Website-isolatie
-cfr-doorhanger-fission-primary-button = OK, begrepen
-    .accesskey = O
-cfr-doorhanger-fission-secondary-button = Meer info
-    .accesskey = M
-
-## What's new: Cookies message
-
-## What's new: Media controls message
-
-## What's new: Search shortcuts
-
-## What's new: Cookies protection
-
-## What's new: Better bookmarking
-
-## What's new: Cross-site cookie tracking
-
 ## Full Video Support CFR message
 
 cfr-doorhanger-video-support-body = Video’s op deze website worden mogelijk in deze versie van { -brand-short-name } niet correct afgespeeld. Werk { -brand-short-name } nu bij voor volledige video-ondersteuning.
 cfr-doorhanger-video-support-header = Werk { -brand-short-name } bij om video af te spelen
 cfr-doorhanger-video-support-primary-button = Nu bijwerken
     .accesskey = w
+
+## Spotlight modal shared strings
+
+## VPN promotion dialog for public Wi-Fi users
+##
+## If a user is detected to be on a public Wi-Fi network, they are given a
+## bit of info about how to improve their privacy and then offered a button
+## to the Mozilla VPN page and a link to dismiss the dialog.
+
+# This header text can be explicitly wrapped.
+spotlight-public-wifi-vpn-header = Het lijkt erop dat u openbare wifi gebruikt
+spotlight-public-wifi-vpn-body = Overweeg een Virtual Private Network om uw locatie en surfactiviteit te verbergen. Het helpt u beschermd te blijven tijdens het navigeren op openbare plaatsen, zoals luchthavens en koffiebars.
+spotlight-public-wifi-vpn-primary-button = Blijf privé met { -mozilla-vpn-brand-name }
+    .accesskey = B
+spotlight-public-wifi-vpn-link = Niet nu
+    .accesskey = N
+
+## Total Cookie Protection Rollout
+
+## Emotive Continuous Onboarding
+
+spotlight-better-internet-header = Een beter internet begint bij uzelf
+spotlight-better-internet-body = Als u { -brand-short-name } gebruikt, stemt u voor een open en toegankelijk internet dat beter is voor iedereen.
+spotlight-peace-mind-header = Bij ons bent u veilig
+spotlight-peace-mind-body = Elke maand blokkeert { -brand-short-name } gemiddeld meer dan 3000 trackers per gebruiker. Want niets mag tussen u en het goede internet staan, vooral geen privacy-overlast zoals trackers.
+spotlight-pin-primary-button =
+    { PLATFORM() ->
+        [macos] In de Dock houden
+       *[other] Aan taakbalk vastzetten
+    }
+spotlight-pin-secondary-button = Niet nu
+
+## MR2022 Background Update Windows native toast notification strings.
+##
+## These strings will be displayed by the Windows operating system in
+## a native toast, like:
+##
+## <b>multi-line title</b>
+## multi-line text
+## <img>
+## [ primary button ] [ secondary button ]
+##
+## The button labels are fitted into narrow fixed-width buttons by
+## Windows and therefore must be as narrow as possible.
+
+mr2022-background-update-toast-title = Nieuwe { -brand-short-name }. Meer privé. Minder trackers. Geen compromissen.
+mr2022-background-update-toast-text = Probeer nu de nieuwste { -brand-short-name }, geüpgraded met onze krachtigste bescherming tegen volgen tot nu toe.
+
+# This button label will be fitted into a narrow fixed-width button by
+# Windows. Try to not exceed the width of the English text (compare it
+# using a variable font like Arial): the button can only fit 1-2
+# additional characters, exceeding characters will be truncated.
+mr2022-background-update-toast-primary-button-label = { -brand-shorter-name } nu openen
+
+# This button label will be fitted into a narrow fixed-width button by
+# Windows. Try to not exceed the width of the English text (compare it using a
+# variable font like Arial): the button can only fit 1-2 additional characters,
+# exceeding characters will be truncated.
+mr2022-background-update-toast-secondary-button-label = Later herinneren
+
+## Firefox View CFR
+
+firefoxview-cfr-primarybutton = Uitproberen
+    .accesskey = U
+firefoxview-cfr-secondarybutton = Niet nu
+    .accesskey = N
+firefoxview-cfr-header-v2 = Ga snel verder waar u was gebleven
+firefoxview-cfr-body-v2 = Ontvang onlangs gesloten tabbladen terug en schakel naadloos tussen apparaten met { -firefoxview-brand-name }.
+
+## Firefox View Spotlight
+
+firefoxview-spotlight-promo-title = Zeg hallo tegen { -firefoxview-brand-name }
+
+# “Poof” refers to the expression to convey when something or someone suddenly disappears, or in this case, reappears. For example, “Poof, it’s gone.”
+firefoxview-spotlight-promo-subtitle = Behoefte aan dat open tabblad op uw telefoon? Pak het. Hebt u die website nodig die u net hebt bezocht? Poef, hij is terug met { -firefoxview-brand-name }.
+firefoxview-spotlight-promo-primarybutton = Zien hoe het werkt
+firefoxview-spotlight-promo-secondarybutton = Overslaan
+
+## Colorways expiry reminder CFR
+
+colorways-cfr-primarybutton = Kleurstelling kiezen
+    .accesskey = k
+
+# "shades" refers to the different color options available to users in colorways.
+colorways-cfr-body = Kleur uw browser met voor { -brand-short-name } exclusieve tinten, geïnspireerd door stemmen die de cultuur hebben veranderd.
+colorways-cfr-header-28days = Independent Voices-kleurstellingen verlopen op 16 januari
+colorways-cfr-header-14days = Independent Voices-kleurstellingen verlopen over twee weken
+colorways-cfr-header-7days = Independent Voices-kleurstellingen verlopen deze week
+colorways-cfr-header-today = Independent Voices-kleurstellingen verlopen vandaag
+
+## Cookie Banner Handling CFR
+
+cfr-cbh-header = { -brand-short-name } toestaan om cookiebanners te weigeren?
+cfr-cbh-body = { -brand-short-name } kan veel cookiebannerverzoeken automatisch weigeren.
+cfr-cbh-confirm-button = Cookiebanners weigeren
+    .accesskey = w
+cfr-cbh-dismiss-button = Niet nu
+    .accesskey = N
+
+## These strings are used in the Fox doodle Pin/set default spotlights
+
+july-jam-headline = Bij ons bent u veilig
+july-jam-body = Elke maand blokkeert { -brand-short-name } gemiddeld meer dan 3.000 trackers per gebruiker, waardoor u veilig en snel toegang hebt tot het goede internet.
+july-jam-set-default-primary = Mijn koppelingen openen met { -brand-short-name }
+fox-doodle-pin-headline = Welkom terug
+
+# “indie” is short for the term “independent”.
+# In this instance, free from outside influence or control.
+fox-doodle-pin-body = Dit is een korte herinnering dat u uw favoriete indiebrowser op slechts één klik afstand kunt houden.
+fox-doodle-pin-primary = Mijn koppelingen openen met { -brand-short-name }
+fox-doodle-pin-secondary = Niet nu
+
+## These strings are used in the Set Firefox as Default PDF Handler for Existing Users experiment
+
+set-default-pdf-handler-headline = <strong>Uw PDF’s worden nu geopend in { -brand-short-name }.</strong> Bewerk of onderteken formulieren rechtstreeks in uw browser. Zoek naar ‘PDF’ in instellingen om te wijzigen.
+set-default-pdf-handler-primary = Begrepen
+
+## FxA sync CFR
+
+fxa-sync-cfr-header = Nieuw apparaat in de toekomst?
+fxa-sync-cfr-body = Zorg ervoor dat u uw nieuwste bladwijzers, wachtwoorden en tabbladen altijd bij de hand hebt wanneer u een nieuwe { -brand-product-name }-browser opent.
+fxa-sync-cfr-primary = Meer info
+    .accesskey = M
+fxa-sync-cfr-secondary = Later herinneren
+    .accesskey = L
+
+## Device Migration FxA Spotlight
+
+device-migration-fxa-spotlight-header = Gebruikt u een ouder apparaat?
+device-migration-fxa-spotlight-body = Maak een back-up van uw gegevens om ervoor te zorgen dat u geen belangrijke informatie, zoals bladwijzers en wachtwoorden kwijtraakt, vooral als u overschakelt naar een nieuw apparaat.
+device-migration-fxa-spotlight-primary-button = Hoe maak ik een back-up van mijn gegevens
+device-migration-fxa-spotlight-link = Later herinneren

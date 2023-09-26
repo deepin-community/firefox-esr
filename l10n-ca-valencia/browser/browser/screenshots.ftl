@@ -2,13 +2,12 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-screenshots-context-menu = Fes una captura de pantalla
-
-screenshots-my-shots-button = Les meues captures
-
 screenshot-toolbarbutton =
     .label = Captura de pantalla
     .tooltiptext = Fes una captura de pantalla
+
+screenshot-shortcut =
+    .key = S
 
 screenshots-instructions = Arrossegueu o feu clic a la pàgina per seleccionar una regió. Premeu ESC per cancel·lar.
 screenshots-cancel-button = Cancel·la
@@ -41,8 +40,6 @@ screenshots-login-error-details = No s'ha pogut guardar la vostra captura perqu�
 screenshots-unshootable-page-error-title = No es pot fer una captura de pantalla d'esta pàgina.
 screenshots-unshootable-page-error-details = No podeu fer una captura de pantalla perquè esta no és una pàgina web estàndard.
 
-screenshots-self-screenshot-error-title = No podeu fer una captura de pantalla de la pàgina del { -screenshots-brand-name }!
-
 screenshots-empty-selection-error-title = La selecció és massa petita
 
 screenshots-private-window-error-title = El { -screenshots-brand-name } està desactivat en el mode de navegació privada
@@ -50,3 +47,4 @@ screenshots-private-window-error-details = Perdoneu les molèsties. Estem trebal
 
 screenshots-generic-error-title = El { -screenshots-brand-name } ha tingut un problema.
 screenshots-generic-error-details = S'ha produït un error inesperat. Torneu-ho a provar o captureu una altra pàgina.
+

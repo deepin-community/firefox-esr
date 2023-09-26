@@ -1,11 +1,11 @@
 /* Any copyright is dedicated to the Public Domain.
  * http://creativecommons.org/publicdomain/zero/1.0/ */
 
-XPCOMUtils.defineLazyModuleGetters(this, {
-  ExperimentAPI: "resource://nimbus/ExperimentAPI.jsm",
-  ExperimentFakes: "resource://testing-common/NimbusTestUtils.jsm",
-  NimbusFeatures: "resource://nimbus/ExperimentAPI.jsm",
-  sinon: "resource://testing-common/Sinon.jsm",
+ChromeUtils.defineESModuleGetters(this, {
+  ExperimentAPI: "resource://nimbus/ExperimentAPI.sys.mjs",
+  ExperimentFakes: "resource://testing-common/NimbusTestUtils.sys.mjs",
+  NimbusFeatures: "resource://nimbus/ExperimentAPI.sys.mjs",
+  sinon: "resource://testing-common/Sinon.sys.mjs",
 });
 
 const userChoiceStub = sinon
@@ -46,9 +46,12 @@ add_task(async function remote_disable() {
 
   userChoiceStub.resetHistory();
   setDefaultStub.resetHistory();
-  await ExperimentFakes.remoteDefaultsHelper({
-    feature: NimbusFeatures.shellService,
-    configuration: { variables: { setDefaultBrowserUserChoice: false } },
+  let doCleanup = await ExperimentFakes.enrollWithRollout({
+    featureId: NimbusFeatures.shellService.featureId,
+    value: {
+      setDefaultBrowserUserChoice: false,
+      enabled: true,
+    },
   });
 
   ShellService.setDefaultBrowser();
@@ -58,6 +61,8 @@ add_task(async function remote_disable() {
     "Set default with user choice disabled via nimbus"
   );
   Assert.ok(setDefaultStub.called, "Used plain set default insteead");
+
+  await doCleanup();
 });
 
 add_task(async function restore_default() {
@@ -68,10 +73,7 @@ add_task(async function restore_default() {
 
   userChoiceStub.resetHistory();
   setDefaultStub.resetHistory();
-  await ExperimentFakes.remoteDefaultsHelper({
-    feature: NimbusFeatures.shellService,
-    configuration: {},
-  });
+  ExperimentAPI._store._deleteForTests("shellService");
 
   ShellService.setDefaultBrowser();
 

@@ -23,6 +23,8 @@ profile-selection-delete-button =
     .label = Xóa hồ sơ…
     .accesskey = X
 
+profile-selection-conflict-message = Một bản sao khác của { -brand-product-name } đã thực hiện các thay đổi đối với hồ sơ. Bạn phải khởi động lại { -brand-short-name } trước khi thực hiện nhiều thay đổi.
+
 ## Messages used in the profile manager
 
 profile-manager-description = { -brand-short-name } lưu thông tin về các thiết lập, tùy chọn, và các danh mục khác trong hồ sơ người dùng của bạn.

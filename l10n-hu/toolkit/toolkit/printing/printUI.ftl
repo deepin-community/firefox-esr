@@ -15,6 +15,9 @@ printui-sheets-count =
     }
 
 printui-page-range-all = Mind
+printui-page-range-current = Jelenlegi
+printui-page-range-odd = Páratlan
+printui-page-range-even = Páros
 printui-page-range-custom = Egyéni
 printui-page-range-label = Oldalak
 printui-page-range-picker =
@@ -57,8 +60,6 @@ printui-two-sided-printing-short-edge = Átfordítás a lap rövidebb szélén
 printui-options = Beállítások
 printui-headers-footers-checkbox = Fejlécek és láblécek nyomtatása
 printui-backgrounds-checkbox = Hátterek nyomtatása
-
-printui-selection-checkbox = Csak a kijelölés nyomtatása
 
 ## The "Format" section, select a version of the website to print. Radio
 ## options to select between the original page, selected text only, or a version

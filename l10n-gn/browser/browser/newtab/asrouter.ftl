@@ -7,7 +7,6 @@
 
 cfr-doorhanger-extension-heading = Jepysokue jeroviaháva
 cfr-doorhanger-feature-heading = Tembiapoite ñe’ẽporãpyre
-cfr-doorhanger-pintab-heading = Eipuru kóva: Emboja tendayke
 
 ##
 
@@ -19,8 +18,6 @@ cfr-doorhanger-extension-cancel-button = Ko’ág̃a nahániri
 
 cfr-doorhanger-extension-ok-button = Embojuaju ko’ág̃a
     .accesskey = A
-cfr-doorhanger-pintab-ok-button = Emboja ko tendayke
-    .accesskey = P
 
 cfr-doorhanger-extension-manage-settings-button = Eñangareko je’eporã ñemboheko rehe
     .accesskey = M
@@ -68,18 +65,6 @@ cfr-doorhanger-extension-total-users =
        *[other] { $total } puruhára
     }
 
-cfr-doorhanger-pintab-description = Eike pya’e umi tenda ojepuruvévape. Embojuruja tapia umi tenda peteĩ tendayképe (avei emoñepyrũjeývo tembiapo).
-
-## These messages are steps on how to use the feature and are shown together.
-
-cfr-doorhanger-pintab-step1 = <b>Eikutu akatúa gotyo</b> pe tendayke emombytasévape.
-cfr-doorhanger-pintab-step2 = Eiporavo <b>Emboja tendayke</b> poravorãme.
-cfr-doorhanger-pintab-step3 = Pe tenda oguerekóramo ñembohekopyahu, ehecháta peteĩ kyta hovy tendayke mbojapyrépe.
-
-cfr-doorhanger-pintab-animation-pause = Mbopyta
-cfr-doorhanger-pintab-animation-resume = Eku’ejey
-
-
 ## Firefox Accounts Message
 
 cfr-doorhanger-bookmark-fxa-header = Embojuehe nde rechaukaha eimeha guive.
@@ -105,128 +90,9 @@ cfr-whatsnew-button =
     .label = Oĩpa mba’e pyahu
     .tooltiptext = Oĩpa mba’e pyahu
 
-cfr-whatsnew-panel-header = Oĩpa mba’e pyahu
-
 cfr-whatsnew-release-notes-link-text = Emoñe’ẽ jehaipy rehegua
 
-cfr-whatsnew-fx70-title = { -brand-short-name } oñorairõve ne ñemigua rehe
-cfr-whatsnew-fx70-body = Ñembohekopyahu omo’ã porãve jehapykuehópe ha ikatu emoheñói ñe’ẽñemi hekorosãva peteĩteĩva tendápe g̃uarã.
-
-cfr-whatsnew-tracking-protect-title = Eñemo’ã tapykuehohágui
-cfr-whatsnew-tracking-protect-body =
-    { -brand-short-name } ojoko heta tapykuehoha ava’atygua ha tenda ojuasáva
-    ohapykuerehóva oikóva ñandutípe.
-cfr-whatsnew-tracking-protect-link-text = Ehecha ne marandu’i
-
-# This string is displayed before a large numeral that indicates the total
-# number of tracking elements blocked. Don’t add $blockedCount to your
-# localization, because it would result in the number showing twice.
-cfr-whatsnew-tracking-blocked-title =
-    { $blockedCount ->
-        [one] Tapykuehoha jokopyre
-       *[other] Tapykuehoha jokopyre
-    }
-cfr-whatsnew-tracking-blocked-subtitle = Oiko { DATETIME($earliestDate, month: "long", year: "numeric") }
-cfr-whatsnew-tracking-blocked-link-text = Marandu’i jehecha
-
-cfr-whatsnew-lockwise-backup-title = Eñongatujo’a ne ñe’ẽñemi
-cfr-whatsnew-lockwise-backup-body = Ko’ág̃a ikatúma ejapo ñe’ẽñemi hekorosãva ikatuhápe eike emoñepyrũhápe tembiapo.
-cfr-whatsnew-lockwise-backup-link-text = Emyandy ñongatujo’a
-
-cfr-whatsnew-lockwise-take-title = Egueraha ne ñe’ẽñemi nendive
-cfr-whatsnew-lockwise-take-body = Pe tembipuru’i oku’éva { -lockwise-brand-short-name } omoneĩ eikévo tekorosãme nde ñe’ẽñemi ñongatupyrépe oimeraẽva tenda guive.
-cfr-whatsnew-lockwise-take-link-text = Eguereko tembipuru’i
-
-## Search Bar
-
-cfr-whatsnew-searchbar-title = Ehai sa’ive, ejuhuve kundaharape renda ndive
-cfr-whatsnew-searchbar-body-topsites = Ko’ág̃a, eiporavo kundaharape renda ha okakuaáta kora juajuha ndive ne renda eipuruvévape.
-
-## Search bar
-
-cfr-whatsnew-searchbar-icon-alt-text = Mbotuichaha ra’ãnga’i
-
-## Picture-in-Picture
-
-cfr-whatsnew-pip-header = Ehecha ta’ãngamýi eikundaha aja
-cfr-whatsnew-pip-body = Picture-in-picture ohechauka ta’ãngamýi ovetã ovevýiva ehecha hag̃ua emba’apo aja ambue tendayképe.
-cfr-whatsnew-pip-cta = Kuaave
-
-## Permission Prompt
-
-cfr-whatsnew-permission-prompt-header = Sa’ive ovetã apysẽ tenda ivaívagui
-cfr-whatsnew-permission-prompt-body = { -brand-shorter-name } ojokóma umi tenda ani hag̃ua ojerure ijehegui oñembou hag̃ua ñe’ẽmondo apysẽva.
-cfr-whatsnew-permission-prompt-cta = Kuaave
-
-## Fingerprinter Counter
-
-# This string is displayed before a large numeral that indicates the total
-# number of tracking elements blocked. Don’t add $fingerprinterCount to your
-# localization, because it would result in the number showing twice.
-cfr-whatsnew-fingerprinter-counter-header =
-    { $fingerprinterCount ->
-        [one] Ojejokóma kuãhũ
-       *[other] Ojejokóma kuãhũnguéra
-    }
-cfr-whatsnew-fingerprinter-counter-body = { -brand-shorter-name } ojokóma heta kuãhũ kuaaukaha ombyatýva kañyháme marandu ne mba’e’oka rehegua omoheñói hag̃ua imba’ete ñemurãva.
-
-# Message variation when fingerprinters count is less than 10
-cfr-whatsnew-fingerprinter-counter-header-alt = Ñemokuãhũ
-cfr-whatsnew-fingerprinter-counter-body-alt = { -brand-shorter-name } ikatu ojoko heta kuãhũ kuaaukaha ombyatýva kañyháme marandu ne mba’e’oka rehegua ha omyandy omoheñói hag̃ua imba’ete ñemurãva.
-
-## Bookmark Sync
-
-cfr-doorhanger-sync-bookmarks-header = Emoĩ pe techaukaha ne pumbyrýpe
-cfr-doorhanger-sync-bookmarks-body = Egueraha nde rechaukaha, ñe’ẽñemi, tembiasakue ha hetave opaite hendápe eñepyrũ haguépe tembiapo { -brand-product-name }-pe.
-cfr-doorhanger-sync-bookmarks-ok-button = Emyandy { -sync-brand-short-name }
-    .accesskey = T
-
-## Login Sync
-
-cfr-doorhanger-sync-logins-header = Anivéke nderesarái ne ñe’ẽñemígui
-cfr-doorhanger-sync-logins-body = Embyaty ha embojuehe tekorosãme ne ñe’ẽñemi opaite ne mba’e’okápe.
-cfr-doorhanger-sync-logins-ok-button = Embojuruja { -sync-brand-short-name }
-    .accesskey = E
-
-## Send Tab
-
-cfr-doorhanger-send-tab-header = Emoñe’ẽ kóva pya’e
-cfr-doorhanger-send-tab-recipe-header = Egueraha ko tembi’urape kosináme
-cfr-doorhanger-send-tab-body = Emondo tendayke emoherakuã hag̃ua ko juajuha ne pumbyrýpe térã oimehápe eñepyrũ haguépe tembiapo { -brand-product-name }-pe.
-cfr-doorhanger-send-tab-ok-button = Eñeha’ã emondo tendayke
-    .accesskey = T
-
-## Firefox Send
-
-cfr-doorhanger-firefox-send-header = Emoherakuã ko PDF tekorosãme
-cfr-doorhanger-firefox-send-body = Eguereko nde kuatiakuéra ñemiguáva ambue ñema’ẽgui ipapapyetéva reheve ha juajuha oguéva ejapopa vove.
-cfr-doorhanger-firefox-send-ok-button = Ehecha { -send-brand-name }
-    .accesskey = T
-
-## Social Tracking Protection
-
-cfr-doorhanger-socialtracking-ok-button = Ehecha ñemo’ã
-    .accesskey = P
-cfr-doorhanger-socialtracking-close-button = Mboty
-    .accesskey = C
-cfr-doorhanger-socialtracking-dont-show-again = Anive ehechaukajey ñe’ẽmondo koichagua
-    .accesskey = D
-cfr-doorhanger-socialtracking-heading = { -brand-short-name } ojoko ani nde rapykueho ápe ava ñandutieta
-cfr-doorhanger-socialtracking-description = Ne ñemigua tuichamba’e. { -brand-short-name } ko’ág̃a ojoko umi ava ñandutieta rapykuehoha, omomichĩvo mba’ekuaarã retakue ñembyaty ejapóva guive ñandutípe.
-cfr-doorhanger-fingerprinters-heading = { -brand-short-name } ojoko kuãhũ juhuha ko kuatiaroguépe
-cfr-doorhanger-fingerprinters-description = Ne ñemigua tuichamba’e. { -brand-short-name } ko’ág̃a ojoko umi Kuãhũ kuaaukaha, ombyatýva marandu kuaaukaha nde mba’e’oka rehegua ohapykueho hag̃ua.
-cfr-doorhanger-cryptominers-heading = { -brand-short-name }  ojoko criptominero ko kuatiaroguépe
-cfr-doorhanger-cryptominers-description = Ne ñemigua tuichamba’e. { -brand-short-name } ko’ág̃a ojoko umi criptominero, oipurúva tembipurupyahu apopyvusu mbaretekue oguenohẽ hag̃ua viru ñandutigua.
-
 ## Enhanced Tracking Protection Milestones
-
-# Variables:
-#   $blockedCount (Number) - The total count of blocked trackers. This number will always be greater than 1.
-#   $date (String) - The date we began recording the count of blocked trackers
-cfr-doorhanger-milestone-heading =
-    { $blockedCount ->
-       *[other] { -brand-short-name } ojoko hetave <b>{ $blockedCount }</b> tapykuehoha { $date } guive!
-    }
 
 # Variables:
 #   $blockedCount (Number) - The total count of blocked trackers. This number will always be greater than 1.
@@ -237,45 +103,8 @@ cfr-doorhanger-milestone-heading2 =
     }
 cfr-doorhanger-milestone-ok-button = Hechapa
     .accesskey = H
-
-## What’s New Panel Content for Firefox 76
-
-
-## Lockwise message
-
-cfr-whatsnew-lockwise-header = Emoheñói ñe’ẽñemi hekorosãva
-cfr-whatsnew-lockwise-body = Hasy erekóvo ñe’ẽñemi ha’ete ha hekorosãva peteĩteĩva mba’etépe g̃uarã. Emoheñóivo ñe’ẽñemi, eiporavo ñe’ẽñemi kora eipuru hag̃ua ñe’ẽñemi hekorosãva ha omoheñóiva { -brand-shorter-name }.
-cfr-whatsnew-lockwise-icon-alt = { -lockwise-brand-short-name } ra’ãnga’i
-
-## Vulnerable Passwords message
-
-cfr-whatsnew-passwords-header = Og̃uahẽta kyhyjerã ñe’ẽñemi ivaikuaávare
-cfr-whatsnew-passwords-body = Umi mba’evaiapoha oikuaa oipurujeyha iñe’ẽñemi. Oipurúrõ pe iñe’ẽñemi heta tendápe, ha peteĩva umi tenda imba’ekuaarã oñembyai ohecháta kyhyjerã { -lockwise-brand-short-name }-pe omoambue hag̃ua iñe’ẽñemi umi tendápe.
-cfr-whatsnew-passwords-icon-alt = Ñe’ẽñemi mba’eñemi ivaikuaáva ra’ãnga’i
-
-## Picture-in-Picture fullscreen message
-
-cfr-whatsnew-pip-fullscreen-header = Ejapyhy peteĩva ta’ãnga mba’erechaha tuichaháicha
-cfr-whatsnew-pip-fullscreen-body = Osẽvo ta’ãngamýi ovetã ho’ytávape, ág̃a ikatu eikutujo’a ovetãme ehasa hag̃ua mba’erechaha tuichávape.
-cfr-whatsnew-pip-fullscreen-icon-alt = Peteĩva ta’ãnga ra’ãnga’i
-
-## Protections Dashboard message
-
-cfr-whatsnew-protections-header = Ñemo’ã ma’ẽ rehegua
-cfr-whatsnew-protections-body = Pe ñemo’ã ra’ãngarupa omoinge marandu mbykymíva mba’ekuaarã ñembyai reheguápe ha ñe’ẽñemi ñangarekóre. Ko’ág̃a ikatu ehapykueho mboy ñembyaípa emoĩporã ha ehecha ñe’ẽñemi ñongatupyre ikatupara’e ombyai mba’ekuaarãme.
-cfr-whatsnew-protections-cta-link = Ehecha ñe’ẽñemi ra’ãngarupa
-cfr-whatsnew-protections-icon-alt = Jokoha ra’ãngachu’i
-
-## Better PDF message
-
-cfr-whatsnew-better-pdf-header = Tembiapo porãve PDF-pe
-cfr-whatsnew-better-pdf-body = Kuatiakuéra PDF ko’ág̃a ijurujáma { -brand-short-name }-pe, péicha oreko hembiapo opavave ohupyty hag̃uáicha.
-
 cfr-doorhanger-milestone-close-button = Mboty
     .accesskey = C
-
-## What’s New Panel Content for Firefox 76
-## Protections Dashboard message
 
 ## DOH Message
 
@@ -288,28 +117,140 @@ cfr-doorhanger-doh-secondary-button = Pe’a
 
 ## Fission Experiment Message
 
-cfr-doorhanger-fission-body-approved = Ne ñemigua romomba’e. { -brand-short-name } ko’ág̃a omoha’eño ñanduti renda peteĩva ambu’egui, ombohasyvéva umi mba’evaiapohápe omondávo ne ñe’ẽñemi, kuatia’atã ñemurã papapy ha ambue marandu ehayhúva.
-cfr-doorhanger-fission-header = Tenda ñemoha’eño
-cfr-doorhanger-fission-primary-button = OK, arekóma
-    .accesskey = O
-cfr-doorhanger-fission-secondary-button = Kuaave
-    .accesskey = L
-
-## What's new: Cookies message
-
-## What's new: Media controls message
-
-## What's new: Search shortcuts
-
-## What's new: Cookies protection
-
-## What's new: Better bookmarking
-
-## What's new: Cross-site cookie tracking
-
 ## Full Video Support CFR message
 
 cfr-doorhanger-video-support-body = Ikatu ko’ã ta’ãngamýi ko tendagua ndojehechaporãi { -brand-short-name } ag̃aguápe. Embojokupyty hag̃ua ta’ãngamýi, embohekopyahu { -brand-short-name } ko’ág̃a.
 cfr-doorhanger-video-support-header = Embohekopyahu { -brand-short-name } ehecha hag̃ua ta’ãngamýi
 cfr-doorhanger-video-support-primary-button = Embohekopyahu ko’ág̃a
     .accesskey = U
+
+## Spotlight modal shared strings
+
+## VPN promotion dialog for public Wi-Fi users
+##
+## If a user is detected to be on a public Wi-Fi network, they are given a
+## bit of info about how to improve their privacy and then offered a button
+## to the Mozilla VPN page and a link to dismiss the dialog.
+
+# This header text can be explicitly wrapped.
+spotlight-public-wifi-vpn-header = Eipurúvaicha peteĩ Wi-Fi opavaveguáva
+spotlight-public-wifi-vpn-body = Eñomi hag̃ua ne rendaite ha kundahára rembiapo, eipurukuaa red privada virtual. Ñepytyvõta eime hag̃ua ñemo’ãme eikundahakuévo tenda opavave oipurukuaáva ikatúva pepoatãguejyha ha taperyva’uha.
+spotlight-public-wifi-vpn-primary-button = Eiko tekoñemíme { -mozilla-vpn-brand-name } ndive
+    .accesskey = S
+spotlight-public-wifi-vpn-link = Ani ko’ág̃a
+    .accesskey = N
+
+## Total Cookie Protection Rollout
+
+## Emotive Continuous Onboarding
+
+spotlight-better-internet-header = Ñanduti iporãváva oñepyrũ nendive
+spotlight-better-internet-body = Eipurúvo { -brand-short-name }, emoneĩ peteĩ ñanduti ijuruja ha hepy’ỹva iporãvéva opavave g̃uarã.
+spotlight-peace-mind-header = Ore romo’ãta
+spotlight-peace-mind-body = Jasy og̃uahẽvo, { -brand-short-name } ojoko hetave 3.000 tapykuehoha peteĩteĩ puruhárape. Avave, ha ãva kuápe oĩ omyangekóiva nde rekoñemi ha’éva tapykuehoha, ndoikeva’erãi nde ha nanduti pa’ũme.
+spotlight-pin-primary-button =
+    { PLATFORM() ->
+        [macos] Ereko yrembe’ýpe
+       *[other] Ñe’ẽkañy tembiaporã rendápe
+    }
+spotlight-pin-secondary-button = Ani ko’ág̃a
+
+## MR2022 Background Update Windows native toast notification strings.
+##
+## These strings will be displayed by the Windows operating system in
+## a native toast, like:
+##
+## <b>multi-line title</b>
+## multi-line text
+## <img>
+## [ primary button ] [ secondary button ]
+##
+## The button labels are fitted into narrow fixed-width buttons by
+## Windows and therefore must be as narrow as possible.
+
+mr2022-background-update-toast-title = { -brand-short-name } pyahu. Hekoñemive. Ojehapykueho’ive. Jejokua’ỹre.
+mr2022-background-update-toast-text = Eipuru { -brand-short-name } ipyahuve, hekopyahúva romo’ãva tapykuehoha rovake imbaretevéva ag̃aite peve.
+
+# This button label will be fitted into a narrow fixed-width button by
+# Windows. Try to not exceed the width of the English text (compare it
+# using a variable font like Arial): the button can only fit 1-2
+# additional characters, exceeding characters will be truncated.
+mr2022-background-update-toast-primary-button-label = Embojuruja { -brand-shorter-name } ko’ág̃a
+
+# This button label will be fitted into a narrow fixed-width button by
+# Windows. Try to not exceed the width of the English text (compare it using a
+# variable font like Arial): the button can only fit 1-2 additional characters,
+# exceeding characters will be truncated.
+mr2022-background-update-toast-secondary-button-label = Chemomandu’a ag̃ave
+
+## Firefox View CFR
+
+firefoxview-cfr-primarybutton = Eha’ãjey
+    .accesskey = T
+firefoxview-cfr-secondarybutton = Ani ko’ág̃a
+    .accesskey = N
+firefoxview-cfr-header-v2 = Eku’ejey pya’e eheja haguetégui
+firefoxview-cfr-body-v2 = Eguerujey tendayke oñembotyramóva ha ehasa pya’e mba’e’oka pa’ũme { -firefoxview-brand-name } ndive.
+
+## Firefox View Spotlight
+
+firefoxview-spotlight-promo-title = Emomaitei { -firefoxview-brand-name }-pe
+
+# “Poof” refers to the expression to convey when something or someone suddenly disappears, or in this case, reappears. For example, “Poof, it’s gone.”
+firefoxview-spotlight-promo-subtitle = ¿Eipota tendayke ijurujáva ne pumbyrúpe? Eguerujey pya’e. ¿Eikotevẽ tenda eikeramoha rehe? Oĩ { -firefoxview-brand-name }-pe.
+firefoxview-spotlight-promo-primarybutton = Ehecha mba’éichapa omba’apo
+firefoxview-spotlight-promo-secondarybutton = Jepo
+
+## Colorways expiry reminder CFR
+
+colorways-cfr-primarybutton = Eiporaro sa’y ojueheguáva
+    .accesskey = C
+
+# "shades" refers to the different color options available to users in colorways.
+colorways-cfr-body = Embosa’y kundahára eipotavévape { -brand-short-name } ndive ohechakuaáva umi ñe’ẽ omoambuéva mba’ekuaa.
+colorways-cfr-header-28days = Umi sa’y ojuehegua Independent Voices ndojepurukuaavéitama 16 jasyteĩ guive
+colorways-cfr-header-14days = Sa’y ojuehegua Independent Voices ndojepurukuaavéitama mokõi arapokõindýpe
+colorways-cfr-header-7days = Umi sa’y ojuehegua Independent Voices ndojepurukuaavéitama ko arapokõindýpe
+colorways-cfr-header-today = Umi sa’y ojuehegua Independent Voices ndojepurukuaavéitama ko árape
+
+## Cookie Banner Handling CFR
+
+cfr-cbh-header = ¿Emoneĩ { -brand-short-name } tomboyke kookie banner?
+cfr-cbh-body = { -brand-short-name } omboykekuaa ijehegui heta kookie banner mba’ejerure.
+cfr-cbh-confirm-button = Embojevy kookie banner
+    .accesskey = R
+cfr-cbh-dismiss-button = Ani ko’ág̃a
+    .accesskey = N
+
+## These strings are used in the Fox doodle Pin/set default spotlights
+
+july-jam-headline = Roguereko ñemo’ãpe
+july-jam-body = Peteĩteĩva jasýpe, { -brand-short-name } ojoko hetave 3,000 tapykuehoha puruháragui, ome’ẽva jeike pya’e ha tekorosã Ñandutípe.
+july-jam-set-default-primary = Embojuruja juajuha { -brand-short-name } ndive
+fox-doodle-pin-headline = Eg̃uahẽporãjey
+
+# “indie” is short for the term “independent”.
+# In this instance, free from outside influence or control.
+fox-doodle-pin-body = Peteĩ ñemomandu’a ikautha eguereko ne kundahára ijeheguíva namombyryiete ndehegui.
+fox-doodle-pin-primary = Embojuruja juajuha { -brand-short-name } ndive
+fox-doodle-pin-secondary = Ani ko’ág̃a
+
+## These strings are used in the Set Firefox as Default PDF Handler for Existing Users experiment
+
+set-default-pdf-handler-headline = <strong>Umi PDFs ijurujáma { -brand-short-name }.</strong> Embosako’i ha emboheraguapy myanyhẽha kundaharapevoi. Emoambue hag̃ua, eheka “PDF” ñemoĩporãha.
+set-default-pdf-handler-primary = Aikumby
+
+## FxA sync CFR
+
+fxa-sync-cfr-header = ¿Eikesépa mba’e’oka pyahúpe?
+fxa-sync-cfr-body = Ehecha umi ipyahuvéva techaukaha, ñe’ẽñemi ha tendayke toĩ embojurujávo kundahára pyahu { -brand-product-name }.
+fxa-sync-cfr-primary = Kuaave
+    .accesskey = L
+fxa-sync-cfr-secondary = Chemomandu’a ag̃ave
+    .accesskey = R
+
+## Device Migration FxA Spotlight
+
+device-migration-fxa-spotlight-header = ¿Eipuruhína mba’e’oka itujavéva?
+device-migration-fxa-spotlight-primary-button = Mba’éichapa añongatúta che mba’ekuaarã
+device-migration-fxa-spotlight-link = Chemomandu’a ag̃ave

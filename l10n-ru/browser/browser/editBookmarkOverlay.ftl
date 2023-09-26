@@ -2,17 +2,6 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-bookmark-overlay-name =
-    .value = Имя:
-    .accesskey = я
-
-bookmark-overlay-location =
-    .value = Адрес:
-    .accesskey = д
-
-bookmark-overlay-folder =
-    .value = Папка:
-
 bookmark-overlay-name-2 =
     .value = Имя
     .accesskey = м
@@ -35,13 +24,15 @@ bookmark-overlay-folders-expander =
     .tooltiptextdown = { bookmark-overlay-folders-expander.tooltiptext }
     .tooltiptextup = Скрыть
 
+bookmark-overlay-folders-expander2 =
+    .tooltiptext = Показать все папки закладок
+
+bookmark-overlay-folders-expander-hide =
+    .tooltiptext = Скрыть
+
 bookmark-overlay-new-folder-button =
     .label = Создать папку
     .accesskey = о
-
-bookmark-overlay-tags =
-    .value = Метки:
-    .accesskey = е
 
 bookmark-overlay-tags-2 =
     .value = Метки
@@ -55,13 +46,15 @@ bookmark-overlay-tags-expander =
     .tooltiptextdown = { bookmark-overlay-tags-expander.tooltiptext }
     .tooltiptextup = Скрыть
 
-bookmark-overlay-keyword =
-    .value = Краткое имя:
-    .accesskey = р
+bookmark-overlay-tags-expander2 =
+    .tooltiptext = Показать все метки
+
+bookmark-overlay-tags-expander-hide =
+    .tooltiptext = Скрыть
 
 bookmark-overlay-keyword-2 =
-    .value = Краткое имя
-    .accesskey = я
+    .value = Ключевое слово
+    .accesskey = К
 
 bookmark-overlay-tags-caption-label = Используйте метки для организации и поиска закладок из адресной строки
 

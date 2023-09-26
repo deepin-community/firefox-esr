@@ -6,46 +6,37 @@
 
 cfr-doorhanger-extension-heading = おすすめの拡張機能
 cfr-doorhanger-feature-heading = おすすめの機能
-cfr-doorhanger-pintab-heading = タブのピン留めを試してみる
 
 ##
 
 cfr-doorhanger-extension-sumo-link =
-  .tooltiptext = サポート記事を表示します
-
+    .tooltiptext = サポート記事を表示します
 cfr-doorhanger-extension-cancel-button = 後で
-  .accesskey = N
-
+    .accesskey = N
 cfr-doorhanger-extension-ok-button = 追加
-  .accesskey = A
-cfr-doorhanger-pintab-ok-button = このタブをピン留め
-  .accesskey = P
-
+    .accesskey = A
 cfr-doorhanger-extension-manage-settings-button = おすすめの設定を管理
-  .accesskey = M
-
+    .accesskey = M
 cfr-doorhanger-extension-never-show-recommendation = このおすすめは表示しない
-  .accesskey = S
-
+    .accesskey = S
 cfr-doorhanger-extension-learn-more-link = 詳細
-
 # This string is used on a new line below the add-on name
 # Variables:
 #   $name (String) - Add-on author name
 cfr-doorhanger-extension-author = 作成者: { $name }
-
 # This is a notification displayed in the address bar.
 # When clicked it opens a panel with a message for the user.
 cfr-doorhanger-extension-notification = おすすめ
+# .a11y-announcement is extracted in JS and announced via A11y.announce.
 cfr-doorhanger-extension-notification2 = おすすめ
-  .tooltiptext = おすすめの拡張機能です
-  .a11y-announcement = おすすめの拡張機能があります
-
+    .tooltiptext = おすすめの拡張機能です
+    .a11y-announcement = おすすめの拡張機能があります
 # This is a notification displayed in the address bar.
 # When clicked it opens a panel with a message for the user.
+# .a11y-announcement is extracted in JS and announced via A11y.announce.
 cfr-doorhanger-feature-notification = おすすめ
-  .tooltiptext = おすすめの機能です
-  .a11y-announcement = おすすめの機能があります
+    .tooltiptext = おすすめの機能です
+    .a11y-announcement = おすすめの機能があります
 
 ## Add-on statistics
 ## These strings are used to display the total number of
@@ -54,22 +45,10 @@ cfr-doorhanger-feature-notification = おすすめ
 # Variables:
 #   $total (Number) - The rating of the add-on from 1 to 5
 cfr-doorhanger-extension-rating =
-  .tooltiptext = { $total } つ星
+    .tooltiptext = { $total } つ星
 # Variables:
 #   $total (Number) - The total number of users using the add-on
 cfr-doorhanger-extension-total-users = { $total } ユーザー
-
-cfr-doorhanger-pintab-description = よく見るサイトに簡単にアクセスできます。再起動してもサイトを開いたままにできます。
-
-## These messages are steps on how to use the feature and are shown together.
-
-cfr-doorhanger-pintab-step1 = ピン留めしたいタブで<b>右クリック</b>します。
-cfr-doorhanger-pintab-step2 = メニューから<b>タブをピン留め</b>を選択します。
-cfr-doorhanger-pintab-step3 = サイトに更新があると、ピン留めしたタブに青い点が表示されます。
-
-cfr-doorhanger-pintab-animation-pause = 停止
-cfr-doorhanger-pintab-animation-resume = 再生
-
 
 ## Firefox Accounts Message
 
@@ -77,8 +56,8 @@ cfr-doorhanger-bookmark-fxa-header = どこからでもブックマークを同�
 cfr-doorhanger-bookmark-fxa-body = 見つかっちゃった。ブックマークをこの端末だけに残しておかないで同期して。{ -fxaccount-brand-name } を始めましょう。
 cfr-doorhanger-bookmark-fxa-link-text = ブックマークを今すぐ同期...
 cfr-doorhanger-bookmark-fxa-close-btn-tooltip =
-  .aria-label = 閉じるボタン
-  .title = 閉じる
+    .aria-label = 閉じるボタン
+    .title = 閉じる
 
 ## Protections panel
 
@@ -91,195 +70,188 @@ cfr-protections-panel-link-text = 詳細
 # This string is used by screen readers to offer a text based alternative for
 # the notification icon
 cfr-badge-reader-label-newfeature = 新機能:
-
 cfr-whatsnew-button =
-  .label = 新着情報
-  .tooltiptext = 新着情報です
-
-cfr-whatsnew-panel-header = 新着情報
-
+    .label = 新着情報
+    .tooltiptext = 新着情報です
 cfr-whatsnew-release-notes-link-text = リリースノートをご確認ください
-
-cfr-whatsnew-fx70-title = { -brand-short-name } はあなたのプライバシーのために、今まさに戦っています
-cfr-whatsnew-fx70-body =
-   最新アップデートでは、トラッキング防止機能を強化し、
-   サイトごとの安全なパスワード生成がより簡単にできるようになりました。
-
-cfr-whatsnew-tracking-protect-title = トラッカーから身を守ります
-cfr-whatsnew-tracking-protect-body =
-   { -brand-short-name } はオンラインであなたを追跡する
-   多くの一般的なソーシャルトラッカーとクロスサイトトラッカーをブロックします。
-cfr-whatsnew-tracking-protect-link-text = 報告を確認
-
-# This string is displayed before a large numeral that indicates the total
-# number of tracking elements blocked. Don’t add $blockedCount to your
-# localization, because it would result in the number showing twice.
-cfr-whatsnew-tracking-blocked-title = { $blockedCount }  個のトラッカーをブロックしました
-cfr-whatsnew-tracking-blocked-subtitle =
-   { DATETIME($earliestDate, month: "long", year: "numeric") } から
-cfr-whatsnew-tracking-blocked-link-text = 報告を確認
-
-cfr-whatsnew-lockwise-backup-title = パスワードをバックアップ
-cfr-whatsnew-lockwise-backup-body =
-   ログインすればどの端末でも使える安全なパスワードを生成できます。
-cfr-whatsnew-lockwise-backup-link-text = バックアップをオンにする
-
-cfr-whatsnew-lockwise-take-title = パスワードもご一緒に
-cfr-whatsnew-lockwise-take-body =
-   { -lockwise-brand-short-name } アプリで、どの端末からでも
-   バックアップしたパスワードに安全にアクセスできます。
-cfr-whatsnew-lockwise-take-link-text = アプリを入手
-
-## Search Bar
-
-cfr-whatsnew-searchbar-title = アドレスバーからクリック一つで
-cfr-whatsnew-searchbar-body-topsites = アドレスバーを選択するだけで、よく見るサイトのリンクが展開されます。
-cfr-whatsnew-searchbar-icon-alt-text = 虫眼鏡アイコン
-
-## Picture-in-Picture
-
-cfr-whatsnew-pip-header = 動画をながら見
-cfr-whatsnew-pip-body = ピクチャーインピクチャー機能で、動画だけを小さいウィンドウで再生できます。他のタブで作業しながらでも視聴できます。
-cfr-whatsnew-pip-cta = 詳細
-
-## Permission Prompt
-
-cfr-whatsnew-permission-prompt-header = 迷惑なポップアップをより少なく
-cfr-whatsnew-permission-prompt-body = { -brand-shorter-name } がウェブサイトによるポップアップ通知の確認をブロックするようになりました。
-cfr-whatsnew-permission-prompt-cta = 詳細
-
-## Fingerprinter Counter
-
-# This string is displayed before a large numeral that indicates the total
-# number of tracking elements blocked. Don’t add $fingerprinterCount to your
-# localization, because it would result in the number showing twice.
-cfr-whatsnew-fingerprinter-counter-header = { $fingerprinterCount } 個のフィンガープリント採取をブロックしました
-cfr-whatsnew-fingerprinter-counter-body = { -brand-shorter-name } は、あなたの広告プロフィールを作るために端末と行動に関する情報を密かに収集する、フィンガープリント採取の多くをブロックします。
-
-# Message variation when fingerprinters count is less than 10
-cfr-whatsnew-fingerprinter-counter-header-alt = フィンガープリント採取
-cfr-whatsnew-fingerprinter-counter-body-alt = { -brand-shorter-name } は、あなたの広告プロフィールを作るために端末と行動に関する情報を密かに収集する、フィンガープリント採取をブロックできます。
-
-## Bookmark Sync
-
-cfr-doorhanger-sync-bookmarks-header = このブックマークを携帯電話で使う
-cfr-doorhanger-sync-bookmarks-body = ブックマーク、パスワード、履歴などが { -brand-product-name } にログインしたどの端末でも使えます。
-cfr-doorhanger-sync-bookmarks-ok-button = { -sync-brand-short-name } をオンにする
-  .accesskey = T
-
-## Login Sync
-
-cfr-doorhanger-sync-logins-header = 二度とパスワードを忘れないように
-cfr-doorhanger-sync-logins-body = パスワードを安全に保存して、あなたのすべての端末に共有できます。
-cfr-doorhanger-sync-logins-ok-button = { -sync-brand-short-name } をオンにする
-  .accesskey = T
-
-## Send Tab
-
-cfr-doorhanger-send-tab-header = 外出先でこのページを読む
-cfr-doorhanger-send-tab-recipe-header = このレシピをキッチンで使う
-cfr-doorhanger-send-tab-body = タブ送信でこのリンクを { -brand-product-name } にログインした携帯電話や他の端末と簡単に共有できます。
-cfr-doorhanger-send-tab-ok-button = タブ送信を試してみる
-  .accesskey = T
-
-## Firefox Send
-
-cfr-doorhanger-firefox-send-header = この PDF を安全に共有する
-cfr-doorhanger-firefox-send-body = エンドツーエンド暗号化と自動消滅リンクで、機密文書を安全に共有できます。
-cfr-doorhanger-firefox-send-ok-button = { -send-brand-name } を試してみる
-  .accesskey = T
-
-## Social Tracking Protection
-
-cfr-doorhanger-socialtracking-ok-button = トラッキング防止機能を確認
-  .accesskey = P
-cfr-doorhanger-socialtracking-close-button = 閉じる
-  .accesskey = C
-cfr-doorhanger-socialtracking-dont-show-again = このようなメッセージは次から表示しない
-  .accesskey = D
-cfr-doorhanger-socialtracking-heading = { -brand-short-name } はソーシャルネットワークからの追跡を停止させました
-cfr-doorhanger-socialtracking-description = プライバシーは重要です。{ -brand-short-name } は一般的なソーシャルメディアトラッカーをブロックしました。オンラインでのあなたの行動を収集できるデータ量を制限しています。
-cfr-doorhanger-fingerprinters-heading = { -brand-short-name } はこのページのフィンガープリント採取をブロックしました
-cfr-doorhanger-fingerprinters-description = プライバシーは重要です。{ -brand-short-name } はあなたを追跡するために端末から一意に識別可能な情報を収集する、フィンガープリント採取をブロックしました。
-cfr-doorhanger-cryptominers-heading = { -brand-short-name } はこのページの暗号通貨マイニングをブロックしました
-cfr-doorhanger-cryptominers-description = プライバシーは重要です。{ -brand-short-name } は暗号通貨の採掘のためにあなたのシステムの計算リソースを利用する、暗号通貨マイニングをブロックしました。
 
 ## Enhanced Tracking Protection Milestones
 
 # Variables:
 #   $blockedCount (Number) - The total count of blocked trackers. This number will always be greater than 1.
-#   $date (String) - The date we began recording the count of blocked trackers
-cfr-doorhanger-milestone-heading =
-  { $blockedCount ->
-   *[other] { $date } 以降、{ -brand-short-name } は <b>{ $blockedCount } 個</b>以上のトラッカーをブロックしました！
-  }
-
-# Variables:
-#   $blockedCount (Number) - The total count of blocked trackers. This number will always be greater than 1.
 #   $date (Datetime) - The date we began recording the count of blocked trackers
 cfr-doorhanger-milestone-heading2 =
-  { $blockedCount ->
-    *[other] { DATETIME($date, month: "long", year: "numeric") } 以降、{ -brand-short-name } は <b>{ $blockedCount } 個</b>以上のトラッカーをブロックしました！
-  }
+    { $blockedCount ->
+       *[other] { DATETIME($date, month: "long", year: "numeric") } 以降、{ -brand-short-name } は <b>{ $blockedCount } 個</b>以上のトラッカーをブロックしました！
+    }
 cfr-doorhanger-milestone-ok-button = 確認
-  .accesskey = S
-
-## What’s New Panel Content for Firefox 76
-
-## Lockwise message
-
-cfr-whatsnew-lockwise-header = 安全なパスワードを簡単に作成
-cfr-whatsnew-lockwise-body = アカウントごとに安全でユニークなパスワードを考えるのは難しいです。パスワードを作成するときは、安全にしたいパスワードの入力欄を選択して、{ -brand-shorter-name } からパスワードを生成しましょう。
-cfr-whatsnew-lockwise-icon-alt = { -lockwise-brand-short-name } アイコン
-
-## Vulnerable Passwords message
-
-cfr-whatsnew-passwords-header = 脆弱なパスワードを警告します
-cfr-whatsnew-passwords-body = ハッカーはよく使い回されるパスワードを知っています。複数のサイトで同じパスワードが使われていて、そのどれか一つでもデータ漏洩があったときは、{ -lockwise-brand-short-name } でそれらのサイトのパスワードを変更するよう警告します。
-cfr-whatsnew-passwords-icon-alt = 脆弱なパスワードの鍵アイコン
-
-## Picture-in-Picture fullscreen message
-
-cfr-whatsnew-pip-fullscreen-header = 全画面表示でながら見
-cfr-whatsnew-pip-fullscreen-body = 動画だけを別のウィンドウで再生しているとき、ダブルクリックすると全画面表示になります。
-cfr-whatsnew-pip-fullscreen-icon-alt = ピクチャーインピクチャーアイコン
-
-## Protections Dashboard message
-
-cfr-whatsnew-protections-header = パスワードを一発保護
-# This should match the "appmenuitem-protection-dashboard-title" string in browser/appmenu.ftl.
-cfr-whatsnew-protections-body = プライバシー保護ダッシュボードにデータ漏洩とパスワード管理についての概要報告が含まれるようになりました。解決済みの漏洩データ数の追跡が可能で、漏洩データに保存されたパスワードが含まれているかどうかも確認できます。
-cfr-whatsnew-protections-cta-link = プライバシー保護ダッシュボードを表示
-cfr-whatsnew-protections-icon-alt = 盾アイコン
-
-## Better PDF message
-
-cfr-whatsnew-better-pdf-header = より良い PDF 表示
-cfr-whatsnew-better-pdf-body = ワークフローから外れないように、PDF ドキュメントを直接  { -brand-short-name } で開くようになりました。
+    .accesskey = S
 cfr-doorhanger-milestone-close-button = 閉じる
-  .accesskey = C
+    .accesskey = C
 
 ## DOH Message
 
 cfr-doorhanger-doh-body = プライバシーは重要です。{ -brand-short-name } はあなたのブラウジングを保護するため、パートナーサービスが対応するときは常に DNS 要求を安全にお届けします。
 cfr-doorhanger-doh-header = 暗号化 DNS でより安全に
 cfr-doorhanger-doh-primary-button-2 = OK
-  .accesskey = O
+    .accesskey = O
 cfr-doorhanger-doh-secondary-button = 無効にする
-  .accesskey = D
+    .accesskey = D
 
 ## Fission Experiment Message
 
 cfr-doorhanger-fission-body-approved = プライバシーは重要です。{ -brand-short-name } がウェブサイトをそれぞれ他のサイトから分離、サンドボックス化するため、パスワードやクレジットカード番号、他の重要な情報が盗まれにくくなりました。
 cfr-doorhanger-fission-header = サイトの分離
 cfr-doorhanger-fission-primary-button = OK、有効にする
-  .accesskey = O
+    .accesskey = O
 cfr-doorhanger-fission-secondary-button = 詳細
-  .accesskey = L
+    .accesskey = L
 
 ## Full Video Support CFR message
 
 cfr-doorhanger-video-support-body = このバージョンの { -brand-short-name } では、このサイトの動画を正しく再生できません。今すぐ、動画に完全対応する { -brand-short-name } に更新しましょう。
 cfr-doorhanger-video-support-header = { -brand-short-name } を更新して動画を再生
 cfr-doorhanger-video-support-primary-button = 今すぐ更新
-  .accesskey = U
+    .accesskey = U
+
+## Spotlight modal shared strings
+
+spotlight-learn-more-collapsed = 詳細
+    .title = 展開してこの機能の詳細を見る
+spotlight-learn-more-expanded = 詳細
+    .title = 閉じる
+
+## VPN promotion dialog for public Wi-Fi users
+##
+## If a user is detected to be on a public Wi-Fi network, they are given a
+## bit of info about how to improve their privacy and then offered a button
+## to the Mozilla VPN page and a link to dismiss the dialog.
+
+# This header text can be explicitly wrapped.
+spotlight-public-wifi-vpn-header = 公共 Wi-Fi を使うかのように
+spotlight-public-wifi-vpn-body = あなたの行動と訪問先を秘匿するなら、VPN を検討してみましょう。空港や喫茶店のような公共の場所でブラウジングするときのプライバシーを保護します。
+spotlight-public-wifi-vpn-primary-button = { -mozilla-vpn-brand-name } でプライバシーを確保
+    .accesskey = S
+spotlight-public-wifi-vpn-link = 後で
+    .accesskey = N
+
+## Total Cookie Protection Rollout
+
+# "Test pilot" is used as a verb. Possible alternatives: "Be the first to try",
+# "Join an early experiment". This header text can be explicitly wrapped.
+spotlight-total-cookie-protection-header = これまでにない最も強力なプライバシー保護機能を試す
+spotlight-total-cookie-protection-body = 包括的 Cookie 保護機能は Cookie を利用してあなたを追跡するトラッカーを遮断します。
+# "Early access" for this feature rollout means it's a "feature preview" or
+# "soft launch" as not everybody will get it yet.
+spotlight-total-cookie-protection-expanded = あなたが訪問したサイト上でトラッカーが追跡できないように { -brand-short-name } が Cookie の周りにフェンスを建てて制限します。早期アクセスに参加すると、この機能が最適化され、すべての人にとってのより良いウェブを構築し続ける助けになります。
+spotlight-total-cookie-protection-primary-button = 包括的 Cookie 保護をオンにする
+spotlight-total-cookie-protection-secondary-button = 後で
+
+## Emotive Continuous Onboarding
+
+spotlight-better-internet-header = より良いインターネットはあなたとともに始まります
+spotlight-better-internet-body = { -brand-short-name} を使うことで、すべての人にとってオープンでアクセシブルな、すべての人にとってのより良いインターネットに一票を投じることになります。
+spotlight-peace-mind-header = 私たちがあなたを保護します
+spotlight-peace-mind-body = { -brand-short-name } は毎月、ユーザーあたり平均 3,000 以上のトラッカーをブロックしています。特にトラッカーのようなプライバシーを脅かすものは、あなたと良いインターネットの間にあるべきではないからです。
+spotlight-pin-primary-button =
+    { PLATFORM() ->
+        [macos] Dock に追加
+       *[other] タスクバーにピン留め
+    }
+spotlight-pin-secondary-button = 後で
+
+## MR2022 Background Update Windows native toast notification strings.
+##
+## These strings will be displayed by the Windows operating system in
+## a native toast, like:
+##
+## <b>multi-line title</b>
+## multi-line text
+## <img>
+## [ primary button ] [ secondary button ]
+##
+## The button labels are fitted into narrow fixed-width buttons by
+## Windows and therefore must be as narrow as possible.
+
+mr2022-background-update-toast-title = 新しい { -brand-short-name } です。プライバシーを強化し、トラッカーに対策しました。妥協はしません。
+mr2022-background-update-toast-text = 最新の { -brand-short-name } を今すぐ試してみましょう。今までで最も強力なトラッキング防止機能に更新されました。
+# This button label will be fitted into a narrow fixed-width button by
+# Windows. Try to not exceed the width of the English text (compare it
+# using a variable font like Arial): the button can only fit 1-2
+# additional characters, exceeding characters will be truncated.
+mr2022-background-update-toast-primary-button-label = 今すぐ { -brand-shorter-name } を開く
+# This button label will be fitted into a narrow fixed-width button by
+# Windows. Try to not exceed the width of the English text (compare it using a
+# variable font like Arial): the button can only fit 1-2 additional characters,
+# exceeding characters will be truncated.
+mr2022-background-update-toast-secondary-button-label = 後で通知
+
+## Firefox View CFR
+
+firefoxview-cfr-primarybutton = 試してみる
+    .accesskey = T
+firefoxview-cfr-secondarybutton = 後で
+    .accesskey = N
+firefoxview-cfr-header-v2 = 前回のタブをすばやくピックアップ
+firefoxview-cfr-body-v2 = { -firefoxview-brand-name } で最近閉じたタブを取り戻すだけでなく、端末の壁をシームレスに飛び越えられます。
+
+## Firefox View Spotlight
+
+firefoxview-spotlight-promo-title = { -firefoxview-brand-name } のご紹介
+# “Poof” refers to the expression to convey when something or someone suddenly disappears, or in this case, reappears. For example, “Poof, it’s gone.”
+firefoxview-spotlight-promo-subtitle = 携帯端末で開いているタブを開きたい？ 開けます。今閉じたサイトが必要でしたか？ ご安心ください。{ -firefoxview-brand-name } で戻せます。
+firefoxview-spotlight-promo-primarybutton = 使い方について
+firefoxview-spotlight-promo-secondarybutton = スキップ
+
+## Colorways expiry reminder CFR
+
+colorways-cfr-primarybutton = Colorway を選択
+    .accesskey = C
+# "shades" refers to the different color options available to users in colorways.
+colorways-cfr-body = カルチャーを変えてきた人々の声から生まれた { -brand-short-name } だけの色の表象でブラウザーを染めましょう。
+colorways-cfr-header-28days = 揺るぎない声 Colorway は 1 月 16 日まで
+colorways-cfr-header-14days = 揺るぎない声 Colorway は残り 2 週間
+colorways-cfr-header-7days =  揺るぎない声 Colorway は今週まで
+colorways-cfr-header-today = 揺るぎない声 Colorway は今日まで
+
+## Cookie Banner Handling CFR
+
+cfr-cbh-header = { -brand-short-name } に Cookie バナーを拒否できるようにしますか？
+cfr-cbh-body = { -brand-short-name } が多くの Cookie バナーの同意確認を自動的に拒否します。
+cfr-cbh-confirm-button = Cookie バナーを拒否
+    .accesskey = R
+cfr-cbh-dismiss-button = 後で
+    .accesskey = N
+
+## These strings are used in the Fox doodle Pin/set default spotlights
+
+july-jam-headline = 私たちがあなたを守ります
+july-jam-body = 毎月、{ -brand-short-name } はユーザーあたり平均 3000 件以上のトラッカーをブロックし、健全なインターネットへの安全で快適なアクセスをユーザーに提供しています。
+july-jam-set-default-primary = { -brand-short-name } でマイリンクを開く
+fox-doodle-pin-headline = おかえりなさい
+# “indie” is short for the term “independent”.
+# In this instance, free from outside influence or control.
+fox-doodle-pin-body = 実は、たったのクリック 1 回でお気に入りの独立系ブラウザーを使い続けられるんです。
+fox-doodle-pin-primary = { -brand-short-name } でマイリンクを開く
+fox-doodle-pin-secondary = 後で
+
+## These strings are used in the Set Firefox as Default PDF Handler for Existing Users experiment
+
+set-default-pdf-handler-headline = <strong>PDF ファイルを { -brand-short-name } で開くように関連付けられます。</strong> ブラウザー内で編集または署名ができます。動作を変更するには、設定で “PDF” を検索してください。
+set-default-pdf-handler-primary = 了解
+
+## FxA sync CFR
+
+fxa-sync-cfr-header = 未来の新しい端末？
+fxa-sync-cfr-body = 新しい { -brand-product-name } ブラウザーを開けば、最新のブックマークやパスワード、タブがいつでもあなたの側にあります。
+fxa-sync-cfr-primary = 詳細情報
+  .accesskey = L
+fxa-sync-cfr-secondary = 後で通知
+  .accesskey = R
+
+## Device Migration FxA Spotlight
+
+device-migration-fxa-spotlight-header = 古い端末をご使用ですか？
+device-migration-fxa-spotlight-body = データをバックアップ保存して、ブックマークやパスワードなどの重要な情報を失わないようにしましょう。特に新しい端末に切り替えたときは。
+device-migration-fxa-spotlight-primary-button = データをバックアップする方法
+device-migration-fxa-spotlight-link = 後で通知

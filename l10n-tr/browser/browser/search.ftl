@@ -19,3 +19,20 @@ opensearch-error-download-desc = { -brand-short-name }, arama yan uygulamasını
 
 ##
 
+searchbar-submit =
+    .tooltiptext = Aramayı gönder
+
+# This string is displayed in the search box when the input field is empty
+searchbar-input =
+    .placeholder = Arama
+
+searchbar-icon =
+    .tooltiptext = Ara
+
+## Infobar shown when search engine is removed and replaced.
+## Variables
+## $oldEngine (String) - the search engine to be removed.
+## $newEngine (String) - the search engine to replace the removed search engine.
+
+removed-search-engine-message = <strong>Varsayılan arama motorunuz değiştirildi.</strong> { $oldEngine } artık varsayılan { -brand-short-name } arama motorları arasında yer almıyor. Yeni varsayılan arama motorunuzu { $newEngine } olarak ayarladık. Varsayılan arama motorunuzu ayarlardan değiştirebilirsiniz. <label data-l10n-name="remove-search-engine-article">Daha fazla bilgi alın</label>
+remove-search-engine-button = Tamam

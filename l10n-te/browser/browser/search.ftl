@@ -19,3 +19,19 @@ opensearch-error-download-desc = { -brand-short-name } శోధన ప్లగ
 
 ##
 
+searchbar-submit =
+    .tooltiptext = శోధనను సమర్పించండి
+
+# This string is displayed in the search box when the input field is empty
+searchbar-input =
+    .placeholder = వెతకండి
+
+searchbar-icon =
+    .tooltiptext = వెతుకు
+
+## Infobar shown when search engine is removed and replaced.
+## Variables
+## $oldEngine (String) - the search engine to be removed.
+## $newEngine (String) - the search engine to replace the removed search engine.
+
+remove-search-engine-button = సరే

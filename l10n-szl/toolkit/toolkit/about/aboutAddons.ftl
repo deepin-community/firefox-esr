@@ -2,17 +2,16 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-addons-window =
-    .title = Regiyrowanie rozszyrzyniami
-
 addons-page-title = Regiyrowanie rozszyrzyniami
 
 search-header =
     .placeholder = Szukej na addons.mozilla.org
     .searchbuttonlabel = Szukej
 
-search-header-shortcut =
-    .key = f
+## Variables
+##   $domain - Domain name where add-ons are available (e.g. addons.mozilla.org)
+
+##
 
 list-empty-installed =
     .value = Niy mosz zainstalowanych żodnych rozszyrzyń tego typu
@@ -33,60 +32,11 @@ help-button = Pōmoc do rozszyrzyń
 sidebar-help-button-title =
     .title = Pōmoc do rozszyrzyń
 
-preferences =
-    { PLATFORM() ->
-        [windows] { -brand-short-name } - Ôpcyje
-       *[other] { -brand-short-name } - Preferyncyje
-    }
-sidebar-preferences-button-title =
-    .title =
-        { PLATFORM() ->
-            [windows] { -brand-short-name } - Ôpcyje
-           *[other] { -brand-short-name } - Preferyncyje
-        }
-
 show-unsigned-extensions-button =
     .label = Niykerych rozszyrzyń niy szło zweryfikować
 
 show-all-extensions-button =
     .label = Pokoż wszyskie rozszyrzynia
-
-cmd-show-details =
-    .label = Pokoż wiyncyj informacyji
-    .accesskey = P
-
-cmd-find-updates =
-    .label = Znodź aktualizacyje
-    .accesskey = Z
-
-cmd-preferences =
-    .label =
-        { PLATFORM() ->
-            [windows] Ôpcyje
-           *[other] Preferyncyje
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] O
-           *[other] P
-        }
-
-cmd-enable-theme =
-    .label = Użyj motywu
-    .accesskey = U
-
-cmd-disable-theme =
-    .label = Przestōń używać motywu
-    .accesskey = U
-
-cmd-install-addon =
-    .label = Instaluj
-    .accesskey = I
-
-cmd-contribute =
-    .label = Spōmōż
-    .accesskey = S
-    .tooltiptext = Spōmōż robota nad tym rozszyrzyniym
 
 detail-version =
     .label = Wersyjo
@@ -231,7 +181,6 @@ extensions-warning-check-compatibility-button = Załōncz
 extensions-warning-update-security = Badanie bezpieczyństwa aktualizacyji rozszyrzyń je zastawiōne. Aplikacyjo może być napadniynto z pōmocōm aktualizacyji.
 extensions-warning-update-security-button = Załōncz
     .title = Załōncz badanie bezpieczyństwa aktualizacyje rozszyrzyń
-
 
 ## Strings connected to add-on updates
 
@@ -382,7 +331,6 @@ extension-enabled-heading = Załōnczōne
 extension-disabled-heading = Zastawiōne
 
 theme-enabled-heading = Załōnczōne
-theme-disabled-heading = Zastawiōne
 
 plugin-enabled-heading = Załōnczōne
 plugin-disabled-heading = Zastawiōne
@@ -392,8 +340,6 @@ dictionary-disabled-heading = Zastawiōne
 
 locale-enabled-heading = Załōnczōne
 locale-disabled-heading = Zastawiōne
-
-ask-to-activate-button = Pytej sie, jeźli idzie aktywować
 
 always-activate-button = Zawdy aktywuj
 never-activate-button = Nigdy niy aktywuj
@@ -452,6 +398,9 @@ addon-detail-private-browsing-help = Jak dosz zgoda, to rozszyrzynie bydzie mie�
 addon-detail-private-browsing-allow = Przizwōl
 addon-detail-private-browsing-disallow = Niy zwolej
 
+## "sites with restrictions" (internally called "quarantined") are special domains
+## where add-ons are normally blocked for security reasons.
+
 ## This is the tooltip text for the recommended badges for an extension in about:addons. The
 ## badge is a small icon displayed next to an extension when it is recommended on AMO.
 
@@ -493,3 +442,29 @@ addons-heading-search-input =
 
 addon-page-options-button =
     .title = Noczynia do wszyskich rozszyrzyń
+
+## Detail notifications
+## Variables:
+##   $name (String): name of the add-on.
+
+## Detail notifications
+## Variables:
+##   $name (string) - Name of the add-on.
+
+# Variables:
+#   $version (String): application version.
+details-notification-incompatible = Rozszyrzynie { $name } je niykōmpatybilne z aplikacyjōm { -brand-short-name }{ $version }.
+
+details-notification-unsigned-and-disabled = Niy szło zweryfikować rozszyrzynio { $name } do użycio w aplikacyji { -brand-short-name }, beztōż je zastawiōne.
+details-notification-unsigned-and-disabled-link = Wiyncyj informacyji
+
+details-notification-unsigned = Niy szło zweryfikować rozszyrzynio { $name } do użycio w aplikacyji { -brand-short-name }. Używej go pozornie.
+details-notification-unsigned-link = Wiyncyj informacyji
+
+details-notification-blocked = Rozszyrzynie { $name } je zastawiōne skuli problymōw z bezpieczyństwym abo stabilnościōm.
+details-notification-blocked-link = Wiyncyj informacyji
+
+details-notification-softblocked = Wiadōmo, iże skuli rozszyrzynio { $name } sōm problymy z bezpieczyństwym abo stabilnościōm.
+details-notification-softblocked-link = Wiyncyj informacyji
+
+details-notification-gmp-pending = Rozszyrzynie { $name } chned bydzie zainstalowane.

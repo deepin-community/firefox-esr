@@ -11,6 +11,12 @@ reload-tab =
 select-all-tabs =
     .label = Wšykne rejtariki wubraś
     .accesskey = W
+tab-context-play-tab =
+    .label = Rejtarik wótgraś
+    .accesskey = R
+tab-context-play-tabs =
+    .label = Rejtariki wótgraś
+    .accesskey = g
 duplicate-tab =
     .label = Rejatark pódwójś
     .accesskey = R
@@ -48,12 +54,9 @@ unpin-selected-tabs =
 bookmark-selected-tabs =
     .label = Rejtariki ako cytańske znamjenja składowaś…
     .accesskey = k
-bookmark-tab =
-    .label = Rejtarik ako cytańske znamje składowaś
-    .accesskey = t
-reopen-in-container =
-    .label = W kontejnerje znowego wócyniś
-    .accesskey = k
+tab-context-bookmark-tab =
+    .label = Rejtarik ako cytańske znamje składowaś …
+    .accesskey = R
 tab-context-open-in-new-container-tab =
     .label = W nowem kontejnerowem rejtariku wócyniś
     .accesskey = k
@@ -69,33 +72,9 @@ move-to-new-window =
 tab-context-close-multiple-tabs =
     .label = Někotare rejtariki zacyniś
     .accesskey = N
-tab-context-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] { $tabCount } zacynjony rejtarik wócyniś
-            [one] { $tabCount }  zacynjony rejtarik wócyniś
-            [two] { $tabCount } zacynjonej rejtarika wócyniś
-            [few] { $tabCount } zacynjone rejtariki wócyniś
-           *[other] { $tabCount } zacynjonych rejtarikow wócyniś
-        }
-    .accesskey = z
-close-tab =
-    .label = Rejtarik zacyniś
-    .accesskey = z
-close-tabs =
-    .label = Rejtariki zacyniś
-    .accesskey = z
-move-tabs =
-    .label = Rejtariki pśesunuś
-    .accesskey = s
-move-tab =
-    .label = Rejtarik pśesunuś
-    .accesskey = s
 tab-context-share-url =
     .label = Źěliś
     .accesskey = i
-tab-context-share-more =
-    .label = Wěcej…
 
 ## Variables:
 ##  $tabCount (Number): the number of tabs that are affected by the action.
@@ -110,16 +89,6 @@ tab-context-reopen-closed-tabs =
            *[other] $tabCount zacynjonych rejtarikow znowego wócyniś
         }
     .accesskey = z
-tab-context-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] { $tabCount } rejtarik zacyniś
-            [one] { $tabCount } rejtarik zacyniś
-            [two] { $tabCount } rejtarika zacyniś
-            [few] { $tabCount } rejtariki zacyniś
-           *[other] { $tabCount } rejtarikow zacyniś
-        }
-    .accesskey = r
 tab-context-close-n-tabs =
     .label =
         { $tabCount ->
@@ -140,3 +109,13 @@ tab-context-move-tabs =
            *[other] { $tabCount } rejtarikow pśesunuś
         }
     .accesskey = s
+
+tab-context-send-tabs-to-device =
+    .label =
+        { $tabCount ->
+            [one] { $tabCount } rejtarik na rěd pósłaś
+            [two] { $tabCount } rejtarika na rěd pósłaś
+            [few] { $tabCount } rejtariki na rěd pósłaś
+           *[other] { $tabCount } rejtarikow na rěd pósłaś
+        }
+    .accesskey = r

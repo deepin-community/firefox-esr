@@ -8,9 +8,6 @@
 newtab-page-title = Nowa karta
 newtab-settings-button =
     .title = Dostosuj stronę nowej karty
-newtab-personalize-button-label = Personalizuj
-    .title = Personalizuj nową kartę
-    .aria-label = Personalizuj nową kartę
 newtab-personalize-icon-label =
     .title = Personalizuj nową kartę
     .aria-label = Personalizuj nową kartę
@@ -23,13 +20,13 @@ newtab-personalize-dialog-label =
 newtab-search-box-search-button =
     .title = Szukaj
     .aria-label = Szukaj
-newtab-search-box-search-the-web-text = Szukaj w Internecie
-# Variables
-#  $engine (String): the name of the user's default search engine
+
+# Variables:
+#   $engine (string) - The name of the user's default search engine
 newtab-search-box-handoff-text = Wprowadź adres lub szukaj w { $engine }
 newtab-search-box-handoff-text-no-engine = Wprowadź adres lub szukaj
-# Variables
-#  $engine (String): the name of the user's default search engine
+# Variables:
+#   $engine (string) - The name of the user's default search engine
 newtab-search-box-handoff-input =
     .placeholder = Wprowadź adres lub szukaj w { $engine }
     .title = Wprowadź adres lub szukaj w { $engine }
@@ -38,10 +35,7 @@ newtab-search-box-handoff-input-no-engine =
     .placeholder = Wprowadź adres lub szukaj
     .title = Wprowadź adres lub szukaj
     .aria-label = Wprowadź adres lub szukaj
-newtab-search-box-search-the-web-input =
-    .placeholder = Szukaj w Internecie
-    .title = Szukaj w Internecie
-    .aria-label = Szukaj w Internecie
+
 newtab-search-box-text = Szukaj w Internecie
 newtab-search-box-input =
     .placeholder = Szukaj w Internecie
@@ -50,17 +44,18 @@ newtab-search-box-input =
 ## Top Sites - General form dialog.
 
 newtab-topsites-add-search-engine-header = Dodaj wyszukiwarkę
-newtab-topsites-add-topsites-header = Dodawanie strony do sekcji Popularne
 newtab-topsites-add-shortcut-header = Nowy skrót
 newtab-topsites-edit-topsites-header = Edycja strony z sekcji Popularne
 newtab-topsites-edit-shortcut-header = Edycja skrótu
 newtab-topsites-title-label = Tytuł
 newtab-topsites-title-input =
     .placeholder = Wpisz tytuł
+
 newtab-topsites-url-label = Adres URL
 newtab-topsites-url-input =
     .placeholder = Wpisz lub wklej adres
 newtab-topsites-url-validation = Wymagany jest prawidłowy adres URL
+
 newtab-topsites-image-url-label = Własny obraz
 newtab-topsites-use-image-link = Użyj własnego obrazu…
 newtab-topsites-image-validation = Wczytanie obrazu się nie powiodło. Spróbuj innego adresu.
@@ -89,13 +84,15 @@ newtab-topsite-sponsored = Sponsorowane
 newtab-menu-section-tooltip =
     .title = Otwórz menu
     .aria-label = Otwórz menu
+
 # Tooltip for dismiss button
 newtab-dismiss-button-tooltip =
     .title = Zamknij
     .aria-label = Zamknij
+
 # This tooltip is for the context menu of Pocket cards or Topsites
 # Variables:
-#  $title (String): The label or hostname of the site. This is for screen readers when the context menu button is focused/active.
+#   $title (string) - The label or hostname of the site. This is for screen readers when the context menu button is focused/active.
 newtab-menu-content-tooltip =
     .title = Otwórz menu
     .aria-label = Otwórz menu kontekstowe „{ $title }”
@@ -126,8 +123,7 @@ newtab-privacy-modal-header = Twoja prywatność jest ważna.
 newtab-privacy-modal-paragraph-2 =
     Oprócz ciekawych artykułów pokazujemy Ci również spersonalizowane,
     zweryfikowane treści od wybranych sponsorów. Zachowaj pewność, że
-    <strong>Twoja historia przeglądania nigdy nie opuszcza Twojej własnej kopii
-    przeglądarki { -brand-product-name }</strong> — my jej nie widzimy, i nasi sponsorzy też nie.
+    <strong>Twoja historia przeglądania nigdy nie opuszcza Twojej własnej kopii { -brand-product-name(case: "gen") }</strong> — my jej nie widzimy, i nasi sponsorzy też nie.
 newtab-privacy-modal-link = Więcej informacji o prywatności na stronie nowej karty
 
 ##
@@ -165,14 +161,22 @@ newtab-label-removed-bookmark = Usunięto zakładkę
 newtab-label-recommended = Na czasie
 newtab-label-saved = Z { -pocket-brand-name }
 newtab-label-download = Z pobranych
+
 # This string is used in the story cards to indicate sponsored content
 # Variables:
-#  $sponsorOrSource (String): This is the name of a company or their domain
+#   $sponsorOrSource (string) - The name of a company or their domain
 newtab-label-sponsored = { $sponsorOrSource } · Sponsorowane
+
 # This string is used at the bottom of story cards to indicate sponsored content
 # Variables:
-#  $sponsor (String): This is the name of a sponsor
+#   $sponsor (string) - The name of a sponsor
 newtab-label-sponsored-by = Sponsor: { $sponsor }
+
+# This string is used under the image of story cards to indicate source and time to read
+# Variables:
+#   $source (string) - The name of a company or their domain
+#   $timeToRead (number) - The estimated number of minutes to read this story
+newtab-label-source-read-time = { $source } · { $timeToRead } min
 
 ## Section Menu: These strings are displayed in the section context menu and are
 ## meant as a call to action for the given section.
@@ -198,18 +202,18 @@ newtab-section-expand-section-label =
 ## Section Headers.
 
 newtab-section-header-topsites = Popularne
-newtab-section-header-highlights = Wyróżnione
 newtab-section-header-recent-activity = Ostatnia aktywność
 # Variables:
-#  $provider (String): Name of the corresponding content provider.
+#   $provider (string) - Name of the corresponding content provider.
 newtab-section-header-pocket = Polecane przez { $provider }
 
 ## Empty Section States: These show when there are no more items in a section. Ex. When there are no more Pocket story recommendations, in the space where there would have been stories, this is shown instead.
 
 newtab-empty-section-highlights = Zacznij przeglądać Internet, a pojawią się tutaj świetne artykuły, filmy oraz inne ostatnio odwiedzane strony i dodane zakładki.
+
 # Ex. When there are no more Pocket story recommendations, in the space where there would have been stories, this is shown instead.
 # Variables:
-#  $provider (String): Name of the content provider for this section, e.g "Pocket".
+#   $provider (string) - Name of the content provider for this section, e.g "Pocket".
 newtab-empty-section-topstories = To na razie wszystko. { $provider } później będzie mieć więcej popularnych artykułów. Nie możesz się doczekać? Wybierz popularny temat, aby znaleźć więcej artykułów z całego Internetu.
 
 ## Empty Section (Content Discovery Experience). These show when there are no more stories or when some stories fail to load.
@@ -224,11 +228,25 @@ newtab-discovery-empty-section-topstories-timed-out = Prawie udało się wczyta�
 ## Pocket Content Section.
 
 # This is shown at the bottom of the trending stories section and precedes a list of links to popular topics.
-newtab-pocket-read-more = Popularne treści:
+newtab-pocket-read-more = Popularne tematy:
+newtab-pocket-new-topics-title = Chcesz przeczytać jeszcze więcej artykułów? Zobacz, co { -pocket-brand-name } proponuje na te popularne tematy
 newtab-pocket-more-recommendations = Więcej polecanych
 newtab-pocket-learn-more = Więcej informacji
 newtab-pocket-cta-button = Pobierz { -pocket-brand-name }
 newtab-pocket-cta-text = Zachowuj artykuły w { -pocket-brand-name }, aby wrócić później do ich lektury.
+newtab-pocket-pocket-firefox-family = { -pocket-brand-name } jest częścią rodziny { -brand-product-name(case: "gen") }
+
+## Pocket Final Card Section.
+## This is for the final card in the Pocket grid.
+
+# A save to Pocket button that shows over the card thumbnail on hover.
+newtab-pocket-save = Wyślij
+newtab-pocket-saved = Wysłano
+
+## Pocket content onboarding experience dialog and modal for new users seeing the Pocket section for the first time, shown as the first item in the Pocket section.
+
+newtab-pocket-onboarding-discover = Odkrywaj to, co najlepsze w sieci
+newtab-pocket-onboarding-cta = { -pocket-brand-name } przeszukuje różnorodne publikacje, aby dostarczać najbardziej bogate w informacje, inspirujące i wiarygodne treści prosto do Twojej przeglądarki { -brand-product-name }.
 
 ## Error Fallback Content.
 ## This message and suggested action link are shown in each section of UI that fails to render.
@@ -240,6 +258,8 @@ newtab-error-fallback-refresh-link = Odśwież stronę, by spróbować ponownie
 
 newtab-custom-shortcuts-title = Skróty
 newtab-custom-shortcuts-subtitle = Zachowane i odwiedzane strony.
+# Variables
+#   $num (number) - Number of rows to display
 newtab-custom-row-selector =
     { $num ->
         [one] { $num } wiersz
@@ -248,15 +268,10 @@ newtab-custom-row-selector =
     }
 newtab-custom-sponsored-sites = Sponsorowane skróty
 newtab-custom-pocket-title = Polecane przez { -pocket-brand-name }
-newtab-custom-pocket-subtitle = Wyjątkowe rzeczy wybrane przez { -pocket-brand-name }, część rodziny produktów { -brand-product-name }.
+newtab-custom-pocket-subtitle = Wyjątkowe rzeczy wybrane przez { -pocket-brand-name }, część rodziny { -brand-product-name(case: "gen") }.
 newtab-custom-pocket-sponsored = Sponsorowane artykuły
+newtab-custom-pocket-show-recent-saves = Wyświetl ostatnio zapisane
 newtab-custom-recent-title = Ostatnia aktywność
 newtab-custom-recent-subtitle = Wybierane z ostatnio odwiedzanych stron i treści.
 newtab-custom-close-button = Zamknij
-# For the "Snippets" feature traditionally on about:home.
-# Alternative translation options: "Small Note" or something that
-# expresses the idea of "a small message, shortened from something else,
-# and non-essential but also not entirely trivial and useless.
-newtab-custom-snippets-title = Od Mozilli
-newtab-custom-snippets-subtitle = Wskazówki i aktualności od organizacji { -vendor-short-name } i przeglądarki { -brand-product-name }.
 newtab-custom-settings = Więcej ustawień

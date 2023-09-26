@@ -21,6 +21,7 @@ perftools-heading-features-default = Funciones (se recomienda activarlas de form
 perftools-heading-features-disabled = Funcionalidades desactivadas
 perftools-heading-features-experimental = Experimental
 perftools-heading-threads = Hilos
+perftools-heading-threads-jvm = Subprocesos JVM
 perftools-heading-local-build = Compilación local
 
 ##
@@ -51,9 +52,6 @@ perftools-devtools-settings-label = Ajustes
 
 ## Various statuses that affect the current state of profiling, not typically displayed.
 
-perftools-status-private-browsing-notice =
-    El perfilador se desactiva cuando se activa la navegación privada.
-    Cierre todas las ventanas privadas para volver a activar el perfilador
 perftools-status-recording-stopped-by-another-tool = Otra herramienta detuvo la grabación.
 perftools-status-restart-required = Se debe reiniciar el navegador para activar esta función.
 
@@ -85,8 +83,8 @@ perftools-thread-renderer =
     .title = Cuando WebRender está activado, el hilo que ejecuta las llamadas OpenGL
 perftools-thread-render-backend =
     .title = El hilo WebRender RenderBackend
-perftools-thread-paint-worker =
-    .title = Cuando se activa el pintado fuera del hilo principal, el hilo en el que se realiza el pintado
+perftools-thread-timer =
+    .title = Los temporizadores de manejo de subprocesos (setTimeout, setInterval, nsITimer)
 perftools-thread-style-thread =
     .title = El cálculo de estilo se divide en múltiples hilos
 pref-thread-stream-trans =
@@ -97,8 +95,20 @@ perftools-thread-img-decoder =
     .title = Hilos de decodificación de imágenes
 perftools-thread-dns-resolver =
     .title = La resolución de DNS ocurre en este hilo
-perftools-thread-js-helper =
-    .title = Trabajo en segundo plano del motor JS, como compilaciones fuera del hilo principal
+perftools-thread-task-controller =
+    .title = Hilos del grupo de subprocesos de TaskController
+perftools-thread-jvm-gecko =
+    .title = El subproceso principal de Gecko JVM
+perftools-thread-jvm-nimbus =
+    .title = Los subprocesos principales para el SDK de experimentos de Nimbus
+perftools-thread-jvm-default-dispatcher =
+    .title = El dispatcher predeterminado para la biblioteca de rutinas de Kotlin
+perftools-thread-jvm-glean =
+    .title = Los subprocesos principales del SDK de telemetría de Glean
+perftools-thread-jvm-arch-disk-io =
+    .title = El dispatcher IO para la librería de rutinas de Kotlin
+perftools-thread-jvm-pool =
+    .title = Subprocesos creados en un grupo de subprocesos sin nombre
 
 ##
 
@@ -108,13 +118,44 @@ perftools-tools-threads-input-label =
     .title = Estos nombres de hilos son una lista separada por comas que se utiliza para activar la creación de perfiles de los hilos en el perfilador. El nombre debe ser solo una coincidencia parcial del nombre del hilo para que se incluya. Es sensible a los espacios en blanco.
 
 ## Onboarding UI labels. These labels are displayed in the new performance panel UI, when
-## both devtools.performance.new-panel-onboarding & devtools.performance.new-panel-enabled
-## preferences are true.
+## devtools.performance.new-panel-onboarding preference is true.
 
 perftools-onboarding-message = <b>Nuevo</b>: { -profiler-brand-name } ahora está integrado en las herramientas para desarrolladores. <a>Saber más</a> sobre esta poderosa herramienta.
 
-# `options-context-advanced-settings` is defined in toolbox-options.ftl
-perftools-onboarding-reenable-old-panel = (Por un tiempo limitado, puede acceder al panel original de rendimiento a través de <a>{ options-context-advanced-settings }</a>)
-
 perftools-onboarding-close-button =
     .aria-label = Cerrar el mensaje introductorio
+
+## Profiler presets
+
+
+# Presets and their l10n IDs are defined in the file
+# devtools/client/performance-new/popup/background.jsm.js
+# The same labels and descriptions are also defined in appmenu.ftl.
+
+# Presets and their l10n IDs are defined in the file
+# devtools/client/performance-new/shared/background.jsm.js
+# The same labels and descriptions are also defined in appmenu.ftl.
+
+perftools-presets-web-developer-label = Desarrollador web
+perftools-presets-web-developer-description = Configuración recomendada para la depuración de la mayoría de aplicaciones web, con poca sobrecarga.
+
+perftools-presets-firefox-label = { -brand-shorter-name }
+perftools-presets-firefox-description = Valor predeterminado recomendado para la creación de perfiles { -brand-shorter-name }.
+
+perftools-presets-graphics-label = Gráficos
+perftools-presets-graphics-description = Preestablecido para investigar errores gráficos en { -brand-shorter-name }.
+
+perftools-presets-media-label = Multimedia
+perftools-presets-media-description2 = Preestablecido para investigar errores de audio y vídeo en { -brand-shorter-name }.
+
+perftools-presets-networking-label = Red
+perftools-presets-networking-description = Preestablecido para investigar problemas de red en { -brand-shorter-name }.
+
+# "Power" is used in the sense of energy (electricity used by the computer).
+perftools-presets-power-label = Energía
+perftools-presets-power-description = Preestablecido para investigar errores relacionados con el consumo de energía en { -brand-shorter-name }, con poca sobrecarga.
+
+perftools-presets-custom-label = Personalizado
+
+##
+

@@ -8,6 +8,12 @@ reload-tab =
 select-all-tabs =
     .label = બધી ટૅબ્સને પસંદ કરો
     .accesskey = S
+tab-context-play-tab =
+    .label = ટેબ ચલાવો
+    .accesskey = I
+tab-context-play-tabs =
+    .label = પ્લે ટૅબ્સ
+    .accesskey = y
 duplicate-tab =
     .label = નકલી ટેબ
     .accesskey = D
@@ -38,12 +44,6 @@ unpin-selected-tabs =
 bookmark-selected-tabs =
     .label = ટૅબ્સ બુકમાર્ક કરો …
     .accesskey = k
-bookmark-tab =
-    .label = ટૅબને બુકમાર્ક કરો
-    .accesskey = B
-reopen-in-container =
-    .label = કન્ટેઈનર માં ફરીથી ખોલો
-    .accesskey = e
 move-to-start =
     .label = શરુ કરવાં માટે લઇ જાઓ
     .accesskey = S
@@ -54,19 +54,13 @@ move-to-new-window =
     .label = નવી વિન્ડોમાં ખસેડો
     .accesskey = W
 
-close-tab =
-    .label = ટૅબને બંધ કરો
-    .accesskey = C
-close-tabs =
-    .label = ટૅબ્સ બંધ કરો
-    .accesskey = S
-move-tabs =
-    .label = ટૅબ્સને ખસેડો
-    .accesskey = v
-move-tab =
-    .label = ટૅબને ખસેડો
-    .accesskey = v
-
 ## Variables:
 ##  $tabCount (Number): the number of tabs that are affected by the action.
 
+tab-context-send-tabs-to-device =
+    .label =
+        { $tabCount ->
+            [one] ટૅબને ઉપકરણમાં મોકલો
+           *[other] { $tabCount } ટૅબ્સને ઉપકરણમાં મોકલો
+        }
+    .accesskey = n

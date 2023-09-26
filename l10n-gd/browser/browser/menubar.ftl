@@ -43,15 +43,6 @@ menu-quit =
 menu-quit-mac =
     .label = Fàg { -brand-shorter-name }
 
-# This menu-quit-button string is only used on Linux.
-menu-quit-button =
-    .label = { menu-quit.label }
-
-# This menu-quit-button-win string is only used on Windows.
-menu-quit-button-win =
-    .label = { menu-quit.label }
-    .tooltip = Fàg { -brand-shorter-name }
-
 menu-about =
     .label = Mu { -brand-shorter-name }
     .accesskey = M
@@ -81,8 +72,17 @@ menu-file-open-location =
 menu-file-open-file =
     .label = Fosgail faidhle…
     .accesskey = o
-menu-file-close =
-    .label = Dùin
+# Variables:
+#  $tabCount (Number): the number of tabs that are affected by the action.
+menu-file-close-tab =
+    .label =
+        { $tabCount ->
+            [1] Dùin an taba
+            [one] Dùin { $tabCount } taba
+            [two] Dùin { $tabCount } thaba
+            [few] Dùin { $tabCount } tabaichean
+           *[other] Dùin { $tabCount } taba
+        }
     .accesskey = D
 menu-file-close-window =
     .label = Dùin an uinneag
@@ -93,12 +93,12 @@ menu-file-save-page =
 menu-file-email-link =
     .label = Cuir an dealbh air a' phost-d…
     .accesskey = C
+menu-file-share-url =
+    .label = Co-roinn
+    .accesskey = C
 menu-file-print-setup =
     .label = Roghainnean na duilleige…
     .accesskey = u
-menu-file-print-preview =
-    .label = Ro-shealladh clò-bhualaidh
-    .accesskey = R
 menu-file-print =
     .label = Clò-bhuail…
     .accesskey = C
@@ -114,9 +114,6 @@ menu-file-go-offline =
 menu-edit =
     .label = Deasaich
     .accesskey = e
-menu-edit-find-on =
-    .label = Lorg san duilleag seo…
-    .accesskey = L
 menu-edit-find-in-page =
     .label = Lorg air an duilleag…
     .accesskey = L
@@ -135,9 +132,6 @@ menu-view =
 menu-view-toolbars-menu =
     .label = Na bàraichean-inneal
     .accesskey = N
-menu-view-customize-toolbar =
-    .label = Gnàthaich…
-    .accesskey = c
 menu-view-customize-toolbar2 =
     .label = Gnàthaich am bàr-inneal…
     .accesskey = c
@@ -174,10 +168,6 @@ menu-view-page-style-no-style =
 menu-view-page-basic-style =
     .label = Stoidhle bhunaiteach na duilleige
     .accesskey = b
-menu-view-charset =
-    .label = Còdachadh teacsa
-    .accesskey = C
-
 menu-view-repair-text-encoding =
     .label = Càraich còdachadh an teacsa
     .accesskey = c
@@ -194,6 +184,17 @@ menu-view-exit-full-screen =
 menu-view-full-screen =
     .label = Làn-sgrìn
     .accesskey = L
+
+## These menu items may use the same accesskey.
+
+# This should match reader-view-enter-button in browser.ftl
+menu-view-enter-readerview =
+    .label = Fosgail am modh leughaidh
+    .accesskey = R
+# This should match reader-view-close-button in browser.ftl
+menu-view-close-readerview =
+    .label = Dùin sealladh an leughadair
+    .accesskey = R
 
 ##
 
@@ -224,24 +225,17 @@ menu-history-undo-menu =
 menu-history-undo-window-menu =
     .label = Uinneagan a dhùin thu o chionn goirid
 
-menu-history-reopen-all-tabs = Ath-fhosgail gach taba
-menu-history-reopen-all-windows = Ath-fhosgail gach uinneag
-
 ## Bookmarks Menu
 
 menu-bookmarks-menu =
     .label = Comharran-lìn
     .accesskey = C
-menu-bookmarks-show-all =
-    .label = Seall a h-uile comharra-lìn
-menu-bookmark-this-page =
-    .label = Cruthaich comharra-lìn dhan duilleag seo
 menu-bookmarks-manage =
     .label = Stiùirich na comharran-lìn
-menu-bookmark-current-tab =
-    .label = Dèan comharra-lìn dhen taba làithreach
-menu-bookmark-edit =
-    .label = Deasaich an comharra-lìn seo
+menu-bookmark-tab =
+    .label = Dèan comharra-lìn dhen taba làithreach…
+menu-edit-bookmark =
+    .label = Deasaich an comharra-lìn seo…
 menu-bookmarks-all-tabs =
     .label = Dèan comharra-lìn de gach taba…
 menu-bookmarks-toolbar =
@@ -259,15 +253,6 @@ menu-tools =
 menu-tools-downloads =
     .label = Luchdaidhean a-nuas
     .accesskey = d
-menu-tools-addons =
-    .label = Tuilleadain
-    .accesskey = a
-menu-tools-fxa-sign-in =
-    .label = Clàraich a-steach gu { -brand-product-name }…
-    .accesskey = g
-menu-tools-turn-on-sync =
-    .label = Cuir { -sync-brand-short-name } air…
-    .accesskey = r
 menu-tools-addons-and-themes =
     .label = Tuilleadain ’s ùrlaran
     .accesskey = a
@@ -283,9 +268,6 @@ menu-tools-sync-now =
 menu-tools-fxa-re-auth =
     .label = Ath-cheangail ri { -brand-product-name }…
     .accesskey = A
-menu-tools-web-developer =
-    .label = Leasaichear-lìn
-    .accesskey = L
 menu-tools-browser-tools =
     .label = Innealan a’ bhrabhsair
     .accesskey = b
@@ -298,17 +280,6 @@ menu-tools-page-source =
 menu-tools-page-info =
     .label = Fiosrachadh na duilleige
     .accesskey = i
-menu-preferences =
-    .label =
-        { PLATFORM() ->
-            [windows] Roghainnean
-           *[other] Roghainnean
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] o
-           *[other] n
-        }
 menu-settings =
     .label = Roghainnean
     .accesskey =
@@ -341,21 +312,6 @@ menu-window-bring-all-to-front =
 menu-help =
     .label = Cobhair
     .accesskey = h
-menu-help-product =
-    .label = Cobhair { -brand-shorter-name }
-    .accesskey = h
-menu-help-show-tour =
-    .label = Turas { -brand-shorter-name }
-    .accesskey = u
-menu-help-import-from-another-browser =
-    .label = Ion-phortaich o bhrabhsair eile…
-    .accesskey = I
-menu-help-keyboard-shortcuts =
-    .label = Ath-ghoiridean a' mheur-chlàir
-    .accesskey = A
-menu-help-troubleshooting-info =
-    .label = Taic le duilgheadasan
-    .accesskey = T
 menu-get-help =
     .label = Faigh cobhair
     .accesskey = h
@@ -364,21 +320,18 @@ menu-help-more-troubleshooting-info =
     .accesskey = B
 menu-help-report-site-issue =
     .label = Dèan aithris air duilgheadas leis an làrach...
-menu-help-feedback-page =
-    .label = Cuir thugainn do bheachdan…
-    .accesskey = C
-menu-help-safe-mode-without-addons =
-    .label = Ath-thòisich leis na tuilleadan air an cur à comas…
-    .accesskey = r
-menu-help-safe-mode-with-addons =
-    .label = Ath-thòisich leis na tuilleadan an comas
-    .accesskey = t
+menu-help-share-ideas =
+    .label = Co-roinn do bheachdan…
+    .accesskey = b
 menu-help-enter-troubleshoot-mode2 =
     .label = Modh fuasglaidh air duilgheadasan…
     .accesskey = M
 menu-help-exit-troubleshoot-mode =
-    .label = Cuir am modh fuasglaidh air duilgheadasan dheth
+    .label = Cuir am modh fuasgladh dhuilgheadasan dheth
     .accesskey = m
+menu-help-switch-device =
+    .label = A’ leum gu uidheam ùr
+    .accesskey = l
 # Label of the Help menu item. Either this or
 # menu-help-notdeceptive is shown.
 menu-help-report-deceptive-site =

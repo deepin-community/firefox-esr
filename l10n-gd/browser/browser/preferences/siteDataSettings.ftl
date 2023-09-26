@@ -30,14 +30,6 @@ site-data-remove-selected =
     .label = Thoir air falbh na thagh mi
     .accesskey = r
 
-site-data-button-cancel =
-    .label = Sguir dheth
-    .accesskey = S
-
-site-data-button-save =
-    .label = Sàbhail na h-atharraichean
-    .accesskey = a
-
 site-data-settings-dialog =
     .buttonlabelaccept = Sàbhail na h-atharraichean
     .buttonaccesskeyaccept = a
@@ -67,5 +59,8 @@ site-data-removing-dialog =
 site-data-removing-header = Thoir air falbh briosgaidean is dàta làraichean
 
 site-data-removing-desc = Ma bheir thu air falbh briosgaidean is dàta làraichean, dh’fhaoidte gun dèid do chlàradh a-mach à làraichean-lìn. A bheil thu cinnteach gu bheil thu airson seo atharrachadh?
+# Variables:
+#   $baseDomain (String) - The single domain for which data is being removed
+site-data-removing-single-desc = Ma bheir thu air falbh briosgaidean is dàta làraichean, dh’fhaoidte gun dèid do chlàradh a-mach à làraichean-lìn. A bheil thu cinnteach gu bheil thu airson briosgaidean is dàta na làraich <strong>{ $baseDomain }</strong> a sguabadh às?
 
 site-data-removing-table = Thèid briosgaidean is dàta nan làraichean-lìn a leanas a thoirt air falbh

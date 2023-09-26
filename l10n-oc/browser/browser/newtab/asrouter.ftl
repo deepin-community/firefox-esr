@@ -7,43 +7,34 @@
 
 cfr-doorhanger-extension-heading = Extension recomanda
 cfr-doorhanger-feature-heading = Foncion recomandada
-cfr-doorhanger-pintab-heading = Ensajatz aquò : penjar un onglet
 
 ##
 
 cfr-doorhanger-extension-sumo-link =
     .tooltiptext = Perqué aquò se bota aquí ?
-
 cfr-doorhanger-extension-cancel-button = Pas ara
     .accesskey = P
-
 cfr-doorhanger-extension-ok-button = Apondre ara
     .accesskey = A
-cfr-doorhanger-pintab-ok-button = Penjar aqueste onglet
-    .accesskey = P
-
 cfr-doorhanger-extension-manage-settings-button = Gerir los paramètres de recomandacion
     .accesskey = G
-
 cfr-doorhanger-extension-never-show-recommendation = Me mostrar pas aquela recomandacion
     .accesskey = M
-
 cfr-doorhanger-extension-learn-more-link = Ne saber mai
-
 # This string is used on a new line below the add-on name
 # Variables:
 #   $name (String) - Add-on author name
 cfr-doorhanger-extension-author = per { $name }
-
 # This is a notification displayed in the address bar.
 # When clicked it opens a panel with a message for the user.
 cfr-doorhanger-extension-notification = Recomandacions
+# .a11y-announcement is extracted in JS and announced via A11y.announce.
 cfr-doorhanger-extension-notification2 = Recomandacions
     .tooltiptext = Extensions recomandadas
     .a11y-announcement = Recomendacions d’extensions disponiblas
-
 # This is a notification displayed in the address bar.
 # When clicked it opens a panel with a message for the user.
+# .a11y-announcement is extracted in JS and announced via A11y.announce.
 cfr-doorhanger-feature-notification = Recomandacions
     .tooltiptext = Foncion de recomandacions
     .a11y-announcement = Foncion de recomandacions disponibla
@@ -68,18 +59,6 @@ cfr-doorhanger-extension-total-users =
        *[other] { $total } utilizaires
     }
 
-cfr-doorhanger-pintab-description = Accedissètz facilament als sites mai utilizats. Gardatz los sites dobèrts dins un onglets (amai quand reaviatz)
-
-## These messages are steps on how to use the feature and are shown together.
-
-cfr-doorhanger-pintab-step1 = <b>Clic drech</b> sus l’onglet que volètz penjar.
-cfr-doorhanger-pintab-step2 = Seleccionatz <b>Penjar aqueste onglet</b> al menú.
-cfr-doorhanger-pintab-step3 = Se lo site a una mesa a jorn, veiretz un punt blau sus vòstre onglet penjat.
-
-cfr-doorhanger-pintab-animation-pause = Pausa
-cfr-doorhanger-pintab-animation-resume = Reprendre
-
-
 ## Firefox Accounts Message
 
 cfr-doorhanger-bookmark-fxa-header = Sincronizatz vòstres marcapaginas pertot.
@@ -100,138 +79,12 @@ cfr-protections-panel-link-text = Ne saber mai
 # This string is used by screen readers to offer a text based alternative for
 # the notification icon
 cfr-badge-reader-label-newfeature = Novèla foncionalitat :
-
 cfr-whatsnew-button =
     .label = Qué de nòu
     .tooltiptext = Qué de nòu
-
-cfr-whatsnew-panel-header = Qué de nòu
-
 cfr-whatsnew-release-notes-link-text = Legir la nòta de version
 
-cfr-whatsnew-fx70-title = { -brand-short-name } luta encara mai per vòstra vida privada
-cfr-whatsnew-fx70-body =
-    La darrièra mesa a jorn melhora la foncion de proteccion
-    contra lo seguiment e permet de crear de senhals segurs per cada site.
-
-cfr-whatsnew-tracking-protect-title = Protegissètz-vos dels traçadors
-cfr-whatsnew-tracking-protect-body =
-    { -brand-short-name } bloca los elements de seguiment dels malhums socials e intersites
-    mai populars  que vos pistan en linha.
-cfr-whatsnew-tracking-protect-link-text = Consultar vòstre rapòrt
-
-# This string is displayed before a large numeral that indicates the total
-# number of tracking elements blocked. Don’t add $blockedCount to your
-# localization, because it would result in the number showing twice.
-cfr-whatsnew-tracking-blocked-title =
-    { $blockedCount ->
-        [one] Traçador blocat
-       *[other] Traçadors blocats
-    }
-cfr-whatsnew-tracking-blocked-subtitle = Dempuèi { DATETIME($earliestDate, month: "long", year: "numeric") }
-cfr-whatsnew-tracking-blocked-link-text = Veire lo rapòrt
-
-cfr-whatsnew-lockwise-backup-title = Salvagardatz vòstres senhals
-cfr-whatsnew-lockwise-backup-body = Ara podètz generar vòstres senhals securizats e i accedir de pertot ont vos connectatz.
-cfr-whatsnew-lockwise-backup-link-text = Activar las salvagardas
-
-cfr-whatsnew-lockwise-take-title = Emportatz vòstres senhals amb vos
-cfr-whatsnew-lockwise-take-body =
-    L'aplicacion mobila { -lockwise-brand-short-name } vos permet d'accedir en tota seguretat vòstres
-    senhals salvats d'ont que siá.
-cfr-whatsnew-lockwise-take-link-text = Obténer l’aplicacion
-
-## Search Bar
-
-cfr-whatsnew-searchbar-title = Escrivètz mens, trobatz mai amb la barra d’adreça
-cfr-whatsnew-searchbar-body-topsites = Ara, seleccionatz simplament la barra d'adreça, e una bóstia s'agrandirà amb de ligams cap a vòstres melhors sites.
-
-## Search bar
-
-cfr-whatsnew-searchbar-icon-alt-text = Icòna de la lópia
-
-## Picture-in-Picture
-
-cfr-whatsnew-pip-header = Agachatz de vidèos en navegant
-cfr-whatsnew-pip-body = L'imatge dins l'imatge fa aparéisser la vidèo dins una fenèstra flotanta que poscatz la gaitar tot en trabalhant dins d'autres onglets.
-cfr-whatsnew-pip-cta = Ne saber mai
-
-## Permission Prompt
-
-cfr-whatsnew-permission-prompt-header = Mens de fenèstras surgissentas tediosas
-cfr-whatsnew-permission-prompt-body = Ara { -brand-shorter-name } bloca los sites que demandan automaticament de vos enviar de messatges sorgissents.
-cfr-whatsnew-permission-prompt-cta = Ne saber mai
-
-## Fingerprinter Counter
-
-# This string is displayed before a large numeral that indicates the total
-# number of tracking elements blocked. Don’t add $fingerprinterCount to your
-# localization, because it would result in the number showing twice.
-cfr-whatsnew-fingerprinter-counter-header =
-    { $fingerprinterCount ->
-        [one] Generador d’emprentas numericas
-       *[other] Generadors d’emprentas numericas
-    }
-cfr-whatsnew-fingerprinter-counter-body = { -brand-shorter-name } bloca fòrça generadors d’empruntas numericas qu’amassan d‘informacions tocant vòstre periferic e vòstras accions per crear un perfil publicitari vòstre.
-
-# Message variation when fingerprinters count is less than 10
-cfr-whatsnew-fingerprinter-counter-header-alt = Generadors d’emprentas numericas
-cfr-whatsnew-fingerprinter-counter-body-alt = { -brand-shorter-name } pòt blocar los generadors d’empruntas numericas qu’amassan d‘informacions tocant vòstre periferic e vòstras accions per crear un perfil publicitari vòstre.
-
-## Bookmark Sync
-
-cfr-doorhanger-sync-bookmarks-header = Accedissètz a aqueste onglet de vòstre mobil estant
-cfr-doorhanger-sync-bookmarks-body = Emportatz vòstres marcapaginas, senhals, istoric e mai pertot ont vos connectat a { -brand-product-name }.
-cfr-doorhanger-sync-bookmarks-ok-button = Activar { -sync-brand-short-name }
-    .accesskey = A
-
-## Login Sync
-
-cfr-doorhanger-sync-logins-header = Perdatz pas jamai vòstre senhal
-cfr-doorhanger-sync-logins-body = Gardatz e sincronizatz d’un biais segur los senhals de totes vòstres periferics.
-cfr-doorhanger-sync-logins-ok-button = Activar { -sync-brand-short-name }
-    .accesskey = A
-
-## Send Tab
-
-cfr-doorhanger-send-tab-header = Legissètz aquò en desplaçament
-cfr-doorhanger-send-tab-recipe-header = Emportatz aquesta recepta a la cosina
-cfr-doorhanger-send-tab-body = « Enviar l’onglet » vos permet de partejar aisidament aqueste ligam sus vòstre mobil o pertot ont siatz connectat a { -brand-product-name }.
-cfr-doorhanger-send-tab-ok-button = Ensajatz d’enviar un onglet
-    .accesskey = t
-
-## Firefox Send
-
-cfr-doorhanger-firefox-send-header = Partejatz aqueste PDF de forma segura
-cfr-doorhanger-firefox-send-body = Gardatz vòstres documents sensibles a l'abric dels agaches indiscrèts amb un chiframent del cap a la fin e un ligam que dispareis quand avètz acabat.
-cfr-doorhanger-firefox-send-ok-button = Ensajatz { -send-brand-name }
-    .accesskey = t
-
-## Social Tracking Protection
-
-cfr-doorhanger-socialtracking-ok-button = Veire las proteccions
-    .accesskey = V
-cfr-doorhanger-socialtracking-close-button = Tampar
-    .accesskey = T
-cfr-doorhanger-socialtracking-dont-show-again = Me mostrar pas mai de messatges coma aqueste
-    .accesskey = d
-cfr-doorhanger-socialtracking-heading = { -brand-short-name } a empachat un traçador de malhum social de vos pistar aquí
-cfr-doorhanger-socialtracking-description = Vòstra vida privada es importanta. Ara { -brand-short-name } bloca los elements de seguiment dels malhums socials mai populars, per limitar atal la quantitat de donadas que pòdon reculhir sus vòstra activitat en linha.
-cfr-doorhanger-fingerprinters-heading = { -brand-short-name } a blocat un traçador d’emprunta numerica sus aquesta pagina
-cfr-doorhanger-fingerprinters-description = Lo respècte de vòstra vida privada es importanta. Ara { -brand-short-name } bloca los generadors d’emprentas numericas, que reculhisson d’informacions unicas e identificablas de vòstre periferic per vos pistar.
-cfr-doorhanger-cryptominers-heading = { -brand-short-name } a blocat un minaire de criptomonedas sus aquesta pagina
-cfr-doorhanger-cryptominers-description = Vòstra vida privada es importanta. Ara { -brand-short-name } bloca los minaires de criptomonedas, qu’utilizan la poténcia de calcul de vòstre ordenador per minar de moneda numerica.
-
 ## Enhanced Tracking Protection Milestones
-
-# Variables:
-#   $blockedCount (Number) - The total count of blocked trackers. This number will always be greater than 1.
-#   $date (String) - The date we began recording the count of blocked trackers
-cfr-doorhanger-milestone-heading =
-    { $blockedCount ->
-        [one] { -brand-short-name } a blocat <b>{ $blockedCount }</b> traçador dempuèi { $date } !
-       *[other] { -brand-short-name } a blocat <b>{ $blockedCount }</b> traçadors dempuèi { $date } !
-    }
 
 # Variables:
 #   $blockedCount (Number) - The total count of blocked trackers. This number will always be greater than 1.
@@ -243,75 +96,17 @@ cfr-doorhanger-milestone-heading2 =
     }
 cfr-doorhanger-milestone-ok-button = O mostrar tot
     .accesskey = m
-
-## What’s New Panel Content for Firefox 76
-
-
-## Lockwise message
-
-cfr-whatsnew-lockwise-header = Creatz de senhals segurs facilament
-cfr-whatsnew-lockwise-body = Es complicat de pensar a un senhal unic e segur per cada compte. Pendent la creacion d’un senhal, seleccionatz lo camp de senhal per utilizar un senhal segur generat amb { -brand-shorter-name }.
-cfr-whatsnew-lockwise-icon-alt = icòna { -lockwise-brand-short-name }
-
-## Vulnerable Passwords message
-
-cfr-whatsnew-passwords-header = Obtenètz d’alertas al subjècte dels senhals vulnerables
-cfr-whatsnew-passwords-body = Los piratas sabon que lo monde tòrnan utilizar los meteisses senhals. S’avètz utilizat lo meteis senhal sus mantun site e qu’un d’aqueles sites a agut una divulgacion de donadas, veiretz una alèrta de { -lockwise-brand-short-name } per vos dire de cambiar vòstre senhal sus aqueles sites.
-cfr-whatsnew-passwords-icon-alt = icòna d’una clau pas fisabla
-
-## Picture-in-Picture fullscreen message
-
-cfr-whatsnew-pip-fullscreen-header = Passar la vidèo incrustada en plen ecran
-cfr-whatsnew-pip-fullscreen-body = Quand plaçatz una vidèo dins una fenèstra bandejanta, podètz ara doble-clicar dessús per la passar en plen ecran.
-cfr-whatsnew-pip-fullscreen-icon-alt = icòna vidèos incrustada
-
-## Protections Dashboard message
-
-cfr-whatsnew-protections-header = Proteccion en una ulhada
-cfr-whatsnew-protections-body = La teula de bòrd de las proteccions conten los rapòrts resumits tocant las divulgacions de donadas e la gestion dels senhals. D’ara endavant seguir lo nombre de divulgacions qu’avètz resolgudas e veire s’un de vòstres senhals salvats pòt aver èsser exposat a una pèrd de donadas.
-cfr-whatsnew-protections-cta-link = Veire la taula de bòrd de las proteccions
-cfr-whatsnew-protections-icon-alt = Icòna d’escut
-
-## Better PDF message
-
-cfr-whatsnew-better-pdf-header = Melhora experiéncia PDF
-cfr-whatsnew-better-pdf-body = Los documents se dobrisson ara dirèctament dins { -brand-short-name }, per contunhar vòstre trabalh fòra distraccion.
-
 cfr-doorhanger-milestone-close-button = Tampar
     .accesskey = T
 
-## What’s New Panel Content for Firefox 76
-## Protections Dashboard message
-
 ## DOH Message
 
-cfr-doorhanger-doh-body = Vòstra vida privada es importanta. Ara { -brand-short-name } encamina de forma segura vòstras requèstas DNS tant coma se pòt via un servici partenari per vos protegir pendent la navegacion.
+cfr-doorhanger-doh-body = Vòstra vida privada es importanta. Ara { -brand-short-name } encamina de fòrma segura vòstras requèstas DNS tant coma se pòt via un servici partenari per vos protegir pendent la navegacion.
 cfr-doorhanger-doh-header = Requèstas DNS mai seguras e chifradas
 cfr-doorhanger-doh-primary-button-2 = OK
     .accesskey = O
 cfr-doorhanger-doh-secondary-button = Desactivar
     .accesskey = D
-
-## Fission Experiment Message
-
-cfr-doorhanger-fission-body-approved = Vòstra vida privada es importanta. Ara { -brand-short-name } estrema, o embarra dins un nauc de sabla, los sites web entre eles, çò que fa venir mai dificil als piratas los senhals, numèros de carta de crèdit e d’autras informacions sensiblas.
-cfr-doorhanger-fission-header = Isolacion de site
-cfr-doorhanger-fission-primary-button = Òc, plan comprés
-    .accesskey = p
-cfr-doorhanger-fission-secondary-button = Ne saber mai
-    .accesskey = N
-
-## What's new: Cookies message
-
-## What's new: Media controls message
-
-## What's new: Search shortcuts
-
-## What's new: Cookies protection
-
-## What's new: Better bookmarking
-
-## What's new: Cross-site cookie tracking
 
 ## Full Video Support CFR message
 
@@ -319,3 +114,126 @@ cfr-doorhanger-video-support-body = Las vidèos d’aqueste site poirián se leg
 cfr-doorhanger-video-support-header = Actualizatz { -brand-short-name } per legir la vidèo
 cfr-doorhanger-video-support-primary-button = Actualizar ara
     .accesskey = A
+
+## VPN promotion dialog for public Wi-Fi users
+##
+## If a user is detected to be on a public Wi-Fi network, they are given a
+## bit of info about how to improve their privacy and then offered a button
+## to the Mozilla VPN page and a link to dismiss the dialog.
+
+# This header text can be explicitly wrapped.
+spotlight-public-wifi-vpn-header = Sembla qu’utilizatz un Wi-Fi public
+spotlight-public-wifi-vpn-body = Per amagar vòstre emplaçament e activitat de navegacion, pensatz al ret privat virtual. Vos ajudarà a gardar privada vòstra navegacion quand navegatz a partir de lòcs publics coma los aeropòrts e cafetariás.
+spotlight-public-wifi-vpn-primary-button = Demoratz privat amb { -mozilla-vpn-brand-name }
+    .accesskey = D
+spotlight-public-wifi-vpn-link = Pas ara
+    .accesskey = a
+
+## Emotive Continuous Onboarding
+
+spotlight-better-internet-header = Un melhor internet comença amb vos
+spotlight-better-internet-body = Quand utilizatz { -brand-short-name }, vos manifestatz per un internet dubèrt e accessible qu’es melhor per totòm.
+spotlight-peace-mind-header = Asseguram vòstra proteccion
+spotlight-peace-mind-body = Cada mes, { -brand-short-name } bloca una mejana de mai de 3 000 traçadors per utilizaire. Pr’amor que res, notadament los prejudicis a la vida privada coma los traçadors, deuriá pas se trobar entre vos e çò bon d’Internet.
+spotlight-pin-primary-button =
+    { PLATFORM() ->
+        [macos] Gardar al Dock
+       *[other] Penjar a la barra de prètzfaches
+    }
+spotlight-pin-secondary-button = Pas ara
+
+## MR2022 Background Update Windows native toast notification strings.
+##
+## These strings will be displayed by the Windows operating system in
+## a native toast, like:
+##
+## <b>multi-line title</b>
+## multi-line text
+## <img>
+## [ primary button ] [ secondary button ]
+##
+## The button labels are fitted into narrow fixed-width buttons by
+## Windows and therefore must be as narrow as possible.
+
+mr2022-background-update-toast-title = { -brand-short-name } novèl. Mai privat. Mens de traçadors. Cap de compromés.
+mr2022-background-update-toast-text = Ensajatz lo novèl { -brand-short-name } ara, mes a nivèl amb una proteccion fòrta contra lo seguiment.
+# This button label will be fitted into a narrow fixed-width button by
+# Windows. Try to not exceed the width of the English text (compare it
+# using a variable font like Arial): the button can only fit 1-2
+# additional characters, exceeding characters will be truncated.
+mr2022-background-update-toast-primary-button-label = Lançar { -brand-shorter-name } ara
+# This button label will be fitted into a narrow fixed-width button by
+# Windows. Try to not exceed the width of the English text (compare it using a
+# variable font like Arial): the button can only fit 1-2 additional characters,
+# exceeding characters will be truncated.
+mr2022-background-update-toast-secondary-button-label = Lo me remembrar mai tard
+
+## Firefox View CFR
+
+firefoxview-cfr-primarybutton = Ensajar
+    .accesskey = E
+firefoxview-cfr-secondarybutton = Pas ara
+    .accesskey = P
+firefoxview-cfr-header-v2 = Tornatz ont èretz
+firefoxview-cfr-body-v2 = Tornatz trapar los onglets onglets tampats fa pas res, e basculatz d’un aparelh a l’autre amb { -firefoxview-brand-name }.
+
+## Firefox View Spotlight
+
+firefoxview-spotlight-promo-title = Digatz bonjorn a { -firefoxview-brand-name }
+# “Poof” refers to the expression to convey when something or someone suddenly disappears, or in this case, reappears. For example, “Poof, it’s gone.”
+firefoxview-spotlight-promo-subtitle = Avètz enveja de trapar un onglet dobèrt sus vòstre mobil ? Recuperatz-lo. Vos fa mestièr aquel site ? Shtac, es dins { -firefoxview-brand-name }.
+firefoxview-spotlight-promo-primarybutton = Veire coma fonciona
+firefoxview-spotlight-promo-secondarybutton = Passar
+
+## Colorways expiry reminder CFR
+
+colorways-cfr-primarybutton = Causir un colorit
+    .accesskey = C
+# "shades" refers to the different color options available to users in colorways.
+colorways-cfr-body = Botatz de color a vòstre navegador amb las tintas exclusivas de { -brand-short-name } inspiradas de voses qu’influencièron nòstra cultura.
+colorways-cfr-header-28days = Los colorits « Voses independentas » expiran lo 16 de de genièr
+colorways-cfr-header-14days = Los colorits « Voses independentas » expiran d’aquí doas setmanas
+colorways-cfr-header-7days = Los colorits « Voses independentas » expiran aquesta setmana
+colorways-cfr-header-today = Los colorits « Voses independentas » expiran uèi
+
+## Cookie Banner Handling CFR
+
+cfr-cbh-header = Permetre a { -brand-short-name } de regetar las demandas de cookies ?
+cfr-cbh-body = { -brand-short-name } pòt regetar automaticament las demandas de cookies.
+cfr-cbh-confirm-button = Regetar las bandièras de cookies
+    .accesskey = R
+cfr-cbh-dismiss-button = Mai tard
+    .accesskey = M
+
+## These strings are used in the Fox doodle Pin/set default spotlights
+
+july-jam-headline = Asseguram vòstra proteccion
+july-jam-body = Cada mes, { -brand-short-name } bloca una mejana de 3 000 traçadors per utilizaire, per tal qu’ajatz accès a un Internet segur e rapid.
+july-jam-set-default-primary = Dobrir mos ligams dins { -brand-short-name }
+fox-doodle-pin-headline = Urós de vos tornar veire !
+# “indie” is short for the term “independent”.
+# In this instance, free from outside influence or control.
+fox-doodle-pin-body = Vos rapelam que podètz gardar vòstre navegador independent preferit a un sol clic.
+fox-doodle-pin-primary = Dobrir mos ligams dins { -brand-short-name }
+fox-doodle-pin-secondary = Pas ara
+
+## These strings are used in the Set Firefox as Default PDF Handler for Existing Users experiment
+
+set-default-pdf-handler-headline = <strong>Vòstres fichièrs PDF se dobrisson d’ara enlà dins { -brand-short-name }.</strong> Modificatz o signatz de formularis dirèctament del navegador estant. Per modificar aqueste compòrtament, cercatz « PDF » als paramètres.
+set-default-pdf-handler-primary = Comprés !
+
+## FxA sync CFR
+
+fxa-sync-cfr-header = Sètz per aver un aparelh novèl lèu ?
+fxa-sync-cfr-body = Asseguratz-vos que vòstres darrièrs marcapaginas, senhals e onglets vengan amb vos cada còp que dobrissètz un navegador { -brand-product-name } novèl.
+fxa-sync-cfr-primary = Ne saber mai
+    .accesskey = N
+fxa-sync-cfr-secondary = Lo me remembrar mai tard
+    .accesskey = r
+
+## Device Migration FxA Spotlight
+
+device-migration-fxa-spotlight-header = Utilizatz un aparelh mai ancian ?
+device-migration-fxa-spotlight-body = Salvagardatz vòstras donadas per vos assegurar de pèrdre pas d’informacions importantas coma los marcapaginas o los senhals, mai que mai se cambiatz d’aparelh.
+device-migration-fxa-spotlight-primary-button = Cossí salvagardar las donadas
+device-migration-fxa-spotlight-link = Lo me remembrar mai tard

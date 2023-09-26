@@ -2,22 +2,35 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-pref-page-title =
-    { PLATFORM() ->
-        [windows] Опции
-       *[other] Поставки
-    }
+do-not-track-learn-more = Дознајте повеќе
+do-not-track-option-always =
+    .label = Секогаш
+
+settings-page-title = Поставки
+
+managed-notice = Вашата организација управува со вашиот прелистувач.
+
+category-list =
+    .aria-label = Категории
 
 pane-general-title = Централа
 category-general =
     .tooltiptext = { pane-general-title }
 
+pane-home-title = Почетна
+category-home =
+    .tooltiptext = { pane-home-title }
+
 pane-search-title = Пребарување
 category-search =
     .tooltiptext = { pane-search-title }
 
+pane-privacy-title = Приватност и безбедност
 category-privacy =
     .tooltiptext = { pane-privacy-title }
+
+category-sync3 =
+    .tooltiptext = { pane-sync-title3 }
 
 help-button-label = Поддршка за { -brand-short-name }
 
@@ -32,7 +45,9 @@ close-button =
 feature-enable-requires-restart = { -brand-short-name } мора да се рестартира за да се овозможи оваа особеност.
 feature-disable-requires-restart = { -brand-short-name } мора да се рестартира за да се оневозможи оваа особеност.
 should-restart-title = Рестарирај го { -brand-short-name }
+should-restart-ok = Рестарирај го { -brand-short-name } сега
 cancel-no-restart-button = Откажи
+restart-later = Рестартирај подоцна
 
 ## Extension Control Notifications
 ##
@@ -45,17 +60,26 @@ cancel-no-restart-button = Откажи
 ##   $name (String): name of the extension
 
 
+## Extension Control Notifications
+##
+## These strings are used to inform the user
+## about changes made by extensions to browser settings.
+##
+## <img data-l10n-name="icon"/> is going to be replaced by the extension icon.
+##
+## Variables:
+##   $name (string) - Name of the extension
+
+
 ## Preferences UI Search Results
 
+search-results-header = Резултати од пребарувањето
+
+search-results-help-link = Треба помош? Проверете на <a data-l10n-name="url">Поддршка за { -brand-short-name }</a>
 
 ## General Section
 
 startup-header = Стартување
-
-# { -brand-short-name } will be 'Firefox Developer Edition',
-# since this setting is only exposed in Firefox Developer Edition
-separate-profile-mode =
-    .label = Дозволи { -brand-short-name } и Firefox да работат во исто време
 
 is-default = { -brand-short-name } е вашиот основен прелистувач
 is-not-default = { -brand-short-name } не е вашиот основен прелистувач
@@ -72,7 +96,14 @@ show-tabs-in-taskbar =
 
 browser-containers-learn-more = Дознајте повеќе
 
+browser-containers-settings =
+    .label = Поставки…
+    .accesskey = и
+
 containers-disable-alert-title = Да ги затворам сите контејнерски јазичиња?
+
+## Variables:
+##   $tabCount (number) - Number of tabs
 
 containers-disable-alert-ok-button =
     { $tabCount ->
@@ -80,14 +111,22 @@ containers-disable-alert-ok-button =
        *[other] Затвори { $tabCount } контејнерски јазичиња
     }
 
-containers-remove-cancel-button = Не го бриши овој контејнер
+##
 
+containers-disable-alert-cancel-button = Задржи овозможено
+
+containers-remove-cancel-button = Не го бриши овој контејнер
 
 ## General Section - Language & Appearance
 
 language-and-appearance-header = Јазик и изглед
 
-fonts-and-colors-header = Фонтови и бои
+preferences-web-appearance-choice-light = Светла
+preferences-web-appearance-choice-dark = Темна
+
+preferences-colors-header = Бои
+
+preferences-fonts-header = Фонтови
 
 default-font = Основен фонт
     .accesskey = Д
@@ -98,10 +137,6 @@ advanced-fonts =
     .label = Напредно…
     .accesskey = Н
 
-colors-settings =
-    .label = Бои…
-    .accesskey = Б
-
 language-header = Јазик
 
 choose-language-description = Изберете го посакуваниот јазик за прикажување на страници
@@ -110,16 +145,25 @@ choose-button =
     .label = Изберете…
     .accesskey = О
 
+confirm-browser-language-change-button = Примени и рестартирај
+
+fx-translate-web-pages = { -translations-brand-name }
+
 # The <img> element is replaced by the logo of the provider
 # used to provide machine translations for web pages.
 translate-attribution = Преводи на <img data-l10n-name="logo"/>
 
+translate-exceptions =
+    .label = Исклучоци…
+    .accesskey = х
+
 ## General Section - Files and Applications
+
+files-and-applications-title = Датотеки и апликации
 
 download-header = Преземања
 
-download-save-to =
-    .label = Снимај ги датотеките во
+download-save-where = Снимај ги датотеките во
     .accesskey = м
 
 download-choose-folder =
@@ -133,6 +177,11 @@ download-choose-folder =
             [macos] е
            *[other] з
         }
+
+applications-header = Апликации
+
+applications-filter =
+    .placeholder = Пребарувајте типови на датотеки или апликации
 
 applications-type-column =
     .label = Тип на содржина
@@ -166,11 +215,6 @@ applications-manage-app =
     .label = Детали за програмата…
 applications-always-ask =
     .label = Секогаш прашај
-applications-type-pdf = Формат за преносн документи (PDF)
-
-# Variables:
-#   $type (String) - the MIME type (e.g application/binary)
-applications-type-pdf-with-type = { applications-type-pdf } ({ $type })
 
 # Variables:
 #   $type-description (String) - Description of the type (e.g "Portable Document Format")
@@ -195,6 +239,9 @@ applications-action-save-label =
 applications-use-app-label =
     .value = { applications-use-app.label }
 
+applications-open-inapp-label =
+    .value = { applications-open-inapp.label }
+
 applications-always-ask-label =
     .value = { applications-always-ask.label }
 
@@ -203,6 +250,9 @@ applications-use-app-default-label =
 
 applications-use-other-label =
     .value = { applications-use-other.label }
+
+applications-use-os-default-label =
+    .value = { applications-use-os-default.label }
 
 ##
 
@@ -238,6 +288,12 @@ browsing-use-cursor-navigation =
     .label = Овозможи прелистување со тастатура
     .accesskey = в
 
+browsing-picture-in-picture-learn-more = Дознајте повеќе
+
+browsing-media-control-learn-more = Дознајте повеќе
+
+browsing-cfr-recommendations-learn-more = Дознајте повеќе
+
 ## General Section - Proxy
 
 network-proxy-connection-settings =
@@ -267,22 +323,23 @@ choose-bookmark =
 
 ## Home Section - Firefox Home Content Customization
 
-home-prefs-topsites-header =
-    .label = Популарни мрежни места
+home-prefs-shortcuts-header =
+    .label = Кратенки
 
 ## Variables:
 ##  $provider (String): Name of the corresponding content provider, e.g "Pocket".
 
-# Variables:
-#  $provider (String): Name of the corresponding content provider, e.g "Pocket".
+
+## Variables:
+##  $provider (string) - Name of the corresponding content provider, e.g "Pocket".
+
 home-prefs-recommended-by-header =
     .label = Препорачано од { $provider }
 
 ##
 
+home-prefs-recommended-by-learn-more = Како работи
 
-home-prefs-highlights-header =
-    .label = Интереси
 home-prefs-highlights-options-bookmarks =
     .label = Обележувачи
 
@@ -301,9 +358,8 @@ search-suggestions-option =
     .label = Прикажувај предлог-пребарувања
     .accesskey = s
 
-search-suggestions-cant-show = Предлог-пребарувањата нема да се прикажуваат во резултатите во адресната лента бидејќи { -brand-short-name } е прилагоден никогаш да не ја снима историјата на прелистување.
 
-search-one-click-header = Пребарувачи на еден клик
+search-suggestions-cant-show = Предлог-пребарувањата нема да се прикажуваат во резултатите во адресната лента бидејќи { -brand-short-name } е прилагоден никогаш да не ја снима историјата на прелистување.
 
 search-one-click-desc = Изберете ги алтернативните пребарувачи кои се прикажуваат под лентата за адреси и пребарување при внес на нов клучен збор.
 
@@ -337,23 +393,30 @@ containers-add-button =
     .label = Додај нов контејнер
     .accesskey = А
 
-containers-preferences-button =
+containers-settings-button =
     .label = Поставки
-
 containers-remove-button =
     .label = Избриши
-
-## Sync Section - Signed out
-
 
 ## Firefox Account - Signed out. Note that "Sync" and "Firefox Account" are now
 ## more discrete ("signed in" no longer means "and sync is connected").
 
 
-## Sync Section - Signed in
+## Firefox account - Signed out. Note that "Sync" and "Firefox account" are now
+## more discrete ("signed in" no longer means "and sync is connected").
 
 
 ## Firefox Account - Signed in
+
+
+## Firefox account - Signed in
+
+
+## Variables
+## $email (string) - Email used for Firefox account
+
+
+##
 
 
 ## Sync section - enabling or disabling sync.
@@ -361,6 +424,12 @@ containers-remove-button =
 
 ## The list of things currently syncing.
 
+sync-currently-syncing-history = Историја
+sync-currently-syncing-tabs = Отворени јазичиња
+sync-currently-syncing-addresses = Адреси
+sync-currently-syncing-creditcards = Кредитни картички
+sync-currently-syncing-addons = Додатоци
+sync-currently-syncing-settings = Поставки
 
 ## The "Choose what to sync" dialog.
 
@@ -380,10 +449,17 @@ sync-device-name-cancel =
     .label = Откажи
     .accesskey = к
 
+## These strings are shown in a desktop notification after the
+## user requests we resend a verification email.
+
+sync-verification-sent-title = Барањето за потврда е испратено
+# Variables:
+#   $email (String): Email address of user's Firefox account.
+sync-verification-sent-body = Врска за потврда беше испратена на { $email }.
+sync-verification-not-sent-title = Не можам да испратам барање за потврда
+sync-verification-not-sent-body = Не сме во можност да испратиме барање за потврда преку е-пошта во овој момент. Ве молиме обидете се подоцна повторно.
+
 ## Privacy Section
-
-
-## Privacy Section - Forms
 
 
 ## Privacy Section - Logins and Passwords
@@ -395,18 +471,18 @@ forms-exceptions =
 forms-saved-logins =
     .label = Снимени најави …
     .accesskey = L
-forms-master-pw-use =
-    .label = Користи главна лозинка
-    .accesskey = о
+# This string uses the former name of the Primary Password feature
+# ("Master Password" in English) so that the preferences can be found
+# when searching for the old name. The accesskey is unused.
 forms-master-pw-change =
     .label = Промени ја главната лозинка…
     .accesskey = г
 
-forms-master-pw-fips-title = Моментално сте во FIPS режим. FIPS бара главна лозинка која не е празна.
-
 forms-master-pw-fips-desc = Промената на лозинката не успеа
 
 ## OS Authentication dialog
+
+master-password-os-auth-dialog-caption = { -brand-full-name }
 
 ## Privacy Section - History
 
@@ -440,6 +516,9 @@ history-clear-on-close-settings =
 ## Privacy Section - Site Data
 
 
+## Privacy Section - Cookie Banner Handling
+
+
 ## Privacy Section - Address Bar
 
 
@@ -452,6 +531,10 @@ history-clear-on-close-settings =
 
 ##
 
+
+# The tcp-rollout strings are no longer used for the rollout but for tcp-by-default in the standard section
+
+
 ## Privacy Section - Tracking
 
 
@@ -460,10 +543,6 @@ history-clear-on-close-settings =
 permissions-block-popups =
     .label = Блокирај скокачки прозорци
     .accesskey = л
-
-permissions-block-popups-exceptions =
-    .label = Исклучоци…
-    .accesskey = с
 
 permissions-addon-exceptions =
     .label = Исклучоци…
@@ -475,12 +554,12 @@ collection-privacy-notice = Белешка за приватност
 
 collection-health-report-link = Дознај повеќе
 
-collection-backlogged-crash-reports-link = Дознај повеќе
-
 ## Privacy Section - Security
 ##
 ## It is important that wording follows the guidelines outlined on this page:
 ## https://developers.google.com/safe-browsing/developers_guide_v2#AcceptableUsage
+
+security-header = Безбедност
 
 security-enable-safe-browsing =
     .label = Блокирај ги опасните и измамнички содржини
@@ -496,9 +575,13 @@ certs-header = Сертификати
 
 ## Privacy Section - HTTPS-Only
 
+httpsonly-learn-more = Дознајте повеќе
+
+## DoH Section
+
+
 ## The following strings are used in the Download section of settings
 
 desktop-folder-name = Работна површина
 downloads-folder-name = Преземања
 choose-download-folder-title = Изберете папка за преземања:
-

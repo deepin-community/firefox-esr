@@ -11,6 +11,12 @@ reload-tab =
 select-all-tabs =
     .label = Alle Tabs auswählen
     .accesskey = A
+tab-context-play-tab =
+    .label = Tab wiedergeben
+    .accesskey = w
+tab-context-play-tabs =
+    .label = Tabs wiedergeben
+    .accesskey = w
 duplicate-tab =
     .label = Tab klonen
     .accesskey = k
@@ -48,12 +54,9 @@ unpin-selected-tabs =
 bookmark-selected-tabs =
     .label = Tabs als Lesezeichen hinzufügen…
     .accesskey = L
-bookmark-tab =
-    .label = Tab als Lesezeichen hinzufügen
+tab-context-bookmark-tab =
+    .label = Tab als Lesezeichen hinzufügen…
     .accesskey = L
-reopen-in-container =
-    .label = In Tab-Umgebung öffnen
-    .accesskey = U
 tab-context-open-in-new-container-tab =
     .label = In neuem Tab in Umgebung öffnen
     .accesskey = U
@@ -69,30 +72,9 @@ move-to-new-window =
 tab-context-close-multiple-tabs =
     .label = Mehrere Tabs schließen
     .accesskey = M
-tab-context-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Geschlossenen Tab wiederherstellen
-           *[other] Geschlossene Tabs wiederherstellen
-        }
-    .accesskey = G
-close-tab =
-    .label = Tab schließen
-    .accesskey = c
-close-tabs =
-    .label = Tabs schließen
-    .accesskey = c
-move-tabs =
-    .label = Tabs verschieben
-    .accesskey = v
-move-tab =
-    .label = Tab verschieben
-    .accesskey = v
 tab-context-share-url =
     .label = Teilen
     .accesskey = T
-tab-context-share-more =
-    .label = Mehr…
 
 ## Variables:
 ##  $tabCount (Number): the number of tabs that are affected by the action.
@@ -104,14 +86,6 @@ tab-context-reopen-closed-tabs =
            *[other] Geschlossene Tabs wieder öffnen
         }
     .accesskey = G
-tab-context-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Tab schließen
-            [one] Tab schließen
-           *[other] Tabs schließen
-        }
-    .accesskey = c
 tab-context-close-n-tabs =
     .label =
         { $tabCount ->
@@ -128,3 +102,11 @@ tab-context-move-tabs =
            *[other] Tabs verschieben
         }
     .accesskey = v
+
+tab-context-send-tabs-to-device =
+    .label =
+        { $tabCount ->
+            [one] Tab an Gerät senden
+           *[other] { $tabCount } Tabs an Gerät senden
+        }
+    .accesskey = s

@@ -5,9 +5,9 @@
 
 ## Strings used for device manager
 
-devmgr =
+devmgr-window =
     .title = Kinuk'samajel taq okisaxel
-    .style = width: 67em; height: 32em;
+    .style = min-width: 67em; min-height: 32em;
 
 devmgr-devlist =
     .label = Taq rujuperaj jikomal chuqa' taq okisaxel
@@ -115,8 +115,6 @@ devinfo-label =
 
 devinfo-serialnum =
     .label = Rucholajem rajilab'al
-
-fips-nonempty-password-required = Ri FIPS b'anikil k'o chi k'o jun ajtij ewan rutzij chi kijujunal ri okisaxel richin jikomal. Tajikib'a' ri ewan tzij chuwäch natzïj re rub'anikil re'.
 
 fips-nonempty-primary-password-required = Ri FIPS b'anikil k'o chi k'o jun Nab'ey Ewan Rutzij chi kijujunal ri okisaxel richin jikomal. Tajikib'a' ri ewan tzij chuwäch natzïj re FIPS rub'anikil re'.
 unable-to-toggle-fips = Man tikirel ta nijal ri FIPS rub'eyal ri okisaxel richin jikomal. Nichiab'ëx chawe chi katel chuqa' tatikirisaj chik ri chokoy.

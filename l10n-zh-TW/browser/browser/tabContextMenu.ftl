@@ -11,6 +11,12 @@ reload-tab =
 select-all-tabs =
     .label = 選擇所有分頁
     .accesskey = S
+tab-context-play-tab =
+    .label = 播放分頁
+    .accesskey = P
+tab-context-play-tabs =
+    .label = 播放分頁
+    .accesskey = y
 duplicate-tab =
     .label = 複製分頁
     .accesskey = D
@@ -48,12 +54,9 @@ unpin-selected-tabs =
 bookmark-selected-tabs =
     .label = 將分頁加入書籤…
     .accesskey = k
-bookmark-tab =
-    .label = 將分頁加入書籤
+tab-context-bookmark-tab =
+    .label = 將分頁加入書籤…
     .accesskey = B
-reopen-in-container =
-    .label = 使用容器開啟
-    .accesskey = e
 tab-context-open-in-new-container-tab =
     .label = 用新容器分頁開啟
     .accesskey = e
@@ -69,30 +72,9 @@ move-to-new-window =
 tab-context-close-multiple-tabs =
     .label = 關閉多個分頁
     .accesskey = M
-tab-context-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] 復原已關閉分頁
-           *[other] 復原已關閉分頁
-        }
-    .accesskey = U
-close-tab =
-    .label = 關閉分頁
-    .accesskey = c
-close-tabs =
-    .label = 關閉分頁
-    .accesskey = S
-move-tabs =
-    .label = 移動分頁
-    .accesskey = v
-move-tab =
-    .label = 移動分頁
-    .accesskey = v
 tab-context-share-url =
     .label = 分享
     .accesskey = h
-tab-context-share-more =
-    .label = 更多…
 
 ## Variables:
 ##  $tabCount (Number): the number of tabs that are affected by the action.
@@ -104,12 +86,6 @@ tab-context-reopen-closed-tabs =
            *[other] 回復關閉的 { $tabCount } 個分頁
         }
     .accesskey = o
-tab-context-close-tabs =
-    .label =
-        { $tabCount ->
-           *[other] 關閉分頁
-        }
-    .accesskey = C
 tab-context-close-n-tabs =
     .label =
         { $tabCount ->
@@ -123,3 +99,11 @@ tab-context-move-tabs =
            *[other] 移動分頁
         }
     .accesskey = v
+
+tab-context-send-tabs-to-device =
+    .label =
+        { $tabCount ->
+            [1] 將分頁傳送到其他裝置
+           *[other] 將 { $tabCount } 個分頁傳送到其他裝置
+        }
+    .accesskey = n

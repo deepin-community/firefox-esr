@@ -23,6 +23,8 @@ profile-selection-delete-button =
     .label = Obriši profil…
     .accesskey = O
 
+profile-selection-conflict-message = Druga kopija { -brand-product-name }a je napravila promjene u vašim profilima. Morate restartovati { -brand-short-name } prije no što napravite dodatne promjene.
+
 ## Messages used in the profile manager
 
 profile-manager-description = { -brand-short-name } pohranjuje informacije o vašim postavkama i drugim korisničkim stavkama u vašem korisničkom profilu.

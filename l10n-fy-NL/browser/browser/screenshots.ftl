@@ -2,13 +2,12 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-screenshots-context-menu = Skermôfdruk meitsje
-
-screenshots-my-shots-button = Myn skermôfdrukken
-
 screenshot-toolbarbutton =
     .label = Skermôfdruk
     .tooltiptext = In skermôfdruk meitsje
+
+screenshot-shortcut =
+    .key = S
 
 screenshots-instructions = Sleep of klik op de side om in gebiet te selektearjen. Druk op ESC om te annulearjen.
 screenshots-cancel-button = Annulearje
@@ -18,6 +17,14 @@ screenshots-download-button = Downloade
 screenshots-download-button-tooltip = Skermôfbylding downloade
 screenshots-copy-button = Kopiearje
 screenshots-copy-button-tooltip = Skermôfbylding nei klamboerd kopiearje
+screenshots-download-button-title =
+    .title = Skermôfbylding downloade
+screenshots-copy-button-title =
+    .title = Skermôfbylding nei klamboerd kopiearje
+screenshots-cancel-button-title =
+    .title = Annulearje
+screenshots-retry-button-title =
+    .title = Skermôfdruk opnij probearje
 
 screenshots-meta-key =
     { PLATFORM() ->
@@ -41,8 +48,6 @@ screenshots-login-error-details = Wy koene jo skermôfdruk net bewarje, omdat de
 screenshots-unshootable-page-error-title = It is net mooglik in skermôfdruk fan dizze side te meitsjen.
 screenshots-unshootable-page-error-details = Dit is net in standert webside, dus jo kinne der net in skermôfdruk fan meitsje.
 
-screenshots-self-screenshot-error-title = Jo kinne net in skermôfdruk meitsje fan in { -screenshots-brand-name }-side!
-
 screenshots-empty-selection-error-title = Jo seleksje is te lyts
 
 screenshots-private-window-error-title = { -screenshots-brand-name } is útskeakele yn Priveenavigaasjemodus
@@ -50,3 +55,6 @@ screenshots-private-window-error-details = Sorry foar it ûngemak. Foar takomsti
 
 screenshots-generic-error-title = Oeps! { -screenshots-brand-name } is yn 'e war.
 screenshots-generic-error-details = Wy binne net wis wat der krekt bard is. Wolle jo it nochris probearje of in skermôfdruk fan in oare side meitsje?
+
+screenshots-too-large-error-title = Jo skermôfdruk is bysnien, omdat it te grut wie
+screenshots-too-large-error-details = Probearje in gebied te selektearjen dat lytser is as 32.700 pixels oan de langste side of in totaal oerflak fan 124.900.000 pixels.

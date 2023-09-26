@@ -10,11 +10,6 @@ crashes-id = Izvještaj broj
 crashes-send-date = Poslano
 crashes-all-reports = Svi izvještaji o rušenju
 crashes-no-config = Ova aplikacija nije konfigurisana da prikazuje izvještaje o rušenju.
-extensions-title = Ekstenzije
-extensions-name = Naziv
-extensions-enabled = Omogućen
-extensions-version = Verzija
-extensions-id = ID
 support-addons-name = Naziv
 support-addons-version = Verzija
 support-addons-id = ID
@@ -68,6 +63,7 @@ app-basics-location-service-key-google = Google Location Service Key
 app-basics-safebrowsing-key-google = Google Safebrowsing Key
 app-basics-key-mozilla = Mozilla Location Service Key
 app-basics-safe-mode = Sigurni režim
+
 show-dir-label =
     { PLATFORM() ->
         [macos] Prikaži u Finderu
@@ -113,8 +109,6 @@ sandbox-sys-call-tid = TID
 sandbox-sys-call-proc-type = Tip procesa
 sandbox-sys-call-number = Syscall
 sandbox-sys-call-args = Argumenti
-safe-mode-title = Probaj sigurni režim
-restart-in-safe-mode-label = Restartuj sa onemogućenim add-onima…
 
 ## Media titles
 
@@ -136,6 +130,8 @@ media-device-latency = Kašnjenje
 media-capabilities-title = Mogućnosti medija
 # List all the entries of the database.
 media-capabilities-enumerate = Enumeriraj bazu podataka
+
+## Codec support table
 
 ##
 
@@ -263,19 +259,12 @@ webgl2-renderer = WebGL 2 Driver Renderer
 webgl2-version = WebGL 2 Driver verzija
 webgl2-driver-extensions = WebGL 2 Driver ekstenzije
 webgl2-extensions = WebGL 2 ekstenzije
-blocklisted-bug = Blokiran zbog poznatih problema
-
-# Variables
-# $bugNumber (string) - String of bug number from Bugzilla
-bug-link = bug { $bugNumber }
 
 # Variables
 # $failureCode (string) - String that can be searched in the source tree.
 unknown-failure = Blokiran; kod neuspjeha { $failureCode }
 
 d3d11layers-crash-guard = D3D11 kompozitor
-d3d11video-crash-guard = D3D11 Video dekoder
-d3d9video-crash-guard = D3D9 Video dekoder
 glcontext-crash-guard = OpenGL
 
 reset-on-next-restart = Resetuj vrijednosti kod sljedećeg restarta
@@ -313,14 +302,6 @@ launcher-process-status-unknown = Nepoznat status
 # $remoteWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
 multi-process-windows = { $remoteWindows }/{ $totalWindows }
-multi-process-status-0 = Korisnički omogućeno
-multi-process-status-1 = Izvorno omogućeno
-multi-process-status-2 = Onemogućeno
-multi-process-status-4 = Onemogućili alati pristupačnosti
-multi-process-status-6 = Onemogućio nepodržani unos teksta
-multi-process-status-7 = Onemogućili add-oni
-multi-process-status-8 = Prisilno onemogućeno
-multi-process-status-unknown = Nepoznat status
 
 async-pan-zoom = Asinhrono pomicanje/uvećanje
 apz-none = ništa

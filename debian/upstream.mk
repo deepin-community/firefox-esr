@@ -42,19 +42,22 @@ DIST = unknown
 ifneq (,$(filter experimental,$(DEB_DISTRIBUTION)))
 DIST = experimental
 endif
-ifneq (,$(filter testing% bullseye% unstable sid,$(DEB_DISTRIBUTION)))
-DIST = bullseye
+ifneq (,$(filter testing% unstable sid,$(DEB_DISTRIBUTION)))
+DIST = trixie
 endif
 ifneq (,$(filter bpo% deb%,$(DEBIAN_RELEASE_EXTRA)))
 DEBIAN_TARGET := $(subst bpo,,$(subst deb,,$(DEBIAN_RELEASE_EXTRA)))
-ifneq (,$(filter 9%,$(DEBIAN_TARGET)))
-DIST = stretch
-endif
 ifneq (,$(filter 10%,$(DEBIAN_TARGET)))
 DIST = buster
 endif
 ifneq (,$(filter 11%,$(DEBIAN_TARGET)))
 DIST = bullseye
+endif
+ifneq (,$(filter 12%,$(DEBIAN_TARGET)))
+DIST = bookworm
+endif
+ifneq (,$(filter 13%,$(DEBIAN_TARGET)))
+DIST = trixie
 endif
 endif
 
@@ -161,6 +164,6 @@ $(SOURCE_TARBALL_LOCATION)/$(SOURCE_TARBALL): debian/source.filter
 	debian/repack.py -o $@ $(SOURCE_URL)
 
 $(L10N_TARBALLS): $(SOURCE_TARBALL_LOCATION)/$(SOURCE_TARBALL:%.orig.tar.$(SOURCE_TARBALL_EXT)=%.orig-l10n-%.tar.bz2): debian/l10n.filter
-	debian/repack.py -o $@ -t $* -f debian/l10n.filter $(L10N_REPO)/$*/archive/$(call L10N_REV,$*).tar.bz2
+	debian/repack.py -o $@ -t $* -f debian/l10n.filter $(L10N_REPO)/$*/archive/$(call L10N_REV,$*).zip
 endif
 .PHONY: download

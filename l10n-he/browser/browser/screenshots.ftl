@@ -2,13 +2,12 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-screenshots-context-menu = צילום מסך
-
-screenshots-my-shots-button = צילומי המסך שלי
-
 screenshot-toolbarbutton =
     .label = צילום מסך
     .tooltiptext = לקיחת צילום מסך
+
+screenshot-shortcut =
+    .key = S
 
 screenshots-instructions = נא לגרור או ללחוץ על הדף כדי לבחור תחום או על ESC לביטול.
 screenshots-cancel-button = ביטול
@@ -18,6 +17,14 @@ screenshots-download-button = הורדה
 screenshots-download-button-tooltip = הורדת צילום מסך
 screenshots-copy-button = העתקה
 screenshots-copy-button-tooltip = העתקת צילום מסך ללוח העריכה
+screenshots-download-button-title =
+    .title = הורדת צילום מסך
+screenshots-copy-button-title =
+    .title = העתקת צילום מסך ללוח העריכה
+screenshots-cancel-button-title =
+    .title = ביטול
+screenshots-retry-button-title =
+    .title = ניסיון חוזר לצילום מסך
 
 screenshots-meta-key =
     { PLATFORM() ->
@@ -41,8 +48,6 @@ screenshots-login-error-details = אין אפשרות לשמור את צילום
 screenshots-unshootable-page-error-title = לא ניתן לצלם דף זה.
 screenshots-unshootable-page-error-details = דף זה אינו דף אינטרנט תקני, ולכן לא ניתן היה לצלם אותו.
 
-screenshots-self-screenshot-error-title = לא ניתן לצלם את הדף של { -screenshots-brand-name } עצמו!
-
 screenshots-empty-selection-error-title = הבחירה שלך קטנה מידי
 
 screenshots-private-window-error-title = ‏{ -screenshots-brand-name } מנוטרל במצב גלישה פרטית
@@ -50,3 +55,6 @@ screenshots-private-window-error-details = מצטערים על אי הנוחות
 
 screenshots-generic-error-title = אויש! { -screenshots-brand-name } ירד מהפסים.
 screenshots-generic-error-details = אנחנו לא בטוחים מה קרה פה הרגע. אכפת לך לנסות שוב או לצלם דף אחר?
+
+screenshots-too-large-error-title = צילום המסך שלך נחתך מכיוון שהיה גדול מדי
+screenshots-too-large-error-details = כדאי לנסות לבחור באזור הקטן מ־32,700 פיקסלים בצד הארוך ביותר שלו או בשטח כולל של 124,900,000 פיקסלים.

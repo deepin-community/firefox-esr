@@ -3,22 +3,7 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 
-### UI strings for the simplified onboarding modal / about:welcome
-### Various strings use a non-breaking space to avoid a single dangling /
-### widowed word, so test on various window sizes if you also want this.
-
-
-## These button action text can be split onto multiple lines, so use explicit
-## newlines in translations to control where the line break appears (e.g., to
-## avoid breaking quoted text).
-
-onboarding-button-label-learn-more = Dalšne informacije
-onboarding-button-label-get-started = Prědne kšace
-
-## Welcome modal dialog strings
-
-
-### UI strings for the simplified onboarding / multistage about:welcome
+### UI strings for the MR1 onboarding / multistage about:welcome
 ### Various strings use a non-breaking space to avoid a single dangling /
 ### widowed word, so test on various window sizes if you also want this.
 
@@ -26,149 +11,9 @@ onboarding-button-label-get-started = Prědne kšace
 ## Welcome page strings
 
 onboarding-welcome-header = Witajśo k { -brand-short-name }
-onboarding-welcome-body = Maśo wobglědowak.<br/>Póznajśo zbytk { -brand-product-name }.
-onboarding-welcome-learn-more = Dalšne informacije wó lěpšynach.
-onboarding-welcome-modal-get-body = Maśo wobglědowak.<br/>Wuwónoźćo nejlěpše z { -brand-product-name }.
-onboarding-welcome-modal-supercharge-body = Pśeśěžćo swój šćit priwatnosći.
-onboarding-welcome-modal-privacy-body = Maśo wobglědowak. Pśidajmy wěcej šćita priwatnosći.
-onboarding-welcome-modal-family-learn-more = Zgóńśo wěcej wó produktowej swójźbje { -brand-product-name }.
-onboarding-welcome-form-header = How zachopiś
-
-onboarding-join-form-body = Zapódajśo swóju e-mailowu adresu, aby zachopił.
-onboarding-join-form-email =
-    .placeholder = E-mailowu adresu zapódaś
-onboarding-join-form-email-error = Płaśiwa e-mailowa adresa trěbna
-onboarding-join-form-legal = Gaž pókšacujośo, zwólijośo do <a data-l10n-name="terms">wužywańskich wuměnjenjow</a> a <a data-l10n-name="privacy">powěźeńki priwatnosći</a>.
-onboarding-join-form-continue = Dalej
-
-# This message is followed by a link using onboarding-join-form-signin ("Sign In") as text.
-onboarding-join-form-signin-label = Maśo južo konto?
-# Text for link to submit the sign in form
-onboarding-join-form-signin = Pśizjawiś
-
 onboarding-start-browsing-button-label = Pśeglědowanje startowaś
-onboarding-cards-dismiss =
-    .title = Zachyśiś
-    .aria-label = Zachyśiś
-
-## Welcome full page string
-
-onboarding-fullpage-welcome-subheader = Zachopmy wšykno wuslěźiś, což móžośo cyniś.
-onboarding-fullpage-form-email =
-    .placeholder = Waša e-mailowa adresa…
-
-## Firefox Sync modal dialog strings.
-
-onboarding-sync-welcome-header = Wzejśo { -brand-product-name } sobu
-onboarding-sync-welcome-content = Wzejśo swóje cytańske znamjenja, historiju, gronidła a druge nastajenja na wšych wašych rědach sobu.
-onboarding-sync-welcome-learn-more-link = Zgóńśo wěcej wó Firefox Accounts
-
-onboarding-sync-form-input =
-    .placeholder = E-mail
-
-onboarding-sync-form-continue-button = Dalej
-onboarding-sync-form-skip-login-button = Toś ten kšac pśeskócyś
-
-## This is part of the line "Enter your email to continue to Firefox Sync"
-
-onboarding-sync-form-header = Zapódajśo swóju e-mailowu adresu
-onboarding-sync-form-sub-header = aby z { -sync-brand-name } pókšacował.
-
-
-## These are individual benefit messages shown with an image, title and
-## description.
-
-onboarding-benefit-products-text = Gótujśo wěcy z rědami, kótarež wašu priwatnosć na wšych rědach respektěruju.
-
-# "Personal Data Promise" is a concept that should be translated consistently
-# across the product. It refers to a concept shown elsewhere to the user: "The
-# Firefox Personal Data Promise is the way we honor your data in everything we
-# make and do. We take less data. We keep it safe. And we make sure that we are
-# transparent about how we use it."
-onboarding-benefit-privacy-text = Wšykno, což cynimy, naše zlubjenje za wósobinske daty dopołnjujo: Mjenjej zběraś. Wěsće składowaś. Žedne pótajmstwa.
-
-onboarding-benefit-sync-title = { -sync-brand-short-name }
-onboarding-benefit-sync-text = Wzejśo swóje cytańske znamjenja, gronidła, historiju a wěcej wšuźi, źož { -brand-product-name } wužywaśo.
-
-onboarding-benefit-monitor-title = { -monitor-brand-short-name }
-onboarding-benefit-monitor-text = Dostańśo powěźeńki, gaž waše wósobinske informacije su w znatej datowej źěrje.
-
-onboarding-benefit-lockwise-title = { -lockwise-brand-short-name }
-onboarding-benefit-lockwise-text = Zastojśo gronidła, kótarež su šćitane a portabelne.
-
-
-## These strings belong to the individual onboarding messages.
-
-
-## Each message has a title and a description of what the browser feature is.
-## Each message also has an associated button for the user to try the feature.
-## The string for the button is found above, in the UI strings section
-
-onboarding-tracking-protection-title2 = Šćit pśeśiwo slědowanjeju
-onboarding-tracking-protection-text2 = { -brand-short-name } wam pomaga, websedłam zawoboraś, wam online slědowaś, aby za wabjenje śěžčej było, wam pó webje slědowaś.
-onboarding-tracking-protection-button2 = Kak funkcioněrujo
-
-onboarding-data-sync-title = Wzejśo swóje nastajenja sobu
-# "Sync" is short for synchronize.
-onboarding-data-sync-text2 = Synchronizěrujśo swóje cytańske znamjenja a gronidła a wěcej wšuźi, źož { -brand-product-name } wužywaśo.
-onboarding-data-sync-button2 = Pla { -sync-brand-short-name } pśizjawiś
-
-onboarding-firefox-monitor-title = Dajśo se pśi datowych źěrach warnowaś
-onboarding-firefox-monitor-text2 = { -monitor-brand-name } doglědujo, lěc jo se waša e-mailowa adresa južo w znatej datowej źěrje zjawiła a warnujo was, gdyž se w nowej źěrje pokazujo.
-onboarding-firefox-monitor-button = Za powěźeńki registrěrowaś
-
-onboarding-browse-privately-title = Pśeglědowajśo z priwatnosću
-onboarding-browse-privately-text = Priwatny modus wašu pytańsku a pśeglědowańsku historiju wulašujo, aby jej pśed kuždym zatajił, kótaryž wašo licadło wužywa.
-onboarding-browse-privately-button = Priwatne wokno wócyniś
-
-onboarding-firefox-send-title = Źaržćo swóje źělone dataje priwatne
-onboarding-firefox-send-text2 = Nagrajśo swóje dataje do { -send-brand-name }, aby je z koděrowanim kóńc do kóńca a z wótkazom, kótaryž awtomatiski spadnjo, źělił.
-onboarding-firefox-send-button = { -send-brand-name } wopytaś
-
-onboarding-mobile-phone-title = Instalěrujśo se { -brand-product-name } na swójom telefonje
-onboarding-mobile-phone-text = Ześěgniśo { -brand-product-name } za iOS abo Android a synchronizěrujśo swóje daty pśez rědy.
-# "Mobile" is short for mobile/cellular phone, "Browser" is short for web
-# browser.
-onboarding-mobile-phone-button = Mobilny wobglědowak ześěgnuś
-
-onboarding-send-tabs-title = Sćelśo něd rejtariki
-# "Send Tabs" refers to "Send Tab to Device" feature that appears when opening a
-# tab's context menu.
-onboarding-send-tabs-text2 = Źělśo lažko boki mjazy wašymi rědami, mimo aby wótkaze kopěrował abo wobglědowak spušćił.
-onboarding-send-tabs-button = Wužywajśo Send Tabs
-
-onboarding-pocket-anywhere-title = Cytajśo a słuchajśo wšuźi
-onboarding-pocket-anywhere-text2 = Składujśo swój nejlubše wopśimjeśe offline z nałoženim { -pocket-brand-name } a cytajśo, słuchajśo a woglědajśo, gažkuli se wam góźi.
-onboarding-pocket-anywhere-button = { -pocket-brand-name } wopytaś
-
-onboarding-lockwise-strong-passwords-title = Mócne gronidła napóraś a składowaś
-onboarding-lockwise-strong-passwords-text = { -lockwise-brand-name } ned mócne gronidła napórajo a składujo je na jadnom městnje.
-onboarding-lockwise-strong-passwords-button = Waše pśizjawjenja zastojaś
-
-onboarding-facebook-container-title = Stajśo granice za Facebook
-onboarding-facebook-container-text2 = { -facebook-container-brand-name } waš profil źělony wót wšogo drugego źaržy. Tak jo śěžej za Facebook, wam zaměrne wabjenje pokazaś.
-onboarding-facebook-container-button = Rozšyrjenje pśidaś
-
-onboarding-import-browser-settings-title = Waše cytańske znamjenja, ronidła a wěcej importěrowaś
-onboarding-import-browser-settings-text = Zachopśo ned - wzejśo swóje sedła Chrome a nastajenja sobu.
-onboarding-import-browser-settings-button = Daty Chrome importěrowaś
-
-onboarding-personal-data-promise-title = Priwatny pó designje
-onboarding-personal-data-promise-text = { -brand-product-name } z wašymi datami z respektom wobchada, zběra mjenjej z nich, šćita je a groni jasnje, kak my je wužywamy.
-onboarding-personal-data-promise-button = Cytajśo našo zlubjenje
-
-## Message strings belonging to the Return to AMO flow
-
-return-to-amo-sub-header = Wjelicnje, maśo { -brand-short-name }
-
-# <icon></icon> will be replaced with the icon belonging to the extension
-#
-# Variables:
-#   $addon-name (String) - Name of the add-on
-return-to-amo-addon-header = Wobstarajśo se něnto <icon></icon><b>{ $addon-name }.</b>
-return-to-amo-extension-button = Rozšyrjenje pśidaś
-return-to-amo-get-started-button = Prědne kšace z { -brand-short-name }
 onboarding-not-now-button-label = Nic něnto
+mr1-onboarding-get-started-primary-button-label = Prědne kšace
 
 ## Custom Return To AMO onboarding strings
 
@@ -179,140 +24,23 @@ return-to-amo-subtitle = Wjelicnje, maśo { -brand-short-name }
 #   $addon-name (String) - Name of the add-on
 return-to-amo-addon-title = Wobstarajśo se něnto <img data-l10n-name="icon"/> <b>{ $addon-name }</b>.
 return-to-amo-add-extension-label = Rozšyrjenje pśidaś
+return-to-amo-add-theme-label = Drastwu pśidaś
 
-## Multistage 3-screen onboarding flow strings (about:welcome pages)
+##  Variables: $addon-name (String) - Name of the add-on to be installed
 
-# The <span data-l10n-name="zap"></span> in this string allows a "zap" underline style to be
-# automatically added to the text inside it. { -brand-short-name } should stay inside the span.
-onboarding-multistage-welcome-header = Witajśo k <span data-l10n-name="zap">{ -brand-short-name }</span>
-onboarding-multistage-welcome-subtitle = Malsny, wěsty a priwatny wobglědowak, kótaryž se za wše wužytneje organizacije pódpěra.
-onboarding-multistage-welcome-primary-button-label = Konfigurěrowanje zachopiś
-onboarding-multistage-welcome-secondary-button-label = Pśizjawiś
-onboarding-multistage-welcome-secondary-button-text = Maśo konto?
+mr1-return-to-amo-subtitle = Witajśo k { -brand-short-name }
+mr1-return-to-amo-addon-title = Maśo malsny, priwatny wobglědowak k ruce. Něnto móžośo <b>{ $addon-name }</b> pśidaś a hyšći wěcej z { -brand-short-name } cyniś.
+mr1-return-to-amo-add-extension-label = { $addon-name } pśidaś
 
-# The <span data-l10n-name="zap"></span> in this string allows a "zap" underline style to be
-# automatically added to the text inside it. "default" should stay inside the span.
-onboarding-multistage-set-default-header = { -brand-short-name } ako <span data-l10n-name="zap">standard</span> póstajiś
-onboarding-multistage-set-default-subtitle = Malsnosć, wěstota a priwatnosć kuždy raz, gaž pśeglědujośo.
-onboarding-multistage-set-default-primary-button-label = K standardoju cyniś
-onboarding-multistage-set-default-secondary-button-label = Nic něnto
-
-# The <span data-l10n-name="zap"></span> in this string allows a "zap" underline style to be
-# automatically added to the text inside it. { -brand-short-name } should stay inside the span.
-onboarding-multistage-pin-default-header = Zachopśo, aby <span data-l10n-name="zap">{ -brand-short-name }</span> jano jadno kliknjenje zdalony był
-onboarding-multistage-pin-default-subtitle = Malsne, wěste a priwatne pśeglědowanje kuždy raz, gaž web wužywaśo.
-# The "settings" here refers to "Windows 10 Settings App" and not the browser's
-onboarding-multistage-pin-default-waiting-subtitle = Wubjeŕśo { -brand-short-name } z webwobglědowakow, gaž waše nastajenja wócynjaśo
-# The "settings" here refers to "Windows 10 Settings App" and not the browser's
-onboarding-multistage-pin-default-help-text = To { -brand-short-name } k nadawkowej rědce pśpijo a nastajenja wócynja
-onboarding-multistage-pin-default-primary-button-label = { -brand-short-name } k primarnemu wobglědowakoju cyniś
-
-# The <span data-l10n-name="zap"></span> in this string allows a "zap" underline style to be
-# automatically added to the text inside it. "more" should stay inside the span.
-onboarding-multistage-import-header = Importěrujśo swóje gronidła, cytańske znamjenja a <span data-l10n-name="zap">wěcej</span>
-onboarding-multistage-import-subtitle = Sćo do toho wužywał drugi wobglědowak? Jo lažko, wšykno do { -brand-short-name } pśenjasć.
-onboarding-multistage-import-primary-button-label = Import zachopiś
-onboarding-multistage-import-secondary-button-label = Nic něnto
-
-# Info displayed in the footer of import settings screen during onboarding flow.
-# This supports welcome screen showing top sites imported from the user's default browser.
-onboarding-import-sites-disclaimer =
-    Sedła, kótarež su how nalicone, su se namakali na toś tom rěźe.
-    { -brand-short-name } daty z
-    drugego wobglědowaka njeskładujo abo njesynchronizěrujo
-    snaźkuli je importěrujośo.
+## Multistage onboarding strings (about:welcome pages)
 
 # Aria-label to make the "steps" of multistage onboarding visible to screen readers.
 # Variables:
 #   $current (Int) - Number of the current page
 #   $total (Int) - Total number of pages
-onboarding-welcome-steps-indicator =
-    .aria-label = Prědne kšace: wobrazowka { $current } z { $total }
 
-# The <span data-l10n-name="zap"></span> in this string allows a "zap" underline style to be
-# automatically added to the text inside it. "look" should stay inside the span.
-onboarding-multistage-theme-header = Wubjeŕśo <span data-l10n-name="zap">naglěd</span>
-onboarding-multistage-theme-subtitle = Personalizěrujśo { -brand-short-name } z drastwu.
-onboarding-multistage-theme-primary-button-label2 = Dokóńcony
-onboarding-multistage-theme-secondary-button-label = Nic něnto
-
-# Automatic theme uses operating system color settings
-onboarding-multistage-theme-label-automatic = Awtomatiski
-
-onboarding-multistage-theme-label-light = Swětły
-onboarding-multistage-theme-label-dark = Śamny
-# "Firefox Alpenglow" here is the name of the theme, and should be kept in English.
-onboarding-multistage-theme-label-alpenglow = Firefox Alpenglow
-
-## Please make sure to split the content of the title attribute into lines whose
-## width corresponds to about 40 Latin characters, to ensure that the tooltip
-## doesn't become too long. Line breaks will be preserved when displaying the
-## tooltip.
-
-# Tooltip displayed on hover of automatic theme
-onboarding-multistage-theme-tooltip-automatic-2 =
-    .title =
-        Naglěd z wašogo źěłowego
-        systema za tłocaški, menije a wokna zderbnuś.
-
-# Input description for automatic theme
-onboarding-multistage-theme-description-automatic-2 =
-    .aria-description =
-        Naglěd z wašogo źěłowego
-        systema za tłocaški, menije a wokna zderbnuś.
-
-# Tooltip displayed on hover of light theme
-onboarding-multistage-theme-tooltip-light-2 =
-    .title =
-        Swětły naglěd za tłocaški,
-        menije a wokna.
-
-# Input description for light theme
-onboarding-multistage-theme-description-light =
-    .aria-description =
-        Swětły naglěd za tłocaški,
-        menije a wokna.
-
-# Tooltip displayed on hover of dark theme
-onboarding-multistage-theme-tooltip-dark-2 =
-    .title =
-        Śamny naglěd za tłocaški,
-        menije a wokna.
-
-# Input description for dark theme
-onboarding-multistage-theme-description-dark =
-    .aria-description =
-        Śamny naglěd za tłocaški,
-        menije a wokna.
-
-# Tooltip displayed on hover of Alpenglow theme
-onboarding-multistage-theme-tooltip-alpenglow-2 =
-    .title =
-        Barwny naglěd za tłocaški,
-        menije a wokna.
-
-# Input description for Alpenglow theme
-onboarding-multistage-theme-description-alpenglow =
-    .aria-description =
-        Barwny naglěd za tłocaški,
-        menije a wokna.
-
-## Multistage MR1 onboarding strings (MR1 about:welcome pages)
-
-# "Hero Text" displayed on left side of welcome screen.
-# The "Fire" in "Fire starts here" plays on the "Fire" in "Firefox".
-# It also signals the passion users bring to Firefox, how they use
-# Firefox to pursue those passions, as well as the boldness in their
-# choice to use Firefox over a larger competitor browser.
-# An alternative title for localization is: "It starts here".
-# This text can be formatted to span multiple lines as needed.
-mr1-welcome-screen-hero-text = Zachopinamy wót how
-
-# Caption for background image in about:welcome. "Soraya Osorio" is the name
-# of the person and shouldn't be translated.
-# In case your language needs to adapt the nouns to a gender, Soraya is a female name (she/her).
-# You can see the picture in about:welcome in Nightly 90.
-mr1-onboarding-welcome-image-caption = Soraya Osorio — Meblowa designerka, pśiwisaŕka Firefox
+onboarding-welcome-steps-indicator-label =
+    .aria-label = Póstup: kšac { $current } z { $total }
 
 # This button will open system settings to turn on prefers-reduced-motion
 mr1-onboarding-reduce-motion-button-label = Animacije znjemóžniś
@@ -321,59 +49,23 @@ mr1-onboarding-reduce-motion-button-label = Animacije znjemóžniś
 ## match the OS' application context menu item action where Windows uses "pin"
 ## and "taskbar" while macOS "keep" and "Dock" (proper noun).
 
-# Title used on welcome page when Firefox is not pinned
-mr1-onboarding-pin-header =
-    { PLATFORM() ->
-        [macos] { -brand-short-name } za lažki pśistup we wašom doku zachować
-       *[other] { -brand-short-name } za lažki pśistup k wašej nadawkowej rědce pśipěś
-    }
-# Primary button string used on welcome page when Firefox is not pinned.
-mr1-onboarding-pin-primary-button-label =
-    { PLATFORM() ->
-        [macos] W doku zachowaś
-       *[other] K nadawkowej rědce pśipěś
-    }
-
 ## Multistage MR1 onboarding strings (about:welcome pages)
 
-# This string will be used on welcome page primary button label
-# when Firefox is both pinned and default
-mr1-onboarding-get-started-primary-button-label = Prědne kšace
-
-mr1-onboarding-welcome-header = Witajśo k { -brand-short-name }
-mr1-onboarding-set-default-pin-primary-button-label = { -brand-short-name } k primarnemu wobglědowakoju cyniś
-    .title = Nastaja { -brand-short-name } ako standardny wobglědowak a pśipina jen k nadawkowej rědce
-
-# This string will be used on welcome page primary button label
-# when Firefox is not default but already pinned
-mr1-onboarding-set-default-only-primary-button-label = { -brand-short-name } k strandardnemu wobglědowakoju cyniś
-mr1-onboarding-set-default-secondary-button-label = Nic něnto
+# String for the Firefox Accounts button
 mr1-onboarding-sign-in-button-label = Pśizjawiś
 
 ## Title, subtitle and primary button string used on set default onboarding screen
 ## when Firefox is not default browser
 
-mr1-onboarding-default-header = { -brand-short-name } k swójomu standardnemu wobglědowakoju cyniś
-mr1-onboarding-default-subtitle = Stajśo malsnosć, wěstotu a priwatnosć na awtopilot.
-mr1-onboarding-default-primary-button-label = Ako standardny wobglědowak nastajiś
-
 ## Multistage MR1 onboarding strings (about:welcome pages)
-
-mr1-onboarding-import-header = Wzejśo wšykno sobu
-mr1-onboarding-import-subtitle = Importěrujśo swóje gronidła, <br/>cytańske znamjenja a wěcej.
 
 # The primary import button label will depend on whether we can detect which browser was used to download Firefox.
 # Variables:
 #   $previous (Str) - Previous browser name, such as Edge, Chrome
 mr1-onboarding-import-primary-button-label-attribution = Z { $previous } importěrowaś
 
-# This string will be used in cases where we can't detect the previous browser name.
-mr1-onboarding-import-primary-button-label-no-attribution = Z pjerwjejšnego wobglědowaka importěrowaś
-mr1-onboarding-import-secondary-button-label = Nic něnto
-
 mr1-onboarding-theme-header = Pśiswójśo se jen
 mr1-onboarding-theme-subtitle = Personalizěrujśo { -brand-short-name } z drastwu.
-mr1-onboarding-theme-primary-button-label = Drastwu składowaś
 mr1-onboarding-theme-secondary-button-label = Nic něnto
 
 # System theme uses operating system color settings
@@ -383,6 +75,8 @@ mr1-onboarding-theme-label-light = Swětły
 mr1-onboarding-theme-label-dark = Śamny
 # "Alpenglow" here is the name of the theme, and should be kept in English.
 mr1-onboarding-theme-label-alpenglow = Alpenglow
+
+onboarding-theme-primary-button-label = Dokóńcony
 
 ## Please make sure to split the content of the title attribute into lines whose
 ## width corresponds to about 40 Latin characters, to ensure that the tooltip
@@ -436,3 +130,251 @@ mr1-onboarding-theme-description-alpenglow =
     .aria-description =
         Dynamisku, barwojtu drastwu za tłocaški,
         menije a wokna wužywaś.
+
+# Selector description for default themes
+mr2-onboarding-default-theme-label = Wuslěźćo standardne drastwy.
+
+## Strings for Thank You page
+
+mr2-onboarding-thank-you-header = Źěkujomy se, až sćo nas wubrał
+mr2-onboarding-thank-you-text = { -brand-short-name } jo njewótwisny wobhlědowak za wše wužytneje organizacije. Gromaźe cynimy web wěsćejšy, strowšy a priwatnjejšy.
+mr2-onboarding-start-browsing-button-label = Pśeglědowanje zachopiś
+
+## Multistage live language reloading onboarding strings (about:welcome pages)
+##
+## The following language names are generated by the browser's Intl.DisplayNames API.
+##
+## Variables:
+##   $negotiatedLanguage (String) - The name of the langpack's language, e.g. "Español (ES)"
+
+
+## Multistage live language reloading onboarding strings (about:welcome pages)
+##
+## The following language names are generated by the browser's Intl.DisplayNames API.
+##
+## Variables:
+##   $negotiatedLanguage (String) - The name of the langpack's language, e.g. "Español (ES)"
+##   $systemLanguage (String) - The name of the system language, e.g "Español (ES)"
+##   $appLanguage (String) - The name of the language shipping in the browser build, e.g. "English (EN)"
+
+onboarding-live-language-header = Wubjeŕśo swóju rěc
+
+mr2022-onboarding-live-language-text = { -brand-short-name } wašu rěc powěda
+
+mr2022-language-mismatch-subtitle = Z pomocu našogo zgromaźeństwa jo { -brand-short-name } do wěcej ako 90 rěcow pśełožony. Zda se, až waš system { $systemLanguage } wužywa, a { -brand-short-name } { $appLanguage }.
+
+onboarding-live-language-button-label-downloading = Rěcny pakśik za { $negotiatedLanguage } se ześěgujo …
+onboarding-live-language-waiting-button = K dispoziciji stojece rěcy se wobstaruju …
+onboarding-live-language-installing = Rěcny pakśik za { $negotiatedLanguage } se instalěrujo …
+
+mr2022-onboarding-live-language-switch-to = { $negotiatedLanguage } wužywaś
+mr2022-onboarding-live-language-continue-in = Z { $appLanguage } pókšacowaś
+
+onboarding-live-language-secondary-cancel-download = Pśetergnuś
+onboarding-live-language-skip-button-label = Pśeskócyś
+
+## Firefox 100 Thank You screens
+
+# "Hero Text" displayed on left side of welcome screen. This text can be
+# formatted to span multiple lines as needed. The <span data-l10n-name="zap">
+# </span> in this string allows a "zap" underline style to be automatically
+# added to the text inside it. "Yous" should stay inside the zap span, but
+# "Thank" can be put inside instead if there's no "you" in the translation.
+# The English text would normally be "100 Thank-Yous" i.e., plural noun, but for
+# aesthetics of splitting it across multiple lines, the hyphen is omitted.
+fx100-thank-you-hero-text =
+    100
+    raz
+    <span data-l10n-name="zap">wjeliki źěk</span>
+fx100-thank-you-subtitle = Jo naša 100. wersija! Źěkujomy se, až nam pomagaśo, lěpšy a strowšy internet natwariś.
+fx100-thank-you-pin-primary-button-label =
+    { PLATFORM() ->
+        [macos] Wobchowajśo { -brand-short-name } w doku
+       *[other] Pśipěśo { -brand-short-name } k nadawkowej rědce
+    }
+
+fx100-upgrade-thanks-header = 100 raz wjeliki źěk
+# Message shown with a start-browsing button. Emphasis <em> should be for "you"
+# but "Thank" can be used instead if there's no "you" in the translation.
+fx100-upgrade-thank-you-body = Jo naša 100. wersija { -brand-short-name }. Źěkujomy se <em>wam</em>, až nam pomagaśo, lěpšy, strowšy internet natwariś.
+# Message shown with either a pin-to-taskbar or set-default button.
+fx100-upgrade-thanks-keep-body = Jo naša 100. wersija! Źěkujomy se wam, až sćo źěl našogo zgromaźeństwa. Źaržćo { -brand-short-name } janož jadno kliknjenje wót pśiducych 100 zdalony.
+
+mr2022-onboarding-secondary-skip-button-label = Toś ten kšac pśeskócyś
+
+## MR2022 New User Easy Setup screen strings
+
+# Primary button string used on new user onboarding first screen showing multiple actions such as Set Default, Import from previous browser.
+mr2022-onboarding-easy-setup-primary-button-label = Składowaś a pókšacowaś
+# Set Default action checkbox label used on new user onboarding first screen
+mr2022-onboarding-easy-setup-set-default-checkbox-label = Nastajśo { -brand-short-name } ako standardny wobglědowak
+# Import action checkbox label used on new user onboarding first screen
+mr2022-onboarding-easy-setup-import-checkbox-label = Z pjerwjejšnego wobglědowaka importěrowaś
+
+## MR2022 New User Pin Firefox screen strings
+
+# Title used on about:welcome for new users when Firefox is not pinned.
+# In this context, open up is synonymous with "Discover".
+# The metaphor is that when they open their Firefox browser, it helps them discover an amazing internet.
+# If this translation does not make sense in your language, feel free to use the word "discover."
+mr2022-onboarding-welcome-pin-header = Namakajśo wjelicny internet
+# Subtitle is used on onboarding page for new users page when Firefox is not pinned
+mr2022-onboarding-welcome-pin-subtitle = Startujśo { -brand-short-name } wótkulžkuli z jadnym kliknjenim. Kuždy raz, gaž to cyniśo, wóliśo wěcej wótwórjony a njewótwisny web.
+# Primary button string used on welcome page for when Firefox is not pinned.
+mr2022-onboarding-pin-primary-button-label =
+    { PLATFORM() ->
+        [macos] { -brand-short-name } w doku wobchowaś
+       *[other] Pśipěśo { -brand-short-name } k nadawkowej rědce
+    }
+# Subtitle will be used when user already has Firefox pinned, but
+# has not set it as their default browser.
+# When translating "zip", please feel free to pick a verb that signifies movement and/or exploration
+# and makes sense in the context of navigating the web.
+mr2022-onboarding-set-default-only-subtitle = Zachopśo z wobglědowakom, kótaryž se wót za wše wužytneje organizacije pódpěra. Šćitamy wašu priwatnosć, mjaztym až pó interneśe tšochtaśo.
+
+## MR2022 Existing User Pin Firefox Screen Strings
+
+# Title used on multistage onboarding page for existing users when Firefox is not pinned
+mr2022-onboarding-existing-pin-header = Wjeliki źěk, až { -brand-product-name } lubujośo
+# Subtitle is used on onboarding page for existing users when Firefox is not pinned
+mr2022-onboarding-existing-pin-subtitle = Startujśo strowšy internet wótkulžkuli z jadnym kliknjenim. Naša nejnowša aktualizacija jo połna nowych wěcow, wó kótarychž se myslimy, až buźośo je wjelgin lubowaś.
+# Subtitle will be used on the welcome screen for existing users
+# when they already have Firefox pinned but not set as default
+mr2022-onboarding-existing-set-default-only-subtitle = Wužywajśo wobglědowak, kótaryž wašu priwatnosć šćita, mjaztym až pó interneśe tšochtaśo. Naša nejnowša aktualizacija jo połna nowych wěcow, kótarež wjelgin lubujośo.
+mr2022-onboarding-existing-pin-checkbox-label = Pśidajśo teke priwatny modus { -brand-short-name }
+
+## MR2022 New User Set Default screen strings
+
+# This string is the title used when the user already has pinned the browser, but has not set default.
+mr2022-onboarding-set-default-title = Cyńśo { -brand-short-name } k swójomu spušćobnemu wobglědowakoju
+mr2022-onboarding-set-default-primary-button-label = Nastajśo { -brand-short-name } ako standardny wobglědowak
+# When translating "zip", please feel free to pick a verb that signifies movement and/or exploration
+# and makes sense in the context of navigating the web.
+mr2022-onboarding-set-default-subtitle = Wužywajśo wobglědowak, kótaryž se wót za wše wužytneje organizacije pódpěra. Šćitamy wašu priwatnosć, mjaztym až pó interneśe tšochtaśo.
+
+## MR2022 Get Started screen strings.
+## These strings will be used on the welcome page
+## when Firefox is already set to default and pinned.
+
+# When translating "zip", please feel free to pick a verb that signifies movement and/or exploration
+# and makes sense in the context of navigating the web.
+mr2022-onboarding-get-started-primary-subtitle = Naša nejnowša wersija jo wokoło was natwarjona, kótaraž wam lažčejše ako do togo cyni, web pśeglědowaś. Jo połny funkcijow, wó kótarychž se myslimy, až se wam spódobaju.
+mr2022-onboarding-get-started-primary-button-label = Instalacija za sekundy
+
+## MR2022 Import Settings screen strings
+
+mr2022-onboarding-import-header = Spěšnučka instalacija
+mr2022-onboarding-import-subtitle = Zarědujśo { -brand-short-name }, kak se wam spódoba. Pśidajśo swóje cytańske znamjenja, gronidła a wěcej ze swójogo starego wobglědowaka.
+mr2022-onboarding-import-primary-button-label-no-attribution = Z pjerwjejšnego wobglědowaka importěrowaś
+
+## If your language uses grammatical genders, in the description for the
+## colorway feel free to switch from "You are a X. You…" (e.g. "You are a
+## Playmaker. You create…") to "X: you…" ("Playmaker: You create…"). This might
+## help creating a more inclusive translation.
+
+mr2022-onboarding-colorway-title = Wubjeŕśo barwu, kótaraž was inspirěrujo
+mr2022-onboarding-colorway-subtitle = Njewótwisne głose mógu kulturu změniś.
+mr2022-onboarding-colorway-primary-button-label-continue = Nastajiś a pókšacowaś
+mr2022-onboarding-existing-colorway-checkbox-label = { -firefox-home-brand-name } k wašomu barbnemu startowemu bokoju cyniś
+
+mr2022-onboarding-colorway-label-default = Standard
+mr2022-onboarding-colorway-tooltip-default2 =
+    .title = Aktualne barwy { -brand-short-name }
+mr2022-onboarding-colorway-description-default = <b>Móje aktualne barwy { -brand-short-name } wužywaś.</b>
+
+mr2022-onboarding-colorway-label-playmaker = Wjeźecy grajaŕ
+mr2022-onboarding-colorway-tooltip-playmaker2 =
+    .title = Wjeźecy grajaŕ (cerwjeny)
+mr2022-onboarding-colorway-description-playmaker = <b>Sćo wjeźecy grajaŕ.</b> Napórajośo góźby, aby dobył a kuždemu wokoło was pomagał, jich graśe pólěpšyś.
+
+mr2022-onboarding-colorway-label-expressionist = Ekspresionist
+mr2022-onboarding-colorway-tooltip-expressionist2 =
+    .title = Ekspresionist (žołty)
+mr2022-onboarding-colorway-description-expressionist = <b>Sćo ekspresionist.</b> Wiźiśo swět hynac a waše źěła zacuśa drugich wóźe.
+
+mr2022-onboarding-colorway-label-visionary = Wizionaŕ
+mr2022-onboarding-colorway-tooltip-visionary2 =
+    .title = Wizionaŕ (zeleny)
+mr2022-onboarding-colorway-description-visionary = <b>Sćo wizionaŕ.</b> Stajaśo status quo do pšašanja a pógnuwaśo druge, se lěpšy pśichod pśedstajiś.
+
+mr2022-onboarding-colorway-label-activist = Aktiwist
+mr2022-onboarding-colorway-tooltip-activist2 =
+    .title = Aktiwist (módry)
+mr2022-onboarding-colorway-description-activist = <b>Sćo aktiwist.</b> Zawóstajaśo swět ako lěpše městno, ako sćo jen namakał a wjeźośo druge k wěrje.
+
+mr2022-onboarding-colorway-label-dreamer = Cowaŕ
+mr2022-onboarding-colorway-tooltip-dreamer2 =
+    .title = Cowaŕ (violetny)
+mr2022-onboarding-colorway-description-dreamer = <b>Sćo cowaŕ.</b> Wěriśo, až gluka skobodnego lěbgoźi a inspirěrujośo druge, aby skobodne byli.
+
+mr2022-onboarding-colorway-label-innovator = Inowator
+mr2022-onboarding-colorway-tooltip-innovator2 =
+    .title = Inowator (oranžowy)
+mr2022-onboarding-colorway-description-innovator = <b>Sćo inowator.</b> Wiźiśo wšuźi šanse a wustatkujośo se na žywjenja wšych wokoło was.
+
+## MR2022 Multistage Mobile Download screen strings
+
+mr2022-onboarding-mobile-download-title = Skócćo wót laptopa do telefona a zasej slědk
+mr2022-onboarding-mobile-download-subtitle = Wobstarajśo se rejtariki z jadnogo rěda a cyńśo tam dalej, gaž sćo pśestał na drugem rěźe. Mimo togo móžośo swóje cytańske znamjenja a gronidła synchronizěrowaś, źožkuli { -brand-product-name } wužywaśo.
+mr2022-onboarding-mobile-download-cta-text = Scannujśo QR-kod, aby { -brand-product-name } za swój mobilny rěd dostał abo <a data-l10n-name="download-label">sćelśo se ześěgnjeński wótkaz.</a>
+mr2022-onboarding-no-mobile-download-cta-text = Skannujśo QR-kod, aby se { -brand-product-name } za mobilny rěd wobstarał.
+
+## MR2022 Upgrade Dialog screens
+## Pin private window screen shown only for users who don't have Firefox private pinned
+
+mr2022-upgrade-onboarding-pin-private-window-header = Wobstarajśo se wólnosć priwatnego modusa z jadnym kliknjenim
+mr2022-upgrade-onboarding-pin-private-window-subtitle = Žedne skłaźone cookieje abo žedna historiju, direktnje z wašogo desktopa. Pśeglědujśo ako njeby was nichten wobglědował.
+mr2022-upgrade-onboarding-pin-private-window-primary-button-label =
+    { PLATFORM() ->
+        [macos] Priwatny modus { -brand-short-name } w doku wobchowaś
+       *[other] Priwatny modus { -brand-short-name } k nadawkowej rědce pśipěś
+    }
+
+## MR2022 Privacy Segmentation screen strings
+
+mr2022-onboarding-privacy-segmentation-title = Wašu priwatnosć pśecej respektěrujomy.
+mr2022-onboarding-privacy-segmentation-subtitle = Wót inteligentnych naraźenjow do mudrjejšego pytanja, źěłamy stawnje , aby lěpšy, wěcej wósobinski { -brand-product-name } napórali.
+mr2022-onboarding-privacy-segmentation-text-cta = Co cośo wiźeś, gaž nowe funkcije póbitujomy, kótarež waše daty wužywaju, aby se wašo pśeglědowanje pólěpšyło?
+mr2022-onboarding-privacy-segmentation-button-primary-label = Dopórucenja { -brand-product-name } wužywaś
+mr2022-onboarding-privacy-segmentation-button-secondary-label = Detailěrowane informacije pokazaś
+
+## MR2022 Multistage Gratitude screen strings
+
+mr2022-onboarding-gratitude-title = Pomagajśo nam lěpšy web natwariś.
+mr2022-onboarding-gratitude-subtitle = Wjeliki źěk, až { -brand-short-name } wužywaśo, kótaryž se wót załožby Mozilla Foundation spěchujo. Z wašeju pomocu źěłamy na tom, internet wěcej wótwórjony, pśistupny a lěpšy za kuždego cyniś.
+mr2022-onboarding-gratitude-primary-button-label = Cytajśo, což jo nowe
+mr2022-onboarding-gratitude-secondary-button-label = Pśeglědowanje zachopiś
+
+## Onboarding spotlight for infrequent users
+
+onboarding-infrequent-import-title = Cujśo se ako doma
+onboarding-infrequent-import-subtitle = Lěc tam wóstawaśo abo jano krotko póbywaśo, njezabywajśo, až móžośo swóje cytańske znamjenja, gronidła a wěcej importěrowaś.
+onboarding-infrequent-import-primary-button = Do { -brand-short-name } importěrowaś
+
+## MR2022 Illustration alt tags
+## Descriptive tags for illustrations used by screen readers and other assistive tech
+
+mr2022-onboarding-pin-image-alt =
+    .aria-label = Wósoba, kótaraž na laptopje źěła, wobdana wót gwězdow a kwětkow
+mr2022-onboarding-default-image-alt =
+    .aria-label = Wósoba, kótaraž logo { -brand-product-name } wobejma
+mr2022-onboarding-import-image-alt =
+    .aria-label = Wósoba, kótaraž skateboard z tejzu softwarowych symbolow jězdźi
+mr2022-onboarding-mobile-download-image-alt =
+    .aria-label = Žaby pśez łopjena wutkow z QR-kodom skokocoju, aby wy { -brand-product-name } za mobilne rědy we srjejźi
+mr2022-onboarding-pin-private-image-alt =
+    .aria-label = Guslowaŕski kij dajo se logoju priwatnego modusa { -brand-product-name } z kłobyka zjawiś
+mr2022-onboarding-privacy-segmentation-image-alt =
+    .aria-label = Swětłokóžate a śamnokóžate ruki gromadu klatśaju
+mr2022-onboarding-gratitude-image-alt =
+    .aria-label = Póglěd na schowanje słyńca z woknom z lišku a śpineju rostlinu na woknowej delce
+mr2022-onboarding-colorways-image-alt =
+    .aria-label = Ruka barwojtu collage zelenego wócka, oranžowego crjeja, cerwjenego basketbala, wioletnych nagłownych słuchatkow, módreje wutšoby a žołteje krony
+
+## Device migration onboarding
+
+onboarding-device-migration-image-alt =
+    .aria-label = Žwaleca se liška na wobrazowce laptopa. Laptop ma pśizamknjonu myšku.
+onboarding-device-migration-title = Witajśo slědk!
+onboarding-device-migration-subtitle = Pśizjawśo se pla { -fxaccount-brand-name(capitalization: "sentence") }, aby swóje cytańske znamjenja, gronidła a historiju na swójom nowem rěźe sobu wzeł.
+onboarding-device-migration-primary-button-label = Pśizjawiś

@@ -30,14 +30,6 @@ site-data-remove-selected =
     .label = Таңдалғанды өшіру
     .accesskey = р
 
-site-data-button-cancel =
-    .label = Бас тарту
-    .accesskey = а
-
-site-data-button-save =
-    .label = Өзгерістерді сақтау
-    .accesskey = с
-
 site-data-settings-dialog =
     .buttonlabelaccept = Өзгерістерді сақтау
     .buttonaccesskeyaccept = с
@@ -67,5 +59,8 @@ site-data-removing-dialog =
 site-data-removing-header = Cookies файлдары және сайт деректерін өшіру
 
 site-data-removing-desc = Cookies файлдарын және сайт деректерін өшіру нәтижесінде сіз сайттардан шығуыңыз мүмкін. Өзгерістерді іске асыруды қалайсыз ба?
+# Variables:
+#   $baseDomain (String) - The single domain for which data is being removed
+site-data-removing-single-desc = Cookie файлдары мен сайт деректерін өшіру сіздің веб-сайттардан шығаруы мүмкін. <strong>{ $baseDomain }</strong> үшін cookie файлдары мен сайт деректерін шынымен өшіргіңіз келе ме?
 
 site-data-removing-table = Келесі веб-сайттар үшін cookies файлдары және сайттар деректері өшірілетін болады

@@ -23,6 +23,8 @@ profile-selection-delete-button =
     .label = 刪除設定檔…
     .accesskey = D
 
+profile-selection-conflict-message = 有另一套 { -brand-product-name } 對設定檔做了異動。您必須重新啟動 { -brand-short-name } 才能再做變動。
+
 ## Messages used in the profile manager
 
 profile-manager-description = { -brand-short-name } 把您的設定、偏好等各種資料存於您的個人設定檔 (Profile) 中。

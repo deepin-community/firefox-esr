@@ -23,49 +23,12 @@ certmgr-tab-ca =
 certmgr-mine = 您有下列组织的证书可以识别您自己
 certmgr-remembered = 下列证书可用于向网站识别您的身份
 certmgr-people = 您有用来识别这些人的证书文件
-certmgr-servers = 您有用来识别这些服务器的证书文件
 certmgr-server = 下列是服务器证书例外项目
 certmgr-ca = 您有用来识别这些证书颁发机构的证书文件
 
-certmgr-detail-general-tab-title =
-    .label = 基本信息
-    .accesskey = G
-
-certmgr-detail-pretty-print-tab-title =
-    .label = 详细信息
-    .accesskey = D
-
-certmgr-pending-label =
-    .value = 正在核实证书…
-
-certmgr-subject-label = 颁发给
-
-certmgr-issuer-label = 颁发者
-
-certmgr-period-of-validity = 有效期
-
-certmgr-fingerprints = 指纹
-
-certmgr-cert-detail =
-    .title = 证书细节
-    .buttonlabelaccept = 关闭
-    .buttonaccesskeyaccept = C
-
-certmgr-cert-detail-commonname = 一般名称 (CN)
-
-certmgr-cert-detail-org = 组织 (O)
-
-certmgr-cert-detail-orgunit = 组织单位 (OU)
-
-certmgr-cert-detail-serial-number = 序列号
-
-certmgr-cert-detail-sha-256-fingerprint = SHA-256 指纹
-
-certmgr-cert-detail-sha-1-fingerprint = SHA1 指纹
-
-certmgr-edit-ca-cert =
+certmgr-edit-ca-cert2 =
     .title = 编辑证书颁发机构信任关系设置
-    .style = width: 48em;
+    .style = min-width: 48em;
 
 certmgr-edit-cert-edit-trust = 编辑信任设置：
 
@@ -75,9 +38,9 @@ certmgr-edit-cert-trust-ssl =
 certmgr-edit-cert-trust-email =
     .label = 此证书可以标识电子邮件用户。
 
-certmgr-delete-cert =
+certmgr-delete-cert2 =
     .title = 删除证书
-    .style = width: 48em; height: 24em;
+    .style = min-width: 48em; min-height: 24em;
 
 certmgr-cert-host =
     .label = 主机
@@ -88,18 +51,11 @@ certmgr-cert-name =
 certmgr-cert-server =
     .label = 服务器
 
-certmgr-override-lifetime =
-    .label = 生命周期
-
 certmgr-token-name =
     .label = 安全设备
 
-certmgr-begins-on = 起始时间
-
 certmgr-begins-label =
     .label = 起始时间
-
-certmgr-expires-on = 过期时间
 
 certmgr-expires-label =
     .label = 过期时间
@@ -109,6 +65,9 @@ certmgr-email =
 
 certmgr-serial =
     .label = 序列号
+
+certmgr-fingerprint-sha-256 =
+    .label = SHA-256 指纹
 
 certmgr-view =
     .label = 查看…
@@ -141,18 +100,6 @@ certmgr-backup-all =
 certmgr-restore =
     .label = 导入…
     .accesskey = m
-
-certmgr-details =
-    .value = 证书字段
-    .accesskey = F
-
-certmgr-fields =
-    .value = 字段值
-    .accesskey = V
-
-certmgr-hierarchy =
-    .value = 证书层次结构
-    .accesskey = H
 
 certmgr-add-exception =
     .label = 添加例外…
@@ -216,12 +163,6 @@ delete-user-cert-confirm = 确定要删除这些证书吗？
 delete-user-cert-impact = 如果您删除了某个您自己的证书，您将无法使用它来标识你自己。
 
 
-delete-ssl-cert-title =
-    .title = 删除服务器证书例外
-delete-ssl-cert-confirm = 您确定要删除这些服务器例外吗？
-delete-ssl-cert-impact = 如果您删除一个服务器例外，下次您再访问该服务器时会恢复要求该网站使用有效的证书，您可能又会收到服务器证书无效的提示。
-
-
 delete-ssl-override-title =
     .title = 删除服务器证书例外
 delete-ssl-override-confirm = 您确定要删除此服务器例外吗？
@@ -244,47 +185,6 @@ delete-email-cert-impact = 如果您删除了某人的电子邮件证书，您�
 #   $serialNumber : the serial number of the cert in AA:BB:CC hex format.
 cert-with-serial =
     .value = 证书序列号：{ $serialNumber }
-
-## Cert Viewer
-
-# Title used for the Certificate Viewer.
-#
-# Variables:
-#   $certificate : a string representative of the certificate being viewed.
-cert-viewer-title =
-    .title = 证书查看器：“{ $certName }”
-
-not-present =
-    .value = <无此部分>
-
-# Cert verification
-cert-verified = 此证书已经过认证，可用于下列用途：
-
-# Add usage
-verify-ssl-client =
-    .value = SSL 客户端证书
-
-verify-ssl-server =
-    .value = SSL 服务器证书
-
-verify-ssl-ca =
-    .value = SSL 证书颁发机构
-
-verify-email-signer =
-    .value = 电子邮件签署者证书
-
-verify-email-recip =
-    .value = 邮件接受者证书
-
-# Cert verification
-cert-not-verified-cert-revoked = 无法验证此证书，因为它已被吊销。
-cert-not-verified-cert-expired = 无法验证此证书，因为已经过期。
-cert-not-verified-cert-not-trusted = 无法验证此证书，因为它不被信任。
-cert-not-verified-issuer-not-trusted = 无法验证此证书，因为其颁发者不受信任。
-cert-not-verified-issuer-unknown = 无法验证此证书，因为颁发者未知。
-cert-not-verified-ca-invalid = 无法验证此证书，因为 CA 证书无效。
-cert-not-verified_algorithm-disabled = 无法验证此证书，因为它使用了不安全而已被禁用的签名算法。
-cert-not-verified-unknown = 因为未知原因，无法验证此证书。
 
 # Used to indicate that the user chose not to send a client authentication certificate to a server that requested one in a TLS handshake.
 send-no-client-certificate = 不发送客户端证书

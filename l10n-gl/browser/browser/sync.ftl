@@ -2,19 +2,10 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-fxa-toolbar-sync-syncing =
-    .label = Sincronizando…
-fxa-toolbar-sync-syncing-tabs =
-    .label = Sincronizando lapelas…
-
-sync-disconnect-dialog-title = Desconectar { -sync-brand-short-name }?
-
 fxa-toolbar-sync-syncing2 = Sincronizando…
 
 sync-disconnect-dialog-title2 = Desconectar?
 sync-disconnect-dialog-body = { -brand-product-name } deixará de sincronizar a súa conta, pero non eliminará ningún dos seus datos de navegación neste dispositivo.
-fxa-disconnect-dialog-title = Desconectar { -brand-product-name }?
-fxa-disconnect-dialog-body = { -brand-product-name } deterá a sincronización coa súa conta, pero non eliminará ningún dos seus datos de navegación neste dispositivo.
 sync-disconnect-dialog-button = Desconectar
 
 fxa-signout-dialog2-title = Desexa pechar sesión en { -fxaccount-brand-name }?
@@ -30,6 +21,21 @@ fxa-menu-turn-on-sync-default = Activar a sincronización
 
 fxa-menu-connect-another-device =
     .label = Conectar outro dispositivo…
+# Variables:
+#   $tabCount (Number): The number of tabs sent to the device.
+fxa-menu-send-tab-to-device =
+    .label =
+        { $tabCount ->
+            [one] Enviar a lapela ao dispositivo
+           *[other] Enviar { $tabCount } lapelas ao dispositivo
+        }
+
+# This is shown dynamically within "Send tab to device" in fxa menu.
+fxa-menu-send-tab-to-device-syncnotready =
+    .label = Sincronizando os dispositivos…
+
+# This is shown within "Send tab to device" in fxa menu if account is not configured.
+fxa-menu-send-tab-to-device-description = Envíe unha lapela ao instante a calquera dispositivo no que iniciase sesión.
 
 fxa-menu-sign-out =
     .label = Saír…

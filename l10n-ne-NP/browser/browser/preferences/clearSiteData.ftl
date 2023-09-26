@@ -2,9 +2,9 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-clear-site-data-window =
+clear-site-data-window2 =
     .title = डेटा खालीगर्नुहोस्
-    .style = width: 35em
+    .style = min-width: 35em
 
 clear-site-data-description = { -brand-short-name }ले भण्डारण गरेको कुकीहरु र साइट डाटा हटाउनाले, तपाईँ वेबसाइटहरूबाट बाहिरिन सक्नु हुनेछ र अफलाइन वेब सामग्रीहरु पनि हट्न सक्नेछन् । क्यास डाटा खाली गर्नाले तपाईंका लगिनहरूलाई असर पार्दैन ।
 
@@ -50,12 +50,4 @@ clear-site-data-cache-empty =
     .accesskey = W
 
 clear-site-data-cache-info = वेबसाइटहरूको तस्बिरहरु र डाटा पुनः लोड गर्न आवश्यक पर्दछ
-
-clear-site-data-cancel =
-    .label = रद्द गर्नुहोस्
-    .accesskey = C
-
-clear-site-data-clear =
-    .label = खाली गर्नुहोस्
-    .accesskey = l
 

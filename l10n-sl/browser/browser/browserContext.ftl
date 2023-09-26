@@ -11,17 +11,6 @@ navbar-tooltip-instruction =
 
 ## Back
 
-main-context-menu-back =
-    .tooltiptext = Pojdi na prejšnjo stran
-    .aria-label = Nazaj
-    .accesskey = z
-
-navbar-tooltip-back =
-    .value = { main-context-menu-back.tooltiptext }
-
-toolbar-button-back =
-    .label = { main-context-menu-back.aria-label }
-
 # Variables
 #   $shortcut (String) - A keyboard shortcut for the Go Back command.
 main-context-menu-back-2 =
@@ -41,17 +30,6 @@ toolbar-button-back-2 =
     .label = { main-context-menu-back-2.aria-label }
 
 ## Forward
-
-main-context-menu-forward =
-    .tooltiptext = Pojdi na naslednjo stran
-    .aria-label = Naprej
-    .accesskey = r
-
-navbar-tooltip-forward =
-    .value = { main-context-menu-forward.tooltiptext }
-
-toolbar-button-forward =
-    .label = { main-context-menu-forward.aria-label }
 
 # Variables
 #   $shortcut (String) - A keyboard shortcut for the Go Forward command.
@@ -116,47 +94,44 @@ main-context-menu-page-save =
     .label = Shrani stran kot …
     .accesskey = s
 
-toolbar-button-page-save =
-    .label = { main-context-menu-page-save.label }
-
 ## Simple menu items
 
-main-context-menu-bookmark-add =
-    .aria-label = Dodaj stran med zaznamke
-    .accesskey = r
+main-context-menu-bookmark-page =
+    .aria-label = Dodaj stran med zaznamke …
+    .accesskey = m
     .tooltiptext = Dodaj stran med zaznamke
 
 # This menuitem is only visible on macOS
-# Cannot be shown at the same time as main-context-menu-bookmark-edit-mac,
+# Cannot be shown at the same time as main-context-menu-edit-bookmark-mac,
 # so should probably have the same access key if possible.
-main-context-menu-bookmark-add-mac =
-    .label = Dodaj stran med zaznamke
-    .accesskey = D
+main-context-menu-bookmark-page-mac =
+    .label = Dodaj stran med zaznamke …
+    .accesskey = m
 
 # This menuitem is only visible on macOS
-# Cannot be shown at the same time as main-context-menu-bookmark-add-mac,
+# Cannot be shown at the same time as main-context-menu-bookmark-page-mac,
 # so should probably have the same access key if possible.
-main-context-menu-bookmark-edit-mac =
-    .label = Uredi zaznamek
-    .accesskey = U
+main-context-menu-edit-bookmark-mac =
+    .label = Uredi zaznamek …
+    .accesskey = m
 
 # Variables
 #   $shortcut (String) - A keyboard shortcut for the add bookmark command.
-main-context-menu-bookmark-add-with-shortcut =
-    .aria-label = Dodaj stran med zaznamke
-    .accesskey = r
+main-context-menu-bookmark-page-with-shortcut =
+    .aria-label = Dodaj stran med zaznamke …
+    .accesskey = m
     .tooltiptext = Dodaj stran med zaznamke ({ $shortcut })
 
-main-context-menu-bookmark-change =
-    .aria-label = Uredi ta zaznamek
-    .accesskey = r
+main-context-menu-edit-bookmark =
+    .aria-label = Uredi zaznamek …
+    .accesskey = m
     .tooltiptext = Uredi zaznamek
 
 # Variables
 #   $shortcut (String) - A keyboard shortcut for the edit bookmark command.
-main-context-menu-bookmark-change-with-shortcut =
-    .aria-label = Uredi ta zaznamek
-    .accesskey = r
+main-context-menu-edit-bookmark-with-shortcut =
+    .aria-label = Uredi zaznamek …
+    .accesskey = m
     .tooltiptext = Uredi zaznamek ({ $shortcut })
 
 main-context-menu-open-link =
@@ -179,13 +154,9 @@ main-context-menu-open-link-new-private-window =
     .label = Odpri povezavo v novem zasebnem oknu
     .accesskey = P
 
-main-context-menu-bookmark-this-link =
-    .label = Dodaj povezavo med zaznamke
-    .accesskey = M
-
-main-context-menu-bookmark-link =
-    .label = Dodaj povezavo med zaznamke
-    .accesskey = m
+main-context-menu-bookmark-link-2 =
+    .label = Dodaj povezavo med zaznamke …
+    .accesskey = D
 
 main-context-menu-save-link =
     .label = Shrani povezavo kot …
@@ -195,11 +166,6 @@ main-context-menu-save-link-to-pocket =
     .label = Shrani povezavo v { -pocket-brand-name }
     .accesskey = e
 
-## The access keys for "Copy Link Location" and "Copy Email Address"
-## should be the same if possible; the two context menu items
-## are mutually exclusive.
-
-
 ## The access keys for "Copy Link" and "Copy Email Address"
 ## should be the same if possible; the two context menu items
 ## are mutually exclusive.
@@ -208,9 +174,9 @@ main-context-menu-copy-email =
     .label = Kopiraj e-poštni naslov
     .accesskey = E
 
-main-context-menu-copy-link =
-    .label = Kopiraj mesto povezave
-    .accesskey = i
+main-context-menu-copy-phone =
+    .label = Kopiraj telefonsko številko
+    .accesskey = t
 
 main-context-menu-copy-link-simple =
     .label = Kopiraj povezavo
@@ -239,32 +205,6 @@ main-context-menu-media-mute =
 main-context-menu-media-unmute =
     .label = Glasno
     .accesskey = n
-
-main-context-menu-media-play-speed =
-    .label = Hitrost predvajanja
-    .accesskey = r
-
-main-context-menu-media-play-speed-slow =
-    .label = Počasno (0,5 ×)
-    .accesskey = P
-
-main-context-menu-media-play-speed-normal =
-    .label = Običajno
-    .accesskey = O
-
-main-context-menu-media-play-speed-fast =
-    .label = Hitro (1,25 x)
-    .accesskey = H
-
-main-context-menu-media-play-speed-faster =
-    .label = Hitreje (1,5 x)
-    .accesskey = e
-
-# "Ludicrous" is a reference to the movie "Space Balls" and is meant
-# to say that this speed is very fast.
-main-context-menu-media-play-speed-fastest =
-    .label = Komično (2 x)
-    .accesskey = K
 
 main-context-menu-media-play-speed-2 =
     .label = Hitrost
@@ -312,12 +252,6 @@ main-context-menu-media-video-leave-fullscreen =
 
 # This is used when right-clicking on a video in the
 # content area when the Picture-in-Picture feature is enabled.
-main-context-menu-media-pip =
-    .label = Slika v sliki
-    .accesskey = v
-
-# This is used when right-clicking on a video in the
-# content area when the Picture-in-Picture feature is enabled.
 main-context-menu-media-watch-pip =
     .label = Glejte sliko v sliki
     .accesskey = s
@@ -325,14 +259,6 @@ main-context-menu-media-watch-pip =
 main-context-menu-image-reload =
     .label = Ponovno naloži sliko
     .accesskey = P
-
-main-context-menu-image-view =
-    .label = Pokaži sliko
-    .accesskey = I
-
-main-context-menu-video-view =
-    .label = Pokaži video
-    .accesskey = I
 
 main-context-menu-image-view-new-tab =
     .label = Odpri sliko v novem zavihku
@@ -345,18 +271,6 @@ main-context-menu-video-view-new-tab =
 main-context-menu-image-copy =
     .label = Kopiraj sliko
     .accesskey = a
-
-main-context-menu-image-copy-location =
-    .label = Kopiraj mesto slike
-    .accesskey = o
-
-main-context-menu-video-copy-location =
-    .label = Kopiraj mesto videa
-    .accesskey = o
-
-main-context-menu-audio-copy-location =
-    .label = Kopiraj mesto zvoka
-    .accesskey = o
 
 main-context-menu-image-copy-link =
     .label = Kopiraj povezavo do slike
@@ -378,13 +292,13 @@ main-context-menu-image-email =
     .label = Pošlji sliko po e-pošti …
     .accesskey = o
 
-main-context-menu-image-set-as-background =
-    .label = Nastavi za sliko ozadja namizja
-    .accesskey = S
-
 main-context-menu-image-set-image-as-background =
     .label = Nastavi sliko kot ozadje namizja …
     .accesskey = s
+
+main-context-menu-image-copy-text =
+    .label = Kopiraj besedilo s slike
+    .accesskey = b
 
 main-context-menu-image-info =
     .label = Podatki o sliki
@@ -402,10 +316,6 @@ main-context-menu-audio-save-as =
     .label = Shrani zvok kot …
     .accesskey = v
 
-main-context-menu-video-image-save-as =
-    .label = Shrani sličico videa kot …
-    .accesskey = S
-
 main-context-menu-video-take-snapshot =
     .label = Zajemi sličico …
     .accesskey = j
@@ -418,14 +328,6 @@ main-context-menu-audio-email =
     .label = Pošlji zvok po e-pošti …
     .accesskey = o
 
-main-context-menu-plugin-play =
-    .label = Omogoči vtičnik
-    .accesskey = m
-
-main-context-menu-plugin-hide =
-    .label = Skrij vtičnik
-    .accesskey = S
-
 main-context-menu-save-to-pocket =
     .label = Shrani stran v { -pocket-brand-name }
     .accesskey = s
@@ -433,14 +335,6 @@ main-context-menu-save-to-pocket =
 main-context-menu-send-to-device =
     .label = Pošlji stran na napravo
     .accesskey = N
-
-main-context-menu-view-background-image =
-    .label = Pokaži sliko ozadja
-    .accesskey = o
-
-main-context-menu-generate-new-password =
-    .label = Uporabi ustvarjeno geslo …
-    .accesskey = g
 
 ## The access keys for "Use Saved Login" and "Use Saved Password"
 ## should be the same if possible; the two context menu items
@@ -455,6 +349,10 @@ main-context-menu-use-saved-password =
     .accesskey = o
 
 ##
+
+main-context-menu-use-relay-mask =
+    .label = Uporabi e-poštno masko { -relay-brand-short-name }
+    .accesskey = e
 
 main-context-menu-suggest-strong-password =
     .label = Predlagaj močno geslo …
@@ -492,8 +390,8 @@ main-context-menu-frame-reload =
     .label = Ponovno naloži okvir
     .accesskey = R
 
-main-context-menu-frame-bookmark =
-    .label = Dodaj okvir med zaznamke
+main-context-menu-frame-add-bookmark =
+    .label = Dodaj okvir med zaznamke …
     .accesskey = m
 
 main-context-menu-frame-save-as =
@@ -512,9 +410,9 @@ main-context-menu-frame-view-info =
     .label = Pokaži podatke o okvirju
     .accesskey = I
 
-main-context-menu-print-selection =
-    .label = Natisni izbrano
-    .accesskey = N
+main-context-menu-print-selection-2 =
+    .label = Natisni izbrano …
+    .accesskey = r
 
 main-context-menu-view-selection-source =
     .label = Pokaži izvorno kodo izbora
@@ -532,10 +430,6 @@ main-context-menu-view-page-source =
     .label = Pokaži izvorno kodo strani
     .accesskey = V
 
-main-context-menu-view-page-info =
-    .label = Pokaži podatke o strani
-    .accesskey = I
-
 main-context-menu-bidi-switch-text =
     .label = Spremeni smer besedila
     .accesskey = b
@@ -543,10 +437,6 @@ main-context-menu-bidi-switch-text =
 main-context-menu-bidi-switch-page =
     .label = Spremeni smer strani
     .accesskey = s
-
-main-context-menu-inspect-element =
-    .label = Preglej element
-    .accesskey = j
 
 main-context-menu-inspect =
     .label = Preglej
@@ -558,3 +448,13 @@ main-context-menu-inspect-a11y-properties =
 main-context-menu-eme-learn-more =
     .label = Več o DRM …
     .accesskey = D
+
+# Variables
+#   $containerName (String): The name of the current container
+main-context-menu-open-link-in-container-tab =
+    .label = Odpri povezavo v novem zavihku vsebnika { $containerName }
+    .accesskey = O
+
+main-context-menu-reveal-password =
+    .label = Razkrij geslo
+    .accesskey = k

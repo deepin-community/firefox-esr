@@ -3,22 +3,7 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 
-### UI strings for the simplified onboarding modal / about:welcome
-### Various strings use a non-breaking space to avoid a single dangling /
-### widowed word, so test on various window sizes if you also want this.
-
-
-## These button action text can be split onto multiple lines, so use explicit
-## newlines in translations to control where the line break appears (e.g., to
-## avoid breaking quoted text).
-
-onboarding-button-label-learn-more = Իմանալ ավելին
-onboarding-button-label-get-started = Սկսել
-
-## Welcome modal dialog strings
-
-
-### UI strings for the simplified onboarding / multistage about:welcome
+### UI strings for the MR1 onboarding / multistage about:welcome
 ### Various strings use a non-breaking space to avoid a single dangling /
 ### widowed word, so test on various window sizes if you also want this.
 
@@ -26,163 +11,297 @@ onboarding-button-label-get-started = Սկսել
 ## Welcome page strings
 
 onboarding-welcome-header = Բարի գալուստ { -brand-short-name }
-onboarding-welcome-body = Դուք ունեք զննարկիչ: <br/> Ծանոթացեք { -brand-product-name } -ի մնացած մասի հետ:
-onboarding-welcome-learn-more = Իմացեք ավելին առավելությունների մասին:
-onboarding-welcome-modal-get-body = Դուք ունեք զննարկիչը։<br/>Հիմա ստացեք առավելագույնը { -brand-product-name }-ից։
-onboarding-welcome-modal-supercharge-body = Գերազանցեք ձեր գաղտնիության պաշտպանությունը։
-onboarding-welcome-modal-privacy-body = Դուք ունեք զննարկիչ։ եկեք ավելացնենք ավելի շատ գաղտնիության պաշտպանություն։
-onboarding-welcome-modal-family-learn-more = Իմացեք { -brand-product-name } ապրանքների ընտանիքի մասին։
-onboarding-welcome-form-header = Սկսեք այստեղ
-onboarding-join-form-body = Սկսելու համար մուտքագրեք ձեր էլ. Փոստի հասցեն:
-onboarding-join-form-email =
-    .placeholder = Մուտքագրեք էլ․ փոստ
-onboarding-join-form-email-error = Անհրաժեշտ է վավեր էլ․ փոստ
-onboarding-join-form-legal = Շարունակելով, դուք համաձայնվում եք <a data-l10n-name="terms"> Ծառայությունների մատուցման պայմանների </a> և <a data-l10n-name="privacy"> Գաղտնիության ծանուցման </a> հետ:
-onboarding-join-form-continue = Շարունակել
-# This message is followed by a link using onboarding-join-form-signin ("Sign In") as text.
-onboarding-join-form-signin-label = Արդեն ունե՞ք հաշիվ։
-# Text for link to submit the sign in form
-onboarding-join-form-signin = Մուտք գործել
 onboarding-start-browsing-button-label = Սկսել դիտարկումը
-onboarding-cards-dismiss =
-    .title = Բաց թողնել
-    .aria-label = Բաց թողնել
-
-## Welcome full page string
-
-onboarding-fullpage-welcome-subheader = Եկեք սկսենք ուսումնասիրել այն ամենը, ինչ կարող եք անել։
-onboarding-fullpage-form-email =
-    .placeholder = Ձեր էլ֊փոստի հասցեն…
-
-## Firefox Sync modal dialog strings.
-
-onboarding-sync-welcome-header = Վերցրեք { -brand-product-name } ձեզ հետ
-onboarding-sync-welcome-content = Ստացեք ձեր էջանիծերը, պատմությունը, գաղտնաբառերը և այլ կարգավորումներ ձեր բոլոր սարքերում:
-onboarding-sync-welcome-learn-more-link = Իմանալ ավելին Firefox Հաշիվների մասին
-onboarding-sync-form-input =
-    .placeholder = Էլ. փոստ
-onboarding-sync-form-continue-button = Շարունակել
-onboarding-sync-form-skip-login-button = Բաց թողնել այս քայլը
-
-## This is part of the line "Enter your email to continue to Firefox Sync"
-
-onboarding-sync-form-header = Մուտքագրեք ձեր էլ․ փոստը
-onboarding-sync-form-sub-header = շարունակել { -sync-brand-name }
-
-## These are individual benefit messages shown with an image, title and
-## description.
-
-onboarding-benefit-products-text = Ավարտեք գործերը օգտագործելով  գործիքաընտանիքները, որոնք հարգում են Ձեր գաղտնիությունը սարքերում։
-# "Personal Data Promise" is a concept that should be translated consistently
-# across the product. It refers to a concept shown elsewhere to the user: "The
-# Firefox Personal Data Promise is the way we honor your data in everything we
-# make and do. We take less data. We keep it safe. And we make sure that we are
-# transparent about how we use it."
-onboarding-benefit-privacy-text = Այն ամենը, ինչ մենք անում ենք, հարգում է մեր անձնական տվյալների խոստումը. Քիչ վերցրեք: Ապահով պահեք: Ոչ մի գաղտնիք:
-onboarding-benefit-sync-title = { -sync-brand-short-name }
-onboarding-benefit-sync-text = Վերցրեք ձեր էջանիշները, գաղտնաբառերը, պատմությունը և ավելին, որտեղ օգտագործում եք { -brand-product-name }։
-onboarding-benefit-monitor-title = { -monitor-brand-short-name }
-onboarding-benefit-monitor-text = Տեղեկացեք, երբ ձեր անձնական տեղեկությունները հայտնի տվյալների խախտման մեջ են։
-onboarding-benefit-lockwise-title = { -lockwise-brand-short-name }
-onboarding-benefit-lockwise-text = Կառավարեք գաղտնաբառերը, որոնք պաշտպանված և շարժական են։
-
-## These strings belong to the individual onboarding messages.
-
-
-## Each message has a title and a description of what the browser feature is.
-## Each message also has an associated button for the user to try the feature.
-## The string for the button is found above, in the UI strings section
-
-onboarding-tracking-protection-title2 = Պաշտպանություն հետևելուց
-onboarding-tracking-protection-text2 = { -brand-short-name }-ը օգնում է դադարեցնել կայքերի կողմից ձեր առցանց հետագծումը, ինչը բարդեցնում է գովազդների կողմից Ձեզ հետևելը։
-onboarding-tracking-protection-button2 = Ինչպես է դա աշխատում
-onboarding-data-sync-title = Վերցրեք ձեր կարգավորումները ձեզ հետ
-# "Sync" is short for synchronize.
-onboarding-data-sync-text2 = Համաժամեցրեք ձեր էջանիշները, գաղտնաբառերը և ավելին, որտեղ դուք օգտագործում եք { -brand-product-name }։
-onboarding-data-sync-button2 = Մուտք գործել { -sync-brand-short-name }
-onboarding-firefox-monitor-title = Զգուշացեք տվյալների խախտումների մասին
-onboarding-firefox-monitor-text2 = { -monitor-brand-name } վերահսկում է, եթե ձեր էլ֊փոտը հայտնվել է հայտնի տվյալների խախտմամբ և ահազանգում է ձեզ, եթե այն հայտնվում է նոր խախտմամբ։
-onboarding-firefox-monitor-button = Գրանցվեք զգուշացման համար
-onboarding-browse-privately-title = Զննարկչի գաղտնիություն
-onboarding-browse-privately-text = Գաղտնի զննարկումը մաքրում է ձեր որոնման և զննարկման պատմությունը` յուրաքանչյուրից օգտատիրոջից գաղտնի պահելու համար։
-onboarding-browse-privately-button = Բացել գաղտնի պատուհան
-onboarding-firefox-send-title = Ձեր Տարածած ֆայլերը պահեք Գաղտնի։
-onboarding-firefox-send-text2 = Վերբեռնեք Ձեր նիշքերը { -send-brand-name } դրանք վերջապես ծածկագրելու և ինքնաբերաբար ավարտվող հղման հետ համօգտագործելու համար։
-onboarding-firefox-send-button = Փորձեք { -send-brand-name }
-onboarding-mobile-phone-title = Ունեցեք { -brand-product-name }-ը Ձեր հեռախոսում
-onboarding-mobile-phone-text = Ներբեռնեք { -brand-product-name }-ը iOS- ի կամ Android- ի համար և համաժամեցրեք Ձեր տվյալները սարքերում։
-# "Mobile" is short for mobile/cellular phone, "Browser" is short for web
-# browser.
-onboarding-mobile-phone-button = Ներբեռնել բջջային զննարկիչ
-onboarding-send-tabs-title = Անմիջապես ինքներդ ուղարկեք Ձեզ ներդիրները
-# "Send Tabs" refers to "Send Tab to Device" feature that appears when opening a
-# tab's context menu.
-onboarding-send-tabs-text2 = Հեշտությամբ տարածեք էջերը Ձեր սարքերի միջև առանց հղումները պատճենելու կամ զննարկիչը լքելու։
-onboarding-send-tabs-button = Սկսեք օգտագործել ներդիրների ուղարկումը
-onboarding-pocket-anywhere-title = Ամեն դեպքում կարդալ և լսել
-onboarding-pocket-anywhere-text2 = Պահպանեք Ձեր նախընտրած բովանդակությունն անցանց ռեժիմով՝ { -pocket-brand-name } ծրագրով և կարդացեք, լսեք և դիտեք, երբ դա ձեր համար հարմար է։
-onboarding-pocket-anywhere-button = Փորձեք { -pocket-brand-name }
-onboarding-lockwise-strong-passwords-title = Ստեղծեք և պահեք լավ գաղտնաբառեր
-onboarding-lockwise-strong-passwords-text = { -lockwise-brand-name }-ը միանգամից ստեղծում է լավ գաղտնաբառեր և պահում դրանք մեկ տեղում։
-onboarding-lockwise-strong-passwords-button = Ձեր մուտքանունների կառավարում։
-onboarding-facebook-container-title = Սահմանեք սահմաններ Facebook-ի հետ
-onboarding-facebook-container-text2 = { -facebook-container-brand-name } ձեր հատկագիրը զերծ է պահում մնացած ամեն ինչից, ավելի դժվար է դարձնում Facebook-ի համար ձեզ գովազդով թիրախավորելը։
-onboarding-facebook-container-button = Ավելացնել ընդլայնում
-onboarding-import-browser-settings-title = Ներածեք Ձեր էջանիշերը, գաղտնաբառերը և ավելին
-onboarding-import-browser-settings-text = Սուզվեք աջ — հեշտությամբ բերեք ձեր Chrome կայքերն ու պարամետրերը ձեզ հետ:
-onboarding-import-browser-settings-button = Ներածել Chrome-ի տվյալները
-onboarding-personal-data-promise-title = Անձնական է իր ձևավորմամբ
-onboarding-personal-data-promise-text = { -brand-product-name }-ը վերաբերվում է ձեր տվյալներին հարգանքով՝ վերցնելով ավելի քիչ, պաշտպանելով այն և անկեղղծ լինելով, թե ինչպես ենք մենք օգտագործում այն:
-onboarding-personal-data-promise-button = Կարդացեք մեր Խոստումը
-
-## Message strings belonging to the Return to AMO flow
-
-return-to-amo-sub-header = Հիանալի է, դուք ստացել եք { -brand-short-name }-ը
-# <icon></icon> will be replaced with the icon belonging to the extension
-#
-# Variables:
-#   $addon-name (String) - Name of the add-on
-return-to-amo-addon-header = Այժմ ստացեք ձեր <icon></icon><b>{ $addon-name }-ը:</b>
-return-to-amo-extension-button = Ավելացնել ընդլայնում
-return-to-amo-get-started-button = Սկսեք { -brand-short-name }-ից
+onboarding-not-now-button-label = Ոչ հիմա
+mr1-onboarding-get-started-primary-button-label = Սկսել
 
 ## Custom Return To AMO onboarding strings
 
+return-to-amo-subtitle = Հիանալի է, դուք ստացել եք { -brand-short-name }-ը
+# <img data-l10n-name="icon"/> will be replaced with the icon belonging to the extension
+#
+# Variables:
+#   $addon-name (String) - Name of the add-on
+return-to-amo-addon-title = Այժմ ստացեք ձեր <img data-l10n-name="icon"/> <b>{ $addon-name }</b>:
+return-to-amo-add-extension-label = Ավելացնել ընդլայնում
+return-to-amo-add-theme-label = Ավելացնել ոճ
 
-## Multistage 3-screen onboarding flow strings (about:welcome pages)
+##  Variables: $addon-name (String) - Name of the add-on to be installed
 
-# The <span data-l10n-name="zap"></span> in this string allows a "zap" underline style to be
-# automatically added to the text inside it. { -brand-short-name } should stay inside the span.
-onboarding-multistage-welcome-header = Բարի գալուստ <span data-l10n-name="zap">{ -brand-short-name }</span>
-onboarding-multistage-welcome-secondary-button-label = Մուտք գործել
+mr1-return-to-amo-add-extension-label = Ավելացնել { $addon-name }
 
-## Please make sure to split the content of the title attribute into lines whose
-## width corresponds to about 40 Latin characters, to ensure that the tooltip
-## doesn't become too long. Line breaks will be preserved when displaying the
-## tooltip.
+## Multistage onboarding strings (about:welcome pages)
 
+# Aria-label to make the "steps" of multistage onboarding visible to screen readers.
+# Variables:
+#   $current (Int) - Number of the current page
+#   $total (Int) - Total number of pages
 
-## Multistage MR1 onboarding strings (MR1 about:welcome pages)
+onboarding-welcome-steps-indicator-label =
+    .aria-label = Ընթացքը. քայլ { $current }՝ { $total }-ից
 
+# This button will open system settings to turn on prefers-reduced-motion
+mr1-onboarding-reduce-motion-button-label = Անջատեք անիմացիաները
 
 ## Title and primary button strings differ between platforms as they
 ## match the OS' application context menu item action where Windows uses "pin"
 ## and "taskbar" while macOS "keep" and "Dock" (proper noun).
 
-
 ## Multistage MR1 onboarding strings (about:welcome pages)
 
+# String for the Firefox Accounts button
 mr1-onboarding-sign-in-button-label = Մուտք գործել
 
 ## Title, subtitle and primary button string used on set default onboarding screen
 ## when Firefox is not default browser
 
-
 ## Multistage MR1 onboarding strings (about:welcome pages)
 
+# The primary import button label will depend on whether we can detect which browser was used to download Firefox.
+# Variables:
+#   $previous (Str) - Previous browser name, such as Edge, Chrome
+mr1-onboarding-import-primary-button-label-attribution = Ներմուծել { $previous }-ից
+
+mr1-onboarding-theme-header = Դարձրեք այն ձերը
+mr1-onboarding-theme-subtitle = Անհատականացրեք { -brand-short-name }-ը ոճով:
+mr1-onboarding-theme-secondary-button-label = Ոչ հիմա
+
+# System theme uses operating system color settings
+mr1-onboarding-theme-label-system = Համակարգային
+
+mr1-onboarding-theme-label-light = Լուսավոր
+mr1-onboarding-theme-label-dark = Մուգ
+# "Alpenglow" here is the name of the theme, and should be kept in English.
+mr1-onboarding-theme-label-alpenglow = Alpenglow
+
+onboarding-theme-primary-button-label = Պատրաստ է
 
 ## Please make sure to split the content of the title attribute into lines whose
 ## width corresponds to about 40 Latin characters, to ensure that the tooltip
 ## doesn't become too long. Line breaks will be preserved when displaying the
 ## tooltip.
+
+# Tooltip displayed on hover of system theme
+mr1-onboarding-theme-tooltip-system =
+    .title =
+        Հետևեք օպերացիոն համակարգի ոճին
+        կոճակների, ցանկերի և պատուհանների համար:
+
+# Input description for system theme
+mr1-onboarding-theme-description-system =
+    .aria-description =
+        Հետևեք օպերացիոն համակարգի ոճին
+        կոճակների, ցանկերի և պատուհանների համար:
+
+# Tooltip displayed on hover of light theme
+mr1-onboarding-theme-tooltip-light =
+    .title =
+        Օգտագործեք թեթև ոճ կոճակների,
+        ցանկերի և պատուհանների համար։
+
+# Input description for light theme
+mr1-onboarding-theme-description-light =
+    .aria-description =
+        Օգտագործեք թեթև ոճ կոճակների,
+        ցանկերի և պատուհանների համար։
+
+# Tooltip displayed on hover of dark theme
+mr1-onboarding-theme-tooltip-dark =
+    .title =
+        Օգտագործեք մուգ ոճ կոճակների,
+        ցանկերի և պատուհանների համար։
+
+# Input description for dark theme
+mr1-onboarding-theme-description-dark =
+    .aria-description =
+        Օգտագործեք մուգ ոճ կոճակների,
+        ցանկերի և պատուհանների համար։
+
+# Tooltip displayed on hover of Alpenglow theme
+mr1-onboarding-theme-tooltip-alpenglow =
+    .title =
+        Օգտագործեք փոփոխական, գույնային ոճ կոճակների,
+        ցանկերի և պատուհանների համար:
+
+# Input description for Alpenglow theme
+mr1-onboarding-theme-description-alpenglow =
+    .aria-description =
+        Օգտագործեք փոփոխական, գույնային ոճ կոճակների,
+        ցանկերի և պատուհանների համար:
+
+# Selector description for default themes
+mr2-onboarding-default-theme-label = Ուսումնասիրեք սկզբնադիր ոճերը:
+
+## Strings for Thank You page
+
+mr2-onboarding-thank-you-header = Շնորհակալություն մեզ ընտրելու համար
+mr2-onboarding-thank-you-text = { -brand-short-name }-ը անկախ դիտարկիչ է, որն ապահովված է շահույթ չհետապնդող կազմակերպության կողմից: Միասին մենք վեբն ավելի անվտանգ, առողջ և անձնական ենք դարձնում:
+mr2-onboarding-start-browsing-button-label = Սկսել զննումը
+
+## Multistage live language reloading onboarding strings (about:welcome pages)
+##
+## The following language names are generated by the browser's Intl.DisplayNames API.
+##
+## Variables:
+##   $negotiatedLanguage (String) - The name of the langpack's language, e.g. "Español (ES)"
+
+
+## Multistage live language reloading onboarding strings (about:welcome pages)
+##
+## The following language names are generated by the browser's Intl.DisplayNames API.
+##
+## Variables:
+##   $negotiatedLanguage (String) - The name of the langpack's language, e.g. "Español (ES)"
+##   $systemLanguage (String) - The name of the system language, e.g "Español (ES)"
+##   $appLanguage (String) - The name of the language shipping in the browser build, e.g. "English (EN)"
+
+onboarding-live-language-header = Ընտրեք ձեր լեզուն
+
+mr2022-onboarding-live-language-text = { -brand-short-name }-ը խոսում է ձեր լեզվով
+
+mr2022-language-mismatch-subtitle = Մեր համայնքի շնորհիվ { -brand-short-name }-ը թարգմանվում է ավելի քան 90 լեզուներով: Կարծես թե ձեր համակարգն օգտագործում է { $systemLanguage }, իսկ { -brand-short-name }-ը ՝ { $appLanguage }:
+
+onboarding-live-language-button-label-downloading = Լեզվի փաթեթի ներբեռնում { $negotiatedLanguage }-ի համար…
+onboarding-live-language-waiting-button = Հասանելի լեզուների ստացում…
+onboarding-live-language-installing = Լեզվի փաթեթի տեղադրում { $negotiatedLanguage }-ի համար…
+
+mr2022-onboarding-live-language-switch-to = Անցնել { $negotiatedLanguage }-ի
+mr2022-onboarding-live-language-continue-in = Շարունակել { $appLanguage }-ով
+
+onboarding-live-language-secondary-cancel-download = Չեղարկել
+onboarding-live-language-skip-button-label = Բաց թողնել
+
+## Firefox 100 Thank You screens
+
+# "Hero Text" displayed on left side of welcome screen. This text can be
+# formatted to span multiple lines as needed. The <span data-l10n-name="zap">
+# </span> in this string allows a "zap" underline style to be automatically
+# added to the text inside it. "Yous" should stay inside the zap span, but
+# "Thank" can be put inside instead if there's no "you" in the translation.
+# The English text would normally be "100 Thank-Yous" i.e., plural noun, but for
+# aesthetics of splitting it across multiple lines, the hyphen is omitted.
+fx100-thank-you-hero-text =
+    100
+    <span data-l10n-name="zap">շնորհակալություն</span>
+fx100-thank-you-subtitle = Սա մեր 100-րդ թողարկումն է: Շնորհակալություն, որ օգնում ենք մեզ կառուցել ավելի լավ և առողջ համացանց:
+fx100-thank-you-pin-primary-button-label =
+    { PLATFORM() ->
+        [macos] Պահեք { -brand-short-name }-ը հարակցված
+       *[other] Ամրացրեք { -brand-short-name }-ը Խնդրագոտուն
+    }
+
+fx100-upgrade-thanks-header = 100 շնորհակալություն
+# Message shown with a start-browsing button. Emphasis <em> should be for "you"
+# but "Thank" can be used instead if there's no "you" in the translation.
+fx100-upgrade-thank-you-body = Սա { -brand-short-name }-ի 100-րդ թողարկումն է: <em>Շնորհակալություն</em>, որ օգնում եք մեզ կառուցել ավելի լավ և առողջ համացանց:
+# Message shown with either a pin-to-taskbar or set-default button.
+fx100-upgrade-thanks-keep-body = Սա մեր 100-րդ թողարկումն է: Շնորհակալություն, որ մեզ հետ եք: Պահեք { -brand-short-name }-ը մոտակայքում՝ հաջորդ 100-ի համար)
+
+mr2022-onboarding-secondary-skip-button-label = Բաց թողնել այս քայլը
+
+## MR2022 New User Easy Setup screen strings
+
+# Set Default action checkbox label used on new user onboarding first screen
+mr2022-onboarding-easy-setup-set-default-checkbox-label = Կայել { -brand-short-name }-ը որպես սկզբնադիր զննիչ
+
+## MR2022 New User Pin Firefox screen strings
+
+# Title used on about:welcome for new users when Firefox is not pinned.
+# In this context, open up is synonymous with "Discover".
+# The metaphor is that when they open their Firefox browser, it helps them discover an amazing internet.
+# If this translation does not make sense in your language, feel free to use the word "discover."
+mr2022-onboarding-welcome-pin-header = Բացեք զարմանալի համացանց
+# Subtitle is used on onboarding page for new users page when Firefox is not pinned
+mr2022-onboarding-welcome-pin-subtitle = Թողարկեք { -brand-short-name }-ը ցանկացած տեղից՝ մեկ քլիքով: Ամեն անգամ անելիս դուք ընտրում եք ավելի բաց և անկախ համացանց:
+# Primary button string used on welcome page for when Firefox is not pinned.
+mr2022-onboarding-pin-primary-button-label =
+    { PLATFORM() ->
+        [macos] Պահեք { -brand-short-name }-ը ամրակցված
+       *[other] Ամրացրեք { -brand-short-name }-ը Խնդրագոտուն
+    }
+# Subtitle will be used when user already has Firefox pinned, but
+# has not set it as their default browser.
+# When translating "zip", please feel free to pick a verb that signifies movement and/or exploration
+# and makes sense in the context of navigating the web.
+mr2022-onboarding-set-default-only-subtitle = Սկսեք զննարկիչով, որն ապահովված է շահույթ չհետապնդող կազմակերպության կողմից: Մենք պաշտպանում ենք ձեր գաղտնիությունը, մինչ դուք զիփում եք համացանցում:
+
+## MR2022 Existing User Pin Firefox Screen Strings
+
+# Title used on multistage onboarding page for existing users when Firefox is not pinned
+mr2022-onboarding-existing-pin-header = Շնորհակալություն { -brand-product-name } սիրելու համար
+# Subtitle is used on onboarding page for existing users when Firefox is not pinned
+mr2022-onboarding-existing-pin-subtitle = Գործարկեք ավելի առողջ ինտերնետ ցանկացած վայրից մեկ սեղմումով: Մեր վերջին թարմացումը հագեցած է նոր բաներով, որոնք մենք կարծում ենք, որ դուք կպաշտեք:
+# Subtitle will be used on the welcome screen for existing users
+# when they already have Firefox pinned but not set as default
+mr2022-onboarding-existing-set-default-only-subtitle = Օգտագործեք զննիչ, որը պաշտպանում է ձեր գաղտնիությունը համացանցում սեղմելով: Մեր վերջին թարմացումը լի է այն բաներով, որոնք դուք պաշտում եք:
+mr2022-onboarding-existing-pin-checkbox-label = Նաև ավելացրեք { -brand-short-name } մասնավոր զննում
+
+## MR2022 New User Set Default screen strings
+
+# This string is the title used when the user already has pinned the browser, but has not set default.
+mr2022-onboarding-set-default-title = Դարձրեք { -brand-short-name }-ը ձեր հիմնական զննիչը
+mr2022-onboarding-set-default-primary-button-label = Կայեք { -brand-short-name }-ը որպես սկզբնադիր զննիչ
+
+## MR2022 Get Started screen strings.
+## These strings will be used on the welcome page
+## when Firefox is already set to default and pinned.
+
+# When translating "zip", please feel free to pick a verb that signifies movement and/or exploration
+# and makes sense in the context of navigating the web.
+mr2022-onboarding-get-started-primary-subtitle = Մեր վերջին տարբերակը ստեղծվել է ձեր շուրջը՝ դարձնելով ավելի հեշտ, քան երբևէ՝ համացանցում համախմբվելու համար: Այն հագեցած է առանձնահատկություններով, որոնք մենք կարծում ենք, որ դուք կպաշտեք:
+mr2022-onboarding-get-started-primary-button-label = Տեղակայեք վայրկյանների ընթացքում
+
+## MR2022 Import Settings screen strings
+
+
+## If your language uses grammatical genders, in the description for the
+## colorway feel free to switch from "You are a X. You…" (e.g. "You are a
+## Playmaker. You create…") to "X: you…" ("Playmaker: You create…"). This might
+## help creating a more inclusive translation.
+
+mr2022-onboarding-colorway-title = Ընտրեք այն գույնը, որը ձեզ ոգեշնչում է
+mr2022-onboarding-colorway-subtitle = Անկախ ձայները կարող են փոխել մշակույթը:
+mr2022-onboarding-colorway-primary-button-label-continue = Սահմանել և շարունակել
+
+mr2022-onboarding-colorway-label-default = Սկզբնադիր
+
+mr2022-onboarding-colorway-label-playmaker = Փլեյմեյքեր
+mr2022-onboarding-colorway-tooltip-playmaker2 =
+    .title = Փլեյմեյքեր (կարմիր)
+mr2022-onboarding-colorway-description-playmaker = <b>Դուք փլեյմեյքեր եք:</b> Դուք հնարավորություններ եք ստեղծում հաղթելու և օգնում եք ձեր շրջապատի բոլորին բարձրացնել իրենց խաղը:
+
+mr2022-onboarding-colorway-description-visionary = <b>Դուք տեսաբան եք:</b> Դուք կասկածի տակ եք դնում ստատուս քվոն և դրդում ուրիշներին պատկերացնել ավելի լավ ապագա:
+
+mr2022-onboarding-colorway-description-innovator = <b>Դուք նորարար եք:</b> Դուք տեսնում եք հնարավորություններ ամենուր և ազդեցություն եք թողնում ձեր շրջապատի բոլոր մարդկանց կյանքի վրա:
+
+## MR2022 Multistage Mobile Download screen strings
+
+mr2022-onboarding-mobile-download-title = Անցեք լափթոփից հեռախոս և ետ եկեք
+
+## MR2022 Upgrade Dialog screens
+## Pin private window screen shown only for users who don't have Firefox private pinned
+
+mr2022-upgrade-onboarding-pin-private-window-header = Ստացեք մասնավոր զննման ազատություն մեկ քլիքով
+mr2022-upgrade-onboarding-pin-private-window-subtitle = Ոչ մի պահված թխուկ կամ պատմություն: Աշխատեք այնպես, կարծես ոչ ոք չի հետևում Ձեզ:
+mr2022-upgrade-onboarding-pin-private-window-primary-button-label =
+    { PLATFORM() ->
+        [macos] Պահեք { -brand-short-name }-ի մասնավոր զննումը ամրակցված
+       *[other] Ամրացրեք { -brand-short-name }-ի մասնավոր զննումը Խնդրագոտուն
+    }
+
+## MR2022 Privacy Segmentation screen strings
+
+
+## MR2022 Multistage Gratitude screen strings
+
+mr2022-onboarding-gratitude-title = Դուք օգնում եք մեզ կառուցել ավելի լավ համացանց
+mr2022-onboarding-gratitude-subtitle = Շնորհակալություն { -brand-short-name }-ը օգտագործելու համար, Mozilla Foundation-ի կողմից: Ձեր աջակցությամբ մենք աշխատում ենք համացանցը դարձնել ավելի բաց, մատչելի և լավ բոլորի համար:
+
+## Onboarding spotlight for infrequent users
+
+
+## MR2022 Illustration alt tags
+## Descriptive tags for illustrations used by screen readers and other assistive tech
+
+## Device migration onboarding
 

@@ -38,16 +38,11 @@ menu-quit =
             [windows] Q
            *[other] Q
         }
+
 # This menu-quit-mac string is only used on macOS.
 menu-quit-mac =
     .label = Quitter { -brand-shorter-name }
-# This menu-quit-button string is only used on Linux.
-menu-quit-button =
-    .label = { menu-quit.label }
-# This menu-quit-button-win string is only used on Windows.
-menu-quit-button-win =
-    .label = { menu-quit.label }
-    .tooltip = Quitter { -brand-shorter-name }
+
 menu-about =
     .label = À propos de { -brand-shorter-name }
     .accesskey = p
@@ -77,8 +72,14 @@ menu-file-open-location =
 menu-file-open-file =
     .label = Ouvrir un fichier…
     .accesskey = O
-menu-file-close =
-    .label = Fermer
+# Variables:
+#  $tabCount (Number): the number of tabs that are affected by the action.
+menu-file-close-tab =
+    .label =
+        { $tabCount ->
+            [1] Fermer l’onglet
+           *[other] Fermer { $tabCount } onglets
+        }
     .accesskey = F
 menu-file-close-window =
     .label = Fermer la fenêtre
@@ -87,17 +88,14 @@ menu-file-save-page =
     .label = Enregistrer sous…
     .accesskey = E
 menu-file-email-link =
-    .label = Envoyer par courriel un lien vers la page…
-    .accesskey = c
+    .label = Envoyer par e-mail un lien vers la page…
+    .accesskey = m
 menu-file-share-url =
     .label = Partager
     .accesskey = P
 menu-file-print-setup =
     .label = Mise en page…
     .accesskey = M
-menu-file-print-preview =
-    .label = Aperçu avant impression
-    .accesskey = v
 menu-file-print =
     .label = Imprimer…
     .accesskey = p
@@ -113,9 +111,6 @@ menu-file-go-offline =
 menu-edit =
     .label = Édition
     .accesskey = n
-menu-edit-find-on =
-    .label = Rechercher dans la page…
-    .accesskey = h
 menu-edit-find-in-page =
     .label = Rechercher dans la page…
     .accesskey = h
@@ -134,9 +129,6 @@ menu-view =
 menu-view-toolbars-menu =
     .label = Barres d’outils
     .accesskey = T
-menu-view-customize-toolbar =
-    .label = Personnaliser…
-    .accesskey = P
 menu-view-customize-toolbar2 =
     .label = Personnaliser la barre d’outils…
     .accesskey = P
@@ -173,9 +165,6 @@ menu-view-page-style-no-style =
 menu-view-page-basic-style =
     .label = Style de base de la page
     .accesskey = b
-menu-view-charset =
-    .label = Encodage du texte
-    .accesskey = E
 menu-view-repair-text-encoding =
     .label = Réparer l’encodage du texte
     .accesskey = c
@@ -192,6 +181,17 @@ menu-view-exit-full-screen =
 menu-view-full-screen =
     .label = Plein écran
     .accesskey = P
+
+## These menu items may use the same accesskey.
+
+# This should match reader-view-enter-button in browser.ftl
+menu-view-enter-readerview =
+    .label = Passer en mode lecture
+    .accesskey = r
+# This should match reader-view-close-button in browser.ftl
+menu-view-close-readerview =
+    .label = Quitter le mode lecture
+    .accesskey = r
 
 ##
 
@@ -221,24 +221,21 @@ menu-history-undo-menu =
     .label = Onglets récemment fermés
 menu-history-undo-window-menu =
     .label = Fenêtres récemment fermées
-menu-history-reopen-all-tabs = Rouvrir tous les onglets
-menu-history-reopen-all-windows = Rouvrir toutes les fenêtres
 
 ## Bookmarks Menu
 
 menu-bookmarks-menu =
     .label = Marque-pages
     .accesskey = M
-menu-bookmarks-show-all =
-    .label = Afficher tous les marque-pages
-menu-bookmark-this-page =
-    .label = Marquer cette page
 menu-bookmarks-manage =
     .label = Organiser les marque-pages
-menu-bookmark-current-tab =
-    .label = Marquer l’onglet courant
-menu-bookmark-edit =
-    .label = Modifier ce marque-page
+menu-bookmark-tab =
+    .label = Marquer l’onglet courant…
+menu-edit-bookmark =
+    .label = Modifier ce marque-page…
+# "Search" is a verb, as in "Search in bookmarks"
+menu-bookmarks-search =
+    .label = Rechercher des marque-pages
 menu-bookmarks-all-tabs =
     .label = Marquer tous les onglets…
 menu-bookmarks-toolbar =
@@ -256,15 +253,6 @@ menu-tools =
 menu-tools-downloads =
     .label = Téléchargements
     .accesskey = T
-menu-tools-addons =
-    .label = Modules complémentaires
-    .accesskey = e
-menu-tools-fxa-sign-in =
-    .label = Se connecter à { -brand-product-name }…
-    .accesskey = e
-menu-tools-turn-on-sync =
-    .label = Activer { -sync-brand-short-name }…
-    .accesskey = n
 menu-tools-addons-and-themes =
     .label = Extensions et thèmes
     .accesskey = x
@@ -280,9 +268,6 @@ menu-tools-sync-now =
 menu-tools-fxa-re-auth =
     .label = Se reconnecter à { -brand-product-name }…
     .accesskey = r
-menu-tools-web-developer =
-    .label = Développement web
-    .accesskey = W
 menu-tools-browser-tools =
     .label = Outils du navigateur
     .accesskey = n
@@ -295,17 +280,6 @@ menu-tools-page-source =
 menu-tools-page-info =
     .label = Informations sur la page
     .accesskey = I
-menu-preferences =
-    .label =
-        { PLATFORM() ->
-            [windows] Options
-           *[other] Préférences
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] O
-           *[other] f
-        }
 menu-settings =
     .label = Paramètres
     .accesskey =
@@ -338,21 +312,6 @@ menu-window-bring-all-to-front =
 menu-help =
     .label = Aide
     .accesskey = e
-menu-help-product =
-    .label = Aide de { -brand-shorter-name }
-    .accesskey = A
-menu-help-show-tour =
-    .label = Visite guidée de { -brand-shorter-name }
-    .accesskey = V
-menu-help-import-from-another-browser =
-    .label = Importer depuis un autre navigateur…
-    .accesskey = I
-menu-help-keyboard-shortcuts =
-    .label = Raccourcis clavier
-    .accesskey = o
-menu-help-troubleshooting-info =
-    .label = Informations de dépannage
-    .accesskey = I
 menu-get-help =
     .label = Obtenir de l’aide
     .accesskey = O
@@ -361,21 +320,18 @@ menu-help-more-troubleshooting-info =
     .accesskey = t
 menu-help-report-site-issue =
     .label = Signaler un problème sur ce site…
-menu-help-feedback-page =
-    .label = Donner votre avis…
-    .accesskey = D
-menu-help-safe-mode-without-addons =
-    .label = Redémarrer avec les modules désactivés…
-    .accesskey = R
-menu-help-safe-mode-with-addons =
-    .label = Redémarrer avec les modules activés…
-    .accesskey = R
+menu-help-share-ideas =
+    .label = Partager des idées et des commentaires…
+    .accesskey = P
 menu-help-enter-troubleshoot-mode2 =
     .label = Mode de dépannage…
     .accesskey = M
 menu-help-exit-troubleshoot-mode =
     .label = Désactiver le mode de dépannage
     .accesskey = m
+menu-help-switch-device =
+    .label = Passer à un nouvel appareil
+    .accesskey = n
 # Label of the Help menu item. Either this or
 # menu-help-notdeceptive is shown.
 menu-help-report-deceptive-site =

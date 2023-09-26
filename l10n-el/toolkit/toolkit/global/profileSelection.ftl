@@ -23,6 +23,8 @@ profile-selection-delete-button =
     .label = Διαγραφή προφίλ…
     .accesskey = Δ
 
+profile-selection-conflict-message = Ένα άλλο αντίγραφο του { -brand-product-name } έχει κάνει αλλαγές στα προφίλ. Πρέπει να επανεκκινήσετε το { -brand-short-name } πριν κάνετε περισσότερες αλλαγές.
+
 ## Messages used in the profile manager
 
 profile-manager-description = Το { -brand-short-name } αποθηκεύει πληροφορίες για τις ρυθμίσεις, τις προτιμήσεις και άλλα στοιχεία χρήστη στο προφίλ χρήστη σας.

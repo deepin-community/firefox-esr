@@ -14,6 +14,9 @@ printui-sheets-count =
     }
 
 printui-page-range-all = Tất cả
+printui-page-range-current = Hiện tại
+printui-page-range-odd = Số lẻ
+printui-page-range-even = Số chẵn
 printui-page-range-custom = Tùy chọn
 printui-page-range-label = Trang
 printui-page-range-picker =
@@ -56,8 +59,6 @@ printui-two-sided-printing-short-edge = Lật theo chiều rộng
 printui-options = Tùy chọn
 printui-headers-footers-checkbox = In đầu trang và chân trang
 printui-backgrounds-checkbox = In phần nền
-
-printui-selection-checkbox = Chỉ in phần được chọn
 
 ## The "Format" section, select a version of the website to print. Radio
 ## options to select between the original page, selected text only, or a version

@@ -2,19 +2,22 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-addons-window =
-    .title = Priedų tvarkytuvė
-
 addons-page-title = Priedų tvarkytuvė
 
 search-header =
     .placeholder = Ieškoti per addons.mozilla.org
     .searchbuttonlabel = Paieška
 
-search-header-shortcut =
-    .key = f
+## Variables
+##   $domain - Domain name where add-ons are available (e.g. addons.mozilla.org)
 
 list-empty-get-extensions-message = Gaukite priedų ir grafinių apvalkalų iš <a data-l10n-name="get-extensions">{ $domain }</a>
+
+list-empty-get-dictionaries-message = Gaukite žodynų iš <a data-l10n-name="get-extensions">{ $domain }</a>
+
+list-empty-get-language-packs-message = Gaukite kalbų rinkinių iš <a data-l10n-name="get-extensions">{ $domain }</a>
+
+##
 
 list-empty-installed =
     .value = Nėra įdiegtų šio tipo priedų
@@ -35,18 +38,6 @@ help-button = Priedų pagalba
 sidebar-help-button-title =
     .title = Priedų pagalba
 
-preferences =
-    { PLATFORM() ->
-        [windows] „{ -brand-short-name }“ nuostatos
-       *[other] „{ -brand-short-name }“ nuostatos
-    }
-sidebar-preferences-button-title =
-    .title =
-        { PLATFORM() ->
-            [windows] „{ -brand-short-name }“ nuostatos
-           *[other] „{ -brand-short-name }“ nuostatos
-        }
-
 addons-settings-button = „{ -brand-short-name }“ nuostatos
 sidebar-settings-button-title =
     .title = „{ -brand-short-name }“ nuostatos
@@ -57,48 +48,14 @@ show-unsigned-extensions-button =
 show-all-extensions-button =
     .label = Rodyti visus plėtinius
 
-cmd-show-details =
-    .label = Išsamiau
-    .accesskey = I
-
-cmd-find-updates =
-    .label = Rasti naujinimų
-    .accesskey = R
-
-cmd-preferences =
-    .label =
-        { PLATFORM() ->
-            [windows] Nuostatos
-           *[other] Nuostatos
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] N
-           *[other] N
-        }
-
-cmd-enable-theme =
-    .label = Naudoti apvalkalą
-    .accesskey = N
-
-cmd-disable-theme =
-    .label = Nebenaudoti apvalkalo
-    .accesskey = N
-
-cmd-install-addon =
-    .label = Įdiegti
-    .accesskey = d
-
-cmd-contribute =
-    .label = Paremti
-    .accesskey = P
-    .tooltiptext = Paremti šio priedo kūrimą
-
 detail-version =
     .label = Laida
 
 detail-last-updated =
     .label = Paskiausiai atnaujintas
+
+addon-detail-description-expand = Rodyti daugiau
+addon-detail-description-collapse = Rodyti mažiau
 
 detail-contributions-description = Šio priedo autorius prašo paremti tolesnį jo kūrimą nedideliu finansiniu įnašu.
 
@@ -195,9 +152,9 @@ plugin-deprecation-description = Kažko trūksta? Kai kurie papildiniai daugiau 
 legacy-warning-show-legacy = Rodyti pasenusius plėtinius
 
 legacy-extensions =
-    .value = Pasenę plėtiniai
+    .value = Pasenę priedai
 
-legacy-extensions-description = Šie plėtiniai neatitinka esamų „{ -brand-short-name }“ standartų, tad buvo išjungti. <label data-l10n-name="legacy-learn-more">Sužinokite apie priedų pokyčius</label>
+legacy-extensions-description = Šie priedai neatitinka esamų „{ -brand-short-name }“ standartų, tad buvo išjungti. <label data-l10n-name="legacy-learn-more">Sužinokite apie priedų pokyčius</label>
 
 private-browsing-description2 =
     „{ -brand-short-name }“ keičia priedų veikimą privačiojo naršymo languose. Visi nauji priedai, kuriuos pridėsite į
@@ -209,9 +166,9 @@ private-browsing-description2 =
 addon-category-discover = Rekomendacijos
 addon-category-discover-title =
     .title = Rekomendacijos
-addon-category-extension = Plėtiniai
+addon-category-extension = Priedai
 addon-category-extension-title =
-    .title = Plėtiniai
+    .title = Priedai
 addon-category-theme = Grafiniai apvalkalai
 addon-category-theme-title =
     .title = Grafiniai apvalkalai
@@ -230,6 +187,9 @@ addon-category-available-updates-title =
 addon-category-recent-updates = Paskiausiai atnaujinti
 addon-category-recent-updates-title =
     .title = Paskiausiai atnaujinti
+addon-category-sitepermission = Svetainių leidimai
+addon-category-sitepermission-title =
+    .title = Svetainių leidimai
 
 ## These are global warnings
 
@@ -240,7 +200,6 @@ extensions-warning-check-compatibility-button = Tikrinti
 extensions-warning-update-security = Priedų naujinimų saugumas netikrinamas. Priedų naujinimai gali pakenkti jūsų saugumui.
 extensions-warning-update-security-button = Tikrinti
     .title = Įjungti priedų naujinimų saugumo tikrinimą
-
 
 ## Strings connected to add-on updates
 
@@ -362,6 +321,7 @@ install-theme-button = Įdiegti grafinį apvalkalą
 # the detailed add-on view is opened, from where the add-on can be managed.
 manage-addon-button = Tvarkyti
 find-more-addons = Rasti daugiau priedų
+find-more-themes = Rasti daugiau apvalkalų
 
 # This is a label for the button to open the "more options" menu, it is only
 # used for screen readers.
@@ -389,22 +349,23 @@ details-addon-button = Išsamiau
 release-notes-addon-button = Laidos apžvalga
 permissions-addon-button = Leidimai
 
-extension-enabled-heading = Įjungtas
-extension-disabled-heading = Išjungtas
+extension-enabled-heading = Įjungta
+extension-disabled-heading = Išjungta
 
-theme-enabled-heading = Įjungtas
-theme-disabled-heading = Išjungtas
+theme-enabled-heading = Įjungta
+theme-disabled-heading2 = Įrašyti grafiniai apvalkalai
 
-plugin-enabled-heading = Įjungtas
-plugin-disabled-heading = Išjungtas
+plugin-enabled-heading = Įjungta
+plugin-disabled-heading = Išjungta
 
-dictionary-enabled-heading = Įjungtas
-dictionary-disabled-heading = Išjungtas
+dictionary-enabled-heading = Įjungta
+dictionary-disabled-heading = Išjungta
 
 locale-enabled-heading = Įjungta
 locale-disabled-heading = Išjungta
 
-ask-to-activate-button = Klausti prieš aktyvinant
+sitepermission-enabled-heading = Įjungta
+sitepermission-disabled-heading = Išjungta
 
 always-activate-button = Visada aktyvinti
 never-activate-button = Niekada neaktyvinti
@@ -463,13 +424,15 @@ addon-detail-private-browsing-help = Leidus, priedas turės priėjimą prie jūs
 addon-detail-private-browsing-allow = Leisti
 addon-detail-private-browsing-disallow = Neleisti
 
+## "sites with restrictions" (internally called "quarantined") are special domains
+## where add-ons are normally blocked for security reasons.
+
 ## This is the tooltip text for the recommended badges for an extension in about:addons. The
 ## badge is a small icon displayed next to an extension when it is recommended on AMO.
 
 addon-badge-recommended2 =
     .title = „{ -brand-product-name }“ rekomenduoja tik mūsų saugumo ir našumo reikalavimus atitinkančius priedus
     .aria-label = { addon-badge-recommended2.title }
-
 # We hard code "Mozilla" in the string below because the extensions are built
 # by Mozilla and we don't want forks to display "by Fork".
 addon-badge-line3 =
@@ -488,13 +451,14 @@ release-notes-loading = Įkeliama…
 release-notes-error = Atsiprašome, bet įkeliant laidos apžvalgą įvyko klaida.
 
 addon-permissions-empty = Šis priedas nereikalauja jokių leidimų
-
 addon-permissions-required = Pagrindiniam funkcionalumui reikalingi leidimai:
 addon-permissions-optional = Papildomam funkcionalumui reikalingi leidimai:
 addon-permissions-learnmore = Sužinokite apie leidimus daugiau
 
 recommended-extensions-heading = Rekomenduojami priedai
 recommended-themes-heading = Rekomenduojami grafiniai apvalkalai
+
+addon-sitepermissions-required = Suteikia šias galimybes <span data-l10n-name="hostname">{ $hostname }</span>:
 
 # A recommendation for the Firefox Color theme shown at the bottom of the theme
 # list view. The "Firefox Color" name itself should not be translated.
@@ -508,6 +472,7 @@ plugin-heading = Tvarkykite savo papildinius
 dictionary-heading = Tvarkykite savo žodynus
 locale-heading = Tvarkykite savo kalbas
 updates-heading = Tvarkykite savo naujinimus
+sitepermission-heading = Tvarkykite savo svetainių leidimus
 discover-heading = Individualizuokite savo „{ -brand-short-name }“
 shortcuts-heading = Tvarkyti sparčiuosius klavišus priedams
 
@@ -517,3 +482,29 @@ addons-heading-search-input =
 
 addon-page-options-button =
     .title = Visiems priedams taikomos priemonės
+
+## Detail notifications
+## Variables:
+##   $name (String): name of the add-on.
+
+## Detail notifications
+## Variables:
+##   $name (string) - Name of the add-on.
+
+# Variables:
+#   $version (String): application version.
+details-notification-incompatible = Priedas „{ $name }“ yra nesuderinamas su „{ -brand-short-name } { $version }“.
+
+details-notification-unsigned-and-disabled = Nepavyko patikrinti „{ $name }“ suderinamumo su „{ -brand-short-name }“, tad jis buvo išjungtas.
+details-notification-unsigned-and-disabled-link = Daugiau informacijos
+
+details-notification-unsigned = Nepavyko patikrinti „{ $name }“ suderinamumo su „{ -brand-short-name }“. Elkitės atsargiai.
+details-notification-unsigned-link = Daugiau informacijos
+
+details-notification-blocked = Priedas „{ $name }“ išjungtas saugumo arba stabilumo sumetimais.
+details-notification-blocked-link = Plačiau
+
+details-notification-softblocked = Yra duomenų, jog priedas „{ $name }“ sukelia saugumo arba stabilumo problemas.
+details-notification-softblocked-link = Plačiau
+
+details-notification-gmp-pending = „{ $name }“ bus netrukus įdiegtas.

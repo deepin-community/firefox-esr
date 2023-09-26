@@ -2,12 +2,12 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-connection-window =
+connection-window2 =
     .title = Parameters da connexiun
     .style =
         { PLATFORM() ->
-            [macos] width: 44em
-           *[other] width: 49em
+            [macos] min-width: 44em
+           *[other] min-width: 49em
         }
 
 connection-close-key =
@@ -35,10 +35,6 @@ connection-proxy-http = Proxy HTTP
     .accesskey = x
 connection-proxy-http-port = Port
     .accesskey = P
-connection-proxy-http-sharing =
-    .label = Era utilisar quest proxy per FTP e HTTPS
-    .accesskey = r
-
 connection-proxy-https-sharing =
     .label = Era utilisar quest proxy per HTTPS
     .accesskey = s
@@ -47,11 +43,6 @@ connection-proxy-https = Proxy HTTPS
     .accesskey = H
 connection-proxy-ssl-port = Port
     .accesskey = o
-
-connection-proxy-ftp = Proxy FTP
-    .accesskey = F
-connection-proxy-ftp-port = Port
-    .accesskey = r
 
 connection-proxy-socks = Server SOCKS
     .accesskey = C
@@ -69,9 +60,6 @@ connection-proxy-noproxy = Nagin proxy per
 
 connection-proxy-noproxy-desc = Exempel: .mozilla.org, .giuru.ch, 192.168.1.0/24
 
-# Do not translate localhost, 127.0.0.1 and ::1.
-connection-proxy-noproxy-localhost-desc = Las connexiuns cun localhost, 127.0.0.1 ed ::1 n'utiliseschan mai in proxy.
-
 # Do not translate "localhost", "127.0.0.1/8" and "::1". (You can translate "and".)
 connection-proxy-noproxy-localhost-desc-2 = Las connexiuns cun localhost, 127.0.0.1/8 ed ::1 n'utiliseschan mai in proxy.
 
@@ -88,16 +76,14 @@ connection-proxy-autologin =
     .accesskey = i
     .tooltip = Questa opziun t'autentifitgescha automaticamain tar proxies sche ti has memorisà las datas d'access. L'autentificaziun manuala è necessaria sch'i dat ina errur.
 
+connection-proxy-autologin-checkbox =
+    .label = Betg pretender l'autentificaziun sch'il pled-clav è memorisà
+    .accesskey = i
+    .tooltiptext = Questa opziun t'autentifitgescha automaticamain tar proxies sche ti has memorisà las datas d'access. L'autentificaziun manuala è necessaria sch'i dat ina errur.
+
 connection-proxy-socks-remote-dns =
     .label = Utilisar in DNS proxy sche SOCKS v5 è activ
     .accesskey = d
-
-connection-dns-over-https =
-    .label = Activar DNS via HTTPS
-    .accesskey = H
-
-connection-dns-over-https-url-resolver = Utilisar il purschider
-    .accesskey = p
 
 # Variables:
 #   $name (String) - Display name or URL for the DNS over HTTPS provider

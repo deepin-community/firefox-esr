@@ -10,11 +10,6 @@ crashes-id = Report ID
 crashes-send-date = पेश गरियो
 crashes-all-reports = सबै क्र्यास प्रतिवेदनहरू
 crashes-no-config = यो अनुप्रयोग क्र्यास प्रतिवेदनहरू प्रदर्शन गर्नका लागि कन्फिगर गरिएको छैन।
-extensions-title = विस्तारहरू
-extensions-name = नाम
-extensions-enabled = सक्षम पारिएको
-extensions-version = संस्करण
-extensions-id = ID
 support-addons-name = नाम
 support-addons-version = संस्करण
 support-addons-id = ID
@@ -52,6 +47,7 @@ app-basics-multi-process-support = बहुप्रक्रिया सञ�
 app-basics-enterprise-policies = व्यापारको नीतिहरू
 app-basics-key-mozilla = Mozilla स्थान सेवा कुञ्जी
 app-basics-safe-mode = सुरक्षित मोड
+
 show-dir-label =
     { PLATFORM() ->
         [macos] फाइन्डरमा देखाउनुहोस्
@@ -95,8 +91,6 @@ sandbox-sys-call-tid = TID
 sandbox-sys-call-proc-type = प्रक्रियाको प्रकार
 sandbox-sys-call-number = प्रणाली कल
 sandbox-sys-call-args = तर्कहरू
-safe-mode-title = सुरक्षित मोड प्रयास गर्नुहोस
-restart-in-safe-mode-label = एडअनहरू अक्षम पारेर पुनः सुरु गर्नुहोस...
 
 ## Media titles
 
@@ -115,6 +109,8 @@ media-device-format = ढाँचा
 media-device-channels = च्यानलहरू
 media-device-rate = दर
 media-device-latency = विलम्बता
+
+## Codec support table
 
 ##
 
@@ -229,19 +225,12 @@ webgl2-renderer = WebGL 2 ड्राइभर रेन्डरर
 webgl2-version = WebGL 2 ड्राइभर संस्करण
 webgl2-driver-extensions = WebGL 2 ड्राइभर एक्सटेन्सनहरू
 webgl2-extensions = WebGL 2 एक्सटेन्सनहरू
-blocklisted-bug = ज्ञात मुद्दाहरूका कारण अबरुद्दसुचीमा राखिएको
-
-# Variables
-# $bugNumber (string) - String of bug number from Bugzilla
-bug-link = बग { $bugNumber }
 
 # Variables
 # $failureCode (string) - String that can be searched in the source tree.
 unknown-failure = अबरुद्दसुचीत; विफल कोड { $failureCode }
 
 d3d11layers-crash-guard = D3D11 मिश्रणकर्ता
-d3d11video-crash-guard = D3D11 भिडियो डीकोडर
-d3d9video-crash-guard = D3D9 भिडियो डिकोडर
 glcontext-crash-guard = OpenGL
 
 reset-on-next-restart = अर्को पुन:सुचारु गर्दा रिसेट गर्नुहोस्
@@ -271,14 +260,6 @@ sandbox-proc-type-media-plugin = मिडिया प्लगइन
 # $remoteWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
 multi-process-windows = { $remoteWindows }/{ $totalWindows }
-multi-process-status-0 = प्रयोगकर्ताद्वारा सक्षम पारियो
-multi-process-status-1 = पूर्वनिर्धारित रूपमा सक्षम पारिएको
-multi-process-status-2 = अक्षम पारिएको
-multi-process-status-4 = पहुँचयोग्यता उपकरण द्वारा असक्षम गरिएको
-multi-process-status-6 = असमर्थित पाठ निवेशद्वारा असक्षम गरिएको
-multi-process-status-7 = एडअनद्वारा असक्षम पारिएको
-multi-process-status-8 = जबर्जस्ती अक्षम परियो
-multi-process-status-unknown = अज्ञात स्थिति
 
 async-pan-zoom = एसिक्रोनस पान / जूम
 apz-none = कुनै पनि होइन

@@ -19,3 +19,18 @@ opensearch-error-download-desc = Níorbh fhéidir le { -brand-short-name } an fo
 
 ##
 
+searchbar-submit =
+    .tooltiptext = Aighnigh iarratas
+
+# This string is displayed in the search box when the input field is empty
+searchbar-input =
+    .placeholder = Cuardaigh
+
+searchbar-icon =
+    .tooltiptext = Cuardaigh
+
+## Infobar shown when search engine is removed and replaced.
+## Variables
+## $oldEngine (String) - the search engine to be removed.
+## $newEngine (String) - the search engine to replace the removed search engine.
+

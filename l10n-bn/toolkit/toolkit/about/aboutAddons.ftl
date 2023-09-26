@@ -2,17 +2,16 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-addons-window =
-    .title = অ্যাড-অন ব্যবস্থাপক
-
 addons-page-title = অ্যাড-অন ব্যবস্থাপক
 
 search-header =
     .placeholder = addons.mozilla.org এ অনুসন্ধান করুন
     .searchbuttonlabel = অনুসন্ধান
 
-search-header-shortcut =
-    .key = f
+## Variables
+##   $domain - Domain name where add-ons are available (e.g. addons.mozilla.org)
+
+##
 
 list-empty-installed =
     .value = আপনার এই ধরণের কোনো অ্যাড-অন ইনস্টল করা নেই
@@ -30,65 +29,14 @@ list-empty-button =
     .label = অ্যাড-অন সম্পর্কে আরও শিখুন
 
 help-button = অ্যাড-অন সহযোগীতা
-
 sidebar-help-button-title =
     .title = অ্যাড-অন সহযোগীতা
-
-preferences =
-    { PLATFORM() ->
-        [windows] { -brand-short-name } অপশন
-       *[other] { -brand-short-name } পছন্দসমূহ
-    }
-
-sidebar-preferences-button-title =
-    .title =
-        { PLATFORM() ->
-            [windows] { -brand-short-name } অপশন
-           *[other] { -brand-short-name } পছন্দসমূহ
-        }
 
 show-unsigned-extensions-button =
     .label = কিছু এক্সটেনশন ভ্যারিফাই করা হয়নি
 
 show-all-extensions-button =
     .label = সব এক্সটেনশন দেখাও
-
-cmd-show-details =
-    .label = আরও তথ্য প্রদর্শন করা হবে S
-    .accesskey = S
-
-cmd-find-updates =
-    .label = হালনাগাদ অনুসন্ধান
-    .accesskey = F
-
-cmd-preferences =
-    .label =
-        { PLATFORM() ->
-            [windows] অপশন
-           *[other] পছন্দসমূহ
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] O
-           *[other] P
-        }
-
-cmd-enable-theme =
-    .label = থীম যোগ W
-    .accesskey = W
-
-cmd-disable-theme =
-    .label = থীম যোগ বন্ধ W
-    .accesskey = W
-
-cmd-install-addon =
-    .label = ইনস্টল করুন I
-    .accesskey = I
-
-cmd-contribute =
-    .label = অবদান রাখুন C
-    .accesskey = C
-    .tooltiptext = অ্যাড-অন উন্নয়নে অবদান রাখুন
 
 detail-version =
     .label = সংস্করণ
@@ -123,12 +71,10 @@ detail-private-browsing-label = ব্যক্তিগত উইন্ডো�
 # Some add-ons may elect to not run in private windows by setting incognito: not_allowed in the manifest.  This
 # cannot be overridden by the user.
 detail-private-disallowed-label = ব্যক্তিগত উইন্ডোতে অনুমোদিত নয়
-
 detail-private-disallowed-description2 = ব্যক্তিগত ব্রাউজিং এর সময় এই এক্সটেনশন কাজ করবেনা।<a data-l10n-name="learn-more"> আরও জানুন </a>
 
 # Some special add-ons are privileged, run in private windows automatically, and this permission can't be revoked
 detail-private-required-label = ব্যক্তিগত উইন্ডোতে প্রবেশ প্রয়োজন
-
 detail-private-required-description2 = ব্যক্তিগত ব্রাউজিং করার সময় এই এক্সটেনশন আপনার অনলাইন কর্মকান্ড সম্পর্কে জানতে পারে। <a data-l10n-name="learn-more"> আরও জানুন </a>
 
 detail-private-browsing-on =
@@ -231,7 +177,6 @@ extensions-warning-check-compatibility-button = সক্রিয়
 extensions-warning-update-security = অ্যাড-অন হালনাগাদকরন পরীক্ষা নিস্ক্রিয়। আপনি সম্ভবত হালনাগাদকরনের সাথে আপোষ করে নিয়েছেন।
 extensions-warning-update-security-button = সক্রিয়
     .title = অ্যাড-অন হালনাগাদকরন নিরাপত্তা পরীক্ষা করা সক্রিয়
-
 
 ## Strings connected to add-on updates
 
@@ -377,7 +322,6 @@ extension-enabled-heading = সক্রিয়
 extension-disabled-heading = নিষ্ক্রিয়
 
 theme-enabled-heading = সক্রিয়
-theme-disabled-heading = নিষ্ক্রিয়
 
 plugin-enabled-heading = সক্রিয়
 plugin-disabled-heading = নিষ্ক্রিয়
@@ -388,8 +332,6 @@ dictionary-disabled-heading = নিষ্ক্রিয়
 locale-enabled-heading = সক্রিয়
 locale-disabled-heading = নিষ্ক্রিয়
 
-ask-to-activate-button = সক্রিয় করতে জিজ্ঞাসা করুন
-
 always-activate-button = সর্বদা সক্রিয়
 never-activate-button = কখনোই সক্রিয় নয়
 
@@ -398,6 +340,9 @@ addon-detail-version-label = সংস্করণ
 addon-detail-last-updated-label = সর্বশেষ হালনাগাদ
 addon-detail-homepage-label = হোমপেজ
 addon-detail-rating-label = রেটিং
+
+# Message for add-ons with a staged pending update.
+install-postponed-message = { -brand-short-name } পুনরাম্ভ হলে এই এক্সটেনশনটি হালনাগাদ করা হবে।
 
 # The average rating that the add-on has received.
 # Variables:
@@ -442,11 +387,12 @@ addon-detail-private-browsing-help = অনুমতি পেলে, প্র�
 addon-detail-private-browsing-allow = অনুমতি দাও
 addon-detail-private-browsing-disallow = অনুমতি দিও না
 
+## "sites with restrictions" (internally called "quarantined") are special domains
+## where add-ons are normally blocked for security reasons.
+
 ## This is the tooltip text for the recommended badges for an extension in about:addons. The
 ## badge is a small icon displayed next to an extension when it is recommended on AMO.
 
-# This is the tooltip text for the recommended badge for an extension in about:addons. The
-# badge is a small icon displayed next to an extension when it is recommended on AMO.
 addon-badge-recommended2 =
     .title = { -brand-product-name } কেবলমাত্র সেই সব এক্সটেনশনকে সুপারিশ করা হয় যা সুরক্ষা এবং কার্যক্ষমতার দিক দিয়ে আমাদের মানদণ্ড পূরণ করে
     .aria-label = { addon-badge-recommended2.title }
@@ -484,3 +430,29 @@ addons-heading-search-input =
 
 addon-page-options-button =
     .title = সব অ্যাড-অন এর জন্য টুল
+
+## Detail notifications
+## Variables:
+##   $name (String): name of the add-on.
+
+## Detail notifications
+## Variables:
+##   $name (string) - Name of the add-on.
+
+# Variables:
+#   $version (String): application version.
+details-notification-incompatible = { $name } ,{ -brand-short-name } { $version } এর জন্য উপযুক্ত।
+
+details-notification-unsigned-and-disabled = { $name } যাচাই করা গেল না { -brand-short-name } তে ব্যবহারের জন্য, এবং নিস্ক্রিয় করে দেওয়া হয়েছে।
+details-notification-unsigned-and-disabled-link = আরও তথ্য
+
+details-notification-unsigned = { $name } যাচাই করা গেল না { -brand-short-name } তে ব্যবহারের জন্য, সতর্কতার সাথে আগান।
+details-notification-unsigned-link = আরও তথ্য
+
+details-notification-blocked = নিরাপত্তা ও স্থায়ীত্বজনিত কারণে { $name } নিস্ক্রিয় করা হয়েছে।
+details-notification-blocked-link = আরও তথ্য
+
+details-notification-softblocked = নিরাপত্তা ও স্থায়ীত্বজনিত ত্রুটির জন্য { $name } দায়ী।
+details-notification-softblocked-link = আরও তথ্য
+
+details-notification-gmp-pending = { $name } খুব শ্রীঘ্রই ইন্সটল করা হবে।

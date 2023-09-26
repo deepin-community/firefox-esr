@@ -31,9 +31,6 @@ toolbar-context-menu-remove-extension =
 toolbar-context-menu-pin-to-overflow-menu =
     .label = Azonzi a-o menû de straripo
     .accesskey = A
-toolbar-context-menu-auto-hide-downloads-button =
-    .label = Aoto-ascondi inta bara di atressi
-    .accesskey = A
 toolbar-context-menu-remove-from-toolbar =
     .label = Scancella da bara di atressi
     .accesskey = b
@@ -41,3 +38,6 @@ toolbar-context-menu-view-customize-toolbar =
     .label = Personalizza…
     .accesskey = P
 
+toolbar-context-menu-menu-bar-cmd =
+    .toolbarname = Bara di menû
+    .accesskey = M

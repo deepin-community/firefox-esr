@@ -2,89 +2,6 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-appmenu-update-available =
-    .label =
-        Доступно је ажурирање { -brand-shorter-name.gender ->
-            [masculine] { -brand-shorter-name(case: "gen") }
-            [feminine] { -brand-shorter-name(case: "gen") }
-            [neuter] { -brand-shorter-name(case: "gen") }
-           *[other] програма { -brand-shorter-name }
-        }
-    .buttonlabel = Преузми ажурирање
-    .buttonaccesskey = П
-    .secondarybuttonlabel = Касније
-    .secondarybuttonaccesskey = К
-appmenu-update-available-message =
-    Ажурирајте { -brand-shorter-name.gender ->
-        [masculine] { -brand-shorter-name(case: "loc") }
-        [feminine] { -brand-shorter-name(case: "loc") }
-        [neuter] { -brand-shorter-name(case: "loc") }
-       *[other] програм { -brand-shorter-name }
-    } ради побољшања брзине и приватности.
-appmenu-update-manual =
-    .label =
-        Није могуће инсталирати најновију верзију { -brand-shorter-name.gender ->
-            [masculine] { -brand-shorter-name(case: "gen") }
-            [feminine] { -brand-shorter-name(case: "gen") }
-            [neuter] { -brand-shorter-name(case: "gen") }
-           *[other] програма { -brand-shorter-name }
-        }.
-    .buttonlabel =
-        Преузми { -brand-shorter-name.gender ->
-            [masculine] { -brand-shorter-name(case: "acc") }
-            [feminine] { -brand-shorter-name(case: "acc") }
-            [neuter] { -brand-shorter-name(case: "acc") }
-           *[other] програм { -brand-shorter-name }
-        }
-    .buttonaccesskey = П
-    .secondarybuttonlabel = Касније
-    .secondarybuttonaccesskey = К
-appmenu-update-manual-message =
-    Преузмите нову верзију { -brand-shorter-name.gender ->
-        [masculine] { -brand-shorter-name(case: "gen") }
-        [feminine] { -brand-shorter-name(case: "gen") }
-        [neuter] { -brand-shorter-name(case: "gen") }
-       *[other] програма { -brand-shorter-name }
-    } а ми ћемо вам помоћи да је инсталирате.
-appmenu-update-whats-new =
-    .value = Погледајте шта је ново.
-appmenu-update-unsupported =
-    .label =
-        Није могуће инсталирати најновију верзију { -brand-shorter-name.gender ->
-            [masculine] { -brand-shorter-name(case: "gen") }
-            [feminine] { -brand-shorter-name(case: "gen") }
-            [neuter] { -brand-shorter-name(case: "gen") }
-           *[other] програма { -brand-shorter-name }
-        }.
-    .buttonlabel = Сазнајте више
-    .buttonaccesskey = С
-    .secondarybuttonlabel = Затвори
-    .secondarybuttonaccesskey = З
-appmenu-update-unsupported-message =
-    Ваш систем не подржава најновију верзију { -brand-shorter-name.gender ->
-        [masculine] { -brand-shorter-name(case: "gen") }
-        [feminine] { -brand-shorter-name(case: "gen") }
-        [neuter] { -brand-shorter-name(case: "gen") }
-       *[other] програма { -brand-shorter-name }
-    }.
-appmenu-update-restart =
-    .label =
-        Рестартуј и ажурирај { -brand-shorter-name.gender ->
-            [masculine] { -brand-shorter-name(case: "acc") }
-            [feminine] { -brand-shorter-name(case: "acc") }
-            [neuter] { -brand-shorter-name(case: "acc") }
-           *[other] програм { -brand-shorter-name }
-        }.
-    .buttonlabel = Рестартуј и врати
-    .buttonaccesskey = Р
-    .secondarybuttonlabel = Касније
-    .secondarybuttonaccesskey = К
-appmenu-update-restart-message = Након рестартовања { -brand-shorter-name } ће вратити све отворене картице и прозоре који нису у режиму приватног прегледања.
-appmenu-addon-private-browsing-installed =
-    .buttonlabel = Разумем
-    .buttonaccesskey = Р
-appmenu-addon-post-install-message = Управљајте додацима кликом на <image data-l10n-name='addon-install-icon'></image> из менија <image data-l10n-name='addon-menu-icon'></image>.
-
 appmenu-update-available2 =
     .label = Доступно је ажурирање
     .buttonlabel = Преузми
@@ -126,7 +43,7 @@ appmenu-update-unsupported-message2 =
     }.
 appmenu-update-restart2 =
     .label = Доступно је ажурирање
-    .buttonlabel = Ажурирај и рестартуј
+    .buttonlabel = Ажурирај и поново покрени
     .buttonaccesskey = А
     .secondarybuttonlabel = Одбаци
     .secondarybuttonaccesskey = О
@@ -175,19 +92,6 @@ appmenu-addon-post-install-message3 = Управљајте додацима и �
 appmenu-addon-post-install-incognito-checkbox =
     .label = Дозволи рад у приватним прозорима
     .accesskey = Д
-    
-appmenu-new-tab-controlled =
-    .label = Страница нове картице је промењена.
-    .buttonlabel = Задржи промене
-    .buttonaccesskey = З
-    .secondarybuttonlabel = Онемогући додатак
-    .secondarybuttonaccesskey = О
-appmenu-homepage-controlled =
-    .label = Почетна страница је промењена.
-    .buttonlabel = Задржи промене
-    .buttonaccesskey = З
-    .secondarybuttonlabel = Онемогући додатак
-    .secondarybuttonaccesskey = О
 
 appmenu-new-tab-controlled-changes =
     .label = Страница нове картице је промењена.

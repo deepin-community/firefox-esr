@@ -2,22 +2,22 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-sanitize-prefs =
+sanitize-prefs2 =
     .title = Historia garbitzeko ezarpenak
-    .style = width: 34em
+    .style = min-width: 34em
 
 sanitize-prefs-style =
     .style = width: 17em
 
-dialog-title =
+sanitize-dialog-title =
     .title = Garbitu azken historia
-    .style = width: 34em
+    .style = min-width: 34em
 
 # When "Time range to clear" is set to "Everything", this message is used for the
 # title instead of dialog-title.
-dialog-title-everything =
+sanitize-dialog-title-everything =
     .title = Garbitu historia osoa
-    .style = width: 34em
+    .style = min-width: 34em
 
 clear-data-settings-label = { -brand-short-name } ixtean, garbitu automatikoki
 
@@ -78,9 +78,9 @@ item-form-search-history =
 
 data-section-label = Datuak
 
-item-site-preferences =
-    .label = Gunearen hobespenak
-    .accesskey = s
+item-site-settings =
+    .label = Gunearen ezarpenak
+    .accesskey = G
 
 item-offline-apps =
     .label = Lineaz kanpoko webguneen datuak

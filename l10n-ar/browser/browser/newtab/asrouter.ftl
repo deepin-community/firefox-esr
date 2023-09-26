@@ -7,7 +7,6 @@
 
 cfr-doorhanger-extension-heading = الامتدادات المقترحة
 cfr-doorhanger-feature-heading = ميّزة موصى بها
-cfr-doorhanger-pintab-heading = هيا جرّب: ثبّت اللسان
 
 ##
 
@@ -19,8 +18,6 @@ cfr-doorhanger-extension-cancel-button = ليس الآن
 
 cfr-doorhanger-extension-ok-button = أضِف الآن
     .accesskey = ض
-cfr-doorhanger-pintab-ok-button = ثبّت هذا اللسان
-    .accesskey = ث
 
 cfr-doorhanger-extension-manage-settings-button = أدِر إعدادات التوصيات
     .accesskey = د
@@ -76,18 +73,6 @@ cfr-doorhanger-extension-total-users =
        *[other] { $total } مستخدم
     }
 
-cfr-doorhanger-pintab-description = انتقل إلى أكثر المواقع التي تزورها بسرعة. بهذا تبقى المواقع مفتوحة في ألسنة (حتى إن أعدت تشغيل المتصفح).
-
-## These messages are steps on how to use the feature and are shown together.
-
-cfr-doorhanger-pintab-step1 = <b>انقر باليمين</b> على أي لسان تريد تثبيته.
-cfr-doorhanger-pintab-step2 = اختر <b>ثبّت اللسان</b> من القائمة.
-cfr-doorhanger-pintab-step3 = إن حصل شيء في الموقع وطرأ تحديث، سترى نقطة زرقاء في اللسان الذي ثبّته.
-
-cfr-doorhanger-pintab-animation-pause = ألبِث
-cfr-doorhanger-pintab-animation-resume = استأنف
-
-
 ## Firefox Accounts Message
 
 cfr-doorhanger-bookmark-fxa-header = زامِن علاماتك في كل مكان.
@@ -113,145 +98,9 @@ cfr-whatsnew-button =
     .label = ما الجديد
     .tooltiptext = ما الجديد
 
-cfr-whatsnew-panel-header = ما الجديد
-
 cfr-whatsnew-release-notes-link-text = اقرأ ملاحظات الإصدار
 
-cfr-whatsnew-fx70-title = الآن، يكافح { -brand-short-name } أكثر فأكثر لحماية خصوصيتك
-cfr-whatsnew-fx70-body =
-    يحسّن آخر تحديث ميزة الحماية من التعقّب ويبسّط
-    عملية اختيار كلمات السر للمواقع كافة إلى حد غير مسبوق.
-
-cfr-whatsnew-tracking-protect-title = احمِ نفسك من خطر المتعقّبات
-cfr-whatsnew-tracking-protect-body =
-    يحجب { -brand-short-name } عددًا من المتعقّبات الاجتماعية والمتعقّبات بين المواقع،
-    متعقّبات هدفها معرفة ما تفعله في المواقع.
-cfr-whatsnew-tracking-protect-link-text = اعرض تقرير الحماية
-
-# This string is displayed before a large numeral that indicates the total
-# number of tracking elements blocked. Don’t add $blockedCount to your
-# localization, because it would result in the number showing twice.
-cfr-whatsnew-tracking-blocked-title =
-    { $blockedCount ->
-        [zero] المتعقّبات المحجوبة
-        [one] المتعقّبات المحجوبة
-        [two] المتعقّبات المحجوبة
-        [few] المتعقّبات المحجوبة
-        [many] المتعقّبات المحجوبة
-       *[other] المتعقّبات المحجوبة
-    }
-cfr-whatsnew-tracking-blocked-subtitle = منذ { DATETIME($earliestDate, month: "long", year: "numeric") }
-cfr-whatsnew-tracking-blocked-link-text = اعرض التقرير
-
-cfr-whatsnew-lockwise-backup-title = انسخ كلمات السر احتياطيًا
-cfr-whatsnew-lockwise-backup-body = بات بإمكانك الآن توليد كلمات سر آمنة تدخلها أينما تريد متى ما ولجت.
-cfr-whatsnew-lockwise-backup-link-text = فعّل النسخ الاحتياطي
-
-cfr-whatsnew-lockwise-take-title = خُذ معك كلمات السر أينما ذهبت
-cfr-whatsnew-lockwise-take-body =
-    يتيح لك تطبيق { -lockwise-brand-short-name } للمحمول الوصول بأمان إلى
-    كلمات السر التي نسختها احتياطيًا أينما كنت.
-cfr-whatsnew-lockwise-take-link-text = نزّل التطبيق
-
-## Search Bar
-
-cfr-whatsnew-searchbar-title = مع شريط العنوان، قلّل الكتابة وخُذ نتائج أكثر
-cfr-whatsnew-searchbar-body-topsites = ما عليك الآن إلا نقر شريط العنوان وسترى مربّعا فيه روابط تنقلك إلى أكثر المواقع زيارة.
-
-## Search bar
-
-cfr-whatsnew-searchbar-icon-alt-text = أيقونة المكبّرة
-
-## Picture-in-Picture
-
-cfr-whatsnew-pip-header = شاهِد الڤِديوهات بينما تتصفّح
-cfr-whatsnew-pip-body = في وضع الڤديوهات المعترِضة (Picture-in-picture)، يصير الڤديو داخل نافذة تكون أعلى كلّ شيء لتُطالعه وأنت تؤدّي أشغالك في الألسنة الأخرى.
-cfr-whatsnew-pip-cta = اطّلع على المزيد
-
-## Permission Prompt
-
-cfr-whatsnew-permission-prompt-header = قلّلنا عدد المُنبثقات المزعجة
-cfr-whatsnew-permission-prompt-body = بات { -brand-shorter-name } يحجب طلبات المواقع بإرسال الرسائل المنبثقة تلقائيًا.
-cfr-whatsnew-permission-prompt-cta = اطّلع على المزيد
-
-## Fingerprinter Counter
-
-# This string is displayed before a large numeral that indicates the total
-# number of tracking elements blocked. Don’t add $fingerprinterCount to your
-# localization, because it would result in the number showing twice.
-cfr-whatsnew-fingerprinter-counter-header =
-    { $fingerprinterCount ->
-        [zero] مسجّلات البصمات المحجوبة
-        [one] مسجّلات البصمات المحجوبة
-        [two] مسجّلات البصمات المحجوبة
-        [few] مسجّلات البصمات المحجوبة
-        [many] مسجّلات البصمات المحجوبة
-       *[other] مسجّلات البصمات المحجوبة
-    }
-cfr-whatsnew-fingerprinter-counter-body = يحجب { -brand-shorter-name } العديد من مسجّلات البصمات التي تجمع معلومات جهازك وأفعالك لتفتح عنك ملفًا شخصيًا تستعمله للإعلانات.
-
-# Message variation when fingerprinters count is less than 10
-cfr-whatsnew-fingerprinter-counter-header-alt = مسجّلات البصمات
-cfr-whatsnew-fingerprinter-counter-body-alt = يمكن أن يحجب { -brand-shorter-name } العديد من مسجّلات البصمات التي تجمع معلومات جهازك وأفعالك لتفتح عنك ملفًا شخصيًا تستعمله للإعلانات.
-
-## Bookmark Sync
-
-cfr-doorhanger-sync-bookmarks-header = زامِن هذه العلامة مع هاتفك
-cfr-doorhanger-sync-bookmarks-body = خُذ معك علاماتك وكلمات السر والتأريخ وغيرها الكثير في أيّ مكان تلج فيه إلى { -brand-product-name }.
-cfr-doorhanger-sync-bookmarks-ok-button = فعّل { -sync-brand-short-name }
-    .accesskey = ف
-
-## Login Sync
-
-cfr-doorhanger-sync-logins-header = بعد الآن، ”نسيت كلمة السر“ فعل ماض
-cfr-doorhanger-sync-logins-body = خزّن كلمات السر وزامنها على مختلف الأجهزة لديك.
-cfr-doorhanger-sync-logins-ok-button = فعّل { -sync-brand-short-name }
-    .accesskey = ف
-
-## Send Tab
-
-cfr-doorhanger-send-tab-header = اقرأ هذا المحتوى حتى وأنت بعيد
-cfr-doorhanger-send-tab-recipe-header = دوّن هذه الوصفة وحضّرها في المطبخ
-cfr-doorhanger-send-tab-body = تتيح لك ميزة إرسال الألسنة مشاركة هذا الرابط مع الهاتف لديك وأي مكان تلج فيه إلى { -brand-product-name }.
-cfr-doorhanger-send-tab-ok-button = جرّب ميزة إرسال الألسنة
-    .accesskey = ج
-
-## Firefox Send
-
-cfr-doorhanger-firefox-send-header = شارِك بأمان ملف PDF هذا
-cfr-doorhanger-firefox-send-body = أخفِ مستنداتك الخاصة من أعين المتربصين مستغلًا الحماية من الطرفين التي تقدّم رابطًا يختفي حين تنتهي منه.
-cfr-doorhanger-firefox-send-ok-button = جرّب { -send-brand-name }
-    .accesskey = ج
-
-## Social Tracking Protection
-
-cfr-doorhanger-socialtracking-ok-button = طالِع الحمايات
-    .accesskey = ط
-cfr-doorhanger-socialtracking-close-button = أغلِق
-    .accesskey = غ
-cfr-doorhanger-socialtracking-dont-show-again = لا تعرض هذه الرسائل ثانيةً
-    .accesskey = ع
-cfr-doorhanger-socialtracking-heading = منع { -brand-short-name } إحدى الشبكات الاجتماعية من تعقّبك إلى هنا
-cfr-doorhanger-socialtracking-description = خصوصيتك فوق كل شيء. بات { -brand-short-name } يحجب أكثر متعقّبات الشبكات الاجتماعية شيوعًا فيحدّ من بياناتك التي تجمعها وأنت تتصفّح الإنترنت.
-cfr-doorhanger-fingerprinters-heading = حجب { -brand-short-name } مسجّل بصمات في هذه الصفحة
-cfr-doorhanger-fingerprinters-description = خصوصيتك فوق كل شيء. بات { -brand-short-name } يحجب مسجّلات البصمات التي تجمع المعلومات الفريدة التي تحدّد جهازك عن غيرك، كلّه لتتعقّبك.
-cfr-doorhanger-cryptominers-heading = حجب { -brand-short-name } مُعدّنًا معمّى في هذه الصفحة
-cfr-doorhanger-cryptominers-description = خصوصيتك فوق كل شيء. بات { -brand-short-name } يحجب المُعدّنات المعمّاة التي تستعمل قوّة الحساب لنظامك لتُعدّن النقود الرقمية.
-
 ## Enhanced Tracking Protection Milestones
-
-# Variables:
-#   $blockedCount (Number) - The total count of blocked trackers. This number will always be greater than 1.
-#   $date (String) - The date we began recording the count of blocked trackers
-cfr-doorhanger-milestone-heading =
-    { $blockedCount ->
-        [zero] لم يحجب { -brand-short-name } أيّ متعقّب منذ { $date }!
-        [one] حجب { -brand-short-name } ما يزيد على <b>متعقّب واحد</b> منذ { $date }!
-        [two] حجب { -brand-short-name } ما يزيد على <b>متعقّبين اثنين</b> منذ { $date }!
-        [few] حجب { -brand-short-name } ما يزيد على <b>{ $blockedCount }</b> متعقّبات منذ { $date }!
-        [many] حجب { -brand-short-name } ما يزيد على <b>{ $blockedCount }</b> متعقّبًا منذ { $date }!
-       *[other] حجب { -brand-short-name } ما يزيد على <b>{ $blockedCount }</b> متعقّب منذ { $date }!
-    }
 
 # Variables:
 #   $blockedCount (Number) - The total count of blocked trackers. This number will always be greater than 1.
@@ -267,45 +116,8 @@ cfr-doorhanger-milestone-heading2 =
     }
 cfr-doorhanger-milestone-ok-button = اعرض الكل
     .accesskey = ع
-
-## What’s New Panel Content for Firefox 76
-
-
-## Lockwise message
-
-cfr-whatsnew-lockwise-header = اصنع كلمات سر آمنة بسهولة
-cfr-whatsnew-lockwise-body = من الصعب بمكان التفكير بكلمة سر آمنة وفريدة لكلّ حساب من حساباتك. في المرة القادمة حين تختار كلمة سر، انقر حقل كلمة السر لاستعمال كلمة سر آمنة ولّدها { -brand-shorter-name }.
-cfr-whatsnew-lockwise-icon-alt = أيقونة { -lockwise-brand-short-name }
-
-## Vulnerable Passwords message
-
-cfr-whatsnew-passwords-header = استلم تنبيهات بخصوص كلمات السر الضعيفة
-cfr-whatsnew-passwords-body = يعرف المخترقون أن الناس تُعيد استعمال كلمات السر نفسها. فإن استعملت نفس كلمة السر في أكثر من موقع، وتسرّبت بيانات إحداها، فسترى في { -lockwise-brand-short-name } تنبيهًا لتغيير كلمة السر في تلك المواقع التي تستعمل نفس الكلمة.
-cfr-whatsnew-passwords-icon-alt = أيقونة مفتاح ”كلمة السر ضعيفة“
-
-## Picture-in-Picture fullscreen message
-
-cfr-whatsnew-pip-fullscreen-header = حوّل الڤديو المعترِض ليملأ الشاشة
-cfr-whatsnew-pip-fullscreen-body = صار بإمكانك الآن (حين تنزع الڤديو ليصير في نافذة مستقلة) نقر النافذة مرتين لتملأ الشاشة.
-cfr-whatsnew-pip-fullscreen-icon-alt = أيقونة الڤديو المعترِض
-
-## Protections Dashboard message
-
-cfr-whatsnew-protections-header = كل أمور الحماية، في لمحة سريعة
-cfr-whatsnew-protections-body = تشمل لوحة معلومات الحماية تقارير تلخّص تسرّب البيانات وإدارة كلمات السر. يمكنك الآن مراقبة التسريبات التي استجبت إليها، وإن ظهرت إحدى كلمات السر المحفوظة التي تستعمل في إحدى تسريبات البيانات.
-cfr-whatsnew-protections-cta-link = اعرض لوحة معلومات الحماية
-cfr-whatsnew-protections-icon-alt = أيقونة الدرع
-
-## Better PDF message
-
-cfr-whatsnew-better-pdf-header = تجربة محسّنة لملفات PDF
-cfr-whatsnew-better-pdf-body = تفتح مستندات PDF الآن مباشرة في { -brand-short-name } مما يسهل أسلوب عملك.
-
 cfr-doorhanger-milestone-close-button = أغلِق
     .accesskey = غ
-
-## What’s New Panel Content for Firefox 76
-## Protections Dashboard message
 
 ## DOH Message
 
@@ -318,24 +130,59 @@ cfr-doorhanger-doh-secondary-button = عطّل
 
 ## Fission Experiment Message
 
-cfr-doorhanger-fission-body-approved = خصوصيتك فوق كل شيء. بات { -brand-short-name } يعزل (أو بالإنجليزية، sandbox) المواقع عن بعضها بعض، ما يصعّب على المخترقين سرقة كلمات السر أو أرقام البطاقات الائتمانية أو غيرها من معلومات حساسة.
-cfr-doorhanger-fission-header = عزل المواقع
-cfr-doorhanger-fission-primary-button = حسنًا، فهمت
-    .accesskey = ح
-cfr-doorhanger-fission-secondary-button = اطّلع على المزيد
-    .accesskey = ط
-
-## What's new: Cookies message
-
-## What's new: Media controls message
-
-## What's new: Search shortcuts
-
-## What's new: Cookies protection
-
-## What's new: Better bookmarking
-
-## What's new: Cross-site cookie tracking
-
 ## Full Video Support CFR message
+
+cfr-doorhanger-video-support-body = قد لا تعمل الڤِديوهات في هذا الموقع كما ينبغي في إصدارة { -brand-short-name } هذه. من فضلك حدّث { -brand-short-name } الآن لتحصل على الدعم الكامل للڤِديوهات.
+cfr-doorhanger-video-support-header = حدّث { -brand-short-name } لتشغيل الڤِديو
+cfr-doorhanger-video-support-primary-button = حدّث الآن
+    .accesskey = ح
+
+## Spotlight modal shared strings
+
+## VPN promotion dialog for public Wi-Fi users
+##
+## If a user is detected to be on a public Wi-Fi network, they are given a
+## bit of info about how to improve their privacy and then offered a button
+## to the Mozilla VPN page and a link to dismiss the dialog.
+
+# This header text can be explicitly wrapped.
+spotlight-public-wifi-vpn-header = يبدو أنك تستخدم شبكة Wi-Fi عامة
+spotlight-public-wifi-vpn-body = ننصحك باستعمال شبكة افتراضية خاصة VPN لإخفاء مكانك وتأريخ التصفح. سيساعد هذا في إبقاء تصفّحك في الأماكن العامة كالمطارات والمقاهي محميًا.
+spotlight-public-wifi-vpn-primary-button = احفظ خصوصيتك دومًا عبر { -mozilla-vpn-brand-name }
+    .accesskey = ح
+spotlight-public-wifi-vpn-link = ليس الآن
+    .accesskey = ل
+
+## Total Cookie Protection Rollout
+
+## Emotive Continuous Onboarding
+
+## MR2022 Background Update Windows native toast notification strings.
+##
+## These strings will be displayed by the Windows operating system in
+## a native toast, like:
+##
+## <b>multi-line title</b>
+## multi-line text
+## <img>
+## [ primary button ] [ secondary button ]
+##
+## The button labels are fitted into narrow fixed-width buttons by
+## Windows and therefore must be as narrow as possible.
+
+## Firefox View CFR
+
+## Firefox View Spotlight
+
+## Colorways expiry reminder CFR
+
+## Cookie Banner Handling CFR
+
+## These strings are used in the Fox doodle Pin/set default spotlights
+
+## These strings are used in the Set Firefox as Default PDF Handler for Existing Users experiment
+
+## FxA sync CFR
+
+## Device Migration FxA Spotlight
 

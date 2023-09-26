@@ -15,6 +15,9 @@ printui-sheets-count =
     }
 
 printui-page-range-all = ਸਭ
+printui-page-range-current = ਮੌਜੁਦਾ
+printui-page-range-odd = ਟਾਂਕ
+printui-page-range-even = ਜਿਸਤ
 printui-page-range-custom = ਕਸਟਮ
 printui-page-range-label = ਸਫ਼ੇ
 printui-page-range-picker =
@@ -58,11 +61,18 @@ printui-options = ਚੋਣਾਂ
 printui-headers-footers-checkbox = ਸਿਰਲੇਖ ਅਤੇ ਫੁੱਟਰ ਨੂੰ ਪਰਿੰਟ ਕਰੋ
 printui-backgrounds-checkbox = ਬੈਕਗਰਾਊਂਡ ਪਰਿੰਟ ਕਰੋ
 
-printui-selection-checkbox = ਚੋਣ ਨੂੰ ਹੀ ਛਾਪੋ
-
 ## The "Format" section, select a version of the website to print. Radio
 ## options to select between the original page, selected text only, or a version
 ## where the page is processed with "Reader View".
+
+# The section title.
+printui-source-label = ਫਾਰਮੈਟ
+# Option for printing the original page.
+printui-source-radio = ਅਸਲ
+# Option for printing just the content a user selected prior to printing.
+printui-selection-radio = ਚੋਣ
+# Option for "simplifying" the page by printing the Reader View version.
+printui-simplify-page-radio = ਸਰਲ ਕੀਤਾ
 
 ##
 

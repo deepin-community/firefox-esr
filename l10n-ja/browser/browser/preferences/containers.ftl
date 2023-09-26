@@ -7,16 +7,17 @@ containers-window-new =
     .style = width: 45em
 # Variables
 #   $name (String) - Name of the container
-containers-window-update =
-    .title = { $name } コンテナーの設定
-    .style = width: 45em
-
-# Variables
-#   $name (String) - Name of the container
 containers-window-update-settings =
     .title = { $name } コンテナーの設定
     .style = width: 45em
-
+containers-window-new2 =
+    .title = 新しいコンテナーを追加する
+    .style = min-width: 45em
+# Variables
+#   $name (String) - Name of the container
+containers-window-update-settings2 =
+    .title = { $name } コンテナーの設定
+    .style = min-width: 45em
 containers-window-close =
     .key = w
 # This is a term to store style to be applied
@@ -40,9 +41,6 @@ containers-icon-label = アイコン
 containers-color-label = 色
     .accesskey = o
     .style = { -containers-labels-style }
-containers-button-done =
-    .label = 完了
-    .accesskey = D
 containers-dialog =
     .buttonlabelaccept = 完了
     .buttonaccesskeyaccept = D

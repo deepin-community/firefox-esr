@@ -23,6 +23,8 @@ profile-selection-delete-button =
     .label = Видалити…
     .accesskey = В
 
+profile-selection-conflict-message = Інша копія { -brand-product-name } зробила зміни в профілях. Необхідно перезапустити { -brand-short-name }, щоб виконувати інші зміни.
+
 ## Messages used in the profile manager
 
 profile-manager-description = { -brand-short-name } зберігає інформацію про ваші налаштування, вподобання та інші елементи у вашому особистому профілі.

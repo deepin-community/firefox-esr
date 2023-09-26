@@ -2,13 +2,12 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-screenshots-context-menu = Pořídit snímek stránky
-
-screenshots-my-shots-button = Mé snímky
-
 screenshot-toolbarbutton =
     .label = Snímek obrazovky
     .tooltiptext = Pořídí snímek obrazovky
+
+screenshot-shortcut =
+    .key = S
 
 screenshots-instructions = Oblast vyberete kliknutím nebo tahem myší. Pro zrušení stiskněte ESC.
 screenshots-cancel-button = Zrušit
@@ -18,6 +17,14 @@ screenshots-download-button = Stáhnout
 screenshots-download-button-tooltip = Stáhnout snímek
 screenshots-copy-button = Kopírovat
 screenshots-copy-button-tooltip = Zkopírovat snímek do schránky
+screenshots-download-button-title =
+    .title = Stáhnout snímek
+screenshots-copy-button-title =
+    .title = Zkopírovat snímek do schránky
+screenshots-cancel-button-title =
+    .title = Zrušit
+screenshots-retry-button-title =
+    .title = Zkusit snímek pořídit znovu
 
 screenshots-meta-key =
     { PLATFORM() ->
@@ -41,8 +48,6 @@ screenshots-login-error-details = Nemohli jsme uložit váš snímek, protože d
 screenshots-unshootable-page-error-title = Snímek této stránky nelze pořídit.
 screenshots-unshootable-page-error-details = Toto není běžná webová stránka, a proto z ní nelze pořizovat žádné snímky.
 
-screenshots-self-screenshot-error-title = Nelze pořizovat snímek stránky { -screenshots-brand-name }!
-
 screenshots-empty-selection-error-title = Vybraná oblast je moc malá
 
 screenshots-private-window-error-title = Služba { -screenshots-brand-name } je v anonymním prohlížení vypnutá
@@ -50,3 +55,6 @@ screenshots-private-window-error-details = Omlouváme se za nepříjemnosti. Na 
 
 screenshots-generic-error-title = Jejda! Služba { -screenshots-brand-name } přestala pracovat.
 screenshots-generic-error-details = Nejsme si jistí, co se právě stalo. Chcete to zkusit znovu, nebo zkusíte pořídit snímek na jiné stránce?
+
+screenshots-too-large-error-title = Váš snímek stránky byl oříznut, protože byl příliš veliký
+screenshots-too-large-error-details = Zkuste vybrat oblast s delší stranou menší než 32700 pixelů, nebo s celkovou plochou menší než 124900000 pixelů.

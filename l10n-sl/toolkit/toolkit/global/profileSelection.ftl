@@ -23,6 +23,8 @@ profile-selection-delete-button =
     .label = Izbriši profil …
     .accesskey = B
 
+profile-selection-conflict-message = Druga namestitev { -brand-product-name }a je spremenila podatke o profilih. Pred nadaljnjimi spremembami morate ponovno zagnati { -brand-short-name }.
+
 ## Messages used in the profile manager
 
 profile-manager-description = { -brand-short-name } shrani informacije o nastavitvah, zaznamkih in drugih uporabniških elementih v vašem uporabniškem profilu.

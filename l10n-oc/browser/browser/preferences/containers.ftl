@@ -2,20 +2,14 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-containers-window-new =
+containers-window-new2 =
     .title = Apondre un contenedor novèl
-    .style = width: 45em
+    .style = min-width: 45em
 # Variables
 #   $name (String) - Name of the container
-containers-window-update =
-    .title = Preferéncias de contenedor { $name }
-    .style = width: 45em
-
-# Variables
-#   $name (String) - Name of the container
-containers-window-update-settings =
+containers-window-update-settings2 =
     .title = Paramètres del contenedor { $name }
-    .style = width: 45em
+    .style = min-width: 45em
 
 containers-window-close =
     .key = w
@@ -45,10 +39,6 @@ containers-icon-label = Icòna
 containers-color-label = Color
     .accesskey = C
     .style = { -containers-labels-style }
-
-containers-button-done =
-    .label = Acabat
-    .accesskey = A
 
 containers-dialog =
     .buttonlabelaccept = Acabat

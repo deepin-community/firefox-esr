@@ -11,6 +11,12 @@ reload-tab =
 select-all-tabs =
     .label = Tüm sekmeleri seç
     .accesskey = ü
+tab-context-play-tab =
+    .label = Sekmeyi oynat
+    .accesskey = o
+tab-context-play-tabs =
+    .label = Sekmeleri oynat
+    .accesskey = o
 duplicate-tab =
     .label = Sekmeyi çoğalt
     .accesskey = o
@@ -48,12 +54,9 @@ unpin-selected-tabs =
 bookmark-selected-tabs =
     .label = Sekmeleri yer imlerine ekle…
     .accesskey = r
-bookmark-tab =
-    .label = Sekmeyi yer imlerine ekle
-    .accesskey = i
-reopen-in-container =
-    .label = Kapsayıcıda yeniden aç
-    .accesskey = K
+tab-context-bookmark-tab =
+    .label = Sekmeyi yer imlerine ekle…
+    .accesskey = m
 tab-context-open-in-new-container-tab =
     .label = Yeni kapsayıcı sekmede aç
     .accesskey = k
@@ -69,31 +72,9 @@ move-to-new-window =
 tab-context-close-multiple-tabs =
     .label = Birden çok sekmeyi kapat
     .accesskey = B
-tab-context-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Kapatılan sekmeyi aç
-            [one] Kapatılan sekmeyi aç
-           *[other] Kapatılan sekmeleri aç
-        }
-    .accesskey = l
-close-tab =
-    .label = Sekmeyi kapat
-    .accesskey = e
-close-tabs =
-    .label = Sekmeleri kapat
-    .accesskey = S
-move-tabs =
-    .label = Sekmeleri taşı
-    .accesskey = t
-move-tab =
-    .label = Sekmeyi taşı
-    .accesskey = t
 tab-context-share-url =
     .label = Paylaş
     .accesskey = P
-tab-context-share-more =
-    .label = Daha fazla…
 
 ## Variables:
 ##  $tabCount (Number): the number of tabs that are affected by the action.
@@ -106,14 +87,6 @@ tab-context-reopen-closed-tabs =
            *[other] Kapatılan sekmeleri yeniden aç
         }
     .accesskey = d
-tab-context-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] Sekmeyi kapat
-            [one] Sekmeyi kapat
-           *[other] Sekmeleri kapat
-        }
-    .accesskey = e
 tab-context-close-n-tabs =
     .label =
         { $tabCount ->
@@ -130,3 +103,11 @@ tab-context-move-tabs =
            *[other] Sekmeleri taşı
         }
     .accesskey = t
+
+tab-context-send-tabs-to-device =
+    .label =
+        { $tabCount ->
+            [one] Sekmeyi cihaza gönder
+           *[other] { $tabCount } sekmeyi cihaza gönder
+        }
+    .accesskey = n

@@ -2,9 +2,12 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-screenshots-context-menu = Tee ekraanipilt
+screenshot-toolbarbutton =
+    .label = Ekraanipilt
+    .tooltiptext = Tee ekraanipilt
 
-screenshots-my-shots-button = Minu pildid
+screenshot-shortcut =
+    .key = S
 
 screenshots-instructions = Ala valimiseks klõpsa või lohista lehel. Tühistamiseks vajuta ESC.
 screenshots-cancel-button = Tühista
@@ -14,6 +17,14 @@ screenshots-download-button = Laadi alla
 screenshots-download-button-tooltip = Ekraanipildi allalaadimine
 screenshots-copy-button = Kopeeri
 screenshots-copy-button-tooltip = Ekraanipildi vahemällu kopeerimine
+screenshots-download-button-title =
+    .title = Laadi ekraanipilt alla
+screenshots-copy-button-title =
+    .title = Kopeeri ekraanipilt vahemällu
+screenshots-cancel-button-title =
+    .title = Loobu
+screenshots-retry-button-title =
+    .title = Proovi ekraanipilti uuesti teha
 
 screenshots-meta-key =
     { PLATFORM() ->
@@ -37,8 +48,6 @@ screenshots-login-error-details = Ekraanipildi salvestamine ebaõnnestus { -scre
 screenshots-unshootable-page-error-title = Sellest lehest ei saa ekraanipilti teha.
 screenshots-unshootable-page-error-details = Tegemist pole standardse veebilehega, seetõttu ei saa sellest ekraanipilti teha.
 
-screenshots-self-screenshot-error-title = { -screenshots-brand-name } lehest ei saa ekraanipilti teha!
-
 screenshots-empty-selection-error-title = Valik on liiga väike
 
 screenshots-private-window-error-title = Ekraanipilte ei saa privaatsel veebilehitsemisel teha
@@ -46,3 +55,4 @@ screenshots-private-window-error-details = Vabandame tüli tekitamise pärast. T
 
 screenshots-generic-error-title = Oi-oi! { -screenshots-brand-name } läks sassi.
 screenshots-generic-error-details = Me pole kindlad, mis just juhtus. Proovid ehk uuesti või teed ekraanipildi mõnest teisest lehest?
+

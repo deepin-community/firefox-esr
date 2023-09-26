@@ -12,11 +12,6 @@ crashes-id = Rapport-ID
 crashes-send-date = Verzonden
 crashes-all-reports = Alle crashrapporten
 crashes-no-config = Deze toepassing is niet geconfigureerd om crashrapporten weer te geven.
-extensions-title = Extensies
-extensions-name = Naam
-extensions-enabled = Ingeschakeld
-extensions-version = Versie
-extensions-id = ID
 support-addons-title = Add-ons
 support-addons-name = Naam
 support-addons-type = Type
@@ -80,6 +75,12 @@ app-basics-location-service-key-google = Google-locatieservicesleutel
 app-basics-safebrowsing-key-google = Google Safe Browsing-sleutel
 app-basics-key-mozilla = Mozilla-locatieservicesleutel
 app-basics-safe-mode = Veilige modus
+app-basics-memory-size = Geheugengrootte (RAM)
+app-basics-disk-available = Beschikbare schijfruimte
+# Variables:
+#   $value (number) - Amount of data being stored
+#   $unit (string) - The unit of data being stored (e.g. MB)
+app-basics-data-size = { $value } { $unit }
 show-dir-label =
     { PLATFORM() ->
         [macos] Tonen in Finder
@@ -109,11 +110,21 @@ graphics-gpu2-title = GPU #2
 graphics-decision-log-title = Beslissingenlogboek
 graphics-crash-guards-title = Door crashbeveiliging uitgeschakelde functies
 graphics-workarounds-title = Workarounds
+graphics-device-pixel-ratios = Pixelverhoudingen van vensterapparaat
 # Windowing system in use on Linux (e.g. X11, Wayland).
 graphics-window-protocol = Vensterprotocol
 # Desktop environment in use on Linux (e.g. GNOME, KDE, XFCE, etc).
 graphics-desktop-environment = Desktopomgeving
 place-database-title = Places-database
+place-database-stats = Statistieken
+place-database-stats-show = Statistieken tonen
+place-database-stats-hide = Statistieken verbergen
+place-database-stats-entity = Entiteit
+place-database-stats-count = Aantal
+place-database-stats-size-kib = Grootte (KB)
+place-database-stats-size-perc = Grootte (%)
+place-database-stats-efficiency-perc = Efficiëntie (%)
+place-database-stats-sequentiality-perc = Volgorde (%)
 place-database-integrity = Integriteit
 place-database-verify-integrity = Integriteit verifiëren
 a11y-title = Toegankelijkheid
@@ -133,8 +144,6 @@ sandbox-sys-call-tid = TID
 sandbox-sys-call-proc-type = Procestype
 sandbox-sys-call-number = Syscall
 sandbox-sys-call-args = Argumenten
-safe-mode-title = Veilige modus proberen
-restart-in-safe-mode-label = Herstarten met uitgeschakelde add-ons…
 troubleshoot-mode-title = Problemen analyseren
 restart-in-troubleshoot-mode-label = Probleemoplossingsmodus…
 clear-startup-cache-title = Opstartbuffer proberen te wissen
@@ -162,8 +171,18 @@ media-device-channels = Kanalen
 media-device-rate = Frequentie
 media-device-latency = Latentie
 media-capabilities-title = Mediamogelijkheden
+media-codec-support-info = Codec-ondersteuningsinformatie
 # List all the entries of the database.
 media-capabilities-enumerate = Database inventariseren
+
+## Codec support table
+
+media-codec-support-sw-decoding = Software-decodering
+media-codec-support-hw-decoding = Hardware-decodering
+media-codec-support-codec-name = Codecnaam
+media-codec-support-supported = Ondersteund
+media-codec-support-unsupported = Niet ondersteund
+media-codec-support-error = Codec-ondersteuningsinformatie niet beschikbaar. Probeer het opnieuw na het afspelen van een mediabestand.
 
 ##
 
@@ -278,10 +297,8 @@ webgl2-renderer = Renderer van  WebGL 2-stuurprogramma
 webgl2-version = Versie van WebGL 2-stuurprogramma
 webgl2-driver-extensions = Extensies van WebGL 2-stuurprogramma
 webgl2-extensions = WebGL 2-extensies
-blocklisted-bug = Geblokkeerd vanwege bekende problemen
-# Variables
-# $bugNumber (string) - String of bug number from Bugzilla
-bug-link = bug { $bugNumber }
+webgpu-default-adapter = WebGPU-standaardadapter
+webgpu-fallback-adapter = WebGPU-terugvaladapter
 # Variables
 #   $bugNumber (string) - Bug number on Bugzilla
 support-blocklisted-bug = Geblokkeerd vanwege bekende problemen: <a data-l10n-name="bug-link">bug { $bugNumber }</a>
@@ -289,8 +306,6 @@ support-blocklisted-bug = Geblokkeerd vanwege bekende problemen: <a data-l10n-na
 # $failureCode (string) - String that can be searched in the source tree.
 unknown-failure = Op blokkeerlijst; foutcode { $failureCode }
 d3d11layers-crash-guard = D3D11-compositor
-d3d11video-crash-guard = D3D11-videodecoder
-d3d9video-crash-guard = D3D9-videodecoder
 glcontext-crash-guard = OpenGL
 wmfvpxvideo-crash-guard = WMF VPX-videodecoder
 reset-on-next-restart = Herinitialiseren bij volgende herstart
@@ -313,6 +328,7 @@ can-sandbox-media = Mediaplug-in-sandboxing
 content-sandbox-level = Sandboxniveau van inhoudsproces
 effective-content-sandbox-level = Effectief sandboxniveau van inhoudsproces
 content-win32k-lockdown-state = Win32k-vergrendelingsstatus voor inhoudsproces
+support-sandbox-gpu-level = Sandboxniveau van GPU-proces
 sandbox-proc-type-content = inhoud
 sandbox-proc-type-file = bestandsinhoud
 sandbox-proc-type-media-plugin = mediaplug-in
@@ -330,14 +346,6 @@ launcher-process-status-unknown = Onbekende status
 # $remoteWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
 multi-process-windows = { $remoteWindows }/{ $totalWindows }
-multi-process-status-0 = Ingeschakeld door gebruiker
-multi-process-status-1 = Standaard ingeschakeld
-multi-process-status-2 = Uitgeschakeld
-multi-process-status-4 = Uitgeschakeld door toegankelijkheidshulpmiddelen
-multi-process-status-6 = Uitgeschakeld door niet-ondersteunde tekstinvoer
-multi-process-status-7 = Uitgeschakeld door add-ons
-multi-process-status-8 = Geforceerd uitgeschakeld
-multi-process-status-unknown = Onbekende status
 # Variables
 # $fissionWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
@@ -346,7 +354,7 @@ fission-status-experiment-control = Uitgeschakeld door experiment
 fission-status-experiment-treatment = Ingeschakeld door experiment
 fission-status-disabled-by-e10s-env = Uitgeschakeld door omgeving
 fission-status-enabled-by-env = Ingeschakeld door omgeving
-fission-status-disabled-by-safe-mode = Uitgeschakeld door veilige modus
+fission-status-disabled-by-env = Uitgeschakeld door omgeving
 fission-status-enabled-by-default = Standaard ingeschakeld
 fission-status-disabled-by-default = Standaard uitgeschakeld
 fission-status-enabled-by-user-pref = Ingeschakeld door gebruiker

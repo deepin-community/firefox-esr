@@ -85,11 +85,6 @@ endif
 .PHONY: recurse_syms
 recurse_syms: $(syms_targets)
 
-# Ensure dump_syms gets built before any syms targets, all of which depend on it.
-ifneq (,$(filter toolkit/crashreporter/google-breakpad/src/tools/%/dump_syms/host,$(compile_targets)))
-$(syms_targets): $(filter toolkit/crashreporter/google-breakpad/src/tools/%/dump_syms/host,$(compile_targets))
-endif
-
 # The compile tier has different rules from other tiers.
 ifneq ($(CURRENT_TIER),compile)
 
@@ -212,6 +207,12 @@ else
 ifndef MOZ_SYSTEM_NSS
 netwerk/test/http3server/target: security/target
 endif
+endif
+
+ifdef MOZ_USING_WASM_SANDBOXING
+security/rlbox/target-objects: config/external/wasm2c_sandbox_compiler/host
+security/rlbox/target: security/rlbox/target-objects
+dom/media/ogg/target-objects extensions/spellcheck/hunspell/glue/target-objects gfx/thebes/target-objects parser/expat/target-objects parser/htmlparser/target-objects gfx/ots/src/target-objects: security/rlbox/target-objects
 endif
 
 # Most things are built during compile (target/host), but some things happen during export

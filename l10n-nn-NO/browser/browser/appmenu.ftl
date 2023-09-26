@@ -5,18 +5,20 @@
 
 ## App Menu
 
-appmenuitem-update-banner3 =
-    .label-update-downloading = Lastar ned { -brand-shorter-name }-oppdatering
-    .label-update-available = Oppdatering tilgjengeleg — last ned no
-    .label-update-manual = Oppdatering tilgjengeleg — last ned no
-    .label-update-unsupported = Kan ikkje oppdatere — systemet er inkompatibelt
-    .label-update-restart = Oppdatering tilgjengeleg — start på nytt
+appmenuitem-banner-update-downloading =
+    .label = Lastar ned { -brand-shorter-name }-oppdatering
 
-appmenuitem-protection-dashboard-title = Tryggingspanel
-appmenuitem-customize-mode =
-    .label = Tilpass…
+appmenuitem-banner-update-available =
+    .label = Oppdatering tilgjengeleg — last ned no
 
-## Zoom Controls
+appmenuitem-banner-update-manual =
+    .label = Oppdatering tilgjengeleg — last ned no
+
+appmenuitem-banner-update-unsupported =
+    .label = Kan ikkje oppdatere — systemet er inkompatibelt
+
+appmenuitem-banner-update-restart =
+    .label = Oppdatering tilgjengeleg — start på nytt
 
 appmenuitem-new-tab =
     .label = Ny fane
@@ -24,14 +26,26 @@ appmenuitem-new-window =
     .label = Nytt vindauge
 appmenuitem-new-private-window =
     .label = Nytt privat vindauge
+appmenuitem-history =
+    .label = Historikk
+appmenuitem-downloads =
+    .label = Nedlastingar
 appmenuitem-passwords =
     .label = Passord
 appmenuitem-addons-and-themes =
     .label = Tillegg og tema
+appmenuitem-print =
+    .label = Skriv ut…
 appmenuitem-find-in-page =
     .label = Finn på sida…
+appmenuitem-translate =
+    .label = Omset sida…
+appmenuitem-zoom =
+    .value = Skalering
 appmenuitem-more-tools =
     .label = Fleire verktøy
+appmenuitem-help =
+    .label = Hjelp
 appmenuitem-exit2 =
     .label =
         { PLATFORM() ->
@@ -56,22 +70,42 @@ appmenuitem-zoom-enlarge =
     .label = Forstørre
 appmenuitem-zoom-reduce =
     .label = Forminske
-
 appmenuitem-fullscreen =
     .label = Fullskjerm
 
 ## Firefox Account toolbar button and Sync panel in App menu.
-
-fxa-toolbar-sync-now =
-    .label = Synkroniser no
 
 appmenu-remote-tabs-sign-into-sync =
     .label = Logg inn for å synkronisere…
 appmenu-remote-tabs-turn-on-sync =
     .label = Slå på Sync…
 
+# This is shown after the tabs list if we can display more tabs by clicking on the button
+appmenu-remote-tabs-showmore =
+    .label = Vis fleire faner
+    .tooltiptext = Vis fleire faner frå denne eininga
+
+# This is shown beneath the name of a device when that device has no open tabs
+appmenu-remote-tabs-notabs = Ingen opne faner
+
+# This is shown when Sync is configured but syncing tabs is disabled.
+appmenu-remote-tabs-tabsnotsyncing = Slå på fane-synkronisering for å sjå ei liste over faner frå dei andre einingane dine.
+
+appmenu-remote-tabs-opensettings =
+    .label = Innstillingar
+
+# This is shown when Sync is configured but this appears to be the only device attached to
+# the account. We also show links to download Firefox for android/ios.
+appmenu-remote-tabs-noclients = Vil du sjå faner frå dei andre einingane dine her?
+
+appmenu-remote-tabs-connectdevice =
+    .label = Kople til ei anna eining
+appmenu-remote-tabs-welcome = Vis ei liste over faner frå dei andre einingane dine.
+appmenu-remote-tabs-unverified = Kontoen din må stadfestast.
+
 appmenuitem-fxa-toolbar-sync-now2 = Synkroniser no
-appmenuitem-fxa-manage-account = Handter kontoen
+appmenuitem-fxa-sign-in = Logg inn på { -brand-product-name }
+appmenuitem-fxa-manage-account = Handsam kontoen
 appmenu-fxa-header2 = { -fxaccount-brand-name }
 # Variables
 # $time (string) - Localized relative time since last sync (e.g. 1 second ago,
@@ -82,7 +116,6 @@ appmenu-fxa-sync-and-save-data2 = Synkroniser og lagre data
 appmenu-fxa-signed-in-label = Logg inn
 appmenu-fxa-setup-sync =
     .label = Slå på synkronisering…
-appmenu-fxa-show-more-tabs = Vis fleire faner
 
 appmenuitem-save-page =
     .label = Lagre sida som…
@@ -101,8 +134,19 @@ whatsnew-panel-footer-checkbox =
 ## performance profiles. To enable it go to profiler.firefox.com and click
 ## "Enable Profiler Menu Button".
 
-profiler-popup-title =
-    .value = { -profiler-brand-name }
+profiler-popup-button-idle =
+    .label = Profilering
+    .tooltiptext = Ta opp ein ytingsprofil
+
+profiler-popup-button-recording =
+    .label = Profilerar
+    .tooltiptext = Profileraren registrerer ein profil
+
+profiler-popup-button-capturing =
+    .label = Profilerar
+    .tooltiptext = Profileraren tar opp ein profil
+
+profiler-popup-header-text = { -profiler-brand-name }
 
 profiler-popup-reveal-description-button =
     .aria-label = Vis meir informasjon
@@ -112,24 +156,17 @@ profiler-popup-description-title =
 
 profiler-popup-description = Samarbeid om ytingsproblem ved å publisere profilar for å dele med teamet ditt.
 
-profiler-popup-learn-more = Les meir
+profiler-popup-learn-more-button =
+    .label = Les meir
 
 profiler-popup-settings =
     .value = Innstillingar
 
 # This link takes the user to about:profiling, and is only visible with the Custom preset.
-profiler-popup-edit-settings = Rediger innstillingar …
-
-profiler-popup-disabled =
-    Profilering er for tida deaktivert, sannsynlegvis på grunn av at eit privat nettlesarvindauge
-    er ope.
+profiler-popup-edit-settings-button =
+    .label = Rediger innstillingar …
 
 profiler-popup-recording-screen = Registrerer…
-
-# The profiler presets list is generated elsewhere, but the custom preset is defined
-# here only.
-profiler-popup-presets-custom =
-    .label = Tilpassa
 
 profiler-popup-start-recording-button =
     .label = Start registrering
@@ -152,13 +189,51 @@ profiler-popup-capture-shortcut =
        *[other] Ctrl+Shift+2
     }
 
+## Profiler presets
+## They are shown in the popup's select box.
+
+
+# Presets and their l10n IDs are defined in the file
+# devtools/client/performance-new/popup/background.jsm.js
+# Please take care that the same values are also defined in devtools' perftools.ftl.
+
+
+# Presets and their l10n IDs are defined in the file
+# devtools/client/performance-new/shared/background.jsm.js
+# Please take care that the same values are also defined in devtools' perftools.ftl.
+
+profiler-popup-presets-web-developer-description = Tilrådd førehandsinnstilling for dei fleste feilsøkingar i nettappar, med lite tillegg.
+profiler-popup-presets-web-developer-label =
+    .label = Nettsideutvikling
+
+profiler-popup-presets-firefox-description = Tilrådd førehandsinnstilling for profilering { -brand-shorter-name }.
+profiler-popup-presets-firefox-label =
+    .label = { -brand-shorter-name }
+
+profiler-popup-presets-graphics-description = Førehandsinnstilt for å undersøke grafikk-problem i { -brand-shorter-name }.
+profiler-popup-presets-graphics-label =
+    .label = Grafikk
+
+profiler-popup-presets-media-description2 = Førehandsinnstilt for å undersøke lyd- og videoproblem i { -brand-shorter-name }.
+profiler-popup-presets-media-label =
+    .label = Media
+
+profiler-popup-presets-networking-description = Førehandsinnstilt for å undersøke nettverksfeil i { -brand-shorter-name }.
+profiler-popup-presets-networking-label =
+    .label = Nettverk
+
+profiler-popup-presets-power-description = Førehandsinnstilt til å undersøke straumforbruksfeil i { -brand-shorter-name }, med låg overhead.
+# "Power" is used in the sense of energy (electricity used by the computer).
+profiler-popup-presets-power-label =
+    .label = Energi
+
+profiler-popup-presets-custom-label =
+    .label = Tilpassa
+
 ## History panel
 
 appmenu-manage-history =
-    .label = Handter historikk
-appmenu-reopen-all-tabs = Opne alle faner på nytt
-appmenu-reopen-all-windows = Opne alle vindauge på nytt
-
+    .label = Handsam historikk
 appmenu-restore-session =
     .label = Bygg oppatt siste programøkt
 appmenu-clear-history =
@@ -168,6 +243,9 @@ appmenu-recently-closed-tabs =
     .label = Nyleg attlatne faner
 appmenu-recently-closed-windows =
     .label = Nyleg attlatne vindauge
+# This allows to search through the browser's history.
+appmenu-search-history =
+    .label = Søkjehistorikk
 
 ## Help panel
 
@@ -184,9 +262,11 @@ appmenu-help-more-troubleshooting-info =
     .accesskey = M
 appmenu-help-report-site-issue =
     .label = Rapporter problem med nettstad…
-appmenu-help-feedback-page =
-    .label = Gje tilbakemelding…
-    .accesskey = G
+appmenu-help-share-ideas =
+    .label = Del idear og tilbakemeldingar...
+    .accesskey = D
+appmenu-help-switch-device =
+    .label = Byter til ei ny eining
 
 ## appmenu-help-enter-troubleshoot-mode and appmenu-help-exit-troubleshoot-mode
 ## are mutually exclusive, so it's possible to use the same accesskey for both.
@@ -212,8 +292,6 @@ appmenu-help-not-deceptive =
 
 appmenu-customizetoolbar =
     .label = Tilpass verktøylinje…
-appmenu-taskmanager =
-    .label = Aktivitetshandterar
 
 appmenu-developer-tools-subheader = Nettlesarverktøy
 appmenu-developer-tools-extensions =

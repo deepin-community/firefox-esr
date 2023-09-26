@@ -3,26 +3,6 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 
-### UI strings for the simplified onboarding modal / about:welcome
-### Various strings use a non-breaking space to avoid a single dangling /
-### widowed word, so test on various window sizes if you also want this.
-
-
-## These button action text can be split onto multiple lines, so use explicit
-## newlines in translations to control where the line break appears (e.g., to
-## avoid breaking quoted text).
-
-onboarding-button-label-learn-more = Μάθετε περισσότερα
-onboarding-button-label-get-started = Έναρξη
-
-## Welcome modal dialog strings
-
-
-### UI strings for the simplified onboarding / multistage about:welcome
-### Various strings use a non-breaking space to avoid a single dangling /
-### widowed word, so test on various window sizes if you also want this.
-
-
 ### UI strings for the MR1 onboarding / multistage about:welcome
 ### Various strings use a non-breaking space to avoid a single dangling /
 ### widowed word, so test on various window sizes if you also want this.
@@ -31,126 +11,9 @@ onboarding-button-label-get-started = Έναρξη
 ## Welcome page strings
 
 onboarding-welcome-header = Καλώς ήλθατε στο { -brand-short-name }
-onboarding-welcome-body = Έχετε το πρόγραμμα περιήγησης.<br/>Γνωρίστε τα υπόλοιπα προϊόντα του { -brand-product-name }.
-onboarding-welcome-learn-more = Μάθετε περισσότερα σχετικά με τα οφέλη.
-onboarding-welcome-modal-get-body = Έχετε το πρόγραμμα περιήγησης.<br/>Αξιοποιήστε στο έπακρο το { -brand-product-name }.
-onboarding-welcome-modal-supercharge-body = Εξασφαλίστε την προστασία του απορρήτου σας.
-onboarding-welcome-modal-privacy-body = Έχετε το πρόγραμμα περιήγησης. Ας προστατεύσουμε περισσότερο το απόρρητό σας.
-onboarding-welcome-modal-family-learn-more = Μάθετε περισσότερα για την οικογένεια προϊόντων { -brand-product-name }.
-onboarding-welcome-form-header = Έναρξη εδώ
-onboarding-join-form-body = Εισάγετε τη διεύθυνση email σας για να ξεκινήσετε.
-onboarding-join-form-email =
-    .placeholder = Εισάγετε το email σας
-onboarding-join-form-email-error = Απαιτείται έγκυρο email
-onboarding-join-form-legal = Συνεχίζοντας, συμφωνείτε με τους <a data-l10n-name="terms">όρους υπηρεσίας</a> και τη <a data-l10n-name="privacy">σημείωση απορρήτου</a>.
-onboarding-join-form-continue = Συνέχεια
-# This message is followed by a link using onboarding-join-form-signin ("Sign In") as text.
-onboarding-join-form-signin-label = Έχετε ήδη λογαριασμό;
-# Text for link to submit the sign in form
-onboarding-join-form-signin = Σύνδεση
 onboarding-start-browsing-button-label = Έναρξη περιήγησης
-onboarding-cards-dismiss =
-    .title = Απόρριψη
-    .aria-label = Απόρριψη
-
-## Welcome full page string
-
-onboarding-fullpage-welcome-subheader = Ας αρχίσουμε να εξερευνούμε ό,τι μπορείτε να κάνετε.
-onboarding-fullpage-form-email =
-    .placeholder = Η διεύθυνση email σας…
-
-## Firefox Sync modal dialog strings.
-
-onboarding-sync-welcome-header = Πάρτε το { -brand-product-name } μαζί σας
-onboarding-sync-welcome-content = Κρατήστε τα αγαπημένα, το ιστορικό, τους κωδικούς πρόσβασης και άλλες ρυθμίσεις σας σε όλες σας τις συσκευές.
-onboarding-sync-welcome-learn-more-link = Μάθετε περισσότερα για τους Λογαριασμούς Firefox
-onboarding-sync-form-input =
-    .placeholder = Email
-onboarding-sync-form-continue-button = Συνέχεια
-onboarding-sync-form-skip-login-button = Παράλειψη βήματος
-
-## This is part of the line "Enter your email to continue to Firefox Sync"
-
-onboarding-sync-form-header = Εισάγετε το email σας
-onboarding-sync-form-sub-header = για να συνεχίσετε στο { -sync-brand-name }.
-
-## These are individual benefit messages shown with an image, title and
-## description.
-
-onboarding-benefit-products-text = Κάντε περισσότερα με μια οικογένεια εργαλείων που σέβονται το απόρρητό σας στις συσκευές σας.
-# "Personal Data Promise" is a concept that should be translated consistently
-# across the product. It refers to a concept shown elsewhere to the user: "The
-# Firefox Personal Data Promise is the way we honor your data in everything we
-# make and do. We take less data. We keep it safe. And we make sure that we are
-# transparent about how we use it."
-onboarding-benefit-privacy-text = Όλα όσα κάνουμε τιμούν την υπόσχεση μας σχετικά με τα προσωπικά δεδομένα: Λιγότερα δεδομένα. Με ασφάλεια. Χωρίς μυστικά.
-onboarding-benefit-sync-title = { -sync-brand-short-name }
-onboarding-benefit-sync-text = Πάρτε τους σελιδοδείκτες, τους κωδικούς πρόσβασης, το ιστορικό σας και πολλά άλλα σε κάθε συσκευή με { -brand-product-name }.
-onboarding-benefit-monitor-title = { -monitor-brand-short-name }
-onboarding-benefit-monitor-text = Λάβετε ειδοποίηση όταν διαρρεύσουν τα προσωπικά στοιχεία σας.
-onboarding-benefit-lockwise-title = { -lockwise-brand-short-name }
-onboarding-benefit-lockwise-text = Διαχειριστείτε κωδικούς πρόσβασης που είναι ασφαλείς και φορητοί.
-
-## These strings belong to the individual onboarding messages.
-
-
-## Each message has a title and a description of what the browser feature is.
-## Each message also has an associated button for the user to try the feature.
-## The string for the button is found above, in the UI strings section
-
-onboarding-tracking-protection-title2 = Προστασία από καταγραφή
-onboarding-tracking-protection-text2 = Το { -brand-short-name } βοηθά να σταματήσουν οι ιστοσελίδες να σας καταγράφουν στο διαδίκτυο, καθιστώντας πιο δύσκολη την παρακολούθησή σας από διαφημίσεις στον ιστό.
-onboarding-tracking-protection-button2 = Πώς λειτουργεί
-onboarding-data-sync-title = Πάρτε μαζί σας τις ρυθμίσεις σας
-# "Sync" is short for synchronize.
-onboarding-data-sync-text2 = Συγχρονίστε τους σελιδοδείκτες, τους κωδικούς πρόσβασης και πολλά άλλα όπου χρησιμοποιείτε το { -brand-product-name }.
-onboarding-data-sync-button2 = Σύνδεση στο { -sync-brand-short-name }
-onboarding-firefox-monitor-title = Ενημερωθείτε για παραβιάσεις δεδομένων
-onboarding-firefox-monitor-text2 = Το { -monitor-brand-name } ελέγχει αν το email σας έχει εμφανιστεί σε κάποια παραβίαση δεδομένων και σας ειδοποιεί αν εμφανιστεί σε νέα παράβαση.
-onboarding-firefox-monitor-button = Εγγραφή για ειδοποιήσεις
-onboarding-browse-privately-title = Ιδιωτική περιήγηση
-onboarding-browse-privately-text = Η ιδιωτική περιήγηση διαγράφει το ιστορικό αναζήτησης και περιήγησής σας για να διατηρούνται κρυφά από άλλους χρήστες του υπολογιστή σας.
-onboarding-browse-privately-button = Άνοιγμα ιδιωτικού παραθύρου
-onboarding-firefox-send-title = Διατηρήστε τα κοινόχρηστα αρχεία σας ιδιωτικά
-onboarding-firefox-send-text2 = Μεταφορτώστε τα αρχεία σας στο { -send-brand-name } για να τα μοιραστείτε με διατερματική κρυπτογράφηση και έναν σύνδεσμο που λήγει αυτόματα.
-onboarding-firefox-send-button = Δοκιμή του { -send-brand-name }
-onboarding-mobile-phone-title = Λήψη του { -brand-product-name } στο τηλέφωνό σας
-onboarding-mobile-phone-text = Κάντε λήψη του { -brand-product-name } για iOS ή Android και συγχρονίστε τα δεδομένα σας με όλες τις συσκευές σας.
-# "Mobile" is short for mobile/cellular phone, "Browser" is short for web
-# browser.
-onboarding-mobile-phone-button = Λήψη προγράμματος περιήγησης για κινητά
-onboarding-send-tabs-title = Άμεση αποστολή καρτελών στις συσκευές σας
-# "Send Tabs" refers to "Send Tab to Device" feature that appears when opening a
-# tab's context menu.
-onboarding-send-tabs-text2 = Μοιραστείτε εύκολα σελίδες με τις συσκευές σας χωρίς αντιγραφή συνδέσμων και χωρίς να φύγετε από το πρόγραμμα περιήγησης.
-onboarding-send-tabs-button = Έναρξη χρήσης της αποστολής καρτελών
-onboarding-pocket-anywhere-title = Διαβάστε και ακούστε οπουδήποτε
-onboarding-pocket-anywhere-text2 = Αποθηκεύστε το αγαπημένο σας περιεχόμενο εκτός σύνδεσης με την εφαρμογή { -pocket-brand-name } και διαβάστε, ακούστε και παρακολουθήστε όποτε σας βολεύει.
-onboarding-pocket-anywhere-button = Δοκιμή του { -pocket-brand-name }
-onboarding-lockwise-strong-passwords-title = Δημιουργία και αποθήκευση ισχυρών κωδικών πρόσβασης
-onboarding-lockwise-strong-passwords-text = Το { -lockwise-brand-name } δημιουργεί ισχυρούς κωδικούς πρόσβασης επί τόπου και τους αποθηκεύει όλους σε ένα μέρος.
-onboarding-lockwise-strong-passwords-button = Διαχείριση συνδέσεων
-onboarding-facebook-container-title = Θέστε όρια με το Facebook
-onboarding-facebook-container-text2 = Το { -facebook-container-brand-name } διατηρεί ξεχωριστά το προφίλ σας από όλα τα άλλα, εμποδίζοντας τις στοχευμένες διαφημίσεις του Facebook.
-onboarding-facebook-container-button = Προσθήκη επέκτασης
-onboarding-import-browser-settings-title = Εισάγετε τους σελιδοδείκτες, τους κωδικούς πρόσβασης σας και άλλα
-onboarding-import-browser-settings-text = Ξεκινήστε αμέσως—εισαγάγετε εύκολα ιστοτόπους και ρυθμίσεις από το Chrome.
-onboarding-import-browser-settings-button = Εισαγωγή δεδομένων Chrome
-onboarding-personal-data-promise-title = Ιδιωτικό εκ κατασκευής
-onboarding-personal-data-promise-text = Το { -brand-product-name } αντιμετωπίζει τα δεδομένα σας με σεβασμό, συλλέγοντας όσο το δυνατό λιγότερα, προστατεύοντάς τα και είναι ξεκάθαρο πώς τα χρησιμοποιούμε.
-onboarding-personal-data-promise-button = Διαβάστε την υπόσχεσή μας
-
-## Message strings belonging to the Return to AMO flow
-
-return-to-amo-sub-header = Τέλεια, αποκτήσατε το { -brand-short-name }
-# <icon></icon> will be replaced with the icon belonging to the extension
-#
-# Variables:
-#   $addon-name (String) - Name of the add-on
-return-to-amo-addon-header = Τώρα, ας αποκτήσουμε το <icon></icon><b>{ $addon-name }.</b>
-return-to-amo-extension-button = Προσθήκη επέκτασης
-return-to-amo-get-started-button = Έναρξη με το { -brand-short-name }
 onboarding-not-now-button-label = Όχι τώρα
+mr1-onboarding-get-started-primary-button-label = Έναρξη
 
 ## Custom Return To AMO onboarding strings
 
@@ -161,40 +24,13 @@ return-to-amo-subtitle = Τέλεια, αποκτήσατε το { -brand-short-
 #   $addon-name (String) - Name of the add-on
 return-to-amo-addon-title = Τώρα, προτείνουμε το <img data-l10n-name="icon"/> <b>{ $addon-name }</b>.
 return-to-amo-add-extension-label = Προσθήκη επέκτασης
+return-to-amo-add-theme-label = Προσθήκη θέματος
 
-## Multistage 3-screen onboarding flow strings (about:welcome pages)
+##  Variables: $addon-name (String) - Name of the add-on to be installed
 
-# The <span data-l10n-name="zap"></span> in this string allows a "zap" underline style to be
-# automatically added to the text inside it. { -brand-short-name } should stay inside the span.
-onboarding-multistage-welcome-header = Καλώς ορίσατε στο <span data-l10n-name="zap">{ -brand-short-name }</span>
-onboarding-multistage-welcome-subtitle = Το γρήγορο, ασφαλές και ιδιωτικό πρόγραμμα περιήγησης, που υποστηρίζεται από έναν μη κερδοσκοπικό οργανισμό.
-onboarding-multistage-welcome-primary-button-label = Έναρξη ρύθμισης
-onboarding-multistage-welcome-secondary-button-label = Σύνδεση
-onboarding-multistage-welcome-secondary-button-text = Έχετε λογαριασμό;
-# The <span data-l10n-name="zap"></span> in this string allows a "zap" underline style to be
-# automatically added to the text inside it. "default" should stay inside the span.
-onboarding-multistage-set-default-header = Ορίστε το { -brand-short-name } ως <span data-l10n-name="zap">προεπιλογή</span>
-onboarding-multistage-set-default-subtitle = Ταχύτητα, ασφάλεια και απόρρητο κάθε φορά που περιηγείστε.
-onboarding-multistage-set-default-primary-button-label = Ορισμός ως προεπιλογή
-onboarding-multistage-set-default-secondary-button-label = Όχι τώρα
-# The <span data-l10n-name="zap"></span> in this string allows a "zap" underline style to be
-# automatically added to the text inside it. { -brand-short-name } should stay inside the span.
-onboarding-multistage-pin-default-header = Ξεκινήστε κάνοντας το <span data-l10n-name="zap">{ -brand-short-name }</span> προσβάσιμο με ένα κλικ
-onboarding-multistage-pin-default-subtitle = Γρήγορη, ασφαλής και ιδιωτική περιήγηση κάθε φορά που χρησιμοποιείτε το διαδίκτυο.
-# The "settings" here refers to "Windows 10 Settings App" and not the browser's
-onboarding-multistage-pin-default-waiting-subtitle = Επιλέξτε το { -brand-short-name } για "Πρόγραμμα περιήγησης Web" όταν ανοίξουν οι ρυθμίσεις
-# The "settings" here refers to "Windows 10 Settings App" and not the browser's
-onboarding-multistage-pin-default-help-text = Το { -brand-short-name } θα καρφιτσωθεί στη γραμμή εργασιών και θα ανοίξουν οι ρυθμίσεις
-onboarding-multistage-pin-default-primary-button-label = Ορισμός { -brand-short-name } ως κύριου προγράμματος περιήγησης
-# The <span data-l10n-name="zap"></span> in this string allows a "zap" underline style to be
-# automatically added to the text inside it. "more" should stay inside the span.
-onboarding-multistage-import-header = Εισάγετε κωδικούς πρόσβασης, <br/>σελιδοδείκτες και <span data-l10n-name="zap">πολλά άλλα</span>
-onboarding-multistage-import-subtitle = Έρχεστε από άλλο πρόγραμμα περιήγησης; Είναι εύκολο να μεταφέρετε τα πάντα στο { -brand-short-name }.
-onboarding-multistage-import-primary-button-label = Έναρξη εισαγωγής
-onboarding-multistage-import-secondary-button-label = Όχι τώρα
-# Info displayed in the footer of import settings screen during onboarding flow.
-# This supports welcome screen showing top sites imported from the user's default browser.
-onboarding-import-sites-disclaimer = Οι παρακάτω σελίδες βρέθηκαν στη συσκευή. Το { -brand-short-name } δεν αποθηκεύει ούτε συγχρονίζει δεδομένα από άλλο πρόγραμμα περιήγησης, εκτός αν επιλέξετε εσείς να γίνει εισαγωγή.
+mr1-return-to-amo-subtitle = Πείτε «γεια» στο { -brand-short-name }
+mr1-return-to-amo-addon-title = Έχετε ένα γρήγορο, ιδιωτικό πρόγραμμα περιήγησης στα χέρια σας. Μπορείτε να προσθέσετε το <b>{ $addon-name }</b> και να κάνετε ακόμα περισσότερα με το { -brand-short-name }.
+mr1-return-to-amo-add-extension-label = Προσθήκη του { $addon-name }
 
 ## Multistage onboarding strings (about:welcome pages)
 
@@ -202,35 +38,10 @@ onboarding-import-sites-disclaimer = Οι παρακάτω σελίδες βρέ
 # Variables:
 #   $current (Int) - Number of the current page
 #   $total (Int) - Total number of pages
-onboarding-welcome-steps-indicator =
-    .aria-label = Έναρξη: οθόνη { $current } από { $total }
-# The <span data-l10n-name="zap"></span> in this string allows a "zap" underline style to be
-# automatically added to the text inside it. "look" should stay inside the span.
-onboarding-multistage-theme-header = Επιλέξτε <span data-l10n-name="zap">εμφάνιση</span>
-onboarding-multistage-theme-subtitle = Εξατομίκευση του { -brand-short-name } με ένα θέμα.
-onboarding-multistage-theme-primary-button-label2 = Τέλος
-onboarding-multistage-theme-secondary-button-label = Όχι τώρα
-# Automatic theme uses operating system color settings
-onboarding-multistage-theme-label-automatic = Αυτόματο
-onboarding-multistage-theme-label-light = Φωτεινό
-onboarding-multistage-theme-label-dark = Σκούρο
-# "Firefox Alpenglow" here is the name of the theme, and should be kept in English.
-onboarding-multistage-theme-label-alpenglow = Firefox Alpenglow
-# "Hero Text" displayed on left side of welcome screen.
-# The "Fire" in "Fire starts here" plays on the "Fire" in "Firefox".
-# It also signals the passion users bring to Firefox, how they use
-# Firefox to pursue those passions, as well as the boldness in their
-# choice to use Firefox over a larger competitor browser.
-# An alternative title for localization is: "It starts here".
-# This text can be formatted to span multiple lines as needed.
-mr1-welcome-screen-hero-text =
-    Η φωτιά ξεκινά
-    εδώ
-# Caption for background image in about:welcome. "Soraya Osorio" is the name
-# of the person and shouldn't be translated.
-# In case your language needs to adapt the nouns to a gender, Soraya is a female name (she/her).
-# You can see the picture in about:welcome in Nightly 90.
-mr1-onboarding-welcome-image-caption = Soraya Osorio — Σχεδιάστρια επίπλων, υποστηρίκτρια του Firefox
+
+onboarding-welcome-steps-indicator-label =
+    .aria-label = Πρόοδος: βήμα { $current } από { $total }
+
 # This button will open system settings to turn on prefers-reduced-motion
 mr1-onboarding-reduce-motion-button-label = Απενεργοποίηση εφέ κίνησης
 
@@ -238,153 +49,331 @@ mr1-onboarding-reduce-motion-button-label = Απενεργοποίηση εφέ 
 ## match the OS' application context menu item action where Windows uses "pin"
 ## and "taskbar" while macOS "keep" and "Dock" (proper noun).
 
-# Title used on welcome page when Firefox is not pinned
-mr1-onboarding-pin-header =
-    { PLATFORM() ->
-        [macos] Διατηρήστε το { -brand-short-name } στο Dock σας για εύκολη πρόσβαση
-       *[other] Καρφιτσώστε το { -brand-short-name } στη γραμμή εργασιών σας για εύκολη πρόσβαση
-    }
-# Primary button string used on welcome page when Firefox is not pinned.
-mr1-onboarding-pin-primary-button-label =
-    { PLATFORM() ->
-        [macos] Διατήρηση στο Dock
-       *[other] Καρφίτσωμα στη γραμμή εργασιών
-    }
-
 ## Multistage MR1 onboarding strings (about:welcome pages)
 
-# This string will be used on welcome page primary button label
-# when Firefox is both pinned and default
-mr1-onboarding-get-started-primary-button-label = Έναρξη
-mr1-onboarding-welcome-header = Καλώς ορίσατε στο { -brand-short-name }
-mr1-onboarding-set-default-pin-primary-button-label = Ορισμός { -brand-short-name } ως κύριου φυλλομετρητή
-    .title = Ορίζει το { -brand-short-name } ως το προεπιλεγμένο πρόγραμμα περιήγησης και το καρφιτσώνει στη γραμμή εργασιών
-# This string will be used on welcome page primary button label
-# when Firefox is not default but already pinned
-mr1-onboarding-set-default-only-primary-button-label = Ορισμός { -brand-short-name } ως προεπιλεγμένου φυλλομετρητή
-mr1-onboarding-set-default-secondary-button-label = Όχι τώρα
+# String for the Firefox Accounts button
 mr1-onboarding-sign-in-button-label = Σύνδεση
 
 ## Title, subtitle and primary button string used on set default onboarding screen
 ## when Firefox is not default browser
 
-mr1-onboarding-default-header = Ορισμός { -brand-short-name } ως προεπιλογής
-mr1-onboarding-default-subtitle = Βάλτε την ταχύτητα, την ασφάλεια και το απόρρητο στον αυτόματο πιλότο.
-mr1-onboarding-default-primary-button-label = Ορισμός προεπιλεγμένου φυλλομετρητή
-
 ## Multistage MR1 onboarding strings (about:welcome pages)
 
-mr1-onboarding-import-header = Μεταφέρετε όλα τα δεδομένα σας
-mr1-onboarding-import-subtitle = Εισάγετε κωδικούς πρόσβασης <br/>σελιδοδείκτες και πολλά άλλα.
 # The primary import button label will depend on whether we can detect which browser was used to download Firefox.
 # Variables:
 #   $previous (Str) - Previous browser name, such as Edge, Chrome
 mr1-onboarding-import-primary-button-label-attribution = Εισαγωγή από { $previous }
-# This string will be used in cases where we can't detect the previous browser name.
-mr1-onboarding-import-primary-button-label-no-attribution = Εισαγωγή από προηγούμενο πρόγραμμα περιήγησης
-mr1-onboarding-import-secondary-button-label = Όχι τώρα
+
 mr1-onboarding-theme-header = Κάντε το δικό σας
 mr1-onboarding-theme-subtitle = Εξατομικεύστε το { -brand-short-name } με ένα θέμα.
-mr1-onboarding-theme-primary-button-label = Αποθήκευση θέματος
 mr1-onboarding-theme-secondary-button-label = Όχι τώρα
+
 # System theme uses operating system color settings
 mr1-onboarding-theme-label-system = Θέμα συστήματος
-mr1-onboarding-theme-label-light = Φωτεινό
+
+mr1-onboarding-theme-label-light = Ανοιχτόχρωμο
 mr1-onboarding-theme-label-dark = Σκοτεινό
 # "Alpenglow" here is the name of the theme, and should be kept in English.
 mr1-onboarding-theme-label-alpenglow = Alpenglow
 
-## Please make sure to split the content of the title attribute into lines whose
-## width corresponds to about 40 Latin characters, to ensure that the tooltip
-## doesn't become too long. Line breaks will be preserved when displaying the
-## tooltip.
-
+onboarding-theme-primary-button-label = Τέλος
 
 ## Please make sure to split the content of the title attribute into lines whose
 ## width corresponds to about 40 Latin characters, to ensure that the tooltip
 ## doesn't become too long. Line breaks will be preserved when displaying the
 ## tooltip.
-
-# Tooltip displayed on hover of automatic theme
-onboarding-multistage-theme-tooltip-automatic-2 =
-    .title =
-        Αντιγραφή της εμφάνισης του λειτουργικού σας
-        συστήματος για τα κουμπιά, τα μενού και τα παράθυρα.
-# Input description for automatic theme
-onboarding-multistage-theme-description-automatic-2 =
-    .aria-description =
-        Αντιγραφή της εμφάνισης του λειτουργικού σας
-        συστήματος για τα κουμπιά, τα μενού και τα παράθυρα.
-# Tooltip displayed on hover of light theme
-onboarding-multistage-theme-tooltip-light-2 =
-    .title =
-        Χρήση ανοιχτόχρωμης εμφάνισης για τα κουμπιά,
-        τα μενού και τα παράθυρα.
-# Input description for light theme
-onboarding-multistage-theme-description-light =
-    .aria-description =
-        Χρήση ανοιχτόχρωμης εμφάνισης για τα κουμπιά,
-        τα μενού και τα παράθυρα.
-# Tooltip displayed on hover of dark theme
-onboarding-multistage-theme-tooltip-dark-2 =
-    .title =
-        Χρήση σκουρόχρωμης εμφάνισης για τα κουμπιά,
-        τα μενού και τα παράθυρα.
-# Input description for dark theme
-onboarding-multistage-theme-description-dark =
-    .aria-description =
-        Χρήση σκουρόχρωμης εμφάνισης για τα κουμπιά,
-        τα μενού και τα παράθυρα.
-# Tooltip displayed on hover of Alpenglow theme
-onboarding-multistage-theme-tooltip-alpenglow-2 =
-    .title =
-        Χρήση πολύχρωμης εμφάνισης για τα κουμπιά,
-        τα μενού και τα παράθυρα.
-# Input description for Alpenglow theme
-onboarding-multistage-theme-description-alpenglow =
-    .aria-description =
-        Χρήση πολύχρωμης εμφάνισης για τα κουμπιά,
-        τα μενού και τα παράθυρα.
-
-## Multistage MR1 onboarding strings (MR1 about:welcome pages)
 
 # Tooltip displayed on hover of system theme
 mr1-onboarding-theme-tooltip-system =
     .title =
         Χρήση θέματος λειτουργικού συστήματος
         για κουμπιά, μενού και παράθυρα.
+
 # Input description for system theme
 mr1-onboarding-theme-description-system =
     .aria-description =
         Χρήση θέματος λειτουργικού συστήματος
         για κουμπιά, μενού και παράθυρα.
+
 # Tooltip displayed on hover of light theme
 mr1-onboarding-theme-tooltip-light =
     .title =
         Χρήση φωτεινού θέματος για τα κουμπιά,
         τα μενού και τα παράθυρα.
+
 # Input description for light theme
 mr1-onboarding-theme-description-light =
     .aria-description =
         Χρήση φωτεινού θέματος για τα κουμπιά,
         τα μενού και τα παράθυρα.
+
 # Tooltip displayed on hover of dark theme
 mr1-onboarding-theme-tooltip-dark =
     .title =
         Χρήση σκοτεινού θέματος για τα κουμπιά,
         τα μενού και τα παράθυρα.
+
 # Input description for dark theme
 mr1-onboarding-theme-description-dark =
     .aria-description =
         Χρήση σκοτεινού θέματος για τα κουμπιά,
         τα μενού και τα παράθυρα.
+
 # Tooltip displayed on hover of Alpenglow theme
 mr1-onboarding-theme-tooltip-alpenglow =
     .title =
         Χρήση ενός δυναμικού, πολύχρωμου θέματος για τα κουμπιά,
         τα μενού και τα παράθυρα.
+
 # Input description for Alpenglow theme
 mr1-onboarding-theme-description-alpenglow =
     .aria-description =
         Χρήση ενός δυναμικού, πολύχρωμου θέματος για τα κουμπιά,
         τα μενού και τα παράθυρα.
+
+# Selector description for default themes
+mr2-onboarding-default-theme-label = Εξερευνήστε τα προεπιλεγμένα θέματα.
+
+## Strings for Thank You page
+
+mr2-onboarding-thank-you-header = Ευχαριστούμε που μας επιλέξατε
+mr2-onboarding-thank-you-text = Το { -brand-short-name } είναι ένα ανεξάρτητο πρόγραμμα περιήγησης που υποστηρίζεται από έναν μη κερδοσκοπικό οργανισμό. Μαζί, κάνουμε το διαδίκτυο πιο ασφαλές, υγιές και ιδιωτικό.
+mr2-onboarding-start-browsing-button-label = Έναρξη περιήγησης
+
+## Multistage live language reloading onboarding strings (about:welcome pages)
+##
+## The following language names are generated by the browser's Intl.DisplayNames API.
+##
+## Variables:
+##   $negotiatedLanguage (String) - The name of the langpack's language, e.g. "Español (ES)"
+
+
+## Multistage live language reloading onboarding strings (about:welcome pages)
+##
+## The following language names are generated by the browser's Intl.DisplayNames API.
+##
+## Variables:
+##   $negotiatedLanguage (String) - The name of the langpack's language, e.g. "Español (ES)"
+##   $systemLanguage (String) - The name of the system language, e.g "Español (ES)"
+##   $appLanguage (String) - The name of the language shipping in the browser build, e.g. "English (EN)"
+
+onboarding-live-language-header = Επιλέξτε τη γλώσσα σας
+
+mr2022-onboarding-live-language-text = Το { -brand-short-name } μιλάει τη γλώσσα σας
+
+mr2022-language-mismatch-subtitle = Χάρη στην κοινότητά μας, το { -brand-short-name } έχει μεταφραστεί σε πάνω από 90 γλώσσες. Φαίνεται ότι το σύστημά σας χρησιμοποιεί { $systemLanguage } και το { -brand-short-name } χρησιμοποιεί { $appLanguage }.
+
+onboarding-live-language-button-label-downloading = Λήψη πακέτου γλώσσας για τα { $negotiatedLanguage }…
+onboarding-live-language-waiting-button = Λήψη διαθέσιμων γλωσσών…
+onboarding-live-language-installing = Εγκατάσταση πακέτου γλώσσας για τα { $negotiatedLanguage }…
+
+mr2022-onboarding-live-language-switch-to = Εναλλαγή στα { $negotiatedLanguage }
+mr2022-onboarding-live-language-continue-in = Συνέχεια στα { $appLanguage }
+
+onboarding-live-language-secondary-cancel-download = Ακύρωση
+onboarding-live-language-skip-button-label = Παράλειψη
+
+## Firefox 100 Thank You screens
+
+# "Hero Text" displayed on left side of welcome screen. This text can be
+# formatted to span multiple lines as needed. The <span data-l10n-name="zap">
+# </span> in this string allows a "zap" underline style to be automatically
+# added to the text inside it. "Yous" should stay inside the zap span, but
+# "Thank" can be put inside instead if there's no "you" in the translation.
+# The English text would normally be "100 Thank-Yous" i.e., plural noun, but for
+# aesthetics of splitting it across multiple lines, the hyphen is omitted.
+fx100-thank-you-hero-text =
+    100
+    <span data-l10n-name="zap">Ευχαριστώ</span>
+fx100-thank-you-subtitle = Είναι η 100η μας έκδοση! Σας ευχαριστούμε για τη βοήθειά σας για ένα καλύτερο, υγιέστερο διαδίκτυο.
+fx100-thank-you-pin-primary-button-label =
+    { PLATFORM() ->
+        [macos] Καρφίτσωμα { -brand-short-name } στο Dock
+       *[other] Καρφίτσωμα { -brand-short-name } στη γραμμή εργασιών
+    }
+
+fx100-upgrade-thanks-header = 100 Ευχαριστώ
+# Message shown with a start-browsing button. Emphasis <em> should be for "you"
+# but "Thank" can be used instead if there's no "you" in the translation.
+fx100-upgrade-thank-you-body = Είναι η 100η μας έκδοση του { -brand-short-name }. <em>Σας</em> ευχαριστούμε για τη βοήθειά σας για ένα καλύτερο, υγιέστερο διαδίκτυο.
+# Message shown with either a pin-to-taskbar or set-default button.
+fx100-upgrade-thanks-keep-body = Είναι η 100η μας έκδοση! Σας ευχαριστούμε που είστε μέλος της κοινότητάς μας. Κρατήστε το { -brand-short-name } ένα κλικ μακριά για τις επόμενες 100.
+
+mr2022-onboarding-secondary-skip-button-label = Παράβλεψη βήματος
+
+## MR2022 New User Easy Setup screen strings
+
+# Primary button string used on new user onboarding first screen showing multiple actions such as Set Default, Import from previous browser.
+mr2022-onboarding-easy-setup-primary-button-label = Αποθήκευση και συνέχεια
+# Set Default action checkbox label used on new user onboarding first screen
+mr2022-onboarding-easy-setup-set-default-checkbox-label = Ορισμός του { -brand-short-name } ως προεπιλογής
+# Import action checkbox label used on new user onboarding first screen
+mr2022-onboarding-easy-setup-import-checkbox-label = Εισαγωγή από προηγούμενο πρόγραμμα περιήγησης
+
+## MR2022 New User Pin Firefox screen strings
+
+# Title used on about:welcome for new users when Firefox is not pinned.
+# In this context, open up is synonymous with "Discover".
+# The metaphor is that when they open their Firefox browser, it helps them discover an amazing internet.
+# If this translation does not make sense in your language, feel free to use the word "discover."
+mr2022-onboarding-welcome-pin-header = Ανοίξτε ένα καταπληκτικό διαδίκτυο
+# Subtitle is used on onboarding page for new users page when Firefox is not pinned
+mr2022-onboarding-welcome-pin-subtitle = Εκκινήστε το { -brand-short-name } από οπουδήποτε με ένα μόνο κλικ. Κάθε φορά που το κάνετε αυτό, επιλέγετε ένα πιο ανοικτό και ανεξάρτητο διαδίκτυο.
+# Primary button string used on welcome page for when Firefox is not pinned.
+mr2022-onboarding-pin-primary-button-label =
+    { PLATFORM() ->
+        [macos] Διατήρηση του { -brand-short-name } στο Dock
+       *[other] Καρφίτσωμα του { -brand-short-name } στη γραμμή εργασιών
+    }
+# Subtitle will be used when user already has Firefox pinned, but
+# has not set it as their default browser.
+# When translating "zip", please feel free to pick a verb that signifies movement and/or exploration
+# and makes sense in the context of navigating the web.
+mr2022-onboarding-set-default-only-subtitle = Ξεκινήστε με ένα πρόγραμμα περιήγησης που υποστηρίζεται από έναν μη κερδοσκοπικό οργανισμό. Υπερασπιζόμαστε το απόρρητό σας ενώ περιηγείστε στο διαδίκτυο.
+
+## MR2022 Existing User Pin Firefox Screen Strings
+
+# Title used on multistage onboarding page for existing users when Firefox is not pinned
+mr2022-onboarding-existing-pin-header = Σας ευχαριστούμε που αγαπάτε το { -brand-product-name }
+# Subtitle is used on onboarding page for existing users when Firefox is not pinned
+mr2022-onboarding-existing-pin-subtitle = Προσπελάστε ένα πιο υγιές διαδίκτυο από οπουδήποτε με ένα μόνο κλικ. Η τελευταία μας ενημέρωση είναι γεμάτη με νέα πράγματα που πιστεύουμε ότι θα λατρέψετε.
+# Subtitle will be used on the welcome screen for existing users
+# when they already have Firefox pinned but not set as default
+mr2022-onboarding-existing-set-default-only-subtitle = Χρησιμοποιήστε ένα πρόγραμμα περιήγησης που υπερασπίζεται το απόρρητό σας ενώ περιηγείστε στο διαδίκτυο. Η τελευταία μας ενημέρωση είναι γεμάτη με πράγματα που λατρεύετε.
+mr2022-onboarding-existing-pin-checkbox-label = Προσθήκη συντόμευσης και για την ιδιωτική περιήγηση του { -brand-short-name }
+
+## MR2022 New User Set Default screen strings
+
+# This string is the title used when the user already has pinned the browser, but has not set default.
+mr2022-onboarding-set-default-title = Ορισμός του { -brand-short-name } ως προεπιλογής
+mr2022-onboarding-set-default-primary-button-label = Ορισμός του { -brand-short-name } ως προεπιλογής
+# When translating "zip", please feel free to pick a verb that signifies movement and/or exploration
+# and makes sense in the context of navigating the web.
+mr2022-onboarding-set-default-subtitle = Χρησιμοποιήστε ένα πρόγραμμα περιήγησης που υποστηρίζεται από έναν μη κερδοσκοπικό οργανισμό. Υπερασπιζόμαστε το απόρρητό σας ενώ περιηγείστε στο διαδίκτυο.
+
+## MR2022 Get Started screen strings.
+## These strings will be used on the welcome page
+## when Firefox is already set to default and pinned.
+
+# When translating "zip", please feel free to pick a verb that signifies movement and/or exploration
+# and makes sense in the context of navigating the web.
+mr2022-onboarding-get-started-primary-subtitle = Η πιο πρόσφατη έκδοσή μας έχει προσαρμοστεί στις ανάγκες σας, κάνοντας πιο εύκολη από ποτέ την περιήγησή σας στο διαδίκτυο. Είναι γεμάτη με λειτουργίες που πιστεύουμε ότι θα λατρέψετε.
+mr2022-onboarding-get-started-primary-button-label = Ρύθμιση σε δευτερόλεπτα
+
+## MR2022 Import Settings screen strings
+
+mr2022-onboarding-import-header = Αστραπιαία ρύθμιση
+mr2022-onboarding-import-subtitle = Ρυθμίστε το { -brand-short-name } όπως σας αρέσει. Προσθέστε σελιδοδείκτες, κωδικούς πρόσβασης και πολλά άλλα από το παλιό σας πρόγραμμα περιήγησης.
+mr2022-onboarding-import-primary-button-label-no-attribution = Εισαγωγή από προηγούμενο πρόγραμμα περιήγησης
+
+## If your language uses grammatical genders, in the description for the
+## colorway feel free to switch from "You are a X. You…" (e.g. "You are a
+## Playmaker. You create…") to "X: you…" ("Playmaker: You create…"). This might
+## help creating a more inclusive translation.
+
+mr2022-onboarding-colorway-title = Επιλέξτε το χρώμα που σας εμπνέει
+mr2022-onboarding-colorway-subtitle = Οι ανεξάρτητες φωνές μπορούν να αλλάξουν τον πολιτισμό.
+mr2022-onboarding-colorway-primary-button-label-continue = Ορισμός και συνέχεια
+mr2022-onboarding-existing-colorway-checkbox-label = Κάντε την { -firefox-home-brand-name } σας μια πολύχρωμη αρχική σελίδα
+
+mr2022-onboarding-colorway-label-default = Προεπιλογή
+mr2022-onboarding-colorway-tooltip-default2 =
+    .title = Τρέχοντα χρώματα { -brand-short-name }
+mr2022-onboarding-colorway-description-default = <b>Χρήση τρεχόντων χρωμάτων στο { -brand-short-name }.</b>
+
+mr2022-onboarding-colorway-label-playmaker = Δημιουργός
+mr2022-onboarding-colorway-tooltip-playmaker2 =
+    .title = Δημιουργός (κόκκινο)
+mr2022-onboarding-colorway-description-playmaker = <b>Δημιουργός:</b> Δημιουργείτε ευκαιρίες για να κερδίσετε και βοηθάτε όλα τα άτομα γύρω σας να καταβάλουν τα μέγιστα.
+
+mr2022-onboarding-colorway-label-expressionist = Εξπρεσιονιστής
+mr2022-onboarding-colorway-tooltip-expressionist2 =
+    .title = Εξπρεσιονιστής (κίτρινο)
+mr2022-onboarding-colorway-description-expressionist = <b>Εξπρεσιονιστής:</b> Βλέπετε τον κόσμο διαφορετικά και οι δημιουργίες σας διεγείρουν τα συναισθήματα των άλλων.
+
+mr2022-onboarding-colorway-label-visionary = Οραματιστής
+mr2022-onboarding-colorway-tooltip-visionary2 =
+    .title = Οραματιστής (πράσινο)
+mr2022-onboarding-colorway-description-visionary = <b>Οραματιστής:</b> Αμφισβητείτε το status quo και κάνετε τους άλλους να φαντάζονται ένα καλύτερο μέλλον.
+
+mr2022-onboarding-colorway-label-activist = Ακτιβιστής
+mr2022-onboarding-colorway-tooltip-activist2 =
+    .title = Ακτιβιστής (μπλε)
+mr2022-onboarding-colorway-description-activist = <b>Ακτιβιστής:</b> Παραδίδετε έναν καλύτερο κόσμο στους επόμενους και κάνετε τους άλλους να πιστεύουν.
+
+mr2022-onboarding-colorway-label-dreamer = Ονειροπόλος
+mr2022-onboarding-colorway-tooltip-dreamer2 =
+    .title = Ονειροπόλος (μωβ)
+mr2022-onboarding-colorway-description-dreamer = <b>Ονειροπόλος:</b> Πιστεύετε ότι η τύχη ευνοεί τους τολμηρούς και εμπνέετε τους άλλους να είναι γενναίοι.
+
+mr2022-onboarding-colorway-label-innovator = Νεωτεριστής
+mr2022-onboarding-colorway-tooltip-innovator2 =
+    .title = Νεωτεριστής (πορτοκαλί)
+mr2022-onboarding-colorway-description-innovator = <b>Νεωτεριστής:</b> Βλέπετε ευκαιρίες παντού και επηρεάζετε τις ζωές όλων των ατόμων γύρω σας.
+
+## MR2022 Multistage Mobile Download screen strings
+
+mr2022-onboarding-mobile-download-title = Εναλλαγή από τον υπολογιστή στο τηλέφωνο και αντίστροφα
+mr2022-onboarding-mobile-download-subtitle = Λάβετε καρτέλες από μια συσκευή και συνεχίστε από εκεί που σταματήσατε σε μια άλλη. Συγχρονίστε τους σελιδοδείκτες και τους κωδικούς πρόσβασής σας οπουδήποτε χρησιμοποιείτε το { -brand-product-name }.
+mr2022-onboarding-mobile-download-cta-text = Σαρώστε τον κωδικό QR για να αποκτήσετε το { -brand-product-name } για κινητές συσκευές ή <a data-l10n-name="download-label">στείλτε στον εαυτό σας έναν σύνδεσμο λήψης.</a>
+mr2022-onboarding-no-mobile-download-cta-text = Σαρώστε τον κωδικό QR για λήψη του { -brand-product-name } για κινητές συσκευές.
+
+## MR2022 Upgrade Dialog screens
+## Pin private window screen shown only for users who don't have Firefox private pinned
+
+mr2022-upgrade-onboarding-pin-private-window-header = Η ελευθερία της ιδιωτικής περιήγησης, με ένα κλικ
+mr2022-upgrade-onboarding-pin-private-window-subtitle = Χωρίς αποθήκευση cookies ή ιστορικού, απευθείας από την επιφάνεια εργασίας σας. Περιηγηθείτε σαν να μη σας παρακολουθεί κανείς.
+mr2022-upgrade-onboarding-pin-private-window-primary-button-label =
+    { PLATFORM() ->
+        [macos] Διατήρηση της ιδιωτικής περιήγησης του { -brand-short-name } στο Dock
+       *[other] Καρφίτσωμα της ιδιωτικής περιήγησης του { -brand-short-name } στη γραμμή εργασιών
+    }
+
+## MR2022 Privacy Segmentation screen strings
+
+mr2022-onboarding-privacy-segmentation-title = Σεβόμαστε πάντοτε το απόρρητό σας
+mr2022-onboarding-privacy-segmentation-subtitle = Από έξυπνες προτάσεις έως πιο έξυπνη αναζήτηση, εργαζόμαστε συνεχώς για να δημιουργήσουμε ένα καλύτερο, πιο εξατομικευμένο { -brand-product-name }.
+mr2022-onboarding-privacy-segmentation-text-cta = Τι θέλετε να βλέπετε όταν προσφέρουμε νέες δυνατότητες που χρησιμοποιούν τα δεδομένα σας για τη βελτίωση της περιήγησής σας;
+mr2022-onboarding-privacy-segmentation-button-primary-label = Χρήση προτάσεων του { -brand-product-name }
+mr2022-onboarding-privacy-segmentation-button-secondary-label = Εμφάνιση λεπτομερών πληροφοριών
+
+## MR2022 Multistage Gratitude screen strings
+
+mr2022-onboarding-gratitude-title = Μας βοηθάτε να δημιουργήσουμε ένα καλύτερο διαδίκτυο
+mr2022-onboarding-gratitude-subtitle = Σας ευχαριστούμε που χρησιμοποιείτε το { -brand-short-name }, που υποστηρίζεται από το Mozilla Foundation. Με την υποστήριξή σας, εργαζόμαστε για να κάνουμε το διαδίκτυο πιο ανοικτό, προσβάσιμο και ωφέλιμο για όλους.
+mr2022-onboarding-gratitude-primary-button-label = Δείτε τι νέο υπάρχει
+mr2022-onboarding-gratitude-secondary-button-label = Έναρξη περιήγησης
+
+## Onboarding spotlight for infrequent users
+
+onboarding-infrequent-import-title = Νιώστε σαν στο σπίτι σας
+onboarding-infrequent-import-subtitle = Δεν έχει σημασία αν σκοπεύετε να μείνετε εδώ ή αν απλώς κάνετε μια στάση· μπορείτε να εισαγάγετε σελιδοδείκτες, κωδικούς πρόσβασης και πολλά άλλα.
+onboarding-infrequent-import-primary-button = Εισαγωγή στο { -brand-short-name }
+
+## MR2022 Illustration alt tags
+## Descriptive tags for illustrations used by screen readers and other assistive tech
+
+mr2022-onboarding-pin-image-alt =
+    .aria-label = Άτομο που εργάζεται σε φορητό υπολογιστή και περιβάλλεται από αστέρια και λουλούδια
+mr2022-onboarding-default-image-alt =
+    .aria-label = Άτομο που αγκαλιάζει το λογότυπο του { -brand-product-name }
+mr2022-onboarding-import-image-alt =
+    .aria-label = Άτομο που κάνει σκέιτμπορντ με ένα κουτί εικονιδίων λογισμικού
+mr2022-onboarding-mobile-download-image-alt =
+    .aria-label = Βάτραχοι που χοροπηδούν σε νούφαρα με έναν κωδικό QR για λήψη του { -brand-product-name } για κινητές συσκευές στο κέντρο
+mr2022-onboarding-pin-private-image-alt =
+    .aria-label = Ένα μαγικό ραβδί που εμφανίζει μέσα από ένα καπέλο το λογότυπο της ιδιωτικής περιήγησης του { -brand-product-name }
+mr2022-onboarding-privacy-segmentation-image-alt =
+    .aria-label = Ανοιχτόχρωμα και σκουρόχρωμα χέρια που κάνουν χειρονομία «κόλλα πέντε»
+mr2022-onboarding-gratitude-image-alt =
+    .aria-label = Άποψη ενός ηλιοβασιλέματος μέσα από ένα παράθυρο με μια αλεπού και ένα φυτό σε περβάζι
+mr2022-onboarding-colorways-image-alt =
+    .aria-label = Ένα χέρι ζωγραφίζει με σπρέι ένα πολύχρωμο κολάζ με ένα πράσινο μάτι, ένα πορτοκαλί παπούτσι, μια κόκκινη μπάλα μπάσκετ, μωβ ακουστικά, μια μπλε καρδιά και ένα κίτρινο στέμμα
+
+## Device migration onboarding
+
+onboarding-device-migration-image-alt =
+    .aria-label = Μια αλεπού χαιρετά στην οθόνη ενός φορητού υπολογιστή. Έχει συνδεθεί ένα ποντίκι στον φορητό υπολογιστή.
+onboarding-device-migration-title = Καλώς ορίσατε και πάλι!
+onboarding-device-migration-subtitle = Συνδεθείτε στον { -fxaccount-brand-name(case: "acc", capitalization: "lower") } σας για να έχετε μαζί σας τους σελιδοδείκτες, τους κωδικούς πρόσβασης και το ιστορικό σας στη νέα σας συσκευή.
+onboarding-device-migration-primary-button-label = Σύνδεση

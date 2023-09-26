@@ -38,16 +38,11 @@ menu-quit =
             [windows] F
            *[other] F
         }
+
 # This menu-quit-mac string is only used on macOS.
 menu-quit-mac =
     .label = Fini { -brand-shorter-name }
-# This menu-quit-button string is only used on Linux.
-menu-quit-button =
-    .label = { menu-quit.label }
-# This menu-quit-button-win string is only used on Windows.
-menu-quit-button-win =
-    .label = { menu-quit.label }
-    .tooltip = Fini { -brand-shorter-name }
+
 menu-about =
     .label = Pri { -brand-shorter-name }
     .accesskey = P
@@ -77,8 +72,15 @@ menu-file-open-location =
 menu-file-open-file =
     .label = Malfermi dosieron…
     .accesskey = d
-menu-file-close =
-    .label = Fermi
+# Variables:
+#  $tabCount (Number): the number of tabs that are affected by the action.
+menu-file-close-tab =
+    .label =
+        { $tabCount ->
+            [1] Fermi langeton
+            [one] Fermi langeton
+           *[other] Fermi { $tabCount } langetojn
+        }
     .accesskey = F
 menu-file-close-window =
     .label = Fermi fenestron
@@ -95,9 +97,6 @@ menu-file-share-url =
 menu-file-print-setup =
     .label = Agordi paĝon…
     .accesskey = A
-menu-file-print-preview =
-    .label = Antaŭvidi presadon
-    .accesskey = t
 menu-file-print =
     .label = Presi…
     .accesskey = P
@@ -113,9 +112,6 @@ menu-file-go-offline =
 menu-edit =
     .label = Redakti
     .accesskey = R
-menu-edit-find-on =
-    .label = Serĉi en tiu ĉi paĝo…
-    .accesskey = S
 menu-edit-find-in-page =
     .label = Serĉi en paĝo…
     .accesskey = S
@@ -134,9 +130,6 @@ menu-view =
 menu-view-toolbars-menu =
     .label = Ilaraj strioj
     .accesskey = I
-menu-view-customize-toolbar =
-    .label = Personecigi…
-    .accesskey = P
 menu-view-customize-toolbar2 =
     .label = Personecigi ilaron…
     .accesskey = i
@@ -173,9 +166,6 @@ menu-view-page-style-no-style =
 menu-view-page-basic-style =
     .label = Baza stilo
     .accesskey = B
-menu-view-charset =
-    .label = Teksta enkodigo
-    .accesskey = T
 menu-view-repair-text-encoding =
     .label = Ripari tekstan enkodigon
     .accesskey = R
@@ -192,6 +182,17 @@ menu-view-exit-full-screen =
 menu-view-full-screen =
     .label = Plenekrane
     .accesskey = P
+
+## These menu items may use the same accesskey.
+
+# This should match reader-view-enter-button in browser.ftl
+menu-view-enter-readerview =
+    .label = Eniri legilan vidon
+    .accesskey = E
+# This should match reader-view-close-button in browser.ftl
+menu-view-close-readerview =
+    .label = Fermi legilan vidon
+    .accesskey = F
 
 ##
 
@@ -221,24 +222,18 @@ menu-history-undo-menu =
     .label = Antaŭ nelonge fermitaj langetoj
 menu-history-undo-window-menu =
     .label = Antaŭ nelonge fermitaj fenestroj
-menu-history-reopen-all-tabs = Remalfermi ĉiujn langetojn
-menu-history-reopen-all-windows = Remalfermi ĉiujn fenestrojn
 
 ## Bookmarks Menu
 
 menu-bookmarks-menu =
     .label = Legosignoj
     .accesskey = L
-menu-bookmarks-show-all =
-    .label = Montri ĉiujn legosignojn
-menu-bookmark-this-page =
-    .label = Aldoni legosignon por tiu ĉi paĝo
 menu-bookmarks-manage =
     .label = Administri legosignojn
-menu-bookmark-current-tab =
-    .label = Aldoni legosignon por la nuna langeto
-menu-bookmark-edit =
-    .label = Redakti tiun ĉi legosignon
+menu-bookmark-tab =
+    .label = Aldoni legosignon por la nuna langeto…
+menu-edit-bookmark =
+    .label = Modifi tiun ĉi legosignon…
 menu-bookmarks-all-tabs =
     .label = Aldoni legosignon por ĉiuj langetoj…
 menu-bookmarks-toolbar =
@@ -256,15 +251,6 @@ menu-tools =
 menu-tools-downloads =
     .label = Elŝutoj
     .accesskey = E
-menu-tools-addons =
-    .label = Aldonaĵoj
-    .accesskey = A
-menu-tools-fxa-sign-in =
-    .label = Komenci seancon en { -brand-product-name }…
-    .accesskey = K
-menu-tools-turn-on-sync =
-    .label = Ŝalto de { -sync-brand-short-name }…
-    .accesskey = a
 menu-tools-addons-and-themes =
     .label = Aldonaĵoj kaj etosoj
     .accesskey = A
@@ -280,9 +266,6 @@ menu-tools-sync-now =
 menu-tools-fxa-re-auth =
     .label = Rekonekti al { -brand-product-name }…
     .accesskey = R
-menu-tools-web-developer =
-    .label = Teksaĵa programisto
-    .accesskey = P
 menu-tools-browser-tools =
     .label = Iloj de retumilo
     .accesskey = r
@@ -295,17 +278,6 @@ menu-tools-page-source =
 menu-tools-page-info =
     .label = Informo pri paĝo
     .accesskey = I
-menu-preferences =
-    .label =
-        { PLATFORM() ->
-            [windows] Preferoj
-           *[other] Preferoj
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] O
-           *[other] P
-        }
 menu-settings =
     .label = Agordoj
     .accesskey =
@@ -338,21 +310,6 @@ menu-window-bring-all-to-front =
 menu-help =
     .label = Helpo
     .accesskey = e
-menu-help-product =
-    .label = Helpo por { -brand-shorter-name }
-    .accesskey = H
-menu-help-show-tour =
-    .label = Prezento de { -brand-shorter-name }
-    .accesskey = r
-menu-help-import-from-another-browser =
-    .label = Enporti el alia retumilo…
-    .accesskey = E
-menu-help-keyboard-shortcuts =
-    .label = Alirklavoj
-    .accesskey = A
-menu-help-troubleshooting-info =
-    .label = Informoj por solvado de problemoj
-    .accesskey = I
 menu-get-help =
     .label = Helpo
     .accesskey = H
@@ -361,21 +318,18 @@ menu-help-more-troubleshooting-info =
     .accesskey = p
 menu-help-report-site-issue =
     .label = Raporti problemon kun retejo…
-menu-help-feedback-page =
-    .label = Sendi opiniojn…
-    .accesskey = S
-menu-help-safe-mode-without-addons =
-    .label = Rekomenci kun aldonaĵoj malaktivaj…
-    .accesskey = R
-menu-help-safe-mode-with-addons =
-    .label = Restartigi kun aldonaĵoj aktivaj
-    .accesskey = R
+menu-help-share-ideas =
+    .label = Dividi ideojn kaj komentojn…
+    .accesskey = D
 menu-help-enter-troubleshoot-mode2 =
     .label = Problemsolva reĝimo…
     .accesskey = r
 menu-help-exit-troubleshoot-mode =
     .label = Malŝalti problemsolvan reĝimon
     .accesskey = p
+menu-help-switch-device =
+    .label = Iro al nova aparato
+    .accesskey = I
 # Label of the Help menu item. Either this or
 # menu-help-notdeceptive is shown.
 menu-help-report-deceptive-site =

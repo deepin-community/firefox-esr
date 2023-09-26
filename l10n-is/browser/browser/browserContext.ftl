@@ -11,17 +11,6 @@ navbar-tooltip-instruction =
 
 ## Back
 
-main-context-menu-back =
-    .tooltiptext = Til baka um eina síðu
-    .aria-label = Til baka
-    .accesskey = B
-
-navbar-tooltip-back =
-    .value = { main-context-menu-back.tooltiptext }
-
-toolbar-button-back =
-    .label = { main-context-menu-back.aria-label }
-
 # Variables
 #   $shortcut (String) - A keyboard shortcut for the Go Back command.
 main-context-menu-back-2 =
@@ -41,17 +30,6 @@ toolbar-button-back-2 =
     .label = { main-context-menu-back-2.aria-label }
 
 ## Forward
-
-main-context-menu-forward =
-    .tooltiptext = Áfram um eina síðu
-    .aria-label = Áfram
-    .accesskey = F
-
-navbar-tooltip-forward =
-    .value = { main-context-menu-forward.tooltiptext }
-
-toolbar-button-forward =
-    .label = { main-context-menu-forward.aria-label }
 
 # Variables
 #   $shortcut (String) - A keyboard shortcut for the Go Forward command.
@@ -106,38 +84,53 @@ toolbar-button-stop-reload =
 
 ## Firefox Account Button
 
+toolbar-button-fxaccount =
+    .label = { -fxaccount-brand-name }
+    .tooltiptext = { -fxaccount-brand-name }
+
 ## Save Page
 
 main-context-menu-page-save =
     .label = Vista síðu sem…
     .accesskey = V
 
-toolbar-button-page-save =
-    .label = { main-context-menu-page-save.label }
-
 ## Simple menu items
 
-main-context-menu-bookmark-add =
-    .aria-label = Setja síðu í bókamerki
+main-context-menu-bookmark-page =
+    .aria-label = Bókamerkja síðu…
     .accesskey = m
-    .tooltiptext = Setja síðu í bókamerki
+    .tooltiptext = Bókamerkja síðu
+
+# This menuitem is only visible on macOS
+# Cannot be shown at the same time as main-context-menu-edit-bookmark-mac,
+# so should probably have the same access key if possible.
+main-context-menu-bookmark-page-mac =
+    .label = Bókamerkja síðu…
+    .accesskey = m
+
+# This menuitem is only visible on macOS
+# Cannot be shown at the same time as main-context-menu-bookmark-page-mac,
+# so should probably have the same access key if possible.
+main-context-menu-edit-bookmark-mac =
+    .label = Breyta bókamerki…
+    .accesskey = m
 
 # Variables
 #   $shortcut (String) - A keyboard shortcut for the add bookmark command.
-main-context-menu-bookmark-add-with-shortcut =
-    .aria-label = Setja síðu í bókamerki
+main-context-menu-bookmark-page-with-shortcut =
+    .aria-label = Bókamerkja síðu…
     .accesskey = m
-    .tooltiptext = Setja síðu í bókamerki ({ $shortcut })
+    .tooltiptext = Bókamerkja síðu ({ $shortcut })
 
-main-context-menu-bookmark-change =
-    .aria-label = Breyta bókamerki
+main-context-menu-edit-bookmark =
+    .aria-label = Breyta bókamerki…
     .accesskey = m
     .tooltiptext = Breyta bókamerki
 
 # Variables
 #   $shortcut (String) - A keyboard shortcut for the edit bookmark command.
-main-context-menu-bookmark-change-with-shortcut =
-    .aria-label = Breyta bókamerki
+main-context-menu-edit-bookmark-with-shortcut =
+    .aria-label = Breyta bókamerki…
     .accesskey = m
     .tooltiptext = Breyta bókamerki ({ $shortcut })
 
@@ -150,8 +143,8 @@ main-context-menu-open-link-new-tab =
     .accesskey = f
 
 main-context-menu-open-link-container-tab =
-    .label = Opna tengil í nýjum hópaflipa
-    .accesskey = d
+    .label = Opna tengil í nýjum sérefnisflipa
+    .accesskey = f
 
 main-context-menu-open-link-new-window =
     .label = Opna tengil í nýjum glugga
@@ -161,9 +154,9 @@ main-context-menu-open-link-new-private-window =
     .label = Opna tengil í nýjum huliðsglugga
     .accesskey = p
 
-main-context-menu-bookmark-this-link =
-    .label = Setja tengil í bókamerki
-    .accesskey = l
+main-context-menu-bookmark-link-2 =
+    .label = Bókamerkja tengil…
+    .accesskey = B
 
 main-context-menu-save-link =
     .label = Vista tengil sem…
@@ -173,11 +166,6 @@ main-context-menu-save-link-to-pocket =
     .label = Vista tengil í { -pocket-brand-name }
     .accesskey = o
 
-## The access keys for "Copy Link Location" and "Copy Email Address"
-## should be the same if possible; the two context menu items
-## are mutually exclusive.
-
-
 ## The access keys for "Copy Link" and "Copy Email Address"
 ## should be the same if possible; the two context menu items
 ## are mutually exclusive.
@@ -186,9 +174,13 @@ main-context-menu-copy-email =
     .label = Afrita póstfang
     .accesskey = p
 
-main-context-menu-copy-link =
+main-context-menu-copy-phone =
+    .label = Afrita símanúmer
+    .accesskey = f
+
+main-context-menu-copy-link-simple =
     .label = Afrita tengil
-    .accesskey = r
+    .accesskey = l
 
 ## Media (video/audio) controls
 ##
@@ -214,31 +206,24 @@ main-context-menu-media-unmute =
     .label = Virkja hljóð
     .accesskey = h
 
-main-context-menu-media-play-speed =
-    .label = Spilunarhraði
-    .accesskey = l
-
-main-context-menu-media-play-speed-slow =
-    .label = Hægt (0.5×)
+main-context-menu-media-play-speed-2 =
+    .label = Hraði
     .accesskey = H
 
-main-context-menu-media-play-speed-normal =
-    .label = Venjulegt
-    .accesskey = n
+main-context-menu-media-play-speed-slow-2 =
+    .label = 0.5×
 
-main-context-menu-media-play-speed-fast =
-    .label = Hratt(1.25×)
-    .accesskey = r
+main-context-menu-media-play-speed-normal-2 =
+    .label = 1.0×
 
-main-context-menu-media-play-speed-faster =
-    .label = Hraðara (1.5×)
-    .accesskey = a
+main-context-menu-media-play-speed-fast-2 =
+    .label = 1.25×
 
-# "Ludicrous" is a reference to the movie "Space Balls" and is meant
-# to say that this speed is very fast.
-main-context-menu-media-play-speed-fastest =
-    .label = Fáránlega hratt (2×)
-    .accesskey = l
+main-context-menu-media-play-speed-faster-2 =
+    .label = 1.5×
+
+main-context-menu-media-play-speed-fastest-2 =
+    .label = 2×
 
 main-context-menu-media-loop =
     .label = Endurtaka
@@ -267,37 +252,37 @@ main-context-menu-media-video-leave-fullscreen =
 
 # This is used when right-clicking on a video in the
 # content area when the Picture-in-Picture feature is enabled.
-main-context-menu-media-pip =
-    .label = Mynd-í-mynd
-    .accesskey = u
+main-context-menu-media-watch-pip =
+    .label = Horfa á í mynd-í-mynd
+    .accesskey = y
 
 main-context-menu-image-reload =
     .label = Endurlesa mynd
     .accesskey = r
 
-main-context-menu-image-view =
-    .label = Sjá mynd
-    .accesskey = m
+main-context-menu-image-view-new-tab =
+    .label = Opna mynd í nýjum flipa
+    .accesskey = i
 
-main-context-menu-video-view =
-    .label = Skoða myndband
-    .accesskey = k
+main-context-menu-video-view-new-tab =
+    .label = Opna myndskeið í nýjum flipa
+    .accesskey = i
 
 main-context-menu-image-copy =
     .label = Afrita mynd
     .accesskey = y
 
-main-context-menu-image-copy-location =
-    .label = Afrita staðsetningu myndar
-    .accesskey = s
+main-context-menu-image-copy-link =
+    .label = Afrita tengil myndar
+    .accesskey = g
 
-main-context-menu-video-copy-location =
-    .label = Afrita myndbandatengil
-    .accesskey = m
+main-context-menu-video-copy-link =
+    .label = Afrita tengil á myndskeið
+    .accesskey = g
 
-main-context-menu-audio-copy-location =
-    .label = Afrita hljóðtengil
-    .accesskey = h
+main-context-menu-audio-copy-link =
+    .label = Afrita tengil á hljóð
+    .accesskey = g
 
 main-context-menu-image-save-as =
     .label = Vista mynd sem…
@@ -307,9 +292,13 @@ main-context-menu-image-email =
     .label = Senda mynd…
     .accesskey = a
 
-main-context-menu-image-set-as-background =
-    .label = Setja sem bakgrunnsmynd…
+main-context-menu-image-set-image-as-background =
+    .label = Setja mynd sem skjáborðsbakgrunn...
     .accesskey = S
+
+main-context-menu-image-copy-text =
+    .label = Afrita texta úr mynd
+    .accesskey = t
 
 main-context-menu-image-info =
     .label = Skoða upplýsingar um mynd
@@ -327,9 +316,9 @@ main-context-menu-audio-save-as =
     .label = Vista hljóð sem…
     .accesskey = V
 
-main-context-menu-video-image-save-as =
-    .label = Vista skjámynd sem…
-    .accesskey = s
+main-context-menu-video-take-snapshot =
+    .label = Taka kyrrmynd…
+    .accesskey = m
 
 main-context-menu-video-email =
     .label = Senda myndband…
@@ -339,14 +328,6 @@ main-context-menu-audio-email =
     .label = Senda hljóðskrá…
     .accesskey = a
 
-main-context-menu-plugin-play =
-    .label = Gera þessa viðbót virka
-    .accesskey = G
-
-main-context-menu-plugin-hide =
-    .label = Fela þetta tengiforrit
-    .accesskey = F
-
 main-context-menu-save-to-pocket =
     .label = Vista síðu í { -pocket-brand-name }
     .accesskey = k
@@ -355,16 +336,31 @@ main-context-menu-send-to-device =
     .label = Senda síðu á tæki
     .accesskey = æ
 
-main-context-menu-view-background-image =
-    .label = Sjá bakgrunnsmynd
-    .accesskey = g
-
 ## The access keys for "Use Saved Login" and "Use Saved Password"
 ## should be the same if possible; the two context menu items
 ## are mutually exclusive.
 
+main-context-menu-use-saved-login =
+    .label = Nota vistaða innskráningu
+    .accesskey = o
+
+main-context-menu-use-saved-password =
+    .label = Nota vistað lykilorð
+    .accesskey = o
 
 ##
+
+main-context-menu-use-relay-mask =
+    .label = Notaðu { -relay-brand-short-name } tölvupósthulu
+    .accesskey = o
+
+main-context-menu-suggest-strong-password =
+    .label = Stinga upp á sterku lykilorði...
+    .accesskey = S
+
+main-context-menu-manage-logins2 =
+    .label = Sýsla með innskráningar
+    .accesskey = m
 
 main-context-menu-keyword =
     .label = Bæta við orði í leit…
@@ -394,8 +390,8 @@ main-context-menu-frame-reload =
     .label = Endurnýja ramma
     .accesskey = r
 
-main-context-menu-frame-bookmark =
-    .label = Setja ramma í bókamerki
+main-context-menu-frame-add-bookmark =
+    .label = Bókamerkja ramma…
     .accesskey = m
 
 main-context-menu-frame-save-as =
@@ -414,17 +410,25 @@ main-context-menu-frame-view-info =
     .label = Skoða upplýsingar ramma
     .accesskey = i
 
+main-context-menu-print-selection-2 =
+    .label = Prenta val…
+    .accesskey = r
+
 main-context-menu-view-selection-source =
     .label = Sýna frumkóða vals
     .accesskey = n
 
+main-context-menu-take-screenshot =
+    .label = Taka skjámynd
+    .accesskey = k
+
+main-context-menu-take-frame-screenshot =
+    .label = Taka skjámynd
+    .accesskey = m
+
 main-context-menu-view-page-source =
     .label = Sýna frumkóða síðu
     .accesskey = k
-
-main-context-menu-view-page-info =
-    .label = Skoða upplýsingar síðu
-    .accesskey = i
 
 main-context-menu-bidi-switch-text =
     .label = Skipta um texta átt
@@ -434,13 +438,23 @@ main-context-menu-bidi-switch-page =
     .label = Skipta um síðu átt
     .accesskey = s
 
-main-context-menu-inspect-element =
-    .label = Skoða einindi
-    .accesskey = e
+main-context-menu-inspect =
+    .label = Greina
+    .accesskey = Q
 
 main-context-menu-inspect-a11y-properties =
-    .label = Skoða aðgengiseiginleika
+    .label = Skoða eiginleika aukins aðgengis
 
 main-context-menu-eme-learn-more =
     .label = Vita meira um DRM…
     .accesskey = D
+
+# Variables
+#   $containerName (String): The name of the current container
+main-context-menu-open-link-in-container-tab =
+    .label = Opna tengil í nýjum { $containerName }-flipa
+    .accesskey = t
+
+main-context-menu-reveal-password =
+    .label = Birta lykilorð
+    .accesskey = y

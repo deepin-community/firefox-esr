@@ -6,9 +6,6 @@ password-quality-meter = Mita me kit mung me donyo
 
 ## Change Password dialog
 
-change-password-window =
-    .title = Lok mung me donyo madit
-
 # Variables:
 # $tokenName (String) - Security device of the change password dialog
 change-password-token = Nyonyo me Gwoko kuc: { $tokenName }
@@ -16,23 +13,16 @@ change-password-old = Mung me donyo matye:
 change-password-new = Mung me donyo manyen:
 change-password-reenter = Mung me donyo manyen (doki):
 
-## Reset Password dialog
-
-reset-password-window =
-    .title = Ter mung me donyo Madit
-    .style = width: 40em
-
 ## Reset Primary Password dialog
 
 reset-password-button-label =
     .label = Ter nitit
-reset-password-text = Ka i tero mung me donyo mamegi madit nitit, web megi weng ma kigwoko ki mung me e-mail, ket waraga me tic pari, ki wic bi wil ki lagony pa dano. I moko ada ni imito tero mung me donyo madit nitit?
 
 ## Downloading cert dialog
 
-download-cert-window =
+download-cert-window2 =
     .title = Gamo Waraga
-    .style = width: 46em
+    .style = min-width: 46em
 download-cert-message = Gipenyi me geno Twero me Waraga manyen (CA).
 download-cert-trust-ssl =
     .label = Gen CA man me nyutu kakube me web.
@@ -64,7 +54,5 @@ set-password-reminder = Pire tek: Ka wiyi owil ki mung me kano waraga, pe iromo 
 
 ## Protected Auth dialog
 
-protected-auth-window =
-    .title = Gwok Twero me Pwoc
-protected-auth-msg = Tim ber imi twero bot pwoc. Kore me twero jenge ikom kit pwoc mamegi.
-protected-auth-token = Pwoc:
+## Protected authentication alert
+

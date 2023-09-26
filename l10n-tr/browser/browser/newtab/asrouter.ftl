@@ -7,20 +7,17 @@
 
 cfr-doorhanger-extension-heading = Uzantı Önerisi
 cfr-doorhanger-feature-heading = Özellik Önerisi
-cfr-doorhanger-pintab-heading = Bunu deneyin: Sekme sabitleme
 
 ##
 
 cfr-doorhanger-extension-sumo-link =
     .tooltiptext = Bunu neden görüyorum?
 
-cfr-doorhanger-extension-cancel-button = Daha sonra
-    .accesskey = D
+cfr-doorhanger-extension-cancel-button = Şimdi değil
+    .accesskey = m
 
 cfr-doorhanger-extension-ok-button = Hemen ekle
     .accesskey = H
-cfr-doorhanger-pintab-ok-button = Bu sekmeyi sabitle
-    .accesskey = s
 
 cfr-doorhanger-extension-manage-settings-button = Öneri ayarlarını yönet
     .accesskey = Ö
@@ -38,12 +35,14 @@ cfr-doorhanger-extension-author = geliştiren: { $name }
 # This is a notification displayed in the address bar.
 # When clicked it opens a panel with a message for the user.
 cfr-doorhanger-extension-notification = Öneri
+# .a11y-announcement is extracted in JS and announced via A11y.announce.
 cfr-doorhanger-extension-notification2 = Öneri
     .tooltiptext = Eklenti önerisi
     .a11y-announcement = Eklenti öneriniz var
 
 # This is a notification displayed in the address bar.
 # When clicked it opens a panel with a message for the user.
+# .a11y-announcement is extracted in JS and announced via A11y.announce.
 cfr-doorhanger-feature-notification = Öneri
     .tooltiptext = Özellik önerisi
     .a11y-announcement = Özellik öneriniz var
@@ -68,18 +67,6 @@ cfr-doorhanger-extension-total-users =
        *[other] { $total } kullanıcı
     }
 
-cfr-doorhanger-pintab-description = En çok kullandığınız sitelere kolayca ulaşın. Siteleri sabit bir sekmede açık tutabilirsiniz (tarayıcınızı yeniden başlatsanız bile).
-
-## These messages are steps on how to use the feature and are shown together.
-
-cfr-doorhanger-pintab-step1 = Sabitlemek istediğiniz sekmeye <b>sağ tıklayın</b>.
-cfr-doorhanger-pintab-step2 = Menüden <b>Sekmeyi sabitle</b>’yi seçin.
-cfr-doorhanger-pintab-step3 = Sitede bir güncelleme olursa sabit sekmenizde mavi bir nokta göreceksiniz.
-
-cfr-doorhanger-pintab-animation-pause = Duraklat
-cfr-doorhanger-pintab-animation-resume = Devam et
-
-
 ## Firefox Accounts Message
 
 cfr-doorhanger-bookmark-fxa-header = Yer imlerinize her yerden ulaşın.
@@ -92,7 +79,7 @@ cfr-doorhanger-bookmark-fxa-close-btn-tooltip =
 ## Protections panel
 
 cfr-protections-panel-header = Takip edilmeden gezin
-cfr-protections-panel-body = Verileriniz sizde kalsın. { -brand-short-name }, internette ne yaptığınızı öğrenmeye çalışan takipçilerin çoğundan sizi korur.
+cfr-protections-panel-body = Verileriniz sizde kalsın. { -brand-short-name }, internette ne yaptığınızı öğrenmeye çalışan takip kodlarının çoğundan sizi korur.
 cfr-protections-panel-link-text = Daha fazla bilgi alın
 
 ## What's New toolbar button and panel
@@ -105,177 +92,22 @@ cfr-whatsnew-button =
     .label = Yeni neler var?
     .tooltiptext = Yeni neler var?
 
-cfr-whatsnew-panel-header = Yeni neler var?
-
 cfr-whatsnew-release-notes-link-text = Sürüm notlarını okuyun
 
-cfr-whatsnew-fx70-title = { -brand-short-name } artık gizliliğiniz için daha sıkı çalışıyor
-cfr-whatsnew-fx70-body = Bu güncellemede İzlenme Koruması özelliğini geliştirdik ve sitelere kaydolurken güvenli parola üretmeyi daha da kolaylaştırdık.
-
-cfr-whatsnew-tracking-protect-title = Kendinizi takipçilerden koruyun
-cfr-whatsnew-tracking-protect-body = { -brand-short-name }, internette yaptıklarınızı izleyen çoğu sosyal medya takipçisini ve siteler arası takipçiyi engeller.
-cfr-whatsnew-tracking-protect-link-text = Raporunuzu görün
-
-# This string is displayed before a large numeral that indicates the total
-# number of tracking elements blocked. Don’t add $blockedCount to your
-# localization, because it would result in the number showing twice.
-cfr-whatsnew-tracking-blocked-title =
-    { $blockedCount ->
-        [one] Engellenen takipçi
-       *[other] Engellenen takipçiler
-    }
-cfr-whatsnew-tracking-blocked-subtitle = { DATETIME($earliestDate, month: "long", year: "numeric") } tarihinden beri
-cfr-whatsnew-tracking-blocked-link-text = Raporu görüntüle
-
-cfr-whatsnew-lockwise-backup-title = Parolalarınızı yedekleyin
-cfr-whatsnew-lockwise-backup-body = Giriş yaptığınız her yerden ulaşabileceğiniz, güvenli parolalar oluşturun.
-cfr-whatsnew-lockwise-backup-link-text = Yedeklemeyi aç
-
-cfr-whatsnew-lockwise-take-title = Parolalarınızı yanınızda taşıyın
-cfr-whatsnew-lockwise-take-body = { -lockwise-brand-short-name } mobil uygulaması, yedeklediğiniz parolalara her yerden güvenle ulaşmanızı sağlar.
-cfr-whatsnew-lockwise-take-link-text = Uygulamayı indir
-
-## Search Bar
-
-cfr-whatsnew-searchbar-title = Adres çubuğuna daha az yazın, daha çok bulun
-cfr-whatsnew-searchbar-body-topsites = Şimdi adres çubuğunu seçin. Sık kullandığınız bağlantıları gösteren bir kutu açılacak.
-
-## Search bar
-
-cfr-whatsnew-searchbar-icon-alt-text = Büyüteç simgesi
-
-## Picture-in-Picture
-
-cfr-whatsnew-pip-header = İnternette gezinirken video izleyin
-cfr-whatsnew-pip-body = Görüntü içinde görüntü özelliği, başka sekmelerle çalışırken video izleyebilmeniz için videoyu ayrı bir pencereye koyar.
-cfr-whatsnew-pip-cta = Daha fazla bilgi al
-
-## Permission Prompt
-
-cfr-whatsnew-permission-prompt-header = Daha az açılır pencere
-cfr-whatsnew-permission-prompt-body = { -brand-shorter-name } artık sitelerin size bildirim soruları sormasını engelliyor.
-cfr-whatsnew-permission-prompt-cta = Daha fazla bilgi al
-
-## Fingerprinter Counter
-
-# This string is displayed before a large numeral that indicates the total
-# number of tracking elements blocked. Don’t add $fingerprinterCount to your
-# localization, because it would result in the number showing twice.
-cfr-whatsnew-fingerprinter-counter-header =
-    { $fingerprinterCount ->
-        [one] Engellenen parmak izi toplayıcı
-       *[other] Engellenen parmak izi toplayıcı
-    }
-cfr-whatsnew-fingerprinter-counter-body = { -brand-shorter-name }, reklamcılara özel profilinizi çıkarmak için cihazınız ve eylemleriniz hakkında gizlice bilgi toplayan birçok parmak izi toplayıcıyı engelliyor.
-
-# Message variation when fingerprinters count is less than 10
-cfr-whatsnew-fingerprinter-counter-header-alt = Parmak izi toplayıcılar
-cfr-whatsnew-fingerprinter-counter-body-alt = { -brand-shorter-name }, reklamcılara özel profilinizi çıkarmak için cihazınız ve eylemleriniz hakkında gizlice bilgi toplayan parmak izi toplayıcıları engelleyebilir.
-
-## Bookmark Sync
-
-cfr-doorhanger-sync-bookmarks-header = Bu yer imini telefonunuza gönderin
-cfr-doorhanger-sync-bookmarks-body = Yer imlerinize, parolalarınıza, geçmişinize ve diğer bilgilerinize { -brand-product-name } tarayıcınıza giriş yaptığınız her yerden ulaşın.
-cfr-doorhanger-sync-bookmarks-ok-button = { -sync-brand-short-name }’i aç
-    .accesskey = a
-
-## Login Sync
-
-cfr-doorhanger-sync-logins-header = Bir daha hiçbir parolanızı unutmayın
-cfr-doorhanger-sync-logins-body = Parolalanızı güvenle depolayın, onlara tüm cihazlarınızdan ulaşın.
-cfr-doorhanger-sync-logins-ok-button = { -sync-brand-short-name }’i aç
-    .accesskey = a
-
-## Send Tab
-
-cfr-doorhanger-send-tab-header = Bu yazıyı yolda okuyun
-cfr-doorhanger-send-tab-recipe-header = Bu yazıyı yanınızda taşıyın
-cfr-doorhanger-send-tab-body = Sekme Gönder özelliğiyle bu bağlantıyı kolayca telefonunuza veya { -brand-product-name }’a giriş yaptığınız her yere gönderebilirsiniz.
-cfr-doorhanger-send-tab-ok-button = Sekme göndermeyi dene
-    .accesskey = S
-
-## Firefox Send
-
-cfr-doorhanger-firefox-send-header = Bu PDF’i güvenle paylaşın
-cfr-doorhanger-firefox-send-body = Uçtan uca şifreleme ve işiniz bittiğinde kaybolan bir bağlantıyla hassas belgelerinizi meraklı gözlerden koruyun.
-cfr-doorhanger-firefox-send-ok-button = { -send-brand-name }’i deneyin
-    .accesskey = e
-
-## Social Tracking Protection
-
-cfr-doorhanger-socialtracking-ok-button = Korumalara bak
-    .accesskey = K
-cfr-doorhanger-socialtracking-close-button = Kapat
-    .accesskey = a
-cfr-doorhanger-socialtracking-dont-show-again = Bunun gibi mesajlar bir daha gösterme
-    .accesskey = B
-cfr-doorhanger-socialtracking-heading = { -brand-short-name } bir sosyal ağın sizi izlemesini engelledi
-cfr-doorhanger-socialtracking-description = Gizliliğiniz bizim için önemli. { -brand-short-name } artık yaygın sosyal medya takipçilerini engelliyor, böylece internette yaptıklarınız hakkında daha az veri toplayabilmelerini sağlıyor.
-cfr-doorhanger-fingerprinters-heading = { -brand-short-name } bu sayfadaki bir parmak izi toplayıcıyı engelledi
-cfr-doorhanger-fingerprinters-description = Gizliliğiniz bizim için önemli. { -brand-short-name }, sizi izlemek için cihazınızı tanımlayabilecek bilgileri toplayan parmak izi toplayıcıları kendiliğinden engelliyor.
-cfr-doorhanger-cryptominers-heading = { -brand-short-name } bu sayfadaki bir kripto madencisini engelledi
-cfr-doorhanger-cryptominers-description = Gizliliğiniz bizim için önemli. { -brand-short-name }, bilgisayarınızın işlemcisini dijital para üretmek için kullanan kripto madencilerini kendiliğinden engelliyor.
-
 ## Enhanced Tracking Protection Milestones
-
-# Variables:
-#   $blockedCount (Number) - The total count of blocked trackers. This number will always be greater than 1.
-#   $date (String) - The date we began recording the count of blocked trackers
-cfr-doorhanger-milestone-heading =
-    { $blockedCount ->
-        [one] { -brand-short-name } { $date } tarihinden beri <b>{ $blockedCount }</b> takipçiyi engelledi!
-       *[other] { -brand-short-name } { $date } tarihinden beri <b>{ $blockedCount }</b> takipçiyi engelledi!
-    }
 
 # Variables:
 #   $blockedCount (Number) - The total count of blocked trackers. This number will always be greater than 1.
 #   $date (Datetime) - The date we began recording the count of blocked trackers
 cfr-doorhanger-milestone-heading2 =
     { $blockedCount ->
-        [one] { -brand-short-name } { DATETIME($date, month: "long", year: "numeric") } tarihinden beri <b>{ $blockedCount }</b> takipçiyi engelledi!
-       *[other] { -brand-short-name } { DATETIME($date, month: "long", year: "numeric") } tarihinden beri <b>{ $blockedCount }</b> takipçiyi engelledi!
+        [one] { -brand-short-name } { DATETIME($date, month: "long", year: "numeric") } tarihinden beri <b>{ $blockedCount }</b> takip kodunu engelledi!
+       *[other] { -brand-short-name } { DATETIME($date, month: "long", year: "numeric") } tarihinden beri <b>{ $blockedCount }</b> takip kodunu engelledi!
     }
 cfr-doorhanger-milestone-ok-button = Tümünü göster
     .accesskey = T
-
-## What’s New Panel Content for Firefox 76
-
-
-## Lockwise message
-
-cfr-whatsnew-lockwise-header = Kolayca güvenli parolalar oluşturun
-cfr-whatsnew-lockwise-body = Her hesap için benzersiz ve güvenli parolalar düşünmek zordur. Parola alanını seçerek { -brand-shorter-name } ile güvenli parolalar oluşturabilirsiniz.
-cfr-whatsnew-lockwise-icon-alt = { -lockwise-brand-short-name } simgesi
-
-## Vulnerable Passwords message
-
-cfr-whatsnew-passwords-header = Güvensiz parolalar hakkında uyarılar alın
-cfr-whatsnew-passwords-body = Hacker’lar insanların aynı parolaları farklı yerlerde kullandığını biliyor. Aynı parolayı birden çok sitede kullandıysanız ve bu sitelerden birinin verileri ele geçirildiyse { -lockwise-brand-short-name } ilgili sitelerdeki parolalarınızı değiştirmeniz için sizi uyaracak.
-cfr-whatsnew-passwords-icon-alt = Güvensiz parola anahtar simgesi
-
-## Picture-in-Picture fullscreen message
-
-cfr-whatsnew-pip-fullscreen-header = Görüntü içinde görüntüyü tam ekrana taşıyın
-cfr-whatsnew-pip-fullscreen-body = Görüntü içinde görüntü modunda açtığınız videolara çift tıklayarak onları tam ekran yapabilirsiniz.
-cfr-whatsnew-pip-fullscreen-icon-alt = Görüntü içinde görüntü simgesi
-
-## Protections Dashboard message
-
-cfr-whatsnew-protections-header = Korumalara hızlı bir bakış
-cfr-whatsnew-protections-body = Korumalar panosu, veri ihlalleri ve parola yönetimi hakkında özet raporlar içerir. İhlallerin kaçını çözdüğünüzü izleyebilir, kayıtlı parolalarınızın veri ihlalleri kapsamında ele geçirilip geçirilmediğini görebilirsiniz.
-cfr-whatsnew-protections-cta-link = Korumalar panosunu aç
-cfr-whatsnew-protections-icon-alt = Kalkan simgesi
-
-## Better PDF message
-
-cfr-whatsnew-better-pdf-header = Daha iyi PDF deneyimi
-cfr-whatsnew-better-pdf-body = PDF belgeleri artık doğrudan { -brand-short-name } içinde açılıyor, böylece işleriniz kolaylaşıyor.
-
 cfr-doorhanger-milestone-close-button = Kapat
     .accesskey = K
-
-## What’s New Panel Content for Firefox 76
-## Protections Dashboard message
 
 ## DOH Message
 
@@ -288,28 +120,141 @@ cfr-doorhanger-doh-secondary-button = Devre dışı bırak
 
 ## Fission Experiment Message
 
-cfr-doorhanger-fission-body-approved = Gizliliğiniz bizim için önemli. { -brand-short-name } artık web sitelerini birbirinden izole ediyor. Böylece hacker’ların parolaları, kredi kartı numaralarını ve diğer hassas bilgileri çalması zorlaşıyor.
-cfr-doorhanger-fission-header = Site izolasyonu
-cfr-doorhanger-fission-primary-button = Anladım
-    .accesskey = A
-cfr-doorhanger-fission-secondary-button = Daha fazla bilgi al
-    .accesskey = D
-
-## What's new: Cookies message
-
-## What's new: Media controls message
-
-## What's new: Search shortcuts
-
-## What's new: Cookies protection
-
-## What's new: Better bookmarking
-
-## What's new: Cross-site cookie tracking
-
 ## Full Video Support CFR message
 
 cfr-doorhanger-video-support-body = Bu sitedeki videolar { -brand-short-name }’un bu sürümünde düzgün oynatılamayabilir. Eksiksiz video desteği için { -brand-short-name } tarayıcınızı güncellemelisiniz.
 cfr-doorhanger-video-support-header = Videoları izlemek için { -brand-short-name }’ güncelleyin
 cfr-doorhanger-video-support-primary-button = Şimdi güncelle
     .accesskey = m
+
+## Spotlight modal shared strings
+
+## VPN promotion dialog for public Wi-Fi users
+##
+## If a user is detected to be on a public Wi-Fi network, they are given a
+## bit of info about how to improve their privacy and then offered a button
+## to the Mozilla VPN page and a link to dismiss the dialog.
+
+# This header text can be explicitly wrapped.
+spotlight-public-wifi-vpn-header = Galiba herkese açık bir Wi-Fi ağına bağlısınız
+spotlight-public-wifi-vpn-body = Konumunuzu ve girdiğiniz siteleri gizlemek için VPN kullanabilirsiniz. Havalimanları ve kafeler gibi halka açık yerlerde internette gezinirken VPN kullanmanız güvenliğinizi artırır.
+spotlight-public-wifi-vpn-primary-button = { -mozilla-vpn-brand-name } ile gizli kalın
+    .accesskey = k
+spotlight-public-wifi-vpn-link = Şimdi değil
+    .accesskey = m
+
+## Total Cookie Protection Rollout
+
+## Emotive Continuous Onboarding
+
+spotlight-better-internet-header = Daha iyi bir interneti seçtiniz
+spotlight-better-internet-body = { -brand-short-name } kullandığınızda tüm insanlık için daha açık ve daha erişilebilir bir interneti savunmuş oluyorsunuz.
+spotlight-peace-mind-header = Yanınızdayız
+spotlight-peace-mind-body = { -brand-short-name } her ay kullanıcı başına ortalama 3.000 takip kodunu engelliyor. Çünkü bizce hiçbir şey, özellikle takip kodları gibi can sıkıcı unsurlar, iyi bir internetle aranıza girmemeli.
+spotlight-pin-primary-button =
+    { PLATFORM() ->
+        [macos] Dock’a sabitle
+       *[other] Görev çubuğuna sabitle
+    }
+spotlight-pin-secondary-button = Şimdi değil
+
+## MR2022 Background Update Windows native toast notification strings.
+##
+## These strings will be displayed by the Windows operating system in
+## a native toast, like:
+##
+## <b>multi-line title</b>
+## multi-line text
+## <img>
+## [ primary button ] [ secondary button ]
+##
+## The button labels are fitted into narrow fixed-width buttons by
+## Windows and therefore must be as narrow as possible.
+
+mr2022-background-update-toast-title = Yeni { -brand-short-name }. Daha çok gizlilik. Daha az izleyici.
+mr2022-background-update-toast-text = Bugüne kadarki en güçlü izlenme korumamızla güncellenen en yeni { -brand-short-name }’u şimdi deneyin.
+
+# This button label will be fitted into a narrow fixed-width button by
+# Windows. Try to not exceed the width of the English text (compare it
+# using a variable font like Arial): the button can only fit 1-2
+# additional characters, exceeding characters will be truncated.
+mr2022-background-update-toast-primary-button-label = { -brand-shorter-name }’u açın
+
+# This button label will be fitted into a narrow fixed-width button by
+# Windows. Try to not exceed the width of the English text (compare it using a
+# variable font like Arial): the button can only fit 1-2 additional characters,
+# exceeding characters will be truncated.
+mr2022-background-update-toast-secondary-button-label = Daha sonra hatırlat
+
+## Firefox View CFR
+
+firefoxview-cfr-primarybutton = Deneyin
+    .accesskey = D
+firefoxview-cfr-secondarybutton = Şimdi değil
+    .accesskey = m
+firefoxview-cfr-header-v2 = Kaldığınız yerden hızlıca devam edin
+firefoxview-cfr-body-v2 = { -firefoxview-brand-name } ile yakın zamanda kapattığınız sekmeleri geri getirebilir ve cihazlarınız arasında kolayca şekilde geçiş yapabilirsiniz.
+
+## Firefox View Spotlight
+
+firefoxview-spotlight-promo-title = { -firefoxview-brand-name }’a merhaba deyin
+
+# “Poof” refers to the expression to convey when something or someone suddenly disappears, or in this case, reappears. For example, “Poof, it’s gone.”
+firefoxview-spotlight-promo-subtitle = Telefonunuzdan baktığınız sayfayı görmek mi istiyorsunuz? Az önce ziyaret ettiğiniz siteye geri dönmeniz mi gerekiyor? { -firefoxview-brand-name } ile hepsi yanınızda.
+firefoxview-spotlight-promo-primarybutton = Nasıl çalıştığını görün
+firefoxview-spotlight-promo-secondarybutton = Geç
+
+## Colorways expiry reminder CFR
+
+colorways-cfr-primarybutton = Renk kuşağını seç
+    .accesskey = R
+
+# "shades" refers to the different color options available to users in colorways.
+colorways-cfr-body = Kültürü değiştiren seslerden ilham alan { -brand-short-name } renkleriyle tarayıcınızı renklendirin.
+colorways-cfr-header-28days = Bağımsız Sesler renk kuşakları 16 Ocak’ta kullanımdan kalkıyor
+colorways-cfr-header-14days = Bağımsız Sesler renk kuşakları iki hafta sonra kullanımdan kalkıyor
+colorways-cfr-header-7days = Bağımsız Sesler renk kuşakları bu hafta kullanımdan kalkıyor
+colorways-cfr-header-today = Bağımsız Sesler renk kuşakları bugün kullanımdan kalkıyor
+
+## Cookie Banner Handling CFR
+
+cfr-cbh-header = { -brand-short-name } çerez bildirimlerini reddedebilsin mi?
+cfr-cbh-body = { -brand-short-name } birçok çerez bildirimi isteğini otomatik olarak reddedebilir.
+cfr-cbh-confirm-button = Çerez bildirimlerini reddet
+    .accesskey = r
+cfr-cbh-dismiss-button = Şimdi değil
+    .accesskey = m
+
+## These strings are used in the Fox doodle Pin/set default spotlights
+
+july-jam-headline = Sizi koruyoruz
+july-jam-body = { -brand-short-name }, her ay kullanıcı başına ortalama 3.000 takip kodunu engelleyerek internete güvenli ve hızlı erişim sağlıyor.
+july-jam-set-default-primary = Bağlantılarımı { -brand-short-name } ile aç
+fox-doodle-pin-headline = Yeniden hoş geldiniz
+
+# “indie” is short for the term “independent”.
+# In this instance, free from outside influence or control.
+fox-doodle-pin-body = Küçük bir hatırlatma: Bağımsız tarayıcınızı bir tık kadar yakınınızda tutabilirsiniz.
+fox-doodle-pin-primary = Bağlantılarımı { -brand-short-name } ile aç
+fox-doodle-pin-secondary = Şimdi değil
+
+## These strings are used in the Set Firefox as Default PDF Handler for Existing Users experiment
+
+set-default-pdf-handler-headline = <strong>PDF’leriniz artık { -brand-short-name } ile açılıyor.</strong> Formları doğrudan tarayıcınızda düzenleyebilir ve imzalayabilirsiniz. Varsayılan ayarları değiştirmek isterseniz ayarlarda “PDF” araması yapabilirsiniz.
+set-default-pdf-handler-primary = Anladım
+
+## FxA sync CFR
+
+fxa-sync-cfr-header = Yeni bir cihaza geçmeyi düşünüyor musunuz?
+fxa-sync-cfr-body = { -brand-product-name } tarayıcısını yüklediğiniz her yere yer imleriniz, parolalarınız ve sekmeleriniz de sizinle birlikte gelsin.
+fxa-sync-cfr-primary = Bilgi al
+    .accesskey = D
+fxa-sync-cfr-secondary = Daha sonra hatırlat
+    .accesskey = D
+
+## Device Migration FxA Spotlight
+
+device-migration-fxa-spotlight-header = Eski bir cihaz mı kullanıyorsunuz?
+device-migration-fxa-spotlight-body = Yeni bir cihaza geçiş yaparken yer imleri ve parolalar gibi önemli bilgilerinizin kaybolmaması için için verilerinizi yedekleyin.
+device-migration-fxa-spotlight-primary-button = Verilerimi nasıl yedekleyebilirim?
+device-migration-fxa-spotlight-link = Daha sonra hatırlat

@@ -20,13 +20,13 @@ newtab-personalize-dialog-label =
 newtab-search-box-search-button =
     .title = 검색
     .aria-label = 검색
-newtab-search-box-search-the-web-text = 웹 검색
-# Variables
-#  $engine (String): the name of the user's default search engine
+
+# Variables:
+#   $engine (string) - The name of the user's default search engine
 newtab-search-box-handoff-text = { $engine } 검색 또는 주소 입력
 newtab-search-box-handoff-text-no-engine = 검색어 또는 주소 입력
-# Variables
-#  $engine (String): the name of the user's default search engine
+# Variables:
+#   $engine (string) - The name of the user's default search engine
 newtab-search-box-handoff-input =
     .placeholder = { $engine } 검색 또는 주소 입력
     .title = { $engine } 검색 또는 주소 입력
@@ -35,10 +35,7 @@ newtab-search-box-handoff-input-no-engine =
     .placeholder = 검색어 또는 주소 입력
     .title = 검색어 또는 주소 입력
     .aria-label = 검색어 또는 주소 입력
-newtab-search-box-search-the-web-input =
-    .placeholder = 웹 검색
-    .title = 웹 검색
-    .aria-label = 웹 검색
+
 newtab-search-box-text = 웹 검색
 newtab-search-box-input =
     .placeholder = 웹 검색
@@ -47,17 +44,18 @@ newtab-search-box-input =
 ## Top Sites - General form dialog.
 
 newtab-topsites-add-search-engine-header = 검색 엔진 추가
-newtab-topsites-add-topsites-header = 새 상위 사이트
 newtab-topsites-add-shortcut-header = 새 바로 가기
 newtab-topsites-edit-topsites-header = 상위 사이트 편집
 newtab-topsites-edit-shortcut-header = 바로 가기 편집
 newtab-topsites-title-label = 제목
 newtab-topsites-title-input =
     .placeholder = 제목 입력
+
 newtab-topsites-url-label = URL
 newtab-topsites-url-input =
     .placeholder = URL 입력 또는 붙여넣기
 newtab-topsites-url-validation = 유효한 URL이 필요합니다
+
 newtab-topsites-image-url-label = 사용자 지정 이미지 URL
 newtab-topsites-use-image-link = 사용자 지정 이미지 사용…
 newtab-topsites-image-validation = 이미지를 읽어오지 못했습니다. 다른 URL을 시도하세요.
@@ -86,13 +84,15 @@ newtab-topsite-sponsored = 스폰서
 newtab-menu-section-tooltip =
     .title = 메뉴 열기
     .aria-label = 메뉴 열기
+
 # Tooltip for dismiss button
 newtab-dismiss-button-tooltip =
     .title = 삭제
     .aria-label = 삭제
+
 # This tooltip is for the context menu of Pocket cards or Topsites
 # Variables:
-#  $title (String): The label or hostname of the site. This is for screen readers when the context menu button is focused/active.
+#   $title (string) - The label or hostname of the site. This is for screen readers when the context menu button is focused/active.
 newtab-menu-content-tooltip =
     .title = 메뉴 열기
     .aria-label = { $title }에 대한 컨텍스트 메뉴 열기
@@ -104,8 +104,8 @@ newtab-menu-topsites-placeholder-tooltip =
 ## Context Menu: These strings are displayed in a context menu and are meant as a call to action for a given page.
 
 newtab-menu-edit-topsites = 편집
-newtab-menu-open-new-window = 새 창에 열기
-newtab-menu-open-new-private-window = 새 사생활 보호 창에 열기
+newtab-menu-open-new-window = 새 창에서 열기
+newtab-menu-open-new-private-window = 새 사생활 보호 창에서 열기
 newtab-menu-dismiss = 닫기
 newtab-menu-pin = 고정
 newtab-menu-unpin = 고정 해제
@@ -148,7 +148,7 @@ newtab-menu-remove-download = 기록에서 삭제
 newtab-menu-show-file =
     { PLATFORM() ->
         [macos] Finder에서 보기
-       *[other] 상위 폴더 열기
+       *[other] 폴더에서 보기
     }
 newtab-menu-open-file = 파일 열기
 
@@ -162,14 +162,22 @@ newtab-label-removed-bookmark = 북마크 삭제됨
 newtab-label-recommended = 트랜드
 newtab-label-saved = { -pocket-brand-name }에 저장됨
 newtab-label-download = 다운로드됨
+
 # This string is used in the story cards to indicate sponsored content
 # Variables:
-#  $sponsorOrSource (String): This is the name of a company or their domain
+#   $sponsorOrSource (string) - The name of a company or their domain
 newtab-label-sponsored = { $sponsorOrSource } · 후원
+
 # This string is used at the bottom of story cards to indicate sponsored content
 # Variables:
-#  $sponsor (String): This is the name of a sponsor
+#   $sponsor (string) - The name of a sponsor
 newtab-label-sponsored-by = { $sponsor } 후원
+
+# This string is used under the image of story cards to indicate source and time to read
+# Variables:
+#   $source (string) - The name of a company or their domain
+#   $timeToRead (number) - The estimated number of minutes to read this story
+newtab-label-source-read-time = { $source } · { $timeToRead }분
 
 ## Section Menu: These strings are displayed in the section context menu and are
 ## meant as a call to action for the given section.
@@ -195,18 +203,18 @@ newtab-section-expand-section-label =
 ## Section Headers.
 
 newtab-section-header-topsites = 상위 사이트
-newtab-section-header-highlights = 하이라이트
 newtab-section-header-recent-activity = 최근 활동
 # Variables:
-#  $provider (String): Name of the corresponding content provider.
+#   $provider (string) - Name of the corresponding content provider.
 newtab-section-header-pocket = { $provider } 추천
 
 ## Empty Section States: These show when there are no more items in a section. Ex. When there are no more Pocket story recommendations, in the space where there would have been stories, this is shown instead.
 
 newtab-empty-section-highlights = 탐색을 시작하면 최근 방문하거나 북마크한 좋은 글이나 영상, 페이지를 여기에 보여줍니다.
+
 # Ex. When there are no more Pocket story recommendations, in the space where there would have been stories, this is shown instead.
 # Variables:
-#  $provider (String): Name of the content provider for this section, e.g "Pocket".
+#   $provider (string) - Name of the content provider for this section, e.g "Pocket".
 newtab-empty-section-topstories = 다 왔습니다. { $provider }에서 제공하는 주요 기사를 다시 확인해 보세요. 기다릴 수 없습니까? 주제를 선택하면 웹에서 볼 수 있는 가장 재미있는 글을 볼 수 있습니다.
 
 ## Empty Section (Content Discovery Experience). These show when there are no more stories or when some stories fail to load.
@@ -222,21 +230,37 @@ newtab-discovery-empty-section-topstories-timed-out = 이런! 이 섹션을 거�
 
 # This is shown at the bottom of the trending stories section and precedes a list of links to popular topics.
 newtab-pocket-read-more = 인기 주제:
+newtab-pocket-new-topics-title = 더 많은 이야기를 원하세요? { -pocket-brand-name } 인기 주제 보기
 newtab-pocket-more-recommendations = 더 많은 추천
 newtab-pocket-learn-more = 더 알아보기
 newtab-pocket-cta-button = { -pocket-brand-name } 받기
 newtab-pocket-cta-text = 좋아하는 이야기를 { -pocket-brand-name }에 저장하고 재미있게 읽어 보세요.
+newtab-pocket-pocket-firefox-family = { -pocket-brand-name }은 { -brand-product-name } 제품군의 일부입니다.
+
+## Pocket Final Card Section.
+## This is for the final card in the Pocket grid.
+
+# A save to Pocket button that shows over the card thumbnail on hover.
+newtab-pocket-save = 저장
+newtab-pocket-saved = 저장됨
+
+## Pocket content onboarding experience dialog and modal for new users seeing the Pocket section for the first time, shown as the first item in the Pocket section.
+
+newtab-pocket-onboarding-discover = 웹의 최고를 발견하세요
+newtab-pocket-onboarding-cta = { -pocket-brand-name }은 가장 유익하고 영감을 주며 신뢰할 수 있는 콘텐츠를 { -brand-product-name } 브라우저에 바로 제공하기 위해 다양한 출판물을 탐색합니다.
 
 ## Error Fallback Content.
 ## This message and suggested action link are shown in each section of UI that fails to render.
 
-newtab-error-fallback-info = 이런! 이 콘텐츠를 불러오는데 오류가 발생하였습니다.
+newtab-error-fallback-info = 이런! 이 콘텐츠를 로드하는 중에 문제가 발생했습니다.
 newtab-error-fallback-refresh-link = 페이지를 새로 고침해서 다시 시도하세요.
 
 ## Customization Menu
 
 newtab-custom-shortcuts-title = 바로 가기
 newtab-custom-shortcuts-subtitle = 저장하거나 방문한 사이트
+# Variables
+#   $num (number) - Number of rows to display
 newtab-custom-row-selector =
     { $num ->
        *[other] { $num } 행
@@ -245,7 +269,8 @@ newtab-custom-sponsored-sites = 스폰서 바로 가기
 newtab-custom-pocket-title = { -pocket-brand-name } 추천
 newtab-custom-pocket-subtitle = { -brand-product-name } 제품군의 일부인 { -pocket-brand-name }에서 선별한 뛰어난 콘텐츠
 newtab-custom-pocket-sponsored = 스폰서 소식
+newtab-custom-pocket-show-recent-saves = 최근 저장한 항목 표시
 newtab-custom-recent-title = 최근 활동
-newtab-custom-recent-subtitle = 최근 사이트 및 콘텐츠 선택
+newtab-custom-recent-subtitle = 최근 사이트 및 콘텐츠 모음
 newtab-custom-close-button = 닫기
 newtab-custom-settings = 더 많은 설정 관리

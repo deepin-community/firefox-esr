@@ -11,17 +11,6 @@ navbar-tooltip-instruction =
 
 ## Back
 
-main-context-menu-back =
-    .tooltiptext = ऐक पृष्ठ मागे जा
-    .aria-label = मागे
-    .accesskey = B
-
-navbar-tooltip-back =
-    .value = { main-context-menu-back.tooltiptext }
-
-toolbar-button-back =
-    .label = { main-context-menu-back.aria-label }
-
 # Variables
 #   $shortcut (String) - A keyboard shortcut for the Go Back command.
 main-context-menu-back-2 =
@@ -41,17 +30,6 @@ toolbar-button-back-2 =
     .label = { main-context-menu-back-2.aria-label }
 
 ## Forward
-
-main-context-menu-forward =
-    .tooltiptext = ऐक पृष्ठ पुढे जा
-    .aria-label = पुढे
-    .accesskey = F
-
-navbar-tooltip-forward =
-    .value = { main-context-menu-forward.tooltiptext }
-
-toolbar-button-forward =
-    .label = { main-context-menu-forward.aria-label }
 
 # Variables
 #   $shortcut (String) - A keyboard shortcut for the Go Forward command.
@@ -112,34 +90,7 @@ main-context-menu-page-save =
     .label = पृष्ठ असे साठवा…
     .accesskey = P
 
-toolbar-button-page-save =
-    .label = { main-context-menu-page-save.label }
-
 ## Simple menu items
-
-main-context-menu-bookmark-add =
-    .aria-label = या पृष्ठाला वाचणखूण लावा
-    .accesskey = m
-    .tooltiptext = या पृष्ठाला वाचनखूण लावा
-
-# Variables
-#   $shortcut (String) - A keyboard shortcut for the add bookmark command.
-main-context-menu-bookmark-add-with-shortcut =
-    .aria-label = या पृष्ठाला वाचणखूण लावा
-    .accesskey = m
-    .tooltiptext = या पृष्ठाला वाचनखूण लावा ({ $shortcut })
-
-main-context-menu-bookmark-change =
-    .aria-label = ही वाचनखूण संपादीत करा
-    .accesskey = m
-    .tooltiptext = ही वाचनखूण संपादीत करा
-
-# Variables
-#   $shortcut (String) - A keyboard shortcut for the edit bookmark command.
-main-context-menu-bookmark-change-with-shortcut =
-    .aria-label = ही वाचनखूण संपादीत करा
-    .accesskey = m
-    .tooltiptext = ही वाचनखूण ({ $shortcut }) संपादीत करा
 
 main-context-menu-open-link =
     .label = दुवा उघडा
@@ -161,10 +112,6 @@ main-context-menu-open-link-new-private-window =
     .label = नवीन खाजगी पटलात दुवा उघडा
     .accesskey = P
 
-main-context-menu-bookmark-this-link =
-    .label = ह्या दुव्याला वाचनखूण लावा
-    .accesskey = L
-
 main-context-menu-save-link =
     .label = दुवा असे साठवा…
     .accesskey = k
@@ -185,10 +132,6 @@ main-context-menu-save-link-to-pocket =
 main-context-menu-copy-email =
     .label = ईमेल पत्त्याची प्रत बनवा
     .accesskey = E
-
-main-context-menu-copy-link =
-    .label = दुवा ठिकाणाचे प्रत बनवा
-    .accesskey = a
 
 ## Media (video/audio) controls
 ##
@@ -213,32 +156,6 @@ main-context-menu-media-mute =
 main-context-menu-media-unmute =
     .label = मंद अशक्य करा
     .accesskey = m
-
-main-context-menu-media-play-speed =
-    .label = चालवायची गती
-    .accesskey = d
-
-main-context-menu-media-play-speed-slow =
-    .label = (0.5×) ने हळू करा
-    .accesskey = S
-
-main-context-menu-media-play-speed-normal =
-    .label = सामान्य
-    .accesskey = N
-
-main-context-menu-media-play-speed-fast =
-    .label = (1.25×)ने जलद करा
-    .accesskey = F
-
-main-context-menu-media-play-speed-faster =
-    .label = (1.5×)ने जलद करा
-    .accesskey = a
-
-# "Ludicrous" is a reference to the movie "Space Balls" and is meant
-# to say that this speed is very fast.
-main-context-menu-media-play-speed-fastest =
-    .label = अतिशय जलद (2×)
-    .accesskey = L
 
 main-context-menu-media-loop =
     .label = लूप
@@ -265,39 +182,13 @@ main-context-menu-media-video-leave-fullscreen =
     .label = पडदाभरपासून बाहेर पडा
     .accesskey = u
 
-# This is used when right-clicking on a video in the
-# content area when the Picture-in-Picture feature is enabled.
-main-context-menu-media-pip =
-    .label = पिक्चर-इन-पिक्चर
-    .accesskey = u
-
 main-context-menu-image-reload =
     .label = प्रतिमा पुन्हा लोड करा
     .accesskey = R
 
-main-context-menu-image-view =
-    .label = प्रतिमा पहा
-    .accesskey = I
-
-main-context-menu-video-view =
-    .label = व्हिडीओ दृष्य
-    .accesskey = i
-
 main-context-menu-image-copy =
     .label = प्रतिमेची प्रत बनवा
     .accesskey = y
-
-main-context-menu-image-copy-location =
-    .label = प्रतिमा ठिकाणाची प्रत बनवा
-    .accesskey = o
-
-main-context-menu-video-copy-location =
-    .label = व्हिडीओ ठिकाणाचे प्रत बनवा
-    .accesskey = o
-
-main-context-menu-audio-copy-location =
-    .label = ऑडिओ ठिकाणाचे प्रत बनवा
-    .accesskey = o
 
 main-context-menu-image-save-as =
     .label = चित्र असे साठवा…
@@ -306,10 +197,6 @@ main-context-menu-image-save-as =
 main-context-menu-image-email =
     .label = प्रतिमा ईमेल करा…
     .accesskey = g
-
-main-context-menu-image-set-as-background =
-    .label = डेस्कटॉप पार्श्वभूमी म्हणून सेट करा…
-    .accesskey = S
 
 main-context-menu-image-info =
     .label = प्रतिमा माहितीचे दृष्य
@@ -327,10 +214,6 @@ main-context-menu-audio-save-as =
     .label = ऑडिओ असे साठवा…
     .accesskey = v
 
-main-context-menu-video-image-save-as =
-    .label = स्नॅपशॉटला असे साठवा…
-    .accesskey = S
-
 main-context-menu-video-email =
     .label = व्हिडिओ ईमेल करा…
     .accesskey = a
@@ -339,14 +222,6 @@ main-context-menu-audio-email =
     .label = ऑडिओ ईमेल करा…
     .accesskey = a
 
-main-context-menu-plugin-play =
-    .label = ह्या प्लगइनला सुरू करा
-    .accesskey = c
-
-main-context-menu-plugin-hide =
-    .label = ह्या प्लगइनला लपवा
-    .accesskey = H
-
 main-context-menu-save-to-pocket =
     .label = पृष्ठ { -pocket-brand-name } मध्ये जतन करा
     .accesskey = k
@@ -354,10 +229,6 @@ main-context-menu-save-to-pocket =
 main-context-menu-send-to-device =
     .label = पृष्ठ उपकरणाला पाठवा
     .accesskey = D
-
-main-context-menu-view-background-image =
-    .label = पार्श्वभूमीतील चित्राचे दृष्य
-    .accesskey = w
 
 ## The access keys for "Use Saved Login" and "Use Saved Password"
 ## should be the same if possible; the two context menu items
@@ -394,10 +265,6 @@ main-context-menu-frame-reload =
     .label = चौकट पुन्हा लोड करा
     .accesskey = R
 
-main-context-menu-frame-bookmark =
-    .label = या चौकटाला वाचनखूण लावा
-    .accesskey = m
-
 main-context-menu-frame-save-as =
     .label = पटल असे साठवा…
     .accesskey = F
@@ -422,10 +289,6 @@ main-context-menu-view-page-source =
     .label = पृष्ठाचे स्रोत पहा
     .accesskey = V
 
-main-context-menu-view-page-info =
-    .label = पृष्ठ माहिती पहा
-    .accesskey = I
-
 main-context-menu-bidi-switch-text =
     .label = मजकुराची दिशा बदला
     .accesskey = w
@@ -434,13 +297,10 @@ main-context-menu-bidi-switch-page =
     .label = पृष्ठ दिशा बदला
     .accesskey = D
 
-main-context-menu-inspect-element =
-    .label = एलिमेंटची चौकशी करा
-    .accesskey = Q
-
 main-context-menu-inspect-a11y-properties =
     .label = सुलभता गुणधर्मांची पाहणी करा
 
 main-context-menu-eme-learn-more =
     .label = DRM बद्दल अधिक जाणून घ्या…
     .accesskey = D
+

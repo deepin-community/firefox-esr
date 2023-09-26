@@ -20,15 +20,6 @@ toolbar-context-menu-bookmark-selected-tabs =
 toolbar-context-menu-select-all-tabs =
     .label = בחירת כל הלשוניות
     .accesskey = ב
-toolbar-context-menu-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] ביטול סגירת לשונית
-            [one] ביטול סגירת לשונית
-           *[other] ביטול סגירת לשוניות
-        }
-    .accesskey = י
-
 toolbar-context-menu-reopen-closed-tabs =
     .label =
         { $tabCount ->
@@ -51,18 +42,18 @@ toolbar-context-menu-report-extension =
     .label = דיווח על הרחבה
     .accesskey = ד
 
-# Can appear on the same context menu as menubarCmd ("Menu Bar") and
-# personalbarCmd ("Bookmarks Toolbar"), so they should have different
-# access keys.
+# Can appear on the same context menu as toolbar-context-menu-menu-bar-cmd
+# ("Menu Bar") and personalbarCmd ("Bookmarks Toolbar"), so they should
+# have different access keys.
 toolbar-context-menu-pin-to-overflow-menu =
     .label = הצמדה לתפריט הצף
     .accesskey = צ
-toolbar-context-menu-auto-hide-downloads-button =
-    .label = הסתרה אוטומטית בסרגל הכלים
-    .accesskey = א
 toolbar-context-menu-auto-hide-downloads-button-2 =
     .label = הסתרת הכפתור כשהרשימה ריקה
     .accesskey = כ
+toolbar-context-menu-always-open-downloads-panel =
+    .label = הצגת החלונית כאשר הורדה מתחילה
+    .accesskey = ח
 toolbar-context-menu-remove-from-toolbar =
     .label = הסרה מסרגל הכלים
     .accesskey = ר
@@ -72,6 +63,11 @@ toolbar-context-menu-view-customize-toolbar =
 toolbar-context-menu-view-customize-toolbar-2 =
     .label = התאמה אישית של סרגל הכלים…
     .accesskey = ס
+# This is only ever shown when toolbar-context-menu-pin-to-overflow-menu
+# is hidden, so they can share access keys.
+toolbar-context-menu-pin-to-toolbar =
+    .label = הצמדה לסרגל הכלים
+    .accesskey = צ
 
 toolbar-context-menu-bookmarks-toolbar-always-show-2 =
     .label = תמיד להציג
@@ -86,3 +82,7 @@ toolbar-context-menu-bookmarks-toolbar-on-new-tab-2 =
 toolbar-context-menu-bookmarks-show-other-bookmarks =
     .label = הצגת סימניות אחרות
     .accesskey = ה
+
+toolbar-context-menu-menu-bar-cmd =
+    .toolbarname = שורת תפריט
+    .accesskey = פ

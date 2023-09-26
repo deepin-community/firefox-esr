@@ -16,17 +16,22 @@ about-processes-shutdown-process =
 about-processes-shutdown-tab =
     .title = סגירת לשונית
 
+# Profiler icons
+# Variables:
+#    $duration (Number) The time in seconds during which the profiler will be running.
+#                       The value will be an integer, typically less than 10.
+about-processes-profile-process =
+    .title =
+        { $duration ->
+            [one] יצירת פרופיל לכל התהליכונים של תהליך זה לשניה אחת
+           *[other] יצירת פרופיל לכל התהליכונים של תהליך זה ל־{ $duration } שניות
+        }
+
 ## Column headers
 
 about-processes-column-name = שם
 about-processes-column-memory-resident = זיכרון
 about-processes-column-cpu-total = מעבד
-
-## Process names
-## Variables:
-##    $pid (String) The process id of this process, assigned by the OS.
-##    $origin (String) The domain name for this process.
-##    $type (String) The raw type for this process. Used for unknown processes.
 
 ## Process names
 ## Variables:
@@ -59,9 +64,8 @@ about-processes-unknown-process = אחר: { $type } ‏({ $pid })
 ##    $origin (String) The domain name for this process.
 
 about-processes-web-isolated-process = { $origin } (‏{ $pid })
-about-processes-web-large-allocation-process = { $origin } (‏{ $pid }, גדול)
+about-processes-web-serviceworker = { $origin } (‏{ $pid },‏ serviceworker)
 about-processes-web-isolated-process-private = { $origin } — פרטי ({ $pid })
-about-processes-web-large-allocation-process-private = { $origin } — פרטי ({ $pid }, גדול)
 
 ## Details within processes
 
@@ -117,6 +121,15 @@ about-processes-frame-name-one = מסגרת משנה: { $url }
 #   $shortUrl (String) The shared prefix for the subframes in the group.
 about-processes-frame-name-many = מסגרות משנה ({ $number }): { $shortUrl }
 
+## Utility process actor names
+
+about-processes-utility-actor-audio-decoder-generic = מפענח שמע גנרי
+about-processes-utility-actor-audio-decoder-applemedia = מפענח שמע של אפל מדיה
+about-processes-utility-actor-audio-decoder-wmf = מפענח שמע של Windows Media Framework
+# "Oracle" refers to an internal Firefox process and should be kept in English
+about-processes-utility-actor-js-oracle = JavaScript Oracle
+about-processes-utility-actor-windows-utils = Windows Utils
+
 ## Displaying CPU (percentage and total)
 ## Variables:
 ##    $percent (Number) The percentage of CPU used by the process or thread.
@@ -133,9 +146,14 @@ about-processes-cpu = { NUMBER($percent, maximumSignificantDigits: 2, style: "pe
 # Special case: data is not available yet.
 about-processes-cpu-user-and-kernel-not-ready = (בתהליך מדידה)
 
+# Special case: process or thread is almost idle (using less than 0.1% of a CPU core).
+# This case only occurs on Windows where the precision of the CPU times is low.
+about-processes-cpu-almost-idle = פחות מ־0.1%
+    .title = זמן מעבד כולל: { NUMBER($total, maximumFractionDigits: 0) } { $unit }
+
 # Special case: process or thread is currently idle.
-about-processes-cpu-idle = בהמתנה
-    .title = זמן מעבד כולל: { NUMBER($total, maximumFractionDigits: 2) } { $unit }
+about-processes-cpu-fully-idle = חוסר פעילות
+    .title = זמן מעבד כולל: { NUMBER($total, maximumFractionDigits: 0) } { $unit }
 
 ## Displaying Memory (total and delta)
 ## Variables:

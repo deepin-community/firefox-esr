@@ -19,3 +19,6 @@ toolbar-context-menu-view-customize-toolbar =
     .label = ನನ್ನಿಚ್ಛೆಗೆ ತಕ್ಕಂತೆ ಹೊಂದಿಸು...
     .accesskey = C
 
+toolbar-context-menu-menu-bar-cmd =
+    .toolbarname = ಮೆನು ಪಟ್ಟಿಕೆ
+    .accesskey = M

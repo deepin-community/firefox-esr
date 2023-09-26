@@ -11,6 +11,12 @@ reload-tab =
 select-all-tabs =
     .label = Избиране на всички раздели
     .accesskey = и
+tab-context-play-tab =
+    .label = Включване на звука
+    .accesskey = з
+tab-context-play-tabs =
+    .label = Включване на звука
+    .accesskey = з
 duplicate-tab =
     .label = Дублиране на раздела
     .accesskey = р
@@ -48,12 +54,9 @@ unpin-selected-tabs =
 bookmark-selected-tabs =
     .label = Отмятане на разделите…
     .accesskey = о
-bookmark-tab =
-    .label = Отмятане на раздела
-    .accesskey = о
-reopen-in-container =
-    .label = Отваряне в изолатор
-    .accesskey = и
+tab-context-bookmark-tab =
+    .label = Отмятане на раздела…
+    .accesskey = т
 tab-context-open-in-new-container-tab =
     .label = Нов изолиран раздел
     .accesskey = и
@@ -69,30 +72,9 @@ move-to-new-window =
 tab-context-close-multiple-tabs =
     .label = Затваряне на няколко раздела
     .accesskey = н
-tab-context-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [one] Отваряне на затворен раздел
-           *[other] Отваряне на затворени раздели
-        }
-    .accesskey = в
-close-tab =
-    .label = Затваряне на раздела
-    .accesskey = З
-close-tabs =
-    .label = Затваряне на разделите
-    .accesskey = з
-move-tabs =
-    .label = Преместване на разделите
-    .accesskey = м
-move-tab =
-    .label = Преместване на раздела
-    .accesskey = м
 tab-context-share-url =
     .label = Споделяне
     .accesskey = С
-tab-context-share-more =
-    .label = Повече…
 
 ## Variables:
 ##  $tabCount (Number): the number of tabs that are affected by the action.
@@ -104,11 +86,11 @@ tab-context-reopen-closed-tabs =
            *[other] Възстановяване на затворени раздели
         }
     .accesskey = т
-tab-context-close-tabs =
+tab-context-close-n-tabs =
     .label =
         { $tabCount ->
-            [one] Затваряне на раздел
-           *[other] Затваряне на раздели
+            [one] Затваряне на раздела
+           *[other] Затваряне на { $tabCount } раздела
         }
     .accesskey = з
 tab-context-move-tabs =
@@ -118,3 +100,11 @@ tab-context-move-tabs =
            *[other] Преместване на раздели
         }
     .accesskey = П
+
+tab-context-send-tabs-to-device =
+    .label =
+        { $tabCount ->
+            [one] Изпращане на раздела до устройство
+           *[other] Изпращане на { $tabCount } раздела до устройство
+        }
+    .accesskey = у

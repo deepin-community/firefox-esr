@@ -5,22 +5,14 @@
 
 about-logins-page-title = Inicios de sesión y contraseñas
 
-# "Google Play" and "App Store" are both branding and should not be translated
-
-login-app-promo-title = Llévese siempre sus contraseñas consigo
-login-app-promo-subtitle = Obtenga la aplicación gratuita { -lockwise-brand-name }
-login-app-promo-android =
-    .alt = Descargar en Google Play
-login-app-promo-apple =
-    .alt = Descargar en App Store
-
-login-filter =
+about-logins-login-filter =
     .placeholder = Buscar inicios de sesión
+    .key = F
 
-create-login-button = Crear nuevo inicio de sesión
+create-new-login-button =
+    .title = Crear nuevo inicio de sesión
 
 fxaccounts-sign-in-text = Acceda a sus contraseñas en todos sus dispositivos
-fxaccounts-sign-in-button = Inicia sesión en { -sync-brand-short-name }
 fxaccounts-sign-in-sync-button = Inicie sesión para sincronizar
 fxaccounts-avatar-button =
     .title = Administrar cuenta
@@ -40,21 +32,31 @@ menu-menuitem-preferences =
        *[other] Preferencias
     }
 about-logins-menu-menuitem-help = Ayuda
-menu-menuitem-android-app = { -lockwise-brand-short-name } para Android
-menu-menuitem-iphone-app = { -lockwise-brand-short-name } para iPhone y iPad
 
 ## Login List
 
 login-list =
     .aria-label = Inicios de sesión que coinciden con la búsqueda
+# Variables
+#   $count (number) - Number of logins
 login-list-count =
     { $count ->
         [one] { $count } inicio de sesión
        *[other] { $count } inicios de sesión
     }
+# Variables
+#   $count (number) - Number of filtered logins
+#   $total (number) - Total number of logins
+login-list-filtered-count =
+    { $total ->
+        [one] { $count } de { $total } inicio de sesión
+       *[other] { $count } de { $total } inicios de sesión
+    }
 login-list-sort-label-text = Ordenar por:
 login-list-name-option = Nombre (A-Z)
 login-list-name-reverse-option = Nombre (Z-A)
+login-list-username-option = Nombre de usuario (A-Z)
+login-list-username-reverse-option = Nombre de usuario (Z-A)
 about-logins-login-list-alerts-option = Alertas
 login-list-last-changed-option = Última modificación
 login-list-last-used-option = Último uso
@@ -69,22 +71,22 @@ about-logins-list-item-breach-icon =
     .title = Sitio web vulnerado
 about-logins-list-item-vulnerable-password-icon =
     .title = Contraseña vulnerable
+about-logins-list-section-breach = Sitios web vulnerados
+about-logins-list-section-vulnerable = Contraseñas vulnerables
+about-logins-list-section-nothing = Sin alertas
+about-logins-list-section-today = Hoy
+about-logins-list-section-yesterday = Ayer
+about-logins-list-section-week = Últimos 7 días
 
 ## Introduction screen
-
-login-intro-heading = ¿Busca sus inicios de sesión guardados? Configure { -sync-brand-short-name }.
 
 about-logins-login-intro-heading-logged-out2 = ¿Busca sus inicios de sesión guardados? Active Sync o impórtelos.
 about-logins-login-intro-heading-logged-in = No se han encontrado credenciales sincronizadas.
 login-intro-description = Si guardó sus inicios de sesión en { -brand-product-name } en un dispositivo diferente, éstos son los pasos a seguir para tenerlos aquí también:
-login-intro-instruction-fxa = Cree o inicie sesión en su { -fxaccount-brand-name } en el dispositivo donde se guardan sus inicios de sesión
-login-intro-instruction-fxa-settings = Asegúrese de haber seleccionado la casilla de Inicios de sesión en los ajustes de { -sync-brand-short-name }
-about-logins-intro-instruction-help = Consulte la <a data-l10n-name="help-link"> { -lockwise-brand-short-name } Ayuda </a> para obtener más información
 login-intro-instructions-fxa = Cree o inicie sesión en su { -fxaccount-brand-name } en el dispositivo donde se guardan sus inicios de sesión.
 login-intro-instructions-fxa-settings = Ir a Ajustes > Sync > Activar la sincronización… Seleccionar la casilla Inicios de sesión y contraseñas.
-login-intro-instructions-fxa-help = Consulte la <a data-l10n-name="help-link"> { -lockwise-brand-short-name } Ayuda </a> para obtener más información.
-about-logins-intro-import = Si sus inicios de sesión están guardados en otro navegador, puede <a data-l10n-name="import-link">importarlos en { -lockwise-brand-short-name }</a>
-
+login-intro-instructions-fxa-passwords-help = Visite la página de <a data-l10n-name="passwords-help-link">asistencia para contraseñas</a> para obtener más ayuda.
+about-logins-intro-browser-only-import = Si sus inicios de sesión están guardados en otro navegador, puede <a data-l10n-name="import-link">importarlos en { -brand-product-name }</a>
 about-logins-intro-import2 = Si sus inicios de sesión se guardan fuera de { -brand-product-name }, puede <a data-l10n-name="import-browser-link">importarlos desde otro navegador</a> o <a data-l10n-name="import-file-link">desde un archivo </a>
 
 ## Login
@@ -109,9 +111,17 @@ login-item-copied-password-button-text = ¡Copiado!
 login-item-save-changes-button = Guardar cambios
 login-item-save-new-button = Guardar
 login-item-cancel-button = Cancelar
-login-item-time-changed = Última modificación: { DATETIME($timeChanged, day: "numeric", month: "long", year: "numeric") }
-login-item-time-created = Creación: { DATETIME($timeCreated, day: "numeric", month: "long", year: "numeric") }
-login-item-time-used = Último acceso: { DATETIME($timeUsed, day: "numeric", month: "long", year: "numeric") }
+
+## The date is displayed in a timeline showing the password evolution.
+## A label is displayed under the date to describe the type of change.
+## (e.g. updated, created, etc.)
+
+# Variables
+#   $datetime (date) - Event date
+login-item-timeline-point-date = { DATETIME($datetime, day: "numeric", month: "short", year: "numeric") }
+login-item-timeline-action-created = Creado
+login-item-timeline-action-updated = Actualizado
+login-item-timeline-action-used = Usado
 
 ## OS Authentication dialog
 
@@ -139,10 +149,6 @@ about-logins-copy-password-os-auth-dialog-message-win = Para copiar su contrase�
 # On MacOS, only provide the reason that account verification is needed. Do not put a complete sentence here.
 about-logins-copy-password-os-auth-dialog-message-macosx = copiar la contraseña guardada
 
-## Master Password notification
-
-master-password-notification-message = Por favor, introduzca su contraseña maestra para ver los nombres de usuario y contraseñas guardadas.
-
 # This message can be seen when attempting to export a password in about:logins on Windows.
 about-logins-export-password-os-auth-dialog-message-win = Para exportar sus inicios de sesión, introduzca sus credenciales de inicio de sesión de Windows. Esto ayuda a proteger la seguridad de sus cuentas.
 # This message can be seen when attempting to export a password in about:logins
@@ -156,24 +162,6 @@ master-password-reload-button =
     .label = Iniciar sesión
     .accesskey = I
 
-## Password Sync notification
-
-enable-password-sync-notification-message =
-    { PLATFORM() ->
-        [windows] ¿Quiere ver sus inicios de sesión en todas partes donde usa { -brand-product-name }? Abra Opciones de { -sync-brand-short-name } y seleccione la casilla de verificación Inicios de sesión.
-       *[other] ¿Quiere ver sus inicios de sesión en todas partes donde usa { -brand-product-name }? Abra Preferencias de { -sync-brand-short-name } y seleccione la casilla de verificación Inicios de sesión.
-    }
-enable-password-sync-preferences-button =
-    .label =
-        { PLATFORM() ->
-            [windows] Consulte las opciones de { -sync-brand-short-name }
-           *[other] Consulte las preferencias de { -sync-brand-short-name }
-        }
-    .accesskey = V
-about-logins-enable-password-sync-dont-ask-again-button =
-    .label = No volver a preguntar
-    .accesskey = N
-
 ## Dialogs
 
 confirmation-dialog-cancel-button = Cancelar
@@ -183,6 +171,9 @@ confirmation-dialog-dismiss-button =
 about-logins-confirm-remove-dialog-title = ¿Eliminar este inicio de sesión?
 confirm-delete-dialog-message = Esta acción no se puede deshacer.
 about-logins-confirm-remove-dialog-confirm-button = Eliminar
+
+## Variables
+##   $count (number) - Number of items
 
 about-logins-confirm-remove-all-dialog-confirm-button-label =
     { $count ->
@@ -222,6 +213,8 @@ about-logins-confirm-remove-all-sync-dialog-message =
        *[other] Esto eliminará todos los inicios de sesión que guardó en { -brand-short-name } en todos los dispositivos sincronizados con su { -fxaccount-brand-name }. Esto también eliminará las alertas de filtraciones que aparecen aquí. No podrá deshacer esta acción.
     }
 
+##
+
 about-logins-confirm-export-dialog-title = Exportar inicios de sesión y contraseñas
 about-logins-confirm-export-dialog-message = Sus contraseñas se guardarán como texto legible (por ejemplo, BadP@ssw0rd) por lo que cualquiera que pueda abrir el archivo exportado podrá verlas.
 about-logins-confirm-export-dialog-confirm-button = Exportar…
@@ -241,7 +234,6 @@ about-logins-breach-alert-date = Esta filtración ocurrió el { DATETIME($date, 
 # Variables:
 #   $hostname (String) - The hostname of the website associated with the login, e.g. "example.com"
 about-logins-breach-alert-link = Ir a { $hostname }
-about-logins-breach-alert-learn-more-link = Saber más
 
 ## Vulnerable Password notification
 
@@ -262,7 +254,6 @@ about-logins-error-message-duplicate-login-with-link = Ya hay una entrada para {
 
 # This is a generic error message.
 about-logins-error-message-default = Se produjo un error al intentar guardar la contraseña.
-
 
 ## Login Export Dialog
 

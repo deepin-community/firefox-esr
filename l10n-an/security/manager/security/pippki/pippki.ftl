@@ -6,9 +6,6 @@ password-quality-meter = Mesurador de calidat d'a clau
 
 ## Change Password dialog
 
-change-password-window =
-    .title = Cambiar a clau mayestra
-
 # Variables:
 # $tokenName (String) - Security device of the change password dialog
 change-password-token = Dispositivo de seguranza: { $tokenName }
@@ -16,23 +13,16 @@ change-password-old = Clau actual:
 change-password-new = Clau nueva:
 change-password-reenter = Clau nueva (unatra vegada):
 
-## Reset Password dialog
-
-reset-password-window =
-    .title = Restablir a clau mayestra
-    .style = width: 40em
-
 ## Reset Primary Password dialog
 
 reset-password-button-label =
     .label = Restablir
-reset-password-text = Si restableix a suya clau mayestra, todas as claus de web y de correu electronico, os datos d'os formularios, os certificaus personals y as claves privadas almagazenaus serán ixuplidaus. Ye seguro que quiere restablir a suya clau mayestra?
 
 ## Downloading cert dialog
 
-download-cert-window =
+download-cert-window2 =
     .title = Descargando o certificau
-    .style = width: 46em
+    .style = min-width: 46em
 download-cert-message = Se l'ha demandau que confíe en una entidat certificadera (CA) nueva.
 download-cert-trust-ssl =
     .label = Confiar en ista CA ta identificar puestos web.
@@ -64,7 +54,5 @@ set-password-reminder = Important: si ixuplida a clau d'a copia de seguranza d'o
 
 ## Protected Auth dialog
 
-protected-auth-window =
-    .title = Autentificación de teste protechida
-protected-auth-msg = Autentifique a o teste. O metodo d'autentificación pende en o tipo d'o suyo teste.
-protected-auth-token = Teste:
+## Protected authentication alert
+

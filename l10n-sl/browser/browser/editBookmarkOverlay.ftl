@@ -2,17 +2,6 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-bookmark-overlay-name =
-    .value = Ime:
-    .accesskey = I
-
-bookmark-overlay-location =
-    .value = Naslov:
-    .accesskey = N
-
-bookmark-overlay-folder =
-    .value = Mapa:
-
 bookmark-overlay-name-2 =
     .value = Ime
     .accesskey = I
@@ -35,13 +24,15 @@ bookmark-overlay-folders-expander =
     .tooltiptextdown = { bookmark-overlay-folders-expander.tooltiptext }
     .tooltiptextup = Skrij
 
+bookmark-overlay-folders-expander2 =
+    .tooltiptext = Prikaži vse mape zaznamkov
+
+bookmark-overlay-folders-expander-hide =
+    .tooltiptext = Skrij
+
 bookmark-overlay-new-folder-button =
     .label = Nova mapa
     .accesskey = o
-
-bookmark-overlay-tags =
-    .value = Oznake:
-    .accesskey = O
 
 bookmark-overlay-tags-2 =
     .value = Oznake
@@ -55,9 +46,11 @@ bookmark-overlay-tags-expander =
     .tooltiptextdown = { bookmark-overlay-tags-expander.tooltiptext }
     .tooltiptextup = Skrij
 
-bookmark-overlay-keyword =
-    .value = Ključna beseda:
-    .accesskey = K
+bookmark-overlay-tags-expander2 =
+    .tooltiptext = Prikaži vse oznake
+
+bookmark-overlay-tags-expander-hide =
+    .tooltiptext = Skrij
 
 bookmark-overlay-keyword-2 =
     .value = Ključna beseda

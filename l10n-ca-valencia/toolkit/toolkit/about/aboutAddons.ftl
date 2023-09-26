@@ -2,17 +2,18 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-addons-window =
-    .title = Gestor de complements
-
 addons-page-title = Gestor de complements
 
 search-header =
     .placeholder = Cerca a addons.mozilla.org
     .searchbuttonlabel = Cerca
 
-search-header-shortcut =
-    .key = f
+## Variables
+##   $domain - Domain name where add-ons are available (e.g. addons.mozilla.org)
+
+list-empty-get-extensions-message = Obteniu més extensions i temes a <a data-l10n-name="get-extensions">{ $domain }</a>
+
+##
 
 list-empty-installed =
     .value = No teniu instal·lat cap complement d'este tipus
@@ -33,60 +34,15 @@ help-button = Assistència per als complements
 sidebar-help-button-title =
     .title = Assistència per als complements
 
-preferences =
-    { PLATFORM() ->
-        [windows] Opcions del { -brand-short-name }
-       *[other] Preferències del { -brand-short-name }
-    }
-sidebar-preferences-button-title =
-    .title =
-        { PLATFORM() ->
-            [windows] Opcions del { -brand-short-name }
-           *[other] Preferències del { -brand-short-name }
-        }
+addons-settings-button = Paràmetres del { -brand-short-name }
+sidebar-settings-button-title =
+    .title = Paràmetres del { -brand-short-name }
 
 show-unsigned-extensions-button =
     .label = No s'han pogut verificar algunes extensions
 
 show-all-extensions-button =
     .label = Mostra totes les extensions
-
-cmd-show-details =
-    .label = Mostra més informació
-    .accesskey = s
-
-cmd-find-updates =
-    .label = Cerca actualitzacions
-    .accesskey = C
-
-cmd-preferences =
-    .label =
-        { PLATFORM() ->
-            [windows] Opcions
-           *[other] Preferències
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] O
-           *[other] P
-        }
-
-cmd-enable-theme =
-    .label = Emprova't el tema
-    .accesskey = v
-
-cmd-disable-theme =
-    .label = Deixa el tema
-    .accesskey = x
-
-cmd-install-addon =
-    .label = Instal·la
-    .accesskey = I
-
-cmd-contribute =
-    .label = Col·labora-hi
-    .accesskey = C
-    .tooltiptext = Col·labora en el desenvolupament del complement
 
 detail-version =
     .label = Versió
@@ -232,7 +188,6 @@ extensions-warning-update-security = La comprovació de seguretat dels complemen
 extensions-warning-update-security-button = Habilita
     .title = Habilita la comprovació de seguretat dels complements
 
-
 ## Strings connected to add-on updates
 
 addon-updates-check-for-updates = Cerca actualitzacions
@@ -346,6 +301,7 @@ install-theme-button = Instal·la el tema
 # the detailed add-on view is opened, from where the add-on can be managed.
 manage-addon-button = Gestiona
 find-more-addons = Cerca més complements
+find-more-themes = Cerqueu més temes
 
 # This is a label for the button to open the "more options" menu, it is only
 # used for screen readers.
@@ -377,7 +333,6 @@ extension-enabled-heading = Activades
 extension-disabled-heading = Desactivades
 
 theme-enabled-heading = Activat
-theme-disabled-heading = Desactivats
 
 plugin-enabled-heading = Activats
 plugin-disabled-heading = Desactivats
@@ -387,8 +342,6 @@ dictionary-disabled-heading = Desactivats
 
 locale-enabled-heading = Activat
 locale-disabled-heading = Desactivats
-
-ask-to-activate-button = Demana si vull activar-lo
 
 always-activate-button = Activa'l sempre
 never-activate-button = No l'activis mai
@@ -446,13 +399,15 @@ addon-detail-private-browsing-help = Si ho permeteu, l'extensió tindrà accés 
 addon-detail-private-browsing-allow = Permet
 addon-detail-private-browsing-disallow = No ho permetes
 
+## "sites with restrictions" (internally called "quarantined") are special domains
+## where add-ons are normally blocked for security reasons.
+
 ## This is the tooltip text for the recommended badges for an extension in about:addons. The
 ## badge is a small icon displayed next to an extension when it is recommended on AMO.
 
 addon-badge-recommended2 =
     .title = El { -brand-product-name } només recomana extensions que compleixen els nostres estàndards de seguretat i de rendiment
     .aria-label = { addon-badge-recommended2.title }
-
 # We hard code "Mozilla" in the string below because the extensions are built
 # by Mozilla and we don't want forks to display "by Fork".
 addon-badge-line3 =
@@ -471,7 +426,6 @@ release-notes-loading = S'està carregant…
 release-notes-error = S'ha produït un error en carregar les notes de la versió.
 
 addon-permissions-empty = Esta extensió no necessita cap permís
-
 addon-permissions-required = Permisos necessaris per a les funcions bàsiques:
 addon-permissions-optional = Permisos opcionals per a les funcions addicionals:
 addon-permissions-learnmore = Més informació sobre els permisos
@@ -500,3 +454,29 @@ addons-heading-search-input =
 
 addon-page-options-button =
     .title = Eines per a tots els complements
+
+## Detail notifications
+## Variables:
+##   $name (String): name of the add-on.
+
+## Detail notifications
+## Variables:
+##   $name (string) - Name of the add-on.
+
+# Variables:
+#   $version (String): application version.
+details-notification-incompatible = { $name } no és compatible amb el { -brand-short-name } { $version }.
+
+details-notification-unsigned-and-disabled = «{ $name }» no s'ha pogut verificar per al seu ús al { -brand-short-name } i s'ha inhabilitat.
+details-notification-unsigned-and-disabled-link = Més informació
+
+details-notification-unsigned = «{ $name }» no s'ha pogut verificar per al seu ús al { -brand-short-name }. Aneu amb compte.
+details-notification-unsigned-link = Més informació
+
+details-notification-blocked = S'ha inhabilitat { $name } per motius de seguretat o d'estabilitat.
+details-notification-blocked-link = Més informació
+
+details-notification-softblocked = «{ $name }» pot causar problemes de seguretat o d'estabilitat.
+details-notification-softblocked-link = Més informació
+
+details-notification-gmp-pending = «{ $name }» s'instal·larà prompte.

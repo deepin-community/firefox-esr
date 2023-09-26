@@ -23,6 +23,8 @@ profile-selection-delete-button =
     .label = Slett profil…
     .accesskey = S
 
+profile-selection-conflict-message = EIt anna eksemplar av programmet { -brand-product-name } har gjort endringar i profilane. Du må starte { -brand-short-name } på nytt før du kan gjere fleire endringar.
+
 ## Messages used in the profile manager
 
 profile-manager-description = { -brand-short-name } lagrar innstillingar og andre brukardata, i brukarprofilen.

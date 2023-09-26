@@ -11,17 +11,6 @@ navbar-tooltip-instruction =
 
 ## Back
 
-main-context-menu-back =
-    .tooltiptext = Ir a la página anterior
-    .aria-label = Anterior
-    .accesskey = A
-
-navbar-tooltip-back =
-    .value = { main-context-menu-back.tooltiptext }
-
-toolbar-button-back =
-    .label = { main-context-menu-back.aria-label }
-
 # Variables
 #   $shortcut (String) - A keyboard shortcut for the Go Back command.
 main-context-menu-back-2 =
@@ -41,17 +30,6 @@ toolbar-button-back-2 =
     .label = { main-context-menu-back-2.aria-label }
 
 ## Forward
-
-main-context-menu-forward =
-    .tooltiptext = Ir a la página siguiente
-    .aria-label = Siguiente
-    .accesskey = S
-
-navbar-tooltip-forward =
-    .value = { main-context-menu-forward.tooltiptext }
-
-toolbar-button-forward =
-    .label = { main-context-menu-forward.aria-label }
 
 # Variables
 #   $shortcut (String) - A keyboard shortcut for the Go Forward command.
@@ -116,48 +94,45 @@ main-context-menu-page-save =
     .label = Guardar como…
     .accesskey = d
 
-toolbar-button-page-save =
-    .label = { main-context-menu-page-save.label }
-
 ## Simple menu items
 
-main-context-menu-bookmark-add =
-    .aria-label = Añadir esta página a marcadores
+main-context-menu-bookmark-page =
+    .aria-label = Añadir página a marcadores…
     .accesskey = m
-    .tooltiptext = Añadir esta página a marcadores
+    .tooltiptext = Añadir página a marcadores
 
 # This menuitem is only visible on macOS
-# Cannot be shown at the same time as main-context-menu-bookmark-edit-mac,
+# Cannot be shown at the same time as main-context-menu-edit-bookmark-mac,
 # so should probably have the same access key if possible.
-main-context-menu-bookmark-add-mac =
-    .label = Añadir página a marcadores
+main-context-menu-bookmark-page-mac =
+    .label = Añadir página a marcadores…
     .accesskey = m
 
 # This menuitem is only visible on macOS
-# Cannot be shown at the same time as main-context-menu-bookmark-add-mac,
+# Cannot be shown at the same time as main-context-menu-bookmark-page-mac,
 # so should probably have the same access key if possible.
-main-context-menu-bookmark-edit-mac =
+main-context-menu-edit-bookmark-mac =
     .label = Editar marcador
     .accesskey = m
 
 # Variables
 #   $shortcut (String) - A keyboard shortcut for the add bookmark command.
-main-context-menu-bookmark-add-with-shortcut =
-    .aria-label = Añadir esta página a marcadores
+main-context-menu-bookmark-page-with-shortcut =
+    .aria-label = Añadir página a marcadores…
     .accesskey = m
-    .tooltiptext = Añadir esta página a marcadores ({ $shortcut })
+    .tooltiptext = Añadir página a marcadores ({ $shortcut })
 
-main-context-menu-bookmark-change =
-    .aria-label = Editar este marcador
+main-context-menu-edit-bookmark =
+    .aria-label = Editar marcador…
     .accesskey = m
-    .tooltiptext = Editar este marcador
+    .tooltiptext = Editar marcador
 
 # Variables
 #   $shortcut (String) - A keyboard shortcut for the edit bookmark command.
-main-context-menu-bookmark-change-with-shortcut =
-    .aria-label = Editar este marcador
+main-context-menu-edit-bookmark-with-shortcut =
+    .aria-label = Editar marcador…
     .accesskey = m
-    .tooltiptext = Editar este marcador ({ $shortcut })
+    .tooltiptext = Editar marcador ({ $shortcut })
 
 main-context-menu-open-link =
     .label = Abrir enlace
@@ -179,12 +154,8 @@ main-context-menu-open-link-new-private-window =
     .label = Abrir enlace en una nueva ventana privada
     .accesskey = P
 
-main-context-menu-bookmark-this-link =
-    .label = Añadir este enlace a marcadores
-    .accesskey = L
-
-main-context-menu-bookmark-link =
-    .label = Añadir enlace a marcadores
+main-context-menu-bookmark-link-2 =
+    .label = Añadir enlace a marcadores…
     .accesskey = A
 
 main-context-menu-save-link =
@@ -195,11 +166,6 @@ main-context-menu-save-link-to-pocket =
     .label = Guardar enlace en { -pocket-brand-name }
     .accesskey = o
 
-## The access keys for "Copy Link Location" and "Copy Email Address"
-## should be the same if possible; the two context menu items
-## are mutually exclusive.
-
-
 ## The access keys for "Copy Link" and "Copy Email Address"
 ## should be the same if possible; the two context menu items
 ## are mutually exclusive.
@@ -208,9 +174,9 @@ main-context-menu-copy-email =
     .label = Copiar dirección de correo electrónico
     .accesskey = E
 
-main-context-menu-copy-link =
-    .label = Copiar la ruta del enlace
-    .accesskey = a
+main-context-menu-copy-phone =
+    .label = Copiar número de teléfono
+    .accesskey = o
 
 main-context-menu-copy-link-simple =
     .label = Copiar enlace
@@ -239,32 +205,6 @@ main-context-menu-media-mute =
 main-context-menu-media-unmute =
     .label = Restaurar sonido
     .accesskey = s
-
-main-context-menu-media-play-speed =
-    .label = Velocidad de reproducción
-    .accesskey = V
-
-main-context-menu-media-play-speed-slow =
-    .label = Lento (0.5×)
-    .accesskey = L
-
-main-context-menu-media-play-speed-normal =
-    .label = Normal
-    .accesskey = N
-
-main-context-menu-media-play-speed-fast =
-    .label = Rápido (1.25×)
-    .accesskey = R
-
-main-context-menu-media-play-speed-faster =
-    .label = Más rápido (1.5×)
-    .accesskey = M
-
-# "Ludicrous" is a reference to the movie "Space Balls" and is meant
-# to say that this speed is very fast.
-main-context-menu-media-play-speed-fastest =
-    .label = Rapidísimo (2×)
-    .accesskey = a
 
 main-context-menu-media-play-speed-2 =
     .label = Velocidad
@@ -312,12 +252,6 @@ main-context-menu-media-video-leave-fullscreen =
 
 # This is used when right-clicking on a video in the
 # content area when the Picture-in-Picture feature is enabled.
-main-context-menu-media-pip =
-    .label = Picture-in-Picture
-    .accesskey = u
-
-# This is used when right-clicking on a video in the
-# content area when the Picture-in-Picture feature is enabled.
 main-context-menu-media-watch-pip =
     .label = Ver en Picture-in-Picture
     .accesskey = i
@@ -325,14 +259,6 @@ main-context-menu-media-watch-pip =
 main-context-menu-image-reload =
     .label = Recargar imagen
     .accesskey = R
-
-main-context-menu-image-view =
-    .label = Ver imagen
-    .accesskey = I
-
-main-context-menu-video-view =
-    .label = Ver vídeo
-    .accesskey = í
 
 main-context-menu-image-view-new-tab =
     .label = Abrir imagen en una pestaña nueva
@@ -345,18 +271,6 @@ main-context-menu-video-view-new-tab =
 main-context-menu-image-copy =
     .label = Copiar imagen
     .accesskey = C
-
-main-context-menu-image-copy-location =
-    .label = Copiar la ruta de la imagen
-    .accesskey = o
-
-main-context-menu-video-copy-location =
-    .label = Copiar dirección del vídeo
-    .accesskey = o
-
-main-context-menu-audio-copy-location =
-    .label = Copiar dirección del audio
-    .accesskey = o
 
 main-context-menu-image-copy-link =
     .label = Copiar el enlace de la imagen
@@ -378,13 +292,13 @@ main-context-menu-image-email =
     .label = Enviar imagen…
     .accesskey = a
 
-main-context-menu-image-set-as-background =
-    .label = Establecer como fondo de escritorio…
-    .accesskey = S
-
 main-context-menu-image-set-image-as-background =
     .label = Establecer imagen como fondo de escritorio…
     .accesskey = s
+
+main-context-menu-image-copy-text =
+    .label = Copiar texto de la imagen
+    .accesskey = x
 
 main-context-menu-image-info =
     .label = Ver información de la imagen
@@ -402,10 +316,6 @@ main-context-menu-audio-save-as =
     .label = Guardar audio como…
     .accesskey = a
 
-main-context-menu-video-image-save-as =
-    .label = Guardar captura de pantalla como…
-    .accesskey = G
-
 main-context-menu-video-take-snapshot =
     .label = Tomar instantánea
     .accesskey = i
@@ -418,14 +328,6 @@ main-context-menu-audio-email =
     .label = Enviar audio…
     .accesskey = a
 
-main-context-menu-plugin-play =
-    .label = Activar este plugin
-    .accesskey = c
-
-main-context-menu-plugin-hide =
-    .label = Ocultar este plugin
-    .accesskey = t
-
 main-context-menu-save-to-pocket =
     .label = Guardar página en { -pocket-brand-name }
     .accesskey = k
@@ -433,14 +335,6 @@ main-context-menu-save-to-pocket =
 main-context-menu-send-to-device =
     .label = Enviar página al dispositivo
     .accesskey = E
-
-main-context-menu-view-background-image =
-    .label = Ver imagen de fondo
-    .accesskey = f
-
-main-context-menu-generate-new-password =
-    .label = Usar contraseña generada…
-    .accesskey = g
 
 ## The access keys for "Use Saved Login" and "Use Saved Password"
 ## should be the same if possible; the two context menu items
@@ -455,6 +349,10 @@ main-context-menu-use-saved-password =
     .accesskey = g
 
 ##
+
+main-context-menu-use-relay-mask =
+    .label = Usar máscara de correo electrónico de { -relay-brand-short-name }
+    .accesskey = e
 
 main-context-menu-suggest-strong-password =
     .label = Sugerir contraseña segura...
@@ -492,8 +390,8 @@ main-context-menu-frame-reload =
     .label = Recargar marco
     .accesskey = R
 
-main-context-menu-frame-bookmark =
-    .label = Añadir este cuadro a marcadores
+main-context-menu-frame-add-bookmark =
+    .label = Añadir marco a marcadores…
     .accesskey = m
 
 main-context-menu-frame-save-as =
@@ -512,8 +410,8 @@ main-context-menu-frame-view-info =
     .label = Ver información del marco
     .accesskey = I
 
-main-context-menu-print-selection =
-    .label = Imprimir selección
+main-context-menu-print-selection-2 =
+    .label = Imprimir selección…
     .accesskey = r
 
 main-context-menu-view-selection-source =
@@ -532,10 +430,6 @@ main-context-menu-view-page-source =
     .label = Ver código fuente de la página
     .accesskey = V
 
-main-context-menu-view-page-info =
-    .label = Ver información de la página
-    .accesskey = I
-
 main-context-menu-bidi-switch-text =
     .label = Cambiar dirección del texto
     .accesskey = d
@@ -543,10 +437,6 @@ main-context-menu-bidi-switch-text =
 main-context-menu-bidi-switch-page =
     .label = Cambiar dirección de la página
     .accesskey = D
-
-main-context-menu-inspect-element =
-    .label = Inspeccionar elemento
-    .accesskey = l
 
 main-context-menu-inspect =
     .label = Inspeccionar
@@ -558,3 +448,13 @@ main-context-menu-inspect-a11y-properties =
 main-context-menu-eme-learn-more =
     .label = Más información sobre DRM…
     .accesskey = D
+
+# Variables
+#   $containerName (String): The name of the current container
+main-context-menu-open-link-in-container-tab =
+    .label = Abrir enlace en una nueva pestaña { $containerName }
+    .accesskey = t
+
+main-context-menu-reveal-password =
+    .label = Mostrar contraseña
+    .accesskey = M

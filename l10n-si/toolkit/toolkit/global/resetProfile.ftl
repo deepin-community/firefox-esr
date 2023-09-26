@@ -2,14 +2,14 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-refresh-profile-dialog =
-    .title = { -brand-short-name } නැවුම්කරන්න
-
+refresh-profile-dialog-title = { -brand-short-name } එහි පෙරනිමි සැකසුම්වලට නැවුම් කරන්නද?
 refresh-profile-dialog-button =
     .label = { -brand-short-name } නැවුම් කරන්න
-refresh-profile-description = දෝශ නිරාකරණයට හා කාර්ය්‍යක්ෂමතාව යළි පිහිටුවීමට අළුතෙන් අරඹන්න.
-refresh-profile-description-details = මෙය:
-refresh-profile-remove = ඔබේ ඇඩෝන හා රුචිකරණයන් ඉවත් කරයි
-refresh-profile-restore = ඔබේ ගවේශක සැකසුම් එහි පෙරනිමියට පත් කරයි
-refresh-profile = { -brand-short-name } සීරුමාරුවක් ලබාදෙන්න
+refresh-profile-dialog-description = කාර්ය සාධන ගැටළු විසඳීමට අළුතින් පටන් ගන්න. මෙයින් ඔබගේ දිගු සහ අභිරුචිකරණ ඉවත් කරනු ඇත. පොත්යොමු සහ මුරපද වැනි අත්‍යවශ්‍ය තොරතුරු අහිමි නොවනු ඇත.
+refresh-profile = { -brand-short-name } සුසර කරන්න
 refresh-profile-button = { -brand-short-name } නැවුම් කරන්න...
+refresh-profile-learn-more = තව දැනගන්න
+
+refresh-profile-progress =
+    .title = { -brand-short-name } නැවුම් කරන්න
+refresh-profile-progress-description = බොහෝ දුරට නිමයි…

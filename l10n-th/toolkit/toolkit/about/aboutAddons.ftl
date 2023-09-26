@@ -2,19 +2,22 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-addons-window =
-    .title = ตัวจัดการส่วนเสริม
-
 addons-page-title = ตัวจัดการส่วนเสริม
 
 search-header =
     .placeholder = ค้นหา addons.mozilla.org
     .searchbuttonlabel = ค้นหา
 
-search-header-shortcut =
-    .key = f
+## Variables
+##   $domain - Domain name where add-ons are available (e.g. addons.mozilla.org)
 
-list-empty-get-extensions-message = รับส่วนขยายและชุดตกแต่งบน <a data-l10n-name="get-extensions">{ $domain }</a>
+list-empty-get-extensions-message = รับส่วนขยายและชุดรูปแบบใน <a data-l10n-name="get-extensions">{ $domain }</a>
+
+list-empty-get-dictionaries-message = รับพจนานุกรมบน <a data-l10n-name="get-extensions">{ $domain }</a>
+
+list-empty-get-language-packs-message = รับชุดภาษาบน <a data-l10n-name="get-extensions">{ $domain }</a>
+
+##
 
 list-empty-installed =
     .value = คุณไม่ได้ติดตั้งส่วนเสริมประเภทนี้ไว้
@@ -35,18 +38,6 @@ help-button = การสนับสนุนของส่วนเสริ
 sidebar-help-button-title =
     .title = การสนับสนุนของส่วนเสริม
 
-preferences =
-    { PLATFORM() ->
-        [windows] ตัวเลือก { -brand-short-name }
-       *[other] ค่ากำหนด { -brand-short-name }
-    }
-sidebar-preferences-button-title =
-    .title =
-        { PLATFORM() ->
-            [windows] ตัวเลือก { -brand-short-name }
-           *[other] ค่ากำหนด { -brand-short-name }
-        }
-
 addons-settings-button = การตั้งค่า { -brand-short-name }
 sidebar-settings-button-title =
     .title = การตั้งค่า { -brand-short-name }
@@ -57,48 +48,14 @@ show-unsigned-extensions-button =
 show-all-extensions-button =
     .label = แสดงส่วนขยายทั้งหมด
 
-cmd-show-details =
-    .label = แสดงข้อมูลเพิ่มเติม
-    .accesskey = ส
-
-cmd-find-updates =
-    .label = ค้นหาการอัปเดต
-    .accesskey = น
-
-cmd-preferences =
-    .label =
-        { PLATFORM() ->
-            [windows] ตัวเลือก
-           *[other] ค่ากำหนด
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] ต
-           *[other] ค
-        }
-
-cmd-enable-theme =
-    .label = ใช้ชุดตกแต่ง
-    .accesskey = ช
-
-cmd-disable-theme =
-    .label = เลิกใช้ชุดตกแต่ง
-    .accesskey = ช
-
-cmd-install-addon =
-    .label = ติดตั้ง
-    .accesskey = ต
-
-cmd-contribute =
-    .label = มีส่วนร่วม
-    .accesskey = ม
-    .tooltiptext = มีส่วนร่วมกับการพัฒนาส่วนเสริมนี้
-
 detail-version =
     .label = รุ่น
 
 detail-last-updated =
     .label = อัปเดตล่าสุด
+
+addon-detail-description-expand = แสดงเพิ่มเติม
+addon-detail-description-collapse = แสดงน้อยลง
 
 detail-contributions-description = นักพัฒนาส่วนเสริมนี้ใคร่ขอให้คุณช่วยสนับสนุนการพัฒนาอย่างต่อเนื่องโดยการสมทบทุนสักเล็กน้อย
 
@@ -162,17 +119,17 @@ detail-show-preferences =
     .label =
         { PLATFORM() ->
             [windows] ตัวเลือก
-           *[other] ค่ากำหนด
+           *[other] การกำหนดลักษณะ
         }
     .accesskey =
         { PLATFORM() ->
             [windows] ต
-           *[other] ค
+           *[other] ก
         }
     .tooltiptext =
         { PLATFORM() ->
             [windows] เปลี่ยนตัวเลือกของส่วนเสริมนี้
-           *[other] เปลี่ยนค่ากำหนดของส่วนเสริมนี้
+           *[other] เปลี่ยนการกำหนดลักษณะของส่วนเสริมนี้
         }
 
 detail-rating =
@@ -212,9 +169,9 @@ addon-category-discover-title =
 addon-category-extension = ส่วนขยาย
 addon-category-extension-title =
     .title = ส่วนขยาย
-addon-category-theme = ชุดตกแต่ง
+addon-category-theme = ชุดรูปแบบ
 addon-category-theme-title =
-    .title = ชุดตกแต่ง
+    .title = ชุดรูปแบบ
 addon-category-plugin = ปลั๊กอิน
 addon-category-plugin-title =
     .title = ปลั๊กอิน
@@ -230,6 +187,13 @@ addon-category-available-updates-title =
 addon-category-recent-updates = การอัปเดตล่าสุด
 addon-category-recent-updates-title =
     .title = การอัปเดตล่าสุด
+addon-category-sitepermission = สิทธิอนุญาตไซต์
+addon-category-sitepermission-title =
+    .title = สิทธิอนุญาตไซต์
+# String displayed in about:addons in the Site Permissions section
+# Variables:
+#  $host (string) - DNS host name for which the webextension enables permissions
+addon-sitepermission-host = สิทธิอนุญาตไซต์สำหรับ { $host }
 
 ## These are global warnings
 
@@ -240,7 +204,6 @@ extensions-warning-check-compatibility-button = เปิดใช้งาน
 extensions-warning-update-security = การตรวจสอบความปลอดภัยของการอัปเดตส่วนเสริมถูกปิดใช้งาน คุณอาจถูกบุกรุกโดยการอัปเดต
 extensions-warning-update-security-button = เปิดใช้งาน
     .title = เปิดใช้งานการตรวจสอบความปลอดภัยของการอัปเดตส่วนเสริม
-
 
 ## Strings connected to add-on updates
 
@@ -316,6 +279,8 @@ shortcuts-duplicate-warning-message = { $shortcut } กำลังถูกใ�
 #   $addon (string) - Name of the add-on
 shortcuts-exists = มีการใช้งานอยู่แล้วโดย { $addon }
 
+# Variables:
+#   $numberToShow (number) - Number of other elements available to show
 shortcuts-card-expand-button =
     { $numberToShow ->
        *[other] แสดงเพิ่มเติมอีก { $numberToShow }
@@ -331,7 +296,7 @@ header-back-button =
 # Explanatory introduction to the list of recommended add-ons. The action word
 # ("recommends") in the final sentence is a link to external documentation.
 discopane-intro =
-    ส่วนขยายและชุดตกแต่งเป็นเหมือนแอปสำหรับเบราว์เซอร์ของคุณ ซึ่งให้คุณป้องกัน
+    ส่วนขยายและธีมเป็นเหมือนแอปสำหรับเบราว์เซอร์ของคุณ ซึ่งให้คุณป้องกัน
     รหัสผ่าน, ดาวน์โหลดวิดีโอ, ค้นหาดีล, ปิดกั้นโฆษณาที่น่ารำคาญ, เปลี่ยนรูปลักษณ์ของ
     เบราว์เซอร์ของคุณ, และอื่น ๆ อีกมากมาย โปรแกรมซอฟต์แวร์ขนาดเล็กเหล่านั้นมักถูก
     พัฒนาโดยบุคคลที่สาม นี่คือตัวเลือกที่ { -brand-product-name } <a data-l10n-name="learn-more-trigger">แนะนำ</a>เพื่อ
@@ -354,11 +319,12 @@ created-by-author = โดย <a data-l10n-name="author">{ $author }</a>
 #   $dailyUsers (number) - The number of daily users.
 user-count = ผู้ใช้: { $dailyUsers }
 install-extension-button = เพิ่มลงใน { -brand-product-name }
-install-theme-button = ติดตั้งชุดตกแต่ง
+install-theme-button = ติดตั้งชุดรูปแบบ
 # The label of the button that appears after installing an add-on. Upon click,
 # the detailed add-on view is opened, from where the add-on can be managed.
 manage-addon-button = จัดการ
 find-more-addons = ค้นหาส่วนเสริมเพิ่มเติม
+find-more-themes = ค้นหาชุดรูปแบบเพิ่มเติม
 
 # This is a label for the button to open the "more options" menu, it is only
 # used for screen readers.
@@ -380,7 +346,7 @@ extension-enable-addon-button-label =
 preferences-addon-button =
     { PLATFORM() ->
         [windows] ตัวเลือก
-       *[other] ค่ากำหนด
+       *[other] การกำหนดลักษณะ
     }
 details-addon-button = รายละเอียด
 release-notes-addon-button = บันทึกประจำรุ่น
@@ -389,8 +355,8 @@ permissions-addon-button = การอนุญาต
 extension-enabled-heading = ถูกเปิดใช้งาน
 extension-disabled-heading = ถูกปิดใช้งาน
 
-theme-enabled-heading = ถูกเปิดใช้งาน
-theme-disabled-heading = ถูกปิดใช้งาน
+theme-enabled-heading = เปิดใช้งาน
+theme-disabled-heading2 = ชุดรูปแบบที่บันทึกไว้
 
 plugin-enabled-heading = ถูกเปิดใช้งาน
 plugin-disabled-heading = ถูกปิดใช้งาน
@@ -401,7 +367,8 @@ dictionary-disabled-heading = ถูกปิดใช้งาน
 locale-enabled-heading = ถูกเปิดใช้งาน
 locale-disabled-heading = ถูกปิดใช้งาน
 
-ask-to-activate-button = ถามเพื่อเปิดใช้งาน
+sitepermission-enabled-heading = เปิดใช้งานอยู่
+sitepermission-disabled-heading = ปิดใช้งานอยู่
 
 always-activate-button = เปิดใช้งานเสมอ
 never-activate-button = ไม่เปิดใช้งานเสมอ
@@ -458,13 +425,15 @@ addon-detail-private-browsing-help = เมื่อได้รับอนุ�
 addon-detail-private-browsing-allow = อนุญาต
 addon-detail-private-browsing-disallow = ไม่อนุญาต
 
+## "sites with restrictions" (internally called "quarantined") are special domains
+## where add-ons are normally blocked for security reasons.
+
 ## This is the tooltip text for the recommended badges for an extension in about:addons. The
 ## badge is a small icon displayed next to an extension when it is recommended on AMO.
 
 addon-badge-recommended2 =
     .title = { -brand-product-name } แนะนำเฉพาะส่วนขยายที่ตรงตามมาตรฐานของเราเท่านั้นเพื่อความปลอดภัยและประสิทธิภาพ
     .aria-label = { addon-badge-recommended2.title }
-
 # We hard code "Mozilla" in the string below because the extensions are built
 # by Mozilla and we don't want forks to display "by Fork".
 addon-badge-line3 =
@@ -483,26 +452,30 @@ release-notes-loading = กำลังโหลด…
 release-notes-error = ขออภัย แต่เกิดข้อผิดพลาดในการโหลดบันทึกประจำรุ่น
 
 addon-permissions-empty = ส่วนขยายนี้ไม่ต้องการการอนุญาตใด ๆ
-
 addon-permissions-required = สิทธิอนุญาตที่ต้องการสำหรับฟังก์ชันการทำงานหลัก:
 addon-permissions-optional = สิทธิอนุญาตที่เลือกได้สำหรับฟังก์ชันการทำงานที่เพิ่ม:
 addon-permissions-learnmore = เรียนรู้เพิ่มเติมเกี่ยวกับสิทธิอนุญาต
 
 recommended-extensions-heading = ส่วนขยายที่แนะนำ
-recommended-themes-heading = ชุดตกแต่งที่แนะนำ
+recommended-themes-heading = ชุดรูปแบบที่แนะนำ
+
+# Variables:
+#   $hostname (string) - Host where the permissions are granted
+addon-sitepermissions-required = มอบความสามารถต่อไปนี้ให้ <span data-l10n-name="hostname">{ $hostname }</span>:
 
 # A recommendation for the Firefox Color theme shown at the bottom of the theme
 # list view. The "Firefox Color" name itself should not be translated.
-recommended-theme-1 = รู้สึกสร้างสรรค์ใช่ไหม? <a data-l10n-name="link">สร้างชุดตกแต่งในรูปแบบของคุณเองด้วย Firefox Color</a>
+recommended-theme-1 = รู้สึกสร้างสรรค์ใช่ไหม? <a data-l10n-name="link">สร้างธีมในรูปแบบของคุณเองด้วย Firefox Color</a>
 
 ## Page headings
 
 extension-heading = จัดการส่วนขยายของคุณ
-theme-heading = จัดการชุดตกแต่งของคุณ
+theme-heading = จัดการชุดรูปแบบของคุณ
 plugin-heading = จัดการปลั๊กอินของคุณ
 dictionary-heading = จัดการพจนานุกรมของคุณ
 locale-heading = จัดการภาษาของคุณ
 updates-heading = จัดการการอัปเดตของคุณ
+sitepermission-heading = จัดการสิทธิอนุญาตไซต์ของคุณ
 discover-heading = ปรับแต่ง { -brand-short-name } ของคุณ
 shortcuts-heading = จัดการทางลัดส่วนขยาย
 
@@ -512,3 +485,31 @@ addons-heading-search-input =
 
 addon-page-options-button =
     .title = เครื่องมือสำหรับส่วนเสริมทั้งหมด
+
+## Detail notifications
+## Variables:
+##   $name (String): name of the add-on.
+
+
+## Detail notifications
+## Variables:
+##   $name (string) - Name of the add-on.
+
+# Variables:
+#   $version (string) - Application version.
+details-notification-incompatible = { $name } เข้ากันไม่ได้กับ { -brand-short-name } { $version }
+details-notification-incompatible-link = ข้อมูลเพิ่มเติม
+
+details-notification-unsigned-and-disabled = { $name } ไม่สามารถยืนยันสำหรับใช้ใน { -brand-short-name } และถูกปิดใช้งาน
+details-notification-unsigned-and-disabled-link = ข้อมูลเพิ่มเติม
+
+details-notification-unsigned = { $name } ไม่สามารถยืนยันสำหรับใช้ใน { -brand-short-name } ดำเนินการต่อด้วยความระมัดระวัง
+details-notification-unsigned-link = ข้อมูลเพิ่มเติม
+
+details-notification-blocked = { $name } ถูกปิดใช้งานเนื่องจากปัญหาด้านความปลอดภัยหรือเสถียรภาพ
+details-notification-blocked-link = ข้อมูลเพิ่มเติม
+
+details-notification-softblocked = { $name } เป็นที่ทราบว่าก่อให้เกิดปัญหาด้านความปลอดภัยหรือเสถียรภาพ
+details-notification-softblocked-link = ข้อมูลเพิ่มเติม
+
+details-notification-gmp-pending = { $name } จะถูกติดตั้งในไม่ช้า

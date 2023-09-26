@@ -2,13 +2,12 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-screenshots-context-menu = Ստանալ էկրանի հանույթը
-
-screenshots-my-shots-button = Իմ պատկերները
-
 screenshot-toolbarbutton =
     .label = Էկրանի հանույթ
     .tooltiptext = Ստանալ էկրանի հանույթը
+
+screenshot-shortcut =
+    .key = S
 
 screenshots-instructions = Քաշեք և սեղմեք էջի վրա՝ ընտրելու տարածքը: Սեղմեք ESC՝ չեղարկելու համար:
 screenshots-cancel-button = Չեղարկել
@@ -18,6 +17,8 @@ screenshots-download-button = Ներբեռնել
 screenshots-download-button-tooltip = Ներբեռնել էկրանի կորզումը
 screenshots-copy-button = Պատճենել
 screenshots-copy-button-tooltip = Պատճենել էկրանի կորզումը սեղմատախտակին
+screenshots-cancel-button-title =
+    .title = Չեղարկել
 
 screenshots-meta-key =
     { PLATFORM() ->
@@ -41,8 +42,6 @@ screenshots-login-error-details = Մենք չենք կարող պահպանել 
 screenshots-unshootable-page-error-title = Հնարավոր չէ ստանալ էկրանի հանույթը:
 screenshots-unshootable-page-error-details = Սա ստանդարտ վեբ էջ չէ, ուստի դուք չեք կարող ստանալ դրա հանույթը:
 
-screenshots-self-screenshot-error-title = Դուք չեք կարող ստանալ { -screenshots-brand-name }-ի էջի հանույթը:
-
 screenshots-empty-selection-error-title = Ընտրվածը քիչ է
 
 screenshots-private-window-error-title = { -screenshots-brand-name }-ը անջատած է Գաղտնի Դիտարկման կերպում:
@@ -50,3 +49,4 @@ screenshots-private-window-error-details = Ներողություն անհարմ
 
 screenshots-generic-error-title = { -screenshots-brand-name }-ը գնաց գլխիվայր:
 screenshots-generic-error-details = Մենք վստահ չենք, թե ինչ է տեղի ունեցնել: Կրկին փորձեք կամ փորձեք ստանալ մեկ այլ էջի հանույթ:
+

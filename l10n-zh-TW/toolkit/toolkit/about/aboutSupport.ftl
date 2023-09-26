@@ -12,11 +12,6 @@ crashes-id = 報表編號
 crashes-send-date = 送出日期
 crashes-all-reports = 所有錯誤報表
 crashes-no-config = 此應用程式並未設定為要顯示錯誤資訊報表。
-extensions-title = 擴充套件
-extensions-name = 名稱
-extensions-enabled = 已啟用
-extensions-version = 版本
-extensions-id = ID
 support-addons-title = 附加元件
 support-addons-name = 名稱
 support-addons-type = 類型
@@ -59,7 +54,7 @@ app-basics-profile-dir =
        *[other] 設定檔目錄
     }
 app-basics-enabled-plugins = 啟用的外掛程式
-app-basics-build-config = 編譯組態
+app-basics-build-config = 編譯設定
 app-basics-user-agent = 使用者代理字串（User Agent）
 app-basics-os = 作業系統
 app-basics-os-theme = 作業系統佈景主題
@@ -80,6 +75,12 @@ app-basics-location-service-key-google = Google Location Service 金鑰
 app-basics-safebrowsing-key-google = Google Safebrowsing 金鑰
 app-basics-key-mozilla = Mozilla Location Service 金鑰
 app-basics-safe-mode = 安全模式
+app-basics-memory-size = 記憶體大小（RAM）
+app-basics-disk-available = 磁碟可用空間大小
+# Variables:
+#   $value (number) - Amount of data being stored
+#   $unit (string) - The unit of data being stored (e.g. MB)
+app-basics-data-size = { $value } { $unit }
 show-dir-label =
     { PLATFORM() ->
         [macos] 顯示於 Finder
@@ -109,11 +110,21 @@ graphics-gpu2-title = GPU #2
 graphics-decision-log-title = 決策紀錄
 graphics-crash-guards-title = 因 Crash Guard 停用的功能
 graphics-workarounds-title = Workarounds
+graphics-device-pixel-ratios = Window 的裝置畫素比例
 # Windowing system in use on Linux (e.g. X11, Wayland).
 graphics-window-protocol = 視窗通訊協定
 # Desktop environment in use on Linux (e.g. GNOME, KDE, XFCE, etc).
 graphics-desktop-environment = 桌面環境
 place-database-title = Places 資料庫
+place-database-stats = 統計資訊
+place-database-stats-show = 顯示統計資訊
+place-database-stats-hide = 隱藏統計資訊
+place-database-stats-entity = 實體
+place-database-stats-count = 數量
+place-database-stats-size-kib = 大小 (KiB)
+place-database-stats-size-perc = 大小 (%)
+place-database-stats-efficiency-perc = 效率 (%)
+place-database-stats-sequentiality-perc = 順序性 (%)
 place-database-integrity = 資料完整
 place-database-verify-integrity = 確認資料完整
 a11y-title = 輔助功能
@@ -133,8 +144,6 @@ sandbox-sys-call-tid = TID
 sandbox-sys-call-proc-type = 程序類型
 sandbox-sys-call-number = 系統呼叫
 sandbox-sys-call-args = 引數
-safe-mode-title = 試試安全模式
-restart-in-safe-mode-label = 重新啟動但停用附加元件…
 troubleshoot-mode-title = 診斷問題
 restart-in-troubleshoot-mode-label = 疑難排解模式…
 clear-startup-cache-title = 也可清除啟動快取
@@ -162,8 +171,18 @@ media-device-channels = 頻道
 media-device-rate = 取樣率
 media-device-latency = 延滯
 media-capabilities-title = 媒體能力
+media-codec-support-info = 解碼器支援資訊
 # List all the entries of the database.
 media-capabilities-enumerate = 列舉資料庫
+
+## Codec support table
+
+media-codec-support-sw-decoding = 軟體解碼
+media-codec-support-hw-decoding = 硬體解碼
+media-codec-support-codec-name = 解碼器名稱
+media-codec-support-supported = 支援
+media-codec-support-unsupported = 不支援
+media-codec-support-error = 無法取得 Codec 支援資訊，請在播放媒體檔案後再試一次。
 
 ##
 
@@ -192,36 +211,6 @@ remote-debugging-url = 網址
 
 ##
 
-support-third-party-modules-title = 第三方模組
-support-third-party-modules-module = 模組檔案
-support-third-party-modules-version = 檔案版本
-support-third-party-modules-vendor = 供應商資訊
-support-third-party-modules-occurrence = 次數
-support-third-party-modules-process = 程序類型與 ID
-support-third-party-modules-thread = 執行緒
-support-third-party-modules-base = Imagebase 位置
-support-third-party-modules-uptime = 程序執行時間（ms）
-support-third-party-modules-duration = 載入時間長度（ms）
-support-third-party-modules-status = 狀態
-support-third-party-modules-status-loaded = 已載入
-support-third-party-modules-status-blocked = 已封鎖
-support-third-party-modules-status-redirected = 已重新導向
-support-third-party-modules-empty = 並未載入任何第三方模組。
-support-third-party-modules-no-value = （沒有值）
-support-third-party-modules-button-open =
-    .title = 開啟檔案位置…
-support-third-party-modules-expand =
-    .title = 顯示詳細資訊
-support-third-party-modules-collapse =
-    .title = 摺疊詳細資訊
-support-third-party-modules-unsigned-icon =
-    .title = 此模組未經簽署
-support-third-party-modules-folder-icon =
-    .title = 開啟檔案位置…
-support-third-party-modules-down-icon =
-    .title = 顯示詳細資訊
-support-third-party-modules-up-icon =
-    .title = 摺疊詳細資訊
 # Variables
 # $days (Integer) - Number of days of crashes to log
 report-crash-for-days = 最近 { $days } 天內的錯誤資訊報表
@@ -288,10 +277,8 @@ webgl2-renderer = WebGL2 Renderer
 webgl2-version = WebGL 2 驅動程式 Renderer
 webgl2-driver-extensions = WebGL 2 驅動程式擴充套件
 webgl2-extensions = WebGL 2 擴充套件
-blocklisted-bug = 因為有已知問題被封鎖
-# Variables
-# $bugNumber (string) - String of bug number from Bugzilla
-bug-link = bug { $bugNumber }
+webgpu-default-adapter = WebGPU 預設顯示卡
+webgpu-fallback-adapter = WebGPU 備用顯示卡
 # Variables
 #   $bugNumber (string) - Bug number on Bugzilla
 support-blocklisted-bug = 由於有已知問題，被加入封鎖名單: <a data-l10n-name="bug-link">bug { $bugNumber }</a>
@@ -299,8 +286,6 @@ support-blocklisted-bug = 由於有已知問題，被加入封鎖名單: <a data
 # $failureCode (string) - String that can be searched in the source tree.
 unknown-failure = 已封鎖，錯誤代碼 { $failureCode }
 d3d11layers-crash-guard = D3D11 合成器
-d3d11video-crash-guard = D3D11 視訊解碼器
-d3d9video-crash-guard = D3D9 視訊解碼器
 glcontext-crash-guard = OpenGL
 wmfvpxvideo-crash-guard = WMF VPX 視訊解碼器
 reset-on-next-restart = 下次重新啟動時重設
@@ -323,6 +308,7 @@ can-sandbox-media = 媒體外掛程式沙盒
 content-sandbox-level = 內容程序沙盒等級
 effective-content-sandbox-level = 有效內容處理程序沙盒等級
 content-win32k-lockdown-state = 內容處理程序的 Win32k Lockdown 狀態
+support-sandbox-gpu-level = GPU 處理程序沙盒等級
 sandbox-proc-type-content = 內容
 sandbox-proc-type-file = 檔案內容
 sandbox-proc-type-media-plugin = 媒體外掛程式
@@ -340,14 +326,6 @@ launcher-process-status-unknown = 未知狀態
 # $remoteWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
 multi-process-windows = { $remoteWindows }/{ $totalWindows }
-multi-process-status-0 = 由使用者開啟
-multi-process-status-1 = 預設開啟
-multi-process-status-2 = 已關閉
-multi-process-status-4 = 因輔助工具停用
-multi-process-status-6 = 因不支援的文字輸入工具停用
-multi-process-status-7 = 因附加元件停用
-multi-process-status-8 = 強制停用
-multi-process-status-unknown = 未知狀態
 # Variables
 # $fissionWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
@@ -356,7 +334,7 @@ fission-status-experiment-control = 由實驗關閉
 fission-status-experiment-treatment = 由實驗開啟
 fission-status-disabled-by-e10s-env = 由環境關閉
 fission-status-enabled-by-env = 由環境開啟
-fission-status-disabled-by-safe-mode = 因安全模式關閉
+fission-status-disabled-by-env = 由環境關閉
 fission-status-enabled-by-default = 預設開啟
 fission-status-disabled-by-default = 預設關閉
 fission-status-enabled-by-user-pref = 由使用者開啟

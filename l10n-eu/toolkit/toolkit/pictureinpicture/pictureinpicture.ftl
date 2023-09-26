@@ -4,19 +4,66 @@
 
 pictureinpicture-player-title = Bideoa beste leiho batean
 
-pictureinpicture-pause =
+## Variables:
+##   $shortcut (String) - Keyboard shortcut to execute the command.
+
+## Note that this uses .tooltip rather than the standard '.title'
+## or '.tooltiptext' -  but it has the same effect. Code in the
+## picture-in-picture window will read and copy this to an in-document
+## DOM node that then shows the tooltip.
+##
+## Variables:
+##   $shortcut (String) - Keyboard shortcut to execute the command.
+
+pictureinpicture-pause-btn =
     .aria-label = Pausatu
-pictureinpicture-play =
+    .tooltip = Pausatu (zuriune-barra)
+pictureinpicture-play-btn =
     .aria-label = Erreproduzitu
+    .tooltip = Erreproduzitu (zuriune-barra)
 
-pictureinpicture-mute =
+pictureinpicture-mute-btn =
     .aria-label = Mututu
-pictureinpicture-unmute =
+    .tooltip = Mututu ({ $shortcut })
+pictureinpicture-unmute-btn =
     .aria-label = Ez mututu
+    .tooltip = Ez mututu ({ $shortcut })
 
-pictureinpicture-unpip =
+pictureinpicture-unpip-btn =
     .aria-label = Bidali berriro fitxara
+    .tooltip = Itzuli fitxara
 
-pictureinpicture-close =
+pictureinpicture-close-btn =
     .aria-label = Itxi
+    .tooltip = Itxi ({ $shortcut })
 
+pictureinpicture-subtitles-btn =
+    .aria-label = Azpitituluak
+    .tooltip = Azpitituluak
+
+##
+
+## Note that this uses .tooltip rather than the standard '.title'
+## or '.tooltiptext' -  but it has the same effect. Code in the
+## picture-in-picture window will read and copy this to an in-document
+## DOM node that then shows the tooltip.
+
+pictureinpicture-seekbackward-btn =
+    .aria-label = Atzerantz
+    .tooltip = Atzerantz (←)
+
+pictureinpicture-seekforward-btn =
+    .aria-label = Aurrerantz
+    .tooltip = Aurrerantz (→)
+
+##
+
+pictureinpicture-subtitles-label = Azpitituluak
+
+pictureinpicture-font-size-label = Letra-tamaina
+
+pictureinpicture-font-size-small = Txikia
+
+pictureinpicture-font-size-medium = Ertaina
+
+pictureinpicture-font-size-large = Handia

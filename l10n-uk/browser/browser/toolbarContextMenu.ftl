@@ -12,23 +12,14 @@ toolbar-context-menu-reload-selected-tabs =
     .label = Оновити вибрані вкладки
     .accesskey = в
 toolbar-context-menu-bookmark-selected-tab =
-    .label = Закласти вибрану вкладку…
-    .accesskey = З
+    .label = Додати вибрану вкладку до закладок…
+    .accesskey = з
 toolbar-context-menu-bookmark-selected-tabs =
-    .label = Закласти вибрані вкладки…
+    .label = Додати вибрані вкладки до закладок…
     .accesskey = т
 toolbar-context-menu-select-all-tabs =
     .label = Вибрати всі вкладки
     .accesskey = б
-toolbar-context-menu-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [one] Відновити закриту вкладку
-            [few] Відновити { $tabCount } закриті вкладки
-           *[many] Відновити { $tabCount } закритих вкладок
-        }
-    .accesskey = і
-
 toolbar-context-menu-reopen-closed-tabs =
     .label =
         { $tabCount ->
@@ -52,18 +43,18 @@ toolbar-context-menu-report-extension =
     .label = Поскаржитись на розширення
     .accesskey = с
 
-# Can appear on the same context menu as menubarCmd ("Menu Bar") and
-# personalbarCmd ("Bookmarks Toolbar"), so they should have different
-# access keys.
+# Can appear on the same context menu as toolbar-context-menu-menu-bar-cmd
+# ("Menu Bar") and personalbarCmd ("Bookmarks Toolbar"), so they should
+# have different access keys.
 toolbar-context-menu-pin-to-overflow-menu =
     .label = Прикріпити до розширеного меню
     .accesskey = к
-toolbar-context-menu-auto-hide-downloads-button =
-    .label = Автоматично приховувати в панелі інструментів
-    .accesskey = п
 toolbar-context-menu-auto-hide-downloads-button-2 =
     .label = Ховати кнопку, якщо немає завантажень
     .accesskey = Х
+toolbar-context-menu-always-open-downloads-panel =
+    .label = Показувати панель, коли починається завантаження
+    .accesskey = П
 toolbar-context-menu-remove-from-toolbar =
     .label = Вилучити з панелі
     .accesskey = В
@@ -73,6 +64,11 @@ toolbar-context-menu-view-customize-toolbar =
 toolbar-context-menu-view-customize-toolbar-2 =
     .label = Налаштувати панель інструментів…
     .accesskey = Н
+# This is only ever shown when toolbar-context-menu-pin-to-overflow-menu
+# is hidden, so they can share access keys.
+toolbar-context-menu-pin-to-toolbar =
+    .label = Закріпити на панелі інструментів
+    .accesskey = З
 
 toolbar-context-menu-bookmarks-toolbar-always-show-2 =
     .label = Завжди показувати
@@ -87,3 +83,7 @@ toolbar-context-menu-bookmarks-toolbar-on-new-tab-2 =
 toolbar-context-menu-bookmarks-show-other-bookmarks =
     .label = Показати інші закладки
     .accesskey = о
+
+toolbar-context-menu-menu-bar-cmd =
+    .toolbarname = Панель меню
+    .accesskey = н

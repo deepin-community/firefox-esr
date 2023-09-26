@@ -2,14 +2,13 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-refresh-profile-dialog =
-    .title = بازآوری { -brand-short-name }
-
+refresh-profile-dialog-title = تازه‌سازی { -brand-short-name } به تنظیمات پیش‌گزیده‌اش؟
 refresh-profile-dialog-button =
-    .label = بازآوری { -brand-short-name }
-refresh-profile-description = برای حل مشکلات و بازیابی کارایی، فایرفاکس را نوسازی کنید.
-refresh-profile-description-details = این کار باعث خواهد شد:
-refresh-profile-remove = افزودنی‌ها و تنظیمات سفارشی شما حذف شوند
-refresh-profile-restore = تنظیمات مرورگر شما به حالت پیش‌فرض برگردد
+    .label = نوسازی { -brand-short-name }
 refresh-profile = { -brand-short-name } را تنظیم کنید
-refresh-profile-button = بازآوری { -brand-short-name }…
+refresh-profile-button = نوسازی { -brand-short-name }…
+refresh-profile-learn-more = بیشتر بدانید
+
+refresh-profile-progress =
+    .title = نوسازی { -brand-short-name }
+refresh-profile-progress-description = تقریبا تمام است...

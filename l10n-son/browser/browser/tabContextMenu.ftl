@@ -5,6 +5,9 @@
 reload-tab =
     .label = Kanjoo dam taaga
     .accesskey = d
+tab-context-play-tab =
+    .label = Kanje hẽenandi
+    .accesskey = K
 close-tabs-to-the-end =
     .label = Kanji gumey daabu
     .accesskey = g
@@ -20,10 +23,6 @@ unpin-tab =
 move-to-new-window =
     .label = Ganandi zanfun taagaa ra
     .accesskey = z
-
-close-tab =
-    .label = Kanjoo daabu
-    .accesskey = d
 
 ## Variables:
 ##  $tabCount (Number): the number of tabs that are affected by the action.

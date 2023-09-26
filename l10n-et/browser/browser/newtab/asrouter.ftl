@@ -7,9 +7,6 @@
 
 cfr-doorhanger-extension-heading = Laienduse soovitus
 cfr-doorhanger-feature-heading = Funktsionaalsuse soovitus
-cfr-doorhanger-pintab-heading = Proovi kaardi püsikaardiks tegemist
-
-
 
 ##
 
@@ -21,8 +18,6 @@ cfr-doorhanger-extension-cancel-button = Mitte praegu
 
 cfr-doorhanger-extension-ok-button = Paigalda
     .accesskey = P
-cfr-doorhanger-pintab-ok-button = Tee see kaart püsikaardiks
-    .accesskey = p
 
 cfr-doorhanger-extension-manage-settings-button = Halda soovituste sätteid
     .accesskey = H
@@ -40,6 +35,15 @@ cfr-doorhanger-extension-author = { $name }
 # This is a notification displayed in the address bar.
 # When clicked it opens a panel with a message for the user.
 cfr-doorhanger-extension-notification = Soovitus
+cfr-doorhanger-extension-notification2 = Soovitus
+    .tooltiptext = Laienduse soovitus
+    .a11y-announcement = Laienduse soovitus on saadaval
+
+# This is a notification displayed in the address bar.
+# When clicked it opens a panel with a message for the user.
+cfr-doorhanger-feature-notification = Soovitus
+    .tooltiptext = Funktsionaalsuse soovitus
+    .a11y-announcement = Funktsionaalsuse soovitus on saadaval
 
 ## Add-on statistics
 ## These strings are used to display the total number of
@@ -61,18 +65,6 @@ cfr-doorhanger-extension-total-users =
        *[other] { $total } kasutajat
     }
 
-cfr-doorhanger-pintab-description = Püsikaardid annavad lihtsa ligipääsu enimkasutatud saitidele. Samuti hoitakse neid saite aktiivsena (ka pärast taaskäivitamist).
-
-## These messages are steps on how to use the feature and are shown together.
-
-cfr-doorhanger-pintab-step1 = Tee <b>paremklõps</b> kaardil, mida soovid püsikaardiks teha.
-cfr-doorhanger-pintab-step2 = Vali menüüst <b>Tee püsikaardiks</b>.
-cfr-doorhanger-pintab-step3 = Kui saidil on uuendus, siis antakse sellest märku sinise täpikesega püsikaardil.
-
-cfr-doorhanger-pintab-animation-pause = Paus
-cfr-doorhanger-pintab-animation-resume = Jätka
-
-
 ## Firefox Accounts Message
 
 cfr-doorhanger-bookmark-fxa-header = Järjehoidjate sünkroonimine kõikjal.
@@ -90,109 +82,106 @@ cfr-protections-panel-link-text = Rohkem teavet
 
 ## What's New toolbar button and panel
 
+# This string is used by screen readers to offer a text based alternative for
+# the notification icon
+cfr-badge-reader-label-newfeature = Uus funktsionaalsus:
+
 cfr-whatsnew-button =
     .label = Mis on uut?
     .tooltiptext = Mis on uut?
 
-cfr-whatsnew-panel-header = Mis on uut?
-
 cfr-whatsnew-release-notes-link-text = Loe väljalasketeadet
-
-cfr-whatsnew-fx70-title = { -brand-short-name } võitleb nüüd sinu privaatsuse eest veel rohkem
-cfr-whatsnew-fx70-body = Viimane uuendus täiustab jälitamisvastast kaitset veelgi ja teeb iga saidi jaoks turvalise parooli loomise lihtsamaks, kui see kunagi on olnud.
-
-cfr-whatsnew-tracking-protect-title = Kaitse ennast jälitajate eest
-cfr-whatsnew-tracking-protect-body = { -brand-short-name } blokib paljusid tuntud sotsiaalmeedia ja saitideüleseid jälitajaid, mis jälgivad sinu tegevust võrgus olles.
-cfr-whatsnew-tracking-protect-link-text = Vaata raportit
-
-# This string is displayed before a large numeral that indicates the total
-# number of tracking elements blocked. Don’t add $blockedCount to your
-# localization, because it would result in the number showing twice.
-cfr-whatsnew-tracking-blocked-title =
-    { $blockedCount ->
-        [one] Jälitaja blokitud
-       *[other] jälitajad blokitud
-    }
-cfr-whatsnew-tracking-blocked-subtitle = Alates { DATETIME($earliestDate, month: "long", year: "numeric") }
-cfr-whatsnew-tracking-blocked-link-text = Vaata raportit
-
-cfr-whatsnew-lockwise-backup-title = Varunda oma paroolid
-cfr-whatsnew-lockwise-backup-body = Nüüd saad luua turvalisi paroole, mida saad kasutada kõikjal, kus sisse logid.
-cfr-whatsnew-lockwise-backup-link-text = Lülita varukoopiad sisse
-
-cfr-whatsnew-lockwise-take-title = Võta paroolid endaga kaasa
-cfr-whatsnew-lockwise-take-body = Mobiilne äpp { -lockwise-brand-short-name } võimaldab turvalist ligipääsu sinu varundatud paroolidele kõikjalt.
-cfr-whatsnew-lockwise-take-link-text = Hangi äpp
-
-## Search Bar
-
-## Picture-in-Picture
-
-## Permission Prompt
-
-## Fingerprinter Counter
-
-## Bookmark Sync
-
-cfr-doorhanger-sync-bookmarks-header = Kasuta seda järjehoidjat ka oma telefonis
-cfr-doorhanger-sync-bookmarks-body = Võta oma järjehoidjad, paroolid, ajalugu ja muu kaasa kõikjale, kus oled { -brand-product-name }i sisse logitud.
-cfr-doorhanger-sync-bookmarks-ok-button = Lülita { -sync-brand-short-name } sisse
-    .accesskey = L
-
-## Login Sync
-
-cfr-doorhanger-sync-logins-header = Lõpp paroolide kaotamisele
-cfr-doorhanger-sync-logins-body = Salvesta ja sünkroniseeri oma paroolid turvaliselt kõigisse oma seadmetesse.
-cfr-doorhanger-sync-logins-ok-button = Lülita { -sync-brand-short-name } sisse
-    .accesskey = L
-
-## Send Tab
-
-cfr-doorhanger-send-tab-header = Loe seda liikvel olles
-cfr-doorhanger-send-tab-recipe-header = Võta see retsept kööki kaasa
-cfr-doorhanger-send-tab-body = Kaardi saatmise funktsionaalsus võimaldab sul lihtsalt selle lingi saata oma telefoni või ükskõik millisesse seadmesse, kus oled { -brand-product-name }i sisse logitud.
-cfr-doorhanger-send-tab-ok-button = Proovi kaardi saatmist
-    .accesskey = P
-
-## Firefox Send
-
-cfr-doorhanger-firefox-send-header = Jaga seda PDFi turvaliselt
-cfr-doorhanger-firefox-send-body = Hoia oma tundlikku infot sisaldavaid dokumente ohutult ning krüptitult, jagades neid lingiga, mis hävineb pärast faili edukat jagamist.
-cfr-doorhanger-firefox-send-ok-button = Proovi teenust { -send-brand-name }
-    .accesskey = P
-
-## Social Tracking Protection
-
-cfr-doorhanger-socialtracking-ok-button = Vaata kaitseid
-    .accesskey = k
-cfr-doorhanger-socialtracking-close-button = Sulge
-    .accesskey = S
-cfr-doorhanger-socialtracking-heading = { -brand-short-name } takistas sotsiaalvõrgustikul sinu tegevuse jälitamise sellel lehel
-cfr-doorhanger-socialtracking-description = Sinu privaatsus on oluline. { -brand-short-name } blokib nüüd tuntud sotsiaalmeedia jälitajaid, piirates neil sinu tegevuse kohta kogutavate andmete hulka.
-cfr-doorhanger-fingerprinters-heading = { -brand-short-name } blokkis sellel lehel seadmetuvastaja
-cfr-doorhanger-fingerprinters-description = Sinu privaatsus on oluline. { -brand-short-name } blokib nüüd seadmetuvastajaid, mis koguvad sinu jälitamise eesmärgil unikaalselt tuvastatavat infot sinu seadme kohta.
-cfr-doorhanger-cryptominers-heading = { -brand-short-name } blokkis sellel lehel krüptorahakaevuri
-cfr-doorhanger-cryptominers-description = Sinu privaatsus on oluline. { -brand-short-name } blokib nüüd krüptorahakaevureid, mis kasutavad sinu arvuti ressursse krüptoraha kaevandamiseks.
 
 ## Enhanced Tracking Protection Milestones
 
-## What’s New Panel Content for Firefox 76
-
-## Lockwise message
-
-## Vulnerable Passwords message
-
-## Picture-in-Picture fullscreen message
-
-## Protections Dashboard message
-
-## Better PDF message
+# Variables:
+#   $blockedCount (Number) - The total count of blocked trackers. This number will always be greater than 1.
+#   $date (Datetime) - The date we began recording the count of blocked trackers
+cfr-doorhanger-milestone-heading2 =
+    { $blockedCount ->
+        [one] { -brand-short-name } blokkis üle <b>{ $blockedCount }</b> jälitaja alates { DATETIME($date, month: "long", year: "numeric") }!
+       *[other] { -brand-short-name } blokkis üle <b>{ $blockedCount }</b> jälitaja alates { DATETIME($date, month: "long", year: "numeric") }!
+    }
+cfr-doorhanger-milestone-ok-button = Vaata kõiki
+    .accesskey = V
+cfr-doorhanger-milestone-close-button = Sulge
+    .accesskey = S
 
 ## DOH Message
 
-## What's new: Cookies message
+cfr-doorhanger-doh-body = Sinu privaatsus on oluline. { -brand-short-name } suunab nüüd DNS-päringud sinu kaitsmiseks turvaliselt partnerteenusesse.
+cfr-doorhanger-doh-header = Turvalisemad, krüptitud DNS-päringud
+cfr-doorhanger-doh-primary-button-2 = Sobib
+    .accesskey = S
+cfr-doorhanger-doh-secondary-button = Keela
+    .accesskey = K
 
 ## Fission Experiment Message
 
 ## Full Video Support CFR message
+
+cfr-doorhanger-video-support-body = Sellel saidil olevaid videoid ei pruugita selle { -brand-short-name } versiooniga õigesti esitada. Täieliku videotoe saamiseks uuendage { -brand-short-name } kohe.
+cfr-doorhanger-video-support-header = Video esitamiseks uuenda { -brand-short-name }
+cfr-doorhanger-video-support-primary-button = Uuenda kohe
+    .accesskey = U
+
+## Spotlight modal shared strings
+
+## VPN promotion dialog for public Wi-Fi users
+##
+## If a user is detected to be on a public Wi-Fi network, they are given a
+## bit of info about how to improve their privacy and then offered a button
+## to the Mozilla VPN page and a link to dismiss the dialog.
+
+# This header text can be explicitly wrapped.
+spotlight-public-wifi-vpn-header = Näib, et kasutad avalikku WiFit
+spotlight-public-wifi-vpn-body = Oma asukoha ja lehitsemistegevuse peitmiseks kaalu virtuaalset privaatvõrku (VPN). See aitab kaitsta sinu veebilehitsemist avalikes kohtades nagu lennujaamad ja kohvikud.
+spotlight-public-wifi-vpn-primary-button = Jää privaatseks { -mozilla-vpn-brand-name }iga
+    .accesskey = p
+spotlight-public-wifi-vpn-link = Mitte praegu
+    .accesskey = M
+
+## Total Cookie Protection Rollout
+
+## Emotive Continuous Onboarding
+
+spotlight-better-internet-header = Parem internet algab sinust endast
+spotlight-better-internet-body = Kasutades { -brand-short-name }i, hääletad sa avatud ja juurdepääsetava interneti poolt, mis on kõigile parem.
+spotlight-peace-mind-header = Hoolime sinu turvalisusest
+spotlight-peace-mind-body = Iga kuu blokib { -brand-short-name } keskmiselt 3,000 jälitajat kasutaja kohta. Seda selleks, et mitte miski, eriti privaatsuse ära kasutamine jälitajatega, ei tohiks seista sinu ja hea interneti vahel.
+spotlight-pin-primary-button =
+    { PLATFORM() ->
+        [macos] Hoia dokis
+       *[other] Kinnita tegumiribale
+    }
+spotlight-pin-secondary-button = Mitte praegu
+
+## MR2022 Background Update Windows native toast notification strings.
+##
+## These strings will be displayed by the Windows operating system in
+## a native toast, like:
+##
+## <b>multi-line title</b>
+## multi-line text
+## <img>
+## [ primary button ] [ secondary button ]
+##
+## The button labels are fitted into narrow fixed-width buttons by
+## Windows and therefore must be as narrow as possible.
+
+## Firefox View CFR
+
+## Firefox View Spotlight
+
+## Colorways expiry reminder CFR
+
+## Cookie Banner Handling CFR
+
+## These strings are used in the Fox doodle Pin/set default spotlights
+
+## These strings are used in the Set Firefox as Default PDF Handler for Existing Users experiment
+
+## FxA sync CFR
+
+## Device Migration FxA Spotlight
 

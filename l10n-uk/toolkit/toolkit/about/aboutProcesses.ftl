@@ -16,17 +16,23 @@ about-processes-shutdown-process =
 about-processes-shutdown-tab =
     .title = Закрити вкладку
 
+# Profiler icons
+# Variables:
+#    $duration (Number) The time in seconds during which the profiler will be running.
+#                       The value will be an integer, typically less than 10.
+about-processes-profile-process =
+    .title =
+        { $duration ->
+            [one] Записати профіль усіх потоків цього процесу впродовж { $duration } секунди
+            [few] Записати профіль усіх потоків цього процесу впродовж { $duration } секунд
+           *[many] Записати профіль усіх потоків цього процесу впродовж { $duration } секунд
+        }
+
 ## Column headers
 
 about-processes-column-name = Назва
 about-processes-column-memory-resident = Пам'ять
 about-processes-column-cpu-total = ЦП
-
-## Process names
-## Variables:
-##    $pid (String) The process id of this process, assigned by the OS.
-##    $origin (String) The domain name for this process.
-##    $type (String) The raw type for this process. Used for unknown processes.
 
 ## Process names
 ## Variables:
@@ -47,6 +53,7 @@ about-processes-socket-process = Мережа ({ $pid })
 about-processes-remote-sandbox-broker-process = Віддалений брокер пісочниці ({ $pid })
 about-processes-fork-server-process = Сервер розгалуження ({ $pid })
 about-processes-preallocated-process = Попередньо розподілено ({ $pid })
+about-processes-utility-process = Утиліта ({ $pid })
 
 # Unknown process names
 # Variables:
@@ -60,10 +67,9 @@ about-processes-unknown-process = Інше: { $type } ({ $pid })
 ##    $origin (String) The domain name for this process.
 
 about-processes-web-isolated-process = { $origin } ({ $pid })
-about-processes-web-large-allocation-process = { $origin } ({ $pid }, великий)
+about-processes-web-serviceworker = { $origin } ({ $pid }, serviceworker)
 about-processes-with-coop-coep-process = { $origin } ({ $pid }, ізольовано від сторонніх джерел)
 about-processes-web-isolated-process-private = { $origin } — Приватний ({ $pid })
-about-processes-web-large-allocation-process-private = { $origin } — Приватний ({ $pid }, великий)
 about-processes-with-coop-coep-process-private = { $origin } — Приватний ({ $pid }, ізольовано від сторонніх джерел)
 
 ## Details within processes
@@ -124,6 +130,17 @@ about-processes-frame-name-one = Підфрейм: { $url }
 #   $shortUrl (String) The shared prefix for the subframes in the group.
 about-processes-frame-name-many = Підфрейми ({ $number }): { $shortUrl }
 
+## Utility process actor names
+
+about-processes-utility-actor-unknown = Невідомий виконавець
+about-processes-utility-actor-audio-decoder-generic = Загальний аудіо декодер
+about-processes-utility-actor-audio-decoder-applemedia = Аудіодекодер Apple Media
+about-processes-utility-actor-audio-decoder-wmf = Аудіодекодер Windows Media Framework
+about-processes-utility-actor-mf-media-engine = Windows Media Foundation Media Engine CDM
+# "Oracle" refers to an internal Firefox process and should be kept in English
+about-processes-utility-actor-js-oracle = JavaScript Oracle
+about-processes-utility-actor-windows-utils = Утиліти Windows
+
 ## Displaying CPU (percentage and total)
 ## Variables:
 ##    $percent (Number) The percentage of CPU used by the process or thread.
@@ -140,9 +157,14 @@ about-processes-cpu = { NUMBER($percent, maximumSignificantDigits: 2, style: "pe
 # Special case: data is not available yet.
 about-processes-cpu-user-and-kernel-not-ready = (вимірювання)
 
+# Special case: process or thread is almost idle (using less than 0.1% of a CPU core).
+# This case only occurs on Windows where the precision of the CPU times is low.
+about-processes-cpu-almost-idle = < 0.1%
+    .title = Загальний час CPU: { NUMBER($total, maximumFractionDigits: 0) }{ $unit }
+
 # Special case: process or thread is currently idle.
-about-processes-cpu-idle = бездіяльний
-    .title = Загальний час CPU: { NUMBER($total, maximumFractionDigits: 2) }{ $unit }
+about-processes-cpu-fully-idle = idle
+    .title = Загальний час CPU: { NUMBER($total, maximumFractionDigits: 0) }{ $unit }
 
 ## Displaying Memory (total and delta)
 ## Variables:

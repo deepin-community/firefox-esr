@@ -6,7 +6,6 @@
 ## These messages are used as headings in the recommendation doorhanger
 
 cfr-doorhanger-extension-heading = Lamed ma kicwako
-cfr-doorhanger-pintab-heading = Tem man: Mwon dirica matidi
 
 ##
 
@@ -17,8 +16,6 @@ cfr-doorhanger-extension-cancel-button = Pe kombedi
     .accesskey = P
 
 cfr-doorhanger-extension-ok-button = Med kombedi
-    .accesskey = M
-cfr-doorhanger-pintab-ok-button = Mwon dirica matidi man
     .accesskey = M
 
 cfr-doorhanger-extension-learn-more-link = Nong ngec mapol
@@ -32,14 +29,8 @@ cfr-doorhanger-extension-author = ki { $name }
 ## These strings are used to display the total number of
 ## users and rating for an add-on. They are shown next to each other.
 
-cfr-doorhanger-pintab-description = Nong donyo mayot i kakube ma itiyo kwedgi loyo. Gwok kakube ayaba i dirica matidi (kadi ka i nwoyo cako).
 
-## These messages are steps on how to use the feature and are shown together.
-
-cfr-doorhanger-pintab-step2 = Yer <b>Mwon Dirica matidi</b> ki i gin ayera.
-
-cfr-doorhanger-pintab-animation-pause = Juki
-cfr-doorhanger-pintab-animation-resume = Mede
+## Cookie Banner Handling Onboarding
 
 
 ## Firefox Accounts Message
@@ -62,107 +53,10 @@ cfr-whatsnew-button =
     .label = Ngo Manyen
     .tooltiptext = Ngo Manyen
 
-cfr-whatsnew-panel-header = Ngo Manyen
-
-cfr-whatsnew-fx70-title = { -brand-short-name } dong lwenyo matek kato pi mung mamegi
-
-cfr-whatsnew-tracking-protect-title = Gwokke ki ikom lulub kor
-cfr-whatsnew-tracking-protect-link-text = Nen Ripot Mamegi
-
-# This string is displayed before a large numeral that indicates the total
-# number of tracking elements blocked. Don’t add $blockedCount to your
-# localization, because it would result in the number showing twice.
-cfr-whatsnew-tracking-blocked-title =
-    { $blockedCount ->
-        [one] Kigengo lalub kor
-       *[other] Kigengo lulub kor
-    }
-cfr-whatsnew-tracking-blocked-subtitle = Nicake { DATETIME($earliestDate, month: "long", year: "numeric") }
-cfr-whatsnew-tracking-blocked-link-text = Nen Ripot
-
-cfr-whatsnew-lockwise-take-title = Cwal mung me donyo mamegi kwedi
-cfr-whatsnew-lockwise-take-link-text = Nong purugram ne
-
-## Search Bar
-
-
-## Picture-in-Picture
-
-cfr-whatsnew-pip-header = Nen video manongo itye ka yeny
-cfr-whatsnew-pip-cta = Nong ngec mapol
-
-## Permission Prompt
-
-cfr-whatsnew-permission-prompt-cta = Nong ngec mapol
-
-## Fingerprinter Counter
-
-
-## Bookmark Sync
-
-cfr-doorhanger-sync-bookmarks-header = Nong alamabuk man i cim mamegi
-cfr-doorhanger-sync-bookmarks-body = Cwal alamabuk mamegi, mung me donyo, gin mukato ki mapol ka weng ma i donyo iyie { -brand-product-name }.
-cfr-doorhanger-sync-bookmarks-ok-button = Cak { -sync-brand-short-name }
-    .accesskey = C
-
-## Login Sync
-
-cfr-doorhanger-sync-logins-header = Pe Irweny Mung me donyo Doki Matwal
-cfr-doorhanger-sync-logins-ok-button = Cak { -sync-brand-short-name }
-    .accesskey = C
-
-## Send Tab
-
-cfr-doorhanger-send-tab-body = Send Tab weko inywako mayot kakube man ki cim mamegi onyo ka mo keken ma idonyo iyie { -brand-product-name }.
-cfr-doorhanger-send-tab-ok-button = Tem Send Tab
-    .accesskey = T
-
-## Firefox Send
-
-cfr-doorhanger-firefox-send-header = Nywak PDF man ki ber bedo
-cfr-doorhanger-firefox-send-ok-button = Tem { -send-brand-name }
-    .accesskey = T
-
-## Social Tracking Protection
-
-cfr-doorhanger-socialtracking-ok-button = Nen Gwokke
-    .accesskey = N
-cfr-doorhanger-socialtracking-close-button = Lor
-    .accesskey = L
-cfr-doorhanger-socialtracking-dont-show-again = Pe doki inyuta kwena calo man
-    .accesskey = P
-
 ## Enhanced Tracking Protection Milestones
-
-# Variables:
-#   $blockedCount (Number) - The total count of blocked trackers. This number will always be greater than 1.
-#   $date (String) - The date we began recording the count of blocked trackers
-cfr-doorhanger-milestone-heading =
-    { $blockedCount ->
-       *[other] { -brand-short-name } gengo lulub kor makato <b>{ $blockedCount }</b> nicake { $date }!
-    }
 
 cfr-doorhanger-milestone-ok-button = Nen Weng
     .accesskey = N
-
-## What’s New Panel Content for Firefox 76
-
-
-## Lockwise message
-
-
-## Vulnerable Passwords message
-
-
-## Picture-in-Picture fullscreen message
-
-
-## Protections Dashboard message
-
-
-## Better PDF message
-
-
 cfr-doorhanger-milestone-close-button = Lor
     .accesskey = L
 
@@ -173,15 +67,69 @@ cfr-doorhanger-doh-secondary-button = Juki
 
 ## Fission Experiment Message
 
-cfr-doorhanger-fission-primary-button = AYA, Aniang
-    .accesskey = A
-cfr-doorhanger-fission-secondary-button = Nong ngec mapol
-    .accesskey = N
-
-## What's new: Cookies message
-
-
-## What's new: Media controls message
-
 ## Full Video Support CFR message
+
+
+## Spotlight modal shared strings
+
+
+## VPN promotion dialog for public Wi-Fi users
+##
+## If a user is detected to be on a public Wi-Fi network, they are given a
+## bit of info about how to improve their privacy and then offered a button
+## to the Mozilla VPN page and a link to dismiss the dialog.
+
+
+## Total Cookie Protection Rollout
+
+## Emotive Continuous Onboarding
+
+
+## MR2022 Background Update Windows native toast notification strings.
+##
+## These strings will be displayed by the Windows operating system in
+## a native toast, like:
+##
+## <b>multi-line title</b>
+## multi-line text
+## <img>
+## [ primary button ] [ secondary button ]
+##
+## The button labels are fitted into narrow fixed-width buttons by
+## Windows and therefore must be as narrow as possible.
+
+# This button label will be fitted into a narrow fixed-width button by
+# Windows. Try to not exceed the width of the English text (compare it
+# using a variable font like Arial): the button can only fit 1-2
+# additional characters, exceeding characters will be truncated.
+mr2022-background-update-toast-primary-button-label = Yab { -brand-shorter-name } Kombedi
+
+# This button label will be fitted into a narrow fixed-width button by
+# Windows. Try to not exceed the width of the English text (compare it using a
+# variable font like Arial): the button can only fit 1-2 additional characters,
+# exceeding characters will be truncated.
+mr2022-background-update-toast-secondary-button-label = Poo wiya Lacen
+
+## Firefox View CFR
+
+firefoxview-cfr-header-v2 = Cak oyot ki kama i giko iyie ni
+
+## Firefox View Spotlight
+
+firefoxview-spotlight-promo-primarybutton = Nen kit ma tiyo kwede
+firefoxview-spotlight-promo-secondarybutton = Kal
+
+## Colorways expiry reminder CFR
+
+
+## Cookie Banner Handling CFR
+
+
+## These strings are used in the Fox doodle Pin/set default spotlights
+
+## These strings are used in the Set Firefox as Default PDF Handler for Existing Users experiment
+
+## FxA sync CFR
+
+## Device Migration FxA Spotlight
 

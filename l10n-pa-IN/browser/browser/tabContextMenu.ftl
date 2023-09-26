@@ -11,6 +11,12 @@ reload-tab =
 select-all-tabs =
     .label = ਸਾਰੀਆਂ ਟੈਬਾਂ ਚੁਣੋ
     .accesskey = S
+tab-context-play-tab =
+    .label = ਟੈਬ ਚਲਾਓ
+    .accesskey = l
+tab-context-play-tabs =
+    .label = ਟੈਬਾਂ ਚਲਾਓ
+    .accesskey = y
 duplicate-tab =
     .label = ਡੁਪਲੀਕੇਟ ਟੈਬ
     .accesskey = D
@@ -48,12 +54,9 @@ unpin-selected-tabs =
 bookmark-selected-tabs =
     .label = …ਟੈਬਾਂ ਬੁੱਕਮਾਰਕ ਕਰੋ
     .accesskey = B
-bookmark-tab =
-    .label = ਟੈਬ ਬੁੱਕਮਾਰਕ ਕਰੋ
+tab-context-bookmark-tab =
+    .label = …ਟੈਬ ਨੂੰ ਬੁੱਕਮਾਰਕ ਕਰੋ
     .accesskey = B
-reopen-in-container =
-    .label = ਕਨਟਰੇਨਰ ਵਿੱਚ ਮੁੜ-ਖੋਲ੍ਹੋ
-    .accesskey = e
 tab-context-open-in-new-container-tab =
     .label = ਨਵੇਂ ਕਨਟੇਨਰ ਵਿੱਚ ਖੋਲ੍ਹੋ
     .accesskey = e
@@ -69,31 +72,9 @@ move-to-new-window =
 tab-context-close-multiple-tabs =
     .label = ਕਈ ਟੈਬਾਂ ਬੰਦ ਕਰੋ
     .accesskey = M
-tab-context-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] ਬੰਦ ਕੀਤੀ ਟੈਬ ਵਾਪਸ ਲਵੋ
-            [one] ਬੰਦ ਕੀਤੀ ਟੈਬ ਵਾਪਸ ਲਵੋ
-           *[other] ਬੰਦ ਕੀਤੀਆਂ ਟੈਬਾਂ ਵਾਪਸ ਲਵੋ
-        }
-    .accesskey = U
-close-tab =
-    .label = ਟੈਬ ਨੂੰ ਬੰਦ ਕਰੋ
-    .accesskey = c
-close-tabs =
-    .label = ਟੈਬਾਂ ਬੰਦ ਕਰੋ
-    .accesskey = S
-move-tabs =
-    .label = ਟੈਬਾਂ ਭੇਜੋ
-    .accesskey = v
-move-tab =
-    .label = ਟੈਬ ਭੇਜੋ
-    .accesskey = v
 tab-context-share-url =
     .label = ਸਾਂਝਾ ਕਰੋ
     .accesskey = h
-tab-context-share-more =
-    .label = …ਹੋਰ
 
 ## Variables:
 ##  $tabCount (Number): the number of tabs that are affected by the action.
@@ -105,12 +86,11 @@ tab-context-reopen-closed-tabs =
            *[other] ਬੰਦ ਕੀਤੀਆਂ ਟੈਬਾਂ ਮੁੜ-ਖੋਲ੍ਹੋ
         }
     .accesskey = o
-tab-context-close-tabs =
+tab-context-close-n-tabs =
     .label =
         { $tabCount ->
             [1] ਟੈਬ ਬੰਦ ਕਰੋ
-            [one] ਟੈਬ ਬੰਦ ਕਰੋ
-           *[other] ਟੈਬਾਂ ਬੰਦ ਕਰੋ
+           *[other] { $tabCount } ਟੈਬਾਂ ਬੰਦ ਕਰੋ
         }
     .accesskey = C
 tab-context-move-tabs =
@@ -121,3 +101,11 @@ tab-context-move-tabs =
            *[other] ਟੈਬਾਂ ਭੇਜੋ
         }
     .accesskey = v
+
+tab-context-send-tabs-to-device =
+    .label =
+        { $tabCount ->
+            [one] ਟੈਬ ਡਿਵਾਈਸ 'ਤੇ ਭੇਜੋ
+           *[other] { $tabCount } ਟੈਬਾਂ ਡਿਵਾਈਸ 'ਤੇ ਭੇਜੋ
+        }
+    .accesskey = n

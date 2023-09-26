@@ -2,17 +2,16 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-addons-window =
-    .title = مدير الإضافات
-
 addons-page-title = مدير الإضافات
 
 search-header =
     .placeholder = ابحث في addons.mozilla.org
     .searchbuttonlabel = ابحث
 
-search-header-shortcut =
-    .key = f
+## Variables
+##   $domain - Domain name where add-ons are available (e.g. addons.mozilla.org)
+
+##
 
 list-empty-installed =
     .value = ليس لديك أي إضافات منصّبة من هذا النوع
@@ -33,60 +32,11 @@ help-button = دعم الإضافات
 sidebar-help-button-title =
     .title = دعم الإضافات
 
-preferences =
-    { PLATFORM() ->
-        [windows] خيارات { -brand-short-name }
-       *[other] تفضيلات { -brand-short-name }
-    }
-sidebar-preferences-button-title =
-    .title =
-        { PLATFORM() ->
-            [windows] خيارات { -brand-short-name }
-           *[other] تفضيلات { -brand-short-name }
-        }
-
 show-unsigned-extensions-button =
     .label = تعذّر التحقق من بعض الامتدادات
 
 show-all-extensions-button =
     .label = اعرض كل الامتدادات
-
-cmd-show-details =
-    .label = أظهر المزيد من المعلومات
-    .accesskey = ظ
-
-cmd-find-updates =
-    .label = ابحث عن التحديثات
-    .accesskey = ح
-
-cmd-preferences =
-    .label =
-        { PLATFORM() ->
-            [windows] خيارات
-           *[other] تفضيلات
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] خ
-           *[other] ف
-        }
-
-cmd-enable-theme =
-    .label = طبّق السمة
-    .accesskey = س
-
-cmd-disable-theme =
-    .label = انزع السمة
-    .accesskey = س
-
-cmd-install-addon =
-    .label = نصّب
-    .accesskey = ن
-
-cmd-contribute =
-    .label = ساهِم
-    .accesskey = س
-    .tooltiptext = ساهِم في تطوير هذه الإضافة
 
 detail-version =
     .label = النسخة
@@ -230,7 +180,6 @@ extensions-warning-update-security = التحقق من أمن التحديثات
 extensions-warning-update-security-button = فعّل
     .title = فعّل التحقق من أمن تحديثات الإضافات
 
-
 ## Strings connected to add-on updates
 
 addon-updates-check-for-updates = التمس التحديثات
@@ -373,7 +322,6 @@ extension-enabled-heading = مفعّل
 extension-disabled-heading = معطّل
 
 theme-enabled-heading = مفعّلة
-theme-disabled-heading = معطّلة
 
 plugin-enabled-heading = مفعّلة
 plugin-disabled-heading = معطّلة
@@ -383,8 +331,6 @@ dictionary-disabled-heading = معطّل
 
 locale-enabled-heading = مفعّلة
 locale-disabled-heading = معطّلة
-
-ask-to-activate-button = اسأل قبل التفعيل
 
 always-activate-button = فعّل دائمًا
 never-activate-button = لا تُفعّل أبدًا
@@ -442,9 +388,12 @@ install-update-button = حدّث
 addon-badge-private-browsing-allowed2 =
     .title = مسموح بها في النوافذ الخاصة
     .aria-label = { addon-badge-private-browsing-allowed2.title }
-addon-detail-private-browsing-help = إن سمحت به فسيملك هذا الامتداد تصريح الوصول إلى نشاطك على الإنترنت وأنت تتصفح تصفحا خاصا. <a data-l10n-name="learn-more">اطّلع على المزيد</label>
+addon-detail-private-browsing-help = إن سمحت به فسيملك هذا الامتداد تصريح الوصول إلى نشاطك على الإنترنت وأنت تتصفح تصفحا خاصا. <a data-l10n-name="learn-more">اطّلع على المزيد</a>
 addon-detail-private-browsing-allow = مسموح
 addon-detail-private-browsing-disallow = غير مسموح
+
+## "sites with restrictions" (internally called "quarantined") are special domains
+## where add-ons are normally blocked for security reasons.
 
 ## This is the tooltip text for the recommended badges for an extension in about:addons. The
 ## badge is a small icon displayed next to an extension when it is recommended on AMO.
@@ -487,3 +436,29 @@ addons-heading-search-input =
 
 addon-page-options-button =
     .title = أدوات لجميع الإضافات
+
+## Detail notifications
+## Variables:
+##   $name (String): name of the add-on.
+
+## Detail notifications
+## Variables:
+##   $name (string) - Name of the add-on.
+
+# Variables:
+#   $version (String): application version.
+details-notification-incompatible = { $name } غير متوافقة مع { -brand-short-name } { $version }.
+
+details-notification-unsigned-and-disabled = تعذّر التحقق من { $name } للاستخدام مع { -brand-short-name } و لذا عُطّل.
+details-notification-unsigned-and-disabled-link = المزيد من المعلومات
+
+details-notification-unsigned = تعذّر التحقق من { $name } للاستخدام مع { -brand-short-name }. واصل بحذر.
+details-notification-unsigned-link = المزيد من المعلومات
+
+details-notification-blocked = عُطّلت { $name } لأسباب تتعلق بالأمن أو الثبات.
+details-notification-blocked-link = مزيد من المعلومات
+
+details-notification-softblocked = { $name } معروفة بتسببها لمشاكل في الأمن أو الثبات.
+details-notification-softblocked-link = مزيد من المعلومات
+
+details-notification-gmp-pending = سينصّب { $name } حالًا.

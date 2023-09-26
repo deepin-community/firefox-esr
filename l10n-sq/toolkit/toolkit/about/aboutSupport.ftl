@@ -4,7 +4,7 @@
 
 page-title = Të dhëna Diagnostikimi
 page-subtitle =
-    Kjo faqe përmban të dhëna teknike që mund të jenë të dobishme kur përpiqeni
+    Kjo faqe përmban të dhëna teknike që mund të jenë të dobishme, kur përpiqeni
     të zgjidhni një problem. Nëse po shihni për përgjigje për pyetje të rëndomta
     rreth { -brand-short-name }-it, shihni te <a data-l10n-name="support-link">sajti ynë i asistencës</a>.
 
@@ -13,11 +13,6 @@ crashes-id = ID Njoftimi
 crashes-send-date = Parashtruar më
 crashes-all-reports = Krejt Njoftimet e Vithisjeve
 crashes-no-config = Ky aplikacion nuk është formësuar për shfaqje njoftimesh vithisjeje.
-extensions-title = Zgjerime
-extensions-name = Emër
-extensions-enabled = I aktivizuar
-extensions-version = Version
-extensions-id = ID
 support-addons-title = Shtesa
 support-addons-name = Emër
 support-addons-type = Lloj
@@ -63,21 +58,32 @@ app-basics-enabled-plugins = Shtojca të Aktivizuara
 app-basics-build-config = Formësim Montimi
 app-basics-user-agent = Agjent Përdoruesi
 app-basics-os = OS
+app-basics-os-theme = Temë OS-i
 # Rosetta is Apple's translation process to run apps containing x86_64
 # instructions on Apple Silicon. This should remain in English.
-app-basics-rosetta = Rosetta Translated
+app-basics-rosetta = Përkthyer Nga Rosetta
 app-basics-memory-use = Përdorim Kujtese
 app-basics-performance = Punim
 app-basics-service-workers = Service Workers të Regjistruar
+app-basics-third-party = Module Palësh të Treta
 app-basics-profiles = Profile
 app-basics-launcher-process-status = Proces Nisësi
 app-basics-multi-process-support = Dritare Multiproces
+app-basics-fission-support = Dritare Fission
 app-basics-remote-processes-count = Procese të Largët
 app-basics-enterprise-policies = Rregulla Në Nivel Ndërmarrjeje
 app-basics-location-service-key-google = Kyç Shërbimi Vendndodhjesh Google
 app-basics-safebrowsing-key-google = Kyç Google Safebrowsing
 app-basics-key-mozilla = Kyç Mozilla Location Service
 app-basics-safe-mode = Mënyrë e Sigurt
+app-basics-memory-size = Madhësi Kujtese (RAM)
+app-basics-disk-available = Hapësirë Disku e Lirë
+
+# Variables:
+#   $value (number) - Amount of data being stored
+#   $unit (string) - The unit of data being stored (e.g. MB)
+app-basics-data-size = { $value } { $unit }
+
 show-dir-label =
     { PLATFORM() ->
         [macos] Shfaqe në Finder
@@ -112,14 +118,22 @@ graphics-window-protocol = Protokoll Window
 # Desktop environment in use on Linux (e.g. GNOME, KDE, XFCE, etc).
 graphics-desktop-environment = Mjedis Desktop
 place-database-title = Bazë të Dhënash Vendesh
+place-database-stats = Statistika
+place-database-stats-show = Shfaqi Statistikat
+place-database-stats-hide = Fshihi Statistikat
+place-database-stats-entity = Njësi
+place-database-stats-count = Numër
+place-database-stats-size-kib = Madhësi (KiB)
+place-database-stats-size-perc = Madhësi (%)
+place-database-stats-efficiency-perc = Efikasitet (%)
 place-database-integrity = Integritet
 place-database-verify-integrity = Verifikoni Integritetin
-a11y-title = Përdorshmëri
+a11y-title = Përdorim nga persona me aftësi të kufizuara
 a11y-activated = E aktivizuar
-a11y-force-disabled = Parandaloje Përdorshmërinë
+a11y-force-disabled = Parandalo Përdorim Nga Persona Me Aftësi të Kufizuara
 library-version-title = Versione Librarish
 copy-text-to-clipboard-label = Kopjoje tekstin te e papastra
-copy-raw-data-to-clipboard-label = Kopjo të dhëna të papërpunuara te e papastra
+copy-raw-data-to-clipboard-label = Kopjo te e papastra të dhëna të papërpunuara
 sandbox-title = Bankëprovë
 sandbox-sys-call-log-title = Thirrje Sistemi të Hedhura Poshtë
 sandbox-sys-call-index = #
@@ -129,11 +143,8 @@ sandbox-sys-call-tid = TID
 sandbox-sys-call-proc-type = Lloj Procesi
 sandbox-sys-call-number = Syscall
 sandbox-sys-call-args = Argumente
-safe-mode-title = Provoni Mënyrën e Parrezik
-restart-in-safe-mode-label = Riniseni me Shtesat të Çaktivizuara…
-
 troubleshoot-mode-title = Diagnostikoni probleme
-restart-in-troubleshoot-mode-label = Mënyrë Diagnostikim…
+restart-in-troubleshoot-mode-label = Mënyra Diagnostikim…
 clear-startup-cache-title = Provoni spastrimin e fshehtinës së nisjes
 clear-startup-cache-label = Spastroni fshehtinë nisjeje…
 startup-cache-dialog-title2 = Të riniset { -brand-short-name }-i për të spastruar fshehtinën e nisjes?
@@ -159,8 +170,11 @@ media-device-channels = Kanale
 media-device-rate = Shpeshti
 media-device-latency = Vonesë
 media-capabilities-title = Aftësi Media
+media-codec-support-info = Hollësi Mbulimi Kodeku
 # List all the entries of the database.
 media-capabilities-enumerate = Numërtoni bazë të dhënash
+
+## Codec support table
 
 ##
 
@@ -188,37 +202,6 @@ remote-debugging-accepting-connections = Me Pranim Lidhjesh
 remote-debugging-url = URL
 
 ##
-
-support-third-party-modules-title = Module Palësh të Treta
-support-third-party-modules-module = Kartelë Moduli
-support-third-party-modules-version = Version Kartele
-support-third-party-modules-vendor = Të dhëna Tregtuesi
-support-third-party-modules-occurrence = Përsëritje
-support-third-party-modules-process = Lloj & ID Procesi
-support-third-party-modules-thread = Rrjedhë
-support-third-party-modules-base = Adresë Imagebase
-support-third-party-modules-uptime = Kohë Në Punë e Procesit (ms)
-support-third-party-modules-duration = Kohëzgjatje Ngarkese (ms)
-support-third-party-modules-status = Gjendje
-support-third-party-modules-status-loaded = I ngarkuar
-support-third-party-modules-status-blocked = I bllokuar
-support-third-party-modules-status-redirected = I ridrejtuar
-support-third-party-modules-empty = S’u ngarkuan module palësh të treta.
-support-third-party-modules-no-value = (S’ka vlerë)
-support-third-party-modules-button-open =
-    .title = Hapni vendndodhje kartele…
-support-third-party-modules-expand =
-    .title = Shfaq të dhëna të hollësishme
-support-third-party-modules-collapse =
-    .title = Tkurri të dhënat e hollësishme
-support-third-party-modules-unsigned-icon =
-    .title = Ky modul s’është i nënshkruar
-support-third-party-modules-folder-icon =
-    .title = Hapni vendndodhje kartele…
-support-third-party-modules-down-icon =
-    .title = Shfaq të dhëna të hollësishme
-support-third-party-modules-up-icon =
-    .title = Tkurri të dhënat e hollësishme
 
 # Variables
 # $days (Integer) - Number of days of crashes to log
@@ -314,11 +297,8 @@ webgl2-renderer = Vizatues WebGL2
 webgl2-version = Version Përudhësi WebGL 2
 webgl2-driver-extensions = Zgjerime Përudhësi WebGL 2
 webgl2-extensions = Zgjerime WebGL 2
-blocklisted-bug = Vënë në listë të zezë, për shkak problemesh të njohura
-
-# Variables
-# $bugNumber (string) - String of bug number from Bugzilla
-bug-link = e meta { $bugNumber }
+webgpu-default-adapter = Përshtatës Parazgjedhje WebGPU
+webgpu-fallback-adapter = Përshtatës Rrugëdalje WebGPU
 
 # Variables
 #   $bugNumber (string) - Bug number on Bugzilla
@@ -329,8 +309,6 @@ support-blocklisted-bug = Shtuar në listë bllokimesh për shkak çështjesh t�
 unknown-failure = Vënë në listë të zezë, kod dështimi { $failureCode }
 
 d3d11layers-crash-guard = Hartues D3D11
-d3d11video-crash-guard = Shkodues Videosh D3D11
-d3d9video-crash-guard = Shkodues Videosh D3D9
 glcontext-crash-guard = OpenGL
 wmfvpxvideo-crash-guard = Shkodues Videosh WMF VPX
 
@@ -352,6 +330,7 @@ can-sandbox-content = Mbajtje Brenda Bankëprovës e Proceseve të Lëndës
 can-sandbox-media = Mbajtje Brenda Bankëprovës e Shtojcave Për Media
 content-sandbox-level = Shkallë Mbajtjeje Brenda Bankëprovës e Proceseve të Lëndës
 effective-content-sandbox-level = Shkallë Efektive Mbajtjeje Brenda Bankëprovës e Proceseve të Lëndës
+content-win32k-lockdown-state = Gjendje “Win32k Lockdown” për Proces Lënde
 sandbox-proc-type-content = lëndë
 sandbox-proc-type-file = lëndë kartele
 sandbox-proc-type-media-plugin = shtojcë mediash
@@ -363,7 +342,7 @@ startup-cache-ignore-disk-cache = Shpërfill Fshehtinë Disku
 startup-cache-found-disk-cache-on-init = U gjet Fshehtinë Disku në Init
 startup-cache-wrote-to-disk-cache = U shkrua në Fshehtinë Disku
 
-launcher-process-status-0 = E aktivizuar
+launcher-process-status-0 = I aktivizuar
 launcher-process-status-1 = Çaktivizuar për shkak dështimesh
 launcher-process-status-2 = Çaktivizuar forcërisht
 launcher-process-status-unknown = Gjendje e panjohur
@@ -372,15 +351,6 @@ launcher-process-status-unknown = Gjendje e panjohur
 # $remoteWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
 multi-process-windows = { $remoteWindows }/{ $totalWindows }
-multi-process-status-0 = Aktivizuar nga përdoruesi
-multi-process-status-1 = Aktivizuar si parazgjedhje
-multi-process-status-2 = I çaktivizuar
-multi-process-status-4 = Çaktivizuar nga mjetet e përdorshmërisë
-multi-process-status-6 = Çaktivizuar për shkak futje teksti të pambuluar
-multi-process-status-7 = Çaktivizuar nga shtesat
-multi-process-status-8 = Çaktivizuar forcërisht
-multi-process-status-unknown = Gjendje e panjohur
-
 # Variables
 # $fissionWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
@@ -389,7 +359,7 @@ fission-status-experiment-control = Çaktivizuar nga eksperiment
 fission-status-experiment-treatment = Aktivizuar nga eksperiment
 fission-status-disabled-by-e10s-env = Çaktivizuar nga mjedisi
 fission-status-enabled-by-env = Aktivizuar nga mjedisi
-fission-status-disabled-by-safe-mode = Çaktivizuar nga mënyra e parrezik
+fission-status-disabled-by-env = Çaktivizuar nga mjedisi
 fission-status-enabled-by-default = Aktivizuar si parazgjedhje
 fission-status-disabled-by-default = Çaktivizuar si parazgjedhje
 fission-status-enabled-by-user-pref = Aktivizuar nga përdoruesi
@@ -421,7 +391,7 @@ policies-error = Gabim
 support-printing-title = Po shtypet
 support-printing-troubleshoot = Diagnostikim
 support-printing-clear-settings-button = Spastro rregullimet e ruajtura për shtypjet
-support-printing-modified-settings = U ndryshuan rregullime shtypjeje
+support-printing-modified-settings = Rregullime shtypjeje të ndryshuara
 support-printing-prefs-name = Emër
 support-printing-prefs-value = Vlerë
 

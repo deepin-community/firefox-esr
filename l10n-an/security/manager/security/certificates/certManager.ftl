@@ -23,48 +23,11 @@ certmgr-tab-ca =
 certmgr-mine = Tiens certificaus d'estas organizacions que t'identifican
 certmgr-remembered = Estos certificaus se fan servir para identificar-te en pachinas web
 certmgr-people = Tiens certificaus en o fichero que identifican a estas personas
-certmgr-servers = Tiens certificaus en o fichero que identifican estes servidors
 certmgr-ca = Tiens certificaus en o fichero que identifican estas autoridatz de certificación
 
-certmgr-detail-general-tab-title =
-    .label = Cheneral
-    .accesskey = C
-
-certmgr-detail-pretty-print-tab-title =
-    .label = Detalles
-    .accesskey = D
-
-certmgr-pending-label =
-    .value = Se ye verificando o certificau…
-
-certmgr-subject-label = Emitiu a nombre de
-
-certmgr-issuer-label = Emitiu por
-
-certmgr-period-of-validity = Periodo de valideza
-
-certmgr-fingerprints = Ditaladas
-
-certmgr-cert-detail =
-    .title = Detalle d'o certificau
-    .buttonlabelaccept = Zarrar
-    .buttonaccesskeyaccept = Z
-
-certmgr-cert-detail-commonname = Nombre habitual (CN)
-
-certmgr-cert-detail-org = Organización (O)
-
-certmgr-cert-detail-orgunit = Unidat organizativa (OU)
-
-certmgr-cert-detail-serial-number = Numero de serie
-
-certmgr-cert-detail-sha-256-fingerprint = Ditalada SHA-256
-
-certmgr-cert-detail-sha-1-fingerprint = Ditalada SHA1
-
-certmgr-edit-ca-cert =
+certmgr-edit-ca-cert2 =
     .title = Editar os parametros de confianza d'o certificau d'a CA
-    .style = width: 48em;
+    .style = min-width: 48em;
 
 certmgr-edit-cert-edit-trust = Editar os parametros de confianza:
 
@@ -74,9 +37,9 @@ certmgr-edit-cert-trust-ssl =
 certmgr-edit-cert-trust-email =
     .label = Iste certificau puede identificar usuarios de correu.
 
-certmgr-delete-cert =
+certmgr-delete-cert2 =
     .title = Eliminar o certificau
-    .style = width: 48em; height: 24em;
+    .style = min-width: 48em; min-height: 24em;
 
 certmgr-cert-host =
     .label = Servidor
@@ -87,18 +50,11 @@ certmgr-cert-name =
 certmgr-cert-server =
     .label = Servidor
 
-certmgr-override-lifetime =
-    .label = Tiempo de vida
-
 certmgr-token-name =
     .label = Dispositivo de seguranza
 
-certmgr-begins-on = Data d'inicio
-
 certmgr-begins-label =
     .label = Data d'inicio
-
-certmgr-expires-on = Calendata de vencimiento
 
 certmgr-expires-label =
     .label = Calendata de vencimiento
@@ -140,18 +96,6 @@ certmgr-backup-all =
 certmgr-restore =
     .label = Importar…
     .accesskey = m
-
-certmgr-details =
-    .value = Campos d'o certificau
-    .accesskey = f
-
-certmgr-fields =
-    .value = Valor d'o campo
-    .accesskey = V
-
-certmgr-hierarchy =
-    .value = Hierarquía de certificaus
-    .accesskey = H
 
 certmgr-add-exception =
     .label = Adhibir una excepción…
@@ -215,12 +159,6 @@ delete-user-cert-confirm = Ye seguro que quiere eliminar istos certificaus?
 delete-user-cert-impact = Si elimina un d'os suyos propios certificaus, no podrá fer-lo servir ta identificar-se.
 
 
-delete-ssl-cert-title =
-    .title = Eliminar as excepcions de certificaus de servidor
-delete-ssl-cert-confirm = Ye seguro que quiere eliminar istas excepcions de servidor?
-delete-ssl-cert-impact = Si elimina una excepción de servidor, restaurará as comprobacions de seguranza habituals d'ixe servidor y le caldrá emplegar un certificau valido.
-
-
 delete-ca-cert-title =
     .title = Eliminar u deixar de confiar en os certificaus d'a CA
 delete-ca-cert-confirm = Ha solicitau eliminar istos certificaus d'a CA. En o caso de certificaus integraus, se'n eliminará toda la confianza, que tiene o mesmo efecto. Ye seguro que eliminar-los o deixar-ie de confiar?
@@ -239,51 +177,11 @@ delete-email-cert-impact = Si elimina un certificau de correu electronico d'una 
 cert-with-serial =
     .value = Certificau con numero de serie: { $serialNumber }
 
-## Cert Viewer
-
-# Title used for the Certificate Viewer.
-#
-# Variables:
-#   $certificate : a string representative of the certificate being viewed.
-cert-viewer-title =
-    .title = Visor de certificau: “{ $certName }”
-
-not-present =
-    .value = <No ye parte d'o certificau>
-
-# Cert verification
-cert-verified = S'ha verificau o certificau ta os usos siguients:
-
-# Add usage
-verify-ssl-client =
-    .value = Certificau de client SSL
-
-verify-ssl-server =
-    .value = Certificau de servidor SSL
-
-verify-ssl-ca =
-    .value = Entidat certificadera d'o SSL
-
-verify-email-signer =
-    .value = Certificau de sinyatura de correu electronico
-
-verify-email-recip =
-    .value = Certificau de destinatario de correu electronico
-
-# Cert verification
-cert-not-verified-cert-revoked = No s'ha puesto verificar o certificau porque ye estau revocau.
-cert-not-verified-cert-expired = No s'ha puesto verificar o certificau porque ha venciu.
-cert-not-verified-cert-not-trusted = No s'ha puesto verificar o certificau porque no se i confía.
-cert-not-verified-issuer-not-trusted = No s'ha puesto verificar o certificau porque no se confía en l'emisor.
-cert-not-verified-issuer-unknown = No s'ha puesto verificar o certificau porque l'emisor ye desconoixiu.
-cert-not-verified-ca-invalid = No s'ha puesto verificar o certificau porque o certificau d'a CA no ye valido.
-cert-not-verified_algorithm-disabled = No s'ha puesto verificar o certificau porque ha estau sinyau con un algorismo de sinyadura inhabilitau porque no yera seguro.
-cert-not-verified-unknown = No s'ha puesto verificar o certificau por razons desconoixidas.
-
 # Used to indicate that the user chose not to send a client authentication certificate to a server that requested one in a TLS handshake.
 send-no-client-certificate = No ninviar lo certificau de client
 
 ## Used to show whether an override is temporary or permanent
+
 
 ## Add Security Exception dialog
 

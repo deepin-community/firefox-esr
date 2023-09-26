@@ -16,9 +16,9 @@ toolbar-context-menu-report-extension =
     .label = Tuairiscigh an Eisínteacht
     .accesskey = r
 
-# Can appear on the same context menu as menubarCmd ("Menu Bar") and
-# personalbarCmd ("Bookmarks Toolbar"), so they should have different
-# access keys.
+# Can appear on the same context menu as toolbar-context-menu-menu-bar-cmd
+# ("Menu Bar") and personalbarCmd ("Bookmarks Toolbar"), so they should
+# have different access keys.
 toolbar-context-menu-pin-to-overflow-menu =
     .label = Pionnáil leis an Roghchlár Fuílligh
     .accesskey = P
@@ -29,3 +29,6 @@ toolbar-context-menu-view-customize-toolbar =
     .label = Saincheap…
     .accesskey = c
 
+toolbar-context-menu-menu-bar-cmd =
+    .toolbarname = Barra Roghchláir
+    .accesskey = R

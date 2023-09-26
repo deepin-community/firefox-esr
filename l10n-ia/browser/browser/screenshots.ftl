@@ -2,13 +2,12 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-screenshots-context-menu = Capturar un instantaneo de schermo
-
-screenshots-my-shots-button = Mi instantaneos
-
 screenshot-toolbarbutton =
     .label = Instantaneo de schermo
-    .tooltiptext = Prende un instantaneo
+    .tooltiptext = Prender un instantaneo
+
+screenshot-shortcut =
+    .key = S
 
 screenshots-instructions = Trahe o clicca sur le pagina pro seliger un parte. Pulsa ESC pro cancellar.
 screenshots-cancel-button = Cancellar
@@ -18,6 +17,14 @@ screenshots-download-button = Discargar
 screenshots-download-button-tooltip = Discargar instantaneo de schermo
 screenshots-copy-button = Copiar
 screenshots-copy-button-tooltip = Copiar instantaneo del schermo al area de transferentia
+screenshots-download-button-title =
+    .title = Discargar instantaneo de schermo
+screenshots-copy-button-title =
+    .title = Copiar instantaneo del schermo al area de transferentia
+screenshots-cancel-button-title =
+    .title = Cancellar
+screenshots-retry-button-title =
+    .title = Retentar instantaneo de schermo
 
 screenshots-meta-key =
     { PLATFORM() ->
@@ -41,8 +48,6 @@ screenshots-login-error-details = Nos non pote salvar tu instantaneo perque il h
 screenshots-unshootable-page-error-title = Impossibile capturar iste pagina.
 screenshots-unshootable-page-error-details = Isto non es un pagina Web normal, assi que tu non pote prender un captura de schermo de illo.
 
-screenshots-self-screenshot-error-title = Tu non pote prender un instantaneo de un pagina de { -screenshots-brand-name }!
-
 screenshots-empty-selection-error-title = Tu selection es troppo micre
 
 screenshots-private-window-error-title = { -screenshots-brand-name } es disactivate in modo de navigation private
@@ -50,3 +55,6 @@ screenshots-private-window-error-details = Excusa nos pro le incommoditate. Nos 
 
 screenshots-generic-error-title = Hola! { -screenshots-brand-name } se trova disregulate.
 screenshots-generic-error-details = Nos non sape que ha occurrite. Vole tu tentar de novo, o capturar un instantaneo de un altere pagina?
+
+screenshots-too-large-error-title = Tu instantaneo era retaliate perque illo era troppo grande
+screenshots-too-large-error-details = Prova seliger un region que es minor que 32.700 pixels sur su latere plus longe o 124.900.000 pixels de area total.

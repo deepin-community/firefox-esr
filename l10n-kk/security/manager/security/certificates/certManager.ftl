@@ -23,49 +23,12 @@ certmgr-tab-ca =
 certmgr-mine = Сізде келесі ұйымдардан алынған сізді анықтайтын сертификаттар бар
 certmgr-remembered = Бұл сертификаттар сізді веб-сайттарға идентификациялау үшін қолданылады.
 certmgr-people = Сізде келесі адамдарды анықтайтын сертификаттар файлы бар
-certmgr-servers = Сізде келесі серверлерді анықтайтын сертификаттар файлы бар
 certmgr-server = Бұл жазбалар сервер сертификатының қателері үшін ережеден тыс жағдайларды анықтайды
 certmgr-ca = Сізде келесі сертификаттарды растаушыларды анықтайтын сертификаттар файлы бар
 
-certmgr-detail-general-tab-title =
-    .label = Жалпы
-    .accesskey = Ж
-
-certmgr-detail-pretty-print-tab-title =
-    .label = Көбірек білу
-    .accesskey = К
-
-certmgr-pending-label =
-    .value = Сертификат тексерілуде…
-
-certmgr-subject-label = Кімге берілген
-
-certmgr-issuer-label = Кім берген
-
-certmgr-period-of-validity = Жарамдылық мерзімі
-
-certmgr-fingerprints = Баспалар
-
-certmgr-cert-detail =
-    .title = Сертификат ақпараты
-    .buttonlabelaccept = Жабу
-    .buttonaccesskeyaccept = Ж
-
-certmgr-cert-detail-commonname = Жалпы аты (CN)
-
-certmgr-cert-detail-org = Ұйым (O)
-
-certmgr-cert-detail-orgunit = Бөлім (OU)
-
-certmgr-cert-detail-serial-number = Сериялық нөмірі
-
-certmgr-cert-detail-sha-256-fingerprint = SHA-256 баспасы
-
-certmgr-cert-detail-sha-1-fingerprint = SHA1 баспасы
-
-certmgr-edit-ca-cert =
+certmgr-edit-ca-cert2 =
     .title = CA сертификатына сену баптауларын түзету
-    .style = width: 48em;
+    .style = min-width: 48em;
 
 certmgr-edit-cert-edit-trust = Сену баптауларын түзету:
 
@@ -75,9 +38,9 @@ certmgr-edit-cert-trust-ssl =
 certmgr-edit-cert-trust-email =
     .label = Осы сертификат электронды пошта пайдаланушыларын анықтай алады.
 
-certmgr-delete-cert =
+certmgr-delete-cert2 =
     .title = Сертификатты өшіру
-    .style = width: 48em; height: 24em;
+    .style = min-width: 48em; min-height: 24em;
 
 certmgr-cert-host =
     .label = Хост
@@ -88,18 +51,11 @@ certmgr-cert-name =
 certmgr-cert-server =
     .label = Сервері
 
-certmgr-override-lifetime =
-    .label = Мерзімі
-
 certmgr-token-name =
     .label = Қауіпсіздік құрылғысы
 
-certmgr-begins-on = Басталу уақыты
-
 certmgr-begins-label =
     .label = Басталу уақыты
-
-certmgr-expires-on = Мерзімі
 
 certmgr-expires-label =
     .label = Мерзімі
@@ -109,6 +65,9 @@ certmgr-email =
 
 certmgr-serial =
     .label = Сериялық нөмірі
+
+certmgr-fingerprint-sha-256 =
+    .label = SHA-256 баспасы
 
 certmgr-view =
     .label = Қарап шығу…
@@ -141,18 +100,6 @@ certmgr-backup-all =
 certmgr-restore =
     .label = Импорттау…
     .accesskey = м
-
-certmgr-details =
-    .value = Сертификат жолдары
-    .accesskey = ж
-
-certmgr-fields =
-    .value = Жол мәні
-    .accesskey = м
-
-certmgr-hierarchy =
-    .value = Сертификаттар иерархиясы
-    .accesskey = х
 
 certmgr-add-exception =
     .label = Ерекше ережені қосу…
@@ -216,12 +163,6 @@ delete-user-cert-confirm = Осы сертификаттарды өшіруді 
 delete-user-cert-impact = Егер сіз өзініздің сертификаттарыңызды өнірсеңіз, одан әрі оларды өзінізді анықтау үшін қолдана алмайсыз.
 
 
-delete-ssl-cert-title =
-    .title = Server Certificate Exceptions өшіру
-delete-ssl-cert-confirm = Осы сервер үшін қауіпсіздік ерекше ережені өшіруді шынымен қалайсыз ба?
-delete-ssl-cert-impact = Сервер үшін ерекше ереже өшірсеңіз, одан әрі осы сервердің шындылығын анықтау қайта қосылады.
-
-
 delete-ssl-override-title =
     .title = Сервер сертификаты үшін ережеден тыс жағдайларды өшіру
 delete-ssl-override-confirm = Сервер сертификаты үшін бұл ережеден тыс жағдайды өшіруді қалайсыз ба?
@@ -245,52 +186,14 @@ delete-email-cert-impact = Егер сіз электронды пошта па�
 cert-with-serial =
     .value = Сериялық нөмірі бар сертификат: { $serialNumber }
 
-## Cert Viewer
-
-# Title used for the Certificate Viewer.
-#
-# Variables:
-#   $certificate : a string representative of the certificate being viewed.
-cert-viewer-title =
-    .title = Сертификатты қарап шығу: "{ $certName }"
-
-not-present =
-    .value = <сертификат бөлігі емес>
-
-# Cert verification
-cert-verified = Бұл сертификат келесі мақсаттармен верификацияланған:
-
-# Add usage
-verify-ssl-client =
-    .value = SSL клиент сертификаты
-
-verify-ssl-server =
-    .value = SSL сервер сертификаты
-
-verify-ssl-ca =
-    .value = SSL сертификаттау орталығы
-
-verify-email-signer =
-    .value = Электрондық пошта сертификаты
-
-verify-email-recip =
-    .value = Электрондық пошта адресатының сертификаты
-
-# Cert verification
-cert-not-verified-cert-revoked = Сертификат верификациясы мүмкін емес - ол қайта шақырылды.
-cert-not-verified-cert-expired = Сертификат верификациясы мүмкін емес - оның мерзімі аяқталды.
-cert-not-verified-cert-not-trusted = Сертификат верификациясы мүмкін емес - оған сенім жоқ.
-cert-not-verified-issuer-not-trusted = Сертификат верификациясы мүмкін емес - оны шығарған жақ сенімсіз.
-cert-not-verified-issuer-unknown = Сертификат верификациясы мүмкін емес - оны шығарған жақ белгісіз.
-cert-not-verified-ca-invalid = Сертификат верификациясы мүмкін емес - орталықтың сертификаты жарамсыз.
-cert-not-verified_algorithm-disabled = Бұл сертификатты растау мүмкін емес, өйткені оған қауіпсіз емес болғаны үшін сөндірілген алгоритмімен қолтаңба қойылған.
-cert-not-verified-unknown = Сертификат верификациясы белгісіз себептерден мүмкін емес.
-
 # Used to indicate that the user chose not to send a client authentication certificate to a server that requested one in a TLS handshake.
 send-no-client-certificate = Клиент сертификатын жібермеу
 
 # Used when no cert is stored for an override
 no-cert-stored-for-override = (Сақталмаған)
+
+# When a certificate is unavailable (for example, it has been deleted or the token it exists on has been removed).
+certificate-not-available = (Қолжетімсіз)
 
 ## Used to show whether an override is temporary or permanent
 

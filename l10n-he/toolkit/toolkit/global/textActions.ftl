@@ -34,6 +34,10 @@ text-action-paste =
     .label = הדבקה
     .accesskey = ה
 
+text-action-paste-no-formatting =
+    .label = הדבקה ללא עיצוב
+    .accesskey = ע
+
 text-action-paste-shortcut =
     .key = V
 
@@ -50,3 +54,26 @@ text-action-select-all-shortcut =
 
 text-action-spell-no-suggestions =
     .label = אין הצעות איות
+
+text-action-spell-add-to-dictionary =
+    .label = הוספה למילון
+    .accesskey = מ
+
+text-action-spell-undo-add-to-dictionary =
+    .label = ביטול הוספה למילון
+    .accesskey = ב
+
+text-action-spell-check-toggle =
+    .label = בדיקת איות
+    .accesskey = ד
+
+text-action-spell-add-dictionaries =
+    .label = הוספת מילונים…
+    .accesskey = מ
+
+text-action-spell-dictionaries =
+    .label = שפות
+    .accesskey = ש
+
+text-action-search-text-box-clear =
+    .title = ניקוי

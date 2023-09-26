@@ -22,8 +22,6 @@ newtab-search-box-search-button =
     .title = Cerca
     .aria-label = Cerca
 
-newtab-search-box-search-the-web-text = Cerca sul Web
-
 # Variables
 #  $engine (String): the name of the user's default search engine
 newtab-search-box-handoff-text = Cerca con { $engine } o inserisci un indirizzo
@@ -39,11 +37,6 @@ newtab-search-box-handoff-input-no-engine =
     .title = Cerca o inserisci un indirizzo
     .aria-label = Cerca o inserisci un indirizzo
 
-newtab-search-box-search-the-web-input =
-    .placeholder = Cerca sul Web
-    .title = Cerca sul Web
-    .aria-label = Cerca sul Web
-
 newtab-search-box-text = Cerca sul Web
 newtab-search-box-input =
     .placeholder = Cerca sul Web
@@ -52,7 +45,6 @@ newtab-search-box-input =
 ## Top Sites - General form dialog.
 
 newtab-topsites-add-search-engine-header = Aggiungi motore di ricerca
-newtab-topsites-add-topsites-header = Nuovi sito principale
 newtab-topsites-add-shortcut-header = Nuova scorciatoia
 newtab-topsites-edit-topsites-header = Modifica sito principale
 newtab-topsites-edit-shortcut-header = Modifica scorciatoia
@@ -181,6 +173,12 @@ newtab-label-sponsored = { $sponsorOrSource } · Sponsorizzata
 #  $sponsor (String): This is the name of a sponsor
 newtab-label-sponsored-by = Sponsorizzata da { $sponsor }
 
+# This string is used under the image of story cards to indicate source and time to read
+# Variables:
+#  $source (String): This is the name of a company or their domain
+#  $timeToRead (Number): This is the estimated number of minutes to read this story
+newtab-label-source-read-time = { $source } · { $timeToRead } min
+
 ## Section Menu: These strings are displayed in the section context menu and are
 ## meant as a call to action for the given section.
 
@@ -205,7 +203,6 @@ newtab-section-expand-section-label =
 ## Section Headers.
 
 newtab-section-header-topsites = Siti principali
-newtab-section-header-highlights = In evidenza
 newtab-section-header-recent-activity = Attività recente
 # Variables:
 #  $provider (String): Name of the corresponding content provider.
@@ -234,10 +231,23 @@ newtab-discovery-empty-section-topstories-timed-out = Oops. Sembra che la sezion
 
 # This is shown at the bottom of the trending stories section and precedes a list of links to popular topics.
 newtab-pocket-read-more = Argomenti popolari:
+newtab-pocket-new-topics-title = Vuoi ancora più storie? Dai un’occhiata agli argomenti più popolari in { -pocket-brand-name }
 newtab-pocket-more-recommendations = Altri suggerimenti
 newtab-pocket-learn-more = Ulteriori informazioni
 newtab-pocket-cta-button = Ottieni { -pocket-brand-name }
 newtab-pocket-cta-text = Salva le storie che ami in { -pocket-brand-name } e nutri la tua mente con letture appassionanti.
+newtab-pocket-pocket-firefox-family = { -pocket-brand-name } è parte della famiglia { -brand-product-name }
+
+## Pocket Final Card Section.
+## This is for the final card in the Pocket grid.
+
+newtab-pocket-save = Salva
+newtab-pocket-saved = Salvato
+
+## Pocket content onboarding experience dialog and modal for new users seeing the Pocket section for the first time, shown as the first item in the Pocket section.
+
+newtab-pocket-onboarding-discover = Scopri il meglio del Web
+newtab-pocket-onboarding-cta = { -pocket-brand-name } esplora un’ampia gamma di pubblicazioni per portare i contenuti più istruttivi, stimolanti e affidabili direttamente nel tuo { -brand-product-name }.
 
 ## Error Fallback Content.
 ## This message and suggested action link are shown in each section of UI that fails to render.
@@ -258,8 +268,10 @@ newtab-custom-sponsored-sites = Scorciatoie sponsorizzate
 newtab-custom-pocket-title = Consigliati da { -pocket-brand-name }
 newtab-custom-pocket-subtitle = Contenuti eccezionali a cura di { -pocket-brand-name }, un membro della famiglia { -brand-product-name }
 newtab-custom-pocket-sponsored = Storie sponsorizzate
+newtab-custom-pocket-show-recent-saves = Mostra elementi salvati di recente
 newtab-custom-recent-title = Attività recente
 newtab-custom-recent-subtitle = Una selezione di siti e contenuti visualizzati di recente
 newtab-custom-close-button = Chiudi
 
 newtab-custom-settings = Gestisci altre impostazioni
+

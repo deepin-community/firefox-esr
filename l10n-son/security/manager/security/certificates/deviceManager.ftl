@@ -5,9 +5,9 @@
 
 ## Strings used for device manager
 
-devmgr =
+devmgr-window =
     .title = Jinay juwalkaw
-    .style = width: 67em; height: 32em;
+    .style = min-width: 67em; min-height: 32em;
 
 devmgr-devlist =
     .label = Saajaw nda jinay dunbey
@@ -104,8 +104,6 @@ devinfo-label =
 
 devinfo-serialnum =
     .label = Fannu lanba
-
-fips-nonempty-password-required = FIPS alhaali ga waažibandi kaŋ war goo nda takaddaɲaa šennikufal kaŋ kayandi saajaw jinay foo kul še. Taare šennikufal kayandi jina ka ceeci ka FIPS alhaali tunandi.
 
 unable-to-toggle-fips = Ši hin ka FIPS yaayoo barmay saajaw goyjinaa še. A ga yaamarandi kaŋ war ma fatta ka porogaramoo tunandi taaga.
 

@@ -5,6 +5,9 @@
 reload-tab =
     .label = Athlódáil an Cluaisín
     .accesskey = A
+tab-context-play-tab =
+    .label = Seinn an Cluaisín
+    .accesskey = l
 close-tabs-to-the-end =
     .label = Dún na cluaisíní ar dheis
     .accesskey = i
@@ -20,10 +23,6 @@ unpin-tab =
 move-to-new-window =
     .label = Bog go Fuinneog Nua
     .accesskey = N
-
-close-tab =
-    .label = Dún Cluaisín
-    .accesskey = D
 
 ## Variables:
 ##  $tabCount (Number): the number of tabs that are affected by the action.

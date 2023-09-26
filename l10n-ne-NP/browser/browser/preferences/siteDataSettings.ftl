@@ -15,18 +15,12 @@ site-data-column-cookies =
     .label = कुकीहरू
 site-data-column-storage =
     .label = भण्डारण
+site-data-column-last-used =
+    .label = अन्तिम प्रयोग
 
 site-data-remove-selected =
     .label = चयन गरिएको हटाउनुहोस्
     .accesskey = r
-
-site-data-button-cancel =
-    .label = रद्द गर्नुहोस्
-    .accesskey = C
-
-site-data-button-save =
-    .label = परिवर्तनहरू संग्रह गर्नुहोस्
-    .accesskey = a
 
 site-data-remove-all =
     .label = सबै हटाउनुहोस्

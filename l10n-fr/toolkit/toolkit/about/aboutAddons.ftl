@@ -2,19 +2,22 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-addons-window =
-    .title = Gestionnaire de modules complémentaires
-
 addons-page-title = Gestionnaire de modules complémentaires
 
 search-header =
     .placeholder = Rechercher sur addons.mozilla.org
     .searchbuttonlabel = Rechercher
 
-search-header-shortcut =
-    .key = f
+## Variables
+##   $domain - Domain name where add-ons are available (e.g. addons.mozilla.org)
 
 list-empty-get-extensions-message = Téléchargez des extensions et des thèmes sur <a data-l10n-name="get-extensions">{ $domain }</a>
+
+list-empty-get-dictionaries-message = Téléchargez des dictionnaires sur <a data-l10n-name="get-extensions">{ $domain }</a>
+
+list-empty-get-language-packs-message = Téléchargez des paquetages linguistiques sur <a data-l10n-name="get-extensions">{ $domain }</a>
+
+##
 
 list-empty-installed =
     .value = Vous n’avez aucun module de ce type installé
@@ -35,18 +38,6 @@ help-button = Assistance des modules
 sidebar-help-button-title =
     .title = Assistance des modules
 
-preferences =
-    { PLATFORM() ->
-        [windows] Options de { -brand-short-name }
-       *[other] Préférences de { -brand-short-name }
-    }
-sidebar-preferences-button-title =
-    .title =
-        { PLATFORM() ->
-            [windows] Options de { -brand-short-name }
-           *[other] Préférences de { -brand-short-name }
-        }
-
 addons-settings-button = Paramètres de { -brand-short-name }
 sidebar-settings-button-title =
     .title = Paramètres de { -brand-short-name }
@@ -57,48 +48,14 @@ show-unsigned-extensions-button =
 show-all-extensions-button =
     .label = Afficher toutes les extensions
 
-cmd-show-details =
-    .label = Afficher plus d’informations
-    .accesskey = A
-
-cmd-find-updates =
-    .label = Rechercher des mises à jour
-    .accesskey = R
-
-cmd-preferences =
-    .label =
-        { PLATFORM() ->
-            [windows] Options
-           *[other] Préférences
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] O
-           *[other] P
-        }
-
-cmd-enable-theme =
-    .label = Appliquer le thème
-    .accesskey = A
-
-cmd-disable-theme =
-    .label = Enlever le thème
-    .accesskey = E
-
-cmd-install-addon =
-    .label = Installer
-    .accesskey = I
-
-cmd-contribute =
-    .label = Contribuer
-    .accesskey = C
-    .tooltiptext = Contribuer au développement de ce module complémentaire
-
 detail-version =
     .label = Version
 
 detail-last-updated =
     .label = Dernière mise à jour
+
+addon-detail-description-expand = Afficher plus
+addon-detail-description-collapse = Afficher moins
 
 detail-contributions-description = Le développeur de ce module demande que vous l’aidiez à assurer la poursuite de son développement en lui versant une petite contribution.
 
@@ -230,6 +187,13 @@ addon-category-available-updates-title =
 addon-category-recent-updates = Mis à jour
 addon-category-recent-updates-title =
     .title = Mis à jour
+addon-category-sitepermission = Autorisations de site
+addon-category-sitepermission-title =
+    .title = Autorisations de site
+# String displayed in about:addons in the Site Permissions section
+# Variables:
+#  $host (string) - DNS host name for which the webextension enables permissions
+addon-sitepermission-host = Autorisations de site pour { $host }
 
 ## These are global warnings
 
@@ -241,6 +205,8 @@ extensions-warning-update-security = La vérification de mises à jour de sécur
 extensions-warning-update-security-button = Activer
     .title = Activer la vérification de mises à jour de sécurité pour les modules complémentaires
 
+extensions-warning-imported-addons = Veuillez terminer l’installation des extensions qui ont été importées dans { -brand-short-name }.
+extensions-warning-imported-addons-button = Installer les extensions
 
 ## Strings connected to add-on updates
 
@@ -316,6 +282,8 @@ shortcuts-duplicate-warning-message = { $shortcut } est utilisé comme raccourci
 #   $addon (string) - Name of the add-on
 shortcuts-exists = Déjà utilisé par { $addon }
 
+# Variables:
+#   $numberToShow (number) - Number of other elements available to show
 shortcuts-card-expand-button =
     { $numberToShow ->
         [one] En montrer { $numberToShow } de plus
@@ -353,6 +321,7 @@ install-theme-button = Installer le thème
 # the detailed add-on view is opened, from where the add-on can be managed.
 manage-addon-button = Gérer
 find-more-addons = Découvrir davantage de modules
+find-more-themes = Trouver d’autres thèmes
 
 # This is a label for the button to open the "more options" menu, it is only
 # used for screen readers.
@@ -384,7 +353,7 @@ extension-enabled-heading = Activées
 extension-disabled-heading = Désactivées
 
 theme-enabled-heading = Activé
-theme-disabled-heading = Désactivés
+theme-disabled-heading2 = Thèmes enregistrés
 
 plugin-enabled-heading = Activés
 plugin-disabled-heading = Désactivés
@@ -395,7 +364,8 @@ dictionary-disabled-heading = Désactivés
 locale-enabled-heading = Activées
 locale-disabled-heading = Désactivées
 
-ask-to-activate-button = Demander pour activer
+sitepermission-enabled-heading = Activées
+sitepermission-disabled-heading = Désactivées
 
 always-activate-button = Toujours activer
 never-activate-button = Ne jamais activer
@@ -444,6 +414,11 @@ addon-detail-updates-radio-off = Désactivées
 addon-detail-update-check-label = Rechercher des mises à jour
 install-update-button = Mettre à jour
 
+# aria-label associated to the updates row to help screen readers to announce the group
+# of input controls being entered.
+addon-detail-group-label-updates =
+    .aria-label = { addon-detail-updates-label }
+
 # This is the tooltip text for the private browsing badge in about:addons. The
 # badge is the private browsing icon included next to the extension's name.
 addon-badge-private-browsing-allowed2 =
@@ -453,13 +428,31 @@ addon-detail-private-browsing-help = Lorsqu’elle est autorisée, l’extension
 addon-detail-private-browsing-allow = Autoriser
 addon-detail-private-browsing-disallow = Ne pas autoriser
 
+# aria-label associated to the private browsing row to help screen readers to announce the group
+# of input controls being entered.
+addon-detail-group-label-private-browsing =
+    .aria-label = { detail-private-browsing-label }
+
+## "sites with restrictions" (internally called "quarantined") are special domains
+## where add-ons are normally blocked for security reasons.
+
+# Used as a description for the option to allow or block an add-on on quarantined domains.
+addon-detail-quarantined-domains-label = Exécuter sur les sites avec restrictions
+# Used as help text part of the quarantined domains UI controls row.
+addon-detail-quarantined-domains-help = Lorsqu’elle est autorisée, l’extension a accès aux sites restreints par { -vendor-short-name }. Autorisez uniquement si vous faites confiance à cette extension.
+# Used as label and tooltip text on the radio inputs associated to the quarantined domains UI controls.
+addon-detail-quarantined-domains-allow = Autoriser
+addon-detail-quarantined-domains-disallow = Ne pas autoriser
+# aria-label associated to the quarantined domains exempt row to help screen readers to announce the group.
+addon-detail-group-label-quarantined-domains =
+    .aria-label = { addon-detail-quarantined-domains-label }
+
 ## This is the tooltip text for the recommended badges for an extension in about:addons. The
 ## badge is a small icon displayed next to an extension when it is recommended on AMO.
 
 addon-badge-recommended2 =
     .title = { -brand-product-name } ne recommande que des extensions conformes à nos normes en matière de sécurité et de performances.
     .aria-label = { addon-badge-recommended2.title }
-
 # We hard code "Mozilla" in the string below because the extensions are built
 # by Mozilla and we don't want forks to display "by Fork".
 addon-badge-line3 =
@@ -478,13 +471,16 @@ release-notes-loading = Chargement…
 release-notes-error = Désolé, une erreur s’est produite lors du chargement des notes de version.
 
 addon-permissions-empty = Cette extension ne nécessite aucune autorisation
-
 addon-permissions-required = Autorisations nécessaires pour les fonctionnalités de base :
 addon-permissions-optional = Autorisations facultatives pour des fonctionnalités supplémentaires :
 addon-permissions-learnmore = En savoir plus à propos des autorisations
 
 recommended-extensions-heading = Extensions recommandées
 recommended-themes-heading = Thèmes recommandés
+
+# Variables:
+#   $hostname (string) - Host where the permissions are granted
+addon-sitepermissions-required = Accorder les capacités suivantes à <span data-l10n-name="hostname">{ $hostname }</span> :
 
 # A recommendation for the Firefox Color theme shown at the bottom of the theme
 # list view. The "Firefox Color" name itself should not be translated.
@@ -498,6 +494,7 @@ plugin-heading = Gestion de vos plugins
 dictionary-heading = Gestion de vos dictionnaires
 locale-heading = Gestion des langues
 updates-heading = Gestion de vos mises à jour
+sitepermission-heading = Gestion de vos autorisations de site
 discover-heading = Personnalisez { -brand-short-name }
 shortcuts-heading = Gestion des raccourcis d’extensions
 
@@ -507,3 +504,31 @@ addons-heading-search-input =
 
 addon-page-options-button =
     .title = Outils pour tous les modules
+
+## Detail notifications
+## Variables:
+##   $name (String): name of the add-on.
+
+
+## Detail notifications
+## Variables:
+##   $name (string) - Name of the add-on.
+
+# Variables:
+#   $version (string) - Application version.
+details-notification-incompatible = { $name } est incompatible avec { -brand-short-name } { $version }.
+details-notification-incompatible-link = Plus d’informations
+
+details-notification-unsigned-and-disabled = { $name } n’a pas pu être vérifié pour son utilisation dans { -brand-short-name } et a été désactivé.
+details-notification-unsigned-and-disabled-link = Plus d’informations
+
+details-notification-unsigned = { $name } n’a pas pu être vérifié pour son utilisation dans { -brand-short-name }. Faites attention.
+details-notification-unsigned-link = Plus d’informations
+
+details-notification-blocked = { $name } a été désactivé suite à des problèmes de sécurité ou de stabilité.
+details-notification-blocked-link = Plus d’informations
+
+details-notification-softblocked = { $name } est connu pour poser des problèmes de sécurité ou de stabilité.
+details-notification-softblocked-link = Plus d’informations
+
+details-notification-gmp-pending = { $name } sera bientôt installé.

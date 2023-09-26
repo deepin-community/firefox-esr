@@ -15,6 +15,9 @@ printui-sheets-count =
     }
 
 printui-page-range-all = Alle
+printui-page-range-current = Aktuell
+printui-page-range-odd = Ungerade
+printui-page-range-even = Gerade
 printui-page-range-custom = Benutzerdefiniert
 printui-page-range-label = Seiten
 printui-page-range-picker =
@@ -57,8 +60,6 @@ printui-two-sided-printing-short-edge = An kurzer Kante spiegeln
 printui-options = Einstellungen
 printui-headers-footers-checkbox = Kopf- und Fußzeilen drucken
 printui-backgrounds-checkbox = Hintergrund drucken
-
-printui-selection-checkbox = Nur Auswahl drucken
 
 ## The "Format" section, select a version of the website to print. Radio
 ## options to select between the original page, selected text only, or a version

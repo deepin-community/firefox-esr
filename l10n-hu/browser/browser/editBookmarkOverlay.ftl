@@ -2,17 +2,6 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-bookmark-overlay-name =
-    .value = Név:
-    .accesskey = v
-
-bookmark-overlay-location =
-    .value = Hely:
-    .accesskey = H
-
-bookmark-overlay-folder =
-    .value = Mappa:
-
 bookmark-overlay-name-2 =
     .value = Név
     .accesskey = N
@@ -35,13 +24,15 @@ bookmark-overlay-folders-expander =
     .tooltiptextdown = { bookmark-overlay-folders-expander.tooltiptext }
     .tooltiptextup = Elrejtés
 
+bookmark-overlay-folders-expander2 =
+    .tooltiptext = Minden könyvjelzőmappa megjelenítése
+
+bookmark-overlay-folders-expander-hide =
+    .tooltiptext = Elrejtés
+
 bookmark-overlay-new-folder-button =
     .label = Új mappa
     .accesskey = m
-
-bookmark-overlay-tags =
-    .value = Címkék:
-    .accesskey = C
 
 bookmark-overlay-tags-2 =
     .value = Címkék
@@ -55,9 +46,11 @@ bookmark-overlay-tags-expander =
     .tooltiptextdown = { bookmark-overlay-tags-expander.tooltiptext }
     .tooltiptextup = Elrejtés
 
-bookmark-overlay-keyword =
-    .value = Kulcsszó:
-    .accesskey = K
+bookmark-overlay-tags-expander2 =
+    .tooltiptext = Minden címke megjelenítése
+
+bookmark-overlay-tags-expander-hide =
+    .tooltiptext = Elrejtés
 
 bookmark-overlay-keyword-2 =
     .value = Kulcsszó

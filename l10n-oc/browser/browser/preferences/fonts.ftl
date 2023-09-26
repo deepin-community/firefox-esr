@@ -3,14 +3,14 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 fonts-window =
-    .title = Poliças
+    .title = Polissas
 
 fonts-window-close =
     .key = w
 
 ## Font groups by language
 
-fonts-langgroup-header = Poliças per
+fonts-langgroup-header = Polissas per
     .accesskey = P
 
 fonts-langgroup-arabic =
@@ -98,59 +98,15 @@ fonts-monospace = Largor fixa
 fonts-monospace-size = Talha
     .accesskey = l
 
-fonts-minsize = Talha minimala de la poliça
+fonts-minsize = Talha minimala de la polissa
     .accesskey = T
 
 fonts-minsize-none =
     .label = Pas cap
 
 fonts-allow-own =
-    .label = Permetre a las paginas de causir lors poliças, puslèu que las seleccions precedentas
+    .label = Permetre a las paginas de causir lors polissas, puslèu que las seleccions precedentas
     .accesskey = A
-
-## Text Encodings
-##
-## Translate the encoding names as adjectives for an encoding, not as the name
-## of the language.
-
-fonts-languages-fallback-header = Encodatge del tèxte pel contengut obsolèt
-fonts-languages-fallback-desc = Aqueste encodatge del tèxte es utilizat pel contengut obsolèt que declara pas corrèctament son encodatge.
-
-fonts-languages-fallback-label = Encodatge de tèxte de remplaçament
-    .accesskey = T
-
-fonts-languages-fallback-name-auto =
-    .label = Valor per defaut per la lenga correnta
-fonts-languages-fallback-name-arabic =
-    .label = Arabi
-fonts-languages-fallback-name-baltic =
-    .label = Baltic
-fonts-languages-fallback-name-ceiso =
-    .label = Europèu central, ISO
-fonts-languages-fallback-name-cewindows =
-    .label = Europèu central, Microsoft
-fonts-languages-fallback-name-simplified =
-    .label = Chinés simplificat
-fonts-languages-fallback-name-traditional =
-    .label = Chinés tradicional
-fonts-languages-fallback-name-cyrillic =
-    .label = Cirillic
-fonts-languages-fallback-name-greek =
-    .label = Grèc
-fonts-languages-fallback-name-hebrew =
-    .label = Ebrieu
-fonts-languages-fallback-name-japanese =
-    .label = Japonés
-fonts-languages-fallback-name-korean =
-    .label = Corean
-fonts-languages-fallback-name-thai =
-    .label = Tai
-fonts-languages-fallback-name-turkish =
-    .label = Turc
-fonts-languages-fallback-name-vietnamese =
-    .label = Vietnamian
-fonts-languages-fallback-name-other =
-    .label = Autra (inclusa Euròpa occidentala)
 
 # Variables:
 #   $name {string, "Arial"} - Name of the default font

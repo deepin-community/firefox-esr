@@ -11,6 +11,12 @@ reload-tab =
 select-all-tabs =
     .label = Wšě rajtarki wubrać
     .accesskey = r
+tab-context-play-tab =
+    .label = Rajtark wothrać
+    .accesskey = R
+tab-context-play-tabs =
+    .label = Rajtarki wothrać
+    .accesskey = h
 duplicate-tab =
     .label = Rajtark podwojić
     .accesskey = T
@@ -48,12 +54,9 @@ unpin-selected-tabs =
 bookmark-selected-tabs =
     .label = Rajtarki jako zapołožki składować…
     .accesskey = k
-bookmark-tab =
-    .label = Rajtark jako zapołožku składować
-    .accesskey = z
-reopen-in-container =
-    .label = W kontejnerje znowa wočinić
-    .accesskey = k
+tab-context-bookmark-tab =
+    .label = Rajtark jako zapołožku składować …
+    .accesskey = R
 tab-context-open-in-new-container-tab =
     .label = W nowym kontejnerowym rajtarku wočinić
     .accesskey = k
@@ -69,33 +72,9 @@ move-to-new-window =
 tab-context-close-multiple-tabs =
     .label = Wjacore rajtarki začinić
     .accesskey = W
-tab-context-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] { $tabCount } začinjeny rajtark wočinić
-            [one] { $tabCount } začinjeny rajtark wočinić
-            [two] { $tabCount } začinjenej rajtarkaj wočinić
-            [few] { $tabCount } začinjene rajtarki wočinić
-           *[other] { $tabCount } začinjene rajtarki wočinić
-        }
-    .accesskey = z
-close-tab =
-    .label = Rajtark začinić
-    .accesskey = z
-close-tabs =
-    .label = Rajtarki začinić
-    .accesskey = z
-move-tabs =
-    .label = Rajtarki přesunyć
-    .accesskey = s
-move-tab =
-    .label = Rajtark přesunyć
-    .accesskey = s
 tab-context-share-url =
     .label = Dźělić
     .accesskey = D
-tab-context-share-more =
-    .label = Wjace…
 
 ## Variables:
 ##  $tabCount (Number): the number of tabs that are affected by the action.
@@ -108,16 +87,6 @@ tab-context-reopen-closed-tabs =
             [two] $tabCount začinjenej rajtarkaj znowa wočinić
             [few] $tabCount začinjene rajtarki znowa wočinić
            *[other] $tabCount začinjenych rajtarkow znowa wočinić
-        }
-    .accesskey = r
-tab-context-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] { $tabCount } rajtark začinić
-            [one] { $tabCount } rajtark začinić
-            [two] { $tabCount } rajtarkaj začinić
-            [few] { $tabCount } rajtarki začinić
-           *[other] { $tabCount } rajtarkow začinić
         }
     .accesskey = r
 tab-context-close-n-tabs =
@@ -140,3 +109,14 @@ tab-context-move-tabs =
            *[other] { $tabCount } rajtarkow přesunyć
         }
     .accesskey = s
+
+tab-context-send-tabs-to-device =
+    .label =
+        { $tabCount ->
+            [1] { $tabCount } rajtark na grat pósłać
+            [one] { $tabCount } rajtark na grat pósłać
+            [two] { $tabCount } rajtarkaj na grat pósłać
+            [few] { $tabCount } rajtarki na grat pósłać
+           *[other] { $tabCount } rajtarkow na grat pósłać
+        }
+    .accesskey = r

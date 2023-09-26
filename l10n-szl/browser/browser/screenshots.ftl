@@ -2,13 +2,12 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-screenshots-context-menu = Zrōb ôbroz ekranu
-
-screenshots-my-shots-button = Moje ôbrazy ekranu
-
 screenshot-toolbarbutton =
     .label = Ôbroz ekranu
     .tooltiptext = Chyć ôbroz ekranu
+
+screenshot-shortcut =
+    .key = S
 
 screenshots-instructions = Przeciōng abo kliknij na strōna, coby ôbrać jij kōnsek. Prziciś ESC, coby pociepać.
 screenshots-cancel-button = Pociep
@@ -18,6 +17,14 @@ screenshots-download-button = Pobier
 screenshots-download-button-tooltip = Pobier ôbroz ekranu
 screenshots-copy-button = Kopiuj
 screenshots-copy-button-tooltip = Kopiuj ôbroz ekranu do kamerlika
+screenshots-download-button-title =
+    .title = Pobier ôbroz ekranu
+screenshots-copy-button-title =
+    .title = Kopiuj ôbroz ekranu do kamerlika
+screenshots-cancel-button-title =
+    .title = Pociep
+screenshots-retry-button-title =
+    .title = Sprōbuj zaś zrobić ôbroz ekranu
 
 screenshots-meta-key =
     { PLATFORM() ->
@@ -41,8 +48,6 @@ screenshots-login-error-details = Niy idzie spamiyntać twojigo ôbrazu ekranu s
 screenshots-unshootable-page-error-title = Niy idzie chycić ôbrazu ekranu tyj strōny.
 screenshots-unshootable-page-error-details = To niy ma ańfachowo strōna, tōż niy idzie chycić jeji ôbrazu ekranu.
 
-screenshots-self-screenshot-error-title = Niy idzie chycić ôbrazu ekranu strōny { -screenshots-brand-name }!
-
 screenshots-empty-selection-error-title = Ôbrany kōnsek je za mały
 
 screenshots-private-window-error-title = Usuga { -screenshots-brand-name } je zastawiōno we trybie prywatnego przeglōndanio
@@ -50,3 +55,4 @@ screenshots-private-window-error-details = Przebocz ta zawada. Prawie robiymy pr
 
 screenshots-generic-error-title = Usuga { -screenshots-brand-name } niy funguje dobrze.
 screenshots-generic-error-details = Niy znōmy gynau, co sie podzioło. Sprōbujesz jeszcze roz, abo bydziesz chytać ôbroz inkszyj strōny?
+

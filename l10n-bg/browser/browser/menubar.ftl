@@ -43,15 +43,6 @@ menu-quit =
 menu-quit-mac =
     .label = Изход от { -brand-shorter-name }
 
-# This menu-quit-button string is only used on Linux.
-menu-quit-button =
-    .label = { menu-quit.label }
-
-# This menu-quit-button-win string is only used on Windows.
-menu-quit-button-win =
-    .label = { menu-quit.label }
-    .tooltip = Изход от { -brand-shorter-name }
-
 menu-about =
     .label = Относно { -brand-shorter-name }
     .accesskey = О
@@ -81,8 +72,14 @@ menu-file-open-location =
 menu-file-open-file =
     .label = Отваряне…
     .accesskey = о
-menu-file-close =
-    .label = Затваряне
+# Variables:
+#  $tabCount (Number): the number of tabs that are affected by the action.
+menu-file-close-tab =
+    .label =
+        { $tabCount ->
+            [one] Затваряне на раздела
+           *[other] Затваряне на { $tabCount } раздела
+        }
     .accesskey = З
 menu-file-close-window =
     .label = Затваряне на прозореца
@@ -93,12 +90,12 @@ menu-file-save-page =
 menu-file-email-link =
     .label = Препратка по имейл…
     .accesskey = е
+menu-file-share-url =
+    .label = Споделяне
+    .accesskey = С
 menu-file-print-setup =
     .label = Настройки на отпечатване…
     .accesskey = Н
-menu-file-print-preview =
-    .label = Преглед преди отпечатване
-    .accesskey = р
 menu-file-print =
     .label = Отпечатване…
     .accesskey = п
@@ -114,9 +111,6 @@ menu-file-go-offline =
 menu-edit =
     .label = Редактиране
     .accesskey = Р
-menu-edit-find-on =
-    .label = Търсене в страницата…
-    .accesskey = Т
 menu-edit-find-in-page =
     .label = Търсене в страницата…
     .accesskey = Т
@@ -135,9 +129,6 @@ menu-view =
 menu-view-toolbars-menu =
     .label = Ленти с инструменти
     .accesskey = и
-menu-view-customize-toolbar =
-    .label = Приспособяване…
-    .accesskey = П
 menu-view-customize-toolbar2 =
     .label = Приспособяване на лентата…
     .accesskey = л
@@ -174,10 +165,6 @@ menu-view-page-style-no-style =
 menu-view-page-basic-style =
     .label = Основен стил
     .accesskey = О
-menu-view-charset =
-    .label = Кодиране на текста
-    .accesskey = К
-
 menu-view-repair-text-encoding =
     .label = Поправка на кодировката
     .accesskey = к
@@ -194,6 +181,17 @@ menu-view-exit-full-screen =
 menu-view-full-screen =
     .label = Цял екран
     .accesskey = Ц
+
+## These menu items may use the same accesskey.
+
+# This should match reader-view-enter-button in browser.ftl
+menu-view-enter-readerview =
+    .label = Отваря изгледа за четене
+    .accesskey = О
+# This should match reader-view-close-button in browser.ftl
+menu-view-close-readerview =
+    .label = Затваря изгледа за четене
+    .accesskey = З
 
 ##
 
@@ -224,24 +222,17 @@ menu-history-undo-menu =
 menu-history-undo-window-menu =
     .label = Последно затворени прозорци
 
-menu-history-reopen-all-tabs = Възстановяване на всички раздели
-menu-history-reopen-all-windows = Възстановяване на всички прозорци
-
 ## Bookmarks Menu
 
 menu-bookmarks-menu =
     .label = Отметки
     .accesskey = О
-menu-bookmarks-show-all =
-    .label = Показване на всички отметки
-menu-bookmark-this-page =
-    .label = Отмятане на страницата
 menu-bookmarks-manage =
     .label = Управление на отметки
-menu-bookmark-current-tab =
-    .label = Отмятане на текущия раздел
-menu-bookmark-edit =
-    .label = Промяна на отметка
+menu-bookmark-tab =
+    .label = Отмятане на текущия раздел…
+menu-edit-bookmark =
+    .label = Промяна на отметка…
 menu-bookmarks-all-tabs =
     .label = Отмятане на всички раздели…
 menu-bookmarks-toolbar =
@@ -259,15 +250,6 @@ menu-tools =
 menu-tools-downloads =
     .label = Изтегляния
     .accesskey = т
-menu-tools-addons =
-    .label = Добавки
-    .accesskey = Д
-menu-tools-fxa-sign-in =
-    .label = Вписване в { -brand-product-name }…
-    .accesskey = с
-menu-tools-turn-on-sync =
-    .label = Включване на { -sync-brand-short-name }…
-    .accesskey = л
 menu-tools-addons-and-themes =
     .label = Добавки и теми
     .accesskey = Д
@@ -283,9 +265,6 @@ menu-tools-sync-now =
 menu-tools-fxa-re-auth =
     .label = Повторно свързване с { -brand-product-name }…
     .accesskey = с
-menu-tools-web-developer =
-    .label = Разработчик
-    .accesskey = т
 menu-tools-browser-tools =
     .label = Инструменти за четеца
     .accesskey = И
@@ -298,17 +277,6 @@ menu-tools-page-source =
 menu-tools-page-info =
     .label = Информация за страницата
     .accesskey = И
-menu-preferences =
-    .label =
-        { PLATFORM() ->
-            [windows] Настройки
-           *[other] Настройки
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] Н
-           *[other] Н
-        }
 menu-settings =
     .label = Настройки
     .accesskey =
@@ -341,21 +309,6 @@ menu-window-bring-all-to-front =
 menu-help =
     .label = Помощ
     .accesskey = П
-menu-help-product =
-    .label = Помощ за { -brand-shorter-name }
-    .accesskey = П
-menu-help-show-tour =
-    .label = Обиколка на { -brand-shorter-name }
-    .accesskey = б
-menu-help-import-from-another-browser =
-    .label = Внасяне от друг мрежов четец…
-    .accesskey = В
-menu-help-keyboard-shortcuts =
-    .label = Клавишни комбинации
-    .accesskey = К
-menu-help-troubleshooting-info =
-    .label = Отстраняване на неизправности
-    .accesskey = И
 menu-get-help =
     .label = Получете помощ
     .accesskey = П
@@ -364,15 +317,9 @@ menu-help-more-troubleshooting-info =
     .accesskey = т
 menu-help-report-site-issue =
     .label = Докладване на проблем със страницата…
-menu-help-feedback-page =
-    .label = Обратна връзка…
-    .accesskey = в
-menu-help-safe-mode-without-addons =
-    .label = Рестартиране с изключени добавки…
-    .accesskey = д
-menu-help-safe-mode-with-addons =
-    .label = Рестартиране с включени добавки
-    .accesskey = д
+menu-help-share-ideas =
+    .label = Споделяне на идеи и обратна връзка…
+    .accesskey = С
 menu-help-enter-troubleshoot-mode2 =
     .label = Режим за отстраняване на неизправности…
     .accesskey = м

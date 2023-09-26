@@ -17,11 +17,9 @@ menu-application-services =
     .label = Služby
 menu-application-hide-this =
     .label =
-        Skrýt { -brand-shorter-name.gender ->
-            [masculine] { -brand-shorter-name(case: "acc") }
-            [feminine] { -brand-shorter-name(case: "acc") }
-            [neuter] { -brand-shorter-name(case: "acc") }
-           *[other] aplikaci { -brand-shorter-name }
+        { -brand-shorter-name.case-status ->
+            [with-cases] Skrýt { -brand-shorter-name(case: "acc") }
+           *[no-cases] Skrýt aplikaci { -brand-shorter-name }
         }
 menu-application-hide-other =
     .label = Skrýt ostatní
@@ -39,32 +37,15 @@ menu-quit =
 # This menu-quit-mac string is only used on macOS.
 menu-quit-mac =
     .label =
-        Ukončit { -brand-shorter-name.gender ->
-            [masculine] { -brand-shorter-name(case: "acc") }
-            [feminine] { -brand-shorter-name(case: "acc") }
-            [neuter] { -brand-shorter-name(case: "acc") }
-           *[other] aplikaci { -brand-shorter-name }
-        }
-# This menu-quit-button string is only used on Linux.
-menu-quit-button =
-    .label = { menu-quit.label }
-# This menu-quit-button-win string is only used on Windows.
-menu-quit-button-win =
-    .label = { menu-quit.label }
-    .tooltip =
-        Ukončí { -brand-shorter-name.gender ->
-            [masculine] { -brand-shorter-name(case: "acc") }
-            [feminine] { -brand-shorter-name(case: "acc") }
-            [neuter] { -brand-shorter-name(case: "acc") }
-           *[other] aplikaci { -brand-shorter-name }
+        { -brand-shorter-name.case-status ->
+            [with-cases] Ukončit { -brand-shorter-name(case: "acc") }
+           *[no-cases] Ukončit aplikaci { -brand-shorter-name }
         }
 menu-about =
     .label =
-        O { -brand-shorter-name.gender ->
-            [masculine] { -brand-shorter-name(case: "loc") }
-            [feminine] { -brand-shorter-name(case: "loc") }
-            [neuter] { -brand-shorter-name(case: "loc") }
-           *[other] aplikaci { -brand-shorter-name }
+        { -brand-shorter-name.case-status ->
+            [with-cases] O { -brand-shorter-name(case: "loc") }
+           *[no-cases] O aplikaci { -brand-shorter-name }
         }
     .accesskey = O
 
@@ -93,8 +74,16 @@ menu-file-open-location =
 menu-file-open-file =
     .label = Otevřít soubor…
     .accesskey = s
-menu-file-close =
-    .label = Zavřít
+# Variables:
+#  $tabCount (Number): the number of tabs that are affected by the action.
+menu-file-close-tab =
+    .label =
+        { $tabCount ->
+            [1] Zavřít panel
+            [one] Zavřít panel
+            [few] Zavřít { $tabCount } panely
+           *[other] Zavřít { $tabCount } panelů
+        }
     .accesskey = Z
 menu-file-close-window =
     .label = Zavřít okno
@@ -111,9 +100,6 @@ menu-file-share-url =
 menu-file-print-setup =
     .label = Vzhled stránky…
     .accesskey = V
-menu-file-print-preview =
-    .label = Náhled tisku
-    .accesskey = h
 menu-file-print =
     .label = Vytisknout stránku…
     .accesskey = T
@@ -129,9 +115,6 @@ menu-file-go-offline =
 menu-edit =
     .label = Úpravy
     .accesskey = a
-menu-edit-find-on =
-    .label = Najít na této stránce…
-    .accesskey = N
 menu-edit-find-in-page =
     .label = Najít na stránce
     .accesskey = N
@@ -150,9 +133,6 @@ menu-view =
 menu-view-toolbars-menu =
     .label = Nástrojové lišty
     .accesskey = N
-menu-view-customize-toolbar =
-    .label = Nastavení tlačítek a lišt…
-    .accesskey = V
 menu-view-customize-toolbar2 =
     .label = Nastavení tlačítek a lišt…
     .accesskey = v
@@ -189,9 +169,6 @@ menu-view-page-style-no-style =
 menu-view-page-basic-style =
     .label = Základní styl
     .accesskey = Z
-menu-view-charset =
-    .label = Znaková sada textu
-    .accesskey = k
 menu-view-repair-text-encoding =
     .label = Opravit znakovou sadu textu
     .accesskey = z
@@ -208,6 +185,17 @@ menu-view-exit-full-screen =
 menu-view-full-screen =
     .label = Celá obrazovka
     .accesskey = C
+
+## These menu items may use the same accesskey.
+
+# This should match reader-view-enter-button in browser.ftl
+menu-view-enter-readerview =
+    .label = Zapnout zobrazení čtečky
+    .accesskey = Z
+# This should match reader-view-close-button in browser.ftl
+menu-view-close-readerview =
+    .label = Zavřít zobrazení čtečky
+    .accesskey = Z
 
 ##
 
@@ -237,24 +225,21 @@ menu-history-undo-menu =
     .label = Naposledy zavřené panely
 menu-history-undo-window-menu =
     .label = Naposledy zavřená okna
-menu-history-reopen-all-tabs = Znovu otevřít všechny panely
-menu-history-reopen-all-windows = Znovu otevřít všechna okna
 
 ## Bookmarks Menu
 
 menu-bookmarks-menu =
     .label = Záložky
     .accesskey = o
-menu-bookmarks-show-all =
-    .label = Zobrazit všechny záložky
-menu-bookmark-this-page =
-    .label = Přidat stránku do záložek
 menu-bookmarks-manage =
     .label = Správa záložek
-menu-bookmark-current-tab =
-    .label = Přidat současný panel do záložek
-menu-bookmark-edit =
-    .label = Upravit záložku
+menu-bookmark-tab =
+    .label = Přidat současný panel do záložek…
+menu-edit-bookmark =
+    .label = Upravit záložku…
+# "Search" is a verb, as in "Search in bookmarks"
+menu-bookmarks-search =
+    .label = Hledat v záložkách
 menu-bookmarks-all-tabs =
     .label = Přidat všechny panely do záložek…
 menu-bookmarks-toolbar =
@@ -272,21 +257,6 @@ menu-tools =
 menu-tools-downloads =
     .label = Stahování
     .accesskey = t
-menu-tools-addons =
-    .label = Doplňky
-    .accesskey = D
-menu-tools-fxa-sign-in =
-    .label =
-        Přihlásit se k { -brand-product-name.gender ->
-            [masculine] { -brand-product-name(case: "dat") }
-            [feminine] { -brand-product-name(case: "dat") }
-            [neuter] { -brand-product-name(case: "dat") }
-           *[other] aplikaci { -brand-product-name }
-        }…
-    .accesskey = p
-menu-tools-turn-on-sync =
-    .label = Zapnout { -sync-brand-short-name(case: "acc") }…
-    .accesskey = n
 menu-tools-addons-and-themes =
     .label = Doplňky a vzhledy
     .accesskey = a
@@ -301,16 +271,11 @@ menu-tools-sync-now =
     .accesskey = S
 menu-tools-fxa-re-auth =
     .label =
-        Znovu připojit k účtu { -brand-product-name.gender ->
-            [masculine] { -brand-product-name(case: "gen") }
-            [feminine] { -brand-product-name(case: "gen") }
-            [neuter] { -brand-product-name(case: "gen") }
-           *[other] aplikace { -brand-product-name }
-        }…
+        { -brand-product-name.case-status ->
+            [with-cases] Znovu připojit k účtu { -brand-product-name(case: "gen") }…
+           *[no-cases] Znovu připojit k účtu aplikace { -brand-product-name }…
+        }
     .accesskey = n
-menu-tools-web-developer =
-    .label = Nástroje pro vývojáře
-    .accesskey = v
 menu-tools-browser-tools =
     .label = Nástroje prohlížeče
     .accesskey = j
@@ -323,17 +288,6 @@ menu-tools-page-source =
 menu-tools-page-info =
     .label = Informace o stránce
     .accesskey = I
-menu-preferences =
-    .label =
-        { PLATFORM() ->
-            [windows] Možnosti
-           *[other] Předvolby
-        }
-    .accesskey =
-        { PLATFORM() ->
-            [windows] M
-           *[other] v
-        }
 menu-settings =
     .label = Nastavení
     .accesskey =
@@ -366,33 +320,6 @@ menu-window-bring-all-to-front =
 menu-help =
     .label = Nápověda
     .accesskey = v
-menu-help-product =
-    .label =
-        Nápověda { -brand-shorter-name.gender ->
-            [masculine] { -brand-shorter-name(case: "gen") }
-            [feminine] { -brand-shorter-name(case: "gen") }
-            [neuter] { -brand-shorter-name(case: "gen") }
-           *[other] aplikace { -brand-shorter-name }
-        }
-    .accesskey = N
-menu-help-show-tour =
-    .label =
-        Průvodce { -brand-shorter-name.gender ->
-            [masculine] { -brand-shorter-name(case: "ins") }
-            [feminine] { -brand-shorter-name(case: "ins") }
-            [neuter] { -brand-shorter-name(case: "ins") }
-           *[other] aplikací { -brand-shorter-name }
-        }
-    .accesskey = P
-menu-help-import-from-another-browser =
-    .label = Importovat z jiného prohlížeče…
-    .accesskey = I
-menu-help-keyboard-shortcuts =
-    .label = Klávesové zkratky
-    .accesskey = K
-menu-help-troubleshooting-info =
-    .label = Technické informace
-    .accesskey = T
 menu-get-help =
     .label = Získat pomoc
     .accesskey = p
@@ -401,21 +328,18 @@ menu-help-more-troubleshooting-info =
     .accesskey = t
 menu-help-report-site-issue =
     .label = Nahlásit problém se zobrazením stránky…
-menu-help-feedback-page =
-    .label = Odeslat zpětnou vazbu…
-    .accesskey = d
-menu-help-safe-mode-without-addons =
-    .label = Restartovat se zakázanými doplňky…
-    .accesskey = R
-menu-help-safe-mode-with-addons =
-    .label = Restartovat s povolenými doplňky
-    .accesskey = R
+menu-help-share-ideas =
+    .label = Sdílet nápad nebo zpětnou vazbu…
+    .accesskey = S
 menu-help-enter-troubleshoot-mode2 =
     .label = Režim řešení potíží…
     .accesskey = m
 menu-help-exit-troubleshoot-mode =
     .label = Ukončit režim řešení potíží
     .accesskey = m
+menu-help-switch-device =
+    .label = Přechod na nové zařízení
+    .accesskey = n
 # Label of the Help menu item. Either this or
 # menu-help-notdeceptive is shown.
 menu-help-report-deceptive-site =

@@ -2,12 +2,21 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
+tab-context-new-tab =
+    .label = لسان جديد
+    .accesskey = س
 reload-tab =
     .label = أعِد تحميل اللسان
     .accesskey = ح
 select-all-tabs =
     .label = اختر كل الألسنة
     .accesskey = خ
+tab-context-play-tab =
+    .label = شغّل اللسان
+    .accesskey = ش
+tab-context-play-tabs =
+    .label = شغّل الألسنة
+    .accesskey = ش
 duplicate-tab =
     .label = كرّر اللسان
     .accesskey = ك
@@ -45,12 +54,6 @@ unpin-selected-tabs =
 bookmark-selected-tabs =
     .label = علّم الألسنة…
     .accesskey = ن
-bookmark-tab =
-    .label = علّم اللسان
-    .accesskey = ع
-reopen-in-container =
-    .label = أعِد فتحه في الحاوية
-    .accesskey = ع
 tab-context-open-in-new-container-tab =
     .label = افتح في لسانٍ حاوٍ جديد
     .accesskey = س
@@ -66,35 +69,9 @@ move-to-new-window =
 tab-context-close-multiple-tabs =
     .label = أغلِق أكثر من لسان
     .accesskey = ك
-tab-context-undo-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] أعِد فتح اللسان
-            [zero] أعِد فتح الألسنة
-            [one] أعِد فتح اللسان
-            [two] أعِد فتح اللسانين
-            [few] أعِد فتح الألسنة
-            [many] أعِد فتح الألسنة
-           *[other] أعِد فتح الألسنة
-        }
-    .accesskey = ع
-close-tab =
-    .label = أغلِق اللسان
-    .accesskey = غ
-close-tabs =
-    .label = أغلِق الألسنة
-    .accesskey = غ
-move-tabs =
-    .label = انقل الألسنة
-    .accesskey = ق
-move-tab =
-    .label = انقل اللسان
-    .accesskey = ق
 tab-context-share-url =
     .label = شارِك
     .accesskey = ش
-tab-context-share-more =
-    .label = أكثر
 
 ## Variables:
 ##  $tabCount (Number): the number of tabs that are affected by the action.
@@ -111,18 +88,6 @@ tab-context-reopen-closed-tabs =
            *[other] أعِد فتح الألسنة المغلقة
         }
     .accesskey = ع
-tab-context-close-tabs =
-    .label =
-        { $tabCount ->
-            [1] أغلِق اللسان
-            [zero] أغلِق اللسان
-            [one] أغلِق اللسان
-            [two] أغلِق اللسانين
-            [few] أغلِق الألسنة
-            [many] أغلِق الألسنة
-           *[other] أغلِق الألسنة
-        }
-    .accesskey = غ
 tab-context-move-tabs =
     .label =
         { $tabCount ->
@@ -135,3 +100,15 @@ tab-context-move-tabs =
            *[other] انقل الألسنة
         }
     .accesskey = ن
+
+tab-context-send-tabs-to-device =
+    .label =
+        { $tabCount ->
+            [zero] لا تُرسل شيئا إلى الجهاز
+            [one] أرسِل اللسان إلى الجهاز
+            [two] أرسِل اللسانين إلى الجهاز
+            [few] أرسِل { $tabCount } ألسنة إلى الجهاز
+            [many] أرسِل { $tabCount } لسانا إلى الجهاز
+           *[other] أرسِل { $tabCount } لسان إلى الجهاز
+        }
+    .accesskey = س

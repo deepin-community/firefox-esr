@@ -9,11 +9,6 @@ crashes-id = Идентификатор сообщения
 crashes-send-date = Дата отправки
 crashes-all-reports = Все сообщения о падениях
 crashes-no-config = Это приложение не было настроено на отображение сообщений о падениях.
-extensions-title = Расширения
-extensions-name = Имя
-extensions-enabled = Включено
-extensions-version = Версия
-extensions-id = ID
 support-addons-title = Дополнения
 support-addons-name = Имя
 support-addons-type = Тип
@@ -43,7 +38,7 @@ app-basics-update-channel = Канал обновления
 # as in "Folder for updates". "Update" is a noun, not a verb.
 app-basics-update-dir =
     { PLATFORM() ->
-        [linux] Каталог обновления
+        [linux] Папка обновления
        *[other] Папка обновления
     }
 app-basics-update-history = Журнал обновлений
@@ -52,7 +47,7 @@ app-basics-show-update-history = Показать журнал обновлен�
 app-basics-binary = Бинарный файл приложения
 app-basics-profile-dir =
     { PLATFORM() ->
-        [linux] Каталог профиля
+        [linux] Папка профиля
        *[other] Папка профиля
     }
 app-basics-enabled-plugins = Включённые плагины
@@ -77,11 +72,17 @@ app-basics-location-service-key-google = Ключ Службы определе�
 app-basics-safebrowsing-key-google = Ключ Google Safebrowsing
 app-basics-key-mozilla = Ключ Службы определения местоположения от Mozilla
 app-basics-safe-mode = Безопасный Режим
+app-basics-memory-size = Объём памяти (ОЗУ)
+app-basics-disk-available = Доступное место на накопителе
+# Variables:
+#   $value (number) - Amount of data being stored
+#   $unit (string) - The unit of data being stored (e.g. MB)
+app-basics-data-size = { $value } { $unit }
 show-dir-label =
     { PLATFORM() ->
         [macos] Показать в Finder
         [windows] Открыть папку
-       *[other] Открыть каталог
+       *[other] Открыть папку
     }
 environment-variables-title = Переменные среды
 environment-variables-name = Имя
@@ -106,11 +107,21 @@ graphics-gpu2-title = Видеокарта №2
 graphics-decision-log-title = Лог решения
 graphics-crash-guards-title = Возможности, отключённые защитой от падения
 graphics-workarounds-title = Способы обхода
+graphics-device-pixel-ratios = Пиксельные соотношения окна устройства
 # Windowing system in use on Linux (e.g. X11, Wayland).
 graphics-window-protocol = Протокол управления окнами
 # Desktop environment in use on Linux (e.g. GNOME, KDE, XFCE, etc).
 graphics-desktop-environment = Среда рабочего стола
 place-database-title = База данных Places
+place-database-stats = Статистика
+place-database-stats-show = Показать статистику
+place-database-stats-hide = Скрыть статистику
+place-database-stats-entity = Объект
+place-database-stats-count = Количество
+place-database-stats-size-kib = Размер (КиБ)
+place-database-stats-size-perc = Размер (%)
+place-database-stats-efficiency-perc = Эффективность (%)
+place-database-stats-sequentiality-perc = Последовательность (%)
 place-database-integrity = Целостность
 place-database-verify-integrity = Проверить целостность
 a11y-title = Поддержка доступности
@@ -119,8 +130,8 @@ a11y-force-disabled = Отключение поддержки доступнос
 a11y-handler-used = Используемый обработчик Доступности
 a11y-instantiator = Исполняемый файл поддержки доступности
 library-version-title = Версии библиотек
-copy-text-to-clipboard-label = Копировать текст в буфер обмена
-copy-raw-data-to-clipboard-label = Копировать необработанные данные в буфер обмена
+copy-text-to-clipboard-label = Скопировать текст в буфер обмена
+copy-raw-data-to-clipboard-label = Скопировать необработанные данные в буфер обмена
 sandbox-title = Песочница
 sandbox-sys-call-log-title = Отклонённые cистемные вызовы
 sandbox-sys-call-index = #
@@ -130,13 +141,11 @@ sandbox-sys-call-tid = TID
 sandbox-sys-call-proc-type = Тип процесса
 sandbox-sys-call-number = Системный вызов
 sandbox-sys-call-args = Параметры
-safe-mode-title = Попробуйте безопасный режим
-restart-in-safe-mode-label = Перезапустить с отключёнными дополнениями…
 troubleshoot-mode-title = Диагностика проблем
 restart-in-troubleshoot-mode-label = Безопасный режим…
-clear-startup-cache-title = Попробуйте очистить кэш запуска
-clear-startup-cache-label = Очистить кэш запуска…
-startup-cache-dialog-title2 = Перезапустить { -brand-short-name } чтобы очистить кэш запуска?
+clear-startup-cache-title = Попробуйте очистить кеш запуска
+clear-startup-cache-label = Очистить кеш запуска…
+startup-cache-dialog-title2 = Перезапустить { -brand-short-name } чтобы очистить кеш запуска?
 startup-cache-dialog-body2 = Это действие не изменит ваши настройки и не удалит расширения.
 restart-button-label = Перезапустить
 
@@ -159,8 +168,18 @@ media-device-channels = Каналы
 media-device-rate = Частота
 media-device-latency = Задержка
 media-capabilities-title = Возможности медиа
+media-codec-support-info = Информация о поддержке кодеков
 # List all the entries of the database.
 media-capabilities-enumerate = Вывести записи из базы данных
+
+## Codec support table
+
+media-codec-support-sw-decoding = Программное декодирование
+media-codec-support-hw-decoding = Аппаратное декодирование
+media-codec-support-codec-name = Название кодека
+media-codec-support-supported = Поддерживается
+media-codec-support-unsupported = Не поддерживается
+media-codec-support-error = Информация о поддержке кодека недоступна. Попробуйте снова после проигрывания медиафайла.
 
 ##
 
@@ -189,36 +208,6 @@ remote-debugging-url = URL
 
 ##
 
-support-third-party-modules-title = Сторонние модули
-support-third-party-modules-module = Файл модуля
-support-third-party-modules-version = Версия файла
-support-third-party-modules-vendor = Информация производителя
-support-third-party-modules-occurrence = Вхождения
-support-third-party-modules-process = Тип и идентификатор процесса
-support-third-party-modules-thread = Поток
-support-third-party-modules-base = Адрес базовой загрузки образа
-support-third-party-modules-uptime = Время работы процесса (мс)
-support-third-party-modules-duration = Продолжительность загрузки (мс)
-support-third-party-modules-status = Состояние
-support-third-party-modules-status-loaded = Загружен
-support-third-party-modules-status-blocked = Заблокирован
-support-third-party-modules-status-redirected = Перенаправлен
-support-third-party-modules-empty = Сторонние модули не загружались.
-support-third-party-modules-no-value = (Нет значения)
-support-third-party-modules-button-open =
-    .title = Открыть расположение файла…
-support-third-party-modules-expand =
-    .title = Показать подробную информацию
-support-third-party-modules-collapse =
-    .title = Свернуть подробную информацию
-support-third-party-modules-unsigned-icon =
-    .title = Этот модуль не подписан
-support-third-party-modules-folder-icon =
-    .title = Открыть расположение файла…
-support-third-party-modules-down-icon =
-    .title = Показать подробную информацию
-support-third-party-modules-up-icon =
-    .title = Свернуть подробную информацию
 # Variables
 # $days (Integer) - Number of days of crashes to log
 report-crash-for-days =
@@ -310,10 +299,8 @@ webgl2-renderer = WebGL 2 - Визуализатор драйвера
 webgl2-version = WebGL 2 - Версия драйвера
 webgl2-driver-extensions = WebGL 2 - Расширения драйвера
 webgl2-extensions = WebGL 2 - Расширения
-blocklisted-bug = Заблокировано из-за известных проблем
-# Variables
-# $bugNumber (string) - String of bug number from Bugzilla
-bug-link = проблема { $bugNumber }
+webgpu-default-adapter = Адаптер WebGPU по умолчанию
+webgpu-fallback-adapter = Резервный адаптер WebGPU
 # Variables
 #   $bugNumber (string) - Bug number on Bugzilla
 support-blocklisted-bug = Занесено в чёрный список из-за известных проблем: <a data-l10n-name="bug-link">баг { $bugNumber }</a>
@@ -321,8 +308,6 @@ support-blocklisted-bug = Занесено в чёрный список из-з�
 # $failureCode (string) - String that can be searched in the source tree.
 unknown-failure = Заблокировано; код ошибки { $failureCode }
 d3d11layers-crash-guard = Композитор D3D11
-d3d11video-crash-guard = Видеодекодер D3D11
-d3d9video-crash-guard = Видеодекодер D3D9
 glcontext-crash-guard = OpenGL
 wmfvpxvideo-crash-guard = Видеодекодер WMF VPX
 reset-on-next-restart = Сбросить при следующем перезапуске
@@ -345,15 +330,16 @@ can-sandbox-media = Песочница для медиаплагина
 content-sandbox-level = Степень изоляции процесса контента
 effective-content-sandbox-level = Эффективная степень изоляции процесса контента
 content-win32k-lockdown-state = Состояние блокировки Win32k для процесса содержимого
+support-sandbox-gpu-level = Уровень песочницы процесса GPU
 sandbox-proc-type-content = контент
 sandbox-proc-type-file = содержимое файла
 sandbox-proc-type-media-plugin = медиаплагин
 sandbox-proc-type-data-decoder = декодер данных
-startup-cache-title = Кэш запуска
-startup-cache-disk-cache-path = Путь к дисковому кэшу
-startup-cache-ignore-disk-cache = Игнорировать дисковый кэш
-startup-cache-found-disk-cache-on-init = При инициализации обнаружен дисковый кэш
-startup-cache-wrote-to-disk-cache = Записано в дисковый кэш
+startup-cache-title = Кеш запуска
+startup-cache-disk-cache-path = Путь к дисковому кешу
+startup-cache-ignore-disk-cache = Игнорировать дисковый кеш
+startup-cache-found-disk-cache-on-init = При инициализации обнаружен дисковый кеш
+startup-cache-wrote-to-disk-cache = Записано в дисковый кеш
 launcher-process-status-0 = Включён
 launcher-process-status-1 = Отключён из-за сбоя
 launcher-process-status-2 = Принудительно отключён
@@ -362,14 +348,6 @@ launcher-process-status-unknown = Статус неизвестен
 # $remoteWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
 multi-process-windows = { $remoteWindows }/{ $totalWindows }
-multi-process-status-0 = Включены пользователем
-multi-process-status-1 = Включены по умолчанию
-multi-process-status-2 = Отключены
-multi-process-status-4 = Отключены инструментами поддержки доступности
-multi-process-status-6 = Отключены неподдерживаемым средством ввода текста
-multi-process-status-7 = Отключены дополнениями
-multi-process-status-8 = Принудительно отключены
-multi-process-status-unknown = Статус неизвестнен
 # Variables
 # $fissionWindows (integer) - Number of remote windows
 # $totalWindows (integer) - Number of total windows
@@ -378,7 +356,7 @@ fission-status-experiment-control = Отключены эксперименто�
 fission-status-experiment-treatment = Включены экспериментом
 fission-status-disabled-by-e10s-env = Отключены средой
 fission-status-enabled-by-env = Включены средой
-fission-status-disabled-by-safe-mode = Отключены безопасным режимом
+fission-status-disabled-by-env = Отключены средой
 fission-status-enabled-by-default = Включены по умолчанию
 fission-status-disabled-by-default = Отключены по умолчанию
 fission-status-enabled-by-user-pref = Включены пользователем
@@ -417,10 +395,10 @@ support-printing-prefs-value = Значение
 
 ## Normandy sections
 
-support-remote-experiments-title = Удалённые эксперименты
+support-remote-experiments-title = Дистанционные эксперименты
 support-remote-experiments-name = Название
 support-remote-experiments-branch = Ветка экспериментов
 support-remote-experiments-see-about-studies = Ознакомьтесь со страницей <a data-l10n-name="support-about-studies-link">about:studies</a> для получения информации о том, как отключить отдельные эксперименты или запретить { -brand-short-name } проводить эксперименты подобного вида в будущем.
-support-remote-features-title = Удалённые функции
+support-remote-features-title = Дистанционно распространяемые функции
 support-remote-features-name = Имя
 support-remote-features-status = Статус

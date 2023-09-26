@@ -16,6 +16,8 @@ policy-AllowedDomainsForApps = Diffinio parthau sy'n cael eu caniatáu i gael my
 
 policy-AppAutoUpdate = Galluogi neu analluogi diweddaru rhaglen yn awtomatig.
 
+policy-AppUpdatePin = Rhwystro { -brand-short-name } rhag cael ei ddiweddaru y tu hwnt i'r fersiwn penodedig.
+
 policy-AppUpdateURL = Gosod URL diweddaru ap cyfaddas.
 
 policy-Authentication = Ffurfweddu dilysu integredig ar gyfer gwefannau sy'n ei gefnogi.
@@ -24,13 +26,13 @@ policy-AutoLaunchProtocolsFromOrigins = Diffiniwch restr o brotocolau allanol y 
 
 policy-BackgroundAppUpdate2 = Galluogi neu analluogi'r diweddarydd cefndir.
 
-policy-BlockAboutAddons = Rhwystro mynediad i'r Rheolwr Ychwanegion (about:addons)
+policy-BlockAboutAddons = Rhwystro mynediad at y Rheolwr Ychwanegion (about:addons)
 
-policy-BlockAboutConfig = Rhwystro mynediad i'r dudalen about:config.
+policy-BlockAboutConfig = Rhwystro mynediad at y dudalen about:config.
 
-policy-BlockAboutProfiles = Rhwystro mynediad i'r dudalen about:profiles.
+policy-BlockAboutProfiles = Rhwystro mynediad at y dudalen about:profiles.
 
-policy-BlockAboutSupport = Rhwystro mynediad i'r dudalen about:support.
+policy-BlockAboutSupport = Rhwystro mynediad at y dudalen about:support.
 
 policy-Bookmarks = Creu nodau tudalen yn y bar offer Nodau Tudalen, dewislen Nodau Tudalen neu ffolder penodol o'u mewn.
 
@@ -39,6 +41,9 @@ policy-CaptivePortal = Galluogi neu analluogi'r cymorth porth caeth.
 policy-CertificatesDescription = Ychwanegu tystysgrifau neu ddefnyddio tystysgrifau mewnol.
 
 policy-Cookies = Caniatáu neu wrthod i wefannau osod cwcis.
+
+# Containers in this context is referring to container tabs in Firefox.
+policy-Containers = Gosod polisïau sy'n ymwneud â chynwysyddion.
 
 policy-DisabledCiphers = Analluogi seifferau.
 
@@ -50,7 +55,7 @@ policy-DisableBuiltinPDFViewer = Analluogi PDF.js, y dangosydd PDF mewnol yn { -
 
 policy-DisableDefaultBrowserAgent = Atal asiant y porwr rhagosodedig rhag cymryd unrhyw gamau. Dim ond yn berthnasol i Windows; nid oes gan lwyfannau eraill yr asiant.
 
-policy-DisableDeveloperTools = Rhwystro mynediad i'r offer datblygwr.
+policy-DisableDeveloperTools = Rhwystro mynediad at yr offer datblygwr.
 
 policy-DisableFeedbackCommands = Analluogi gorchmynion rhag anfon adborth o'r ddewislen Cymorth (Cyflwyno Adborth ac Adrodd ar Wefan Dwyllodrus).
 
@@ -61,17 +66,15 @@ policy-DisableFirefoxScreenshots = Analluogi nodwedd Firefox Screenshots.
 
 policy-DisableFirefoxStudies = Rhwystro { -brand-short-name } rhag rhedeg astudiaethau.
 
-policy-DisableForgetButton = Rhwystro mynediad i'r botwm Anghofio.
+policy-DisableForgetButton = Rhwystro mynediad at y botwm Anghofio.
 
 policy-DisableFormHistory = Peidio cofio chwilio a hanes ffurflenni.
-
-policy-DisableMasterPasswordCreation = Os gwir, nid oes modd creu prif gyfrinair.
 
 policy-DisablePrimaryPasswordCreation = Os yn wir, nid oes modd creu Prif Cyfrinair.
 
 policy-DisablePasswordReveal = Peidiwch â gadael i gyfrineiriau gael eu datgelu mewn mewngofnodi sydd wedi'u cadw.
 
-policy-DisablePocket = Analluogi'r nodwedd i gadw tudalennau gwe i Pocket.
+policy-DisablePocket2 = Analluogi'r nodwedd i gadw tudalennau gwe i { -pocket-brand-name }.
 
 policy-DisablePrivateBrowsing = Analluogi Pori Preifat.
 
@@ -89,13 +92,15 @@ policy-DisableSystemAddonUpdate = Rhwystro'r porwr rhag gosod a diweddaru ychwan
 
 policy-DisableTelemetry = Diffodd Telemetreg
 
+policy-DisableThirdPartyModuleBlocking = Rhwystrwch y defnyddiwr rhag rhwystro modiwlau trydydd parti sy'n cael eu chwistrellu i'r broses { -brand-short-name }.
+
 policy-DisplayBookmarksToolbar = Dangos y Bar Offer Nodau Tudalen drwy ragosodiad.
 
 policy-DisplayMenuBar = Dangos y Bar Dewislen drwy ragosodiad
 
 policy-DNSOverHTTPS = Ffurfweddu DNS dros HTTPS.
 
-policy-DontCheckDefaultBrowser = Analluogi gwirio am y porwr rhagosodedig wrth gychwyn.
+policy-DontCheckDefaultBrowser = Analluogwch gwirio am y porwr rhagosodedig wrth gychwyn.
 
 policy-DownloadDirectory = Gosod a chloi'r cyfeiriadur llwytho i lawr.
 
@@ -104,6 +109,8 @@ policy-EnableTrackingProtection = Galluogi neu analluogi Rhwystro Cynnwys ac o d
 
 # “lock” means that the user won’t be able to change this setting
 policy-EncryptedMediaExtensions = Galluogi neu Analluogi Estyniadau Cyfryngau Amgryptiedig ac o ddewis eu cloi.
+
+policy-ExemptDomainFileTypePairsFromFileTypeDownloadWarnings = Analluogi rhybuddion yn seiliedig ar estyniad ffeil ar gyfer mathau penodol o ffeiliau ar barthau.
 
 # A “locked” extension can’t be disabled or removed by the user. This policy
 # takes 3 keys (“Install”, ”Uninstall”, ”Locked”), you can either keep them in
@@ -114,9 +121,9 @@ policy-ExtensionSettings = Rheoli pob agwedd o osod estyniad.
 
 policy-ExtensionUpdate = Galluogi neu analluogi diweddaru estyniadau'n awtomatig.
 
-policy-FirefoxHome = Ffurfweddu Firefox Home.
+policy-FirefoxHome2 = Ffurfweddu { -firefox-home-brand-name }.
 
-policy-FlashPlugin = Caniatáu neu wrthod defnydd o'r ychwanegyn Flash.
+policy-GoToIntranetSiteForSingleWordEntryInAddressBar = Gorfodi llywio safle mewnrwyd yn uniongyrchol yn lle chwilio wrth deipio gair yn y bar cyfeiriad.
 
 policy-Handlers = Ffurfweddu trinwyr rhaglenni rhagosodedig.
 
@@ -141,8 +148,6 @@ policy-LocalFileLinks = Caniatáu i wefannau penodol gysylltu i ffeiliau lleol.
 
 policy-ManagedBookmarks = Yn ffurfweddu rhestr o nodau tudalen sy'n cael eu rheoli gan weinyddwr nad yw'r defnyddiwr yn gallu eu newid.
 
-policy-MasterPassword = Ei gwneud yn ofynnol neu atal defnyddio prif gyfrinair.
-
 policy-ManualAppUpdateOnly = Caniatáu diweddariadau â llaw yn unig a pheidio â hysbysu'r defnyddiwr am ddiweddariadau.
 
 policy-PrimaryPassword = Ei gwneud yn ofynnol neu atal defnyddio Prif Gyfrinair.
@@ -162,6 +167,8 @@ policy-OverrideFirstRunPage = Diystyru y dudalen rhediad gyntaf. Gosod y polisi 
 policy-OverridePostUpdatePage = Diystyru'r dudalen ôl ddiweddaru "Beth sy'n Newydd". Gosodwch y polisi hwn i gwag os hoffech chi analluogi'r dudalen ôl ddiweddaru.
 
 policy-PasswordManagerEnabled = Galluogi cadw cyfrineiriau i'r rheolwr cyfrinair.
+
+policy-PasswordManagerExceptions = Rhwystro { -brand-short-name } rhag cadw cyfrineiriau ar gyfer gwefannau penodol.
 
 # PDF.js and PDF should not be translated
 policy-PDFjs = Analluogwch neu ffurfweddu PDF.js, y darllenydd PDF mewnol yn { -brand-short-name }.
@@ -188,8 +195,8 @@ policy-SearchEngines = Ffurfweddu gosodiadau peiriannau chwilio. Dim ond yn y fe
 
 policy-SearchSuggestEnabled = Galluogi neu analluogi awgrymiadau chwilio.
 
-# For more information, see https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSS/PKCS11/Module_Installation
-policy-SecurityDevices = Gosod modiwlau PKCS #11.
+# For more information, see https://wikipedia.org/wiki/PKCS_11
+policy-SecurityDevices2 = Ychwanegu neu ddileu modiwlau PKCS #11.
 
 policy-ShowHomeButton = Dangos y botwm cartref ar y bar offer.
 
@@ -197,9 +204,13 @@ policy-SSLVersionMax = Gosodwch y fersiwn SSL uchaf.
 
 policy-SSLVersionMin = Gosodwch y fersiwn SSL lleiaf.
 
+policy-StartDownloadsInTempDirectory = Gorfodi llwytho i lawr i gychwyn mewn lleoliad lleol, dros dro yn hytrach na'r cyfeiriadur llwytho i lawr rhagosodedig.
+
 policy-SupportMenu = Ychwanegu eitem ddewislen cymorth cyfaddas i'r ddewislen cymorth.
 
 policy-UserMessaging = Peidio â dangos rhai negeseuon i'r defnyddiwr.
+
+policy-UseSystemPrintDialog = Argraffu gan ddefnyddio deialog argraffu'r system.
 
 # “format” refers to the format used for the value of this policy.
 policy-WebsiteFilter = Rhwystro gwefannau rhag derbyn ymweliadau. Gw. dogfennaeth am ragor o wybodaeth ar y fformat.

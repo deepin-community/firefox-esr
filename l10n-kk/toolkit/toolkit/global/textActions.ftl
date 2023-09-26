@@ -34,6 +34,10 @@ text-action-paste =
     .label = Кірістіру
     .accesskey = р
 
+text-action-paste-no-formatting =
+    .label = Пішімдеусіз кірістіру
+    .accesskey = м
+
 text-action-paste-shortcut =
     .key = V
 
@@ -50,3 +54,26 @@ text-action-select-all-shortcut =
 
 text-action-spell-no-suggestions =
     .label = Ұсыныстар табылмады
+
+text-action-spell-add-to-dictionary =
+    .label = Сөздікке қосу
+    .accesskey = з
+
+text-action-spell-undo-add-to-dictionary =
+    .label = Сөздікке қосуды болдырмау
+    .accesskey = л
+
+text-action-spell-check-toggle =
+    .label = Емлені тексеру
+    .accesskey = к
+
+text-action-spell-add-dictionaries =
+    .label = Сөздіктерді қосу…
+    .accesskey = о
+
+text-action-spell-dictionaries =
+    .label = Тілдер
+    .accesskey = л
+
+text-action-search-text-box-clear =
+    .title = Тазарту

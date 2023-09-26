@@ -13,6 +13,27 @@ accessibility-keyboard-header = Klávesnice
 
 ## Text entries that are used as text alternative for icons that depict accessibility isses.
 
+
+## These strings are used in the overlay displayed when running an audit in the accessibility panel
+
+accessibility-progress-initializing = Inicializace…
+    .aria-valuetext = Inicializace…
+
+# This string is displayed in the audit progress bar in the accessibility panel.
+# Variables:
+#   $nodeCount (Integer) - The number of nodes for which the audit was run so far.
+accessibility-progress-progressbar =
+    { $nodeCount ->
+        [one] Kontrola { $nodeCount } uzlu
+        [few] Kontrola { $nodeCount } uzlů
+       *[other] Kontrola { $nodeCount } uzlů
+    }
+
+accessibility-progress-finishing = Dokončování…
+    .aria-valuetext = Dokončování…
+
+## Text entries that are used as text alternative for icons that depict accessibility issues.
+
 accessibility-warning =
     .alt = Varování
 
@@ -68,3 +89,10 @@ accessibility-text-label-issue-toolbar = Panely nástrojů musí být označeny,
 
 accessibility-keyboard-issue-semantics = Prvky dosažitelné pomocí klávesnice by měly mít interaktivní sémantiku. <a>Zjistit více</a>
 
+accessibility-keyboard-issue-tabindex = Vyhněte se používaní atributu <code>tabindex</code> s hodnotou větší než nula. <a>Zjistit více</a>
+
+accessibility-keyboard-issue-action = Interaktivní prvky musí být možno aktivovat klávesnicí. <a>Zjistit více</a>
+
+accessibility-keyboard-issue-focusable = Interaktivní prvky musí být přístupné klávesnicí. <a>Zjistit více</a>
+
+accessibility-keyboard-issue-mouse-only = Prvky, na které lze kliknout, musí být dosažitelné pomocí klávesnice, a měly by mít interaktivní sémantiku. <a>Zjistit více</a>

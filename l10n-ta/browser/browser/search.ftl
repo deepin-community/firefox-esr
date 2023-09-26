@@ -19,3 +19,18 @@ opensearch-error-download-desc = { -brand-short-name } தேடும் கூ
 
 ##
 
+searchbar-submit =
+    .tooltiptext = தேடலைச் சமர்ப்பி
+
+# This string is displayed in the search box when the input field is empty
+searchbar-input =
+    .placeholder = தேடு
+
+searchbar-icon =
+    .tooltiptext = தேடல்
+
+## Infobar shown when search engine is removed and replaced.
+## Variables
+## $oldEngine (String) - the search engine to be removed.
+## $newEngine (String) - the search engine to replace the removed search engine.
+

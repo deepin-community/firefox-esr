@@ -6,9 +6,6 @@ password-quality-meter = Качество на паролата
 
 ## Change Password dialog
 
-change-password-window =
-    .title = Промяна на главната парола
-
 # Variables:
 # $tokenName (String) - Security device of the change password dialog
 change-password-token = Устройство по безопасността: { $tokenName }
@@ -16,29 +13,22 @@ change-password-old = Текуща парола:
 change-password-new = Нова парола:
 change-password-reenter = Нова парола (отново):
 
-## Reset Password dialog
-
-reset-password-window =
-    .title = Нулиране на главната парола
-    .style = width: 40em
-
 ## Reset Primary Password dialog
 
-reset-primary-password-window =
+reset-primary-password-window2 =
     .title = Нулиране на главна парола
-    .style = width: 40em
+    .style = min-width: 40em
 reset-password-button-label =
     .label = Нулиране
-reset-password-text = Ако нулирате главната парола, всичките съхранени пароли за сайтове и е-поща, данни за формуляри, лични сертификати и персонални ключове ще бъдат загубени. Сигурни ли сте, че искате да нулирате главната парола?
 
 pippki-reset-password-confirmation-title = Нулиране на главна парола
 pippki-reset-password-confirmation-message = Главната парола е нулирана.
 
 ## Downloading cert dialog
 
-download-cert-window =
+download-cert-window2 =
     .title = Изтегляне на сертификат
-    .style = width: 46em
+    .style = min-width: 46em
 download-cert-message = Поискано е да се доверите на нов удостоверител на сертификати (CA).
 download-cert-trust-ssl =
     .label = Доверяване на този CA за идентифициране на страници.
@@ -70,7 +60,5 @@ set-password-reminder = Важно: Ако забравите паролата �
 
 ## Protected Auth dialog
 
-protected-auth-window =
-    .title = Защитен удостоверяващ токен
-protected-auth-msg = Моля, удостоверете токена. Начинът на удостоверяване зависи от токена.
-protected-auth-token = Токен:
+## Protected authentication alert
+

@@ -9,8 +9,6 @@
 
 process-type-web = Cuntegn dal web
 
-process-type-browser = Principal
-
 # process used to run privileged about pages,
 # such as about:home
 process-type-privilegedabout = Paginas «about» cun dretgs supplementars
@@ -24,13 +22,13 @@ process-type-extension = Extensiun
 # process used to open file:// URLs
 process-type-file = Datoteca locala
 
-# process used to isolate webpages that requested special
-# permission to allocate large amounts of memory
-process-type-weblargeallocation = Allocaziun gronda
-
 # process used to isolate a webpage from other web pages
 # to improve security
 process-type-webisolated = Cuntegn web isolà
+
+# process used to isolate a ServiceWorker to improve
+# performance
+process-type-webserviceworker = Service worker isolà
 
 # process preallocated; may change to other types
 process-type-prealloc = Preallocà
@@ -51,6 +49,9 @@ process-type-socket = Socket
 
 # process used to decode media
 process-type-rdd = RDD
+
+# process used to run some IPC actor in their own sandbox
+process-type-utility = Actur IPC en sandbox
 
 ##
 ## Other

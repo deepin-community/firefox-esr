@@ -5,9 +5,9 @@
 
 ## Strings used for device manager
 
-devmgr =
+devmgr-window =
     .title = Zrjadowak grata
-    .style = width: 67em; height: 32em;
+    .style = min-width: 67em; min-height: 32em;
 
 devmgr-devlist =
     .label = Module a grat wěstoty
@@ -35,7 +35,7 @@ devmgr-button-load =
     .accesskey = a
 
 devmgr-button-unload =
-    .label = Wotstronić
+    .label = Wuswobodźić
     .accesskey = s
 
 devmgr-button-enable-fips =
@@ -115,8 +115,6 @@ devinfo-label =
 
 devinfo-serialnum =
     .label = Serijowe čisło
-
-fips-nonempty-password-required = Modus FIPS sej žada, zo hłowne hesło za kóždy wěstotny grat nastajeće. Prošu nastajće hesło, prjedy hač spytaće modus FIPS zmóžniće.
 
 fips-nonempty-primary-password-required = Modus FIPS sej žada, zo hłowne hesło za kóždy wěstotny grat nastajeće. Prošu nastajće hesło, prjedy hač spytaće modus FIPS zmóžniće.
 unable-to-toggle-fips = Njeje móžno, FIPS-modus za wěstotny grat změnić. Poruča so, zo tute nałoženje kónčiće a znowa startujeće.
